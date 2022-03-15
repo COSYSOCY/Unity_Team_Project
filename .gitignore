@@ -9,6 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/UserSettings/EditorUserSettings
 UserSettings/EditorUserSettings
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -62,7 +63,12 @@ crashlytics-build.properties
 Assets/Scenes/SCB_TEST.unity.meta
 Assets/Scenes/SCB_TEST1290.unity.meta
 UserSettings/EditorUserSettings.asset
+<<<<<<< HEAD
 =======
 UserSettings/EditorUserSettings.asset
 */EditorUserSettings.asset
 >>>>>>> 9da311c7bb8bb843bdc18200022503e693c1ed60
+=======
+/UserSettings/EditorUserSettings.asset
+*/EditorUserSettings.asset
+>>>>>>> 7911fce1fce525560870f58034d634d9821d4442
