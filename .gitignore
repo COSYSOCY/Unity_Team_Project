@@ -57,6 +57,10 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
 Assets/Scenes/SCB_TEST.unity.meta
 Assets/Scenes/SCB_TEST1290.unity.meta
+UserSettings/EditorUserSettings.asset
+/UserSettings/EditorUserSettings.asset
+UserSettings/EditorUserSettings
+/UserSettings/EditorUserSettings
+*/EditorUserSettings.asset
