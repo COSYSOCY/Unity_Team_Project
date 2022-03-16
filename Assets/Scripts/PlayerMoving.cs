@@ -7,7 +7,6 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     IPointerUpHandler, IDragHandler
 {
     public Transform player;
-
     [SerializeField] private float moveSpeed;
     private Vector3 move;
     private bool isMove;
@@ -50,21 +49,9 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             while (true)
             {
                 player.Translate(move * moveSpeed * Time.deltaTime, Space.World);
-                //if (move != Vector3.zero)
-                //    player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(move), 5 * Time.deltaTime);
                 yield return null;
             }
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -96,7 +96,7 @@ public class PlayerAttack : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(0.5f);
-            GameObject bullet = Instantiate(bulletA, transform.position, transform.rotation);
+            GameObject bullet = Instantiate(bulletA, bulletPos.transform.position, bulletPos.transform.rotation);
             Rigidbody rigid = bullet.GetComponent<Rigidbody>();
             rigid.velocity = bulletPos.forward.normalized * 20f;
             //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
@@ -109,7 +109,7 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             for (int i = 0; i < 5; i++)
             {
-                GameObject bullet1 = Instantiate(bulletB, transform.position, transform.rotation);
+                GameObject bullet1 = Instantiate(bulletB, bulletPos.transform.position, bulletPos.transform.rotation);
                 Rigidbody rigid1 = bullet1.GetComponent<Rigidbody>();
                 bulletPos.transform.Rotate(0, -5 + i + 3, 0);
                 rigid1.velocity = bulletPos.forward.normalized * 20f;
@@ -123,13 +123,13 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitForSeconds(2f);
             for (int i = 0; i < 30; i++)
             {
-                GameObject bullet2 = Instantiate(bulletC, transform.position, transform.rotation);
+                
+                GameObject bullet2 = Instantiate(bulletC, bulletPos.transform.position, bulletPos.transform.rotation);
                 Rigidbody rigid2 = bullet2.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(0, Mathf.Sin(Mathf.PI * 20), 0);
-                rigid2.velocity = bulletPos.position + ranvec.normalized * 100f;
-                yield return new WaitForSeconds(0.1f);
+                rigid2.velocity = bulletPos.forward.normalized * 10f;
+                yield return new WaitForSeconds(0.15f);
             }
-        }
+        }  
     }
     IEnumerator FireRoundATK()
     {

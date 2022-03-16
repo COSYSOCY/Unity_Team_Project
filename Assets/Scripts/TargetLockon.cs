@@ -5,7 +5,7 @@ using UnityEngine;
 public class TargetLockon : MonoBehaviour
 {
     private PlayerMoving playerMoving;
-    private Transform Target = null;
+    public Transform Target = null;
     public float Range;
     public LayerMask layerMask;
     private Vector3 targetPosition;

@@ -5,12 +5,13 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public PlayerStatus playerStatus;
     private Transform target;
-    private int hp = 100;
-    private int enemyDmg = 20;
+    [SerializeField] private int hp = 100;
+    private float enemyDmg = 10;
     private float atkDelay;
     private float atkCoolTime;
-    private float moveSpeed = 2f;
+    private float moveSpeed = 2.5f;
     private bool isDead;
 
     NavMeshAgent nav;
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         nav = GetComponent<NavMeshAgent>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        
         StartCoroutine(UpdateEnemy());
     }
 
@@ -47,6 +49,6 @@ public class Enemy : MonoBehaviour
         nav.speed = moveSpeed;
         NavEnemy(target.position);
         yield return null;
-
     }
+
 }
