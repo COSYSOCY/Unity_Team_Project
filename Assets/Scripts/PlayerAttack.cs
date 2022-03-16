@@ -11,9 +11,18 @@ public class PlayerAttack : MonoBehaviour
     public Transform bulletPos;
     [SerializeField] private int weapon;
     [SerializeField] private bool nomalATK;
-    [SerializeField] private bool ShotGunATK;
+    [SerializeField] private bool shotGunATK;
     [SerializeField] private bool machineGunATK;
     [SerializeField] private bool fireRoundATK;
+    [SerializeField] private bool ATK1;
+    [SerializeField] private bool ATK2;
+    [SerializeField] private bool ATK3;
+    [SerializeField] private bool ATK4;
+    [SerializeField] private bool ATK5;
+    [SerializeField] private bool ATK6;
+    [SerializeField] private bool ATK7;
+    [SerializeField] private bool ATK8;
+    [SerializeField] private bool ATK9;
 
     void Update()
     {
@@ -26,10 +35,10 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(NomalAtk());
             nomalATK = true;
         }
-        if (weapon == 2 && ShotGunATK == false)
+        if (weapon == 2 && shotGunATK == false)
         {
             StartCoroutine(ShotGunAtk());
-            ShotGunATK = true;
+            shotGunATK = true;
         }
         if (weapon == 3 && machineGunATK == false)
         {
@@ -39,6 +48,46 @@ public class PlayerAttack : MonoBehaviour
         if (weapon == 4 && fireRoundATK == false)
         {
             StartCoroutine(FireRoundATK());
+            fireRoundATK = true;
+        }
+        if (weapon == 5 && ATK1 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 6 && ATK2 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 7 && ATK3 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 8 && ATK4 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 9 && ATK5 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 10 && ATK6 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 11 && ATK7 == false)
+        {
+            //StartCoroutine();
+            fireRoundATK = true;
+        }
+        if (weapon == 12 && ATK8 == false)
+        {
+            //StartCoroutine();
             fireRoundATK = true;
         }
     }
