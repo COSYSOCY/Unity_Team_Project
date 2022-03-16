@@ -34,7 +34,6 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             StartCoroutine("Movement");
         }
     }
-
     public void OnPointerUp(PointerEventData eventData)
     {
         stick.localPosition = Vector2.zero;

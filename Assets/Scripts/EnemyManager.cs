@@ -45,8 +45,5 @@ public class EnemyManager : MonoBehaviour
             }
             else yield return null;
         }
-
     }
-
-
 }
