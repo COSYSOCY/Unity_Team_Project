@@ -57,14 +57,11 @@ public class Skill_13 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 50; i++)
-            {
-                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
-            }
+            yield return new WaitForSeconds(0.5f);
+            GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
+            Rigidbody rigid = bullet.GetComponent<Rigidbody>();
+            rigid.velocity = bulletPos.forward.normalized * 20f;
+            //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
         }
     }
 

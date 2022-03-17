@@ -55,16 +55,55 @@ public class Skill_6 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
+        float Range = 300f;
         while (true)
         {
-            yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 50; i++)
+            Debug.Log("체크1");
+            yield return new WaitForSeconds(0.3f);
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(300)내에 오브젝트 배열로 받기
+            if (hits.Length > 0)
             {
-                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
+                List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    if (hits[i].transform.CompareTag("Enemy"))
+                    {
+                        Enemys.Add(hits[i].gameObject);
+                    }
+                }
+                if (Enemys.Count > 0)
+                {
+                    GameObject enemy;
+                    enemy = Enemys[0];
+                    for (int i = 0; i < Enemys.Count; i++)
+                    {
+                        if (Vector3.Distance(Player.transform.position, enemy.transform.position) > Vector3.Distance(Player.transform.position, Enemys[i].transform.position))
+                        {
+                            enemy = Enemys[i];
+
+                        }
+                    }
+
+                    // 플레이어 위치를 기준으로 원형 공격 범위 소환이 직관적 좋고                   
+                    //if (isbullet6 == false)
+                    //{
+
+                    //}
+
+                    for (int i = 0; i < 20; i++)
+                    {
+
+                        GameObject bullet6 = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
+                        Rigidbody rigid = bullet6.GetComponent<Rigidbody>();
+                        bullet6.transform.LookAt(enemy.transform);
+                        rigid.velocity = bulletPos.forward.normalized * 20f;
+                        //hits[i].SendMessage("대미지 입힘");       // 콜라이더 안에 들어오는 적들 대미지 주는 방식으로 처리    
+                    }
+
+
+                }
             }
+
         }
     }
 

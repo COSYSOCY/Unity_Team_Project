@@ -58,7 +58,7 @@ public class Skill_5 : Skill_Ori
         float Range = 300f;
         while (true)
         {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(1f);
             Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(300)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
@@ -73,7 +73,8 @@ public class Skill_5 : Skill_Ori
                 if (Enemys.Count > 0)
                 {
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
-                    Instantiate(bulletPrefab, hits[random].transform.position, Quaternion.identity); //생성
+                    GameObject bullet= Instantiate(bulletPrefab, hits[random].transform.position, Quaternion.identity); //생성
+                    Destroy(bullet, 1f);
                     Debug.Log(Enemys[random].name + "데미지 받음");
 
                 }

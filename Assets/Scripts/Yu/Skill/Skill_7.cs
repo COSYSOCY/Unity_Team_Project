@@ -5,7 +5,10 @@ using UnityEngine;
 public class Skill_7 : Skill_Ori
 {
 
-
+    public GameObject birdbulletprefabs;
+    public GameObject birdtarget;
+    public GameObject Dack;
+    GameObject bird;
 
     public override void LevelUp()
     {
@@ -42,14 +45,22 @@ public class Skill_7 : Skill_Ori
         info.Lv++;
     }
 
+
+
+
+
+
+
     void Start_Func()
     {
         //시작시 설정
         info.Lv = 1;
         info.bulletCnt = 1;
         info.Damage = 1f;
-
         StartCoroutine(Skill_Update());
+        bird = Instantiate(Dack, Dack.transform.position, Dack.transform.rotation);
+        bird.transform.SetParent(Player.transform, false);
+        birdtarget.SetActive(true);
     }
 
 
@@ -57,23 +68,17 @@ public class Skill_7 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 50; i++)
-            {
-                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
-            }
+            yield return new WaitForSeconds(0.1f);
+            GameObject bullet = Instantiate(birdbulletprefabs, bird.transform.position, bird.transform.rotation);
         }
     }
 
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start == false)
         {
-        Start_Func();
+            Start_Func();
             start = true;
         }
     }

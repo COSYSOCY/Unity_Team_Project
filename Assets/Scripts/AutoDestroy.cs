@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float deadTime;
     void Start()
     {
-        Destroy(gameObject, 4);
+        Destroy(gameObject, deadTime);
     }
 }

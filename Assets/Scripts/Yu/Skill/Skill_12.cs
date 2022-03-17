@@ -5,7 +5,7 @@ using UnityEngine;
 public class Skill_12 : Skill_Ori
 {
 
-
+    public GameObject gidomon;
 
     public override void LevelUp()
     {
@@ -58,13 +58,9 @@ public class Skill_12 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 50; i++)
-            {
-                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
-            }
+            GameObject bullet = Instantiate(gidomon, Player.transform.position, Player.transform.rotation);
+            bullet.GetComponent<gidomon>().numberOfObjects = info.bulletCnt;
+            bullet.transform.SetParent(Player.transform, false);
         }
     }
 

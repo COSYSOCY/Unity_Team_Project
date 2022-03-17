@@ -73,12 +73,13 @@ public class Skill_11 : Skill_Ori
                 }
                 if (Enemys.Count > 0)
                 {
+                    //Debug.Log("발사");
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
-                    GameObject bullet = Instantiate(bulletPrefab, hits[random].transform.position, Quaternion.identity);
+                    GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
                     bullet.transform.LookAt(Enemys[random].transform);
 
-                    Rigidbody rigid = bullet.GetComponent<Rigidbody>();
-                    rigid.velocity = bulletPos.forward.normalized * 20f;
+                    //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
+                    //rigid.velocity = bulletPos.forward.normalized * 20f;
                     //미사일 생성 하고 적 방향 바라보기
 
                 }
