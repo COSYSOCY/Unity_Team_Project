@@ -17,23 +17,28 @@ public class Skill_1 : Skill_Ori
                 info.bulletCnt++;
                 break;
             case 2:
-                //공격력증가
-                info.Damage = 5f;
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             case 3:
-                //관통증가
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             case 4:
-                //.
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             case 5:
-                //.
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             case 6:
-                //.
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             case 7:
-                //.
+                //투사체 증가
+                info.bulletCnt++;
                 break;
             default:
                 break;
@@ -59,10 +64,26 @@ public class Skill_1 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(0.5f);
-            for (int i = 0; i < info.bulletCnt; i++)
+            for (int i = 1; i <= info.bulletCnt; i++)
             {
-                GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation* Quaternion.Euler(0f,i*10,0f));
-                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+
+                    GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
+                    bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+
+
+
+
+
+                    if (i % 2 == 0)
+                    {
+                        bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+
+                    }
+                    else
+                    {
+
+                        bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
+                    }
             }
             
             //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
