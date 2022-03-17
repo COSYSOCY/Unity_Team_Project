@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4341467639160027345}
   - component: {fileID: 864317871645012457}
   - component: {fileID: 1465976846955368104}
-  - component: {fileID: 2150986403701382439}
+  - component: {fileID: -4149291908621477348}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -206,24 +206,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691fff1e5b139474dac2eb8b79b999c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStatus: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
-  hp: 100
---- !u!95 &2150986403701382439
-Animator:
-  serializedVersion: 3
+--- !u!195 &-4149291908621477348
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6876871023749238010}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ae80de1fe5bc71d46b3b632d0d4904bc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
