@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     private int enemyDmg = 20;
     private float atkDelay;
     private float atkCoolTime;
-    private float moveSpeed = 2f;
+    private float moveSpeed = 0f;
     private bool isDead;
 
     NavMeshAgent nav;

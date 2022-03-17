@@ -16,11 +16,6 @@ public class LevelUp : MonoBehaviour
     public GameObject[] Skill_Text;
     public GameObject[] Skill_Image;
 
-
-
-
-
-    
     // Start is called before the first frame update
     void Start()
     {

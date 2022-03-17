@@ -9,7 +9,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Transform player;
 
     private bool isGameOver;
-    private float respawnTime = 1f;
+    private float respawnTime = 0.5f;
     private int maxEnemy = 500;
     void Start()
     {
