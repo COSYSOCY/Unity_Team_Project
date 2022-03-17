@@ -345,7 +345,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC9"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uC77C\uC9C1\uC120 \uB808\uC774\uC800"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC12"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uAE30\uB3C4\uBB38"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1533,9 +1533,9 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC4"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uC8FC\uC704\uB85C \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC11\uB2C8\uB2E4"
+  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
+  - "\uB370\uBBF8\uC9C0 \uC99D\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   Skill_Icon: 3
 --- !u!4 &547790605
@@ -1604,7 +1604,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC6"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uB9C8\uB298!"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC13"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uD5E4\uC77C\uC774\uB2E4"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC10"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uBD80\uBA54\uB791"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1949,7 +1949,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC8"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uBC15\uD788\uACE0 \uB4A4\uB85C \uBC29\uC0AC\uD53C\uD574"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC14"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uBB34\uC791\uC704 \uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -2483,7 +2483,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC5"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uBB34\uC791\uC704 \uC801 \uBC88\uAC1C \uB0B4\uB824\uCE68"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -3434,10 +3434,10 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC3"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uC77C\uC790 \uCB49"
+  - "\uB370\uBBF8\uC9C0 \uC655\uCC3D \uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 2
 --- !u!4 &1210016407
 Transform:
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC11"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uB2E8\uC77C\uD0C0\uCF13 \uBBF8\uC0AC\uC77C"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -4403,7 +4403,7 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC7"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
+  - "\uBE44\uB458\uAE30"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
   - "\uC635\uC158\uCD94\uAC00"
@@ -4666,10 +4666,10 @@ MonoBehaviour:
   bulletCnt: 0
   Skill_Name: "\uC2A4\uD0AC2"
   Lv_Text:
-  - "\uACE0\uB974\uC138\uC694"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uB178\uB791\uC0C9 \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC10"
+  - "\uB370\uBBF8\uC9C0 \uC655\uCC3D\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
+  - "\uD558\uD558"
   Skill_Icon: 1
 --- !u!4 &1825683209
 Transform:
