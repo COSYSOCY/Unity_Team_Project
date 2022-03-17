@@ -24,9 +24,7 @@ public class LevelUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        num.Add(1);
-        num.Add(4);
-        num.Add(0);
+
 
 
     }
@@ -66,7 +64,10 @@ public class LevelUp : MonoBehaviour
             LevelUiObject.SetActive(true);
             //var a = GetComponent<Skill_1>();
             //var a = Skill_1;
-            GameObject gameObject = skillManager.Skills[num[i]-1];
+            GameObject gameObject;
+
+             gameObject = skillManager.Skills[num[i]];
+
             string name="";
             int Lv=0 ;
             int image=0 ;
@@ -385,7 +386,7 @@ public class LevelUp : MonoBehaviour
 
     public void ButtonClick_1()
     {
-        GameObject gameObject = skillManager.Skills[num[0]-1];
+        GameObject gameObject = skillManager.Skills[num[0]];
         ButonClick(gameObject);
         
 
@@ -393,12 +394,12 @@ public class LevelUp : MonoBehaviour
     }
     public void ButtonClick_2()
     {
-        GameObject gameObject = skillManager.Skills[num[1]-1];
+        GameObject gameObject = skillManager.Skills[num[1]];
         ButonClick(gameObject);
     }
     public void ButtonClick_3()
     {
-        GameObject gameObject = skillManager.Skills[num[2]-1];
+        GameObject gameObject = skillManager.Skills[num[2]];
         ButonClick(gameObject);
     }
 }
