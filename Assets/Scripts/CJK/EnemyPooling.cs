@@ -12,7 +12,7 @@ public class EnemyPooling : MonoBehaviour
 
     private void Awake()
     {
-        enemy = new GameObject[50];
+        enemy = new GameObject[500];
         Generate();
     }
     void Generate()

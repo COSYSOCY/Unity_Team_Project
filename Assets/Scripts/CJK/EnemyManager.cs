@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     private bool isGameOver;
     private float respawnTime = 1f;
-    private int maxEnemy = 50;
+    private int maxEnemy = 500;
     void Start()
     {
         enemyPooling = GameObject.Find("EnemyMakePool").GetComponent<EnemyPooling>();
