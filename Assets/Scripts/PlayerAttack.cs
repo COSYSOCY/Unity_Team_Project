@@ -55,7 +55,7 @@ public class PlayerAttack : MonoBehaviour
             //StartCoroutine();
             fireRoundATK = true;
         }
-        if (weapon == 6 && ATK2 == false)
+        if (weapon == 6 && ATK2 == false) // 플레이어주변 범위공격
         {
             //StartCoroutine();
             fireRoundATK = true;
@@ -65,7 +65,7 @@ public class PlayerAttack : MonoBehaviour
             //StartCoroutine();
             fireRoundATK = true;
         }
-        if (weapon == 8 && ATK4 == false)
+        if (weapon == 8 && ATK4 == false) // 박히고 뒤로 미사일 1번 더(레벨업하면 방사피해로 3개 미사일 나간다던가 아니면 원형 범위 공격으로 터진다던가)
         {
             //StartCoroutine();
             fireRoundATK = true;
@@ -100,6 +100,7 @@ public class PlayerAttack : MonoBehaviour
             Rigidbody rigid = bullet.GetComponent<Rigidbody>();
             rigid.velocity = bulletPos.forward.normalized * 20f;
             //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
+            Debug.Log("노멀공격!");
         }
     }
     IEnumerator ShotGunAtk()
