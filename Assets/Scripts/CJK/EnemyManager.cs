@@ -9,8 +9,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Transform player;
 
     private bool isGameOver;
-    private float respawnTime = 1f;
-    private int maxEnemy = 50;
+    private float respawnTime = 0.5f;
+    private int maxEnemy = 500;
     void Start()
     {
         enemyPooling = GameObject.Find("EnemyMakePool").GetComponent<EnemyPooling>();
@@ -34,6 +34,7 @@ public class EnemyManager : MonoBehaviour
     }
     IEnumerator CallEnemy()
     {
+       // yield return new WaitForSeconds(f);
         while (!isGameOver)
         {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -41,7 +42,7 @@ public class EnemyManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(respawnTime);
                 GameObject enemy = enemyPooling.MakeEnemy("Enemy");
-                enemy.transform.position = GetRandomPos();
+                enemy.transform.position = player.transform.position+GetRandomPos();
             }
             else yield return null;
         }

@@ -55,11 +55,11 @@ public class Skill_11 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
-        float Range = 300f;
+        float Range = 150f;
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(300)내에 오브젝트 배열로 받기
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(150)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
                 List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
@@ -77,7 +77,7 @@ public class Skill_11 : Skill_Ori
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
                     GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
                     bullet.transform.LookAt(Enemys[random].transform);
-
+                    bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
                     //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
                     //rigid.velocity = bulletPos.forward.normalized * 20f;
                     //미사일 생성 하고 적 방향 바라보기

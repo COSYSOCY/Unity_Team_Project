@@ -27,7 +27,6 @@ public class LocalNavMeshBuilder : MonoBehaviour
             yield return m_Operation;
         }
     }
-
     void OnEnable()
     {
         // Construct and add navmesh

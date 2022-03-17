@@ -62,6 +62,7 @@ public class Skill_3 : Skill_Ori
             {
 
                 GameObject bullet2 = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
+                bullet2.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
                 Rigidbody rigid2 = bullet2.GetComponent<Rigidbody>();
                 rigid2.velocity = bulletPos.forward.normalized * 10f;
                 yield return new WaitForSeconds(0.15f);

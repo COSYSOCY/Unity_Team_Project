@@ -35,7 +35,7 @@ public class PlayerStatus : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("히트");
+        //Debug.Log("히트");
         if (other.gameObject.CompareTag("Enemy"))
         {
             StartCoroutine(PlayerDamage());

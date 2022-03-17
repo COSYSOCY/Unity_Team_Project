@@ -8,6 +8,7 @@ public class gidomon : MonoBehaviour
     GameObject par;    
     public int numberOfObjects = 20;
     public float radius = 5f;
+    public float Dagame;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class gidomon : MonoBehaviour
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
             par = Instantiate(BulletD, pos, rot);
             par.transform.parent = gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
+            par.GetComponent<Bullet_Trigger_5>().Damage = Dagame;
         }
     }
 }

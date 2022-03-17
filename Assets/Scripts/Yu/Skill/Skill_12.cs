@@ -61,6 +61,7 @@ public class Skill_12 : Skill_Ori
             GameObject bullet = Instantiate(gidomon, Player.transform.position, Player.transform.rotation);
             bullet.GetComponent<gidomon>().numberOfObjects = info.bulletCnt;
             bullet.transform.SetParent(Player.transform, false);
+            bullet.GetComponent<gidomon>().Dagame = info.Damage;
         }
     }
 

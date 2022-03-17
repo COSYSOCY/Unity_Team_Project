@@ -84,21 +84,9 @@ public class Skill_6 : Skill_Ori
                         }
                     }
 
-                    // 플레이어 위치를 기준으로 원형 공격 범위 소환이 직관적 좋고                   
-                    //if (isbullet6 == false)
-                    //{
-
-                    //}
-
-                    for (int i = 0; i < 20; i++)
-                    {
-
-                        GameObject bullet6 = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
-                        Rigidbody rigid = bullet6.GetComponent<Rigidbody>();
-                        bullet6.transform.LookAt(enemy.transform);
-                        rigid.velocity = bulletPos.forward.normalized * 20f;
-                        //hits[i].SendMessage("대미지 입힘");       // 콜라이더 안에 들어오는 적들 대미지 주는 방식으로 처리    
-                    }
+                    GameObject bullet6 = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
+                    bullet6.transform.LookAt(enemy.transform);
+                    bullet6.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
 
 
                 }

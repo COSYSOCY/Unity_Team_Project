@@ -5,6 +5,8 @@ using UnityEngine;
 public class Skill_9 : Skill_Ori
 {
 
+    public Vector3 endpos;
+    public GameObject laserPrefab;
 
     public override void LevelUp()
     {
@@ -54,18 +56,55 @@ public class Skill_9 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
+        float Range = 100f;
         while (true)
         {
-            
-            yield return new WaitForSeconds(0.5f);
-            GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
-            Rigidbody rigid = bullet.GetComponent<Rigidbody>();
-            rigid.velocity = bulletPos.forward.normalized * 30f;
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(2f);
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(100)내에 오브젝트 배열로 받기
+            if (hits.Length > 0)
+            {
+                List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    if (hits[i].transform.CompareTag("Enemy"))
+                    {
+                        Enemys.Add(hits[i].gameObject);
 
-            //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
+                    }
+                }
+                if (Enemys.Count > 0)
+                {
+                    int random = Random.Range(0, Enemys.Count - 1);
+                    GameObject laser = Instantiate(laserPrefab, Player.transform.position, Quaternion.identity);
+                    Vector3 d= Enemys[random].transform.position- Player.transform.position;
+                    d.Normalize();
+                    endpos = d * 500;
+                    laser.GetComponent<LineRenderer>().SetPosition(0,Player.transform.position);
+                    laser.GetComponent<LineRenderer>().SetPosition(1,endpos);
+                    
+                    RaycastHit[] Rhits = Physics.SphereCastAll(Player.transform.position, 2f, d);
+
+                    if (Rhits.Length > 0)
+                    {
+                        for (int i = 0; i < Rhits.Length; i++)
+                        {
+                            if (Rhits[i].transform.CompareTag("Enemy")&&Rhits[i].transform.gameObject.activeSelf)
+                            {
+                                Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(info.Damage);
+
+
+                            }
+                        }
+                    }
+                    Destroy(laser, 0.5f);
+
+                }
+            }
+
         }
     }
+
+
 
 
     private void OnEnable()
