@@ -55,17 +55,37 @@ public class Skill_10 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
+        float Range = 150f;
         while (true)
         {
-            yield return new WaitForSeconds(3f);
-            for (int i = 0; i < 50; i++)
+            yield return new WaitForSeconds(2f);
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(150)내에 오브젝트 배열로 받기
+            if (hits.Length > 0)
             {
-                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
-                bullet3.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    if (hits[i].transform.CompareTag("Enemy"))
+                    {
+                        Enemys.Add(hits[i].gameObject);
+
+                    }
+                }
+                if (Enemys.Count > 0)
+                {
+                    //Debug.Log("발사");
+                    int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
+                    GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+                    bullet.transform.LookAt(Enemys[random].transform);
+                    bullet.GetComponent<Bullet_Trigger_10>().Damage = info.Damage;
+                    bullet.GetComponent<Bullet_Trigger_10>().Player= Player;
+                    //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
+                    //rigid.velocity = bulletPos.forward.normalized * 20f;
+                    //미사일 생성 하고 적 방향 바라보기
+
+                }
             }
+
         }
     }
 
