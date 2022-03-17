@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 8
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 11
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 5
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 8792880933486749509, guid: 0ffee8a3c7156fc4f90850cb09a0752d, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 12
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 9
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 7
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 13
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -2476,8 +2476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 4
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
-  bulletPos: {fileID: 0}
+  bulletPrefab: {fileID: 771817205842225508, guid: aef5f7177bf0ae546bda4ac509f9f44b, type: 3}
+  bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -3623,7 +3623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 10
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
@@ -4396,7 +4396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 6
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
   Lv: 0
   Damage: 0
