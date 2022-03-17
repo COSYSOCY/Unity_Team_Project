@@ -10,16 +10,22 @@ public class Enemy : MonoBehaviour
     private int enemyDmg = 20;
     private float atkDelay;
     private float atkCoolTime;
-    private float moveSpeed = 0f;
+    private float moveSpeed = 5f;
     private bool isDead;
 
     NavMeshAgent nav;
 
-    void Start()
+    private void OnEnable()
     {
-        nav = GetComponent<NavMeshAgent>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        nav = GetComponent<NavMeshAgent>();
         StartCoroutine(UpdateEnemy());
+        
+    }
+    private void Start()
+    {
+        target = GameObject.Find("Player").GetComponent<Transform>();
+        nav = GetComponent<NavMeshAgent>();
     }
 
     void NavEnemy(Vector3 _target)
@@ -31,9 +37,10 @@ public class Enemy : MonoBehaviour
     {
         while (!isDead)
         {
+            yield return new WaitForSeconds(0.2f);
             StartCoroutine(EnemyTarget());
             StartCoroutine(MoveEnemy());
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
     IEnumerator EnemyTarget()

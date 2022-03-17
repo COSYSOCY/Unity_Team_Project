@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8478201054582748452}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1465976846955368104}
   - component: {fileID: -4797137238501036881}
   - component: {fileID: 3984187361017688308}
+  - component: {fileID: 4658789597888100910}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -245,3 +246,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4658789597888100910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6876871023749238010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090b869fb6bb5c74e8df38ccb6dd42cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 1
+  TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
+  parentTransform: {fileID: 0}

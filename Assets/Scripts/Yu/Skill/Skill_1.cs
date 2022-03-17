@@ -59,9 +59,14 @@ public class Skill_1 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(0.5f);
-            GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
-            Rigidbody rigid = bullet.GetComponent<Rigidbody>();
-            rigid.velocity = bulletPos.forward.normalized * 20f;
+            for (int i = 0; i < info.bulletCnt; i++)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation* Quaternion.Euler(0f,i*10,0f));
+                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+            }
+            
+            //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
+            //rigid.velocity = bulletPos.forward.normalized * 20f;
             //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
         }
     }

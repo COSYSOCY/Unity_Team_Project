@@ -64,6 +64,7 @@ public class Skill_10 : Skill_Ori
                 Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
                 Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
                 rigid3.velocity = ranvec.normalized * 10f;
+                bullet3.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
             }
         }
     }

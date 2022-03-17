@@ -34,6 +34,7 @@ public class EnemyManager : MonoBehaviour
     }
     IEnumerator CallEnemy()
     {
+       // yield return new WaitForSeconds(f);
         while (!isGameOver)
         {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -41,7 +42,7 @@ public class EnemyManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(respawnTime);
                 GameObject enemy = enemyPooling.MakeEnemy("Enemy");
-                enemy.transform.position = GetRandomPos();
+                enemy.transform.position = player.transform.position+GetRandomPos();
             }
             else yield return null;
         }

@@ -77,7 +77,7 @@ public class Skill_11 : Skill_Ori
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
                     GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
                     bullet.transform.LookAt(Enemys[random].transform);
-
+                    bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
                     //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
                     //rigid.velocity = bulletPos.forward.normalized * 20f;
                     //미사일 생성 하고 적 방향 바라보기

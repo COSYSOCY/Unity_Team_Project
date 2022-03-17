@@ -70,6 +70,7 @@ public class Skill_7 : Skill_Ori
         {
             yield return new WaitForSeconds(0.1f);
             GameObject bullet = Instantiate(birdbulletprefabs, bird.transform.position, bird.transform.rotation);
+            bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
         }
     }
 

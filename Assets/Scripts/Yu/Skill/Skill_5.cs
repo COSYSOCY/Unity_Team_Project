@@ -74,6 +74,7 @@ public class Skill_5 : Skill_Ori
                 {
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
                     GameObject bullet= Instantiate(bulletPrefab, hits[random].transform.position, Quaternion.identity); //생성
+                    bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
                     Destroy(bullet, 1f);
                     Debug.Log(Enemys[random].name + "데미지 받음");
 
