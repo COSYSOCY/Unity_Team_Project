@@ -93,7 +93,7 @@ public class Skill_6_RangeAttack : Skill_Ori
                         
                         GameObject bullet6 = Instantiate(Player, transform.position, transform.rotation);
                         Rigidbody rigid = bullet6.GetComponent<Rigidbody>();
-                        
+                        Debug.Log("6번 광역 공격");
                         hits[i].SendMessage("대미지 입힘");       // 콜라이더 안에 들어오는 적들 대미지 주는 방식으로 처리    
                     }
 

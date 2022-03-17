@@ -86,11 +86,13 @@ public class Skill_8 : Skill_Ori
                         GameObject bullet8_1 = Instantiate(bulletPrefab, transform.position, transform.rotation);
                         Rigidbody rigid = bullet8_1.GetComponent<Rigidbody>();
                         rigid.velocity = bulletPos.forward.normalized * 20f;
+                        Debug.Log("8_1 맞음");
                         if (hits[i].transform.CompareTag("bullet8_1")) // 방사 피해 입히는 2번째 공격은 블랫8_1이 맞으면 그 자리에 블랫8_2를 소환한다
                         {
                             GameObject bullet8_2 = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
                             Rigidbody rigid1 = bullet8_2.GetComponent<Rigidbody>();
                             yield return new WaitForSeconds(0.1f);
+                            Debug.Log("8_2 터짐");
                         }
                     }                             
                     
