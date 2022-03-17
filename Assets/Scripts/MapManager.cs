@@ -4,17 +4,22 @@ using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
-	public const float maxViewDst = 250;
+	public const float maxViewDst = 100;
 	public Transform viewer;
-	public static GameObject Maps;
+	public GameObject Maps;
 	public static Vector2 viewerPosition;
-	int chunkSize = 240;
+	int chunkSize = 100;
 	int chunksVisibleInViewDst;
 
 	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
 	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
+	private static MapManager instance = null;
 
-	void Start()
+    private void Awake()
+    {
+		instance = this;
+    }
+    void Start()
 	{
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / chunkSize);
 	}
@@ -24,7 +29,6 @@ public class MapManager : MonoBehaviour
 		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
 		UpdateVisibleChunks();
 	}
-
 	void UpdateVisibleChunks()
 	{
 		for (int i = 0; i < terrainChunksVisibleLastUpdate.Count; i++)
@@ -52,7 +56,7 @@ public class MapManager : MonoBehaviour
 				}
 				else
 				{
-					terrainChunkDictionary.Add(viewedChunkCoord, new TerrainChunk(viewedChunkCoord, chunkSize, transform));
+					terrainChunkDictionary.Add(viewedChunkCoord, new TerrainChunk(viewedChunkCoord, chunkSize));
 				}
 
 			}
@@ -64,16 +68,14 @@ public class MapManager : MonoBehaviour
 		GameObject meshObject;
 		Vector2 position;
 		Bounds bounds;
-		public TerrainChunk(Vector2 coord, int size, Transform parent)
+		public TerrainChunk(Vector2 coord, int size)
 		{
 			position = coord * size;
 			bounds = new Bounds(position, Vector2.one * size);
 			Vector3 positionV3 = new Vector3(position.x, 0, position.y);
-			
-			meshObject = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Plane));
-			meshObject.transform.position = positionV3;
-			meshObject.transform.localScale = Vector3.one * size / 10f;
-			meshObject.transform.parent = parent;
+
+			meshObject = Instantiate(instance.Maps,positionV3,Quaternion.identity);
+			meshObject.transform.localScale = Vector3.one * size/10f;
 			SetVisible(false);
 		}
 		public void UpdateTerrainChunk()
@@ -87,11 +89,9 @@ public class MapManager : MonoBehaviour
 		{
 			meshObject.SetActive(visible);
 		}
-
 		public bool IsVisible()
 		{
 			return meshObject.activeSelf;
 		}
-
 	}
 }

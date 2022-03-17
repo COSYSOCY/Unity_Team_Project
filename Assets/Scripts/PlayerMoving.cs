@@ -48,6 +48,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             while (true)
             {
                 player.Translate(move * moveSpeed * Time.deltaTime, Space.World);
+                player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(move), 5 * Time.deltaTime);
                 yield return null;
             }
         }
