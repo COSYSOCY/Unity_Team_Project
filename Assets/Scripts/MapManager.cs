@@ -15,11 +15,11 @@ public class MapManager : MonoBehaviour
 	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
 	private static MapManager instance = null;
 
-    private void Awake()
-    {
+	private void Awake()
+	{
 		instance = this;
-    }
-    void Start()
+	}
+	void Start()
 	{
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / chunkSize);
 	}
@@ -74,8 +74,8 @@ public class MapManager : MonoBehaviour
 			bounds = new Bounds(position, Vector2.one * size);
 			Vector3 positionV3 = new Vector3(position.x, 0, position.y);
 
-			meshObject = Instantiate(instance.Maps,positionV3,Quaternion.identity);
-			meshObject.transform.localScale = Vector3.one * size/10f;
+			meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
+			meshObject.transform.localScale = Vector3.one * size / 10f;
 			SetVisible(false);
 		}
 		public void UpdateTerrainChunk()

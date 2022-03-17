@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyTarget()
     {
-        
+
 
         Vector3 dir = target.transform.position - gameObject.transform.position;
         Debug.Log(dir);

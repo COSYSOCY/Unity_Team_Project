@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
     }
     IEnumerator CallEnemy()
     {
-        while(!isGameOver)
+        while (!isGameOver)
         {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (enemyCount < maxEnemy)
