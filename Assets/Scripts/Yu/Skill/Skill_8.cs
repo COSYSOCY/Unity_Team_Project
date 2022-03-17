@@ -6,7 +6,7 @@ public class Skill_8 : Skill_Ori
 {
     public override void LevelUp()
     {
-        switch (Lv)
+        switch (info.Lv)
         {
             case 0:
                 //아무것도아님
@@ -36,15 +36,15 @@ public class Skill_8 : Skill_Ori
                 break;
         }
 
-        Lv++;
+        info.Lv++;
     }
 
     void Start_Func()
     {
         //시작시 설정
-        Lv = 1;
-        bulletCnt = 1;
-        Damage = 1f;
+        info.Lv = 1;
+        info.bulletCnt = 1;
+        info.Damage = 1f;
 
         StartCoroutine(Skill_Update());
     }

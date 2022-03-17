@@ -303,6 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125332049}
   - component: {fileID: 125332050}
+  - component: {fileID: 125332051}
   m_Layer: 0
   m_Name: Skill9
   m_TagString: Untagged
@@ -336,19 +337,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb07eb0a4a7bd34d9897c49d4c88873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 8
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 125332051}
+--- !u!114 &125332051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125332048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 8
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC9"
+  Skill_Name: "\uB808\uC774\uC800"
   Lv_Text:
   - "\uC77C\uC9C1\uC120 \uB808\uC774\uC800"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 8
 --- !u!1 &142600883
 GameObject:
@@ -1078,6 +1092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336292649}
   - component: {fileID: 336292650}
+  - component: {fileID: 336292651}
   m_Layer: 0
   m_Name: Skill12
   m_TagString: Untagged
@@ -1111,19 +1126,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfae4f970b151c945afb121e01e04762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 11
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 336292651}
+--- !u!114 &336292651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336292648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 11
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC12"
+  Skill_Name: "\uAE30\uB3C4\uBB38"
   Lv_Text:
-  - "\uAE30\uB3C4\uBB38"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uAE30\uB3C4\uBB38\uC774 \uC8FC\uBCC0\uC744 \uD68C\uC804\uD558\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 11
 --- !u!1 &469214311
 GameObject:
@@ -1505,6 +1533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547790605}
   - component: {fileID: 547790604}
+  - component: {fileID: 547790606}
   m_Layer: 0
   m_Name: Skill4
   m_TagString: Untagged
@@ -1524,20 +1553,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7ba04a30368b40b4bbcbb614e6c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 3
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC4"
-  Lv_Text:
-  - "\uC8FC\uC704\uB85C \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC11\uB2C8\uB2E4"
-  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
-  - "\uB370\uBBF8\uC9C0 \uC99D\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  Skill_Icon: 3
+  info: {fileID: 547790606}
 --- !u!4 &547790605
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,6 +1571,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547790606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547790603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 3
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uC2A4\uD0AC4"
+  Lv_Text:
+  - "\uC804\uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 3
 --- !u!1 &549085513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 549085514}
   - component: {fileID: 549085515}
+  - component: {fileID: 549085516}
   m_Layer: 0
   m_Name: Skill6
   m_TagString: Untagged
@@ -1595,19 +1638,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987be407f39212d4184294f974a9335b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 5
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 8792880933486749509, guid: 0ffee8a3c7156fc4f90850cb09a0752d, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 549085516}
+--- !u!114 &549085516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549085513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 5
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC6"
+  Skill_Name: "\uB9C8\uB298"
   Lv_Text:
-  - "\uB9C8\uB298!"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uBC94\uC704\uB0B4 \uC801\uB4E4 \uACF5\uACA9"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 5
 --- !u!1 &558249785
 GameObject:
@@ -1619,6 +1675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558249787}
   - component: {fileID: 558249786}
+  - component: {fileID: 558249788}
   m_Layer: 0
   m_Name: Skill13
   m_TagString: Untagged
@@ -1638,20 +1695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1664d3c0920a549afceee058ca0701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 12
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC13"
-  Lv_Text:
-  - "\uD5E4\uC77C\uC774\uB2E4"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  Skill_Icon: 12
+  info: {fileID: 558249788}
 --- !u!4 &558249787
 Transform:
   m_ObjectHideFlags: 0
@@ -1666,6 +1713,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &558249788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558249785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 12
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uD5E4\uC77C"
+  Lv_Text:
+  - "\uD5E4\uC77C\uC774 \uB0A0\uB77C\uAC10"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 12
 --- !u!1 &563100750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567763653}
   - component: {fileID: 567763654}
+  - component: {fileID: 567763655}
   m_Layer: 0
   m_Name: Skill10
   m_TagString: Untagged
@@ -1804,19 +1875,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6925c4c1a86896d4983c23e09875b3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 9
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 567763655}
+--- !u!114 &567763655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567763652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 9
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC10"
+  Skill_Name: "\uBD80\uBA54\uB791"
   Lv_Text:
-  - "\uBD80\uBA54\uB791"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uD574\uB2F9\uC9C0\uC5ED\uC73C\uB85C \uB0A0\uB9AC\uACE0 \uB3CC\uC544\uC635\uB2C8\uB2E4"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 9
 --- !u!1 &574970593
 GameObject:
@@ -1907,6 +1991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593982055}
   - component: {fileID: 593982056}
+  - component: {fileID: 593982057}
   m_Layer: 0
   m_Name: Skill8
   m_TagString: Untagged
@@ -1940,19 +2025,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9dcd414b68b8f4d85c2ce21dd4edd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 7
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 593982057}
+--- !u!114 &593982057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593982054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 7
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC8"
+  Skill_Name: "\uBC29\uC0AC\uACF5"
   Lv_Text:
   - "\uBC15\uD788\uACE0 \uB4A4\uB85C \uBC29\uC0AC\uD53C\uD574"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 7
 --- !u!1 &615924996
 GameObject:
@@ -1964,6 +2062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615924998}
   - component: {fileID: 615924997}
+  - component: {fileID: 615924999}
   m_Layer: 0
   m_Name: Skill14
   m_TagString: Untagged
@@ -1983,20 +2082,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8581d38691f1749bb19ff10cf06170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 13
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC14"
-  Lv_Text:
-  - "\uBB34\uC791\uC704 \uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  Skill_Icon: 13
+  info: {fileID: 615924999}
 --- !u!4 &615924998
 Transform:
   m_ObjectHideFlags: 0
@@ -2011,6 +2100,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615924999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615924996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 13
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uB8EC\uD2B8\uB808\uC774\uC11C"
+  Lv_Text:
+  - "\uBB34\uC791\uC704 \uBC29\uD5A5 \uBBF8\uC0AC\uC77C\uBC1C\uC0AC"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 13
 --- !u!1 &632043747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752999193}
   - component: {fileID: 752999192}
+  - component: {fileID: 752999194}
   m_Layer: 0
   m_Name: Skill5
   m_TagString: Untagged
@@ -2474,20 +2587,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7544b568e9e3be648bd184e945a20d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 4
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 771817205842225508, guid: aef5f7177bf0ae546bda4ac509f9f44b, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC5"
-  Lv_Text:
-  - "\uBB34\uC791\uC704 \uC801 \uBC88\uAC1C \uB0B4\uB824\uCE68"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  Skill_Icon: 4
+  info: {fileID: 752999194}
 --- !u!4 &752999193
 Transform:
   m_ObjectHideFlags: 0
@@ -2502,6 +2605,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752999194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752999191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 4
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uBC88\uAC1C"
+  Lv_Text:
+  - "\uBC94\uC704\uB0B4 \uBB34\uC791\uC704 \uD55C\uBA85 \uBC88\uAC1C"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 4
 --- !u!1 &778146707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210016407}
   - component: {fileID: 1210016406}
+  - component: {fileID: 1210016408}
   m_Layer: 0
   m_Name: Skill3
   m_TagString: Untagged
@@ -3425,20 +3552,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb6a79045c1e544fbad8ca872cea2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 2
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC3"
-  Lv_Text:
-  - "\uC77C\uC790 \uCB49"
-  - "\uB370\uBBF8\uC9C0 \uC655\uCC3D \uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
-  Skill_Icon: 2
+  info: {fileID: 1210016408}
 --- !u!4 &1210016407
 Transform:
   m_ObjectHideFlags: 0
@@ -3453,6 +3570,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210016408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210016405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 2
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uC2A4\uD0AC3"
+  Lv_Text:
+  - "\uC77C\uC790\uB85C \uC5EC\uB7EC\uAC1C \uB0A0\uB9BC"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 2
 --- !u!1 &1335457203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,6 +3728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1412918704}
   - component: {fileID: 1412918705}
+  - component: {fileID: 1412918706}
   m_Layer: 0
   m_Name: Skill11
   m_TagString: Untagged
@@ -3621,19 +3762,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4a85583894e164f8b40e90fb562249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 10
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 1412918706}
+--- !u!114 &1412918706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412918703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 10
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC11"
+  Skill_Name: "\uBBF8\uC0AC\uC77C"
   Lv_Text:
-  - "\uB2E8\uC77C\uD0C0\uCF13 \uBBF8\uC0AC\uC77C"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uB2E8\uC77C\uD0C0\uCF13\uBBF8\uC0AC\uC77C"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 10
 --- !u!1 &1428158544
 GameObject:
@@ -4134,6 +4288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635998967}
   - component: {fileID: 1635998968}
+  - component: {fileID: 1635998969}
   m_Layer: 0
   m_Name: Skill1
   m_TagString: Untagged
@@ -4167,18 +4322,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e582ecc2dd5a8a4ab0925d713d26937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 0
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 8792880933486749509, guid: 0ffee8a3c7156fc4f90850cb09a0752d, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 1635998969}
+--- !u!114 &1635998969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635998966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
   Skill_Name: "\uB2E8\uAC80(Knife)"
   Lv_Text:
   - "\uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uC73C\uB85C \uBE60\uB974\uAC8C \uBC1C\uC0AC\uB429\uB2C8\uB2E4"
-  - "\uD22C\uC0AC\uCCB4 +1"
-  - "\uACF5\uACA9\uB825 \uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
   - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 0
 --- !u!1 &1663144785
@@ -4361,6 +4529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711409215}
   - component: {fileID: 1711409216}
+  - component: {fileID: 1711409217}
   m_Layer: 0
   m_Name: Skill7
   m_TagString: Untagged
@@ -4394,19 +4563,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14627ecbf43e4b54c93f22d78511deed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 6
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 521127676}
+  info: {fileID: 1711409217}
+--- !u!114 &1711409217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711409214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 6
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC7"
+  Skill_Name: "\uBE44\uB458\uAE30"
   Lv_Text:
-  - "\uBE44\uB458\uAE30"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
-  - "\uC635\uC158\uCD94\uAC00"
+  - "\uC6D0\uD615\uC758 \uAD6C\uC5ED\uC744 \uD3ED\uACA9\uD569\uB2C8\uB2E4"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 6
 --- !u!1 &1736628809
 GameObject:
@@ -4638,6 +4820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1825683209}
   - component: {fileID: 1825683208}
+  - component: {fileID: 1825683210}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Untagged
@@ -4657,20 +4840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef76fd797a8773342b3dfed39ecacae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 1
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 771817205842225508, guid: aef5f7177bf0ae546bda4ac509f9f44b, type: 3}
   bulletPos: {fileID: 521127676}
-  Lv: 0
-  Damage: 0
-  bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC2"
-  Lv_Text:
-  - "\uB178\uB791\uC0C9 \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC10"
-  - "\uB370\uBBF8\uC9C0 \uC655\uCC3D\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4 \uC99D\uAC00"
-  - "\uD558\uD558"
-  Skill_Icon: 1
+  info: {fileID: 1825683210}
 --- !u!4 &1825683209
 Transform:
   m_ObjectHideFlags: 0
@@ -4685,6 +4858,29 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1825683210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825683207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbb131c9e35efe4b9d616b0e2587638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 1
+  Lv: 0
+  Damage: 0
+  bulletCnt: 0
+  Skill_Name: "\uC2A4\uD0AC2"
+  Lv_Text:
+  - "\uB178\uB791\uC0C9 \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC10"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  Skill_Icon: 1
 --- !u!1 &1998160895
 GameObject:
   m_ObjectHideFlags: 0

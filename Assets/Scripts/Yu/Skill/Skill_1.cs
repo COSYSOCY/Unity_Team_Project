@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Skill_1 : Skill_Ori
 {
+    
     public override void LevelUp()
     {
-        switch (Lv)
+        switch (info.Lv)
         {
             case 0:
                 //아무것도아님
                 break;
             case 1:
                 //투사체 증가
-                bulletCnt++;
+                info.bulletCnt++;
                 break;
             case 2:
                 //공격력증가
-                Damage = 5f;
+                info.Damage = 5f;
                 break;
             case 3:
                 //관통증가
@@ -38,15 +39,15 @@ public class Skill_1 : Skill_Ori
                 break;
         }
 
-        Lv++;
+        info.Lv++;
     }
 
     void Start_Func()
-    { 
+    {
         //시작시 설정
-        Lv=1;
-        bulletCnt = 1;
-        Damage = 1f;
+        info.Lv = 1;
+        info.bulletCnt = 1;
+        info.Damage = 1f;
 
         StartCoroutine(Skill_Update());
     }
