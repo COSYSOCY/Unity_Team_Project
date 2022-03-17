@@ -11,12 +11,12 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     private Vector3 move;
     private bool isMove;
     private bool isStop;
-
+    public LevelUp levelup;
     public RectTransform pad;
     public RectTransform stick;
     public void OnDrag(PointerEventData eventData)
     {
-        if (isStop == false)
+        if (isStop == false&& levelup.testcheck == false)
         {
             stick.position = eventData.position;
             stick.localPosition =
@@ -26,7 +26,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (isStop == false)
+        if (isStop == false&& levelup.testcheck == false)
         {
             pad.position = eventData.position;
             pad.gameObject.SetActive(true);
@@ -35,10 +35,14 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (levelup.testcheck==false)
+        {
+
         stick.localPosition = Vector2.zero;
         pad.gameObject.SetActive(false);
         StopCoroutine("Movement");
         move = Vector3.zero;
+        }
     }
     IEnumerator Movement()
     {

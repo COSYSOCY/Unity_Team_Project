@@ -44,7 +44,7 @@ public class LevelUp : MonoBehaviour
 
     void test()
     {
-
+        testcheck = true;
         for (int i = 0; i < skillManager.Skills.Count; i++)
         {
             num2.Add(i);
@@ -59,7 +59,7 @@ public class LevelUp : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            testcheck = true;
+            
             Time.timeScale = 0f;
             LevelUiObject.SetActive(true);
             //var a = GetComponent<Skill_1>();
