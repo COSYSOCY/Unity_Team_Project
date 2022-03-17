@@ -18,7 +18,7 @@ public class EnemyManager : MonoBehaviour
     }
     public Vector3 GetRandomPos()
     {
-        float radius = 20f;
+        float radius = 30f;
         Vector3 playerPos = player.transform.position;
 
         float a = playerPos.x;
@@ -29,7 +29,7 @@ public class EnemyManager : MonoBehaviour
         z_b *= Random.Range(0, 2) == 0 ? -1 : 1;
         float z = z_b + b;
 
-        Vector3 randomPos = new Vector3(x, 0, z);
+        Vector3 randomPos = new Vector3(x, 1, z);
         return randomPos;
     }
     IEnumerator CallEnemy()

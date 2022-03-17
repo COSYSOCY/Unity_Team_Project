@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,44 +10,28 @@ public class Enemy : MonoBehaviour
     private float enemyDmg = 10;
     private float atkDelay;
     private float atkCoolTime;
-    private float moveSpeed = 2.5f;
+    private float moveSpeed = 5f;
     private bool isDead;
 
-    NavMeshAgent nav;
-
-    void Start()
+    private void Start()
     {
-        nav = GetComponent<NavMeshAgent>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+    }
+    private void Update()
+    {
+        EnemyTarget();
+    }
+
+    void EnemyTarget()
+    {
         
-        StartCoroutine(UpdateEnemy());
+
+        Vector3 dir = target.transform.position - gameObject.transform.position;
+        Debug.Log(dir);
+        transform.position = Vector3.MoveTowards(transform.position, dir, Time.deltaTime * moveSpeed);
+        //transform.Translate(dir.normalized * moveSpeed * Time.deltaTime);
+        //transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
     }
 
-    void NavEnemy(Vector3 _target)
-    {
-        nav.SetDestination(_target);
-    }
-
-    IEnumerator UpdateEnemy()
-    {
-        while (!isDead)
-        {
-            StartCoroutine(EnemyTarget());
-            StartCoroutine(MoveEnemy());
-            yield return new WaitForSeconds(0.5f);
-        }
-    }
-    IEnumerator EnemyTarget()
-    {
-        Vector3 dir = target.position - transform.position;
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
-        yield return new WaitForSeconds(0.2f);
-    }
-    IEnumerator MoveEnemy()
-    {
-        nav.speed = moveSpeed;
-        NavEnemy(target.position);
-        yield return null;
-    }
 
 }

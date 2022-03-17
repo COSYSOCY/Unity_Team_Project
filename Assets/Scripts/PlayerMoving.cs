@@ -24,7 +24,6 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             move = new Vector3(stick.localPosition.x, 0, stick.localPosition.y).normalized;
         }
     }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         if (isStop == false)
