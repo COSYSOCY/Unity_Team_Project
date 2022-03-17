@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 2110300932}
     - target: {fileID: 4185447155546877668, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142944, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_Name
@@ -1136,6 +1136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2097701193}
   moveSpeed: 5
+  levelup: {fileID: 0}
   pad: {fileID: 1578246705}
   stick: {fileID: 280040783}
 --- !u!114 &2096178707
