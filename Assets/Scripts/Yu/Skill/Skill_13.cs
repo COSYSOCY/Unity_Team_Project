@@ -60,7 +60,7 @@ public class Skill_13 : Skill_Ori
             yield return new WaitForSeconds(3f);
             for (int i = 0; i < 50; i++)
             {
-                GameObject bullet3 = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 90, 0));
+                GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));
                 Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
                 Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
                 rigid3.velocity = ranvec.normalized * 10f;

@@ -61,6 +61,9 @@ public class LevelUp : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
+            testcheck = true;
+            Time.timeScale = 0f;
+            LevelUiObject.SetActive(true);
             //var a = GetComponent<Skill_1>();
             //var a = Skill_1;
             GameObject gameObject = skillManager.Skills[num[i]-1];
@@ -179,15 +182,15 @@ public class LevelUp : MonoBehaviour
             }
 
             Skill_Image[i].GetComponent<Image>().sprite = skillManager.Skill_icon[image];
-            //Skill_Text[i].GetComponent<Text>().text = text;
+            Skill_Text[i].GetComponent<Text>().text = text;
             
         }
 
 
-        testcheck = true;
-        Time.timeScale = 0f;
-        LevelUiObject.SetActive(true);
+
     }
+
+
     void ButonClick(GameObject gameObject)
     {
         int Lv = 0;
