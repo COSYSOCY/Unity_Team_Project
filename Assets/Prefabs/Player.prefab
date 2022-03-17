@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2068570946462539864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4185447155546877668}
+  - component: {fileID: 25057523574485212}
+  - component: {fileID: 4650412495797960253}
+  m_Layer: 0
+  m_Name: ATKPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4185447155546877668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068570946462539864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4701004815537142948}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25057523574485212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068570946462539864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f37329e1cbb47742aa16c06dfa9821e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Range: 30
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &4650412495797960253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068570946462539864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d90815c37cb6824daeb106b08f00e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletA: {fileID: 8792880933486749509, guid: 0ffee8a3c7156fc4f90850cb09a0752d, type: 3}
+  bulletB: {fileID: 771817205842225508, guid: aef5f7177bf0ae546bda4ac509f9f44b, type: 3}
+  bulletC: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+  bulletPos: {fileID: 4185447155546877668}
+  weapon: 0
+  nomalATK: 0
+  shotGunATK: 0
+  machineGunATK: 0
+  fireRoundATK: 0
+  ATK1: 0
+  ATK2: 0
+  ATK3: 0
+  ATK4: 0
+  ATK5: 0
+  ATK6: 0
+  ATK7: 0
+  ATK8: 0
+  ATK9: 0
 --- !u!1 &4701004815537142944
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +112,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701004816666362259}
+  - {fileID: 4185447155546877668}
+  - {fileID: 1090916540526003659}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -255,3 +336,54 @@ MonoBehaviour:
   ATK7: 0
   ATK8: 0
   ATK9: 0
+--- !u!1 &5480699440014913585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090916540526003659}
+  - component: {fileID: 6787329804418949039}
+  m_Layer: 0
+  m_Name: BakerBuilder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090916540526003659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480699440014913585}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.45700002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4701004815537142948}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6787329804418949039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480699440014913585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfd64a6dad03d54aa100d8fe9fec30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Prefab: {fileID: 8974632829078057019, guid: b614487449b82cb43b621cdec04388d3, type: 3}
+  m_PoolSize: 250
+  m_InstancesPerTile: 10
+  m_RandomPosition: 0
+  m_RandomOrientation: 0
+  m_Height: 0
+  m_BaseHash: 347652783
+  m_Size: 100
