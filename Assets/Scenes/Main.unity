@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Tracked: {fileID: 2097701193}
-  m_Size: {x: 100, y: 20, z: 100}
+  m_Size: {x: 200, y: 20, z: 200}
 --- !u!4 &549603680
 Transform:
   m_ObjectHideFlags: 0
@@ -3387,6 +3387,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
   player: {fileID: 2097701193}
+  batTime: 0
+  circleTime: 0
+  respawnTime: 0
 --- !u!4 &810273179
 Transform:
   m_ObjectHideFlags: 0

@@ -60,7 +60,7 @@ public class EnemyManager : MonoBehaviour
                 if (playTime >= batTime)
                 {
                     batTime *= 2;
-                    Debug.Log(batTime);
+                    //Debug.Log(batTime);
                     Vector3 batPos = GetRandomPos();
                     for (int i = 0; i < 20; i++)
                     {

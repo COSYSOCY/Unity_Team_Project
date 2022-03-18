@@ -5,6 +5,13 @@ using UnityEngine;
 public class Enemy_Info : MonoBehaviour
 {
     public float Hp;
+    public enum Enemy_ENUM
+    {
+        none=0,
+        Enemy_1,
+        bat,
+    }
+    public Enemy_ENUM enemy_enum;
     public GameObject[] itemprefabs;
     public GameObject TextUi;
     public Transform parentTransform;
@@ -44,16 +51,27 @@ public class Enemy_Info : MonoBehaviour
             else
             {
                 Instantiate(itemprefabs[1], transform.position, transform.rotation);
-
             }
-
         }
-
     }
     public void Dead()
     {
         //Á×À½
-        ItemRespawn();
+        
+        switch (enemy_enum)
+        {
+            case Enemy_ENUM.none:
+                break;
+            case Enemy_ENUM.Enemy_1:
+                ItemRespawn();
+                break;
+            case Enemy_ENUM.bat:
+                ItemRespawn();
+                break;
+            default:
+                break;
+        }
+
         gameObject.SetActive(false);
     }
 }

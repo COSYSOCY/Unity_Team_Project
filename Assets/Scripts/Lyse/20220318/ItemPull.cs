@@ -53,7 +53,7 @@ public class ItemPull : MonoBehaviour
         }
         if (other.transform.CompareTag("Pull")&& pullcheck==false)
         {
-            Debug.Log("√‚πﬂ");
+           
             pullcheck = true;
             StartCoroutine(itemmove());
         }
