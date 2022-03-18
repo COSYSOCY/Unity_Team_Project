@@ -139,23 +139,23 @@ public class PlayerStatus : MonoBehaviour
         }
         uimanager.XpSet();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("히트");
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            StartCoroutine(PlayerDamage());
-            test = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //Debug.Log("히트");
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+    //        StartCoroutine(PlayerDamage());
+    //        test = true;
+    //    }
+    //}
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
             
-            test = false;
-        }
-    }
+    //        test = false;
+    //    }
+    //}
 
     IEnumerator PlayerDamage()
     {
