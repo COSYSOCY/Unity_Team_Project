@@ -364,7 +364,10 @@ MonoBehaviour:
   - "\uC77C\uC9C1\uC120 \uB808\uC774\uC800"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 8
 --- !u!1 &142600883
 GameObject:
@@ -623,7 +626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170737731
 GameObject:
@@ -717,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 2110300932}
     - target: {fileID: 4185447155546877668, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142944, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_Name
@@ -753,15 +756,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142948, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142948, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142948, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142948, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1017,13 +1020,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &260500983 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 879163803632125715, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
-  m_PrefabInstance: {fileID: 1485718677}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &260500984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 879163803632125724, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
@@ -1148,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfae4f970b151c945afb121e01e04762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2097701187}
+  Player: {fileID: 1567664940}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 1792243321}
   info: {fileID: 336292651}
@@ -1173,8 +1171,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uAE30\uB3C4\uBB38\uC774 \uC8FC\uBCC0\uC744 \uD68C\uC804\uD558\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 11
 --- !u!1 &469214311
 GameObject:
@@ -1212,7 +1213,7 @@ RectTransform:
   - {fileID: 1998160897}
   - {fileID: 618755127}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1609,12 +1610,15 @@ MonoBehaviour:
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC4"
+  Skill_Name: "\uC6D0\uD615\uBBF8\uC0AC\uC77C"
   Lv_Text:
-  - "\uC804\uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uC804\uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC(\uCFE820\uCD08)"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 3
 --- !u!1 &549085513
 GameObject:
@@ -1684,8 +1688,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uBC94\uC704\uB0B4 \uC801\uB4E4 \uACF5\uACA9"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 5
 --- !u!1 &549603678
 GameObject:
@@ -1730,7 +1737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558249785
 GameObject:
@@ -1800,8 +1807,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uD5E4\uC77C\uC774 \uB0A0\uB77C\uAC10"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 12
 --- !u!1 &563100750
 GameObject:
@@ -1967,7 +1977,10 @@ MonoBehaviour:
   - "\uD574\uB2F9\uC9C0\uC5ED\uC73C\uB85C \uB0A0\uB9AC\uACE0 \uB3CC\uC544\uC635\uB2C8\uB2E4"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 9
 --- !u!1 &574970593
 GameObject:
@@ -2116,8 +2129,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uBC15\uD788\uACE0 \uB4A4\uB85C \uBC29\uC0AC\uD53C\uD574"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 7
 --- !u!1 &615924996
 GameObject:
@@ -2187,8 +2203,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uBB34\uC791\uC704 \uBC29\uD5A5 \uBBF8\uC0AC\uC77C\uBC1C\uC0AC"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 13
 --- !u!1 &618755126
 GameObject:
@@ -2412,7 +2431,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2723,9 +2742,12 @@ MonoBehaviour:
   Skill_Name: "\uBC88\uAC1C"
   Lv_Text:
   - "\uBC94\uC704\uB0B4 \uBB34\uC791\uC704 \uD55C\uBA85 \uBC88\uAC1C"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
   Skill_Icon: 4
 --- !u!1 &778146707
 GameObject:
@@ -2809,7 +2831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!114 &778146711
 MonoBehaviour:
@@ -2868,7 +2890,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938513493
 GameObject:
@@ -2961,7 +2983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &938968626
 GameObject:
@@ -3042,37 +3064,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938968626}
   m_CullTransparentMesh: 1
---- !u!1 &1043686275
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1043686276}
-  m_Layer: 0
-  m_Name: SkillObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1043686276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043686275}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 260500984}
-  m_Father: {fileID: 2097701193}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069256925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,7 +3674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 1593895901896320269, guid: b68ea2df22c482d41b7da878ca2b96fa, type: 3}
+  bulletPrefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1210016408}
 --- !u!4 &1210016407
@@ -3716,11 +3707,14 @@ MonoBehaviour:
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC3"
+  Skill_Name: "\uC544\uC774\uC2A4\uD544\uB4DC"
   Lv_Text:
-  - "\uC77C\uC790\uB85C \uC5EC\uB7EC\uAC1C \uB0A0\uB9BC"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uC8FC\uC704\uC758 \uD070 \uBC15\uC2A4\uB97C \uC0DD\uC131"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 2
 --- !u!1 &1335457203
@@ -3846,7 +3840,7 @@ Transform:
   - {fileID: 65637599}
   - {fileID: 222744697}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412918703
 GameObject:
@@ -3916,8 +3910,11 @@ MonoBehaviour:
   Lv_Text:
   - "\uB2E8\uC77C\uD0C0\uCF13\uBBF8\uC0AC\uC77C"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 10
 --- !u!1 &1428158544
 GameObject:
@@ -3962,7 +3959,7 @@ Transform:
   - {fileID: 558249787}
   - {fileID: 615924998}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1428158546
 MonoBehaviour:
@@ -3993,19 +3990,19 @@ MonoBehaviour:
   - {fileID: 615924996}
   Player_Skill: []
   Skill_icon:
-  - {fileID: 21300000, guid: 45f4390d223be2c42a52269456d15e65, type: 3}
-  - {fileID: 21300000, guid: d7b334d5fe308f6488efd558c5feb2ef, type: 3}
+  - {fileID: 21300000, guid: a8f4e8f470c1efe44b50e4a4aa91d28a, type: 3}
   - {fileID: 21300000, guid: 1ba6cf7ed3d896246bcb3e730345fdd5, type: 3}
-  - {fileID: 21300000, guid: 35209de3ddc7d984bbe20f4149a117ff, type: 3}
-  - {fileID: 21300000, guid: 11d082487c5d54f4cb58e46d26f9d0a5, type: 3}
-  - {fileID: 21300000, guid: 1e60fdd609af9ce428aa10d0be929dbb, type: 3}
   - {fileID: 21300000, guid: ea0bd35a6769ebc46855641393a64d70, type: 3}
+  - {fileID: 21300000, guid: 0f26c4e23172319419080a4207569814, type: 3}
+  - {fileID: 21300000, guid: 1e60fdd609af9ce428aa10d0be929dbb, type: 3}
+  - {fileID: 21300000, guid: 35209de3ddc7d984bbe20f4149a117ff, type: 3}
   - {fileID: 21300000, guid: c3429c128337a81459831057c2485f91, type: 3}
   - {fileID: 21300000, guid: dd24fe7982fb2d64b99fdeedaeeea735, type: 3}
-  - {fileID: 21300000, guid: 7e1d2f0d0a72d4c489e20b55afd4ca6c, type: 3}
-  - {fileID: 21300000, guid: 0f26c4e23172319419080a4207569814, type: 3}
-  - {fileID: 21300000, guid: 99292da89bea1704b9bcaf8582c58f7f, type: 3}
   - {fileID: 21300000, guid: 6ccfc945c7574ee4283b9e768aba5703, type: 3}
+  - {fileID: 21300000, guid: 11d082487c5d54f4cb58e46d26f9d0a5, type: 3}
+  - {fileID: 21300000, guid: d7b334d5fe308f6488efd558c5feb2ef, type: 3}
+  - {fileID: 21300000, guid: 99292da89bea1704b9bcaf8582c58f7f, type: 3}
+  - {fileID: 21300000, guid: 7e1d2f0d0a72d4c489e20b55afd4ca6c, type: 3}
   - {fileID: 21300000, guid: 1e6ecf9cd0cdc544facac4a0f65deeb7, type: 3}
 --- !u!1 &1430331284
 GameObject:
@@ -4048,7 +4045,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1043686276}
+    m_TransformParent: {fileID: 1499604280}
     m_Modifications:
     - target: {fileID: 879163803632125715, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
       propertyPath: m_Name
@@ -4056,7 +4053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 879163803632125715, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 879163803632125724, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
       propertyPath: m_RootOrder
@@ -4068,7 +4065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 879163803632125724, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 879163803632125724, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4102,8 +4099,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 879163803632125725, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996157f97333fff40a31a8e12a44938c, type: 3}
+--- !u!1 &1499604278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499604280}
+  m_Layer: 0
+  m_Name: birdSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1499604280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499604278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 260500984}
+  m_Father: {fileID: 1567664941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1515807337
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,6 +4286,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523330340}
   m_CullTransparentMesh: 1
+--- !u!1 &1567664940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567664941}
+  - component: {fileID: 1567664942}
+  m_Layer: 0
+  m_Name: SkillObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567664941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567664940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1499604280}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567664942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567664940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b086f730bb86744a238e31a0a3fd64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2097701187}
 --- !u!1 &1578246704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,7 +4545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635998966
 GameObject:
@@ -4758,13 +4835,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14627ecbf43e4b54c93f22d78511deed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2097701187}
+  Player: {fileID: 1567664940}
   bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
   bulletPos: {fileID: 1792243321}
   info: {fileID: 1711409217}
   birdbulletprefabs: {fileID: 8792880933486749509, guid: 8133fcb61bc3c8a4892182f66c50781f, type: 3}
-  birdtarget: {fileID: 260500983}
+  birdtarget: {fileID: 1499604278}
   Dack: {fileID: 7783316784364892593, guid: 55b7f7bae9a76e747b5921e41b13c1c1, type: 3}
+  startcheck: 0
 --- !u!114 &1711409217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4784,9 +4862,12 @@ MonoBehaviour:
   Skill_Name: "\uBE44\uB458\uAE30"
   Lv_Text:
   - "\uC6D0\uD615\uC758 \uAD6C\uC5ED\uC744 \uD3ED\uACA9\uD569\uB2C8\uB2E4"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
-  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 6
 --- !u!1 &1736628809
 GameObject:
@@ -5006,7 +5087,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1792243321 stripped
 Transform:
@@ -5044,7 +5125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2097701187}
-  bulletPrefab: {fileID: 1593895901896320269, guid: be95cb2d07ae5544fbe6f2da8104433d, type: 3}
+  bulletPrefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1825683210}
 --- !u!4 &1825683209
@@ -5077,11 +5158,14 @@ MonoBehaviour:
   Lv: 0
   Damage: 0
   bulletCnt: 0
-  Skill_Name: "\uC2A4\uD0AC2"
+  Skill_Name: "\uCC44\uCC0D"
   Lv_Text:
-  - "\uB178\uB791\uC0C9 \uBBF8\uC0AC\uC77C \uB0A0\uB77C\uAC10"
+  - "\uCC44\uCC0D\uC785\uB2C8\uB2E4"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
+  - "\uAD00\uD1B5\uC99D\uAC00"
   - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 1
 --- !u!1 &1998160895

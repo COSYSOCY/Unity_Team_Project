@@ -15,13 +15,13 @@ public class Skill_5 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt += 2;
                 break;
             case 2:
-                //..;
+                info.bulletCnt += 2;
                 break;
             case 3:
-                //..
+                info.bulletCnt += 2;
                 break;
             case 4:
                 //.
@@ -55,11 +55,11 @@ public class Skill_5 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
-        float Range = 150f;
+        float Range = 50f;
         while (true)
         {
             yield return new WaitForSeconds(2f);
-            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(150)내에 오브젝트 배열로 받기
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(50)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
                 List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
@@ -75,8 +75,8 @@ public class Skill_5 : Skill_Ori
                     for (int i = 0; i < info.bulletCnt; i++)
                     {
                         int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
-                        GameObject bullet = Instantiate(bulletPrefab, hits[random].transform.position, Quaternion.identity); //생성
-                        hits[random].GetComponent<Enemy_Info>().Damaged(info.Damage);
+                        GameObject bullet = Instantiate(bulletPrefab, Enemys[random].transform.position, Quaternion.identity); //생성
+                        Enemys[random].GetComponent<Enemy_Info>().Damaged(info.Damage);
                         Destroy(bullet, 0.5f);
                     }
 

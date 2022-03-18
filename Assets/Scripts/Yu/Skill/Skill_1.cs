@@ -63,7 +63,7 @@ public class Skill_1 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             for (int i = 1; i <= info.bulletCnt; i++)
             {
 

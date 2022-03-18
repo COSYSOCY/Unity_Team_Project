@@ -12,25 +12,25 @@ public class Skill_8 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..
+                info.bulletCnt++;
                 break;
             case 2:
-                //..
+                info.bulletCnt++;
                 break;
             case 3:
-                //..
+                info.bulletCnt++;
                 break;
             case 4:
-                //.
+                info.bulletCnt++;
                 break;
             case 5:
-                //.
+                info.bulletCnt++;
                 break;
             case 6:
-                //.
+                info.bulletCnt++;
                 break;
             case 7:
-                //.
+                info.bulletCnt++;
                 break;
             default:
                 break;
@@ -52,11 +52,11 @@ public class Skill_8 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
-        float Range = 300f;
+        float Range = 100f;
         while (true)
         {
-            yield return new WaitForSeconds(1f);
-            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(300)내에 오브젝트 배열로 받기
+            yield return new WaitForSeconds(3f);
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(100)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
                 List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
@@ -78,9 +78,14 @@ public class Skill_8 : Skill_Ori
                             enemy = Enemys[i];
                         }
                     }
-                    GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
-                    bullet.transform.LookAt(enemy.transform);
-                    bullet.GetComponent<Bullet_Trigger_8>().Damage = info.Damage;
+                    for (int i = 0; i < info.bulletCnt; i++)
+                    {
+                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
+                        bullet.transform.LookAt(enemy.transform);
+                        bullet.GetComponent<Bullet_Trigger_8>().Damage = info.Damage;
+                        yield return new WaitForSeconds(0.15f);
+                    }
+
 
 
                 }

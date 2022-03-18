@@ -15,25 +15,25 @@ public class Skill_12 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt++;
                 break;
             case 2:
-                //..;
+                info.bulletCnt++;
                 break;
             case 3:
-                //..
+                info.bulletCnt++;
                 break;
             case 4:
-                //.
+                info.bulletCnt++;
                 break;
             case 5:
-                //.
+                info.bulletCnt++;
                 break;
             case 6:
-                //.
+                info.bulletCnt++;
                 break;
             case 7:
-                //.
+                info.bulletCnt++;
                 break;
             default:
                 break;
@@ -60,7 +60,7 @@ public class Skill_12 : Skill_Ori
             yield return new WaitForSeconds(3f);
             GameObject bullet = Instantiate(gidomon, Player.transform.position, Player.transform.rotation);
             bullet.GetComponent<gidomon>().numberOfObjects = info.bulletCnt;
-            bullet.transform.SetParent(Player.transform, false);
+            bullet.transform.SetParent(Player.transform, true);
             bullet.GetComponent<gidomon>().Dagame = info.Damage;
         }
     }

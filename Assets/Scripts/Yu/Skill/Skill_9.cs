@@ -16,7 +16,7 @@ public class Skill_9 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt++;
                 break;
             case 2:
                 //..;
@@ -74,29 +74,33 @@ public class Skill_9 : Skill_Ori
                 }
                 if (Enemys.Count > 0)
                 {
-                    int random = Random.Range(0, Enemys.Count - 1);
-                    GameObject laser = Instantiate(laserPrefab, Player.transform.position, Quaternion.identity);
-                    Vector3 d= Enemys[random].transform.position- Player.transform.position;
-                    d.Normalize();
-                    endpos = d * 500;
-                    laser.GetComponent<LineRenderer>().SetPosition(0,Player.transform.position);
-                    laser.GetComponent<LineRenderer>().SetPosition(1,endpos);
-                    
-                    RaycastHit[] Rhits = Physics.SphereCastAll(Player.transform.position, 2f, d);
-
-                    if (Rhits.Length > 0)
+                    for (int z = 0; z < info.bulletCnt; z++)
                     {
-                        for (int i = 0; i < Rhits.Length; i++)
+                        int random = Random.Range(0, Enemys.Count - 1);
+                        GameObject laser = Instantiate(laserPrefab, Player.transform.position, Quaternion.identity);
+                        Vector3 d = Enemys[random].transform.position - Player.transform.position;
+                        d.Normalize();
+                        endpos = d * 500;
+                        laser.GetComponent<LineRenderer>().SetPosition(0, Player.transform.position);
+                        laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
+
+                        RaycastHit[] Rhits = Physics.SphereCastAll(Player.transform.position, 2f, d);
+
+                        if (Rhits.Length > 0)
                         {
-                            if (Rhits[i].transform.CompareTag("Enemy")&&Rhits[i].transform.gameObject.activeSelf)
+                            for (int i = 0; i < Rhits.Length; i++)
                             {
-                                Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(info.Damage);
+                                if (Rhits[i].transform.CompareTag("Enemy") && Rhits[i].transform.gameObject.activeSelf)
+                                {
+                                    Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(info.Damage);
 
 
+                                }
                             }
                         }
+                        Destroy(laser, 0.5f);
                     }
-                    Destroy(laser, 0.5f);
+                    
 
                 }
             }
