@@ -16,9 +16,13 @@ public class Enemy_Info : MonoBehaviour
     public GameObject TextUi;
     public Transform parentTransform;
     public UIManager uimanager;
+    public PlayerStatus playerstatus;
+    public float Enemy_Damage;
+    public bool damagecheck;
     private void Start()
     {
-        parentTransform=GameObject.Find("TextUi").GetComponent<Transform>();
+        playerstatus=GameObject.Find("Player").GetComponent<PlayerStatus>();
+        parentTransform =GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
@@ -73,5 +77,20 @@ public class Enemy_Info : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+    }
+    IEnumerator Damage(float dagame)
+    {
+        damagecheck = true;
+        playerstatus.HpPlus(-dagame);
+        yield return new WaitForSeconds(0.5f);
+        damagecheck = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Player")&& damagecheck==false)
+        {
+            StartCoroutine(Damage(Enemy_Damage));
+        }
     }
 }

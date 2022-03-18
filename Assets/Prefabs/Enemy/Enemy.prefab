@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoolPos: {fileID: 0}
-  moveSpeed: 2.5
+  moveSpeed: 3
 --- !u!54 &-4797137238501036881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,3 +268,6 @@ MonoBehaviour:
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
   uimanager: {fileID: 0}
+  playerstatus: {fileID: 0}
+  Enemy_Damage: 6
+  damagecheck: 0
