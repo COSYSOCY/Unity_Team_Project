@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
     const float hp = 100;
-    float curHp;
+    public PlayerInfo playerInfo;
+    public LevelUp level;
+    public UIManager uimanager;
+    public bool dead;
+    public GameObject deadObject;
+    public bool invin=false;
+
     [SerializeField] Slider hpbar;
 
-    private bool isDead;
+
     void Start()
     {
-        curHp = hp;
+        playerInfo.Hp = hp;
     }
     void Update()
     {
@@ -20,18 +27,106 @@ public class PlayerStatus : MonoBehaviour
     }
     public void SliderUpdate()
     {
-        hpbar.value = curHp / hp;
+        hpbar.value = playerInfo.Hp / hp;
     }
     public void HpPlus(float _count)
     {
-        if (curHp + _count <= hp)
+        if (playerInfo.Hp + _count <= hp)
         {
-            curHp += _count;
+            playerInfo.Hp += _count;
         }
         else
         {
-            curHp = hp;
+            playerInfo.Hp = hp;
         }
+        if (playerInfo.Hp < 1)
+        {
+            Dead();
+        }
+    }
+    public void Dead()
+    {
+        deadObject.SetActive(true);
+        dead = true;
+        Time.timeScale = 0f;
+
+    }
+
+    public void Replayer()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void XpPlus(int xp)
+    {
+        playerInfo.Xp += xp;
+        uimanager.XpSet();
+        if (playerInfo.Xp > playerInfo.MaxXp)
+        {
+            
+        }
+    }
+    public void LevelUp()
+    {
+        playerInfo.Xp = playerInfo.MaxXp-playerInfo.Xp;
+        playerInfo.Lv++;
+        XpSet();
+        level.LevelFunc();
+    }
+    public void XpSet()
+    {
+        switch (playerInfo.Lv)
+        {
+            case 1:
+                playerInfo.MaxXp = 10;
+                break;
+            case 2:
+                playerInfo.MaxXp = 10;
+                break;
+            case 3:
+                playerInfo.MaxXp = 10;
+                break;
+            case 4:
+                playerInfo.MaxXp = 10;
+                break;
+            case 5:
+                playerInfo.MaxXp = 10;
+                break;
+            case 6:
+                playerInfo.MaxXp = 10;
+                break;
+            case 7:
+                playerInfo.MaxXp = 10;
+                break;
+            case 8:
+                playerInfo.MaxXp = 10;
+                break;
+            case 9:
+                playerInfo.MaxXp = 10;
+                break;
+            case 10:
+                playerInfo.MaxXp = 10;
+                break;
+            case 11:
+                playerInfo.MaxXp = 10;
+                break;
+            case 12:
+                playerInfo.MaxXp = 9999;
+                break;
+            case 13:
+                playerInfo.MaxXp = 9999;
+                break;
+            case 14:
+                playerInfo.MaxXp = 9999;
+                break;
+            case 15:
+                playerInfo.MaxXp = 9999;
+                break;
+            default:
+                break;
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -44,10 +139,17 @@ public class PlayerStatus : MonoBehaviour
 
     IEnumerator PlayerDamage()
     {
-        if(!isDead)
+        if(!dead&&!invin)
         {
+            HpPlus(-35);
+            invin = true;
             yield return new WaitForSeconds(0.5f);
-            HpPlus(-6);
+            invin = false;
         }
     }
+
+
+
+
+
 }

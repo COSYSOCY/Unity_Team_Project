@@ -17,28 +17,12 @@ public class LevelUp : MonoBehaviour
     public GameObject[] Skill_Image;
 
     // Start is called before the first frame update
-    void Start()
+
+
+    public void LevelFunc()
     {
-
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       if (Input.GetKeyDown(KeyCode.Space) && testcheck ==false)
-        {
-            num.Clear();
-            num2.Clear();
-            test();
-            
-        }
-
-    }
-
-    void test()
-    {
+        num.Clear();
+        num2.Clear();
         testcheck = true;
         for (int i = 0; i < skillManager.Skills.Count; i++)
         {

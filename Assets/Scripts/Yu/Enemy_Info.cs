@@ -7,9 +7,11 @@ public class Enemy_Info : MonoBehaviour
     public float Hp;
     public GameObject TextUi;
     public Transform parentTransform;
+    public UIManager uimanager;
     private void Start()
     {
         parentTransform=GameObject.Find("TextUi").GetComponent<Transform>();
+        uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
     public void Damaged(float damage)
@@ -25,6 +27,7 @@ public class Enemy_Info : MonoBehaviour
         if (Hp <1 && gameObject.activeSelf)
         {
             Dead();
+            uimanager.KillUp();
         }
     }
 
