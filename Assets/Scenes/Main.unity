@@ -822,6 +822,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4701004815537142945, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701004815537142945, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_Radius
       value: 0.56
       objectReference: {fileID: 0}

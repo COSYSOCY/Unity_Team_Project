@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
-public class Enemy : MonoBehaviour
+public class EnemyBat : MonoBehaviour
 {
-    //리스폰을 위한 위치
-    public Transform enemyPoolPos;
+    private Transform batPoolPos;
 
     private Transform target;
     private int hp = 100;
@@ -15,6 +13,7 @@ public class Enemy : MonoBehaviour
     private float atkCoolTime;
     [SerializeField] private float moveSpeed;
     private bool isDead;
+    public bool isOn = true;
 
     NavMeshAgent nav;
 
@@ -24,36 +23,35 @@ public class Enemy : MonoBehaviour
     {
         nav = GetComponent<NavMeshAgent>();
         enemyColor = gameObject.GetComponent<Renderer>();
-        enemyPoolPos = GameObject.Find("EnemyList").GetComponent<Transform>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        batPoolPos = GameObject.Find("BatList").GetComponent<Transform>();
+
     }
+    //SetDestination ¹?±× ¼??¤º?ºÐ
     private void OnEnable()
     {
         if (transform.parent != null)
             transform.parent = transform.parent.parent;
         StartCoroutine(UpdateEnemy());
     }
-    //SetDestination 버그 수정부분
     void OnDisable()
     {
         Invoke("ReAttach", 1f);
     }
     void ReAttach()
     {
-        gameObject.transform.SetParent(enemyPoolPos.transform);
+        gameObject.transform.SetParent(batPoolPos.transform);
+        transform.position = Vector3.zero;
     }
     // --------------------
-    void NavEnemy(Vector3 _target)
-    {
-        nav.SetDestination(_target);
-    }
+
     IEnumerator UpdateEnemy()
     {
         yield return new WaitForSeconds(0.2f);
+        StartCoroutine(MoveEnemy());
         while (!isDead)
         {
             StartCoroutine(EnemyTarget());
-            StartCoroutine(MoveEnemy());
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -62,6 +60,11 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
         yield return new WaitForSeconds(0.2f);
+    }
+    void NavEnemy(Vector3 _target)
+    {
+        Vector3 endPos = _target + new Vector3(_target.x - transform.position.x * 2f, 1, _target.z - transform.position.z * 2f);
+        nav.SetDestination(endPos);
     }
     IEnumerator MoveEnemy()
     {

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6183838301202980837}
   - component: {fileID: 5864589981872119415}
   - component: {fileID: 7552904902055391973}
-  - component: {fileID: -6394325008501315939}
   - component: {fileID: -982304654186345192}
   - component: {fileID: 6954772993504651700}
+  - component: {fileID: -8913209296080291067}
   m_Layer: 0
   m_Name: Bullet_13
   m_TagString: Untagged
@@ -115,19 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6394325008501315939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3964549511716322835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b61d57b8b943540a6d36f178b2956b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadTime: 5
 --- !u!114 &-982304654186345192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c3b5a0f9d9a474682b829077bd3726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!114 &6954772993504651700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +141,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
+--- !u!114 &-8913209296080291067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964549511716322835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a40ff4ea0f2bc439b4a0db4fba7e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadTime: 5

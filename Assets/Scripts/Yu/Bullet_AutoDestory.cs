@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoDestroy : MonoBehaviour
+public class Bullet_AutoDestory : MonoBehaviour
 {
     public float deadTime;
     void OnEnable()
@@ -12,9 +12,9 @@ public class AutoDestroy : MonoBehaviour
 
     IEnumerator DeadObj()
     {
-       
+
         yield return new WaitForSeconds(deadTime);
-        gameObject.SetActive(false);
-        //Destroy(gameObject);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
