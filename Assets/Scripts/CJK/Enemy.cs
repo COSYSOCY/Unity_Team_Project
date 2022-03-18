@@ -36,11 +36,13 @@ public class Enemy : MonoBehaviour
     //SetDestination 버그 수정부분
     void OnDisable()
     {
-        Invoke("ReAttach", 1f);
+
+        Invoke("ReAttach", 0.01f);
     }
     void ReAttach()
     {
         gameObject.transform.SetParent(enemyPoolPos.transform);
+        transform.SetAsLastSibling();
     }
     // --------------------
     void NavEnemy(Vector3 _target)

@@ -10,5 +10,6 @@ public class PlayerInfo : MonoBehaviour
     public int MaxXp;
     public int Kill;
     public int Gold;
+    public float item_range;
 
 }

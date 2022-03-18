@@ -15,9 +15,9 @@ public class UIManager : MonoBehaviour
         playerinfo.Kill++;
         KillText.text ="Kill : "+playerinfo.Kill;
     }
-    public void GoldUp()
+    public void GoldUp(int gold)
     {
-        playerinfo.Gold++;
+        playerinfo.Gold+=gold;
         GoldText.text = "Gold : " + playerinfo.Kill;
     }
     public void XpSet()

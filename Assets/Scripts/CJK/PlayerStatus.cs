@@ -62,14 +62,23 @@ public class PlayerStatus : MonoBehaviour
     {
         playerInfo.Xp += xp;
         uimanager.XpSet();
-        if (playerInfo.Xp > playerInfo.MaxXp)
+        if (playerInfo.Xp >= playerInfo.MaxXp)
         {
-            
+            LevelUp();
         }
+    }
+    public void GoldPlus(int gold)
+    {
+        uimanager.GoldUp(gold);
     }
     public void LevelUp()
     {
         playerInfo.Xp = playerInfo.MaxXp-playerInfo.Xp;
+        if (playerInfo.Xp <=0)
+        {
+            playerInfo.Xp = 0;
+        }
+
         playerInfo.Lv++;
         XpSet();
         level.LevelFunc();
@@ -79,7 +88,7 @@ public class PlayerStatus : MonoBehaviour
         switch (playerInfo.Lv)
         {
             case 1:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 4;
                 break;
             case 2:
                 playerInfo.MaxXp = 10;
@@ -126,7 +135,7 @@ public class PlayerStatus : MonoBehaviour
             default:
                 break;
         }
-
+        uimanager.XpSet();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -141,7 +150,7 @@ public class PlayerStatus : MonoBehaviour
     {
         if(!dead&&!invin)
         {
-            HpPlus(-35);
+            HpPlus(-6);
             invin = true;
             yield return new WaitForSeconds(0.5f);
             invin = false;

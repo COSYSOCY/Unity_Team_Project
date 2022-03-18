@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Info : MonoBehaviour
 {
     public float Hp;
+    public GameObject[] itemprefabs;
     public GameObject TextUi;
     public Transform parentTransform;
     public UIManager uimanager;
@@ -30,10 +31,29 @@ public class Enemy_Info : MonoBehaviour
             uimanager.KillUp();
         }
     }
+    void ItemRespawn() // ·£´ý¾ÆÀÌÅÛ»ý¼º
+    {
+        int itemRnd = Random.Range(0, 10);
 
+        if (itemRnd <= 5)
+        {
+            if (Random.Range(0, 10) < 2)
+            {
+                Instantiate(itemprefabs[0], transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(itemprefabs[1], transform.position, transform.rotation);
+
+            }
+
+        }
+
+    }
     public void Dead()
     {
         //Á×À½
+        ItemRespawn();
         gameObject.SetActive(false);
     }
 }

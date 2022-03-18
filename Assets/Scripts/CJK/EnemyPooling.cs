@@ -5,14 +5,17 @@ using UnityEngine;
 public class EnemyPooling : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public GameObject batPrefab;
 
     public GameObject[] enemy;
+    public GameObject[] bat;
 
     public GameObject[] ObjectPool;
 
     private void Awake()
     {
         enemy = new GameObject[1000];
+        bat = new GameObject[60];
         Generate();
     }
     void Generate()
@@ -22,6 +25,11 @@ public class EnemyPooling : MonoBehaviour
             enemy[i] = Instantiate(enemyPrefab);
             enemy[i].SetActive(false);
         }
+        for (int i = 0; i < bat.Length; i++)
+        {
+            bat[i] = Instantiate(batPrefab);
+            bat[i].SetActive(false);
+        }
     }
     public GameObject MakeEnemy(string type)
     {
@@ -29,6 +37,9 @@ public class EnemyPooling : MonoBehaviour
         {
             case "Enemy":
                 ObjectPool = enemy;
+                break;
+            case "Bat":
+                ObjectPool = bat;
                 break;
             default:
                 break;

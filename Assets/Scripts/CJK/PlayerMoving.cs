@@ -8,7 +8,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
 {
     public Transform player;
     [SerializeField] private float moveSpeed;
-    private Vector3 move;
+    public Vector3 move;
     private bool isMove;
     private bool isStop;
     public LevelUp levelup;

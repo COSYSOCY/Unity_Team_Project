@@ -10,11 +10,12 @@ public class EnemyManager : MonoBehaviour
 
     //시간 관련
     private float playTime;
-    private float batTime = 20f;
-    private float circleTime = 30f;
+    [SerializeField] private float batTime;
+    [SerializeField] private float circleTime;
+    [SerializeField] private float respawnTime;
 
     private bool isGameOver;
-    private float respawnTime = 0.3f;
+
     private int maxEnemy = 1000;
     void Start()
     {
@@ -72,15 +73,17 @@ public class EnemyManager : MonoBehaviour
                 else if (playTime >= circleTime)
                 {
                     circleTime *= 2;
+                    //플레이어의 위치
+                    Vector3 playerPos = player.transform.position;
                     for (int i = 0; i < 30; i++)
                     {
                         float x = Mathf.Cos(i) * 15f;
                         float z = Mathf.Sin(i) * 15f;
                         Vector3 circlePos = new Vector3(x, 0, z);
                         GameObject bat = enemyPooling.MakeEnemy("Enemy");
-                        bat.transform.position = circlePos;
+                        //플레이어 위치에서 원형으로 생성
+                        bat.transform.position = playerPos + circlePos;
                     }
-
                 }
             }
 
