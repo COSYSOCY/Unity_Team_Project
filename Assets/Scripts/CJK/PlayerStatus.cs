@@ -14,6 +14,8 @@ public class PlayerStatus : MonoBehaviour
     public GameObject deadObject;
     public bool invin=false;
 
+    public bool test=false;
+
     [SerializeField] Slider hpbar;
 
 
@@ -143,6 +145,15 @@ public class PlayerStatus : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             StartCoroutine(PlayerDamage());
+            test = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            
+            test = false;
         }
     }
 
@@ -153,7 +164,17 @@ public class PlayerStatus : MonoBehaviour
             HpPlus(-6);
             invin = true;
             yield return new WaitForSeconds(0.5f);
+            if (test==true)
+            {
+                invin = false;
+
+                StartCoroutine(PlayerDamage());
+            }
+            else
+            {
             invin = false;
+
+            }
         }
     }
 

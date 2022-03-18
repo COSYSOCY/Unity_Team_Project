@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoolPos: {fileID: 0}
-  moveSpeed: 2.5
+  moveSpeed: 3
 --- !u!54 &-4797137238501036881
 Rigidbody:
   m_ObjectHideFlags: 0
