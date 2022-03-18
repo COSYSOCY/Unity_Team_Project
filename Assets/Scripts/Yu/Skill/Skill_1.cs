@@ -52,7 +52,7 @@ public class Skill_1 : Skill_Ori
         //시작시 설정
         info.Lv = 1;
         info.bulletCnt = 1;
-        info.Damage = 1f;
+        info.Damage = 2f;
 
         StartCoroutine(Skill_Update());
     }
