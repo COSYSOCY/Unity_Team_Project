@@ -65,8 +65,8 @@ public class EnemyManager : MonoBehaviour
                     for (int i = 0; i < 20; i++)
                     {
                         yield return new WaitForSeconds(0.03f);
-                        GameObject bat = enemyPooling.MakeEnemy("Bat");
-                        bat.transform.position = batPos;
+                        //GameObject bat = enemyPooling.MakeEnemy("Bat");
+                        //bat.transform.position = batPos;
                     }
                 }
                 //원형 리스폰 추가

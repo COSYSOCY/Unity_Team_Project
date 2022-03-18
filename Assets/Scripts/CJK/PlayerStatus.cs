@@ -91,34 +91,34 @@ public class PlayerStatus : MonoBehaviour
                 playerInfo.MaxXp = 4;
                 break;
             case 2:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 6;
                 break;
             case 3:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 8;
                 break;
             case 4:
                 playerInfo.MaxXp = 10;
                 break;
             case 5:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 15;
                 break;
             case 6:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 20;
                 break;
             case 7:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 25;
                 break;
             case 8:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 30;
                 break;
             case 9:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 40;
                 break;
             case 10:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 50;
                 break;
             case 11:
-                playerInfo.MaxXp = 10;
+                playerInfo.MaxXp = 60;
                 break;
             case 12:
                 playerInfo.MaxXp = 9999;
