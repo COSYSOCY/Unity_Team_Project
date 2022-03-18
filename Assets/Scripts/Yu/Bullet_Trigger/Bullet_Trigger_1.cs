@@ -12,6 +12,6 @@ public class Bullet_Trigger_1 : MonoBehaviour
             other.GetComponent<Enemy_Info>().Damaged(Damage);
             Destroy(gameObject);
         }
-
+        
     }
 }

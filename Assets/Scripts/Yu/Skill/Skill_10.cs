@@ -15,7 +15,7 @@ public class Skill_10 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt++;
                 break;
             case 2:
                 //..;
@@ -73,15 +73,19 @@ public class Skill_10 : Skill_Ori
                 }
                 if (Enemys.Count > 0)
                 {
-                    //Debug.Log("발사");
-                    int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
-                    GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
-                    bullet.transform.LookAt(Enemys[random].transform);
-                    bullet.GetComponent<Bullet_Trigger_10>().Damage = info.Damage;
-                    bullet.GetComponent<Bullet_Trigger_10>().Player= Player;
-                    //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
-                    //rigid.velocity = bulletPos.forward.normalized * 20f;
-                    //미사일 생성 하고 적 방향 바라보기
+                    for (int i = 0; i < info.bulletCnt; i++)
+                    {
+                        //Debug.Log("발사");
+                        int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
+                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+                        bullet.transform.LookAt(Enemys[random].transform);
+                        bullet.GetComponent<Bullet_Trigger_10>().Damage = info.Damage;
+                        bullet.GetComponent<Bullet_Trigger_10>().Player = Player;
+                        //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
+                        //rigid.velocity = bulletPos.forward.normalized * 20f;
+                        //미사일 생성 하고 적 방향 바라보기
+                    }
+
 
                 }
             }

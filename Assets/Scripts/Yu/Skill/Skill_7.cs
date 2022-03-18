@@ -7,9 +7,10 @@ public class Skill_7 : Skill_Ori
 
     public GameObject birdbulletprefabs;
     public GameObject birdtarget;
-    public GameObject Dack;
-    GameObject bird;
 
+    public GameObject Dack;
+    //GameObject bird;
+    public bool startcheck;
     public override void LevelUp()
     {
         switch (info.Lv)
@@ -57,20 +58,52 @@ public class Skill_7 : Skill_Ori
         info.Lv = 1;
         info.bulletCnt = 1;
         info.Damage = 1f;
+        StartCoroutine(Skill_Update2());
         StartCoroutine(Skill_Update());
-        bird = Instantiate(Dack, Dack.transform.position, Dack.transform.rotation);
-        bird.transform.SetParent(Player.transform, false);
+        //bird = Instantiate(Dack, Player.transform.position, Dack.transform.rotation);
         birdtarget.SetActive(true);
-    }
 
+    }
+    IEnumerator Skill_Update2()
+    {
+        while (true)
+        {
+            if (!startcheck)
+            {
+                startcheck = true;
+                yield return new WaitForSeconds(1f);
+            }
+            else
+            {
+                startcheck = false;
+                yield return new WaitForSeconds(3f);
+            }
+
+
+        }
+    }
 
     IEnumerator Skill_Update()
     {
         while (true)
         {
             yield return new WaitForSeconds(0.1f);
-            GameObject bullet = Instantiate(birdbulletprefabs, bird.transform.position, bird.transform.rotation);
-            bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+            if (startcheck)
+            {
+
+
+
+                GameObject bullet = Instantiate(birdbulletprefabs, Player.transform.position, Player.transform.rotation);
+                //Vector3 dir = Player.transform.position - bird.transform.position;
+                Vector3 dir = Player.transform.position - new Vector3(0f, 2.0f, 0f); ;
+                    //Vector3 moveVector = new Vector3(dir.x * 50f * Time.deltaTime, -1.0f, dir.z * 50f * Time.deltaTime);
+                    //Vector3 moveVector = new Vector3(0f, -1.0f, 0f);
+                    bullet.transform.position = dir;
+                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                Destroy(bullet, 0.5f);
+
+            }
+            
         }
     }
 

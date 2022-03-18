@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5083101379611461335}
   - component: {fileID: 75923969873440665}
   - component: {fileID: -3645727733944049502}
-  - component: {fileID: 7892503276605584014}
   - component: {fileID: -8153226621074749739}
+  - component: {fileID: -764686743610928338}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -213,19 +213,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7892503276605584014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3975938138742276133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b61d57b8b943540a6d36f178b2956b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadTime: 5
 --- !u!114 &-8153226621074749739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,3 +226,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0
+--- !u!114 &-764686743610928338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3975938138742276133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a40ff4ea0f2bc439b4a0db4fba7e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadTime: 5

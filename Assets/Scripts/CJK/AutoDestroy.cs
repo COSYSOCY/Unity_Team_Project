@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour
 {
-
     public float deadTime;
-    void Start()
+    void OnEnable()
     {
-        Destroy(gameObject, deadTime);
+        StartCoroutine(DeadObj());
+    }
+
+    IEnumerator DeadObj()
+    {
+       
+        yield return new WaitForSeconds(deadTime);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }

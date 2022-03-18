@@ -15,25 +15,25 @@ public class Skill_11 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt++;
                 break;
             case 2:
-                //..;
+                info.bulletCnt++;
                 break;
             case 3:
-                //..
+                info.bulletCnt++;
                 break;
             case 4:
-                //.
+                info.bulletCnt++;
                 break;
             case 5:
-                //.
+                info.bulletCnt++;
                 break;
             case 6:
-                //.
+                info.bulletCnt++;
                 break;
             case 7:
-                //.
+                info.bulletCnt++;
                 break;
             default:
                 break;
@@ -46,7 +46,7 @@ public class Skill_11 : Skill_Ori
     {
         //시작시 설정
         info.Lv = 1;
-        info.bulletCnt = 1;
+        info.bulletCnt = 2;
         info.Damage = 1f;
 
         StartCoroutine(Skill_Update());
@@ -75,9 +75,14 @@ public class Skill_11 : Skill_Ori
                 {
                     //Debug.Log("발사");
                     int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
-                    GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
-                    bullet.transform.LookAt(Enemys[random].transform);
-                    bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                    for (int i = 0; i < info.bulletCnt; i++)
+                    {
+                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+                        bullet.transform.LookAt(Enemys[random].transform);
+                        bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                        yield return new WaitForSeconds(0.15f);
+                    }
+
                     //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
                     //rigid.velocity = bulletPos.forward.normalized * 20f;
                     //미사일 생성 하고 적 방향 바라보기

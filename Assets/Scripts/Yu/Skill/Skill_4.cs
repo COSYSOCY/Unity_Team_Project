@@ -57,7 +57,7 @@ public class Skill_4 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(20f);
             for (int i = 0; i < 50; i++)
             {
                 GameObject bullet3 = Instantiate(bulletPrefab, Player.transform.position, Quaternion.Euler(0, 90, 0));

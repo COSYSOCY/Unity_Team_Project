@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063997867346396073}
   - component: {fileID: 2063997867346396072}
-  - component: {fileID: 9010539214459940508}
+  - component: {fileID: -6942597075619195727}
   m_Layer: 0
   m_Name: Gidomon
   m_TagString: Untagged
@@ -47,7 +47,8 @@ MonoBehaviour:
   BulletD: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
   numberOfObjects: 1
   radius: 5
---- !u!114 &9010539214459940508
+  Dagame: 0
+--- !u!114 &-6942597075619195727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2063997867346396075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b61d57b8b943540a6d36f178b2956b, type: 3}
+  m_Script: {fileID: 11500000, guid: c2a40ff4ea0f2bc439b4a0db4fba7e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deadTime: 2.5

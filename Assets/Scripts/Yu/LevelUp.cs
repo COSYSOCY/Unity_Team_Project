@@ -15,30 +15,22 @@ public class LevelUp : MonoBehaviour
     public GameObject[] Skill_Lv;
     public GameObject[] Skill_Text;
     public GameObject[] Skill_Image;
+    public PlayerMoving moving;
 
     // Start is called before the first frame update
-    void Start()
+
+
+    public void LevelFunc()
     {
 
+        moving.stick.localPosition = Vector2.zero;
+        moving.pad.gameObject.SetActive(false);
+        moving.StopAllCoroutines();
+        moving.move = Vector3.zero;
 
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       if (Input.GetKeyDown(KeyCode.Space) && testcheck ==false)
-        {
-            num.Clear();
-            num2.Clear();
-            test();
-            
-        }
-
-    }
-
-    void test()
-    {
+        num.Clear();
+        num2.Clear();
         testcheck = true;
         for (int i = 0; i < skillManager.Skills.Count; i++)
         {

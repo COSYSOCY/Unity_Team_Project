@@ -5,11 +5,21 @@ using UnityEngine;
 public class Enemy_Info : MonoBehaviour
 {
     public float Hp;
+    public enum Enemy_ENUM
+    {
+        none=0,
+        Enemy_1,
+        bat,
+    }
+    public Enemy_ENUM enemy_enum;
+    public GameObject[] itemprefabs;
     public GameObject TextUi;
     public Transform parentTransform;
+    public UIManager uimanager;
     private void Start()
     {
         parentTransform=GameObject.Find("TextUi").GetComponent<Transform>();
+        uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
     public void Damaged(float damage)
@@ -25,12 +35,43 @@ public class Enemy_Info : MonoBehaviour
         if (Hp <1 && gameObject.activeSelf)
         {
             Dead();
+            uimanager.KillUp();
         }
     }
+    void ItemRespawn() // ·£´ý¾ÆÀÌÅÛ»ý¼º
+    {
+        int itemRnd = Random.Range(0, 10);
 
+        if (itemRnd <= 5)
+        {
+            if (Random.Range(0, 10) < 2)
+            {
+                Instantiate(itemprefabs[0], transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(itemprefabs[1], transform.position, transform.rotation);
+            }
+        }
+    }
     public void Dead()
     {
         //Á×À½
+        
+        switch (enemy_enum)
+        {
+            case Enemy_ENUM.none:
+                break;
+            case Enemy_ENUM.Enemy_1:
+                ItemRespawn();
+                break;
+            case Enemy_ENUM.bat:
+                ItemRespawn();
+                break;
+            default:
+                break;
+        }
+
         gameObject.SetActive(false);
     }
 }

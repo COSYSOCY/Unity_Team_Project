@@ -14,12 +14,12 @@ public class BirdRotate : MonoBehaviour
 
         public void Start()
         {
-                      
-        }
+        circle = GameObject.Find("SkillObject");
+    }
 
         public void Update()
         {
-            circle = GameObject.Find("Player");
+            
             OrbitAround();
         }
 

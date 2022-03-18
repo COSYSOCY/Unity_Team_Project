@@ -15,7 +15,7 @@ public class Skill_2 : Skill_Ori
                 //아무것도아님
                 break;
             case 1:
-                //..;
+                info.bulletCnt++;
                 break;
             case 2:
                 //..;
@@ -57,12 +57,34 @@ public class Skill_2 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
-            for (int i = 0; i < 5; i++)
+            yield return new WaitForSeconds(1.5f);
+
+            if (Player.transform.rotation.y > 0 && Player.transform.rotation.y < 180)
             {
-                GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
-                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                GameObject bullet = Instantiate(bulletPrefab, Player.transform.position + new Vector3(5f, 0f, 0f),Quaternion.identity);
+                bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
+                Destroy(bullet, 0.3f);
+                if (info.bulletCnt == 2)
+                {
+                    GameObject bullet2 = Instantiate(bulletPrefab, Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
+                    bullet2.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
+                    Destroy(bullet2, 0.3f);
+                }
             }
+            else
+            {
+                GameObject bullet = Instantiate(bulletPrefab, Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
+                bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
+                Destroy(bullet, 0.3f);
+                if (info.bulletCnt == 2)
+                {
+                    GameObject bullet2 = Instantiate(bulletPrefab, Player.transform.position + new Vector3(+5f, 0f, 0f), Quaternion.identity);
+                    bullet2.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
+                    Destroy(bullet2, 0.3f);
+                }
+            }
+
+
         }
     }
 
