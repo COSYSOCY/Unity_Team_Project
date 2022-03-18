@@ -25,7 +25,7 @@ public class BirdRotate : MonoBehaviour
 
         public void OrbitAround() // 플레이어 주위 공전
         {            
-            transform.RotateAround(circle.transform.position, Vector3.down, speed * Time.fixedDeltaTime);
+            transform.RotateAround(circle.transform.position, Vector3.down, speed * Time.deltaTime);
         }
     
 }
