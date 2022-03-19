@@ -6828,7 +6828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Xp: 0
   Lv: 0
-  Hp: 100
+  Hp: 100120
   MaxXp: 1
   Kill: 0
   Gold: 0
