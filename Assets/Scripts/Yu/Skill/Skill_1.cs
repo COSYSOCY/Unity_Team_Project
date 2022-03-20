@@ -67,9 +67,8 @@ public class Skill_1 : Skill_Ori
             for (int i = 1; i <= info.bulletCnt; i++)
             {
 
-                //GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation); 
-                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                    GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
+                    bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
 
 
 

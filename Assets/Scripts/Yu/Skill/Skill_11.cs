@@ -77,7 +77,7 @@ public class Skill_11 : Skill_Ori
                     int random = Random.Range(0, Enemys.Count - 1);//·£´ý»Ì±â!.
                     for (int i = 0; i < info.bulletCnt; i++)
                     {
-                        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_11", Player.transform.position, Quaternion.identity);
+                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
                         bullet.transform.LookAt(Enemys[random].transform);
                         bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
                         yield return new WaitForSeconds(0.15f);

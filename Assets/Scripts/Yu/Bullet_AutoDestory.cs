@@ -14,7 +14,7 @@ public class Bullet_AutoDestory : MonoBehaviour
     {
 
         yield return new WaitForSeconds(deadTime);
-        gameObject.SetActive(false);
-        //Destroy(gameObject);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

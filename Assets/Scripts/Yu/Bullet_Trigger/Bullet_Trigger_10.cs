@@ -17,8 +17,7 @@ public class Bullet_Trigger_10 : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Player"))
             {
-                //Destroy(gameObject);
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
         else

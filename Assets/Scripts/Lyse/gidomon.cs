@@ -5,7 +5,7 @@ using UnityEngine;
 public class gidomon : MonoBehaviour
 {
     public GameObject BulletD;
-    //GameObject par;    
+    GameObject par;    
     public int numberOfObjects = 20;
     public float radius = 5f;
     public float Dagame;
@@ -21,8 +21,7 @@ public class gidomon : MonoBehaviour
             Vector3 pos = transform.position + new Vector3(x, 0, z);
             float angleDegrees = -angle * Mathf.Rad2Deg;
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
-            //par = Instantiate(BulletD, pos, rot);
-            GameObject par = ObjectPooler.SpawnFromPool("Bullet_12", pos, rot);
+            par = Instantiate(BulletD, pos, rot);
             par.transform.parent = gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
             par.GetComponent<Bullet_Trigger_5>().Damage = Dagame;
         }

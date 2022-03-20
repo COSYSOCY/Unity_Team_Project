@@ -14,11 +14,10 @@ public class Bullet_Trigger_15 : MonoBehaviour
 
             other.GetComponent<Enemy_Info>().Damaged(Damage);
 
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15_2", transform.position, transform.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Bullet_Trigger_15_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_15_2>().nodagame = other.gameObject;
-            //Destroy(gameObject);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 
     }
