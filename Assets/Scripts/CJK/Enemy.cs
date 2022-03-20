@@ -29,15 +29,18 @@ public class Enemy : MonoBehaviour
     }
     private void OnEnable()
     {
-        if (transform.parent != null)
-            transform.parent = transform.parent.parent;
+        // if (transform.parent != null)
+        // transform.parent = transform.parent.parent;
+        //nav.enabled = true;
         StartCoroutine(UpdateEnemy());
     }
     //SetDestination 버그 수정부분
     void OnDisable()
     {
-
-        Invoke("ReAttach", 0.01f);
+        nav.gameObject.SetActive(false);
+        //transform.GetComponent<NavMeshAgent>().gameObject.SetActive(false);
+        nav.enabled = false;
+        //Invoke("ReAttach", 0.01f);
     }
     void ReAttach()
     {
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
     IEnumerator UpdateEnemy()
     {
         yield return new WaitForSeconds(0.2f);
+        nav.enabled = true;
         while (!isDead)
         {
             StartCoroutine(EnemyTarget());

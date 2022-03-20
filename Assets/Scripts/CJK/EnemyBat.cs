@@ -30,13 +30,15 @@ public class EnemyBat : MonoBehaviour
     //SetDestination ©ö?¡¾¡¿ ¨ù??¢´¨¬?¨¬¨¢
     private void OnEnable()
     {
-        if (transform.parent != null)
-            transform.parent = transform.parent.parent;
+        //if (transform.parent != null)
+        // transform.parent = transform.parent.parent;
+        //
         StartCoroutine(UpdateEnemy());
     }
     void OnDisable()
     {
-        Invoke("ReAttach", 1f);
+        nav.enabled = false;
+        //Invoke("ReAttach", 1f);
     }
     void ReAttach()
     {
@@ -48,6 +50,7 @@ public class EnemyBat : MonoBehaviour
     IEnumerator UpdateEnemy()
     {
         yield return new WaitForSeconds(0.2f);
+        nav.enabled = true;
         StartCoroutine(MoveEnemy());
         while (!isDead)
         {
