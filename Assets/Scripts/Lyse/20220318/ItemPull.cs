@@ -92,4 +92,11 @@ public class ItemPull : MonoBehaviour
 
         }
     }
+
+
+
+    private void OnDisable()
+    {
+        pullcheck = false;
+    }
 }

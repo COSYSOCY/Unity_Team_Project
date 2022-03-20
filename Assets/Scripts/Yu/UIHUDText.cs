@@ -14,7 +14,7 @@ public class UIHUDText : MonoBehaviour
     TextMeshProUGUI textHUD;
     void Start()  // 처음 시작시 실행되는 함수입니다.
     {
-        Destroy(gameObject,1.5f);
+        //Destroy(gameObject,1.5f);
     }
 
     private void Awake()
@@ -86,6 +86,15 @@ public class UIHUDText : MonoBehaviour
 
 
         }
+
+        gameObject.SetActive(false);
+
+    }
+
+    private void OnDisable()
+    {
+
+        ObjectPooler.ReturnToPool(gameObject);
     }
 
 }
