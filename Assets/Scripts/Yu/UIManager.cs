@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public Text KillText;
     public Text GoldText;
     public Text XpText;
+    public Text TimeText;
     
     public void KillUp()
     {
@@ -23,5 +24,9 @@ public class UIManager : MonoBehaviour
     public void XpSet()
     {
         XpText.text = "Xp : " + playerinfo.Xp + " / " + playerinfo.MaxXp;
+    }
+    public void TimeCheck()
+    {
+        TimeText.text = playerinfo.timeM.ToString() + " : " + playerinfo.timeS.ToString("00");
     }
 }

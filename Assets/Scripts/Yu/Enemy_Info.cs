@@ -24,6 +24,7 @@ public class Enemy_Info : MonoBehaviour
         playerstatus=GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform =GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
+        //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
     public void Damaged(float damage)
@@ -77,7 +78,7 @@ public class Enemy_Info : MonoBehaviour
             default:
                 break;
         }
-
+        playerstatus.EnemyCnt--;
         gameObject.SetActive(false);
     }
     IEnumerator Damage(float dagame)

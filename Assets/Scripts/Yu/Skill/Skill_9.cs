@@ -55,11 +55,11 @@ public class Skill_9 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
-        float Range = 100f;
+        float Range = 50f;
         while (true)
         {
             yield return new WaitForSeconds(Cool_Main);
-            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(100)내에 오브젝트 배열로 받기
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(50)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
                 List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
@@ -79,7 +79,7 @@ public class Skill_9 : Skill_Ori
                         GameObject laser = ObjectPooler.SpawnFromPool("Bullet_9", Player.transform.position, Quaternion.identity);
                         Vector3 d = Enemys[random].transform.position - Player.transform.position;
                         d.Normalize();
-                        endpos = d * 500;
+                        endpos = d * 50;
                         laser.GetComponent<LineRenderer>().SetPosition(0, Player.transform.position);
                         laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
 
@@ -97,7 +97,8 @@ public class Skill_9 : Skill_Ori
                                 }
                             }
                         }
-                        Destroy(laser, 0.5f);
+
+                        //Destroy(laser, 0.5f);
                     }
                     
 

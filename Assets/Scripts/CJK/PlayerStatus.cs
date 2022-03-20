@@ -16,6 +16,11 @@ public class PlayerStatus : MonoBehaviour
 
     public bool test=false;
 
+    public int EnemyCnt;
+
+    public int EnemyMax;
+    public int EnemyCreateRan;
+    public List<string> EnemyCreateName;
     [SerializeField] Slider hpbar;
 
 
@@ -26,6 +31,39 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         SliderUpdate();
+    }
+
+    public void tiemtrigger(float t)
+    {
+        switch (t)
+        {
+            case 60:
+                EnemyMax += 20;
+                break;
+            case 120:
+                EnemyMax += 30;
+                break;
+            case 180:
+                EnemyMax += 40;
+                break;
+            case 240:
+                EnemyMax += 50;
+                break;
+            case 300:
+                EnemyMax += 60;
+                break;
+            case 360:
+                EnemyMax += 30;
+                break;
+            case 420:
+                EnemyMax += 30;
+                break;
+            case 480:
+                break;
+
+            default:
+                break;
+        }
     }
     public void SliderUpdate()
     {
