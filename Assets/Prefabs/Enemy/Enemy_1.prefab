@@ -111,8 +111,9 @@ GameObject:
   - component: {fileID: -4797137238501036881}
   - component: {fileID: 3984187361017688308}
   - component: {fileID: 4658789597888100910}
+  - component: {fileID: 5008390881065307629}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Enemy_1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +234,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6876871023749238010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -271,3 +272,15 @@ MonoBehaviour:
   playerstatus: {fileID: 0}
   Enemy_Damage: 6
   damagecheck: 0
+--- !u!114 &5008390881065307629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6876871023749238010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a260c0b0b04bc4a9dfe326d09d0167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

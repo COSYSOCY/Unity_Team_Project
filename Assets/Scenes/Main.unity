@@ -796,6 +796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1409494301126632296, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: hpbar
       value: 
@@ -1094,7 +1098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &232210520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1676,9 @@ MonoBehaviour:
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_12
+    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+    size: 10
   - tag: Bullet_13
     prefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
     size: 10
@@ -1681,9 +1688,12 @@ MonoBehaviour:
   - tag: Bullet_15_2
     prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
     size: 10
-  - tag: Bullet_12
-    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
-    size: 10
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 100
+  - tag: Enemy_Bat
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 100
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
