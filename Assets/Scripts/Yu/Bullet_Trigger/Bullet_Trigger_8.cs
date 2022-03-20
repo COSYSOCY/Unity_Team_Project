@@ -14,16 +14,17 @@ public class Bullet_Trigger_8 : MonoBehaviour
 
             other.GetComponent<Enemy_Info>().Damaged(Damage);
 
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation);
             bullet.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
-            GameObject bullet2 = Instantiate(bulletPrefab, transform.position, transform.rotation*Quaternion.Euler(0f,30f,0f));
+            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation*Quaternion.Euler(0f,30f,0f));
             bullet2.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
-            GameObject bullet3 = Instantiate(bulletPrefab, transform.position, transform.rotation * Quaternion.Euler(0f, -30f, 0f));
+            GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation * Quaternion.Euler(0f, -30f, 0f));
             bullet3.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
     }

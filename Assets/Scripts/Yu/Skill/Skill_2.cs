@@ -61,26 +61,27 @@ public class Skill_2 : Skill_Ori
 
             if (Player.transform.rotation.y > 0 && Player.transform.rotation.y < 180)
             {
-                GameObject bullet = Instantiate(bulletPrefab, Player.transform.position + new Vector3(5f, 0f, 0f),Quaternion.identity);
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_2", Player.transform.position + new Vector3(5f, 0f, 0f),Quaternion.identity);
+
                 bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
-                Destroy(bullet, 0.3f);
+                //Destroy(bullet, 0.3f);
                 if (info.bulletCnt == 2)
                 {
-                    GameObject bullet2 = Instantiate(bulletPrefab, Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
+                    GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_2", Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
                     bullet2.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
-                    Destroy(bullet2, 0.3f);
+                    //Destroy(bullet2, 0.3f);
                 }
             }
             else
             {
-                GameObject bullet = Instantiate(bulletPrefab, Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_2", Player.transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
                 bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
-                Destroy(bullet, 0.3f);
+                //Destroy(bullet, 0.3f);
                 if (info.bulletCnt == 2)
                 {
-                    GameObject bullet2 = Instantiate(bulletPrefab, Player.transform.position + new Vector3(+5f, 0f, 0f), Quaternion.identity);
+                    GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_2", Player.transform.position + new Vector3(+5f, 0f, 0f), Quaternion.identity);
                     bullet2.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
-                    Destroy(bullet2, 0.3f);
+                    //Destroy(bullet2, 0.3f);
                 }
             }
 

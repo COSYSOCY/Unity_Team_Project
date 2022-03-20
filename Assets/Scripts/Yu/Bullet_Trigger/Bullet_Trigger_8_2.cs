@@ -13,7 +13,8 @@ public class Bullet_Trigger_8_2 : MonoBehaviour
         {
 
             other.GetComponent<Enemy_Info>().Damaged(Damage);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
     }
