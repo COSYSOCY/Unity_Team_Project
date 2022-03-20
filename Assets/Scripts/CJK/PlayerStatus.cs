@@ -37,17 +37,28 @@ public class PlayerStatus : MonoBehaviour
     {
         switch (t)
         {
+            case 30:
+                EnemyMax += 10;
+                break;
             case 60:
                 EnemyMax += 20;
+                EnemyCreateName[0] = "Enemy_2";
+                break;
+            case 90:
+                EnemyMax += 10;
+                EnemyCreateName[0] = "Enemy_2";
                 break;
             case 120:
                 EnemyMax += 30;
+                EnemyCreateName[0] = "Enemy_3";
                 break;
             case 180:
                 EnemyMax += 40;
+                EnemyCreateName[0] = "Enemy_4";
                 break;
             case 240:
                 EnemyMax += 50;
+                EnemyCreateName[0] = "Enemy_5";
                 break;
             case 300:
                 EnemyMax += 60;
