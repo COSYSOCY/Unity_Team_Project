@@ -5,7 +5,7 @@ using UnityEngine;
 public class Skill_7 : Skill_Ori
 {
 
-    public GameObject birdbulletprefabs;
+    //public GameObject birdbulletprefabs;
     public GameObject birdtarget;
 
     public GameObject Dack;
@@ -93,14 +93,14 @@ public class Skill_7 : Skill_Ori
 
 
 
-                GameObject bullet = Instantiate(birdbulletprefabs, Player.transform.position, Player.transform.rotation);
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", Player.transform.position, Player.transform.rotation);
                 //Vector3 dir = Player.transform.position - bird.transform.position;
                 Vector3 dir = Player.transform.position - new Vector3(0f, 2.0f, 0f); ;
                     //Vector3 moveVector = new Vector3(dir.x * 50f * Time.deltaTime, -1.0f, dir.z * 50f * Time.deltaTime);
                     //Vector3 moveVector = new Vector3(0f, -1.0f, 0f);
                     bullet.transform.position = dir;
                 bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
-                Destroy(bullet, 0.5f);
+                //Destroy(bullet, 0.5f);
 
             }
             

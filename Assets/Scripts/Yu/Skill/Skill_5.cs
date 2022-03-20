@@ -75,9 +75,9 @@ public class Skill_5 : Skill_Ori
                     for (int i = 0; i < info.bulletCnt; i++)
                     {
                         int random = Random.Range(0, Enemys.Count - 1);//罚待惶扁!.
-                        GameObject bullet = Instantiate(bulletPrefab, Enemys[random].transform.position, Quaternion.identity); //积己
+                        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_5", Enemys[random].transform.position, Quaternion.identity); //积己
                         Enemys[random].GetComponent<Enemy_Info>().Damaged(info.Damage);
-                        Destroy(bullet, 0.5f);
+                        //Destroy(bullet, 0.5f);
                     }
 
 

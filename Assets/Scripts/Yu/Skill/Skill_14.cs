@@ -60,7 +60,7 @@ public class Skill_14 : Skill_Ori
             yield return new WaitForSeconds(1.5f);
             for (int i = 0; i < info.bulletCnt; i++)
             {
-                GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", Player.transform.position, Quaternion.identity);
 
                 // 미사일 방향을 y축으로 0~360 랜덤하게 설정
                 //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
