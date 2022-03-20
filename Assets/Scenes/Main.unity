@@ -1643,6 +1643,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 100
+  - tag: Enemy_Bat
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 100
   - tag: Bullet_1
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
@@ -1662,7 +1668,7 @@ MonoBehaviour:
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
   - tag: Bullet_7
-    prefab: {fileID: 8792880933486749509, guid: 8133fcb61bc3c8a4892182f66c50781f, type: 3}
+    prefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
     size: 10
   - tag: Bullet_8
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
@@ -1688,12 +1694,6 @@ MonoBehaviour:
   - tag: Bullet_15_2
     prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
     size: 10
-  - tag: Enemy_1
-    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
-    size: 100
-  - tag: Enemy_Bat
-    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
-    size: 100
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
