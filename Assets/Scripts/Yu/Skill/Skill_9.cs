@@ -6,6 +6,7 @@ public class Skill_9 : Skill_Ori
 {
 
     public Vector3 endpos;
+    public GameObject laserPrefab;
 
     public override void LevelUp()
     {
@@ -76,7 +77,7 @@ public class Skill_9 : Skill_Ori
                     for (int z = 0; z < info.bulletCnt; z++)
                     {
                         int random = Random.Range(0, Enemys.Count - 1);
-                        GameObject laser = ObjectPooler.SpawnFromPool("Bullet_9", Player.transform.position, Quaternion.identity);
+                        GameObject laser = Instantiate(laserPrefab, Player.transform.position, Quaternion.identity);
                         Vector3 d = Enemys[random].transform.position - Player.transform.position;
                         d.Normalize();
                         endpos = d * 500;
