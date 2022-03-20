@@ -50,11 +50,13 @@ public class Enemy_Info : MonoBehaviour
         {
             if (Random.Range(0, 10) < 2)
             {
-                Instantiate(itemprefabs[0], transform.position, transform.rotation);
+                //Instantiate(itemprefabs[0], transform.position, transform.rotation);
+                ObjectPooler.SpawnFromPool("item_gold", transform.position, transform.rotation);
             }
             else
             {
-                Instantiate(itemprefabs[1], transform.position, transform.rotation);
+                ObjectPooler.SpawnFromPool("item_xp_1", transform.position, transform.rotation);
+                //Instantiate(itemprefabs[1], transform.position, transform.rotation);
             }
         }
     }

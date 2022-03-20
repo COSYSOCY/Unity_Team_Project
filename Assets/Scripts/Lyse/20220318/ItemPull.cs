@@ -12,6 +12,7 @@ public class ItemPull : MonoBehaviour
     public PlayerStatus playerstatus;
     public int item_stat;
     public bool pullcheck=false;
+    public bool playcolcheck = false;
     public enum Item_ENUM
     {
         gold=0,
@@ -33,7 +34,7 @@ public class ItemPull : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("üũ");
-        if (other.transform.CompareTag("Player"))
+        if (other.transform.CompareTag("Player")&& playcolcheck)
         {
             switch (item_enum)
             {
@@ -49,13 +50,15 @@ public class ItemPull : MonoBehaviour
 
 
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         if (other.transform.CompareTag("Pull")&& pullcheck==false)
         {
            
             pullcheck = true;
-            StartCoroutine(itemmove());
+            transform.LookAt(Player.transform);
+            StartCoroutine(itemmove2());
         }
 
     }
@@ -68,6 +71,25 @@ public class ItemPull : MonoBehaviour
             transform.LookAt(Player.transform);
             transform.Translate(Vector3.forward*Time.deltaTime*speed);
             yield return null;
+        }
+    }
+    IEnumerator itemmove2()
+    {
+        float cooltime =0;
+        while (true)
+        {
+            cooltime += Time.deltaTime;
+
+            //
+            transform.Translate(Vector3.back * Time.deltaTime * speed);
+            if (cooltime >= 0.2f)
+            {
+                playcolcheck = true;
+                StartCoroutine(itemmove());
+                yield break;
+            }
+            yield return null;
+
         }
     }
 }

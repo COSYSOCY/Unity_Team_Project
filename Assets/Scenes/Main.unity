@@ -1694,6 +1694,12 @@ MonoBehaviour:
   - tag: Bullet_15_2
     prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
     size: 10
+  - tag: item_gold
+    prefab: {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
+    size: 10
+  - tag: item_xp_1
+    prefab: {fileID: 6627993160295598616, guid: 1aa7a16f0a61cdd4fadbd44a0107c51e, type: 3}
+    size: 100
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
