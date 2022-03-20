@@ -797,6 +797,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1409494301126632296, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: hpbar
       value: 
@@ -1095,7 +1099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &232210520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,6 +1600,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477999662}
   m_CullTransparentMesh: 1
+--- !u!1 &489269014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489269015}
+  - component: {fileID: 489269016}
+  m_Layer: 0
+  m_Name: ObjectPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489269015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489269014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1160336352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489269016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489269014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b63d609f7a63c64c872fa2a94658943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Bullet_1
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
+    size: 10
+  - tag: Bullet_2
+    prefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
+    size: 10
+  - tag: Bullet_3
+    prefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
+    size: 10
+  - tag: Bullet_4
+    prefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
+    size: 10
+  - tag: Bullet_5
+    prefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
+    size: 10
+  - tag: Bullet_6
+    prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
+    size: 10
+  - tag: Bullet_7
+    prefab: {fileID: 8792880933486749509, guid: 8133fcb61bc3c8a4892182f66c50781f, type: 3}
+    size: 10
+  - tag: Bullet_8
+    prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
+    size: 10
+  - tag: Bullet_8_2
+    prefab: {fileID: 1593895901896320269, guid: 24ab5175cf510e14c996b4a85e3975b9, type: 3}
+    size: 10
+  - tag: Bullet_9
+    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
+    size: 10
+  - tag: Bullet_10
+    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+    size: 10
+  - tag: Bullet_12
+    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+    size: 10
+  - tag: Bullet_13
+    prefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
+    size: 10
+  - tag: Bullet_15
+    prefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
+    size: 10
+  - tag: Bullet_15_2
+    prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
+    size: 10
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 100
+  - tag: Enemy_Bat
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 100
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
