@@ -80,7 +80,7 @@ public class Skill_15: Skill_Ori
                     }
                     for (int i = 0; i < info.bulletCnt; i++)
                     {
-                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Player.transform.rotation);
+                        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", Player.transform.position, Player.transform.rotation);
                         bullet.transform.LookAt(enemy.transform);
                         bullet.GetComponent<Bullet_Trigger_15>().Damage = info.Damage;
                         yield return new WaitForSeconds(0.15f);

@@ -77,7 +77,7 @@ public class Skill_10 : Skill_Ori
                     {
                         //Debug.Log("¹ß»ç");
                         int random = Random.Range(0, Enemys.Count - 1);//·£´ý»Ì±â!.
-                        GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+                        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_10", Player.transform.position, Quaternion.identity);
                         bullet.transform.LookAt(Enemys[random].transform);
                         bullet.GetComponent<Bullet_Trigger_10>().Damage = info.Damage;
                         bullet.GetComponent<Bullet_Trigger_10>().Player = Player;

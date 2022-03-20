@@ -58,9 +58,9 @@ public class Skill_3 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(5f);
-            GameObject bullet = Instantiate(bulletPrefab, Player.transform.position, Quaternion.identity);
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_3", Player.transform.position, Quaternion.identity);
             bullet.GetComponent<Bullet_Trigger_5>().Damage = info.Damage;
-            Destroy(bullet, 1f);
+            //Destroy(bullet, 1f);
         }
     }
 
