@@ -55,11 +55,11 @@ public class Skill_5 : Skill_Ori
 
     IEnumerator Skill_Update()
     {
-        float Range = 50f;
+        float Range = 40f;
         while (true)
         {
             yield return new WaitForSeconds(2f);
-            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(50)내에 오브젝트 배열로 받기
+            Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(40)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
                 List<GameObject> Enemys = new List<GameObject>(); // 적들만 뽑기
@@ -67,6 +67,7 @@ public class Skill_5 : Skill_Ori
                 {
                     if (hits[i].transform.CompareTag("Enemy"))
                     {
+                        //Debug.Log(Vector3.Distance(Player.transform.position,hits[i].transform.position));
                         Enemys.Add(hits[i].gameObject);
                     }
                 }

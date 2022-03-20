@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float circleTime;
     [SerializeField] private float respawnTime;
 
+    public PlayerStatus playerstat;
     private bool isGameOver;
 
     private int maxEnemy = 1000;
@@ -21,6 +22,8 @@ public class EnemyManager : MonoBehaviour
     {
        // enemyPooling = GameObject.Find("EnemyMakePool").GetComponent<EnemyPooling>();
         StartCoroutine(CallEnemy());
+        StartCoroutine(CreateEnemyTrigger());
+
     }
     private void Update()
     {
@@ -29,7 +32,7 @@ public class EnemyManager : MonoBehaviour
     //원형 리스폰 추가
     public Vector3 GetRandomPos()
     {
-        float radius = 30f;
+        float radius = Random.Range(35f,40f);
         Vector3 playerPos = player.transform.position;
 
         float a = playerPos.x;
@@ -43,6 +46,28 @@ public class EnemyManager : MonoBehaviour
         Vector3 randomPos = new Vector3(x, 0, z);
         return randomPos;
     }
+
+    IEnumerator CreateEnemyTrigger()
+    {
+        yield return new WaitForSeconds(1f);
+        while (true)
+        {
+            if (playerstat.EnemyCnt < playerstat.EnemyMax)
+            {
+                int i = Random.Range(0, playerstat.EnemyCreateRan);
+                GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPos(), Quaternion.LookRotation(player.transform.position));
+                enemy.GetComponent<Enemy>().CreateStart();
+                playerstat.EnemyCnt++;
+                
+            }
+            else
+            {
+                yield return new WaitForSeconds(2f);
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
     //---------------------------------
     IEnumerator CallEnemy()
     {
@@ -54,8 +79,9 @@ public class EnemyManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(respawnTime);
                 //GameObject enemy = enemyPooling.MakeEnemy("Enemy");
-                
-                GameObject enemy = ObjectPooler.SpawnFromPool("Enemy_1", GetRandomPos());
+                //Vector3 enemypos = Vector3.
+                //enemy.transform.Translate(Vector3.forward * 33f);
+                //enemy.transform.LookAt(player.transform);
                 //랜덤 위치에 플레이어 현재위치 추가(수정사항)
                 //enemy.transform.position = GetRandomPos();
                 //박쥐 리스폰 추가
@@ -70,6 +96,7 @@ public class EnemyManager : MonoBehaviour
                         //GameObject bat = enemyPooling.MakeEnemy("Bat");
                         //bat.transform.position = batPos;
                         GameObject bat = ObjectPooler.SpawnFromPool("Enemy_Bat", GetRandomPos());
+                        bat.GetComponent<EnemyBat>().CreateStart();
                     }
                 }
                 //원형 리스폰 추가
@@ -84,7 +111,8 @@ public class EnemyManager : MonoBehaviour
                         float z = Mathf.Sin(i) * 15f;
                         Vector3 circlePos = new Vector3(x, 0, z);
                         //GameObject bat = enemyPooling.MakeEnemy("Enemy");
-                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_1", playerPos + circlePos);
+                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_1", playerPos + circlePos*1.6f);
+                        bat.GetComponent<Enemy>().CreateStart();
                         //플레이어 위치에서 원형으로 생성
                         //bat.transform.position = playerPos + circlePos;
                     }

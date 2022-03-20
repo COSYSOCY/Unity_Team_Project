@@ -14,6 +14,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     public LevelUp levelup;
     public RectTransform pad;
     public RectTransform stick;
+    public Animator ani;
     public void OnDrag(PointerEventData eventData)
     {
         if (isStop == false&& levelup.testcheck == false)
@@ -31,6 +32,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             pad.position = eventData.position;
             pad.gameObject.SetActive(true);
             StartCoroutine("Movement");
+            ani.SetBool("idle", false);
         }
     }
     public void OnPointerUp(PointerEventData eventData)
@@ -42,10 +44,12 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
         pad.gameObject.SetActive(false);
         StopCoroutine("Movement");
         move = Vector3.zero;
+            ani.SetBool("idle", true);
         }
     }
     IEnumerator Movement()
     {
+
         if (isStop == false)
         {
             while (true)
@@ -59,6 +63,10 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
 
                 yield return null;
             }
+        }
+        else
+        {
+            
         }
     }
 

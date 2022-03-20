@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
-    const float hp = 100;
     public PlayerInfo playerInfo;
     public LevelUp level;
     public UIManager uimanager;
@@ -16,35 +15,79 @@ public class PlayerStatus : MonoBehaviour
 
     public bool test=false;
 
+    public int EnemyCnt;
+
+    public int EnemyMax;
+    public int EnemyCreateRan;
+    public List<string> EnemyCreateName;
     [SerializeField] Slider hpbar;
 
 
-    void Start()
+
+
+    public void tiemtrigger(float t)
     {
-        playerInfo.Hp = hp;
-    }
-    void Update()
-    {
-        SliderUpdate();
+        switch (t)
+        {
+            case 30:
+                EnemyMax += 10;
+                break;
+            case 60:
+                EnemyMax += 20;
+                EnemyCreateName[0] = "Enemy_2";
+                break;
+            case 90:
+                EnemyMax += 10;
+                EnemyCreateName[0] = "Enemy_2";
+                break;
+            case 120:
+                EnemyMax += 30;
+                EnemyCreateName[0] = "Enemy_3";
+                break;
+            case 180:
+                EnemyMax += 40;
+                EnemyCreateName[0] = "Enemy_4";
+                break;
+            case 240:
+                EnemyMax += 50;
+                EnemyCreateName[0] = "Enemy_5";
+                break;
+            case 300:
+                EnemyMax += 60;
+                break;
+            case 360:
+                EnemyMax += 30;
+                break;
+            case 420:
+                EnemyMax += 30;
+                break;
+            case 480:
+                break;
+
+            default:
+                break;
+        }
     }
     public void SliderUpdate()
     {
-        hpbar.value = playerInfo.Hp / hp;
+        //hpbar.value = playerInfo.Hp / MaxHp;
     }
     public void HpPlus(float _count)
     {
-        if (playerInfo.Hp + _count <= hp)
+        playerInfo.Hp += _count;
+        if (playerInfo.Hp >= playerInfo.MaxHp)
         {
-            playerInfo.Hp += _count;
+            playerInfo.Hp = playerInfo.MaxHp;
+            
         }
-        else
-        {
-            playerInfo.Hp = hp;
-        }
+        hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
+
+
         if (playerInfo.Hp < 1)
         {
             Dead();
         }
+
     }
     public void Dead()
     {

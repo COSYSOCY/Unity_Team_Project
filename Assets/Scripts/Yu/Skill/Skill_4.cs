@@ -58,13 +58,13 @@ public class Skill_4 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(20f);
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 36; i++)
             {
-                GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_4", Player.transform.position, Quaternion.Euler(0, 90, 0));
+                GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_4", Player.transform.position, Quaternion.Euler(new Vector3(0, i * 10f, 0)));
                 bullet3.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
-                Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
-                Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
-                rigid3.velocity = ranvec.normalized * 10f;
+                //Rigidbody rigid3 = bullet3.GetComponent<Rigidbody>();
+                //Vector3 ranvec = new Vector3(Mathf.Sin(Mathf.PI * 3 * i / 50), 0, Mathf.Cos(Mathf.PI * 3 * i / 50));
+                //rigid3.velocity = ranvec.normalized * 10f;
             }
         }
     }
