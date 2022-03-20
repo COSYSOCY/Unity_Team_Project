@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
-    const float hp = 100;
     public PlayerInfo playerInfo;
     public LevelUp level;
     public UIManager uimanager;
@@ -24,14 +23,7 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] Slider hpbar;
 
 
-    void Start()
-    {
-        playerInfo.Hp = hp;
-    }
-    void Update()
-    {
-        SliderUpdate();
-    }
+
 
     public void tiemtrigger(float t)
     {
@@ -78,22 +70,24 @@ public class PlayerStatus : MonoBehaviour
     }
     public void SliderUpdate()
     {
-        hpbar.value = playerInfo.Hp / hp;
+        //hpbar.value = playerInfo.Hp / MaxHp;
     }
     public void HpPlus(float _count)
     {
-        if (playerInfo.Hp + _count <= hp)
+        playerInfo.Hp += _count;
+        if (playerInfo.Hp >= playerInfo.MaxHp)
         {
-            playerInfo.Hp += _count;
+            playerInfo.Hp = playerInfo.MaxHp;
+            
         }
-        else
-        {
-            playerInfo.Hp = hp;
-        }
+        hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
+
+
         if (playerInfo.Hp < 1)
         {
             Dead();
         }
+
     }
     public void Dead()
     {

@@ -32,6 +32,10 @@ public class Enemy : MonoBehaviour
         // if (transform.parent != null)
         // transform.parent = transform.parent.parent;
         //nav.enabled = true;
+        //
+    }
+    public void CreateStart()
+    {
         StartCoroutine(UpdateEnemy());
     }
     //SetDestination 버그 수정부분

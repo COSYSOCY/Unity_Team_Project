@@ -33,7 +33,11 @@ public class EnemyBat : MonoBehaviour
         //if (transform.parent != null)
         // transform.parent = transform.parent.parent;
         //
+    }
+    public void CreateStart()
+    {
         StartCoroutine(UpdateEnemy());
+
     }
     void OnDisable()
     {
