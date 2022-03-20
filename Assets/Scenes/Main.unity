@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 865185821}
     - target: {fileID: 4456675825001411880, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: MaxHp
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4456675825001411880, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: MaxXp
@@ -1254,7 +1254,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280040784
 MonoBehaviour:
@@ -1784,7 +1784,7 @@ MonoBehaviour:
     size: 10
   - tag: item_xp_1
     prefab: {fileID: 6627993160295598616, guid: 1aa7a16f0a61cdd4fadbd44a0107c51e, type: 3}
-    size: 50
+    size: 300
   - tag: Enemy_2
     prefab: {fileID: 6876871023749238010, guid: b5eaa4e9b8fe9c94f815d5753b006f0e, type: 3}
     size: 50
@@ -1797,6 +1797,9 @@ MonoBehaviour:
   - tag: Enemy_5
     prefab: {fileID: 6876871023749238010, guid: 00142f5b95f965d4492e13129fed01ab, type: 3}
     size: 50
+  - tag: TextUi
+    prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
+    size: 100
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,6 +4191,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1077720423 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8422892626592999198, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
+  m_PrefabInstance: {fileID: 2088958300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1077980385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,7 +5661,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -430, y: -250}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578246706
 MonoBehaviour:
@@ -7159,6 +7167,7 @@ MonoBehaviour:
   levelup: {fileID: 167265273}
   pad: {fileID: 1578246705}
   stick: {fileID: 280040783}
+  ani: {fileID: 1077720423}
 --- !u!114 &2096178707
 MonoBehaviour:
   m_ObjectHideFlags: 0

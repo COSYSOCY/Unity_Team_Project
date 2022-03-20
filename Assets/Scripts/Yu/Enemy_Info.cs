@@ -29,11 +29,10 @@ public class Enemy_Info : MonoBehaviour
 
     public void Damaged(float damage)
     {
-        GameObject clone = Instantiate(TextUi);
+        //GameObject clone = Instantiate(TextUi);
+        GameObject clone = ObjectPooler.SpawnFromPool("TextUi",transform.position);
         clone.transform.SetParent(parentTransform);
         Bounds bounds = GetComponent<Collider>().bounds;
-
-        
         clone.GetComponent<UIHUDText>().Play(damage.ToString("F0"), Color.red, bounds);
 
         Hp -= damage;

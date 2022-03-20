@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
         while (!isDead)
         {
             StartCoroutine(EnemyTarget());
-            StartCoroutine(MoveEnemy());
+            //StartCoroutine(MoveEnemy());
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -71,7 +71,11 @@ public class Enemy : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
-        yield return new WaitForSeconds(0.2f);
+        //transform.rotation= Quaternion.LookRotation(target.transform.position);
+        nav.speed = moveSpeed;
+        NavEnemy(target.position);
+        //yield return new WaitForSeconds(0.2f);
+        yield return null;
     }
     IEnumerator MoveEnemy()
     {

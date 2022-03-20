@@ -66,7 +66,8 @@ public class EnemyBat : MonoBehaviour
     {
         Vector3 dir = target.position - transform.position;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
-        yield return new WaitForSeconds(0.2f);
+        yield return null;
+        //yield return new WaitForSeconds(0.2f);
     }
     void NavEnemy(Vector3 _target)
     {
