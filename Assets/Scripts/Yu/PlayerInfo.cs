@@ -7,6 +7,7 @@ public class PlayerInfo : MonoBehaviour
     public int Xp;
     public int Lv;
     public float Hp;
+    public float MaxHp;
     public int MaxXp;
     public int Kill;
     public int Gold;
@@ -19,6 +20,11 @@ public class PlayerInfo : MonoBehaviour
 
     private void Start()
     {
+        //Hp = 200f;
+        //MaxHp = 200f;
+        //MaxXp = 1;
+        //item_range = 2.5f;
+        Hp = MaxHp;
         StartCoroutine(timecheck());
     }
 

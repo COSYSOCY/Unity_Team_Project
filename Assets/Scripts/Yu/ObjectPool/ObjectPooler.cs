@@ -3,23 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-#if UNITY_EDITOR
-using UnityEditor;
-
-[CustomEditor(typeof(ObjectPooler))]
-public class ObjectPoolerEditor : Editor
-{
-    const string INFO = "풀링한 오브젝트에 다음을 적으세요 \nvoid OnDisable()\n{\n" +
-        "    ObjectPooler.ReturnToPool(gameObject);    // 한 객체에 한번만 \n" +
-        "    CancelInvoke();    // Monobehaviour에 Invoke가 있다면 \n}";
-
-    public override void OnInspectorGUI()
-    {
-        EditorGUILayout.HelpBox(INFO, MessageType.Info);
-        base.OnInspectorGUI();
-    }
-}
-#endif
 
 public class ObjectPooler : MonoBehaviour
 {
