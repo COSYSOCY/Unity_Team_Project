@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 60de74390c87805448c754aa39a402ec, type: 2}
 --- !u!1 &65637598
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 167265273}
     - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: EnemyMax
-      value: 20
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: uimanager

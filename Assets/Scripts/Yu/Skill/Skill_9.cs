@@ -18,9 +18,11 @@ public class Skill_9 : Skill_Ori
                 info.bulletCnt++;
                 break;
             case 2:
+                info.bulletCnt++;
                 //..;
                 break;
             case 3:
+                info.bulletCnt++;
                 //..
                 break;
             case 4:
