@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    public GameObject check;
+
     //EnemyPooling enemyPooling;
     [SerializeField] private GameObject enemy;
     [SerializeField] private Transform player;
@@ -44,7 +46,47 @@ public class EnemyManager : MonoBehaviour
         float z = z_b + b;
 
         Vector3 randomPos = new Vector3(x, 0, z);
-        return randomPos;
+        //Debug.Log(randomPos);
+        return randomPos+ player.transform.position;
+    }
+    public Vector3 GetRandomPos2()
+    {
+        float radius = Random.Range(35f, 40f);
+        Vector3 playerPos = player.transform.position;
+
+        float a = playerPos.x;
+        float b = playerPos.y;
+
+        float x = Random.Range(-radius + a, radius + a);
+        float z_b = Mathf.Sqrt(Mathf.Pow(radius, 2) - Mathf.Pow(x - a, 2));
+        z_b *= Random.Range(0, 2) == 0 ? -1 : 1;
+        float z = z_b + b;
+
+        Vector3 randomPos = new Vector3(x, 0, z);
+        //Debug.Log(randomPos);
+        return randomPos + player.transform.position;
+    }
+    public Vector3 RandomSphereInPoint()
+    {
+        float radius = Random.Range(60f, 70f);
+        Vector3 getPoint = Random.onUnitSphere;
+        getPoint.y = 0.0f;
+        return (getPoint * radius) + player.transform.position;
+    }
+    public Vector3 GetRandomPoss()
+    {
+        float range = Random.Range(30f,35f);
+        int ran = Random.Range(0, 360);
+        float x = Mathf.Cos(ran) * 1f;
+        float z = Mathf.Sin(ran) * 1f;
+
+        //float ranNum = Random.Range(-5f, 5f);
+
+        //float x = Mathf.Cos(ranNum) * 30f;
+        //float z = Mathf.Sin(ranNum) * 30f;
+        Vector3 Pos = new Vector3(x, 0, z);
+        Pos = player.position + (Pos * range);
+        return Pos;
     }
 
     IEnumerator CreateEnemyTrigger()
@@ -55,7 +97,7 @@ public class EnemyManager : MonoBehaviour
             if (playerstat.EnemyCnt < playerstat.EnemyMax)
             {
                 int i = Random.Range(0, playerstat.EnemyCreateRan);
-                GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPos(), Quaternion.LookRotation(player.transform.position));
+                GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPoss(), Quaternion.LookRotation(player.transform.position));
                 enemy.GetComponent<Enemy>().CreateStart();
                 playerstat.EnemyCnt++;
                 
@@ -63,6 +105,10 @@ public class EnemyManager : MonoBehaviour
             else
             {
                 yield return new WaitForSeconds(2f);
+                int i = Random.Range(0, playerstat.EnemyCreateRan);
+                GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPoss(), Quaternion.LookRotation(player.transform.position));
+                enemy.GetComponent<Enemy>().CreateStart();
+                playerstat.EnemyCnt++;
             }
 
             yield return new WaitForSeconds(0.1f);
@@ -89,13 +135,13 @@ public class EnemyManager : MonoBehaviour
                 {
                     batTime *= 2;
                     //Debug.Log(batTime);
-                    Vector3 batPos = GetRandomPos();
+                    //Vector3 batPos = GetRandomPos();
                     for (int i = 0; i < 20; i++)
                     {
                         yield return new WaitForSeconds(0.03f);
                         //GameObject bat = enemyPooling.MakeEnemy("Bat");
                         //bat.transform.position = batPos;
-                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_Bat", GetRandomPos());
+                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_Bat", GetRandomPoss());
                         bat.GetComponent<EnemyBat>().CreateStart();
                     }
                 }
