@@ -127,14 +127,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerInfo" Collapsed="true">
-    <Position X="39.75" Y="4.5" Width="1.5" />
+    <Position X="38" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QBQAABAAEGAgEAAAAAAAAAAAAAAAAAAAAIAAAQAASAM=</HashCode>
       <FileName>Assets\Scripts\Info\PlayerInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerStatus" Collapsed="true">
-    <Position X="43.25" Y="4.5" Width="1.5" />
+    <Position X="41.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAECAAAAgAAAEBAAAAAAiABAEEJABgIAAACCAoAAoA=</HashCode>
       <FileName>Assets\Scripts\Info\PlayerStatus.cs</FileName>
@@ -155,7 +155,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PullRange" Collapsed="true">
-    <Position X="43.25" Y="6.5" Width="1.5" />
+    <Position X="41.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAACCAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Item\PullRange.cs</FileName>
@@ -190,154 +190,147 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_1" Collapsed="true">
-    <Position X="45" Y="4.5" Width="1.5" />
+    <Position X="43.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_10" Collapsed="true">
-    <Position X="46.75" Y="4.5" Width="1.5" />
+    <Position X="45" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_10.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_12" Collapsed="true">
-    <Position X="48.5" Y="4.5" Width="1.5" />
+    <Position X="46.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_12.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_13" Collapsed="true">
-    <Position X="50.25" Y="4.5" Width="1.5" />
+    <Position X="48.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_13.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_15" Collapsed="true">
-    <Position X="34.5" Y="5.5" Width="1.5" />
+    <Position X="50.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_15.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_15_2" Collapsed="true">
-    <Position X="36.25" Y="5.5" Width="1.5" />
+    <Position X="34.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_15_2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_2" Collapsed="true">
-    <Position X="38" Y="5.5" Width="1.5" />
+    <Position X="36.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_3" Collapsed="true">
-    <Position X="39.75" Y="5.5" Width="1.5" />
+    <Position X="38" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_3.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_4" Collapsed="true">
-    <Position X="41.5" Y="5.5" Width="1.5" />
+    <Position X="39.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_4.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_5" Collapsed="true">
-    <Position X="43.25" Y="5.5" Width="1.5" />
+    <Position X="41.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_5.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_6" Collapsed="true">
-    <Position X="45" Y="5.5" Width="1.5" />
+    <Position X="43.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_6.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_7" Collapsed="true">
-    <Position X="46.75" Y="5.5" Width="1.5" />
+    <Position X="45" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_7.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_8" Collapsed="true">
-    <Position X="48.5" Y="5.5" Width="1.5" />
+    <Position X="46.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_8.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_8_2" Collapsed="true">
-    <Position X="50.25" Y="5.5" Width="1.5" />
+    <Position X="48.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_8_2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Bullet_9" Collapsed="true">
-    <Position X="34.5" Y="6.5" Width="1.5" />
+    <Position X="50.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Bullet_9.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Enemy" Collapsed="true">
-    <Position X="36.25" Y="6.5" Width="1.5" />
+    <Position X="34.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Enemy_1" Collapsed="true">
-    <Position X="38" Y="6.5" Width="1.5" />
+    <Position X="36.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Enemy_1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Enemy_Bat" Collapsed="true">
-    <Position X="39.75" Y="6.5" Width="1.5" />
+    <Position X="38" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Enemy_Bat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pool_Object" Collapsed="true">
-    <Position X="41.5" Y="6.5" Width="1.5" />
+    <Position X="39.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ObjectPool\Pool_Object.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Option" Collapsed="true">
-    <Position X="17.25" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Option.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PlayerAttack" Collapsed="true">
-    <Position X="38" Y="4.5" Width="1.5" />
+    <Position X="36.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAYAAADgAAAAAAAgAAAAQELAeA9AAABAAAAAgAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerAttack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerMoving" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="41.5" Y="4.5" Width="1.5" />
+    <Position X="39.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAACACEAAIAACABABAIAAIAAAAAYABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\PlayerMoving.cs</FileName>
@@ -345,7 +338,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TargetLockon" Collapsed="true">
-    <Position X="38" Y="7.5" Width="1.5" />
+    <Position X="36.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAEAAAACAACAAAAAAACCAAAAAAAAAAAAIAAEAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player\TargetLockon.cs</FileName>
@@ -387,119 +380,119 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_1" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="29.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_10" Collapsed="true">
-    <Position X="5" Y="2" Width="1.5" />
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_10.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_11" Collapsed="true">
-    <Position X="9.5" Y="2" Width="1.5" />
+    <Position X="5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_11.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_12" Collapsed="true">
-    <Position X="14" Y="2" Width="1.5" />
+    <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAEAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_12.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_13" Collapsed="true">
-    <Position X="18.5" Y="2" Width="1.5" />
+    <Position X="14" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_13.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_14" Collapsed="true">
-    <Position X="20.75" Y="2" Width="1.5" />
+    <Position X="16.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_14.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_15" Collapsed="true">
-    <Position X="23" Y="2" Width="1.5" />
+    <Position X="18.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_15.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_2" Collapsed="true">
-    <Position X="25.25" Y="2" Width="1.5" />
+    <Position X="20.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_3" Collapsed="true">
-    <Position X="27.5" Y="2" Width="1.5" />
+    <Position X="23" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_3.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_4" Collapsed="true">
-    <Position X="29.75" Y="2" Width="1.5" />
+    <Position X="25.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_4.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_5" Collapsed="true">
-    <Position X="32" Y="2" Width="1.5" />
+    <Position X="27.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_5.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_6" Collapsed="true">
-    <Position X="2.75" Y="2" Width="1.5" />
+    <Position X="32" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_6.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_7" Collapsed="true">
-    <Position X="7.25" Y="2" Width="1.5" />
+    <Position X="2.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAEBAAAAAABAAAAAAgAAGAQ=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_7.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_8" Collapsed="true">
-    <Position X="11.75" Y="2" Width="1.5" />
+    <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_8.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_9" Collapsed="true">
-    <Position X="16.25" Y="2" Width="1.5" />
+    <Position X="11.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAEAABAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_9.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_Check" Collapsed="true">
-    <Position X="50.25" Y="6.5" Width="1.5" />
+    <Position X="48.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_Check.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Skill_Info" Collapsed="true">
-    <Position X="34.5" Y="7.5" Width="1.5" />
+    <Position X="50.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAGIAAAAAAIgAAAAAAQCAAAAAAAAAAEAAQAAAAA=</HashCode>
       <FileName>Assets\Scripts\Skill\Skill_Info.cs</FileName>
@@ -513,7 +506,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SkillManager" Collapsed="true">
-    <Position X="36.25" Y="7.5" Width="1.5" />
+    <Position X="34.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Skill\SkillManager.cs</FileName>
@@ -534,14 +527,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UIHUDText" Collapsed="true">
-    <Position X="48.5" Y="8.5" Width="1.5" />
+    <Position X="46.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAEAAAAACAAAAgAAAAAAAAAAACAAAAIgAAIAAAggEA=</HashCode>
       <FileName>Assets\Scripts\UI\UIHUDText.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UIManager" Collapsed="true">
-    <Position X="50.25" Y="8.5" Width="1.5" />
+    <Position X="48.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAEAAgAAAAAAEAAIAAAAAgAAAYAEAAA=</HashCode>
       <FileName>Assets\Scripts\UI\UIManager.cs</FileName>
@@ -618,84 +611,84 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.ShaderPropAnimator" Collapsed="true">
-    <Position X="45" Y="6.5" Width="1.5" />
+    <Position X="43.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAACAAAAAAAAAgAEAAAAAAAAAAAAAAAQAgAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.SimpleScript" Collapsed="true">
-    <Position X="46.75" Y="6.5" Width="1.5" />
+    <Position X="45" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAABAAAAAAAEAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.SkewTextExample" Collapsed="true">
-    <Position X="48.5" Y="6.5" Width="1.5" />
+    <Position X="46.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAEAACAAAAAAAAAAAAAABAEAAAAAIAAAAAACAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TeleType" Collapsed="true">
-    <Position X="39.75" Y="7.5" Width="1.5" />
+    <Position X="38" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>YAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TextConsoleSimulator" Collapsed="true">
-    <Position X="41.5" Y="7.5" Width="1.5" />
+    <Position X="39.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAACAAAAAAAAAAAAAABAAAAAAIAMAAAAACCEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TextMeshProFloatingText" Collapsed="true">
-    <Position X="43.25" Y="7.5" Width="1.5" />
+    <Position X="41.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACICAJACAAAAAAAAAAAAAJAAQAQAAAAABAACAACEI=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TextMeshSpawner" Collapsed="true">
-    <Position X="45" Y="7.5" Width="1.5" />
+    <Position X="43.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAACAAAAAEAAAAAAABAAAAAAAAAAAAAAAACEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMP_ExampleScript_01" Collapsed="true">
-    <Position X="48.5" Y="7.5" Width="1.5" />
+    <Position X="46.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAgAIBAAAAAAAAAAACAAAAIAAAAAAAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMP_FrameRateCounter" Collapsed="true">
-    <Position X="50.25" Y="7.5" Width="1.5" />
+    <Position X="48.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AoQAAAAAACAAAIgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMP_TextEventCheck" Collapsed="true">
-    <Position X="36.25" Y="8.5" Width="1.5" />
+    <Position X="34.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>kAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEJAAAAAAACCAA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMP_TextInfoDebugTool" Collapsed="true">
-    <Position X="39.75" Y="8.5" Width="1.5" />
+    <Position X="38" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIEAAIYACACAAAggAAQAAAAoABKAAEAAACAgQACgAI=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMP_TextSelector_A" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="41.5" Y="8.5" Width="1.5" />
+    <Position X="39.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAAAIAAAAAQoAAAAAAAAAQAAAWA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs</FileName>
@@ -703,7 +696,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TMPro.Examples.TMP_TextSelector_B" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="43.25" Y="8.5" Width="1.5" />
+    <Position X="41.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAKAAABBGgAAAIAQAQAAIAAIgAQoAABIAEAAAQAACEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs</FileName>
@@ -711,82 +704,89 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TMPro.Examples.TMP_UiFrameRateCounter" Collapsed="true">
-    <Position X="45" Y="8.5" Width="1.5" />
+    <Position X="43.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AoQAAAAAACAAAAgAAAAgAIAAAgQAAAAAAAAAAAAAAEg=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.TMPro_InstructionOverlay" Collapsed="true">
-    <Position X="46.75" Y="8.5" Width="1.5" />
+    <Position X="45" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAIAAAAAAIgAAAAgAAAAAAQAAAAACAAAAAAAAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.VertexColorCycler" Collapsed="true">
-    <Position X="34.5" Y="9.5" Width="1.5" />
+    <Position X="50.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.VertexJitter" Collapsed="true">
-    <Position X="36.25" Y="9.5" Width="1.5" />
+    <Position X="34.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.VertexShakeA" Collapsed="true">
-    <Position X="38" Y="9.5" Width="1.5" />
+    <Position X="36.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAACAAAFAACAAAAAAAgIAMAAAAACCEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.VertexShakeB" Collapsed="true">
-    <Position X="39.75" Y="9.5" Width="1.5" />
+    <Position X="38" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.VertexZoom" Collapsed="true">
-    <Position X="41.5" Y="9.5" Width="1.5" />
+    <Position X="39.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAAACAAAAAAAAAFAAAAAAAAAAgIAMAAAAACCEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.Examples.WarpTextExample" Collapsed="true">
-    <Position X="43.25" Y="9.5" Width="1.5" />
+    <Position X="41.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAEAACAAAAAAAAAFAAAABAAAAAAAIAAAAAACAEA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.TMP_DigitValidator" Collapsed="true">
-    <Position X="46.75" Y="7.5" Width="1.5" />
+    <Position X="45" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.TMP_PhoneNumberValidator" Collapsed="true">
-    <Position X="34.5" Y="8.5" Width="1.5" />
+    <Position X="50.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMPro.TMP_TextEventHandler" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="38" Y="8.5" Width="1.5" />
+    <Position X="36.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAgAEEAAAAAMABAAEAIEAIAUApAAAAAAAAAYACBWE=</HashCode>
       <FileName>Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Assets.Scripts.Option" Collapsed="true">
+    <Position X="16.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Option.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Malgun Gothic" Size="9" />
 </ClassDiagram>
