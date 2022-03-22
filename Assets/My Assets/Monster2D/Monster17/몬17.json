@@ -1,0 +1,32 @@
+{ "skeleton": { "images": "~/Desktop/Monster/Monster17/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Wings1", "bone": "root", "attachment": "Wings1" },
+	{ "name": "Wings2", "bone": "root", "attachment": "Wings2" },
+	{ "name": "head", "bone": "root", "attachment": "head" },
+	{ "name": "eye_open", "bone": "root", "attachment": "eye_open" },
+	{ "name": "eye_close", "bone": "root", "attachment": "eye_close" }
+],
+"skins": {
+	"default": {
+		"Wings1": {
+			"Wings1": { "x": 320, "y": -100, "width": 114, "height": 174 }
+		},
+		"Wings2": {
+			"Wings2": { "x": 174, "y": -102.5, "width": 74, "height": 165 }
+		},
+		"head": {
+			"head": { "x": 263, "y": -245, "width": 404, "height": 278 }
+		},
+		"eye_open": {
+			"eye_open": { "x": 219.5, "y": -240.5, "width": 205, "height": 99 }
+		},
+		"eye_close": {
+			"eye_close": { "x": 219, "y": -258, "width": 206, "height": 34 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}
