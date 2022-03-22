@@ -22,7 +22,7 @@ public class PlayerStatus : MonoBehaviour
     public List<string> EnemyCreateName;
     [SerializeField] Slider hpbar;
 
-
+    public List<bool> EnemyDestory=new List<bool>();
 
 
     public void tiemtrigger(float t)
@@ -34,6 +34,7 @@ public class PlayerStatus : MonoBehaviour
                 break;
             case 60:
                 EnemyMax += 20;
+                EnemyDestory[0] = true;
                 EnemyCreateName[0] = "Enemy_2";
                 break;
             case 90:
@@ -42,14 +43,17 @@ public class PlayerStatus : MonoBehaviour
                 break;
             case 120:
                 EnemyMax += 30;
+                EnemyDestory[1] = true;
                 EnemyCreateName[0] = "Enemy_3";
                 break;
             case 180:
                 EnemyMax += 40;
+                EnemyDestory[2] = true;
                 EnemyCreateName[0] = "Enemy_4";
                 break;
             case 240:
                 EnemyMax += 50;
+                EnemyDestory[3] = true;
                 EnemyCreateName[0] = "Enemy_5";
                 break;
             case 300:

@@ -8,6 +8,6 @@ public class Pool_Enemy : MonoBehaviour
     private void OnDisable()
     {
         ObjectPooler.ReturnToPool(gameObject);
-        CancelInvoke();
+       // CancelInvoke();
     }
 }

@@ -833,6 +833,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2097701189}
     - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: EnemyDestory.Array.size
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128872704907776241, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: EnemyCreateName.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -1800,6 +1804,9 @@ MonoBehaviour:
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
     size: 100
+  - tag: Enemy_6
+    prefab: {fileID: 6876871023749238010, guid: 731ffbe0f83bc1e439402f46d6eaf50c, type: 3}
+    size: 30
 --- !u!1 &489408336
 GameObject:
   m_ObjectHideFlags: 0
