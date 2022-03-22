@@ -46,6 +46,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
         move = Vector3.zero;
             ani.SetBool("idle", true);
         }
+        
     }
     IEnumerator Movement()
     {

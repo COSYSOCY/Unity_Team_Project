@@ -7,6 +7,8 @@ public class Skill_1 : Skill_Ori
     
     public override void LevelUp()
     {
+        // 레벨업시 실행되는 함수입니다.
+        // 0 이거는 활성화되는 부분이니까 넘어가주세요
         switch (info.Lv)
         {
             case 0:
@@ -47,54 +49,41 @@ public class Skill_1 : Skill_Ori
         info.Lv++;
     }
 
-    void Start_Func()
+    void Start_Func() //시작시 설정
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 1;
-        info.Damage = 2f;
+        info.Lv = 1; //레벨 1로 설정
+        info.bulletCnt = 1; // 투사체 수 1로 설정
+        info.Damage = 2f; // 데미지 2로 설정
 
         StartCoroutine(Skill_Update());
     }
 
 
 
-    IEnumerator Skill_Update()
+    IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
+        
         while (true)
         {
             yield return new WaitForSeconds(1f);
             for (int i = 1; i <= info.bulletCnt; i++)
             {
-
-                //GameObject bullet = Instantiate(bulletPrefab, bulletPos.transform.position, bulletPos.transform.rotation);
                 GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation); 
                 bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
-
-
-
-
-
                     if (i % 2 == 0)
                     {
                         bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
                     }
                     else
                     {
-
                         bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
                     }
             }
-            
-            //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
-            //rigid.velocity = bulletPos.forward.normalized * 20f;
-            //rigid.AddForce(Vector3.zero * 15, ForceMode.Impulse);
         }
     }
 
 
-    private void OnEnable()
+    private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
         if (start==false)
         {
