@@ -225,6 +225,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563478244}
+  - component: {fileID: 563478246}
+  - component: {fileID: 563478245}
+  - component: {fileID: 563478247}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -246,6 +249,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563478245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a4e714e641e354fbc74a3f2c8b46e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &563478246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataPath_Characters: 
+  dataPath_Enemy: 
+  dataPath_Skill: 
+  dataPath_item: 
+  dataPath_String: 
+--- !u!114 &563478247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575b02cfea38ae8419bde7a75c127235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609600821
 GameObject:
   m_ObjectHideFlags: 0
