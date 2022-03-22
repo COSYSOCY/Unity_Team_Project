@@ -98,6 +98,17 @@ public class Enemy_Info : MonoBehaviour
         {
             StartCoroutine(Damage(Enemy_Damage));
         }
+        if (other.transform.CompareTag("Check"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.CompareTag("Check"))
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -116,4 +127,15 @@ public class Enemy_Info : MonoBehaviour
         Pos = player.transform.position + (Pos * range);
         transform.position = Pos;
     }
+    //private void OnBecameVisible()
+    //{
+    //    transform.GetChild(0).gameObject.SetActive(true);
+    //    Debug.Log("보인다");
+    //}
+    //private void OnBecameInvisible()
+    //{
+    //    transform.GetChild(0).gameObject.SetActive(false);
+    //    Debug.Log("안보인다");
+        
+    //}
 }
