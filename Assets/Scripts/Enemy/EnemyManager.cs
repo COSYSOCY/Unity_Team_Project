@@ -123,7 +123,7 @@ public class EnemyManager : MonoBehaviour
                         float z = Mathf.Sin(i) * 15f;
                         Vector3 circlePos = new Vector3(x, 0, z);
                         //GameObject bat = enemyPooling.MakeEnemy("Enemy");
-                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_1", playerPos + circlePos*1.6f);
+                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_6", playerPos + circlePos*1.6f);
                         bat.GetComponent<Enemy>().CreateStart();
                         //플레이어 위치에서 원형으로 생성
                         //bat.transform.position = playerPos + circlePos;

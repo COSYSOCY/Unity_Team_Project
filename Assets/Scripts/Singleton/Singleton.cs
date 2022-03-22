@@ -6,6 +6,8 @@ public class Singleton : MonoBehaviour
 {
     private static Singleton instance = null;
 
+
+
     private void Awake()
     {
         if (null == instance)

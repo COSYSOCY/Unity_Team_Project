@@ -16,7 +16,8 @@ public class ItemPull : MonoBehaviour
     public enum Item_ENUM
     {
         gold=0,
-        XP=1
+        XP=1,
+        HP=2,
     };
     public Item_ENUM item_enum;
 
@@ -43,6 +44,9 @@ public class ItemPull : MonoBehaviour
                     break;
                 case Item_ENUM.XP:
                     playerstatus.XpPlus(item_stat);
+                    break;
+                case Item_ENUM.HP:
+                    playerstatus.HpPlus(item_stat);
                     break;
                 default:
                     break;

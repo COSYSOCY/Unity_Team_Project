@@ -166,7 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090b869fb6bb5c74e8df38ccb6dd42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 2
+  Idx: 5
+  Hp: 0
+  Hp_Max: 2
   enemy_enum: 1
   itemprefabs:
   - {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
