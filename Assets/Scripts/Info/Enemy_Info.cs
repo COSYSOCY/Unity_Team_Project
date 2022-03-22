@@ -21,8 +21,10 @@ public class Enemy_Info : MonoBehaviour
     public PlayerStatus playerstatus;
     public float Enemy_Damage;
     public bool damagecheck;
+    public GameObject player;
     private void Start()
     {
+        player = GameObject.Find("Player");
         playerstatus =GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform =GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
@@ -96,5 +98,22 @@ public class Enemy_Info : MonoBehaviour
         {
             StartCoroutine(Damage(Enemy_Damage));
         }
+    }
+    private void Update()
+    {
+        if ((player.transform.position - transform.position).magnitude > 30)
+        {
+            EnemyMove();
+        }
+    }
+    void EnemyMove()
+    {
+        float range = Random.Range(25f, 27f);
+        int ran = Random.Range(0, 360);
+        float x = Mathf.Cos(ran) * 1f;
+        float z = Mathf.Sin(ran) * 1f;
+        Vector3 Pos = new Vector3(x, 0, z);
+        Pos = player.transform.position + (Pos * range);
+        transform.position = Pos;
     }
 }

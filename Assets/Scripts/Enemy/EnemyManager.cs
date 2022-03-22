@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
     //원형 리스폰 추가
     public Vector3 GetRandomPos()
     {
-        float range = Random.Range(30f, 35f);
+        float range = Random.Range(25f, 27f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
@@ -44,6 +44,7 @@ public class EnemyManager : MonoBehaviour
         //float z = Mathf.Sin(ranNum) * 30f;
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = player.position + (Pos * range);
+        //Debug.Log((Pos - player.position).magnitude);
         return Pos;
     }
 
@@ -68,14 +69,14 @@ public class EnemyManager : MonoBehaviour
                 playerstat.EnemyCnt++;
                 
             }
-            else
-            {
-                yield return new WaitForSeconds(2f);
-                int i = Random.Range(0, playerstat.EnemyCreateRan);
-                GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPos(), Quaternion.LookRotation(player.transform.position));
-                enemy.GetComponent<Enemy>().CreateStart();
-                playerstat.EnemyCnt++;
-            }
+            //else
+            //{
+            //    yield return new WaitForSeconds(2f);
+            //    int i = Random.Range(0, playerstat.EnemyCreateRan);
+            //    GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPos(), Quaternion.LookRotation(player.transform.position));
+            //    enemy.GetComponent<Enemy>().CreateStart();
+            //    playerstat.EnemyCnt++;
+            //}
 
             yield return new WaitForSeconds(0.1f);
         }
