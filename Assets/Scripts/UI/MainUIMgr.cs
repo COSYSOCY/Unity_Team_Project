@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LobyUIMgr : MonoBehaviour
+public class MainUIMgr : MonoBehaviour
 {
-    PlayerInfo playerinfo;
+    
     public Slider Bgmvol;
     public Slider Sevol;
     public AudioSource BGM;
     public AudioSource SE;
     public GameObject Opt;
-    public bool OptCheck;
-    Text LobyGoldText;
+    public bool OptCheck;    
     public Button ExitBtn;
     public Button StartBtn;
     public Button OptBtn;
+    public GameObject hpbar;
 
 
     public void OptCheckAc()
@@ -25,34 +25,26 @@ public class LobyUIMgr : MonoBehaviour
         OptCheck = true;
         if(OptCheck == true)
         {
-            ExitBtn.interactable = false;
-            StartBtn.interactable = false;
-            OptBtn.interactable = false;
-
+            hpbar.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 
     public void OptCheckXbtnAc()
     {
         Opt.SetActive(false);
-        OptCheck = false;
-        if (OptCheck == false)
+        OptCheck = false;    
+        if(OptCheck == false)
         {
-            ExitBtn.interactable = true;
-            StartBtn.interactable = true;
-            OptBtn.interactable = true;
+            hpbar.SetActive(true);
+            Time.timeScale = 1;
         }
     }        
 
     public void DmgMarkAc()
     {
 
-    }
-
-    public void LobyGoldAc()
-    {
-        LobyGoldText.text = "Gold : " + playerinfo.Gold;
-    }
+    }    
 
     public void BgmVolume()
     {
