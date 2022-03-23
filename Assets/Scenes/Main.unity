@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 125332049}
   - component: {fileID: 125332050}
   - component: {fileID: 125332051}
+  - component: {fileID: 125332052}
   m_Layer: 0
   m_Name: Skill9
   m_TagString: Untagged
@@ -416,8 +417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb07eb0a4a7bd34d9897c49d4c88873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 125332051}
   Cool_Main: 4
@@ -439,8 +442,22 @@ MonoBehaviour:
   Index: 8
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uB808\uC774\uC800"
   Lv_Text:
   - "\uC77C\uC9C1\uC120 \uB808\uC774\uC800"
@@ -453,6 +470,31 @@ MonoBehaviour:
   Skill_Icon: 8
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &125332052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125332048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &142600883
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +720,7 @@ MonoBehaviour:
   skillManager: {fileID: 1428158546}
   num: 
   num2: 
+  playerInfo: {fileID: 2097701189}
   Skill_name:
   - {fileID: 170737731}
   - {fileID: 681642560}
@@ -870,6 +913,10 @@ PrefabInstance:
     - target: {fileID: 4456675825001411880, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: Hp
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456675825001411880, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: Lv
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4456675825001411880, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: ui
@@ -1391,6 +1438,7 @@ GameObject:
   - component: {fileID: 336292649}
   - component: {fileID: 336292650}
   - component: {fileID: 336292651}
+  - component: {fileID: 336292652}
   m_Layer: 0
   m_Name: Skill12
   m_TagString: Untagged
@@ -1424,8 +1472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfae4f970b151c945afb121e01e04762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 1567664940}
-  bulletPrefab: {fileID: 1593895901896320269, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+  bulletPrefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 1792243321}
   info: {fileID: 336292651}
   Cool_Main: 5
@@ -1447,8 +1497,22 @@ MonoBehaviour:
   Index: 11
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uAE30\uB3C4\uBB38"
   Lv_Text:
   - "\uAE30\uB3C4\uBB38\uC774 \uC8FC\uBCC0\uC744 \uD68C\uC804\uD558\uBA70 \uACF5\uACA9\uD569\uB2C8\uB2E4"
@@ -1461,6 +1525,31 @@ MonoBehaviour:
   Skill_Icon: 11
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &336292652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336292648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &356899099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2222,7 @@ GameObject:
   - component: {fileID: 547790605}
   - component: {fileID: 547790604}
   - component: {fileID: 547790606}
+  - component: {fileID: 547790607}
   m_Layer: 0
   m_Name: Skill4
   m_TagString: Untagged
@@ -2152,8 +2242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7ba04a30368b40b4bbcbb614e6c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 547790606}
   Cool_Main: 0
@@ -2188,8 +2280,22 @@ MonoBehaviour:
   Index: 3
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uC6D0\uD615\uBBF8\uC0AC\uC77C"
   Lv_Text:
   - "\uC804\uBC29\uD5A5 \uBBF8\uC0AC\uC77C \uBC1C\uC0AC(\uCFE820\uCD08)"
@@ -2202,6 +2308,31 @@ MonoBehaviour:
   Skill_Icon: 3
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &547790607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547790603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &549085513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,6 +2344,7 @@ GameObject:
   - component: {fileID: 549085514}
   - component: {fileID: 549085515}
   - component: {fileID: 549085516}
+  - component: {fileID: 549085517}
   m_Layer: 0
   m_Name: Skill6
   m_TagString: Untagged
@@ -2246,8 +2378,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987be407f39212d4184294f974a9335b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 549085516}
   Cool_Main: 2
@@ -2268,8 +2402,22 @@ MonoBehaviour:
   Index: 5
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uAC00\uAE4C\uC6B4\uC801\uC5D0\uAC8C \uB0A0\uB9AC\uAE30"
   Lv_Text:
   - "\uC720\uB3C4"
@@ -2282,6 +2430,31 @@ MonoBehaviour:
   Skill_Icon: 5
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &549085517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549085513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &549603678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2511,7 @@ GameObject:
   - component: {fileID: 558249787}
   - component: {fileID: 558249786}
   - component: {fileID: 558249788}
+  - component: {fileID: 558249789}
   m_Layer: 0
   m_Name: Skill13
   m_TagString: Untagged
@@ -2357,8 +2531,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1664d3c0920a549afceee058ca0701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 558249788}
   Cool_Main: 0
@@ -2393,8 +2569,22 @@ MonoBehaviour:
   Index: 12
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uD5E4\uC77C"
   Lv_Text:
   - "\uD5E4\uC77C\uC774 \uB0A0\uB77C\uAC10"
@@ -2407,6 +2597,31 @@ MonoBehaviour:
   Skill_Icon: 12
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &558249789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558249785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &563100750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2728,7 @@ GameObject:
   - component: {fileID: 567763653}
   - component: {fileID: 567763654}
   - component: {fileID: 567763655}
+  - component: {fileID: 567763656}
   m_Layer: 0
   m_Name: Skill10
   m_TagString: Untagged
@@ -2546,8 +2762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6925c4c1a86896d4983c23e09875b3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 567763655}
   Cool_Main: 0
@@ -2568,8 +2786,22 @@ MonoBehaviour:
   Index: 9
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uBD80\uBA54\uB791"
   Lv_Text:
   - "\uD574\uB2F9\uC9C0\uC5ED\uC73C\uB85C \uB0A0\uB9AC\uACE0 \uB3CC\uC544\uC635\uB2C8\uB2E4"
@@ -2582,6 +2814,31 @@ MonoBehaviour:
   Skill_Icon: 9
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &567763656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567763652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &574970593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +2929,7 @@ GameObject:
   - component: {fileID: 593982055}
   - component: {fileID: 593982056}
   - component: {fileID: 593982057}
+  - component: {fileID: 593982058}
   m_Layer: 0
   m_Name: Skill8
   m_TagString: Untagged
@@ -2705,8 +2963,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9dcd414b68b8f4d85c2ce21dd4edd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 593982057}
   Cool_Main: 0
@@ -2727,8 +2987,22 @@ MonoBehaviour:
   Index: 7
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uBC29\uC0AC\uACF5"
   Lv_Text:
   - "\uBC15\uD788\uACE0 \uB4A4\uB85C \uBC29\uC0AC\uD53C\uD574"
@@ -2741,6 +3015,31 @@ MonoBehaviour:
   Skill_Icon: 7
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &593982058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593982054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &615924996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +3051,7 @@ GameObject:
   - component: {fileID: 615924998}
   - component: {fileID: 615924997}
   - component: {fileID: 615924999}
+  - component: {fileID: 615925000}
   m_Layer: 0
   m_Name: Skill14
   m_TagString: Untagged
@@ -2771,8 +3071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8581d38691f1749bb19ff10cf06170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 615924999}
   Cool_Main: 0
@@ -2807,8 +3109,22 @@ MonoBehaviour:
   Index: 13
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uB8EC\uD2B8\uB808\uC774\uC11C"
   Lv_Text:
   - "\uBB34\uC791\uC704 \uBC29\uD5A5 \uBBF8\uC0AC\uC77C\uBC1C\uC0AC"
@@ -2821,6 +3137,31 @@ MonoBehaviour:
   Skill_Icon: 13
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &615925000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615924996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &618755126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,6 +3842,7 @@ GameObject:
   - component: {fileID: 752999193}
   - component: {fileID: 752999192}
   - component: {fileID: 752999194}
+  - component: {fileID: 752999195}
   m_Layer: 0
   m_Name: Skill5
   m_TagString: Untagged
@@ -3520,8 +3862,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7544b568e9e3be648bd184e945a20d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 752999194}
   Cool_Main: 0
@@ -3556,8 +3900,22 @@ MonoBehaviour:
   Index: 4
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uBC88\uAC1C"
   Lv_Text:
   - "\uBC94\uC704\uB0B4 \uBB34\uC791\uC704 \uD55C\uBA85 \uBC88\uAC1C"
@@ -3570,6 +3928,31 @@ MonoBehaviour:
   Skill_Icon: 4
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &752999195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752999191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &778146707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,6 +4532,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971108032}
   m_CullTransparentMesh: 1
+--- !u!1 &1010264065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010264066}
+  - component: {fileID: 1010264069}
+  - component: {fileID: 1010264068}
+  - component: {fileID: 1010264067}
+  m_Layer: 0
+  m_Name: Skill_Item1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1010264066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010264065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1428158545}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010264067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010264065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 0
+--- !u!114 &1010264068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010264065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818fd1fd6c16c4d4bb479819d2761e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 0
+  Index_Text: 0
+  Lv: 0
+  LvMax: 0
+  HpPlusC: 0
+  HpPlusPer: 0
+  HpRegen: 0
+  Defence: 0
+  AtPlus: 0
+  Cool: 0
+  AtRange: 0
+  Speed: 0
+  BulletCnt: 0
+  GoldPlus: 0
+  XpPlus: 0
+  BulletSpeed: 0
+  BulletTime: 0
+  Real1: 0
+  Real2: 0
+  Skill_Item_Name: 
+  Lv_Text: []
+  Skill_Icon: 0
+  HpPlusCCheck: []
+  HpPlusPerCheck: []
+  HpRegenCheck: []
+  DefenceCheck: []
+  AtPlusCheck: []
+  CoolCheck: []
+  AtRangeCheck: []
+  SpeedCheck: []
+  BulletCntCheck: 
+  GoldPlusCheck: []
+  XpPlusCheck: []
+  BulletSpeedCheck: []
+  BulletTimeCheck: []
+  Real1Check: []
+  Real2Check: []
+--- !u!114 &1010264069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010264065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6135508709361d140b84bb18ec93a934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
+  info: {fileID: 1010264068}
+  manager: {fileID: 1428158546}
 --- !u!1 &1069256925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4821,6 +5314,7 @@ GameObject:
   - component: {fileID: 1210016407}
   - component: {fileID: 1210016406}
   - component: {fileID: 1210016408}
+  - component: {fileID: 1210016409}
   m_Layer: 0
   m_Name: Skill3
   m_TagString: Untagged
@@ -4840,8 +5334,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb6a79045c1e544fbad8ca872cea2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1210016408}
   Cool_Main: 0
@@ -4876,8 +5372,22 @@ MonoBehaviour:
   Index: 2
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uC544\uC774\uC2A4\uD544\uB4DC"
   Lv_Text:
   - "\uC8FC\uC704\uC758 \uD070 \uBC15\uC2A4\uB97C \uC0DD\uC131"
@@ -4890,6 +5400,31 @@ MonoBehaviour:
   Skill_Icon: 2
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &1210016409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210016405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &1318614033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,6 +5638,7 @@ GameObject:
   - component: {fileID: 1412918704}
   - component: {fileID: 1412918705}
   - component: {fileID: 1412918706}
+  - component: {fileID: 1412918707}
   m_Layer: 0
   m_Name: Skill11
   m_TagString: Untagged
@@ -5136,8 +5672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4a85583894e164f8b40e90fb562249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1412918706}
   Cool_Main: 0
@@ -5158,8 +5696,22 @@ MonoBehaviour:
   Index: 10
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uBBF8\uC0AC\uC77C"
   Lv_Text:
   - "\uB2E8\uC77C\uD0C0\uCF13\uBBF8\uC0AC\uC77C"
@@ -5172,6 +5724,31 @@ MonoBehaviour:
   Skill_Icon: 10
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &1412918707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412918703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &1428158544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5183,7 +5760,7 @@ GameObject:
   - component: {fileID: 1428158545}
   - component: {fileID: 1428158546}
   m_Layer: 0
-  m_Name: SkillManager
+  m_Name: Skil+item_lManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5215,6 +5792,7 @@ Transform:
   - {fileID: 558249787}
   - {fileID: 615924998}
   - {fileID: 1452574931}
+  - {fileID: 1010264066}
   m_Father: {fileID: 1160336352}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5232,6 +5810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Skills:
   - {fileID: 1635998966}
+  Skill_Items:
+  - {fileID: 1010264065}
   Player_Skill: []
   Skill_icon:
   - {fileID: 21300000, guid: a8f4e8f470c1efe44b50e4a4aa91d28a, type: 3}
@@ -5249,6 +5829,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7e1d2f0d0a72d4c489e20b55afd4ca6c, type: 3}
   - {fileID: 21300000, guid: 1e6ecf9cd0cdc544facac4a0f65deeb7, type: 3}
   - {fileID: 21300000, guid: 1d1724f97153f3c46aecd41234a1d8e7, type: 3}
+  Player_Skill_Item: []
+  Skill_All_List: []
+  Skill_All_Active: []
+  Skill_Active: []
+  Skill_Item_Active: []
 --- !u!1 &1430331284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,6 +5926,7 @@ GameObject:
   - component: {fileID: 1452574931}
   - component: {fileID: 1452574930}
   - component: {fileID: 1452574929}
+  - component: {fileID: 1452574932}
   m_Layer: 0
   m_Name: Skill15
   m_TagString: Untagged
@@ -5363,8 +5949,22 @@ MonoBehaviour:
   Index: 14
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uAC70\uB300\uCD1D\uC54C"
   Lv_Text:
   - "\uBC15\uD788\uACE0 \uB4A4\uB85C \uAC70\uB300\uCD1D\uC54C"
@@ -5377,6 +5977,18 @@ MonoBehaviour:
   Skill_Icon: 14
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
 --- !u!114 &1452574930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,8 +6001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1650aeb9480ed24449b92e96da9f3a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1452574929}
   Cool_Main: 0
@@ -5410,6 +6024,19 @@ Transform:
   m_Father: {fileID: 1428158545}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452574932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452574928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1001 &1485718677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6008,6 +6635,7 @@ GameObject:
   - component: {fileID: 1635998967}
   - component: {fileID: 1635998968}
   - component: {fileID: 1635998969}
+  - component: {fileID: 1635998970}
   m_Layer: 0
   m_Name: Skill1
   m_TagString: Untagged
@@ -6041,8 +6669,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e582ecc2dd5a8a4ab0925d713d26937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1635998969}
   Cool_Main: 0
@@ -6063,13 +6693,52 @@ MonoBehaviour:
   Index: 0
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uB2E8\uAC80(Knife)"
   Lv_Text: []
   Skill_Icon: 0
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &1635998970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635998966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &1663144785
 GameObject:
   m_ObjectHideFlags: 0
@@ -6251,6 +6920,7 @@ GameObject:
   - component: {fileID: 1711409215}
   - component: {fileID: 1711409216}
   - component: {fileID: 1711409217}
+  - component: {fileID: 1711409218}
   m_Layer: 0
   m_Name: Skill7
   m_TagString: Untagged
@@ -6284,8 +6954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14627ecbf43e4b54c93f22d78511deed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 1567664940}
-  bulletPrefab: {fileID: 8792880933486749509, guid: 8133fcb61bc3c8a4892182f66c50781f, type: 3}
+  bulletPrefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 1792243321}
   info: {fileID: 1711409217}
   Cool_Main: 5
@@ -6309,8 +6981,22 @@ MonoBehaviour:
   Index: 6
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uBE44\uB458\uAE30"
   Lv_Text:
   - "\uC6D0\uD615\uC758 \uAD6C\uC5ED\uC744 \uD3ED\uACA9\uD569\uB2C8\uB2E4"
@@ -6323,6 +7009,31 @@ MonoBehaviour:
   Skill_Icon: 6
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &1711409218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711409214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &1736628809
 GameObject:
   m_ObjectHideFlags: 0
@@ -6559,6 +7270,7 @@ GameObject:
   - component: {fileID: 1825683209}
   - component: {fileID: 1825683208}
   - component: {fileID: 1825683210}
+  - component: {fileID: 1825683211}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Untagged
@@ -6578,8 +7290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef76fd797a8773342b3dfed39ecacae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 2097701189}
   Player: {fileID: 2097701187}
   bulletPrefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
+  manager: {fileID: 1428158546}
   bulletPos: {fileID: 2097701193}
   info: {fileID: 1825683210}
   Cool_Main: 0
@@ -6614,8 +7328,22 @@ MonoBehaviour:
   Index: 1
   Index_Text: 0
   Lv: 0
+  LvMax: 0
   Damage: 0
+  DamageMin: 0
+  DamageMax: 0
   bulletCnt: 0
+  bulletCntMax: 0
+  BulletSpeed: 0
+  BulletPie: 0
+  BulletAtCri: 0
+  CoolMain: 0
+  CoolSub1: 0
+  CoolSub2: 0
+  AtRange: 0
+  SkillReal1: 0
+  SkillReal2: 0
+  SkillReal3: 0
   Skill_Name: "\uCC44\uCC0D"
   Lv_Text:
   - "\uCC44\uCC0D\uC785\uB2C8\uB2E4"
@@ -6628,6 +7356,31 @@ MonoBehaviour:
   Skill_Icon: 1
   DamageCheckMin: []
   DamageCheckMax: []
+  BulletCntCheck: 
+  BulletCntMaxCheck: 
+  BulletSpeedCheck: []
+  BulletPieCheck: 
+  BulletAtCriCheck: []
+  CoolMainCheck: []
+  CoolSub1Check: []
+  CoolSub2Check: []
+  AtRangeCheck: []
+  SkillReal1Check: []
+  SkillReal2Check: []
+  SkillReal3Check: []
+--- !u!114 &1825683211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825683207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4cab7aa8404694ba989155d55c358b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill: 1
 --- !u!1 &1828634864
 GameObject:
   m_ObjectHideFlags: 0

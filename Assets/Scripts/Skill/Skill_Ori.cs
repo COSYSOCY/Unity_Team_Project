@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Skill_Ori : MonoBehaviour
 {
+    public PlayerInfo playerinfo;
     public GameObject Player; //플레이어
     public GameObject bulletPrefab; //총알Prefab
+    public SkillManager manager;
     public Transform bulletPos;//총알생성위치 (따로 생성되는위치가 필요할때 사용)
     public Skill_Info info;
     public float Cool_Main;
@@ -144,6 +146,8 @@ int bulletCntMax; // 투사체 최대갯수
     }
     public void LevelUp()
     {
+        
+
         info.Lv++;
         info.DamageMin = info.DamageCheckMin[info.Lv];
         info.DamageMax = info.DamageCheckMax[info.Lv];
@@ -159,6 +163,7 @@ int bulletCntMax; // 투사체 최대갯수
         info.SkillReal1 = info.SkillReal1Check[info.Lv];
         info.SkillReal2 = info.SkillReal2Check[info.Lv];
         info.SkillReal3 = info.SkillReal3Check[info.Lv];
+
     }
 
 }
