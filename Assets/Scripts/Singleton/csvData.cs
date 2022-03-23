@@ -9,11 +9,30 @@ public class csvData : MonoBehaviour
     public string dataPath_Characters;
     public string dataPath_Enemy;
     public string dataPath_Skill;
-    public string dataPath_item;
+    public string dataPath_SkillItem;
+    public string dataPath_Xp;
     public string dataPath_String;
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
+
+
+    public static List<int> CharactersNameNum = new List<int>();
+    public static List<int> CharactersInfoNum = new List<int>();
+    public static List<int> CharactersBSNum = new List<int>();
+    public static List<float> CharactersHpMax = new List<float>();
+    public static List<float> CharactersHpRegen = new List<float>();
+    public static List<float> CharactersDefece = new List<float>();
+    public static List<float> CharactersSpeed = new List<float>();
+    public static List<float> CharactersAtPlus = new List<float>();
+    public static List<float> CharactersAtRange = new List<float>();
+    public static List<float> CharactersBtSpeed = new List<float>();
+    public static List<float> CharactersBtTime = new List<float>();
+    public static List<int> CharactersBtCnt = new List<int>();
+    public static List<float> CharactersBtCool = new List<float>();
+    public static List<float> CharactersRange = new List<float>();
+    public static List<float> CharactersXpPlus = new List<float>();
+
 
     public static List<int> SkillNameNum=new List<int>();
     public static List<int> SkillInfoNum=new List<int>();
@@ -32,13 +51,49 @@ public class csvData : MonoBehaviour
     public static List<float> SkillReal2=new List<float>();
     public static List<float> SkillReal3=new List<float>();
 
+    public static List<int> SkillItemNameNum = new List<int>();
+    public static List<int> SkillItemInfoNum = new List<int>();
+    public static List<int> SkillItemMaxLevel = new List<int>();
+    public static List<float> SkillItemHpPlusC = new List<float>();
+    public static List<float> SkillItemHpPlusP = new List<float>();
+    public static List<float> SkillItemHpRegen = new List<float>();
+    public static List<float> SkillItemDefence = new List<float>();
+    public static List<float> SkillItemAtPlus = new List<float>();
+    public static List<float> SkillItemCool = new List<float>();
+    public static List<float> SkillItemAtRange = new List<float>();
+    public static List<float> SkillItemSpeed = new List<float>();
+    public static List<int> SkillItemBtCnt = new List<int>();
+    public static List<float> SkillItemBtSpeed = new List<float>();
+    public static List<float> SkillItemBtTime = new List<float>();
+    public static List<float> SkillItemGoldPlus = new List<float>();
+    public static List<float> SkillItemXpPlus = new List<float>();
+    public static List<float> SkillItemReal1 = new List<float>();
+    public static List<float> SkillItemReal2 = new List<float>();
+
+
+    public static List<float> MonsterHp = new List<float>();
+    public static List<float> MonsterDefence = new List<float>();
+    public static List<float> MonsterSpeed = new List<float>();
+    public static List<float> MonsterDamage = new List<float>();
+    public static List<int> MonsterItemIdx = new List<int>();
+
+    public static List<int> Exp = new List<int>();
+
+
+
+    public static List<string> GameText_Korean = new List<string>();
+    public static List<string> GameText_English = new List<string>();
 
 
     void Awake()
     {
         inst = this;
-        //Characters_Read();
+        Characters_Read();
+        Enemy_Read();
         Skill_Read();
+        SkillItem_Read();
+        String_Read();
+       Exp_Read();
     }
     public void Characters_Read()
     {
@@ -46,9 +101,35 @@ public class csvData : MonoBehaviour
 
         for (int i = 0; i < data.Count; i++)
         {
-            //Tower_Level1_Per.Add(float.Parse(data[i]["PER1"].ToString()));
-            //Tower_Level2_Per.Add(float.Parse(data[i]["PER2"].ToString()));
-            //Tower_Level3_Per.Add(float.Parse(data[i]["PER3"].ToString()));
+            CharactersNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            CharactersInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            CharactersBSNum.Add(int.Parse(data[i]["기본스킬번호"].ToString()));
+            CharactersHpMax.Add(float.Parse(data[i]["최대체력"].ToString()));
+            CharactersHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
+            CharactersDefece.Add(float.Parse(data[i]["방어력"].ToString()));
+            CharactersSpeed.Add(float.Parse(data[i]["이동속도"].ToString()));
+            CharactersAtPlus.Add(float.Parse(data[i]["괴력"].ToString()));
+            CharactersAtRange.Add(float.Parse(data[i]["공격범위"].ToString()));
+            CharactersBtSpeed.Add(float.Parse(data[i]["투사체속도"].ToString()));
+            CharactersBtTime.Add(float.Parse(data[i]["지속시간"].ToString()));
+            CharactersBtCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
+            CharactersBtCool.Add(float.Parse(data[i]["쿨타임"].ToString()));
+            CharactersRange.Add(float.Parse(data[i]["자석"].ToString()));
+            CharactersXpPlus.Add(float.Parse(data[i]["경험치증가"].ToString()));
+
+        }
+    }
+    public void Enemy_Read()
+    {
+        data = CSVReader.Read(dataPath_Enemy);
+
+        for (int i = 0; i < data.Count; i++)
+        {
+            MonsterHp.Add(float.Parse(data[i]["Hp"].ToString()));
+            MonsterDefence.Add(float.Parse(data[i]["Defence"].ToString()));
+            MonsterSpeed.Add(float.Parse(data[i]["Speed"].ToString()));
+            MonsterDamage.Add(float.Parse(data[i]["Dagame"].ToString()));
+            MonsterItemIdx.Add(int.Parse(data[i]["ItemIdx"].ToString()));
         }
     }
     public void Skill_Read()
@@ -76,5 +157,79 @@ public class csvData : MonoBehaviour
             //Tower_Level2_Per.Add(float.Parse(data[i]["PER2"].ToString()));
             //Tower_Level3_Per.Add(float.Parse(data[i]["PER3"].ToString()));
         }
+    }
+
+    public void SkillItem_Read()
+    {
+        data = CSVReader.Read(dataPath_SkillItem);
+
+        for (int i = 0; i < data.Count; i++)
+        {
+            SkillItemNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            SkillItemInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            SkillItemMaxLevel.Add(int.Parse(data[i]["최대 레벨"].ToString()));
+            SkillItemHpPlusC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
+            SkillItemHpPlusP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
+            SkillItemHpRegen.Add(float.Parse(data[i]["체력회복"].ToString()));
+            SkillItemDefence.Add(float.Parse(data[i]["방어력"].ToString()));
+            SkillItemAtPlus.Add(float.Parse(data[i]["공격력"].ToString()));
+            SkillItemCool.Add(float.Parse(data[i]["쿨타임감소"].ToString()));
+            SkillItemAtRange.Add(float.Parse(data[i]["공격범위"].ToString()));
+            SkillItemSpeed.Add(float.Parse(data[i]["이동속도"].ToString()));
+            SkillItemBtCnt.Add(int.Parse(data[i]["투사체수증가"].ToString()));
+            SkillItemBtSpeed.Add(float.Parse(data[i]["투사체이동속도증가"].ToString()));
+            SkillItemBtTime.Add(float.Parse(data[i]["투사체지속시간증가"].ToString()));
+            SkillItemGoldPlus.Add(float.Parse(data[i]["골드획득량"].ToString()));
+            SkillItemXpPlus.Add(float.Parse(data[i]["경험치획득량"].ToString()));
+            SkillItemReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
+            SkillItemReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
+        }
+    }
+
+    public void Exp_Read()
+    {
+        data = CSVReader.Read(dataPath_Xp);
+
+        for (int i = 0; i < data.Count; i++)
+        {
+            Exp.Add(int.Parse(data[i]["Exp"].ToString()));
+
+        }
+    }
+    public void String_Read()
+    {
+        data = CSVReader.Read(dataPath_String);
+        for (int i = 0; i < data.Count; i++)
+        {
+            GameText_Korean.Add(data[i]["Korea"].ToString());
+            GameText_English.Add(data[i]["English"].ToString());
+        }
+
+
+    }
+
+    public static string GameText(int i)
+    {
+
+
+        if (GameInfo.Language=="English")
+        {
+            return GameText_English[i];
+        }
+        else if(GameInfo.Language == "Japanese")
+        {
+
+        }
+        else if (GameInfo.Language == "Chinese")
+        {
+
+        }
+
+        else
+        {
+            return GameText_Korean[i];
+        }
+
+            return GameText_Korean[i];
     }
 }

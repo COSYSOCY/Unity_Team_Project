@@ -331,6 +331,7 @@ MonoBehaviour:
   DefencePlus: 0
   BulletSpeedPlus: 0
   BulletTimePlus: 0
+  Language: Korean
 --- !u!114 &563478247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,12 +344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575b02cfea38ae8419bde7a75c127235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataPath_Characters: 
-  dataPath_Enemy: 
+  dataPath_Characters: Characters_Info
+  dataPath_Enemy: Monster_Info
   dataPath_Skill: Skill_Info
-  dataPath_item: 
-  dataPath_String: 
-  SkillName: []
+  dataPath_SkillItem: SkillItem_Info
+  dataPath_Xp: Exp
+  dataPath_String: GameText
 --- !u!1 &1609600821
 GameObject:
   m_ObjectHideFlags: 0
