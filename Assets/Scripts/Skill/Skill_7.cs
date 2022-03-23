@@ -11,40 +11,7 @@ public class Skill_7 : Skill_Ori
     public GameObject Dack;
     //GameObject bird;
     public bool startcheck;
-    public override void LevelUp()
-    {
-        switch (info.Lv)
-        {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                //..;
-                break;
-            case 2:
-                //..;
-                break;
-            case 3:
-                //..
-                break;
-            case 4:
-                //.
-                break;
-            case 5:
-                //.
-                break;
-            case 6:
-                //.
-                break;
-            case 7:
-                //.
-                break;
-            default:
-                break;
-        }
 
-        info.Lv++;
-    }
 
 
 
@@ -54,10 +21,7 @@ public class Skill_7 : Skill_Ori
 
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 1;
-        info.Damage = 1f;
+        LevelUp();
         StartCoroutine(Skill_Update2());
         StartCoroutine(Skill_Update());
         //bird = Instantiate(Dack, Player.transform.position, Dack.transform.rotation);

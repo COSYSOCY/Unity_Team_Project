@@ -7,47 +7,11 @@ public class Skill_11 : Skill_Ori
 
 
 
-    public override void LevelUp()
-    {
-        switch (info.Lv)
-        {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                info.bulletCnt++;
-                break;
-            case 2:
-                info.bulletCnt++;
-                break;
-            case 3:
-                info.bulletCnt++;
-                break;
-            case 4:
-                info.bulletCnt++;
-                break;
-            case 5:
-                info.bulletCnt++;
-                break;
-            case 6:
-                info.bulletCnt++;
-                break;
-            case 7:
-                info.bulletCnt++;
-                break;
-            default:
-                break;
-        }
 
-        info.Lv++;
-    }
 
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 2;
-        info.Damage = 1f;
+        LevelUp();
 
         StartCoroutine(Skill_Update());
     }

@@ -5,56 +5,9 @@ using UnityEngine;
 public class Skill_1 : Skill_Ori
 {
     
-    public override void LevelUp()
-    {
-        // 레벨업시 실행되는 함수입니다.
-        // 0 이거는 활성화되는 부분이니까 넘어가주세요
-        switch (info.Lv)
-        {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 2:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 3:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 4:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 5:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 6:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            case 7:
-                //투사체 증가
-                info.bulletCnt++;
-                break;
-            default:
-                break;
-        }
-
-        info.Lv++;
-    }
-
     void Start_Func() //시작시 설정
     {
-        info.Lv = 1; //레벨 1로 설정
-        info.bulletCnt = 1; // 투사체 수 1로 설정
-        info.Damage = 2f; // 데미지 2로 설정
-
+        LevelUp();
         StartCoroutine(Skill_Update());
     }
 
