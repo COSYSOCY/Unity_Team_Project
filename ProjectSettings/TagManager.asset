@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Item
   - Pull
+  - ItemBox
   layers:
   - Default
   - TransparentFX
