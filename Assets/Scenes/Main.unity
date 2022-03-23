@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 8
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -450,6 +451,8 @@ MonoBehaviour:
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 8
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &142600883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 11
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -1455,6 +1459,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 11
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &356899099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2193,6 +2200,8 @@ MonoBehaviour:
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 3
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &549085513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 5
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2270,6 +2280,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 5
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &549603678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 12
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2392,6 +2405,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 12
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &563100750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,6 +2566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 9
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2564,6 +2580,8 @@ MonoBehaviour:
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 9
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &574970593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,6 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 7
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2720,6 +2739,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 7
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &615924996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 13
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -2797,6 +2819,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 13
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &618755126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -3543,6 +3568,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00+2"
   Skill_Icon: 4
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &778146707
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,6 +4874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -4860,6 +4888,8 @@ MonoBehaviour:
   - "\uAD00\uD1B5\uC99D\uAC00"
   - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 2
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &1318614033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5126,6 +5156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 10
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -5139,6 +5170,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 10
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &1428158544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,20 +5232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Skills:
   - {fileID: 1635998966}
-  - {fileID: 1825683207}
-  - {fileID: 1210016405}
-  - {fileID: 547790603}
-  - {fileID: 752999191}
-  - {fileID: 549085513}
-  - {fileID: 1711409214}
-  - {fileID: 593982054}
-  - {fileID: 125332048}
-  - {fileID: 567763652}
-  - {fileID: 1412918703}
-  - {fileID: 336292648}
-  - {fileID: 558249785}
-  - {fileID: 615924996}
-  - {fileID: 1452574928}
   Player_Skill: []
   Skill_icon:
   - {fileID: 21300000, guid: a8f4e8f470c1efe44b50e4a4aa91d28a, type: 3}
@@ -5342,6 +5361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 14
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -5355,6 +5375,8 @@ MonoBehaviour:
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
   Skill_Icon: 14
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!114 &1452574930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6039,19 +6061,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
   Skill_Name: "\uB2E8\uAC80(Knife)"
-  Lv_Text:
-  - "\uBCF4\uACE0 \uC788\uB294 \uBC29\uD5A5\uC73C\uB85C \uBE60\uB974\uAC8C \uBC1C\uC0AC\uB429\uB2C8\uB2E4"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
-  - "\uD22C\uC0AC\uCCB4\uC99D\uAC00"
+  Lv_Text: []
   Skill_Icon: 0
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &1663144785
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,6 +6307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 6
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -6302,6 +6321,8 @@ MonoBehaviour:
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   - "\uACF5\uACA9\uB825\uC99D\uAC00"
   Skill_Icon: 6
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &1736628809
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,6 +6612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
+  Index_Text: 0
   Lv: 0
   Damage: 0
   bulletCnt: 0
@@ -6604,6 +6626,8 @@ MonoBehaviour:
   - "\uAD00\uD1B5\uC99D\uAC00"
   - "\uAD00\uD1B5\uC99D\uAC00"
   Skill_Icon: 1
+  DamageCheckMin: []
+  DamageCheckMax: []
 --- !u!1 &1828634864
 GameObject:
   m_ObjectHideFlags: 0
