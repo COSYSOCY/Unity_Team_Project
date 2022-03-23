@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class LobbyManager_OCM : MonoBehaviour
 {
     public GameObject OptionAc;
-    public bool OptionPanelCheck;
+    public bool ScrollPanelCheck;
     public Button ExitBtn;
-    public Button StartBtn;
+
+    public Button StartBtn; // 여기선 MapTest - Scroll View의 GameStart1로 이어진다.
+    public Button MapTest2Btn; // 여기선 MapTest - Scroll View의 MapTest2Btn으로 이어진다
+    public Button MapTest3Btn; // 여기선 MapTest - Scroll View의 MapTest3Btn으로 이어진다
+
+
     public PlayerInfo playerinfo;
     public Text LobyGoldText;
     public Text BgmVolumetext;
@@ -19,11 +24,28 @@ public class LobbyManager_OCM : MonoBehaviour
     public AudioSource SeAudio;
 
 
-    public void gamestart()
+    public void gamestart() // 여기선 MapTest - Scroll View의 GameStart1로 이어진다.
     {
         Debug.Log("zx");
         SceneManager.LoadScene("Main");
     }
+
+    public void MapTest2() // 여기선 MapTest - Scroll View의 MapTest2Btn으로 이어진다
+    {
+        Debug.Log("ab");
+        SceneManager.LoadScene("MapTest2");
+    }
+
+    public void MapTest3() // 여기선 MapTest - Scroll View의 MapTest3Btn으로 이어진다
+    {
+        Debug.Log("cd");
+        SceneManager.LoadScene("MapTest3");
+    }
+
+
+
+
+
 
     public void Title() // 타이틀
     {
@@ -38,7 +60,7 @@ public class LobbyManager_OCM : MonoBehaviour
     public void OptionActive() // 설정 열기
     {
         OptionAc.SetActive(true);
-        OptionPanelCheck = true;
+        ScrollPanelCheck = true;
         ExitBtn.interactable = false;
         StartBtn.interactable = false;
     }
@@ -46,7 +68,7 @@ public class LobbyManager_OCM : MonoBehaviour
     public void OptionXbtn() // 설정닫기
     {
         OptionAc.SetActive(false);
-        OptionPanelCheck = false;
+        ScrollPanelCheck = false;
         ExitBtn.interactable = true;
         StartBtn.interactable = true;
     }
