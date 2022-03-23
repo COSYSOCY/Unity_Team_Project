@@ -48,6 +48,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillCoolTimeMain=new List<float>();
     public static List<float> SkillCoolTimeSub1=new List<float>();
     public static List<float> SkillCoolTimeSub2=new List<float>();
+    public static List<float> SkillAtRange=new List<float>();
     public static List<float> SkillReal1=new List<float>();
     public static List<float> SkillReal2=new List<float>();
     public static List<float> SkillReal3=new List<float>();
@@ -152,6 +153,7 @@ public class csvData : MonoBehaviour
             SkillCoolTimeMain.Add(float.Parse(data[i]["쿨타임"].ToString()));
             SkillCoolTimeSub1.Add(float.Parse(data[i]["쿨타임_서브1"].ToString()));
             SkillCoolTimeSub2.Add(float.Parse(data[i]["쿨타임_서브2"].ToString()));
+            SkillAtRange.Add(float.Parse(data[i]["공격범위"].ToString()));
             SkillReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
             SkillReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
             SkillReal3.Add(float.Parse(data[i]["실수_3"].ToString()));

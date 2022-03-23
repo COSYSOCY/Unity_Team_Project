@@ -10,8 +10,22 @@ public class Skill_Info : MonoBehaviour
     [Header("수치")]
     public int Lv; // 레벨
     public float Damage; // 데미지
+    public float DamageMin; // 최대데미지
+    public float DamageMax; // 최소데미지
     public int bulletCnt; // 투사체수
     public int bulletCntMax; // 투사체최대수
+    public float BulletSpeed; // 투사체속도
+    public int BulletPie; // 투사체관통수
+    public float BulletAtCri; // 치명타확률
+    public float CoolMain; // 쿨타임 메인
+    public float CoolSub1; // 쿨타임 서브1
+    public float CoolSub2; // 쿨타임 서브2
+    public float AtRange; // 공격범위
+    public float SkillReal1; // 실수1
+    public float SkillReal2; // 실수2
+    public float SkillReal3; // 실수3
+
+
     [Space(16)]
     [Header("스킬설명")]
     public string Skill_Name; // 스킬 이름
@@ -24,6 +38,16 @@ public class Skill_Info : MonoBehaviour
     public List<float> DamageCheckMax=new List<float>();
     public List<int> BulletCntCheck=new List<int>();
     public List<int> BulletCntMaxCheck=new List<int>();
+    public List<float> BulletSpeedCheck=new List<float>();
+    public List<int> BulletPieCheck=new List<int>();
+    public List<float> BulletAtCriCheck=new List<float>();
+    public List<float> CoolMainCheck=new List<float>();
+    public List<float> CoolSub1Check=new List<float>();
+    public List<float> CoolSub2Check=new List<float>();
+    public List<float> AtRangeCheck=new List<float>();
+    public List<float> SkillReal1Check=new List<float>();
+    public List<float> SkillReal2Check=new List<float>();
+    public List<float> SkillReal3Check=new List<float>();
 
     void Awake()
     {
@@ -38,6 +62,20 @@ public class Skill_Info : MonoBehaviour
             DamageCheckMax.Add(csvData.SkillMaxDamage[i]);
             BulletCntCheck.Add(csvData.SkillBulletCnt[i]);
             BulletCntMaxCheck.Add(csvData.SkillBulletCntMax[i]);
+
+            BulletSpeedCheck.Add(csvData.SkillBulletSpeed[i]);
+            BulletPieCheck.Add(csvData.SkillBulletPie[i]);
+            BulletAtCriCheck.Add(csvData.SkillCri[i]);
+            CoolMainCheck.Add(csvData.SkillCoolTimeMain[i]);
+            CoolSub1Check.Add(csvData.SkillCoolTimeSub1[i]);
+            CoolSub2Check.Add(csvData.SkillCoolTimeSub2[i]);
+            AtRangeCheck.Add(csvData.SkillAtRange[i]);
+            SkillReal1Check.Add(csvData.SkillReal1[i]);
+            SkillReal2Check.Add(csvData.SkillReal2[i]);
+            SkillReal3Check.Add(csvData.SkillReal3[i]);
+
+
+
         }
         
     }
