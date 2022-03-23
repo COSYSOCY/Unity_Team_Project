@@ -15,8 +15,8 @@ public class csvData : MonoBehaviour
     [SerializeField]
     public static List<Dictionary<string, object>> data;
 
-    public static List<string> SkillName=new List<string>();
-    public static List<string> SkillInfo=new List<string>();
+    public static List<int> SkillNameNum=new List<int>();
+    public static List<int> SkillInfoNum=new List<int>();
     public static List<int> SkillMaxLevel=new List<int>();
     public static List<int> SkillBulletCnt=new List<int>();
     public static List<int> SkillBulletCntMax=new List<int>();
@@ -56,8 +56,8 @@ public class csvData : MonoBehaviour
         data = CSVReader.Read(dataPath_Skill);
         for (int i = 0; i < data.Count; i++)
         {
-            SkillName.Add(data[i]["이름"].ToString());
-            SkillInfo.Add(data[i]["설명"].ToString());
+            SkillNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            SkillInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             SkillMaxLevel.Add(int.Parse(data[i]["최대레벨"].ToString()));
             SkillBulletCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
             SkillBulletCntMax.Add(int.Parse(data[i]["투사체최대갯수"].ToString()));

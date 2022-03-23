@@ -21,6 +21,7 @@ public class GameInfo : MonoBehaviour
 	public int DefencePlus;
 	public int BulletSpeedPlus;
 	public int BulletTimePlus;
+	public string Language = "Korean";
 
 
 
