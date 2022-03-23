@@ -38,7 +38,7 @@ public class Skill_Item_Ori : MonoBehaviour
     }
     protected void OnEnable()
     {
-        if (!startcheck)
+        if (!startcheck&&info.goodstart)
         {
             startcheck=true;
             StartFunc();

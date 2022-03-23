@@ -8,7 +8,6 @@ public class LobyManager : MonoBehaviour
 
     public void gamestart()
     {
-        Debug.Log("zx");
         SceneManager.LoadScene("Main");
     }
 

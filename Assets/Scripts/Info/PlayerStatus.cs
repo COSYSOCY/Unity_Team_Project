@@ -8,6 +8,7 @@ public class PlayerStatus : MonoBehaviour
 {
     public PlayerInfo playerInfo;
     public LevelUp level;
+    public SkillManager manager;
     public UIManager uimanager;
     public bool dead;
     public GameObject deadObject;
@@ -21,10 +22,34 @@ public class PlayerStatus : MonoBehaviour
     public int EnemyCreateRan;
     public List<string> EnemyCreateName;
     [SerializeField] Slider hpbar;
+    public List<int> XpCheck;
 
     public List<bool> EnemyDestory=new List<bool>();
+    private void Start()
+    {
+        StartCoroutine(HpRegen());
+        for (int i = 0; i < csvData.Exp.Count; i++)
+        {
+            XpCheck.Add(csvData.Exp[i]);
+        }
+        XpSet();
+        //uimanager.XpSet();
+    }
 
+    IEnumerator HpRegen()
+    {
+        float f;
+        while (true)
+        {
+            f=(GameInfo.HpRegenPlus+manager.HpRegen())*0.5f;
+            if (f > 0)
+            {
+            HpPlus(f);
 
+            }
+        yield return new WaitForSeconds(0.5f);
+        }
+    }
     public void EnemyDes(string tag,int idx)
     {
         EnemyDestory[idx] = true;
@@ -99,10 +124,29 @@ public class PlayerStatus : MonoBehaviour
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
 
 
+
+    }
+
+    public void Hp_Damage(float damage)
+    {
+        float f = damage;
+        float D = GameInfo.DefencePlus + manager.Defence();
+        f = f - D;
+
+        if (f < 1)
+        {
+            f = 1f;
+        }
+        playerInfo.Hp = playerInfo.Hp - f;
+
+
         if (playerInfo.Hp < 1)
         {
             Dead();
+            hpbar.value = 0;
+            return;
         }
+        hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
 
     }
     public void Dead()
@@ -121,7 +165,11 @@ public class PlayerStatus : MonoBehaviour
 
     public void XpPlus(int xp)
     {
-        playerInfo.Xp += xp;
+        int i;
+        float f = manager.XpPlus();
+        f = xp * f * 0.01f;
+        i = xp + (int)f;
+        playerInfo.Xp += i;
         uimanager.XpSet();
         if (playerInfo.Xp >= playerInfo.MaxXp)
         {
@@ -130,7 +178,11 @@ public class PlayerStatus : MonoBehaviour
     }
     public void GoldPlus(int gold)
     {
-        uimanager.GoldUp(gold);
+        int i;
+        float f = manager.GoldPlus();
+        f = gold * f * 0.01f;
+        i = gold + (int)f;
+        uimanager.GoldUp(i);
     }
     public void LevelUp()
     {
@@ -146,56 +198,7 @@ public class PlayerStatus : MonoBehaviour
     }
     public void XpSet()
     {
-        switch (playerInfo.Lv)
-        {
-            case 1:
-                playerInfo.MaxXp = 4;
-                break;
-            case 2:
-                playerInfo.MaxXp = 6;
-                break;
-            case 3:
-                playerInfo.MaxXp = 8;
-                break;
-            case 4:
-                playerInfo.MaxXp = 20;
-                break;
-            case 5:
-                playerInfo.MaxXp = 30;
-                break;
-            case 6:
-                playerInfo.MaxXp = 40;
-                break;
-            case 7:
-                playerInfo.MaxXp = 50;
-                break;
-            case 8:
-                playerInfo.MaxXp = 60;
-                break;
-            case 9:
-                playerInfo.MaxXp = 70;
-                break;
-            case 10:
-                playerInfo.MaxXp = 80;
-                break;
-            case 11:
-                playerInfo.MaxXp = 90;
-                break;
-            case 12:
-                playerInfo.MaxXp = 100;
-                break;
-            case 13:
-                playerInfo.MaxXp = 110;
-                break;
-            case 14:
-                playerInfo.MaxXp = 120;
-                break;
-            case 15:
-                playerInfo.MaxXp = 9999;
-                break;
-            default:
-                break;
-        }
+        playerInfo.MaxXp = XpCheck[playerInfo.Lv-1];
         uimanager.XpSet();
     }
     //private void OnTriggerEnter(Collider other)

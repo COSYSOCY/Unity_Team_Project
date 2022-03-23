@@ -12,7 +12,7 @@ public class Skill_6 : Skill_Ori
     void Start_Func()
     {
         LevelUp();
-
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -50,7 +50,7 @@ public class Skill_6 : Skill_Ori
                     {
                         GameObject bullet6 = ObjectPooler.SpawnFromPool("Bullet_6", Player.transform.position, Player.transform.rotation);
                         bullet6.transform.LookAt(enemy.transform);
-                        bullet6.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                        bullet6.GetComponent<Bullet_Info>().damage = _Damage();
                         yield return new WaitForSeconds(0.15f);
                     }
 
@@ -65,7 +65,7 @@ public class Skill_6 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

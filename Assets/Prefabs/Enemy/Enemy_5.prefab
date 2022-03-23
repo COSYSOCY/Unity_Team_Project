@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoolPos: {fileID: 0}
-  moveSpeed: 3
+  info: {fileID: 4658789597888100910}
 --- !u!54 &-4797137238501036881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,7 +169,9 @@ MonoBehaviour:
   Idx: 4
   Hp: 0
   Hp_Max: 32
-  enemy_enum: 1
+  Denfece: 0
+  Speed: 0
+  ItemIdx: 0
   itemprefabs:
   - {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
   - {fileID: 6627993160295598616, guid: 1aa7a16f0a61cdd4fadbd44a0107c51e, type: 3}

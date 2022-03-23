@@ -10,9 +10,9 @@ public class Skill_Info : MonoBehaviour
     [Header("수치")]
     public int Lv; // 레벨
     public int LvMax; // 최대레벨
-    public float Damage; // 데미지
-    public float DamageMin; // 최대데미지
-    public float DamageMax; // 최소데미지
+    //public float Damage; // 데미지
+    public float DamageMin; // 최소데미지
+    public float DamageMax; // 최대데미지
     public int bulletCnt; // 투사체수
     public int bulletCntMax; // 투사체최대수
     public float BulletSpeed; // 투사체속도
@@ -50,6 +50,8 @@ public class Skill_Info : MonoBehaviour
     public List<float> SkillReal2Check=new List<float>();
     public List<float> SkillReal3Check=new List<float>();
 
+    public bool goodstart = false;
+
     void Awake()
     {
         Skill_Name = csvData.GameText(csvData.SkillNameNum[Index_Text]);
@@ -79,7 +81,12 @@ public class Skill_Info : MonoBehaviour
 
 
         }
-        
+
+        goodstart = true;
+        gameObject.SetActive(false);
+
+
+
     }
 
     //public void LevelUpCheck()

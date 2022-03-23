@@ -127,7 +127,7 @@ MonoBehaviour:
   speed: 15
   levelstatus: {fileID: 0}
   playerstatus: {fileID: 0}
-  item_stat: 1
+  item_stat: 10
   pullcheck: 0
   playcolcheck: 0
   meshRenderer: {fileID: 4012728732026901076}
