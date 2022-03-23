@@ -801,6 +801,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1409494301126632296, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409494301126632296, guid: 9880299794d35cd42bb68cd669d04601, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -5885,6 +5889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622587900}
   - component: {fileID: 1622587899}
+  - component: {fileID: 1622587901}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -5920,6 +5925,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622587901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622587898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0e072592d4234188631b215db051f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 2404111176377393943, guid: 7b3a89a9478b3fc4ba50d7cdc9175d12, type: 3}
+  objPos: []
 --- !u!1 &1635998966
 GameObject:
   m_ObjectHideFlags: 0
@@ -7162,7 +7181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2097701193}
-  moveSpeed: 5
+  moveSpeed: 10
   move: {x: 0, y: 0, z: 0}
   levelup: {fileID: 167265273}
   pad: {fileID: 1578246705}

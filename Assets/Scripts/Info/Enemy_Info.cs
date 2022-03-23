@@ -35,7 +35,6 @@ public class Enemy_Info : MonoBehaviour
         Hp = Hp_Max;
     }
 
-
     public void Damaged(float damage)
     {
         //GameObject clone = Instantiate(TextUi);
@@ -81,7 +80,7 @@ public class Enemy_Info : MonoBehaviour
         gameObject.SetActive(false);
             if (playerstatus.EnemyDestory[Idx] == true)
             {
-            Destroy(gameObject);
+                Destroy(gameObject);
             }
     }
     IEnumerator Damage(float dagame)
@@ -111,21 +110,32 @@ public class Enemy_Info : MonoBehaviour
         }
     }
     private void Update()
-    {
+    {   
         if ((player.transform.position - transform.position).magnitude > 30)
-        {
+        {  //30이상 멀어지면 재배치
             EnemyMove();
         }
+        if ((player.transform.position - transform.position).magnitude > 30 && gameObject.CompareTag("FieldBoss"))
+        {  //30이상 멀어지면서 테그가 FieldBoss면 재배치
+            BossMove();
+        }
+
     }
     void EnemyMove()
-    {
-        float range = Random.Range(25f, 27f);
+    {   
+        float range = Random.Range(25f, 30f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = player.transform.position + (Pos * range);
         transform.position = Pos;
+    }
+    void BossMove()
+    {
+        Vector3 _target = player.transform.position;
+        Vector3 endPos = _target + new Vector3(_target.x - (transform.position.x * 0.9f), 1, _target.z - (transform.position.z * 0.9f));
+        transform.position = endPos;
     }
     //private void OnBecameVisible()
     //{
@@ -136,6 +146,5 @@ public class Enemy_Info : MonoBehaviour
     //{
     //    transform.GetChild(0).gameObject.SetActive(false);
     //    Debug.Log("안보인다");
-        
     //}
 }

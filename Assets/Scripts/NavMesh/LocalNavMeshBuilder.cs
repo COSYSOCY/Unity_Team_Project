@@ -49,13 +49,13 @@ public class LocalNavMeshBuilder : MonoBehaviour
         var defaultBuildSettings = NavMesh.GetSettingsByID(0);
         var bounds = QuantizedBounds();
 
-        if (asyncUpdate)
+        if (asyncUpdate) // 비동기 업데이트
             m_Operation = NavMeshBuilder.UpdateNavMeshDataAsync(m_NavMesh, defaultBuildSettings, m_Sources, bounds);
-        else
+        else //해당프레임에 업데이트
             NavMeshBuilder.UpdateNavMeshData(m_NavMesh, defaultBuildSettings, m_Sources, bounds);
     }
 
-    static Vector3 Quantize(Vector3 v, Vector3 quant)
+    static Vector3 Quantize(Vector3 v, Vector3 quant) // 바운드를 구하는 함수
     {
         float x = quant.x * Mathf.Floor(v.x / quant.x);
         float y = quant.y * Mathf.Floor(v.y / quant.y);
@@ -65,12 +65,12 @@ public class LocalNavMeshBuilder : MonoBehaviour
 
     Bounds QuantizedBounds()
     {
-        // Quantize the bounds to update only when theres a 10% change in size
+        // 크기가 10% 변할때 마다 경계를 다시 베이크
         var center = m_Tracked ? m_Tracked.position : transform.position;
         return new Bounds(Quantize(center, 0.1f * m_Size), m_Size);
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected() // 네비메쉬 바운드 영역 표시
     {
         if (m_NavMesh)
         {

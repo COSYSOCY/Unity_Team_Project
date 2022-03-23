@@ -27,10 +27,8 @@ public class PlayerInfo : MonoBehaviour
         Hp = MaxHp;
         StartCoroutine(timecheck());
     }
-
     IEnumerator timecheck()
     {
-        
         while (true)
         {
         yield return new WaitForSeconds(1f);

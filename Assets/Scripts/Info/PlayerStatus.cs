@@ -97,13 +97,10 @@ public class PlayerStatus : MonoBehaviour
             
         }
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
-
-
         if (playerInfo.Hp < 1)
         {
             Dead();
         }
-
     }
     public void Dead()
     {
@@ -118,7 +115,6 @@ public class PlayerStatus : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
     public void XpPlus(int xp)
     {
         playerInfo.Xp += xp;
