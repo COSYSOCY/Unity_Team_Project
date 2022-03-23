@@ -63,7 +63,7 @@ public class Skill_Info : MonoBehaviour
                 break;
             case 13:
                 gameObject.GetComponent<Skill_14>().LevelUp();
-                break;
+                break;            
             default:
                 break;
         }
