@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Enemy_Info : MonoBehaviour
 {
+    public int Idx ;
     public float Hp;
+    public float Hp_Max;
     public enum Enemy_ENUM
     {
         none=0,
@@ -19,13 +21,20 @@ public class Enemy_Info : MonoBehaviour
     public PlayerStatus playerstatus;
     public float Enemy_Damage;
     public bool damagecheck;
+    public GameObject player;
     private void Start()
     {
-        playerstatus=GameObject.Find("Player").GetComponent<PlayerStatus>();
+        player = GameObject.Find("Player");
+        playerstatus =GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform =GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
         //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
     }
+    private void OnEnable()
+    {
+        Hp = Hp_Max;
+    }
+
 
     public void Damaged(float damage)
     {
@@ -48,16 +57,7 @@ public class Enemy_Info : MonoBehaviour
 
         if (itemRnd <= 5)
         {
-            if (Random.Range(0, 10) < 2)
-            {
-                //Instantiate(itemprefabs[0], transform.position, transform.rotation);
-                ObjectPooler.SpawnFromPool("item_gold", transform.position, transform.rotation);
-            }
-            else
-            {
                 ObjectPooler.SpawnFromPool("item_xp_1", transform.position, transform.rotation);
-                //Instantiate(itemprefabs[1], transform.position, transform.rotation);
-            }
         }
     }
     public void Dead()
@@ -79,6 +79,10 @@ public class Enemy_Info : MonoBehaviour
         }
         playerstatus.EnemyCnt--;
         gameObject.SetActive(false);
+            if (playerstatus.EnemyDestory[Idx] == true)
+            {
+            Destroy(gameObject);
+            }
     }
     IEnumerator Damage(float dagame)
     {
@@ -94,5 +98,44 @@ public class Enemy_Info : MonoBehaviour
         {
             StartCoroutine(Damage(Enemy_Damage));
         }
+        if (other.transform.CompareTag("Check"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.CompareTag("Check"))
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }
+    private void Update()
+    {
+        if ((player.transform.position - transform.position).magnitude > 30)
+        {
+            EnemyMove();
+        }
+    }
+    void EnemyMove()
+    {
+        float range = Random.Range(25f, 27f);
+        int ran = Random.Range(0, 360);
+        float x = Mathf.Cos(ran) * 1f;
+        float z = Mathf.Sin(ran) * 1f;
+        Vector3 Pos = new Vector3(x, 0, z);
+        Pos = player.transform.position + (Pos * range);
+        transform.position = Pos;
+    }
+    //private void OnBecameVisible()
+    //{
+    //    transform.GetChild(0).gameObject.SetActive(true);
+    //    Debug.Log("보인다");
+    //}
+    //private void OnBecameInvisible()
+    //{
+    //    transform.GetChild(0).gameObject.SetActive(false);
+    //    Debug.Log("안보인다");
+        
+    //}
 }

@@ -32,10 +32,6 @@ public class Bullet_Trigger_10 : MonoBehaviour
 
 
     }
-    private void Start()
-    {
-        StartCoroutine(gogo());
-    }
 
     IEnumerator gogo()
     {
@@ -47,5 +43,11 @@ public class Bullet_Trigger_10 : MonoBehaviour
             gameObject.transform.LookAt(Player.transform.position);
             yield return null;
         }
+    }
+
+    private void OnEnable()
+    {
+        check = false;
+        StartCoroutine(gogo());
     }
 }

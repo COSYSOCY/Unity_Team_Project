@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6708883188262362965}
   - component: {fileID: 7141286743749433236}
   m_Layer: 0
-  m_Name: item_Xp_1
+  m_Name: item_Hp_1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,11 +127,11 @@ MonoBehaviour:
   speed: 15
   levelstatus: {fileID: 0}
   playerstatus: {fileID: 0}
-  item_stat: 1
+  item_stat: 20
   pullcheck: 0
   playcolcheck: 0
   meshRenderer: {fileID: 4012728732026901076}
-  item_enum: 1
+  item_enum: 2
 --- !u!54 &7141286743749433236
 Rigidbody:
   m_ObjectHideFlags: 0

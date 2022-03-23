@@ -7,8 +7,6 @@ public class EnemyBat : MonoBehaviour
     private Transform batPoolPos;
 
     private Transform target;
-    private int hp = 100;
-    private int enemyDmg = 20;
     private float atkDelay;
     private float atkCoolTime;
     [SerializeField] private float moveSpeed;

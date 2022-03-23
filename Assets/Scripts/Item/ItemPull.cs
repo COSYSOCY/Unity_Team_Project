@@ -13,10 +13,14 @@ public class ItemPull : MonoBehaviour
     public int item_stat;
     public bool pullcheck=false;
     public bool playcolcheck = false;
+    public MeshRenderer meshRenderer;
+
+
     public enum Item_ENUM
     {
         gold=0,
-        XP=1
+        XP=1,
+        HP=2,
     };
     public Item_ENUM item_enum;
 
@@ -44,6 +48,9 @@ public class ItemPull : MonoBehaviour
                 case Item_ENUM.XP:
                     playerstatus.XpPlus(item_stat);
                     break;
+                case Item_ENUM.HP:
+                    playerstatus.HpPlus(item_stat);
+                    break;
                 default:
                     break;
             }
@@ -60,9 +67,19 @@ public class ItemPull : MonoBehaviour
             transform.LookAt(Player.transform);
             StartCoroutine(itemmove2());
         }
+        if (other.transform.CompareTag("Check") )
+        {
+            meshRenderer.enabled = true;
+        }
 
     }
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.CompareTag("Check"))
+        {
+            meshRenderer.enabled = false;
+        }
+    }
     IEnumerator itemmove()
     {
 

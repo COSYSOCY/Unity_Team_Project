@@ -22,8 +22,20 @@ public class PlayerStatus : MonoBehaviour
     public List<string> EnemyCreateName;
     [SerializeField] Slider hpbar;
 
+    public List<bool> EnemyDestory=new List<bool>();
 
 
+    public void EnemyDes(string tag,int idx)
+    {
+        EnemyDestory[idx] = true;
+        for (int i = 0; i < ObjectPooler.Enemy_Check[tag].Count; i++)
+        {
+            if (ObjectPooler.Enemy_Check[tag][i].activeSelf==false)
+            {
+                Destroy(ObjectPooler.Enemy_Check[tag][i]);
+            }
+        }
+    }
 
     public void tiemtrigger(float t)
     {
@@ -34,6 +46,7 @@ public class PlayerStatus : MonoBehaviour
                 break;
             case 60:
                 EnemyMax += 20;
+                EnemyDes("Enemy_1", 0);
                 EnemyCreateName[0] = "Enemy_2";
                 break;
             case 90:
@@ -42,14 +55,17 @@ public class PlayerStatus : MonoBehaviour
                 break;
             case 120:
                 EnemyMax += 30;
+                EnemyDes("Enemy_2", 1);
                 EnemyCreateName[0] = "Enemy_3";
                 break;
             case 180:
                 EnemyMax += 40;
+                EnemyDes("Enemy_3", 2);
                 EnemyCreateName[0] = "Enemy_4";
                 break;
             case 240:
                 EnemyMax += 50;
+                EnemyDes("Enemy_4", 3);
                 EnemyCreateName[0] = "Enemy_5";
                 break;
             case 300:
