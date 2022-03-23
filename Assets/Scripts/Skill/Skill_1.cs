@@ -7,6 +7,9 @@ public class Skill_1 : Skill_Ori
     
     void Start_Func() //시작시 설정
     {
+        playerinfo.SkillCnt++;
+        manager.Skill_All_Active.Add(gameObject);
+        manager.Skill_Active.Add(gameObject);
         LevelUp();
         StartCoroutine(Skill_Update());
     }

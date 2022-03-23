@@ -55,6 +55,7 @@ public class csvData : MonoBehaviour
 
     public static List<int> SkillItemNameNum = new List<int>();
     public static List<int> SkillItemInfoNum = new List<int>();
+    public static List<int> SkillItemIconNum = new List<int>();
     public static List<int> SkillItemMaxLevel = new List<int>();
     public static List<float> SkillItemHpPlusC = new List<float>();
     public static List<float> SkillItemHpPlusP = new List<float>();
@@ -171,6 +172,7 @@ public class csvData : MonoBehaviour
         {
             SkillItemNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
             SkillItemInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            SkillItemIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             SkillItemMaxLevel.Add(int.Parse(data[i]["최대 레벨"].ToString()));
             SkillItemHpPlusC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
             SkillItemHpPlusP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));

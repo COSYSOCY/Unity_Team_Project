@@ -17,6 +17,10 @@ public class PlayerInfo : MonoBehaviour
     public int timeplus;
     public UIManager ui;
     public PlayerStatus status;
+    public int SkillCnt;
+    public int SkillItemCnt;
+    public int SkillMax;
+    public int SkillItemMax;
 
     private void Start()
     {
