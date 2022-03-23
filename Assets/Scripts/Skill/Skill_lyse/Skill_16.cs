@@ -10,7 +10,7 @@ public class Skill_16 : Skill_Ori
         switch (info.Lv)
         {
             case 0:
-                //아무것도아님
+                
                 break;
             case 1:
                 info.bulletCnt++;
@@ -43,8 +43,7 @@ public class Skill_16 : Skill_Ori
     void Start_Func()
     {
         //시작시 설정
-        //info.Lv = 1;
-        //info.bulletCnt = 1;        
+        info.Lv = 1;                
 
         StartCoroutine(Skill_Update());
     }
@@ -52,10 +51,10 @@ public class Skill_16 : Skill_Ori
 
     IEnumerator Skill_Update() //범위 공격
     {
-        float Range = 20f;
+        float Range = 5f;
         while (true)
         {            
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(100f);
             Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(40)내에 오브젝트 배열로 받기                            
             foreach(Collider col in hits)
             {
