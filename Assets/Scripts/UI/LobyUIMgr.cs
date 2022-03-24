@@ -18,10 +18,7 @@ public class LobyUIMgr : MonoBehaviour
     public Button OptBtn;
 
 
-    public void Awake()
-    {
-        gameInfo = GameObject.Find("Singleton").GetComponent<GameInfo>();
-    }
+
 
     public void OptCheckAc()
     {
