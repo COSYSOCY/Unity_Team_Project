@@ -6,8 +6,6 @@ public class Singleton : MonoBehaviour
 {
     private static Singleton instance = null;
 
-
-
     private void Awake()
     {
         if (null == instance)
@@ -17,7 +15,6 @@ public class Singleton : MonoBehaviour
         }
         else
         {
-
             Destroy(this.gameObject);
         }
     }
