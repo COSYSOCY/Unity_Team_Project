@@ -21,7 +21,7 @@ public class Singleton : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+    
     public static Singleton Instance
     {
         get
