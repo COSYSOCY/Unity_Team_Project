@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     public PlayerInfo playerinfo;
     public Text KillText;
     public Text GoldText;
-    public Text XpText;
+    //public Text XpText;
+    public Slider Xpbar;
     public Text TimeText;
     
     public void KillUp()
@@ -23,7 +24,10 @@ public class UIManager : MonoBehaviour
     }
     public void XpSet()
     {
-        XpText.text = "Xp : " + playerinfo.Xp + " / " + playerinfo.MaxXp;
+        //Xpbar.minValue = playerinfo.Xp;
+        Xpbar.value = playerinfo.Xp;
+        Xpbar.maxValue = playerinfo.MaxXp;
+        //XpText.text = "Xp : " + playerinfo.Xp + " / " + playerinfo.MaxXp;
     }
     public void TimeCheck()
     {

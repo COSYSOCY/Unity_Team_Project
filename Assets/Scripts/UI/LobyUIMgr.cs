@@ -18,7 +18,10 @@ public class LobyUIMgr : MonoBehaviour
     public Button OptBtn;
 
 
-
+    public void StartButton()
+    {
+        SceneManager.LoadScene("Main");
+    }
 
     public void OptCheckAc()
     {
@@ -57,8 +60,8 @@ public class LobyUIMgr : MonoBehaviour
 
     public void BgmVolume()
     {
-        GameInfo.PlayerBGM = BGM.volume;
-        BGM.volume = Bgmvol.value;
+        GameInfo.PlayerBGM = Bgmvol.value;
+        GameInfo.inst.audioSo.volume = Bgmvol.value;
     }
 
     public void SeVolume()
@@ -71,4 +74,15 @@ public class LobyUIMgr : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void KoreanBtn()
+    {
+        GameInfo.Language = "Korean";
+    }
+    public void EnglishBtn()
+    {
+        GameInfo.Language = "English";
+
+    }
+    
 }

@@ -86,6 +86,7 @@ public class csvData : MonoBehaviour
 
     public static List<string> GameText_Korean = new List<string>();
     public static List<string> GameText_English = new List<string>();
+    public static List<string> GameText_Japan = new List<string>();
 
 
     void Awake()
@@ -209,6 +210,7 @@ public class csvData : MonoBehaviour
         {
             GameText_Korean.Add(data[i]["Korea"].ToString());
             GameText_English.Add(data[i]["English"].ToString());
+            GameText_Japan.Add(data[i]["Japan"].ToString());
         }
 
 
@@ -222,8 +224,9 @@ public class csvData : MonoBehaviour
         {
             return GameText_English[i];
         }
-        else if(GameInfo.Language == "Japanese")
+        else if(GameInfo.Language == "Japan")
         {
+            return GameText_Japan[i];
 
         }
         else if (GameInfo.Language == "Chinese")
