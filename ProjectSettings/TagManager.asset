@@ -9,6 +9,8 @@ TagManager:
   - Item
   - Pull
   - Check
+  - MapRanObj
+  - Bullet
   layers:
   - Default
   - TransparentFX
