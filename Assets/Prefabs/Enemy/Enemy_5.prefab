@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6876871023749238010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 5163530004125781376}
@@ -172,9 +172,6 @@ MonoBehaviour:
   Denfece: 0
   Speed: 0
   ItemIdx: 0
-  itemprefabs:
-  - {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
-  - {fileID: 6627993160295598616, guid: 1aa7a16f0a61cdd4fadbd44a0107c51e, type: 3}
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
   uimanager: {fileID: 0}

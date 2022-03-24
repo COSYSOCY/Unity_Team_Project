@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2972710917879425684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoolPos: {fileID: 0}
-  moveSpeed: 3
+  info: {fileID: 0}
 --- !u!114 &2275131852600598989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +128,9 @@ MonoBehaviour:
   Idx: 7
   Hp: 0
   Hp_Max: 20
-  enemy_enum: 0
-  itemprefabs: []
+  Denfece: 0
+  Speed: 0
+  ItemIdx: 0
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
   uimanager: {fileID: 0}
