@@ -22,6 +22,7 @@ public class Skill_7 : Skill_Ori
     void Start_Func()
     {
         LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update2());
         StartCoroutine(Skill_Update());
         //bird = Instantiate(Dack, Player.transform.position, Dack.transform.rotation);
@@ -63,7 +64,7 @@ public class Skill_7 : Skill_Ori
                     //Vector3 moveVector = new Vector3(dir.x * 50f * Time.deltaTime, -1.0f, dir.z * 50f * Time.deltaTime);
                     //Vector3 moveVector = new Vector3(0f, -1.0f, 0f);
                     bullet.transform.position = dir;
-                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 //Destroy(bullet, 0.5f);
 
             }
@@ -74,7 +75,7 @@ public class Skill_7 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start == false)
+        if (start == false && info.goodstart)
         {
             Start_Func();
             start = true;

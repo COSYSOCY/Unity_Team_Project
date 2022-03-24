@@ -11,11 +11,11 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private float atkDelay;
     private float atkCoolTime;
-    [SerializeField] private float moveSpeed;
+    //[SerializeField] private float moveSpeed;
     private bool isDead;
 
     NavMeshAgent nav;
-
+    public Enemy_Info info;
     private Renderer enemyColor;
 
     void Awake()
@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
     public void CreateStart()
     {
         StartCoroutine(UpdateEnemy());
+        nav.speed = info.Speed*0.1f;
     }
     //SetDestination 버그 수정부분
     void OnDisable()
@@ -70,14 +71,14 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
         //transform.rotation= Quaternion.LookRotation(target.transform.position);
-        nav.speed = moveSpeed;
+        //nav.speed = moveSpeed;
         NavEnemy(target.position);
         //yield return new WaitForSeconds(0.2f);
         yield return null;
     }
     IEnumerator MoveEnemy()
     {
-        nav.speed = moveSpeed;
+        //nav.speed = moveSpeed;
         NavEnemy(target.position);
         yield return null;
     }

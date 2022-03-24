@@ -8,7 +8,7 @@ public class Skill_15: Skill_Ori
     void Start_Func()
     {
         LevelUp();
-
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -45,7 +45,7 @@ public class Skill_15: Skill_Ori
                     {
                         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", Player.transform.position, Player.transform.rotation);
                         bullet.transform.LookAt(enemy.transform);
-                        bullet.GetComponent<Bullet_Trigger_15>().Damage = info.Damage;
+                        bullet.GetComponent<Bullet_Info>().damage = _Damage();
                         yield return new WaitForSeconds(0.15f);
                     }
 
@@ -60,7 +60,7 @@ public class Skill_15: Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false&&info.goodstart)
         {
         Start_Func();
             start = true;

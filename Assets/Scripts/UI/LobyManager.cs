@@ -8,13 +8,12 @@ public class LobyManager : MonoBehaviour
     
     public void gamestart()
     {
-        Debug.Log("zx");
-        SceneManager.LoadScene("Main _Test");
+        SceneManager.LoadScene("Main");
     }
 
-    public void popupChara()//Ä³¸¯ÅÍ ¼±ÅÃÃ¢ ÆË¾÷½ÃÄÑÁÖ´Â¹öÆ°ÇÔ¼ö
+    public void popupChara()//Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¢ ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½Ö´Â¹ï¿½Æ°ï¿½Ô¼ï¿½
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Main");
     }
 
     
