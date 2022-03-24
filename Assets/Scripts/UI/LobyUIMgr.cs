@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LobyUIMgr : MonoBehaviour
 {
-    public PlayerInfo playerinfo;
+    //public PlayerInfo playerinfo;
     public Slider Bgmvol;
     public Slider Sevol;
     public AudioSource BGM;
@@ -51,7 +51,7 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
-        LobyGoldText.text = "Gold : " + playerinfo.Gold;
+        LobyGoldText.text = "Gold : " + GameInfo.PlayerGold;
     }
 
     public void BgmVolume()

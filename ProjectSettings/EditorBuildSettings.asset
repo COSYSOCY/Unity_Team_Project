@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SCB/01_Loby Test.unity
-    guid: d681bc50394239443a57c9dfb8d21b21
+    path: Assets/Scenes/0_Start.unity
+    guid: 666c92396c381e941aea7f38a36c6789
   - enabled: 1
-    path: Assets/Scenes/SCB/Character_Select_Test.unity
-    guid: 74731d2556f99264b8009ebdfe5d6b80
+    path: Assets/Scenes/01_Loby.unity
+    guid: ecc8e9fd888d8b7448b1132e3fddfdbe
   - enabled: 1
-    path: Assets/Scenes/SCB/Main _Test.unity
-    guid: d2416d9e2e37f9c48a304dd28e997c96
+    path: Assets/Scenes/Main.unity
+    guid: 3cffe324e846847499d0f09160472720
   m_configObjects: {}
