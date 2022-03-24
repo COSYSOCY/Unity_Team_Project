@@ -11,9 +11,9 @@ public class LobyManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    public void popupChara()//ĳ���� ����â �˾�����ִ¹�ư�Լ�
+    public void popupChara()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Character_Select");
     }
 
     
