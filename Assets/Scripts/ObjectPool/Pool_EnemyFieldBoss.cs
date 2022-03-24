@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pool_Enemy_Bat : MonoBehaviour
+public class Pool_EnemyFieldBoss : MonoBehaviour
 {
     private void OnDisable()
     {
