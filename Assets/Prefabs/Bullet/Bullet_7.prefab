@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: -8751582753474192272}
   - component: {fileID: -3279616966715157632}
   - component: {fileID: -3217642005099173812}
+  - component: {fileID: -4836292038179986654}
   m_Layer: 0
   m_Name: Bullet_7
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4843a4ad20bbc1242b730488adce8632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
+  info: {fileID: -4836292038179986654}
 --- !u!114 &-3279616966715157632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +169,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f854f358fd2bc2c4eb31c7b5dcf14669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4836292038179986654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792880933486749509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94981238199fc064eaa98763dbdc113a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  pie: 0

@@ -24,7 +24,6 @@ public class EnemyManager : MonoBehaviour
        // enemyPooling = GameObject.Find("EnemyMakePool").GetComponent<EnemyPooling>();
         StartCoroutine(CallEnemy());
         StartCoroutine(CreateEnemyTrigger());
-
     }
     private void Update()
     {
@@ -39,7 +38,6 @@ public class EnemyManager : MonoBehaviour
         float z = Mathf.Sin(ran) * 1f;
 
         //float ranNum = Random.Range(-5f, 5f);
-
         //float x = Mathf.Cos(ranNum) * 30f;
         //float z = Mathf.Sin(ranNum) * 30f;
         Vector3 Pos = new Vector3(x, 0, z);
@@ -67,7 +65,6 @@ public class EnemyManager : MonoBehaviour
                 GameObject enemy = ObjectPooler.SpawnFromPool(playerstat.EnemyCreateName[i], GetRandomPos(), Quaternion.LookRotation(player.transform.position));
                 enemy.GetComponent<Enemy>().CreateStart();
                 playerstat.EnemyCnt++;
-                
             }
             //else
             //{
@@ -78,7 +75,7 @@ public class EnemyManager : MonoBehaviour
             //    playerstat.EnemyCnt++;
             //}
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(10f);
         }
     }
     //---------------------------------
@@ -102,13 +99,13 @@ public class EnemyManager : MonoBehaviour
                 {
                     batTime *= 2;
                     //Debug.Log(batTime);
-                    //Vector3 batPos = GetRandomPos();
+                    Vector3 batPos = GetRandomPos();
                     for (int i = 0; i < 20; i++)
                     {
                         yield return new WaitForSeconds(0.03f);
                         //GameObject bat = enemyPooling.MakeEnemy("Bat");
                         //bat.transform.position = batPos;
-                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_Bat", GetRandomPos());
+                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_Bat", batPos);
                         bat.GetComponent<EnemyBat>().CreateStart();
                     }
                 }
@@ -131,7 +128,6 @@ public class EnemyManager : MonoBehaviour
                     }
                 }
             }
-
             else yield return null;
         }
     }

@@ -12,7 +12,7 @@ public class Skill_5 : Skill_Ori
     void Start_Func()
     {
         LevelUp();
-
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -41,7 +41,7 @@ public class Skill_5 : Skill_Ori
                     {
                         int random = Random.Range(0, Enemys.Count - 1);//·£´ý»Ì±â!.
                         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_5", Enemys[random].transform.position, Quaternion.identity); //»ý¼º
-                        Enemys[random].GetComponent<Enemy_Info>().Damaged(info.Damage);
+                        Enemys[random].GetComponent<Enemy_Info>().Damaged(_Damage());
                         //Destroy(bullet, 0.5f);
                     }
 
@@ -55,7 +55,7 @@ public class Skill_5 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

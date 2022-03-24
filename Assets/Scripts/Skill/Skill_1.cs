@@ -7,9 +7,7 @@ public class Skill_1 : Skill_Ori
     
     void Start_Func() //시작시 설정
     {
-        playerinfo.SkillCnt++;
-        manager.Skill_All_Active.Add(gameObject);
-        manager.Skill_Active.Add(gameObject);
+        manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
     }
@@ -22,10 +20,11 @@ public class Skill_1 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            for (int i = 1; i <= info.bulletCnt; i++)
+            for (int i = 1; i <= _BulletCnt(); i++)
             {
                 GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation); 
-                bullet.GetComponent<Bullet_Trigger_1>().Damage = info.Damage;
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
                     if (i % 2 == 0)
                     {
                         bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
@@ -41,7 +40,7 @@ public class Skill_1 : Skill_Ori
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
-        if (start==false)
+        if (start==false&&info.goodstart)
         {
         Start_Func();
             start = true;

@@ -12,7 +12,7 @@ public class Skill_10 : Skill_Ori
     void Start_Func()
     {
         LevelUp();
-
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -43,7 +43,7 @@ public class Skill_10 : Skill_Ori
                         int random = Random.Range(0, Enemys.Count - 1);//·£´ý»Ì±â!.
                         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_10", Player.transform.position, Quaternion.identity);
                         bullet.transform.LookAt(Enemys[random].transform);
-                        bullet.GetComponent<Bullet_Trigger_10>().Damage = info.Damage;
+                        bullet.GetComponent<Bullet_Info>().damage = _Damage();
                         bullet.GetComponent<Bullet_Trigger_10>().Player = Player;
                         //Rigidbody rigid = bullet.GetComponent<Rigidbody>();
                         //rigid.velocity = bulletPos.forward.normalized * 20f;
@@ -60,7 +60,7 @@ public class Skill_10 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

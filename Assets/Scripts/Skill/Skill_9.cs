@@ -12,7 +12,7 @@ public class Skill_9 : Skill_Ori
     void Start_Func()
     {
         LevelUp();
-
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -55,7 +55,7 @@ public class Skill_9 : Skill_Ori
                             {
                                 if (Rhits[i].transform.CompareTag("Enemy") && Rhits[i].transform.gameObject.activeSelf)
                                 {
-                                    Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(info.Damage);
+                                    Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
 
 
                                 }
@@ -77,7 +77,7 @@ public class Skill_9 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

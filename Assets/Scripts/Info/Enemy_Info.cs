@@ -7,14 +7,11 @@ public class Enemy_Info : MonoBehaviour
     public int Idx ;
     public float Hp;
     public float Hp_Max;
-    public enum Enemy_ENUM
-    {
-        none=0,
-        Enemy_1,
-        bat,
-    }
-    public Enemy_ENUM enemy_enum;
-    public GameObject[] itemprefabs;
+    public float Denfece;
+
+    public float Speed;
+    public int ItemIdx;
+
     public GameObject TextUi;
     public Transform parentTransform;
     public UIManager uimanager;
@@ -22,81 +19,93 @@ public class Enemy_Info : MonoBehaviour
     public float Enemy_Damage;
     public bool damagecheck;
     public GameObject player;
-    private void Start()
+
+    private void Awake()
     {
         player = GameObject.Find("Player");
-        playerstatus =GameObject.Find("Player").GetComponent<PlayerStatus>();
-        parentTransform =GameObject.Find("TextUi").GetComponent<Transform>();
-        uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
+        playerstatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
+        parentTransform = GameObject.Find("TextUi").GetComponent<Transform>();
+        uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
         //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
+        Hp_Max = csvData.MonsterHp[Idx];
+        Denfece = csvData.MonsterDefence[Idx];
+        Speed = csvData.MonsterSpeed[Idx];
+        ItemIdx = csvData.MonsterItemIdx[Idx];
+        Enemy_Damage = csvData.MonsterDamage[Idx];
     }
+
     private void OnEnable()
     {
         Hp = Hp_Max;
     }
 
-
     public void Damaged(float damage)
     {
+        float f = damage;
+        f = damage - Denfece;
+        if (f < 1)
+        {
+            f = 1f;
+        }
         //GameObject clone = Instantiate(TextUi);
-        GameObject clone = ObjectPooler.SpawnFromPool("TextUi",transform.position);
+        GameObject clone=null;
+
+        if (!GameInfo.PlayerDmg)
+        {
+
+        clone =ObjectPooler.SpawnFromPool("TextUi",transform.position);
         clone.transform.SetParent(parentTransform);
         Bounds bounds = GetComponent<Collider>().bounds;
-        clone.GetComponent<UIHUDText>().Play(damage.ToString("F0"), Color.red, bounds);
+        clone.GetComponent<UIHUDText>().Play(f.ToString("F0"), Color.red, bounds);
 
-        Hp -= damage;
+        }
+        Hp -= f;
         if (Hp <1 && gameObject.activeSelf)
         {
             Dead();
             uimanager.KillUp();
         }
     }
-    void ItemRespawn() // 랜덤아이템생성
+    void ItemRespawn(int i) // 랜덤아이템생성
     {
         int itemRnd = Random.Range(0, 10);
 
         if (itemRnd <= 5)
         {
+            if (i==1)
+            {
                 ObjectPooler.SpawnFromPool("item_xp_1", transform.position, transform.rotation);
+            }
         }
     }
     public void Dead()
     {
-        //죽음
-        
-        switch (enemy_enum)
-        {
-            case Enemy_ENUM.none:
-                break;
-            case Enemy_ENUM.Enemy_1:
-                ItemRespawn();
-                break;
-            case Enemy_ENUM.bat:
-                ItemRespawn();
-                break;
-            default:
-                break;
-        }
+    ItemRespawn(ItemIdx);
+
         playerstatus.EnemyCnt--;
         gameObject.SetActive(false);
             if (playerstatus.EnemyDestory[Idx] == true)
             {
-            Destroy(gameObject);
+                Destroy(gameObject);
             }
     }
     IEnumerator Damage(float dagame)
     {
-        damagecheck = true;
-        playerstatus.HpPlus(-dagame);
-        yield return new WaitForSeconds(0.5f);
-        damagecheck = false;
+        
+        playerstatus.Hp_Damage(dagame);
+        yield return new WaitForSeconds(0.35f);
+        if (damagecheck==true)
+        {
+            StartCoroutine(Damage(Enemy_Damage));
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Player")&& damagecheck==false)
+        if (other.transform.CompareTag("Player"))
         {
             StartCoroutine(Damage(Enemy_Damage));
+            damagecheck = true;
         }
         if (other.transform.CompareTag("Check"))
         {
@@ -105,27 +114,42 @@ public class Enemy_Info : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if (other.transform.CompareTag("Player"))
+        {
+            damagecheck = false;
+        }
         if (other.transform.CompareTag("Check"))
         {
             transform.GetChild(0).gameObject.SetActive(false);
         }
     }
     private void Update()
-    {
+    {   
         if ((player.transform.position - transform.position).magnitude > 30)
-        {
+        {  //30이상 멀어지면 재배치
             EnemyMove();
         }
+        if ((player.transform.position - transform.position).magnitude > 30 && gameObject.CompareTag("FieldBoss"))
+        {  //30이상 멀어지면서 테그가 FieldBoss면 재배치
+            BossMove();
+        }
+
     }
     void EnemyMove()
-    {
-        float range = Random.Range(25f, 27f);
+    {   
+        float range = Random.Range(25f, 30f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = player.transform.position + (Pos * range);
         transform.position = Pos;
+    }
+    void BossMove()
+    {
+        Vector3 _target = player.transform.position;
+        Vector3 endPos = _target + new Vector3(_target.x - (transform.position.x * 0.9f), 1, _target.z - (transform.position.z * 0.9f));
+        transform.position = endPos;
     }
     //private void OnBecameVisible()
     //{
@@ -136,6 +160,5 @@ public class Enemy_Info : MonoBehaviour
     //{
     //    transform.GetChild(0).gameObject.SetActive(false);
     //    Debug.Log("안보인다");
-        
     //}
 }

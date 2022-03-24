@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LobyUIMgr : MonoBehaviour
 {
-    public GameInfo gameInfo;
     public Slider Bgmvol;
     public Slider Sevol;
     public AudioSource BGM;

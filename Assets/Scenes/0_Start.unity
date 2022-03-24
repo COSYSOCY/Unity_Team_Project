@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9f69cb031563e144b84b3c9a41cedb4e, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 563478246}
   - component: {fileID: 563478245}
   - component: {fileID: 563478247}
+  - component: {fileID: 563478248}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -316,22 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerBGM: 0
-  PlayerSE: 0
-  PlayerVFX: 0
-  PlayerDmg: 0
-  PlayerGold: 0
-  HpPlus: 0
-  DamagePlus: 0
-  BulletCntPlus: 0
-  SkillCoolPlus: 0
-  HpRegenPlus: 0
-  Attack_RangePlus: 0
-  MoveSpeedPlus: 0
-  DefencePlus: 0
-  BulletSpeedPlus: 0
-  BulletTimePlus: 0
-  Language: Korean
 --- !u!114 &563478247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,12 +329,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575b02cfea38ae8419bde7a75c127235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataPath_Characters: Characters_Info
-  dataPath_Enemy: Monster_Info
-  dataPath_Skill: Skill_Info
-  dataPath_SkillItem: SkillItem_Info
-  dataPath_Xp: Exp
-  dataPath_String: GameText
+  dataPath_Characters: project - Characters_Info
+  dataPath_Enemy: project - Monster_Info
+  dataPath_Skill: project - Skill_Info
+  dataPath_SkillItem: project - SkillItem_Info
+  dataPath_Xp: project - Exp_Info
+  dataPath_String: project - GameText
+--- !u!114 &563478248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11bc715b49fa042b348bbbfcb29111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609600821
 GameObject:
   m_ObjectHideFlags: 0

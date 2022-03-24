@@ -6,13 +6,13 @@ public class Bullet_Trigger_15_2 : MonoBehaviour
 {
     
     public GameObject nodagame;
-    public float Damage;
+    public Bullet_Info info;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy")&&other.gameObject!= nodagame)
         {
 
-            other.GetComponent<Enemy_Info>().Damaged(Damage);
+            other.GetComponent<Enemy_Info>().Damaged(info.damage);
             //Destroy(gameObject);
         }
 
