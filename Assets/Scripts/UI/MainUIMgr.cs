@@ -4,19 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LobyUIMgr : MonoBehaviour
+public class MainUIMgr : MonoBehaviour
 {
-    public GameInfo gameInfo;
+    
     public Slider Bgmvol;
     public Slider Sevol;
     public AudioSource BGM;
     public AudioSource SE;
     public GameObject Opt;
-    public bool OptCheck;
-    public Text LobyGoldText;
+    public bool OptCheck;    
     public Button ExitBtn;
     public Button StartBtn;
     public Button OptBtn;
+    public GameObject hpbar;
+    public GameInfo gameInfo;
+    public Text LobyGoldText;
 
 
     public void Awake()
@@ -30,45 +32,48 @@ public class LobyUIMgr : MonoBehaviour
         OptCheck = true;
         if(OptCheck == true)
         {
-            ExitBtn.interactable = false;
-            StartBtn.interactable = false;
-            OptBtn.interactable = false;
-
+            hpbar.SetActive(false);
+            Time.timeScale = 0;
         }
     }
 
     public void OptCheckXbtnAc()
     {
         Opt.SetActive(false);
-        OptCheck = false;
-        if (OptCheck == false)
+        OptCheck = false;    
+        if(OptCheck == false)
         {
-            ExitBtn.interactable = true;
-            StartBtn.interactable = true;
-            OptBtn.interactable = true;
+            hpbar.SetActive(true);
+            Time.timeScale = 1;
         }
     }        
-
-    public void DmgMarkAc()
-    {
-        GameInfo.PlayerVFX = false;
-    }
 
     public void LobyGoldAc()
     {
         LobyGoldText.text = "Gold : " + GameInfo.PlayerGold;
     }
 
+
+    public void DmgMarkAc()
+    {
+        GameInfo.PlayerVFX = false;
+    }    
+
     public void BgmVolume()
     {
         GameInfo.PlayerBGM = BGM.volume;
-        BGM.volume = Bgmvol.value;
+        BGM.volume = Bgmvol.value;        
     }
 
     public void SeVolume()
     {
         GameInfo.PlayerSE = SE.volume;
-        SE.volume = Sevol.value;
+        SE.volume = Sevol.value;        
+    }
+
+    public void LobyAc()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void GameExit()
