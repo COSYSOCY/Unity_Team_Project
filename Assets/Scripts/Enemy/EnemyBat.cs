@@ -35,6 +35,7 @@ public class EnemyBat : MonoBehaviour
     public void CreateStart()
     {
         StartCoroutine(UpdateEnemy());
+
     }
     void OnDisable()
     {
