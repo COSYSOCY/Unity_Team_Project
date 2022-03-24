@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LobbyManager_OCM : MonoBehaviour
 {
     public GameObject OptionAc;
-    public bool ScrollPanelCheck;
+    public bool ScrollPanelCheck; // OptionPanelCheck
     public Button ExitBtn;
 
     public Button StartBtn; // 여기선 MapTest - Scroll View의 GameStart1로 이어진다.
