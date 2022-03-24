@@ -5,23 +5,23 @@ using UnityEngine;
 public class Bullet_Trigger_8 : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    
-    public float Damage;
+
+    public Bullet_Info info;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
 
-            other.GetComponent<Enemy_Info>().Damaged(Damage);
+            other.GetComponent<Enemy_Info>().Damaged(info.damage);
 
             GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation);
-            bullet.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
+            //bullet.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
             GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation*Quaternion.Euler(0f,30f,0f));
-            bullet2.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
+            //bullet2.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
             GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_8_2", transform.position, transform.rotation * Quaternion.Euler(0f, -30f, 0f));
-            bullet3.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
+            //bullet3.GetComponent<Bullet_Trigger_8_2>().Damage = Damage;
             bullet.GetComponent<Bullet_Trigger_8_2>().nodagame = other.gameObject;
             //Destroy(gameObject);
             gameObject.SetActive(false);

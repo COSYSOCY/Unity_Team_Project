@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Bullet_Trigger_1 : MonoBehaviour
 {
-    public float Damage;
+    public Bullet_Info info;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy")&&other.gameObject.activeSelf)
         {
-            other.GetComponent<Enemy_Info>().Damaged(Damage);
-            gameObject.SetActive(false);
-            //Destroy(gameObject);
+            other.GetComponent<Enemy_Info>().Damaged(info.damage);
+
+                gameObject.SetActive(false);
+
         }
         
     }

@@ -24,7 +24,7 @@ public class gidomon : MonoBehaviour
             //par = Instantiate(BulletD, pos, rot);
             GameObject par = ObjectPooler.SpawnFromPool("Bullet_12", pos, rot);
             par.transform.parent = gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
-            par.GetComponent<Bullet_Trigger_5>().Damage = Dagame;
+            par.GetComponent<Bullet_Info>().damage = Dagame;
         }
     }
 }

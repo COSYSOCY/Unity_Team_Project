@@ -9,10 +9,10 @@ public class EnemyBat : MonoBehaviour
     private Transform target;
     private float atkDelay;
     private float atkCoolTime;
-    [SerializeField] private float moveSpeed;
+    //[SerializeField] private float moveSpeed;
     private bool isDead;
     public bool isOn = true;
-
+    public Enemy_Info info;
     NavMeshAgent nav;
 
     private Renderer enemyColor;
@@ -35,7 +35,7 @@ public class EnemyBat : MonoBehaviour
     public void CreateStart()
     {
         StartCoroutine(UpdateEnemy());
-
+        nav.speed = info.Speed*0.1f;
     }
     void OnDisable()
     {
@@ -74,7 +74,7 @@ public class EnemyBat : MonoBehaviour
     }
     IEnumerator MoveEnemy()
     {
-        nav.speed = moveSpeed;
+        //nav.speed = moveSpeed;
         NavEnemy(target.position);
         yield return null;
     }

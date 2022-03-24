@@ -40,22 +40,32 @@ int bulletCntMax; // 투사체 최대갯수
     protected float _Damage()
     {
         float d;
+        float d2;
+        float d3;
         d= Random.Range(info.DamageMin, info.DamageMax);
-        d = d + (d * (GameInfo.DamagePlus * 0.01f));
+        d2 = GameInfo.DamagePlus + manager.AtPlus();
+        d3 = info.BulletAtCri;
+        if (Random.Range(0,100f) <= info.BulletAtCri)
+        {
+            d2 += 50f;
+        }
+        d = d + (d * (d2 * 0.01f));
         return d;
     }
 
     protected int _BulletCnt()
     {
         int i;
-        i = info.bulletCnt + GameInfo.BulletCntPlus;
+        i = info.bulletCnt + GameInfo.BulletCntPlus + manager.BulletCnt();
         return i;
     }
     protected float _BulletSpeed()
     {
         float d;
-        d = Random.Range(info.DamageMin, info.DamageMax);
-        d = d + (d * (GameInfo.BulletSpeedPlus * 0.01f));
+        float d2;
+        d = info.BulletSpeed;
+        d2 = GameInfo.BulletSpeedPlus+manager.BulletSpeed();
+        d = d + (d * (d2 * 0.01f));
         return d;
     }
     protected int _BulletPie()
@@ -81,7 +91,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
         
-        f2 = GameInfo.SkillCoolPlus;//나중에 장신구 추가할꺼
+        f2 = GameInfo.SkillCoolPlus+manager.Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2)*0.01f;
         f *= f2;
@@ -97,7 +107,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus;//나중에 장신구 추가할꺼
+        f2 = GameInfo.SkillCoolPlus + manager.Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;
@@ -113,7 +123,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus;//나중에 장신구 추가할꺼
+        f2 = GameInfo.SkillCoolPlus + manager.Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;
@@ -122,7 +132,10 @@ int bulletCntMax; // 투사체 최대갯수
     protected float _AtRange()
     {
         float f;
+        float f2;
         f = info.AtRange;
+        f2 = GameInfo.Attack_RangePlus + manager.AtRange();
+        f = f + (f * (f2 * 0.01f));
         return f;
     }
 
@@ -146,23 +159,24 @@ int bulletCntMax; // 투사체 최대갯수
     }
     public void LevelUp()
     {
-        
 
+        int i = 0;
         info.Lv++;
-        info.DamageMin = info.DamageCheckMin[info.Lv];
-        info.DamageMax = info.DamageCheckMax[info.Lv];
-        info.bulletCnt = info.BulletCntCheck[info.Lv];
-        info.bulletCntMax = info.BulletCntMaxCheck[info.Lv];
-        info.BulletSpeed = info.DamageCheckMin[info.Lv];
-        info.BulletPie = info.BulletPieCheck[info.Lv];
-        info.BulletAtCri = info.BulletAtCriCheck[info.Lv];
-        info.CoolMain = info.CoolMainCheck[info.Lv];
-        info.CoolSub1 = info.CoolSub1Check[info.Lv];
-        info.CoolSub2 = info.CoolSub2Check[info.Lv];
-        info.AtRange = info.AtRangeCheck[info.Lv];
-        info.SkillReal1 = info.SkillReal1Check[info.Lv];
-        info.SkillReal2 = info.SkillReal2Check[info.Lv];
-        info.SkillReal3 = info.SkillReal3Check[info.Lv];
+        i = info.Lv - 1;
+        info.DamageMin = info.DamageCheckMin[i];
+        info.DamageMax = info.DamageCheckMax[i];
+        info.bulletCnt = info.BulletCntCheck[i];
+        info.bulletCntMax = info.BulletCntMaxCheck[i];
+        info.BulletSpeed = info.DamageCheckMin[i];
+        info.BulletPie = info.BulletPieCheck[i];
+        info.BulletAtCri = info.BulletAtCriCheck[i];
+        info.CoolMain = info.CoolMainCheck[i];
+        info.CoolSub1 = info.CoolSub1Check[i];
+        info.CoolSub2 = info.CoolSub2Check[i];
+        info.AtRange = info.AtRangeCheck[i];
+        info.SkillReal1 = info.SkillReal1Check[i];
+        info.SkillReal2 = info.SkillReal2Check[i];
+        info.SkillReal3 = info.SkillReal3Check[i];
 
     }
 

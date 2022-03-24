@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet_Trigger_10 : MonoBehaviour
 {
-    public float Damage;
+    public Bullet_Info info;
     public GameObject Player;
     public bool check = false;
     private void OnTriggerEnter(Collider other)
@@ -13,11 +13,10 @@ public class Bullet_Trigger_10 : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                other.GetComponent<Enemy_Info>().Damaged(Damage);
+                other.GetComponent<Enemy_Info>().Damaged(info.damage);
             }
             if (other.gameObject.CompareTag("Player"))
             {
-                //Destroy(gameObject);
                 gameObject.SetActive(false);
             }
         }
@@ -25,7 +24,7 @@ public class Bullet_Trigger_10 : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                other.GetComponent<Enemy_Info>().Damaged(Damage);
+                other.GetComponent<Enemy_Info>().Damaged(info.damage);
             }
         }
 
