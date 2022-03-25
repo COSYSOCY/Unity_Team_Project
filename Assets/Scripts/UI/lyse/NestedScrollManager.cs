@@ -23,14 +23,14 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     private void Start()
     {
-        //°Å¸®¿¡ µû¶ó 0~1ÀÎ pos´ëÀÔ
+        //ê±°ë¦¬ì— ë”°ë¼ 0~1ì¸ posëŒ€ì…
         distance = 1f / (SIZE - 1);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
     }
 
     float SetPos()
     {
-        //Àı¹İ °Å¸®¸¦ ±âÁØÀ¸·Î °¡±î¿î À§Ä¡¸¦ ¹İÈ¯
+        //ì ˆë°˜ ê±°ë¦¬ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ê°€ê¹Œìš´ ìœ„ì¹˜ë¥¼ ë°˜í™˜
         for (int i = 0; i < SIZE; i++)
             if(scrollbar.value <pos[i] + distance * 0.5f && scrollbar.value > pos[i] - distance *0.5f)
             {
@@ -50,25 +50,25 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
         isDrag = false;
         targetPos = SetPos();
 
-        //Àı¹İ°Å¸®¸¦ ³ÑÁö¾Ê¾Æµµ ¸¶¿ì½º¸¦ ºü¸£°Ô ÀÌµ¿ÇÏ¸é
-        if(curPos == targetPos)
-        {            
-            //  <<<½ºÅ©·ÑÀÌ ¿ŞÂÊÀ¸·Î ºü¸£°Ô ÀÌµ¿½Ã ¸ñÇ¥°¡ ÇÏ³ª °¨¼Ò
-            if(eventData.delta.x > 18 && curPos - distance >= 0)
-            {
-                --targetIndex;
-                targetPos = curPos - distance;
-            }
+        //ì ˆë°˜ê±°ë¦¬ë¥¼ ë„˜ì§€ì•Šì•„ë„ ë§ˆìš°ìŠ¤ë¥¼ ë¹ ë¥´ê²Œ ì´ë™í•˜ë©´
+        //if(curPos == targetPos)
+        //{            
+            //  <<<ìŠ¤í¬ë¡¤ì´ ì™¼ìª½ìœ¼ë¡œ ë¹ ë¥´ê²Œ ì´ë™ì‹œ ëª©í‘œê°€ í•˜ë‚˜ ê°ì†Œ
+            //if(eventData.delta.x > 18 && curPos - distance >= 0)
+            //{
+                //--targetIndex;
+               // targetPos = curPos - distance;
+           // }
 
-            // >>>½ºÅ©·ÑÀÌ ¿À¸¥ÂÊÀ¸·Î ºü¸£°Ô ÀÌµ¿½Ã ¸ñÇ¥
-            else if (eventData.delta.x > -18 && curPos + distance <= 1.01f)
-            {
-                ++targetIndex;
-                targetPos = curPos + distance;
-            }
-        }
+            // >>>ìŠ¤í¬ë¡¤ì´ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë¹ ë¥´ê²Œ ì´ë™ì‹œ ëª©í‘œ
+           // else if (eventData.delta.x > -18 && curPos + distance <= 1.01f)
+           // {
+           //     ++targetIndex;
+            //    targetPos = curPos + distance;
+           // }
+       // }
 
-        //¸ñÇ¥°¡ ¼öÁ÷½ºÅ©·ÑÀÌ°í, ¿·¿¡¼­ ¿Å°Ü¿Ô´Ù¸é ¼öÁ÷½ºÅ©·ÑÀ» ¸ÇÀ§·Î ¿Ã¸²
+        //ëª©í‘œê°€ ìˆ˜ì§ìŠ¤í¬ë¡¤ì´ê³ , ì˜†ì—ì„œ ì˜®ê²¨ì™”ë‹¤ë©´ ìˆ˜ì§ìŠ¤í¬ë¡¤ì„ ë§¨ìœ„ë¡œ ì˜¬ë¦¼
         for (int i = 0; i < SIZE; i++)
             if (contentTr.GetChild(i).GetComponent<ScrollScript>() && curPos != pos[i] && targetPos == pos[i])
                 contentTr.GetChild(i).GetChild(1).GetComponent<Scrollbar>().value = 1;
@@ -84,7 +84,7 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
         {
             scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
 
-            //¸ñÇ¥ ¹öÆ°Àº Å©±â°¡ Ä¿Áü
+            //ëª©í‘œ ë²„íŠ¼ì€ í¬ê¸°ê°€ ì»¤ì§
             for (int i = 0; i < SIZE; i++) BtnRect[i].sizeDelta = new Vector2(i == targetIndex ? 360 : 180, BtnRect[i].sizeDelta.y);            
         }
 
@@ -92,12 +92,12 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 
         for (int i = 0; i < SIZE; i++)
         {
-            //¹öÆ° ¾ÆÀÌÄÜÀÌ ºÎµå·´°Ô ¹öÆ°ÀÇ Áß¾ÓÀ¸·Î ÀÌµ¿, Å©±â´Â 1 ÅØ½ºÆ® ºñÈ°¼º
+            //ë²„íŠ¼ ì•„ì´ì½˜ì´ ë¶€ë“œëŸ½ê²Œ ë²„íŠ¼ì˜ ì¤‘ì•™ìœ¼ë¡œ ì´ë™, í¬ê¸°ëŠ” 1 í…ìŠ¤íŠ¸ ë¹„í™œì„±
             Vector3 BtnTargetPos = BtnRect[i].anchoredPosition3D;
             Vector3 BtnTargetScale = Vector3.one;
             bool textActive = false;
 
-            //¼±ÅÃÇÑ ¹öÆ° ¾ÆÀÌÄÜÀº ¾à°£À§·Î ¿Ã¸®°í, Å©±âµµ Å°¿ì°í, ÅØ½ºÆ®µµ È°¼ºÈ­
+            //ì„ íƒí•œ ë²„íŠ¼ ì•„ì´ì½˜ì€ ì•½ê°„ìœ„ë¡œ ì˜¬ë¦¬ê³ , í¬ê¸°ë„ í‚¤ìš°ê³ , í…ìŠ¤íŠ¸ë„ í™œì„±í™”
             if(i == targetIndex)
             {
                 BtnTargetPos.y = -23f;
