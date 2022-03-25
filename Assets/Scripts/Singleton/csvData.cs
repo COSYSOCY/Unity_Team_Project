@@ -19,6 +19,8 @@ public class csvData : MonoBehaviour
 
     public static List<int> CharactersNameNum = new List<int>();
     public static List<int> CharactersInfoNum = new List<int>();
+    public static List<int> CharactersIconNum = new List<int>();
+    public static List<int> CharactersSkillIconNum = new List<int>();
     public static List<int> CharactersBSNum = new List<int>();
     public static List<float> CharactersHpMax = new List<float>();
     public static List<float> CharactersHpRegen = new List<float>();
@@ -84,9 +86,10 @@ public class csvData : MonoBehaviour
 
 
 
-    public static List<string> GameText_Korean = new List<string>();
-    public static List<string> GameText_English = new List<string>();
-    public static List<string> GameText_Japan = new List<string>();
+    public  List<string> GameText_Korean = new List<string>();
+    public  List<string> GameText_English = new List<string>();
+    public  List<string> GameText_Japan = new List<string>();
+    public  List<string> GameText_China = new List<string>();
 
 
     void Awake()
@@ -107,6 +110,8 @@ public class csvData : MonoBehaviour
         {
             CharactersNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
             CharactersInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            CharactersIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
+            CharactersSkillIconNum.Add(int.Parse(data[i]["무기아이콘번호"].ToString()));
             CharactersBSNum.Add(int.Parse(data[i]["기본스킬번호"].ToString()));
             CharactersHpMax.Add(float.Parse(data[i]["최대체력"].ToString()));
             CharactersHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
@@ -211,6 +216,7 @@ public class csvData : MonoBehaviour
             GameText_Korean.Add(data[i]["Korea"].ToString());
             GameText_English.Add(data[i]["English"].ToString());
             GameText_Japan.Add(data[i]["Japan"].ToString());
+            GameText_China.Add(data[i]["China"].ToString());
         }
 
 
@@ -220,25 +226,25 @@ public class csvData : MonoBehaviour
     {
 
 
-        if (GameInfo.Language=="English")
+        if (GameInfo.inst.Language== "English")
         {
-            return GameText_English[i];
+            return inst.GameText_English[i];
         }
-        else if(GameInfo.Language == "Japan")
+        else if(GameInfo.inst.Language == "Japan")
         {
-            return GameText_Japan[i];
+            return inst.GameText_Japan[i];
 
         }
-        else if (GameInfo.Language == "Chinese")
+        else if (GameInfo.inst.Language == "China")
         {
-
+            return inst.GameText_China[i];
         }
 
         else
         {
-            return GameText_Korean[i];
+            return inst.GameText_Korean[i];
         }
 
-            return GameText_Korean[i];
+            return inst.GameText_Korean[i];
     }
 }

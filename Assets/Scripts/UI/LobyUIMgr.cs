@@ -6,68 +6,56 @@ using UnityEngine.SceneManagement;
 
 public class LobyUIMgr : MonoBehaviour
 {
-    public Slider Bgmvol;
-    public Slider Sevol;
-    public AudioSource BGM;
-    public AudioSource SE;
-    public GameObject Opt;
-    public bool OptCheck;
+    public Slider BgmSlider;
+    public Slider SeSlider;
+    public Toggle DmgToggle;
+
     public Text LobyGoldText;
-    public Button ExitBtn;
-    public Button StartBtn;
-    public Button OptBtn;
+    public Text LobyPointText;
+    public List<Text> TestList;
+
+    public GameObject SettingObject;
+    public CharacterManager charmanager;
 
 
-    public void StartButton()
+
+    private void Start()
+    {
+        TextReset();
+        LobyGoldAc();
+    }
+
+
+
+    public void PlayBtn()
     {
         SceneManager.LoadScene("Main");
     }
-
-    public void OptCheckAc()
+    public void SettingButton()
     {
-        Opt.SetActive(true);
-        OptCheck = true;
-        if(OptCheck == true)
-        {
-            ExitBtn.interactable = false;
-            StartBtn.interactable = false;
-            OptBtn.interactable = false;
-
-        }
+        SettingObject.SetActive(true);
     }
-
-    public void OptCheckXbtnAc()
+    public void DmgCheckButton()
     {
-        Opt.SetActive(false);
-        OptCheck = false;
-        if (OptCheck == false)
-        {
-            ExitBtn.interactable = true;
-            StartBtn.interactable = true;
-            OptBtn.interactable = true;
-        }
-    }        
-
-    public void DmgMarkAc()
-    {
-        GameInfo.PlayerVFX = false;
+        GameInfo.PlayerDmg = DmgToggle.isOn;
     }
 
     public void LobyGoldAc()
     {
-        LobyGoldText.text = "Gold : " + GameInfo.PlayerGold;
+        LobyGoldText.text = GameInfo.PlayerGold.ToString();
+        LobyPointText.text = GameInfo.PlayerPoint.ToString();
     }
 
     public void BgmVolume()
     {
-        GameInfo.PlayerBGM = Bgmvol.value;
-        GameInfo.inst.audioSo.volume = Bgmvol.value;
+        GameInfo.PlayerBGM = BgmSlider.value;
+        GameInfo.inst.audioSo.volume = BgmSlider.value;
     }
 
     public void SeVolume()
     {
-        GameInfo.PlayerSE = SE.volume;
-        SE.volume = Sevol.value;
+        GameInfo.PlayerSE = SeSlider.value;
+        //SE.volume = SeSlider.value;
     }
 
     public void GameExit()
@@ -75,14 +63,26 @@ public class LobyUIMgr : MonoBehaviour
         Application.Quit();
     }
 
-    public void KoreanBtn()
+    public void Language(string s)
     {
-        GameInfo.Language = "Korean";
+        GameInfo.inst.Language = s;
+
+        TextReset();
     }
-    public void EnglishBtn()
+    public void TextReset()
     {
-        GameInfo.Language = "English";
+
+            for (int i = 0; i < TestList.Count; i++)
+            {
+               int s= TestList[i].GetComponent<TextIdx>().Idx;
+
+                TestList[i].text = csvData.GameText(s);
+            }
+
+        charmanager.CharSetString();
+
 
     }
-    
+
+
 }

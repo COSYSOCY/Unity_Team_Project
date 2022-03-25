@@ -325,6 +325,9 @@ public class LevelUp : MonoBehaviour
         if (ob == Money)
         {
             status.GoldPlus(25);
+            Time.timeScale = 1f;
+            LevelUiObject.SetActive(false);
+            testcheck = false;
         }
         else
         {
@@ -346,6 +349,9 @@ public class LevelUp : MonoBehaviour
         if (ob == Heal)
         {
             status.HpPlus(30);
+            Time.timeScale = 1f;
+            LevelUiObject.SetActive(false);
+            testcheck = false;
         }
         else
         {
