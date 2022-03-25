@@ -65,10 +65,13 @@ public class CharacterManager : MonoBehaviour
         //Debug.Log(g.name);
         int cnt= g.GetComponent<CharacterBtn>().CharacterIdx;
         GameInfo.inst.CharacterIdx = cnt;
+        GameInfo.inst.SkillIdx = csvData.CharactersBSNum[cnt];
         //Debug.Log(cnt);
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
         CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
-        CharInfo.text = csvData.GameText(csvData.CharactersIconNum[cnt]);
+        CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
+
+        GameInfo.BulletCntPlus = g.GetComponent<CharacterBtn>().CharactersBtCnt;
     }
 }

@@ -15,6 +15,7 @@ public class GameInfo : MonoBehaviour
 
 	public int CharacterIdx;
 	public int MapIdx;
+	public int SkillIdx;
 	public List<int> CharacterActive; // 0 없음 1 구매가능 2 보유함
 	public int CharacterMax;
 
