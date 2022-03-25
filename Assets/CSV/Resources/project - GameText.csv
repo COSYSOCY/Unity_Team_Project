@@ -1,467 +1,467 @@
-Idx,(설명칸 CSV에 안들어감),Korea,English
-0,캐릭터시트에있는 0번 이름입니다,안토니오,Text
-1,캐릭터시트에있는 1번 이름입니다,이델다,Text
-2,asd,캐릭터이름3,Text
-3,asd,캐릭터이름4,Text
-4,asd,캐릭터이름5,Text
-5,asd,캐릭터이름6,Text
-6,asd,캐릭터이름7,Text
-7,asd,캐릭터이름8,Text
-8,asd,캐릭터이름9,Text
-9,asd,캐릭터이름10,Text
-10,캐릭터시트에있는 0번 캐릭터설명,"체력 120, 갑옷 +1, 매 10레벨마다 10%의 대미지 추가(최대 +50%)",Text
-11,캐릭터시트에있는 1번 캐릭터설명,매 5레벨마다 10%의 경험치 추가(최대 +30%),Text
-12,asd,캐릭터3설명,Text
-13,asd,캐릭터4설명,Text
-14,asd,캐릭터5설명,Text
-15,asd,캐릭터6설명,Text
-16,asd,캐릭터7설명,Text
-17,asd,캐릭터8설명,Text
-18,asd,캐릭터9설명,Text
-19,asd,캐릭터10설명,Text
-20,능력시트에있는 0번 이름,단검(Knife),Text
-21,능력시트에있는 1번 이름,채찍,Text
-22,능력시트에있는 2번 이름,아이스필드,Text
-23,능력시트에있는 3번 이름,원형미사일,Text
-24,능력시트에있는 4번 이름,번개,Text
-25,능력시트에있는 5번 이름,가까운적에게날리기,Text
-26,능력시트에있는 6번 이름,비둘기,Text
-27,능력시트에있는 7번 이름,방사공,Text
-28,능력시트에있는 8번 이름,레이저,Text
-29,능력시트에있는 9번 이름,부메랑,Text
-30,능력시트에있는 10번 이름,미사일,Text
-31,능력시트에있는 11번 이름,기도문,Text
-32,능력시트에있는 12번 이름,헤일,Text
-33,능력시트에있는 13번 이름,룬트레이서,Text
-34,능력시트에있는 14번 이름,거대총알,Text
-35,능력시트에있는 15번이름,즉사,Text
-36,asd,능력17이름,Text
-37,asd,능력18이름,Text
-38,asd,능력19이름,Text
-39,asd,능력20이름,Text
-40,장신구시트에있는 0번 이름,시금치,Text
-41,장신구시트에있는 1번 이름,갑옷,Text
-42,장신구시트에있는 2번 이름,칠흑심장,Text
-43,장신구시트에있는 3번 이름,붉은심장,Text
-44,장신구시트에있는 4번 이름,빈성서,Text
-45,장신구시트에있는 5번 이름,촛대,Text
-46,장신구시트에있는 6번 이름,브레이서,Text
-47,asd,장신구8이름,Text
-48,asd,장신구9이름,Text
-49,asd,장신구10이름,Text
-50,asd,장신구11이름,Text
-51,asd,장신구12이름,Text
-52,asd,장신구13이름,Text
-53,asd,장신구14이름,Text
-54,asd,장신구15이름,Text
-55,asd,장신구16이름,Text
-56,asd,장신구17이름,Text
-57,asd,장신구18이름,Text
-58,asd,장신구19이름,Text
-59,asd,장신구20이름,Text
-60,능력시트에있는 능력 0번의 초기 설명,보고 있는 방향으로 빠르게 발사됩니다.,Text
-61,능력시트에있는 능력 0번의 1단계 설명,투사체 증가+1,Text
-62,능력시트에있는 능력 0번의 2단계 설명,관통증가 +1,Text
-63,능력시트에있는 능력 0번의 3단계 설명,데미지 증가+10,Text
-64,능력시트에있는 능력 0번의 4단계 설명,데미지 증가+10,Text
-65,능력시트에있는 능력 0번의 5단계 설명,데미지 증가+10,Text
-66,능력시트에있는 능력 0번의 6단계 설명,데미지 증가+10,Text
-67,능력시트에있는 능력 0번의 7단계 설명,데미지 증가+10,Text
-68,능력시트에있는 능력 0번의 8단계 설명,데미지 증가+10,Text
-69,능력시트에있는 능력 0번의 9단계 설명,데미지 증가+10,Text
-70,sad,채찍입니다,Text
-71,sad,(능력2번 텍스트),Text
-72,sad,(능력2번 텍스트),Text
-73,sad,(능력2번 텍스트),Text
-74,sad,(능력2번 텍스트),Text
-75,sad,(능력2번 텍스트),Text
-76,sad,(능력2번 텍스트),Text
-77,sad,(능력2번 텍스트),Text
-78,sad,(능력2번 텍스트),Text
-79,sad,(능력2번 텍스트),Text
-80,sad,플레이어 주변에 아이스필드가 생깁니다,Text
-81,sad,(능력3번 텍스트),Text
-82,sad,(능력3번 텍스트),Text
-83,sad,(능력3번 텍스트),Text
-84,sad,(능력3번 텍스트),Text
-85,sad,(능력3번 텍스트),Text
-86,sad,(능력3번 텍스트),Text
-87,sad,(능력3번 텍스트),Text
-88,sad,(능력3번 텍스트),Text
-89,sad,(능력3번 텍스트),Text
-90,sad,전방향 미사일 발사(쿨20초),Text
-91,sad,(능력4번 텍스트),Text
-92,sad,(능력4번 텍스트),Text
-93,sad,(능력4번 텍스트),Text
-94,sad,(능력4번 텍스트),Text
-95,sad,(능력4번 텍스트),Text
-96,sad,(능력4번 텍스트),Text
-97,sad,(능력4번 텍스트),Text
-98,sad,(능력4번 텍스트),Text
-99,sad,(능력4번 텍스트),Text
-100,sad,범위내 무작위 두명 번개,Text
-101,sad,(능력5번 텍스트),Text
-102,sad,(능력5번 텍스트),Text
-103,sad,(능력5번 텍스트),Text
-104,sad,(능력5번 텍스트),Text
-105,sad,(능력5번 텍스트),Text
-106,sad,(능력5번 텍스트),Text
-107,sad,(능력5번 텍스트),Text
-108,sad,(능력5번 텍스트),Text
-109,sad,(능력5번 텍스트),Text
-110,sad,유도,Text
-111,sad,(능력6번 텍스트),Text
-112,sad,(능력6번 텍스트),Text
-113,sad,(능력6번 텍스트),Text
-114,sad,(능력6번 텍스트),Text
-115,sad,(능력6번 텍스트),Text
-116,sad,(능력6번 텍스트),Text
-117,sad,(능력6번 텍스트),Text
-118,sad,(능력6번 텍스트),Text
-119,sad,(능력6번 텍스트),Text
-120,sad,원형의 구역을 폭격합니다,Text
-121,sad,(능력7번 텍스트),Text
-122,sad,(능력7번 텍스트),Text
-123,sad,(능력7번 텍스트),Text
-124,sad,(능력7번 텍스트),Text
-125,sad,(능력7번 텍스트),Text
-126,sad,(능력7번 텍스트),Text
-127,sad,(능력7번 텍스트),Text
-128,sad,(능력7번 텍스트),Text
-129,sad,(능력7번 텍스트),Text
-130,sad,박히고 뒤로 방사피해,Text
-131,sad,(능력8번 텍스트),Text
-132,sad,(능력8번 텍스트),Text
-133,sad,(능력8번 텍스트),Text
-134,sad,(능력8번 텍스트),Text
-135,sad,(능력8번 텍스트),Text
-136,sad,(능력8번 텍스트),Text
-137,sad,(능력8번 텍스트),Text
-138,sad,(능력8번 텍스트),Text
-139,sad,(능력8번 텍스트),Text
-140,sad,일직선 레이저,Text
-141,sad,(능력9번 텍스트),Text
-142,sad,(능력9번 텍스트),Text
-143,sad,(능력9번 텍스트),Text
-144,sad,(능력9번 텍스트),Text
-145,sad,(능력9번 텍스트),Text
-146,sad,(능력9번 텍스트),Text
-147,sad,(능력9번 텍스트),Text
-148,sad,(능력9번 텍스트),Text
-149,sad,(능력9번 텍스트),Text
-150,sad,해당지역으로 날리고 돌아옵니다,Text
-151,sad,(능력10번 텍스트),Text
-152,sad,(능력10번 텍스트),Text
-153,sad,(능력10번 텍스트),Text
-154,sad,(능력10번 텍스트),Text
-155,sad,(능력10번 텍스트),Text
-156,sad,(능력10번 텍스트),Text
-157,sad,(능력10번 텍스트),Text
-158,sad,(능력10번 텍스트),Text
-159,sad,(능력10번 텍스트),Text
-160,sad,단일타켓미사일,Text
-161,sad,(능력11번 텍스트),Text
-162,sad,(능력11번 텍스트),Text
-163,sad,(능력11번 텍스트),Text
-164,sad,(능력11번 텍스트),Text
-165,sad,(능력11번 텍스트),Text
-166,sad,(능력11번 텍스트),Text
-167,sad,(능력11번 텍스트),Text
-168,sad,(능력11번 텍스트),Text
-169,sad,(능력11번 텍스트),Text
-170,sad,기도문이 주변을 회전하며 공격합니다,Text
-171,sad,(능력12번 텍스트),Text
-172,sad,(능력12번 텍스트),Text
-173,sad,(능력12번 텍스트),Text
-174,sad,(능력12번 텍스트),Text
-175,sad,(능력12번 텍스트),Text
-176,sad,(능력12번 텍스트),Text
-177,sad,(능력12번 텍스트),Text
-178,sad,(능력12번 텍스트),Text
-179,sad,(능력12번 텍스트),Text
-180,sad,헤일이 날라감,Text
-181,sad,(능력13번  텍스트),Text
-182,sad,(능력13번  텍스트),Text
-183,sad,(능력13번  텍스트),Text
-184,sad,(능력13번  텍스트),Text
-185,sad,(능력13번  텍스트),Text
-186,sad,(능력13번  텍스트),Text
-187,sad,(능력13번  텍스트),Text
-188,sad,(능력13번  텍스트),Text
-189,sad,(능력13번  텍스트),Text
-190,sad,무작위 방향 미사일발사,Text
-191,sad,(능력14번 텍스트),Text
-192,sad,(능력14번 텍스트),Text
-193,sad,(능력14번 텍스트),Text
-194,sad,(능력14번 텍스트),Text
-195,sad,(능력14번 텍스트),Text
-196,sad,(능력14번 텍스트),Text
-197,sad,(능력14번 텍스트),Text
-198,sad,(능력14번 텍스트),Text
-199,sad,(능력14번 텍스트),Text
-200,sad,박히고 뒤로 거대총알,Text
-201,sad,(능력15번 텍스트),Text
-202,sad,(능력15번 텍스트),Text
-203,sad,(능력15번 텍스트),Text
-204,sad,(능력15번 텍스트),Text
-205,sad,(능력15번 텍스트),Text
-206,sad,(능력15번 텍스트),Text
-207,sad,(능력15번 텍스트),Text
-208,sad,(능력15번 텍스트),Text
-209,sad,(능력15번 텍스트),Text
-210,능력시트에있는 능력 16번의 초기 설명,범위내의 모든적 즉사.,Text
-211,능력시트에있는 능력 16번의 1단계 설명,"범위2증가 , 쿨타임 -5",Text
-212,능력시트에있는 능력 16번의 2단계 설명,"범위2증가 , 쿨타임 -5",Text
-213,능력시트에있는 능력 16번의 3단계 설명,"범위2증가 , 쿨타임 -5",Text
-214,능력시트에있는 능력 16번의 4단계 설명,"범위2증가 , 쿨타임 -5",Text
-215,능력시트에있는 능력 16번의 5단계 설명,"범위2증가 , 쿨타임 -5",Text
-216,능력시트에있는 능력 16번의 6단계 설명,"범위2증가 , 쿨타임 -5",Text
-217,능력시트에있는 능력 16번의 7단계 설명,"범위3증가 , 쿨타임 -10",Text
-218,asd,(능력16번 텍스트),Text
-219,asd,(능력16번 텍스트),Text
-220,asd,(능력17번 텍스트),Text
-221,asd,(능력17번 텍스트),Text
-222,asd,(능력17번 텍스트),Text
-223,asd,(능력17번 텍스트),Text
-224,asd,(능력17번 텍스트),Text
-225,asd,(능력17번 텍스트),Text
-226,asd,(능력17번 텍스트),Text
-227,asd,(능력17번 텍스트),Text
-228,asd,(능력17번 텍스트),Text
-229,asd,(능력17번 텍스트),Text
-230,asd,(능력18번 텍스트),Text
-231,asd,(능력18번 텍스트),Text
-232,asd,(능력18번 텍스트),Text
-233,asd,(능력18번 텍스트),Text
-234,asd,(능력18번 텍스트),Text
-235,asd,(능력18번 텍스트),Text
-236,asd,(능력18번 텍스트),Text
-237,asd,(능력18번 텍스트),Text
-238,asd,(능력18번 텍스트),Text
-239,asd,(능력18번 텍스트),Text
-240,asd,(능력19번 텍스트),Text
-241,asd,(능력19번 텍스트),Text
-242,asd,(능력19번 텍스트),Text
-243,asd,(능력19번 텍스트),Text
-244,asd,(능력19번 텍스트),Text
-245,asd,(능력19번 텍스트),Text
-246,asd,(능력19번 텍스트),Text
-247,asd,(능력19번 텍스트),Text
-248,asd,(능력19번 텍스트),Text
-249,asd,(능력19번 텍스트),Text
-250,asd,(능력20번 텍스트),Text
-251,asd,(능력20번 텍스트),Text
-252,asd,(능력20번 텍스트),Text
-253,asd,(능력20번 텍스트),Text
-254,asd,(능력20번 텍스트),Text
-255,asd,(능력20번 텍스트),Text
-256,asd,(능력20번 텍스트),Text
-257,asd,(능력20번 텍스트),Text
-258,asd,(능력20번 텍스트),Text
-259,asd,(능력20번 텍스트),Text
-260,장신구시트에있는 장신구 0번의 초기 설명,공격력 10% 증가,Text
-261,장신구시트에있는 장신구 0번의 1단계 설명,공격력 10% 증가,Text
-262,장신구시트에있는 장신구 0번의 2단계 설명,공격력 10% 증가,Text
-263,장신구시트에있는 장신구 0번의 3단계 설명,공격력 10% 증가,Text
-264,장신구시트에있는 장신구 0번의 4단계 설명,공격력 10% 증가,Text
-265,장신구시트에있는 장신구 0번의 5단계 설명,공격력 10% 증가,Text
-266,장신구시트에있는 장신구 0번의 6단계 설명,공격력 10% 증가,Text
-267,장신구시트에있는 장신구 0번의 7단계 설명,공격력 10% 증가,Text
-268,장신구시트에있는 장신구 0번의 8단계 설명,공격력 10% 증가,Text
-269,장신구시트에있는 장신구 0번의 9단계 설명,공격력 10% 증가,Text
-270,asd,(장신구2번 텍스트),Text
-271,asd,(장신구2번 텍스트),Text
-272,asd,(장신구2번 텍스트),Text
-273,asd,(장신구2번 텍스트),Text
-274,asd,(장신구2번 텍스트),Text
-275,asd,(장신구2번 텍스트),Text
-276,asd,(장신구2번 텍스트),Text
-277,asd,(장신구2번 텍스트),Text
-278,asd,(장신구2번 텍스트),Text
-279,asd,(장신구2번 텍스트),Text
-280,asd,(장신구3번 텍스트),Text
-281,asd,(장신구3번 텍스트),Text
-282,asd,(장신구3번 텍스트),Text
-283,asd,(장신구3번 텍스트),Text
-284,asd,(장신구3번 텍스트),Text
-285,asd,(장신구3번 텍스트),Text
-286,asd,(장신구3번 텍스트),Text
-287,asd,(장신구3번 텍스트),Text
-288,asd,(장신구3번 텍스트),Text
-289,asd,(장신구3번 텍스트),Text
-290,asd,(장신구4번 텍스트),Text
-291,asd,(장신구4번 텍스트),Text
-292,asd,(장신구4번 텍스트),Text
-293,asd,(장신구4번 텍스트),Text
-294,asd,(장신구4번 텍스트),Text
-295,asd,(장신구4번 텍스트),Text
-296,asd,(장신구4번 텍스트),Text
-297,asd,(장신구4번 텍스트),Text
-298,asd,(장신구4번 텍스트),Text
-299,asd,(장신구4번 텍스트),Text
-300,asd,(장신구5번 텍스트),Text
-301,asd,(장신구5번 텍스트),Text
-302,asd,(장신구5번 텍스트),Text
-303,asd,(장신구5번 텍스트),Text
-304,asd,(장신구5번 텍스트),Text
-305,asd,(장신구5번 텍스트),Text
-306,asd,(장신구5번 텍스트),Text
-307,asd,(장신구5번 텍스트),Text
-308,asd,(장신구5번 텍스트),Text
-309,asd,(장신구5번 텍스트),Text
-310,asd,(장신구6번 텍스트),Text
-311,asd,(장신구6번 텍스트),Text
-312,asd,(장신구6번 텍스트),Text
-313,asd,(장신구6번 텍스트),Text
-314,asd,(장신구6번 텍스트),Text
-315,asd,(장신구6번 텍스트),Text
-316,asd,(장신구6번 텍스트),Text
-317,asd,(장신구6번 텍스트),Text
-318,asd,(장신구6번 텍스트),Text
-319,asd,(장신구6번 텍스트),Text
-320,asd,(장신구7번 텍스트),Text
-321,asd,(장신구7번 텍스트),Text
-322,asd,(장신구7번 텍스트),Text
-323,asd,(장신구7번 텍스트),Text
-324,asd,(장신구7번 텍스트),Text
-325,asd,(장신구7번 텍스트),Text
-326,asd,(장신구7번 텍스트),Text
-327,asd,(장신구7번 텍스트),Text
-328,asd,(장신구7번 텍스트),Text
-329,asd,(장신구7번 텍스트),Text
-330,asd,(장신구8번 텍스트),Text
-331,asd,(장신구8번 텍스트),Text
-332,asd,(장신구8번 텍스트),Text
-333,asd,(장신구8번 텍스트),Text
-334,asd,(장신구8번 텍스트),Text
-335,asd,(장신구8번 텍스트),Text
-336,asd,(장신구8번 텍스트),Text
-337,asd,(장신구8번 텍스트),Text
-338,asd,(장신구8번 텍스트),Text
-339,asd,(장신구8번 텍스트),Text
-340,asd,(장신구9번 텍스트),Text
-341,asd,(장신구9번 텍스트),Text
-342,asd,(장신구9번 텍스트),Text
-343,asd,(장신구9번 텍스트),Text
-344,asd,(장신구9번 텍스트),Text
-345,asd,(장신구9번 텍스트),Text
-346,asd,(장신구9번 텍스트),Text
-347,asd,(장신구9번 텍스트),Text
-348,asd,(장신구9번 텍스트),Text
-349,asd,(장신구9번 텍스트),Text
-350,asd,(장신구10번 텍스트),Text
-351,asd,(장신구10번 텍스트),Text
-352,asd,(장신구10번 텍스트),Text
-353,asd,(장신구10번 텍스트),Text
-354,asd,(장신구10번 텍스트),Text
-355,asd,(장신구10번 텍스트),Text
-356,asd,(장신구10번 텍스트),Text
-357,asd,(장신구10번 텍스트),Text
-358,asd,(장신구10번 텍스트),Text
-359,asd,(장신구10번 텍스트),Text
-360,asd,(장신구11번 텍스트),Text
-361,asd,(장신구11번 텍스트),Text
-362,asd,(장신구11번 텍스트),Text
-363,asd,(장신구11번 텍스트),Text
-364,asd,(장신구11번 텍스트),Text
-365,asd,(장신구11번 텍스트),Text
-366,asd,(장신구11번 텍스트),Text
-367,asd,(장신구11번 텍스트),Text
-368,asd,(장신구11번 텍스트),Text
-369,asd,(장신구11번 텍스트),Text
-370,asd,(장신구12번 텍스트),Text
-371,asd,(장신구12번 텍스트),Text
-372,asd,(장신구12번 텍스트),Text
-373,asd,(장신구12번 텍스트),Text
-374,asd,(장신구12번 텍스트),Text
-375,asd,(장신구12번 텍스트),Text
-376,asd,(장신구12번 텍스트),Text
-377,asd,(장신구12번 텍스트),Text
-378,asd,(장신구12번 텍스트),Text
-379,asd,(장신구12번 텍스트),Text
-380,asd,(장신구13번  텍스트),Text
-381,asd,(장신구13번  텍스트),Text
-382,asd,(장신구13번  텍스트),Text
-383,asd,(장신구13번  텍스트),Text
-384,asd,(장신구13번  텍스트),Text
-385,asd,(장신구13번  텍스트),Text
-386,asd,(장신구13번  텍스트),Text
-387,asd,(장신구13번  텍스트),Text
-388,asd,(장신구13번  텍스트),Text
-389,asd,(장신구13번  텍스트),Text
-390,asd,(장신구14번 텍스트),Text
-391,asd,(장신구14번 텍스트),Text
-392,asd,(장신구14번 텍스트),Text
-393,asd,(장신구14번 텍스트),Text
-394,asd,(장신구14번 텍스트),Text
-395,asd,(장신구14번 텍스트),Text
-396,asd,(장신구14번 텍스트),Text
-397,asd,(장신구14번 텍스트),Text
-398,asd,(장신구14번 텍스트),Text
-399,asd,(장신구14번 텍스트),Text
-400,asd,(장신구15번 텍스트),Text
-401,asd,(장신구15번 텍스트),Text
-402,asd,(장신구15번 텍스트),Text
-403,asd,(장신구15번 텍스트),Text
-404,asd,(장신구15번 텍스트),Text
-405,asd,(장신구15번 텍스트),Text
-406,asd,(장신구15번 텍스트),Text
-407,asd,(장신구15번 텍스트),Text
-408,asd,(장신구15번 텍스트),Text
-409,asd,(장신구15번 텍스트),Text
-410,asd,(장신구16번 텍스트),Text
-411,asd,(장신구16번 텍스트),Text
-412,asd,(장신구16번 텍스트),Text
-413,asd,(장신구16번 텍스트),Text
-414,asd,(장신구16번 텍스트),Text
-415,asd,(장신구16번 텍스트),Text
-416,asd,(장신구16번 텍스트),Text
-417,asd,(장신구16번 텍스트),Text
-418,asd,(장신구16번 텍스트),Text
-419,asd,(장신구16번 텍스트),Text
-420,asd,(장신구17번 텍스트),Text
-421,asd,(장신구17번 텍스트),Text
-422,asd,(장신구17번 텍스트),Text
-423,asd,(장신구17번 텍스트),Text
-424,asd,(장신구17번 텍스트),Text
-425,asd,(장신구17번 텍스트),Text
-426,asd,(장신구17번 텍스트),Text
-427,asd,(장신구17번 텍스트),Text
-428,asd,(장신구17번 텍스트),Text
-429,asd,(장신구17번 텍스트),Text
-430,asd,(장신구18번 텍스트),Text
-431,asd,(장신구18번 텍스트),Text
-432,asd,(장신구18번 텍스트),Text
-433,asd,(장신구18번 텍스트),Text
-434,asd,(장신구18번 텍스트),Text
-435,asd,(장신구18번 텍스트),Text
-436,asd,(장신구18번 텍스트),Text
-437,asd,(장신구18번 텍스트),Text
-438,asd,(장신구18번 텍스트),Text
-439,asd,(장신구18번 텍스트),Text
-440,asd,(장신구19번 텍스트),Text
-441,asd,(장신구19번 텍스트),Text
-442,asd,(장신구19번 텍스트),Text
-443,asd,(장신구19번 텍스트),Text
-444,asd,(장신구19번 텍스트),Text
-445,asd,(장신구19번 텍스트),Text
-446,asd,(장신구19번 텍스트),Text
-447,asd,(장신구19번 텍스트),Text
-448,asd,(장신구19번 텍스트),Text
-449,asd,(장신구19번 텍스트),Text
-450,asd,(장신구20번 텍스트),Text
-451,asd,(장신구20번 텍스트),Text
-452,asd,(장신구20번 텍스트),Text
-453,asd,(장신구20번 텍스트),Text
-454,asd,(장신구20번 텍스트),Text
-455,asd,(장신구20번 텍스트),Text
-456,asd,(장신구20번 텍스트),Text
-457,asd,(장신구20번 텍스트),Text
-458,asd,(장신구20번 텍스트),Text
-459,asd,(장신구20번 텍스트),Text
-460,레벨업시 처음고를때 텍스트 설정,신규,New
-461,레벨업텍스트,레벨,Level
-462,레벨업하고 남은거,큰 동전 가방,Text
-463,레벨업하고 남은거,치킨,Text
-464,레벨업하고 남은거 설명,25골드를 추가합니다.,Text
-465,레벨업하고 남은거 설명,체력을 30 회복합니다.,Text
+Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
+0,캐릭터시트에있는 0번 이름입니다,안토니오,English Test,テスト,测试
+1,캐릭터시트에있는 1번 이름입니다,이델다,English Test,テスト,测试
+2,asd,캐릭터이름3,English Test,テスト,测试
+3,asd,캐릭터이름4,English Test,テスト,测试
+4,asd,캐릭터이름5,English Test,テスト,测试
+5,asd,캐릭터이름6,English Test,テスト,测试
+6,asd,캐릭터이름7,English Test,テスト,测试
+7,asd,캐릭터이름8,English Test,テスト,测试
+8,asd,캐릭터이름9,English Test,テスト,测试
+9,asd,캐릭터이름10,English Test,テスト,测试
+10,캐릭터시트에있는 0번 캐릭터설명,"체력 120, 갑옷 +1, 매 10레벨마다 10%의 대미지 추가(최대 +50%)",English Test,テスト,测试
+11,캐릭터시트에있는 1번 캐릭터설명,매 5레벨마다 10%의 경험치 추가(최대 +30%),English Test,テスト,测试
+12,asd,캐릭터3설명,English Test,テスト,测试
+13,asd,캐릭터4설명,English Test,テスト,测试
+14,asd,캐릭터5설명,English Test,テスト,测试
+15,asd,캐릭터6설명,English Test,テスト,测试
+16,asd,캐릭터7설명,English Test,テスト,测试
+17,asd,캐릭터8설명,English Test,テスト,测试
+18,asd,캐릭터9설명,English Test,テスト,测试
+19,asd,캐릭터10설명,English Test,テスト,测试
+20,능력시트에있는 0번 이름,단검(Knife),English Test,テスト,测试
+21,능력시트에있는 1번 이름,채찍,English Test,テスト,测试
+22,능력시트에있는 2번 이름,아이스필드,English Test,テスト,测试
+23,능력시트에있는 3번 이름,원형미사일,English Test,テスト,测试
+24,능력시트에있는 4번 이름,번개,English Test,テスト,测试
+25,능력시트에있는 5번 이름,가까운적에게날리기,English Test,テスト,测试
+26,능력시트에있는 6번 이름,비둘기,English Test,テスト,测试
+27,능력시트에있는 7번 이름,방사공,English Test,テスト,测试
+28,능력시트에있는 8번 이름,레이저,English Test,テスト,测试
+29,능력시트에있는 9번 이름,부메랑,English Test,テスト,测试
+30,능력시트에있는 10번 이름,미사일,English Test,テスト,测试
+31,능력시트에있는 11번 이름,기도문,English Test,テスト,测试
+32,능력시트에있는 12번 이름,헤일,English Test,テスト,测试
+33,능력시트에있는 13번 이름,룬트레이서,English Test,テスト,测试
+34,능력시트에있는 14번 이름,거대총알,English Test,テスト,测试
+35,능력시트에있는 15번이름,즉사,English Test,テスト,测试
+36,asd,능력17이름,English Test,テスト,测试
+37,asd,능력18이름,English Test,テスト,测试
+38,asd,능력19이름,English Test,テスト,测试
+39,asd,능력20이름,English Test,テスト,测试
+40,장신구시트에있는 0번 이름,시금치,English Test,テスト,测试
+41,장신구시트에있는 1번 이름,갑옷,English Test,テスト,测试
+42,장신구시트에있는 2번 이름,칠흑심장,English Test,テスト,测试
+43,장신구시트에있는 3번 이름,붉은심장,English Test,テスト,测试
+44,장신구시트에있는 4번 이름,빈성서,English Test,テスト,测试
+45,장신구시트에있는 5번 이름,촛대,English Test,テスト,测试
+46,장신구시트에있는 6번 이름,브레이서,English Test,テスト,测试
+47,asd,장신구8이름,English Test,テスト,测试
+48,asd,장신구9이름,English Test,テスト,测试
+49,asd,장신구10이름,English Test,テスト,测试
+50,asd,장신구11이름,English Test,テスト,测试
+51,asd,장신구12이름,English Test,テスト,测试
+52,asd,장신구13이름,English Test,テスト,测试
+53,asd,장신구14이름,English Test,テスト,测试
+54,asd,장신구15이름,English Test,テスト,测试
+55,asd,장신구16이름,English Test,テスト,测试
+56,asd,장신구17이름,English Test,テスト,测试
+57,asd,장신구18이름,English Test,テスト,测试
+58,asd,장신구19이름,English Test,テスト,测试
+59,asd,장신구20이름,English Test,テスト,测试
+60,능력시트에있는 능력 0번의 초기 설명,보고 있는 방향으로 빠르게 발사됩니다.,English Test,テスト,测试
+61,능력시트에있는 능력 0번의 1단계 설명,투사체 증가+1,English Test,テスト,测试
+62,능력시트에있는 능력 0번의 2단계 설명,관통증가 +1,English Test,テスト,测试
+63,능력시트에있는 능력 0번의 3단계 설명,데미지 증가+10,English Test,テスト,测试
+64,능력시트에있는 능력 0번의 4단계 설명,데미지 증가+10,English Test,テスト,测试
+65,능력시트에있는 능력 0번의 5단계 설명,데미지 증가+10,English Test,テスト,测试
+66,능력시트에있는 능력 0번의 6단계 설명,데미지 증가+10,English Test,テスト,测试
+67,능력시트에있는 능력 0번의 7단계 설명,데미지 증가+10,English Test,テスト,测试
+68,능력시트에있는 능력 0번의 8단계 설명,데미지 증가+10,English Test,テスト,测试
+69,능력시트에있는 능력 0번의 9단계 설명,데미지 증가+10,English Test,テスト,测试
+70,sad,채찍입니다,English Test,テスト,测试
+71,sad,(능력2번 텍스트),English Test,テスト,测试
+72,sad,(능력2번 텍스트),English Test,テスト,测试
+73,sad,(능력2번 텍스트),English Test,テスト,测试
+74,sad,(능력2번 텍스트),English Test,テスト,测试
+75,sad,(능력2번 텍스트),English Test,テスト,测试
+76,sad,(능력2번 텍스트),English Test,テスト,测试
+77,sad,(능력2번 텍스트),English Test,テスト,测试
+78,sad,(능력2번 텍스트),English Test,テスト,测试
+79,sad,(능력2번 텍스트),English Test,テスト,测试
+80,sad,플레이어 주변에 아이스필드가 생깁니다,English Test,テスト,测试
+81,sad,(능력3번 텍스트),English Test,テスト,测试
+82,sad,(능력3번 텍스트),English Test,テスト,测试
+83,sad,(능력3번 텍스트),English Test,テスト,测试
+84,sad,(능력3번 텍스트),English Test,テスト,测试
+85,sad,(능력3번 텍스트),English Test,テスト,测试
+86,sad,(능력3번 텍스트),English Test,テスト,测试
+87,sad,(능력3번 텍스트),English Test,テスト,测试
+88,sad,(능력3번 텍스트),English Test,テスト,测试
+89,sad,(능력3번 텍스트),English Test,テスト,测试
+90,sad,전방향 미사일 발사(쿨20초),English Test,テスト,测试
+91,sad,(능력4번 텍스트),English Test,テスト,测试
+92,sad,(능력4번 텍스트),English Test,テスト,测试
+93,sad,(능력4번 텍스트),English Test,テスト,测试
+94,sad,(능력4번 텍스트),English Test,テスト,测试
+95,sad,(능력4번 텍스트),English Test,テスト,测试
+96,sad,(능력4번 텍스트),English Test,テスト,测试
+97,sad,(능력4번 텍스트),English Test,テスト,测试
+98,sad,(능력4번 텍스트),English Test,テスト,测试
+99,sad,(능력4번 텍스트),English Test,テスト,测试
+100,sad,범위내 무작위 두명 번개,English Test,テスト,测试
+101,sad,(능력5번 텍스트),English Test,テスト,测试
+102,sad,(능력5번 텍스트),English Test,テスト,测试
+103,sad,(능력5번 텍스트),English Test,テスト,测试
+104,sad,(능력5번 텍스트),English Test,テスト,测试
+105,sad,(능력5번 텍스트),English Test,テスト,测试
+106,sad,(능력5번 텍스트),English Test,テスト,测试
+107,sad,(능력5번 텍스트),English Test,テスト,测试
+108,sad,(능력5번 텍스트),English Test,テスト,测试
+109,sad,(능력5번 텍스트),English Test,テスト,测试
+110,sad,유도,English Test,テスト,测试
+111,sad,(능력6번 텍스트),English Test,テスト,测试
+112,sad,(능력6번 텍스트),English Test,テスト,测试
+113,sad,(능력6번 텍스트),English Test,テスト,测试
+114,sad,(능력6번 텍스트),English Test,テスト,测试
+115,sad,(능력6번 텍스트),English Test,テスト,测试
+116,sad,(능력6번 텍스트),English Test,テスト,测试
+117,sad,(능력6번 텍스트),English Test,テスト,测试
+118,sad,(능력6번 텍스트),English Test,テスト,测试
+119,sad,(능력6번 텍스트),English Test,テスト,测试
+120,sad,원형의 구역을 폭격합니다,English Test,テスト,测试
+121,sad,(능력7번 텍스트),English Test,テスト,测试
+122,sad,(능력7번 텍스트),English Test,テスト,测试
+123,sad,(능력7번 텍스트),English Test,テスト,测试
+124,sad,(능력7번 텍스트),English Test,テスト,测试
+125,sad,(능력7번 텍스트),English Test,テスト,测试
+126,sad,(능력7번 텍스트),English Test,テスト,测试
+127,sad,(능력7번 텍스트),English Test,テスト,测试
+128,sad,(능력7번 텍스트),English Test,テスト,测试
+129,sad,(능력7번 텍스트),English Test,テスト,测试
+130,sad,박히고 뒤로 방사피해,English Test,テスト,测试
+131,sad,(능력8번 텍스트),English Test,テスト,测试
+132,sad,(능력8번 텍스트),English Test,テスト,测试
+133,sad,(능력8번 텍스트),English Test,テスト,测试
+134,sad,(능력8번 텍스트),English Test,テスト,测试
+135,sad,(능력8번 텍스트),English Test,テスト,测试
+136,sad,(능력8번 텍스트),English Test,テスト,测试
+137,sad,(능력8번 텍스트),English Test,テスト,测试
+138,sad,(능력8번 텍스트),English Test,テスト,测试
+139,sad,(능력8번 텍스트),English Test,テスト,测试
+140,sad,일직선 레이저,English Test,テスト,测试
+141,sad,(능력9번 텍스트),English Test,テスト,测试
+142,sad,(능력9번 텍스트),English Test,テスト,测试
+143,sad,(능력9번 텍스트),English Test,テスト,测试
+144,sad,(능력9번 텍스트),English Test,テスト,测试
+145,sad,(능력9번 텍스트),English Test,テスト,测试
+146,sad,(능력9번 텍스트),English Test,テスト,测试
+147,sad,(능력9번 텍스트),English Test,テスト,测试
+148,sad,(능력9번 텍스트),English Test,テスト,测试
+149,sad,(능력9번 텍스트),English Test,テスト,测试
+150,sad,해당지역으로 날리고 돌아옵니다,English Test,テスト,测试
+151,sad,(능력10번 텍스트),English Test,テスト,测试
+152,sad,(능력10번 텍스트),English Test,テスト,测试
+153,sad,(능력10번 텍스트),English Test,テスト,测试
+154,sad,(능력10번 텍스트),English Test,テスト,测试
+155,sad,(능력10번 텍스트),English Test,テスト,测试
+156,sad,(능력10번 텍스트),English Test,テスト,测试
+157,sad,(능력10번 텍스트),English Test,テスト,测试
+158,sad,(능력10번 텍스트),English Test,テスト,测试
+159,sad,(능력10번 텍스트),English Test,テスト,测试
+160,sad,단일타켓미사일,English Test,テスト,测试
+161,sad,(능력11번 텍스트),English Test,テスト,测试
+162,sad,(능력11번 텍스트),English Test,テスト,测试
+163,sad,(능력11번 텍스트),English Test,テスト,测试
+164,sad,(능력11번 텍스트),English Test,テスト,测试
+165,sad,(능력11번 텍스트),English Test,テスト,测试
+166,sad,(능력11번 텍스트),English Test,テスト,测试
+167,sad,(능력11번 텍스트),English Test,テスト,测试
+168,sad,(능력11번 텍스트),English Test,テスト,测试
+169,sad,(능력11번 텍스트),English Test,テスト,测试
+170,sad,기도문이 주변을 회전하며 공격합니다,English Test,テスト,测试
+171,sad,(능력12번 텍스트),English Test,テスト,测试
+172,sad,(능력12번 텍스트),English Test,テスト,测试
+173,sad,(능력12번 텍스트),English Test,テスト,测试
+174,sad,(능력12번 텍스트),English Test,テスト,测试
+175,sad,(능력12번 텍스트),English Test,テスト,测试
+176,sad,(능력12번 텍스트),English Test,テスト,测试
+177,sad,(능력12번 텍스트),English Test,テスト,测试
+178,sad,(능력12번 텍스트),English Test,テスト,测试
+179,sad,(능력12번 텍스트),English Test,テスト,测试
+180,sad,헤일이 날라감,English Test,テスト,测试
+181,sad,(능력13번  텍스트),English Test,テスト,测试
+182,sad,(능력13번  텍스트),English Test,テスト,测试
+183,sad,(능력13번  텍스트),English Test,テスト,测试
+184,sad,(능력13번  텍스트),English Test,テスト,测试
+185,sad,(능력13번  텍스트),English Test,テスト,测试
+186,sad,(능력13번  텍스트),English Test,テスト,测试
+187,sad,(능력13번  텍스트),English Test,テスト,测试
+188,sad,(능력13번  텍스트),English Test,テスト,测试
+189,sad,(능력13번  텍스트),English Test,テスト,测试
+190,sad,무작위 방향 미사일발사,English Test,テスト,测试
+191,sad,(능력14번 텍스트),English Test,テスト,测试
+192,sad,(능력14번 텍스트),English Test,テスト,测试
+193,sad,(능력14번 텍스트),English Test,テスト,测试
+194,sad,(능력14번 텍스트),English Test,テスト,测试
+195,sad,(능력14번 텍스트),English Test,テスト,测试
+196,sad,(능력14번 텍스트),English Test,テスト,测试
+197,sad,(능력14번 텍스트),English Test,テスト,测试
+198,sad,(능력14번 텍스트),English Test,テスト,测试
+199,sad,(능력14번 텍스트),English Test,テスト,测试
+200,sad,박히고 뒤로 거대총알,English Test,テスト,测试
+201,sad,(능력15번 텍스트),English Test,テスト,测试
+202,sad,(능력15번 텍스트),English Test,テスト,测试
+203,sad,(능력15번 텍스트),English Test,テスト,测试
+204,sad,(능력15번 텍스트),English Test,テスト,测试
+205,sad,(능력15번 텍스트),English Test,テスト,测试
+206,sad,(능력15번 텍스트),English Test,テスト,测试
+207,sad,(능력15번 텍스트),English Test,テスト,测试
+208,sad,(능력15번 텍스트),English Test,テスト,测试
+209,sad,(능력15번 텍스트),English Test,テスト,测试
+210,능력시트에있는 능력 16번의 초기 설명,범위내의 모든적 즉사.,English Test,テスト,测试
+211,능력시트에있는 능력 16번의 1단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+212,능력시트에있는 능력 16번의 2단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+213,능력시트에있는 능력 16번의 3단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+214,능력시트에있는 능력 16번의 4단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+215,능력시트에있는 능력 16번의 5단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+216,능력시트에있는 능력 16번의 6단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
+217,능력시트에있는 능력 16번의 7단계 설명,"범위3증가 , 쿨타임 -10",English Test,テスト,测试
+218,asd,(능력16번 텍스트),English Test,テスト,测试
+219,asd,(능력16번 텍스트),English Test,テスト,测试
+220,asd,(능력17번 텍스트),English Test,テスト,测试
+221,asd,(능력17번 텍스트),English Test,テスト,测试
+222,asd,(능력17번 텍스트),English Test,テスト,测试
+223,asd,(능력17번 텍스트),English Test,テスト,测试
+224,asd,(능력17번 텍스트),English Test,テスト,测试
+225,asd,(능력17번 텍스트),English Test,テスト,测试
+226,asd,(능력17번 텍스트),English Test,テスト,测试
+227,asd,(능력17번 텍스트),English Test,テスト,测试
+228,asd,(능력17번 텍스트),English Test,テスト,测试
+229,asd,(능력17번 텍스트),English Test,テスト,测试
+230,asd,(능력18번 텍스트),English Test,テスト,测试
+231,asd,(능력18번 텍스트),English Test,テスト,测试
+232,asd,(능력18번 텍스트),English Test,テスト,测试
+233,asd,(능력18번 텍스트),English Test,テスト,测试
+234,asd,(능력18번 텍스트),English Test,テスト,测试
+235,asd,(능력18번 텍스트),English Test,テスト,测试
+236,asd,(능력18번 텍스트),English Test,テスト,测试
+237,asd,(능력18번 텍스트),English Test,テスト,测试
+238,asd,(능력18번 텍스트),English Test,テスト,测试
+239,asd,(능력18번 텍스트),English Test,テスト,测试
+240,asd,(능력19번 텍스트),English Test,テスト,测试
+241,asd,(능력19번 텍스트),English Test,テスト,测试
+242,asd,(능력19번 텍스트),English Test,テスト,测试
+243,asd,(능력19번 텍스트),English Test,テスト,测试
+244,asd,(능력19번 텍스트),English Test,テスト,测试
+245,asd,(능력19번 텍스트),English Test,テスト,测试
+246,asd,(능력19번 텍스트),English Test,テスト,测试
+247,asd,(능력19번 텍스트),English Test,テスト,测试
+248,asd,(능력19번 텍스트),English Test,テスト,测试
+249,asd,(능력19번 텍스트),English Test,テスト,测试
+250,asd,(능력20번 텍스트),English Test,テスト,测试
+251,asd,(능력20번 텍스트),English Test,テスト,测试
+252,asd,(능력20번 텍스트),English Test,テスト,测试
+253,asd,(능력20번 텍스트),English Test,テスト,测试
+254,asd,(능력20번 텍스트),English Test,テスト,测试
+255,asd,(능력20번 텍스트),English Test,テスト,测试
+256,asd,(능력20번 텍스트),English Test,テスト,测试
+257,asd,(능력20번 텍스트),English Test,テスト,测试
+258,asd,(능력20번 텍스트),English Test,テスト,测试
+259,asd,(능력20번 텍스트),English Test,テスト,测试
+260,장신구시트에있는 장신구 0번의 초기 설명,공격력 10% 증가,English Test,テスト,测试
+261,장신구시트에있는 장신구 0번의 1단계 설명,공격력 10% 증가,English Test,テスト,测试
+262,장신구시트에있는 장신구 0번의 2단계 설명,공격력 10% 증가,English Test,テスト,测试
+263,장신구시트에있는 장신구 0번의 3단계 설명,공격력 10% 증가,English Test,テスト,测试
+264,장신구시트에있는 장신구 0번의 4단계 설명,공격력 10% 증가,English Test,テスト,测试
+265,장신구시트에있는 장신구 0번의 5단계 설명,공격력 10% 증가,English Test,テスト,测试
+266,장신구시트에있는 장신구 0번의 6단계 설명,공격력 10% 증가,English Test,テスト,测试
+267,장신구시트에있는 장신구 0번의 7단계 설명,공격력 10% 증가,English Test,テスト,测试
+268,장신구시트에있는 장신구 0번의 8단계 설명,공격력 10% 증가,English Test,テスト,测试
+269,장신구시트에있는 장신구 0번의 9단계 설명,공격력 10% 증가,English Test,テスト,测试
+270,asd,(장신구2번 텍스트),English Test,テスト,测试
+271,asd,(장신구2번 텍스트),English Test,テスト,测试
+272,asd,(장신구2번 텍스트),English Test,テスト,测试
+273,asd,(장신구2번 텍스트),English Test,テスト,测试
+274,asd,(장신구2번 텍스트),English Test,テスト,测试
+275,asd,(장신구2번 텍스트),English Test,テスト,测试
+276,asd,(장신구2번 텍스트),English Test,テスト,测试
+277,asd,(장신구2번 텍스트),English Test,テスト,测试
+278,asd,(장신구2번 텍스트),English Test,テスト,测试
+279,asd,(장신구2번 텍스트),English Test,テスト,测试
+280,asd,(장신구3번 텍스트),English Test,テスト,测试
+281,asd,(장신구3번 텍스트),English Test,テスト,测试
+282,asd,(장신구3번 텍스트),English Test,テスト,测试
+283,asd,(장신구3번 텍스트),English Test,テスト,测试
+284,asd,(장신구3번 텍스트),English Test,テスト,测试
+285,asd,(장신구3번 텍스트),English Test,テスト,测试
+286,asd,(장신구3번 텍스트),English Test,テスト,测试
+287,asd,(장신구3번 텍스트),English Test,テスト,测试
+288,asd,(장신구3번 텍스트),English Test,テスト,测试
+289,asd,(장신구3번 텍스트),English Test,テスト,测试
+290,asd,(장신구4번 텍스트),English Test,テスト,测试
+291,asd,(장신구4번 텍스트),English Test,テスト,测试
+292,asd,(장신구4번 텍스트),English Test,テスト,测试
+293,asd,(장신구4번 텍스트),English Test,テスト,测试
+294,asd,(장신구4번 텍스트),English Test,テスト,测试
+295,asd,(장신구4번 텍스트),English Test,テスト,测试
+296,asd,(장신구4번 텍스트),English Test,テスト,测试
+297,asd,(장신구4번 텍스트),English Test,テスト,测试
+298,asd,(장신구4번 텍스트),English Test,テスト,测试
+299,asd,(장신구4번 텍스트),English Test,テスト,测试
+300,asd,(장신구5번 텍스트),English Test,テスト,测试
+301,asd,(장신구5번 텍스트),English Test,テスト,测试
+302,asd,(장신구5번 텍스트),English Test,テスト,测试
+303,asd,(장신구5번 텍스트),English Test,テスト,测试
+304,asd,(장신구5번 텍스트),English Test,テスト,测试
+305,asd,(장신구5번 텍스트),English Test,テスト,测试
+306,asd,(장신구5번 텍스트),English Test,テスト,测试
+307,asd,(장신구5번 텍스트),English Test,テスト,测试
+308,asd,(장신구5번 텍스트),English Test,テスト,测试
+309,asd,(장신구5번 텍스트),English Test,テスト,测试
+310,asd,(장신구6번 텍스트),English Test,テスト,测试
+311,asd,(장신구6번 텍스트),English Test,テスト,测试
+312,asd,(장신구6번 텍스트),English Test,テスト,测试
+313,asd,(장신구6번 텍스트),English Test,テスト,测试
+314,asd,(장신구6번 텍스트),English Test,テスト,测试
+315,asd,(장신구6번 텍스트),English Test,テスト,测试
+316,asd,(장신구6번 텍스트),English Test,テスト,测试
+317,asd,(장신구6번 텍스트),English Test,テスト,测试
+318,asd,(장신구6번 텍스트),English Test,テスト,测试
+319,asd,(장신구6번 텍스트),English Test,テスト,测试
+320,asd,(장신구7번 텍스트),English Test,テスト,测试
+321,asd,(장신구7번 텍스트),English Test,テスト,测试
+322,asd,(장신구7번 텍스트),English Test,テスト,测试
+323,asd,(장신구7번 텍스트),English Test,テスト,测试
+324,asd,(장신구7번 텍스트),English Test,テスト,测试
+325,asd,(장신구7번 텍스트),English Test,テスト,测试
+326,asd,(장신구7번 텍스트),English Test,テスト,测试
+327,asd,(장신구7번 텍스트),English Test,テスト,测试
+328,asd,(장신구7번 텍스트),English Test,テスト,测试
+329,asd,(장신구7번 텍스트),English Test,テスト,测试
+330,asd,(장신구8번 텍스트),English Test,テスト,测试
+331,asd,(장신구8번 텍스트),English Test,テスト,测试
+332,asd,(장신구8번 텍스트),English Test,テスト,测试
+333,asd,(장신구8번 텍스트),English Test,テスト,测试
+334,asd,(장신구8번 텍스트),English Test,テスト,测试
+335,asd,(장신구8번 텍스트),English Test,テスト,测试
+336,asd,(장신구8번 텍스트),English Test,テスト,测试
+337,asd,(장신구8번 텍스트),English Test,テスト,测试
+338,asd,(장신구8번 텍스트),English Test,テスト,测试
+339,asd,(장신구8번 텍스트),English Test,テスト,测试
+340,asd,(장신구9번 텍스트),English Test,テスト,测试
+341,asd,(장신구9번 텍스트),English Test,テスト,测试
+342,asd,(장신구9번 텍스트),English Test,テスト,测试
+343,asd,(장신구9번 텍스트),English Test,テスト,测试
+344,asd,(장신구9번 텍스트),English Test,テスト,测试
+345,asd,(장신구9번 텍스트),English Test,テスト,测试
+346,asd,(장신구9번 텍스트),English Test,テスト,测试
+347,asd,(장신구9번 텍스트),English Test,テスト,测试
+348,asd,(장신구9번 텍스트),English Test,テスト,测试
+349,asd,(장신구9번 텍스트),English Test,テスト,测试
+350,asd,(장신구10번 텍스트),English Test,テスト,测试
+351,asd,(장신구10번 텍스트),English Test,テスト,测试
+352,asd,(장신구10번 텍스트),English Test,テスト,测试
+353,asd,(장신구10번 텍스트),English Test,テスト,测试
+354,asd,(장신구10번 텍스트),English Test,テスト,测试
+355,asd,(장신구10번 텍스트),English Test,テスト,测试
+356,asd,(장신구10번 텍스트),English Test,テスト,测试
+357,asd,(장신구10번 텍스트),English Test,テスト,测试
+358,asd,(장신구10번 텍스트),English Test,テスト,测试
+359,asd,(장신구10번 텍스트),English Test,テスト,测试
+360,asd,(장신구11번 텍스트),English Test,テスト,测试
+361,asd,(장신구11번 텍스트),English Test,テスト,测试
+362,asd,(장신구11번 텍스트),English Test,テスト,测试
+363,asd,(장신구11번 텍스트),English Test,テスト,测试
+364,asd,(장신구11번 텍스트),English Test,テスト,测试
+365,asd,(장신구11번 텍스트),English Test,テスト,测试
+366,asd,(장신구11번 텍스트),English Test,テスト,测试
+367,asd,(장신구11번 텍스트),English Test,テスト,测试
+368,asd,(장신구11번 텍스트),English Test,テスト,测试
+369,asd,(장신구11번 텍스트),English Test,テスト,测试
+370,asd,(장신구12번 텍스트),English Test,テスト,测试
+371,asd,(장신구12번 텍스트),English Test,テスト,测试
+372,asd,(장신구12번 텍스트),English Test,テスト,测试
+373,asd,(장신구12번 텍스트),English Test,テスト,测试
+374,asd,(장신구12번 텍스트),English Test,テスト,测试
+375,asd,(장신구12번 텍스트),English Test,テスト,测试
+376,asd,(장신구12번 텍스트),English Test,テスト,测试
+377,asd,(장신구12번 텍스트),English Test,テスト,测试
+378,asd,(장신구12번 텍스트),English Test,テスト,测试
+379,asd,(장신구12번 텍스트),English Test,テスト,测试
+380,asd,(장신구13번  텍스트),English Test,テスト,测试
+381,asd,(장신구13번  텍스트),English Test,テスト,测试
+382,asd,(장신구13번  텍스트),English Test,テスト,测试
+383,asd,(장신구13번  텍스트),English Test,テスト,测试
+384,asd,(장신구13번  텍스트),English Test,テスト,测试
+385,asd,(장신구13번  텍스트),English Test,テスト,测试
+386,asd,(장신구13번  텍스트),English Test,テスト,测试
+387,asd,(장신구13번  텍스트),English Test,テスト,测试
+388,asd,(장신구13번  텍스트),English Test,テスト,测试
+389,asd,(장신구13번  텍스트),English Test,テスト,测试
+390,asd,(장신구14번 텍스트),English Test,テスト,测试
+391,asd,(장신구14번 텍스트),English Test,テスト,测试
+392,asd,(장신구14번 텍스트),English Test,テスト,测试
+393,asd,(장신구14번 텍스트),English Test,テスト,测试
+394,asd,(장신구14번 텍스트),English Test,テスト,测试
+395,asd,(장신구14번 텍스트),English Test,テスト,测试
+396,asd,(장신구14번 텍스트),English Test,テスト,测试
+397,asd,(장신구14번 텍스트),English Test,テスト,测试
+398,asd,(장신구14번 텍스트),English Test,テスト,测试
+399,asd,(장신구14번 텍스트),English Test,テスト,测试
+400,asd,(장신구15번 텍스트),English Test,テスト,测试
+401,asd,(장신구15번 텍스트),English Test,テスト,测试
+402,asd,(장신구15번 텍스트),English Test,テスト,测试
+403,asd,(장신구15번 텍스트),English Test,テスト,测试
+404,asd,(장신구15번 텍스트),English Test,テスト,测试
+405,asd,(장신구15번 텍스트),English Test,テスト,测试
+406,asd,(장신구15번 텍스트),English Test,テスト,测试
+407,asd,(장신구15번 텍스트),English Test,テスト,测试
+408,asd,(장신구15번 텍스트),English Test,テスト,测试
+409,asd,(장신구15번 텍스트),English Test,テスト,测试
+410,asd,(장신구16번 텍스트),English Test,テスト,测试
+411,asd,(장신구16번 텍스트),English Test,テスト,测试
+412,asd,(장신구16번 텍스트),English Test,テスト,测试
+413,asd,(장신구16번 텍스트),English Test,テスト,测试
+414,asd,(장신구16번 텍스트),English Test,テスト,测试
+415,asd,(장신구16번 텍스트),English Test,テスト,测试
+416,asd,(장신구16번 텍스트),English Test,テスト,测试
+417,asd,(장신구16번 텍스트),English Test,テスト,测试
+418,asd,(장신구16번 텍스트),English Test,テスト,测试
+419,asd,(장신구16번 텍스트),English Test,テスト,测试
+420,asd,(장신구17번 텍스트),English Test,テスト,测试
+421,asd,(장신구17번 텍스트),English Test,テスト,测试
+422,asd,(장신구17번 텍스트),English Test,テスト,测试
+423,asd,(장신구17번 텍스트),English Test,テスト,测试
+424,asd,(장신구17번 텍스트),English Test,テスト,测试
+425,asd,(장신구17번 텍스트),English Test,テスト,测试
+426,asd,(장신구17번 텍스트),English Test,テスト,测试
+427,asd,(장신구17번 텍스트),English Test,テスト,测试
+428,asd,(장신구17번 텍스트),English Test,テスト,测试
+429,asd,(장신구17번 텍스트),English Test,テスト,测试
+430,asd,(장신구18번 텍스트),English Test,テスト,测试
+431,asd,(장신구18번 텍스트),English Test,テスト,测试
+432,asd,(장신구18번 텍스트),English Test,テスト,测试
+433,asd,(장신구18번 텍스트),English Test,テスト,测试
+434,asd,(장신구18번 텍스트),English Test,テスト,测试
+435,asd,(장신구18번 텍스트),English Test,テスト,测试
+436,asd,(장신구18번 텍스트),English Test,テスト,测试
+437,asd,(장신구18번 텍스트),English Test,テスト,测试
+438,asd,(장신구18번 텍스트),English Test,テスト,测试
+439,asd,(장신구18번 텍스트),English Test,テスト,测试
+440,asd,(장신구19번 텍스트),English Test,テスト,测试
+441,asd,(장신구19번 텍스트),English Test,テスト,测试
+442,asd,(장신구19번 텍스트),English Test,テスト,测试
+443,asd,(장신구19번 텍스트),English Test,テスト,测试
+444,asd,(장신구19번 텍스트),English Test,テスト,测试
+445,asd,(장신구19번 텍스트),English Test,テスト,测试
+446,asd,(장신구19번 텍스트),English Test,テスト,测试
+447,asd,(장신구19번 텍스트),English Test,テスト,测试
+448,asd,(장신구19번 텍스트),English Test,テスト,测试
+449,asd,(장신구19번 텍스트),English Test,テスト,测试
+450,asd,(장신구20번 텍스트),English Test,テスト,测试
+451,asd,(장신구20번 텍스트),English Test,テスト,测试
+452,asd,(장신구20번 텍스트),English Test,テスト,测试
+453,asd,(장신구20번 텍스트),English Test,テスト,测试
+454,asd,(장신구20번 텍스트),English Test,テスト,测试
+455,asd,(장신구20번 텍스트),English Test,テスト,测试
+456,asd,(장신구20번 텍스트),English Test,テスト,测试
+457,asd,(장신구20번 텍스트),English Test,テスト,测试
+458,asd,(장신구20번 텍스트),English Test,テスト,测试
+459,asd,(장신구20번 텍스트),English Test,テスト,测试
+460,레벨업시 처음고를때 텍스트 설정,신규,New,新しい,新的
+461,레벨업텍스트,레벨,Level,レベル,等级
+462,레벨업하고 남은거,큰 동전 가방,English Test,テスト,测试
+463,레벨업하고 남은거,치킨,English Test,テスト,测试
+464,레벨업하고 남은거 설명,25골드를 추가합니다.,English Test,テスト,测试
+465,레벨업하고 남은거 설명,체력을 30 회복합니다.,English Test,テスト,测试

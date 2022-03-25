@@ -20,23 +20,27 @@ public class Skill_1 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            for (int i = 1; i <= _BulletCnt(); i++)
-            {
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation); 
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-                    if (i % 2 == 0)
-                    {
-                        bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-                    }
-                    else
-                    {
-                        bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-                    }
-            }
+            StartCoroutine(Skill_Update2());
         }
     }
-
+    IEnumerator Skill_Update2()
+    {
+        for (int i = 1; i <= _BulletCnt(); i++)
+        {
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+            if (i % 2 == 0)
+            {
+                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+            }
+            else
+            {
+                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {

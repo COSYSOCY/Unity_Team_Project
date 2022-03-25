@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4701004815537142944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4701004816666362259}
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfo: {fileID: 0}
   level: {fileID: 0}
+  manager: {fileID: 0}
   uimanager: {fileID: 0}
   dead: 0
   deadObject: {fileID: 0}
@@ -222,6 +223,8 @@ MonoBehaviour:
   EnemyCreateRan: 0
   EnemyCreateName: []
   hpbar: {fileID: 0}
+  XpCheck: 
+  EnemyDestory: 
 --- !u!195 &1409494301126632296
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -269,6 +272,10 @@ MonoBehaviour:
   timeplus: 0
   ui: {fileID: 0}
   status: {fileID: 2128872704907776241}
+  SkillCnt: 0
+  SkillItemCnt: 0
+  SkillMax: 0
+  SkillItemMax: 0
 --- !u!1 &4701004816666362258
 GameObject:
   m_ObjectHideFlags: 0

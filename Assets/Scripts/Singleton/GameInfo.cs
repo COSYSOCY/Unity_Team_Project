@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GameInfo : MonoBehaviour
 {
-	static GameInfo inst;
+	public static GameInfo inst;
+	public AudioSource audioSo;
 	public static float PlayerBGM; // 배경음
 	public static float PlayerSE; // 사운드
 	public static bool PlayerVFX; // 이펙트 유무
 	public static bool PlayerDmg; //데미지표시 유무
 	public static int PlayerGold; // 플레이어 골드
-	
+
 	public static float HpPlus; // 체력추가%
 	public static float DamagePlus;//데미지추가%
 	public static int BulletCntPlus;//투사체수증가
@@ -26,7 +27,17 @@ public class GameInfo : MonoBehaviour
 
 
 
-	void Awake() => inst = this;
+	void Awake()
+	{
+		inst = this;
+		audioSo = inst.GetComponent<AudioSource>();
 
+	}
+
+	public static void soundcheck()
+    {
+		inst.audioSo.volume = 1f;
+
+	}
 
 }
