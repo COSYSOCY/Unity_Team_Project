@@ -15,6 +15,7 @@ public class LobyUIMgr : MonoBehaviour
     public List<Text> TestList;
 
     public GameObject SettingObject;
+    public CharacterManager charmanager;
 
 
 
@@ -23,6 +24,7 @@ public class LobyUIMgr : MonoBehaviour
         TextReset();
         LobyGoldAc();
     }
+
 
 
     public void PlayBtn()
@@ -77,6 +79,7 @@ public class LobyUIMgr : MonoBehaviour
                 TestList[i].text = csvData.GameText(s);
             }
 
+        charmanager.CharSetString();
 
 
     }

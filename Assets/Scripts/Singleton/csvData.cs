@@ -19,6 +19,8 @@ public class csvData : MonoBehaviour
 
     public static List<int> CharactersNameNum = new List<int>();
     public static List<int> CharactersInfoNum = new List<int>();
+    public static List<int> CharactersIconNum = new List<int>();
+    public static List<int> CharactersSkillIconNum = new List<int>();
     public static List<int> CharactersBSNum = new List<int>();
     public static List<float> CharactersHpMax = new List<float>();
     public static List<float> CharactersHpRegen = new List<float>();
@@ -108,6 +110,8 @@ public class csvData : MonoBehaviour
         {
             CharactersNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
             CharactersInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            CharactersIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
+            CharactersSkillIconNum.Add(int.Parse(data[i]["무기아이콘번호"].ToString()));
             CharactersBSNum.Add(int.Parse(data[i]["기본스킬번호"].ToString()));
             CharactersHpMax.Add(float.Parse(data[i]["최대체력"].ToString()));
             CharactersHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
