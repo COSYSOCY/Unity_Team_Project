@@ -18,7 +18,7 @@ public class ScrollScript : ScrollRect
 
     public override void OnBeginDrag(PointerEventData eventData)
     {
-        //µå·¡±×°¡ ½ÃÀÛÇÏ´Â ¼ø°£ ¼öÆòÀÌµ¿ÀÌ Å©¸é ºÎ¸ð°¡ µå·¡±× ½ÃÀÛÇÑ°Í, ¼öÁ÷ÀÌµ¿ÀÌ Å©¸é ÀÚ½ÄÀÌ µå·¡±× ½ÃÀÛÇÑ°Í
+        //ï¿½å·¡ï¿½×°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½å·¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½
         forParent = Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y);
 
         if(forParent)
