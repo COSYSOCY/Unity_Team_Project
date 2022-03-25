@@ -84,9 +84,10 @@ public class csvData : MonoBehaviour
 
 
 
-    public static List<string> GameText_Korean = new List<string>();
-    public static List<string> GameText_English = new List<string>();
-    public static List<string> GameText_Japan = new List<string>();
+    public  List<string> GameText_Korean = new List<string>();
+    public  List<string> GameText_English = new List<string>();
+    public  List<string> GameText_Japan = new List<string>();
+    public  List<string> GameText_China = new List<string>();
 
 
     void Awake()
@@ -211,6 +212,7 @@ public class csvData : MonoBehaviour
             GameText_Korean.Add(data[i]["Korea"].ToString());
             GameText_English.Add(data[i]["English"].ToString());
             GameText_Japan.Add(data[i]["Japan"].ToString());
+            GameText_China.Add(data[i]["China"].ToString());
         }
 
 
@@ -220,25 +222,25 @@ public class csvData : MonoBehaviour
     {
 
 
-        if (GameInfo.Language=="English")
+        if (GameInfo.inst.Language== "English")
         {
-            return GameText_English[i];
+            return inst.GameText_English[i];
         }
-        else if(GameInfo.Language == "Japan")
+        else if(GameInfo.inst.Language == "Japan")
         {
-            return GameText_Japan[i];
+            return inst.GameText_Japan[i];
 
         }
-        else if (GameInfo.Language == "Chinese")
+        else if (GameInfo.inst.Language == "China")
         {
-
+            return inst.GameText_China[i];
         }
 
         else
         {
-            return GameText_Korean[i];
+            return inst.GameText_Korean[i];
         }
 
-            return GameText_Korean[i];
+            return inst.GameText_Korean[i];
     }
 }

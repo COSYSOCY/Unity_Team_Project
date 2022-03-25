@@ -11,6 +11,12 @@ public class GameInfo : MonoBehaviour
 	public static bool PlayerVFX; // 이펙트 유무
 	public static bool PlayerDmg; //데미지표시 유무
 	public static int PlayerGold; // 플레이어 골드
+	public static int PlayerPoint; // 플레이어 보석
+
+	public int CharacterIdx;
+	public int MapIdx;
+	public List<int> CharacterActive; // 0 없음 1 구매가능 2 보유함
+	public int CharacterMax;
 
 	public static float HpPlus; // 체력추가%
 	public static float DamagePlus;//데미지추가%
@@ -22,7 +28,7 @@ public class GameInfo : MonoBehaviour
 	public static float DefencePlus; // 방어력증가 (상수)
 	public static float BulletSpeedPlus;//투사체 이속동도증가%
 	public static float BulletTimePlus;//투사체 지속시간 증가%
-	public static string Language = "Korean"; // 언어
+	public string Language = "Korean"; // 언어
 
 
 
@@ -31,7 +37,12 @@ public class GameInfo : MonoBehaviour
 	{
 		inst = this;
 		audioSo = inst.GetComponent<AudioSource>();
+        for (int i = 0; i < CharacterMax; i++)
+        {
+			CharacterActive.Add(0);
 
+		}
+		CharacterActive[0] = 2;
 	}
 
 	public static void soundcheck()
