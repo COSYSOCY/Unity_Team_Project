@@ -272,10 +272,6 @@ public class LevelUp : MonoBehaviour
         LevelupUiOb[1].SetActive(true);
         LevelupUiOb[2].SetActive(true);
         LevelupFunc();
-
-
-
-
     }
 
 
@@ -342,10 +338,7 @@ public class LevelUp : MonoBehaviour
             ButonClick_Item(ob);
 
             }
-        }
-
-        
-        
+        }             
     }
     public void ButtonClick_2()
     {
@@ -379,7 +372,6 @@ public class LevelUp : MonoBehaviour
         else
         {
             ButonClick_Item(ob);
-
         }
     }
     public void ButtonClick_4()

@@ -11,6 +11,8 @@ TagManager:
   - Check
   - MapRanObj
   - Bullet
+  - ParentScrollManager
+  - NestedScrollManager
   layers:
   - Default
   - TransparentFX
