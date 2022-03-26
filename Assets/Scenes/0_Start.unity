@@ -330,7 +330,7 @@ MonoBehaviour:
   CardMax: 0
   PlayerCardIdxs: 
   PlayerCardCheck: 
-  PlayerCardCnt: 0
+  PlayerCards: 
   CardsInfo: []
   Language: Korean
 --- !u!114 &563478247

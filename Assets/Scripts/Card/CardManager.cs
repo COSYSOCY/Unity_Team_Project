@@ -21,6 +21,9 @@ public class CardManager : MonoBehaviour
 
     public GameObject ClickObject;
     public GameObject WarningTextOb;
+    public GameObject GoldObject;
+    public Text GoldText;
+
 
 
     void SizeSet()
@@ -65,7 +68,7 @@ public class CardManager : MonoBehaviour
                 else
                 {
                     CardImages[i].sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
-                    GameInfo.inst.PlayerCardCheck[GameInfo.inst.PlayerCardIdxs[i]]++;
+                    
                     CardImages[i].GetComponentInParent<CardIdx>().Idx = GameInfo.inst.PlayerCardIdxs[i];
                 }
 
@@ -139,8 +142,20 @@ public class CardManager : MonoBehaviour
         }
         CardNumReset();
         SizeSet();
+        CardCheck();
     }
+    public void CardCheck()
+    {
+        for (int i = 0; i < GameInfo.inst.PlayerCardCheck.Count; i++)
+        {
+            GameInfo.inst.PlayerCardCheck[i] = 0;
+        }
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
 
+            GameInfo.inst.PlayerCardCheck[GameInfo.inst.PlayerCardIdxs[i]]++;
+        }
+    }
     public void InfoReset()
     {
         if (ClickObject != null)
@@ -152,6 +167,7 @@ public class CardManager : MonoBehaviour
         CardInfo.text = "";
         CardInfo.gameObject.GetComponent<TextIdx>().Idx = 99999; //빈칸설정
         ClickObject = null;
+        GoldObject.SetActive(false);
     }
     public void PlayerCardButton(GameObject g) // 플레이어의 카드 버튼 누를때
     {
@@ -207,6 +223,7 @@ public class CardManager : MonoBehaviour
                     InfoReset();
                     //착용
                     CardNumReset();
+                    CardCheck();
                     return;
                 }
             }
@@ -225,12 +242,16 @@ public class CardManager : MonoBehaviour
     {
         int a = g.GetComponent<CardIdx>().Idx;
         int s = GameInfo.inst.CardsInfo[a].CardNameNum;
+        
         if (a==0)
         {
             InfoReset();
         }
         else
         {
+            int gold = GameInfo.inst.CardsInfo[a].CardPrice;
+            GoldObject.SetActive(true);
+            GoldText.text = gold.ToString();
 
         CardName.text = csvData.GameText(s);
         CardName.gameObject.GetComponent<TextIdx>().Idx = s;
@@ -268,6 +289,9 @@ public class CardManager : MonoBehaviour
         ClickObject = g;
         int a = g.GetComponent<CardIdx>().Idx;
         int s = GameInfo.inst.CardsInfo[a].CardNameNum;
+        int gold = GameInfo.inst.CardsInfo[a].CardPrice;
+        GoldObject.SetActive(true);
+        GoldText.text = gold.ToString();
         CardName.text = csvData.GameText(s);
         CardName.gameObject.GetComponent<TextIdx>().Idx = s;
         s = GameInfo.inst.CardsInfo[a].CardInfoNum;
@@ -291,6 +315,7 @@ public class CardManager : MonoBehaviour
         InfoReset();
         CardNumReset();
         SizeSet();
+        CardCheck();
     }
     public void EquipFunc(int i) // 착용
     {
@@ -308,7 +333,7 @@ public class CardManager : MonoBehaviour
         InfoReset();
 
         CardNumReset();
-
+        CardCheck();
     }
     public void EquipButton()
     {
@@ -366,6 +391,7 @@ public class CardManager : MonoBehaviour
             CardImages[num].GetComponentInParent<CardIdx>().Idx = 0;
             GameInfo.inst.PlayerCardIdxs[num] = 0;
             CardImages[num].sprite = null;
+            CardCheck();
         }
         else//인벤칸에서 판매
         {
@@ -375,8 +401,9 @@ public class CardManager : MonoBehaviour
             Destroy(ClickObject);
             InfoReset();
             CardNumReset();
+            SizeSet();
         }
-
+        InfoReset();
 
     }
     public void CardNumReset()

@@ -49,6 +49,7 @@ public class GameInfo : MonoBehaviour
 
 	public List<CardInfo> CardsInfo; // 게임의 카드정보
 	//
+	public List<CharacterBtn> CharsInfo; // 게임의 캐릭터정보
 
 	public static float HpPlus; // 최대체력 설정
 	public static float DamagePlus;//데미지추가%

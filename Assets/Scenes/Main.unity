@@ -10408,7 +10408,7 @@ MonoBehaviour:
   pad: {fileID: 1578246705}
   stick: {fileID: 280040783}
   ani: {fileID: 1077720423}
-  playerinfo: {fileID: 0}
+  playerinfo: {fileID: 4456675825087984495}
 --- !u!114 &2096178707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10856,9 +10856,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1445900485}
     - target: {fileID: 7448565387035373586, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: Hp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448565387035373586, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 865185821}
+    - target: {fileID: 7448565387035373586, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: MaxHp
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7448565387035373586, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: manager
       value: 

@@ -51,6 +51,7 @@ public class CharacterManager : MonoBehaviour
             come.CharactersRange = csvData.CharactersRange[i];
             come.CharactersXpPlus = csvData.CharactersXpPlus[i];
             come.MainImage.sprite = icons[come.CharactersIconNum];
+            GameInfo.inst.CharsInfo.Add(come);
             if (come.State == 0)
             {
                 c.SetActive(false);
@@ -66,6 +67,21 @@ public class CharacterManager : MonoBehaviour
         //Debug.Log(cnt);
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+
+        GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
+        GameInfo.HpRegenPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpRegen;
+        GameInfo.DefencePlus = GameInfo.inst.CharsInfo[cnt].CharactersDefece;
+        GameInfo.MoveSpeedPlus = GameInfo.inst.CharsInfo[cnt].CharactersSpeed;
+        GameInfo.DamagePlus = GameInfo.inst.CharsInfo[cnt].CharactersAtPlus;
+        GameInfo.Attack_RangePlus = GameInfo.inst.CharsInfo[cnt].CharactersAtRange;
+        GameInfo.BulletSpeedPlus = GameInfo.inst.CharsInfo[cnt].CharactersBtSpeed;
+        GameInfo.BulletTimePlus = GameInfo.inst.CharsInfo[cnt].CharactersBtTime;
+        GameInfo.BulletCntPlus = GameInfo.inst.CharsInfo[cnt].CharactersBtCnt;
+        GameInfo.SkillCoolPlus = GameInfo.inst.CharsInfo[cnt].CharactersBtCool;
+        GameInfo.Range = GameInfo.inst.CharsInfo[cnt].CharactersRange;
+        GameInfo.XpPlus = GameInfo.inst.CharsInfo[cnt].CharactersXpPlus;
+
+
         //CharImage.sprite = icons[0];
         //SkillImage.sprite = icons[0];
         CharSetString();

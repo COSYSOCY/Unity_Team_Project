@@ -9,7 +9,7 @@ public class CardStat : MonoBehaviour
 	public float CardStat_HpC()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_HpC;
         }
@@ -18,7 +18,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_HpP()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_HpP;
         }
@@ -27,7 +27,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_HpRegen()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_HpRegen;
         }
@@ -36,7 +36,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_Defence()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_Defence;
         }
@@ -45,7 +45,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_Speed()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_Speed;
         }
@@ -54,7 +54,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_DamageP()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_DamageP;
         }
@@ -63,7 +63,7 @@ public class CardStat : MonoBehaviour
     public int CardStat_BtCnt()
     {
         int stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_BtCnt;
         }
@@ -72,7 +72,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_Cool()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_Cool;
         }
@@ -81,7 +81,7 @@ public class CardStat : MonoBehaviour
     public float CardStat_XpPlus()
     {
         float stat = 0;
-        for (int i = 0; i < GameInfo.inst.CardMax; i++)
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_XpPlus;
         }
