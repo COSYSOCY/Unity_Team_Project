@@ -12,6 +12,8 @@ public class csvData : MonoBehaviour
     public string dataPath_SkillItem;
     public string dataPath_Xp;
     public string dataPath_String;
+    public string dataPath_Card;
+    public string dataPath_Map;
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
@@ -22,6 +24,7 @@ public class csvData : MonoBehaviour
     public static List<int> CharactersIconNum = new List<int>();
     public static List<int> CharactersSkillIconNum = new List<int>();
     public static List<int> CharactersBSNum = new List<int>();
+    public static List<int> CharactersPrice = new List<int>();
     public static List<float> CharactersHpMax = new List<float>();
     public static List<float> CharactersHpRegen = new List<float>();
     public static List<float> CharactersDefece = new List<float>();
@@ -91,6 +94,21 @@ public class csvData : MonoBehaviour
     public  List<string> GameText_Japan = new List<string>();
     public  List<string> GameText_China = new List<string>();
 
+    public static List<int> CardNameNum = new List<int>();
+    public static List<int> CardInfoNum = new List<int>();
+    public static List<int> CardIconNum = new List<int>();
+    public static List<int> CardLevel = new List<int>();
+    public static List<int> CardPrice = new List<int>();
+    public static List<float> CardHpC = new List<float>();
+    public static List<float> CardHpP = new List<float>();
+    public static List<float> CardHpRegen = new List<float>();
+    public static List<float> CardDefence = new List<float>();
+    public static List<float> CardSpeed = new List<float>();
+    public static List<float> CardDamage = new List<float>();
+    public static List<int> CardBtCnt = new List<int>();
+    public static List<float> CardCood = new List<float>();
+    public static List<float> CardXpPlus = new List<float>();
+
 
     void Awake()
     {
@@ -101,6 +119,33 @@ public class csvData : MonoBehaviour
         SkillItem_Read();
         String_Read();
        Exp_Read();
+       Card_Read();
+    }
+    public void Card_Read()
+    {
+        data = CSVReader.Read(dataPath_Card);
+
+        for (int i = 0; i < data.Count; i++)
+        {
+            CardNameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            CardInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            CardIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
+            CardLevel.Add(int.Parse(data[i]["등급"].ToString()));
+            CardPrice.Add(int.Parse(data[i]["가격"].ToString()));
+            CardHpC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
+            CardHpP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
+            CardHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
+            CardDefence.Add(float.Parse(data[i]["방어력"].ToString()));
+            CardSpeed.Add(float.Parse(data[i]["이동속도"].ToString()));
+            CardDamage.Add(float.Parse(data[i]["데미지증가"].ToString()));
+            CardBtCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
+            CardCood.Add(float.Parse(data[i]["쿨타임"].ToString()));
+            CardXpPlus.Add(float.Parse(data[i]["경험치증가"].ToString()));
+
+
+        }
+        GameInfo.inst.CardMax = data.Count;
+        GameInfo.inst.CardCheck();
     }
     public void Characters_Read()
     {
@@ -113,6 +158,7 @@ public class csvData : MonoBehaviour
             CharactersIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             CharactersSkillIconNum.Add(int.Parse(data[i]["무기아이콘번호"].ToString()));
             CharactersBSNum.Add(int.Parse(data[i]["기본스킬번호"].ToString()));
+            CharactersPrice.Add(int.Parse(data[i]["가격"].ToString()));
             CharactersHpMax.Add(float.Parse(data[i]["최대체력"].ToString()));
             CharactersHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
             CharactersDefece.Add(float.Parse(data[i]["방어력"].ToString()));
@@ -127,6 +173,8 @@ public class csvData : MonoBehaviour
             CharactersXpPlus.Add(float.Parse(data[i]["경험치증가"].ToString()));
 
         }
+        GameInfo.inst.CharacterMax = data.Count;
+        GameInfo.inst.CharaMax();
     }
     public void Enemy_Read()
     {
@@ -245,6 +293,6 @@ public class csvData : MonoBehaviour
             return inst.GameText_Korean[i];
         }
 
-            return inst.GameText_Korean[i];
+            //return inst.GameText_Korean[i];
     }
 }

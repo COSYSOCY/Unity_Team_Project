@@ -6,6 +6,7 @@ public class PlayerInfo : MonoBehaviour
 {
     public int Xp;
     public int Lv;
+    public float Speed;
     public float Hp;
     public float MaxHp;
     public int MaxXp;
@@ -17,6 +18,7 @@ public class PlayerInfo : MonoBehaviour
     public int timeplus;
     public UIManager ui;
     public PlayerStatus status;
+    public SkillManager manager;
     public int SkillCnt;
     public int SkillItemCnt;
     public int SkillMax;
@@ -28,6 +30,7 @@ public class PlayerInfo : MonoBehaviour
         //MaxHp = 200f;
         //MaxXp = 1;
         //item_range = 2.5f;
+        status.PlayerHpMax();
         Hp = MaxHp;
         StartCoroutine(timecheck());
     }
@@ -46,5 +49,13 @@ public class PlayerInfo : MonoBehaviour
             ui.TimeCheck();
             status.tiemtrigger(timeplus);
         }
+    }
+
+    public float _Speed()
+    {
+        float s = GameInfo.MoveSpeedPlus;
+        float d = manager.Speed() + CardStat.inst.CardStat_Speed();
+        s = s + ((d * 0.01f) * s);
+        return s;
     }
 }

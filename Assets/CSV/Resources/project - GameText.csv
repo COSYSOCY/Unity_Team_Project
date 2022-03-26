@@ -473,3 +473,32 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 471,,입장,Enter,テスト,测试
 472,,데미지 표시 안하기,Damge UI X,テスト,测试
 473,,플레이,Play,テスト,测试
+474,,구매하실껀가요?,Are you sure you want to buy it?,テスト,测试
+475,,네,Yes,テスト,测试
+476,,아뇨,No,テスト,测试
+477,,돈이 부족합니다!!,Not enough money!!,テスト,测试
+478,,착용/해제,equip/Unequip,テスト,测试
+479,,체력의 카드,English Test,テスト,测试
+480,,방어의 카드,English Test,テスト,测试
+481,,이속의 카드,English Test,テスト,测试
+482,,데미지의 카드,English Test,テスト,测试
+483,,천사의 카드,English Test,テスト,测试
+484,,악마의 카드,English Test,テスト,测试
+485,,정령의 카드,English Test,テスト,测试
+486,,단검의 카드,English Test,テスト,测试
+487,,ㄴ의 카드,English Test,テスト,测试
+488,,ㅇ의카드,English Test,テスト,测试
+489,,체력+20,English Test,テスト,测试
+490,,방어+2,English Test,テスト,测试
+491,,이속+10%,English Test,テスト,测试
+492,,데미지+10%,English Test,テスト,测试
+493,,"체력+5,방어+1","Hp+5,Defence+1",テスト,测试
+494,,데미지+15%,English Test,テスト,测试
+495,,체력회복+0.1,English Test,テスト,测试
+496,,단검의 데미지가 100%증가합니다,English Test,テスト,测试
+497,,투사체증가+1,English Test,テスト,测试
+498,,쿨타임 감소+10%,English Test,テスト,测试
+499,,팔기,Sell,テスト,测试
+500,,카드칸이 가득 차있습니다,Card Full,テスト,测试
+501,,확인,OK!,テスト,测试
+502,,합성(미구현),Mix,テスト,测试

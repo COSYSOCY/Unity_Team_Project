@@ -43,7 +43,7 @@ int bulletCntMax; // 투사체 최대갯수
         float d2;
         float d3;
         d= Random.Range(info.DamageMin, info.DamageMax);
-        d2 = GameInfo.DamagePlus + manager.AtPlus();
+        d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP();
         d3 = info.BulletAtCri;
         if (Random.Range(0,100f) <= info.BulletAtCri)
         {
@@ -56,7 +56,7 @@ int bulletCntMax; // 투사체 최대갯수
     protected int _BulletCnt()
     {
         int i;
-        i = info.bulletCnt + GameInfo.BulletCntPlus + manager.BulletCnt();
+        i = info.bulletCnt + GameInfo.BulletCntPlus + manager.BulletCnt()+ CardStat.inst.CardStat_BtCnt();
         return i;
     }
     protected float _BulletSpeed()
@@ -91,7 +91,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
         
-        f2 = GameInfo.SkillCoolPlus+manager.Cool();
+        f2 = GameInfo.SkillCoolPlus+manager.Cool()+ CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2)*0.01f;
         f *= f2;
@@ -107,7 +107,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus + manager.Cool();
+        f2 = GameInfo.SkillCoolPlus + manager.Cool() + CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;
@@ -123,7 +123,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus + manager.Cool();
+        f2 = GameInfo.SkillCoolPlus + manager.Cool() + CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Skill_Item_Ori : MonoBehaviour
 {
     public PlayerInfo playerinfo;
+    public PlayerStatus stat;
     public Skill_ItemInfo info;
     protected bool startcheck = false;
     public SkillManager manager;
@@ -29,6 +30,10 @@ public class Skill_Item_Ori : MonoBehaviour
         info.Real1 = info.Real1Check[info.Lv];
         info.Real2 = info.Real2Check[info.Lv];
 
+        if (info.HpPlusC+ info.HpPlusPer > 0)
+        {
+            stat.PlayerHpMax();
+        }
 
 }
 

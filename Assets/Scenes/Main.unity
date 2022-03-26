@@ -1194,6 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 254640745}
   manager: {fileID: 1428158546}
 --- !u!114 &254640744
@@ -1586,6 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 385692345}
   manager: {fileID: 1428158546}
 --- !u!114 &385692344
@@ -4811,6 +4813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 838940893}
   manager: {fileID: 1428158546}
 --- !u!114 &838940892
@@ -5417,6 +5420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 1010264068}
   manager: {fileID: 1428158546}
 --- !u!1 &1069256925
@@ -6679,6 +6683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 1280769300}
   manager: {fileID: 1428158546}
 --- !u!1 &1318614033
@@ -7548,6 +7553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 1517399890}
   manager: {fileID: 1428158546}
 --- !u!114 &1517399889
@@ -10397,12 +10403,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4701004815584131811}
-  moveSpeed: 5
   move: {x: 0, y: 0, z: 0}
   levelup: {fileID: 167265273}
   pad: {fileID: 1578246705}
   stick: {fileID: 280040783}
   ani: {fileID: 1077720423}
+  playerinfo: {fileID: 0}
 --- !u!114 &2096178707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10624,19 +10630,7 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2128872704994612918}
-        m_TargetAssemblyTypeName: PlayerStatus, Assembly-CSharp
-        m_MethodName: SliderUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2134257232
 GameObject:
   m_ObjectHideFlags: 0
@@ -10669,6 +10663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
   info: {fileID: 2134257235}
   manager: {fileID: 1428158546}
 --- !u!114 &2134257234
@@ -10864,5 +10859,9 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 865185821}
+    - target: {fileID: 7448565387035373586, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1428158546}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97831a885808a76488d5cb820e0abb55, type: 3}

@@ -7,7 +7,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     IPointerUpHandler, IDragHandler
 {
     public Transform player;
-    [SerializeField] private float moveSpeed;
+   // [SerializeField] private float moveSpeed;
     public Vector3 move;
     private bool isMove;
     private bool isStop;
@@ -15,6 +15,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     public RectTransform pad;
     public RectTransform stick;
     public Animator ani;
+    public PlayerInfo playerinfo;
     public void OnDrag(PointerEventData eventData)
     {
         if (isStop == false&& levelup.testcheck == false)
@@ -55,7 +56,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
         {
             while (true)
             {
-                player.Translate(move * moveSpeed * Time.deltaTime, Space.World);
+                player.Translate(move * playerinfo._Speed()*0.01f * Time.deltaTime, Space.World);
                 //player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(move), 20 * Time.deltaTime);
                 if (move != Vector3.zero)
                     player.rotation = Quaternion.LookRotation(move);

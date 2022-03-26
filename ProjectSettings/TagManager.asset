@@ -13,6 +13,8 @@ TagManager:
   - Bullet
   - ParentScrollManager
   - NestedScrollManager
+  - CardManager
+  - CharManaer
   layers:
   - Default
   - TransparentFX

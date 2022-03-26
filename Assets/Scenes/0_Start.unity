@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 563478248}
   - component: {fileID: 563478249}
   - component: {fileID: 563478250}
+  - component: {fileID: 563478251}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -322,8 +323,15 @@ MonoBehaviour:
   audioSo: {fileID: 563478249}
   CharacterIdx: 0
   MapIdx: 0
+  SkillIdx: 0
   CharacterActive: 
-  CharacterMax: 2
+  CharacterMax: 0
+  PlayerCardMax: 4
+  CardMax: 0
+  PlayerCardIdxs: 
+  PlayerCardCheck: 
+  PlayerCardCnt: 0
+  CardsInfo: []
   Language: Korean
 --- !u!114 &563478247
 MonoBehaviour:
@@ -343,6 +351,8 @@ MonoBehaviour:
   dataPath_SkillItem: project - SkillItem_Info
   dataPath_Xp: project - Exp_Info
   dataPath_String: project - GameText
+  dataPath_Card: project - Card_Info
+  dataPath_Map: project - Map_Info
   GameText_Korean: []
   GameText_English: []
   GameText_Japan: []
@@ -463,6 +473,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563478243}
   m_Enabled: 1
+--- !u!114 &563478251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113cf87c875649b419ed01496610f6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1609600821
 GameObject:
   m_ObjectHideFlags: 0

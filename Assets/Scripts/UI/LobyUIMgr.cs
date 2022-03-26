@@ -76,7 +76,16 @@ public class LobyUIMgr : MonoBehaviour
             {
                int s= TestList[i].GetComponent<TextIdx>().Idx;
 
+            if (s == 99999)
+            {
+                TestList[i].text = "";
+
+            }
+            else
+            {
                 TestList[i].text = csvData.GameText(s);
+
+            }
             }
 
         charmanager.CharSetString();
