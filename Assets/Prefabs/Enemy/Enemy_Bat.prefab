@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -3990043763293345170}
   - component: {fileID: -7969045735534081104}
   - component: {fileID: -3566236342721188876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,9 +185,6 @@ MonoBehaviour:
   Denfece: 0
   Speed: 0
   ItemIdx: 0
-  itemprefabs:
-  - {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
-  - {fileID: 6627993160295598616, guid: 1aa7a16f0a61cdd4fadbd44a0107c51e, type: 3}
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
   uimanager: {fileID: 0}

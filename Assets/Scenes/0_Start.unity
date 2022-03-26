@@ -332,6 +332,7 @@ MonoBehaviour:
   PlayerCardCheck: 
   PlayerCards: 
   CardsInfo: []
+  CharsInfo: []
   Language: Korean
 --- !u!114 &563478247
 MonoBehaviour:

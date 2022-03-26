@@ -265,6 +265,10 @@ public class csvData : MonoBehaviour
             GameText_English.Add(data[i]["English"].ToString());
             GameText_Japan.Add(data[i]["Japan"].ToString());
             GameText_China.Add(data[i]["China"].ToString());
+            GameText_Korean[i] = GameText_Korean[i].Replace("`w`", "\n");
+            GameText_English[i] = GameText_English[i].Replace("`w`", "\n");
+            GameText_Japan[i] = GameText_Japan[i].Replace("`w`", "\n");
+            GameText_China[i] = GameText_China[i].Replace("`w`", "\n");
         }
 
 

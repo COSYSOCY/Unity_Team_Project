@@ -76,30 +76,7 @@ public class CardManager : MonoBehaviour
         }
 
         // 테스트
-        GameInfo.inst.PlayerCards.Add(1);
-        GameInfo.inst.PlayerCards.Add(2);
-        GameInfo.inst.PlayerCards.Add(3);
-        GameInfo.inst.PlayerCards.Add(4);
-        GameInfo.inst.PlayerCards.Add(5);
-        GameInfo.inst.PlayerCards.Add(6);
-        GameInfo.inst.PlayerCards.Add(7);
-        GameInfo.inst.PlayerCards.Add(8);
-        GameInfo.inst.PlayerCards.Add(9);
-        GameInfo.inst.PlayerCards.Add(10);
-        GameInfo.inst.PlayerCards.Add(11); // 버그확인
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(Random.Range(1,9));
-        GameInfo.inst.PlayerCards.Add(11); // 버그확인
+
 
         // 테스트
 
@@ -418,4 +395,30 @@ public class CardManager : MonoBehaviour
         }
 
     }
+
+    public void ItemAdd(int i)
+    {
+
+        if (i >= GameInfo.inst.CardMax)
+        {
+            Debug.Log("버그");
+            return;
+        }
+        GameInfo.inst.PlayerCards.Add(i);
+        GameObject card = Instantiate(CardPrefab, parent);
+
+        cardlist.Add(card);
+        int a = GameInfo.inst.PlayerCards[GameInfo.inst.PlayerCards.Count-1];
+
+        card.GetComponent<CardIdx>().Idx = a;
+        card.GetComponent<CardIdx>().image.sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
+        CardNumReset();
+        SizeSet();
+    }
+
+    public void itemcheat()
+    {
+        ItemAdd(Random.Range(1, 10));
+    }
+
 }
