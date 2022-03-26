@@ -17,6 +17,7 @@ public class CardManager : MonoBehaviour
 
     public Color ClickColor;
     public Color BasicColor;
+    public LobyUIMgr lobyui;
 
     public GameObject ClickObject;
     public GameObject WarningTextOb;
@@ -356,7 +357,9 @@ public class CardManager : MonoBehaviour
         }
         int idx = ClickObject.GetComponent<CardIdx>().Idx;
         int gold = GameInfo.inst.CardsInfo[idx].CardPrice;
+        
         GameInfo.PlayerGold += gold;
+        lobyui.LobyGoldAc();
         if (ClickObject.GetComponent<CardIdx>().IsPlayerCard) //장비칸에서 판매
         {
             int num = ClickObject.GetComponent<CardIdx>().num;
