@@ -10,7 +10,6 @@ public class MapManager : MonoBehaviour
 	public static Vector2 viewerPosition;
 	int chunkSize = 100;
 	int chunksVisibleInViewDst;
-	public bool GameStart;
 
 	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
 	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
@@ -27,12 +26,10 @@ public class MapManager : MonoBehaviour
 
 	void Update()
 	{
-		if (GameStart)
-        {
+
 
 		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
 		UpdateVisibleChunks();
-        }
 	}
 	void UpdateVisibleChunks()
 	{

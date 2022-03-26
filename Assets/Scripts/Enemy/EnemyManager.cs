@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
 
-    //EnemyPooling enemyPooling;
-    [SerializeField] private GameObject enemy;
+
     [SerializeField] private Transform player;
 
     //시간 관련
@@ -56,7 +55,7 @@ public class EnemyManager : MonoBehaviour
 
     IEnumerator CreateEnemyTrigger()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         while (true)
         {
             if (playerstat.EnemyCnt < playerstat.EnemyMax)
@@ -81,7 +80,7 @@ public class EnemyManager : MonoBehaviour
     //---------------------------------
     IEnumerator CallEnemy()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         while (!isGameOver)
         {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;

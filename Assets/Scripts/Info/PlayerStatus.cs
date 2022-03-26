@@ -73,53 +73,7 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-    public void tiemtrigger(float t)
-    {
-        switch (t)
-        {
-            case 30:
-                EnemyMax += 10;
-                break;
-            case 60:
-                EnemyMax += 10;
-                EnemyDes("Enemy_1", 0);
-                EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 90:
-                EnemyMax += 10;
-                EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 120:
-                EnemyMax += 20;
-                EnemyDes("Enemy_2", 1);
-                EnemyCreateName[0] = "Enemy_3";
-                break;
-            case 180:
-                EnemyMax += 20;
-                EnemyDes("Enemy_3", 2);
-                EnemyCreateName[0] = "Enemy_4";
-                break;
-            case 240:
-                EnemyMax += 20;
-                EnemyDes("Enemy_4", 3);
-                EnemyCreateName[0] = "Enemy_5";
-                break;
-            case 300:
-                EnemyMax += 10;
-                break;
-            case 360:
-                EnemyMax += 10;
-                break;
-            case 420:
-                EnemyMax += 10;
-                break;
-            case 480:
-                break;
 
-            default:
-                break;
-        }
-    }
     public void SliderUpdate()
     {
         if (playerInfo.Hp == 0 || playerInfo.MaxHp == 0)

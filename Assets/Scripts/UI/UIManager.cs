@@ -15,12 +15,12 @@ public class UIManager : MonoBehaviour
     public void KillUp()
     {
         playerinfo.Kill++;
-        KillText.text ="Kill : "+playerinfo.Kill;
+        KillText.text =""+playerinfo.Kill;
     }
     public void GoldUp(int gold)
     {
         playerinfo.Gold+=gold;
-        GoldText.text = "Gold : " + playerinfo.Gold;
+        GoldText.text = "" + playerinfo.Gold;
     }
     public void XpSet()
     {
@@ -32,5 +32,9 @@ public class UIManager : MonoBehaviour
     public void TimeCheck()
     {
         TimeText.text = playerinfo.timeM.ToString() + " : " + playerinfo.timeS.ToString("00");
+    }
+    public void OptionButton(float f)
+    {
+        Time.timeScale = f;
     }
 }

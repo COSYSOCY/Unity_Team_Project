@@ -32,24 +32,24 @@ public class PlayerInfo : MonoBehaviour
         //item_range = 2.5f;
         status.PlayerHpMax();
         Hp = MaxHp;
-        StartCoroutine(timecheck());
+        //StartCoroutine(timecheck());
     }
-    IEnumerator timecheck()
-    {
-        while (true)
-        {
-        yield return new WaitForSeconds(1f);
-            timeplus++;
-            timeS++;
-            if (timeS >= 60)
-            {
-                timeM++;
-                timeS = timeS - 60;
-            }
-            ui.TimeCheck();
-            status.tiemtrigger(timeplus);
-        }
-    }
+    //IEnumerator timecheck()
+    //{
+    //    while (true)
+    //    {
+    //    yield return new WaitForSeconds(1f);
+    //        timeplus++;
+    //        timeS++;
+    //        if (timeS >= 60)
+    //        {
+    //            timeM++;
+    //            timeS = timeS - 60;
+    //        }
+    //        ui.TimeCheck();
+    //        status.tiemtrigger(timeplus);
+    //    }
+    //}
 
     public float _Speed()
     {

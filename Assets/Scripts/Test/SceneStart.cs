@@ -16,12 +16,12 @@ public class SceneStart : MonoBehaviour
         moving.ani = g.GetComponent<Animator>();
         moving.GameStart = true;
         Hpbar.SetActive(true);
-        MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
-        MapManager.instance.GameStart = true;
+        //MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
+        //MapManager.instance.GameStart = true;
+        MapList[GameInfo.inst.MapIdx].SetActive(true);
         yield return new WaitForSeconds(1);
         manager.Skills[GameInfo.inst.SkillIdx].SetActive(true);
         CharAddFunc(GameInfo.inst.CharacterIdx);
-        MapAddFunc(GameInfo.inst.MapIdx);
 
     }
     void Start()
@@ -59,9 +59,5 @@ public class SceneStart : MonoBehaviour
         }
     }
 
-    public void MapAddFunc(int i)
-    {
-
-    }
 
 }
