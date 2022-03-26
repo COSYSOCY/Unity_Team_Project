@@ -27,7 +27,6 @@ public class SceneStart : MonoBehaviour
     void Start()
     {
         StartCoroutine(IStart());
-        ObjectPooler.inst.pools.
     }
 
     public void CharAddFunc(int i)
