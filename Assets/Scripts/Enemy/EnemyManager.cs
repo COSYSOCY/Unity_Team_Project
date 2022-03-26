@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour
 
     IEnumerator CreateEnemyTrigger()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             if (playerstat.EnemyCnt < playerstat.EnemyMax)
@@ -81,7 +81,7 @@ public class EnemyManager : MonoBehaviour
     //---------------------------------
     IEnumerator CallEnemy()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         while (!isGameOver)
         {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;

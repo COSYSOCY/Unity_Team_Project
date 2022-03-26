@@ -2,6 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class MapInfo
+{
+    public int MapIdx;
+    public int MapNameNum;
+    public int MapInfoNum;
+    public int MapIconNum;
+
+    public MapInfo(int _MapIdx, int _MapNameNum, int _MapInfoNum, int _MapIconNum)
+    {
+        MapIdx= _MapIdx;
+        MapNameNum= _MapNameNum;
+        MapInfoNum= _MapInfoNum;    
+        MapIconNum= _MapIconNum;
+    }
+
+}
+
+
 public class csvData : MonoBehaviour
 {
     static csvData inst;
@@ -94,6 +113,10 @@ public class csvData : MonoBehaviour
     public  List<string> GameText_Japan = new List<string>();
     public  List<string> GameText_China = new List<string>();
 
+    public  List<int> MapNameNum = new List<int>();
+    public  List<int> MapInfoNum = new List<int>();
+    public  List<int> MapIconNum = new List<int>();
+
     public static List<int> CardNameNum = new List<int>();
     public static List<int> CardInfoNum = new List<int>();
     public static List<int> CardIconNum = new List<int>();
@@ -120,6 +143,25 @@ public class csvData : MonoBehaviour
         String_Read();
        Exp_Read();
        Card_Read();
+       Map_Read();
+    }
+
+    public void Map_Read()
+    {
+        data = CSVReader.Read(dataPath_Map);
+        //GameInfo.inst.MapsInfo = new List(MapInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            MapNameNum.Add(int.Parse(data[i]["맵이름텍스트번호"].ToString()));
+            MapInfoNum.Add(int.Parse(data[i]["맵설명텍스트번호"].ToString()));
+            MapIconNum.Add(int.Parse(data[i]["맵아이콘번호"].ToString()));
+            GameInfo.inst.MapsInfo.Add(new MapInfo(i,MapNameNum[i],MapInfoNum[i], MapIconNum[i]));
+
+
+
+        }
+        GameInfo.inst.CardMax = data.Count;
+        GameInfo.inst.CardCheck();
     }
     public void Card_Read()
     {

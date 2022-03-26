@@ -27,10 +27,7 @@ public class LobyUIMgr : MonoBehaviour
 
 
 
-    public void PlayBtn()
-    {
-        SceneManager.LoadScene("Main");
-    }
+
     public void SettingButton()
     {
         SettingObject.SetActive(true);

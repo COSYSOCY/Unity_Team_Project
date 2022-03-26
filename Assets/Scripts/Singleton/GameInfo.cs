@@ -33,9 +33,9 @@ public class GameInfo : MonoBehaviour
 	public static int PlayerGold; // 플레이어 골드
 	public static int PlayerPoint; // 플레이어 보석
 
-	public int CharacterIdx;
-	public int MapIdx;
-	public int SkillIdx;
+	public int CharacterIdx; //캐릭터번호
+	public int MapIdx; // 맵번호
+	public int SkillIdx; // 스킬번호
 	public List<int> CharacterActive; // 0 없음 1 구매가능 2 보유함
 	public int CharacterMax;
 	public static float Range; // 자석
@@ -51,6 +51,9 @@ public class GameInfo : MonoBehaviour
 	//
 	public List<CharacterBtn> CharsInfo; // 게임의 캐릭터정보
 
+	//
+	public List<MapInfo> MapsInfo;
+	//
 	public static float HpPlus; // 최대체력 설정
 	public static float DamagePlus;//데미지추가%
 	public static int BulletCntPlus;//투사체수증가

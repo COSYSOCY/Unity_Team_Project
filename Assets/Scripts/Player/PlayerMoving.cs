@@ -16,9 +16,10 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     public RectTransform stick;
     public Animator ani;
     public PlayerInfo playerinfo;
+    public bool GameStart;
     public void OnDrag(PointerEventData eventData)
     {
-        if (isStop == false&& levelup.testcheck == false)
+        if (isStop == false&& levelup.testcheck == false && GameStart)
         {
             stick.position = eventData.position;
             stick.localPosition =
@@ -28,7 +29,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (isStop == false&& levelup.testcheck == false)
+        if (isStop == false&& levelup.testcheck == false && GameStart)
         {
             pad.position = eventData.position;
             pad.gameObject.SetActive(true);
@@ -38,7 +39,7 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (levelup.testcheck==false)
+        if (levelup.testcheck==false && GameStart)
         {
 
         stick.localPosition = Vector2.zero;
@@ -52,11 +53,11 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
     IEnumerator Movement()
     {
 
-        if (isStop == false)
+        if (isStop == false && GameStart)
         {
             while (true)
             {
-                player.Translate(move * playerinfo._Speed()*0.01f * Time.deltaTime, Space.World);
+                player.Translate(move * playerinfo._Speed()*0.1f * Time.deltaTime, Space.World);
                 //player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(move), 20 * Time.deltaTime);
                 if (move != Vector3.zero)
                     player.rotation = Quaternion.LookRotation(move);

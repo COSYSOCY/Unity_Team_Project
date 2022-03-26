@@ -6,7 +6,7 @@ using System;
 
 public class ObjectPooler : MonoBehaviour
 {
-	static ObjectPooler inst;
+	public static ObjectPooler inst;
 	void Awake() => inst = this;
 
 	[Serializable]
@@ -17,10 +17,11 @@ public class ObjectPooler : MonoBehaviour
 		public int size;
 	}
 
-	[SerializeField] Pool[] pools;
+	[SerializeField] 
+	public Pool[] pools;
 	List<GameObject> spawnObjects;
 	Dictionary<string, Queue<GameObject>> poolDictionary;
-
+	
 	public static Dictionary<string, List<GameObject>> Enemy_Check;
 
 	readonly string INFO = " 오브젝트에 다음을 적으세요 \nvoid OnDisable()\n{\n" +
