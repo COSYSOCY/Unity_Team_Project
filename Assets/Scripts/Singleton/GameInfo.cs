@@ -52,6 +52,8 @@ public class GameInfo : MonoBehaviour
 
 	//
 	public List<MapInfo> MapsInfo;
+	public List<int> PlayerMap; // 플레이어가 가지고있는 맵
+
 	//
 	public static float HpPlus; // 최대체력 설정
 	public static float DamagePlus;//데미지추가%
@@ -67,6 +69,11 @@ public class GameInfo : MonoBehaviour
 	public string Language = "Korean"; // 언어
 
 
+	public bool isTestMode;
+	//상점
+	public int AdGoldFreeMax; // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
+
+
 
 
 	void Awake()
@@ -75,6 +82,8 @@ public class GameInfo : MonoBehaviour
 		audioSo = inst.GetComponent<AudioSource>();
 		PlayerGold = 600;
 		PlayerPoint = 5;
+
+
 	}
 
 	public void CharaMax()
@@ -90,9 +99,17 @@ public class GameInfo : MonoBehaviour
 		CharacterActive[1] = 1;
 		CharacterActive[2] = 1;
 		// 임시
+		AdGoldFreeMax = 3;
+		//
 	}
 
-	public void CardCheck()
+    public void TestFunc() //처음 할때 주는거 테스트중
+    {
+		AdGoldFreeMax = 3;
+
+	}
+
+    public void CardCheck()
     {
         for (int i = 0; i < CardMax; i++)
         {
@@ -128,6 +145,11 @@ public class GameInfo : MonoBehaviour
 
 		// 임시
 	}
+	public void mapcheck()
+    {
+		PlayerMap[0] = 1;
+		PlayerMap[1] = 1;
+    }
 	public static void soundcheck()
     {
 		inst.audioSo.volume = 1f;

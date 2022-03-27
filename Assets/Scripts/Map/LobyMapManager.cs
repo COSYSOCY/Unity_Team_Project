@@ -10,10 +10,48 @@ public class LobyMapManager : MonoBehaviour
     public Text MapInfo;
     public Image MapIcon;
     public List<Sprite> icons;
+
+    public Image LobyMapIcon;
+    public Text LobyMapName;
+    public Text LobyMapInfo;
+
+    public Text LockInfo;
+
+    public int SelectNum;
+
+    public GameObject Loby;
+    public GameObject select;
+    public GameObject Lock;
+    public GameObject selectBtn;
+
+
     void Start()
     {
+
         int MapIdx = GameInfo.inst.MapIdx;
+        SelectNum = MapIdx;
+        startmapsetting();
         MapSetting(MapIdx);
+    }
+    public void MapStart()
+    {
+        SelectNum = GameInfo.inst.MapIdx;
+        MapSetting(GameInfo.inst.MapIdx);
+        Lock.SetActive(false);
+        selectBtn.SetActive(true);
+
+    }
+    public void startmapsetting()
+    {
+        int MapIdx = GameInfo.inst.MapIdx;
+        int NameNum = GameInfo.inst.MapsInfo[MapIdx].MapNameNum;
+        int InfoNum = GameInfo.inst.MapsInfo[MapIdx].MapInfoNum;
+        int IconNum = GameInfo.inst.MapsInfo[MapIdx].MapIconNum;
+        LobyMapIcon.sprite = icons[IconNum];
+        LobyMapName.text = csvData.GameText(NameNum);
+        LobyMapInfo.text = csvData.GameText(InfoNum);
+        LobyMapName.GetComponent<TextIdx>().Idx = NameNum;
+        LobyMapInfo.GetComponent<TextIdx>().Idx = InfoNum;
     }
 
     void MapSetting(int i)
@@ -21,12 +59,25 @@ public class LobyMapManager : MonoBehaviour
         int NameNum = GameInfo.inst.MapsInfo[i].MapNameNum;
         int InfoNum = GameInfo.inst.MapsInfo[i].MapInfoNum;
         int IconNum = GameInfo.inst.MapsInfo[i].MapIconNum;
+        int LockInfoNum = GameInfo.inst.MapsInfo[i].MapLockInfoNum;
         MapIcon.sprite=icons[IconNum];
         MapName.text= csvData.GameText(NameNum);
         MapInfo.text= csvData.GameText(InfoNum);
         MapName.GetComponent<TextIdx>().Idx = NameNum;
         MapInfo.GetComponent<TextIdx>().Idx = InfoNum;
-        GameInfo.inst.MapIdx = i;
+        //GameInfo.inst.MapIdx = i;
+        if (GameInfo.inst.PlayerMap[SelectNum] == 0)
+        {
+            Lock.SetActive(true);
+            selectBtn.SetActive(false);
+            LockInfo.GetComponent<TextIdx>().Idx = LockInfoNum;
+            LockInfo.text=csvData.GameText(LockInfoNum);
+        }
+        else
+        {
+            Lock.SetActive(false);
+            selectBtn.SetActive(true);
+        }
     }
 
     public void PlayBtn()
@@ -38,29 +89,43 @@ public class LobyMapManager : MonoBehaviour
         if (i==0)
         {
             //øﬁ¬ ¿Ãµø
-            GameInfo.inst.MapIdx--;
-            if (GameInfo.inst.MapIdx <0)
+            //GameInfo.inst.MapIdx--;
+            SelectNum--;
+            if (SelectNum < 0)
             {
-                GameInfo.inst.MapIdx = GameInfo.inst.MapsInfo.Count - 1;
+                SelectNum = GameInfo.inst.MapsInfo.Count - 1;
             }
         }
         else
         {
-            GameInfo.inst.MapIdx++;
-            if (GameInfo.inst.MapIdx >= GameInfo.inst.MapsInfo.Count)
+            SelectNum++;
+
+            if (SelectNum >= GameInfo.inst.MapsInfo.Count)
             {
-                GameInfo.inst.MapIdx = 0;
+                SelectNum = 0;
             }
         }
 
 
 
-        int MapIdx = GameInfo.inst.MapIdx;
+        int MapIdx = SelectNum;
         MapSetting(MapIdx);
     }
     public void ExitButton()
     {
-        MapSetting(0);
+        //Debug.Log("zz");
+    }
+
+    public void SelectBtn()
+    {
+        if (GameInfo.inst.PlayerMap[SelectNum] != 0)
+        {
+
+        GameInfo.inst.MapIdx = SelectNum;
+        Loby.SetActive(true);
+        select.SetActive(false);
+        startmapsetting();
+        }
     }
 
 }

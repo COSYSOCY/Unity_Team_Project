@@ -35,9 +35,11 @@ public class MapTrigger5 : MonoBehaviour
         switch (t)
         {
             case 30:
+                manager.EnemyCreate("Boss_0");
                 stat.EnemyMax += 10;
                 break;
             case 60:
+                manager.EnemyCreate("Boss_1");
                 stat.EnemyMax += 10;
                 stat.EnemyDes("Enemy_1", 0);
                 stat.EnemyCreateName[0] = "Enemy_2";

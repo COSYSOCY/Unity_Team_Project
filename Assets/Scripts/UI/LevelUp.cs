@@ -25,7 +25,7 @@ public class LevelUp : MonoBehaviour
     public GameObject ShowText;
     public GameObject ShowImage;
 
-    public bool isTestMode;
+
 
     private void Start()
     {
@@ -457,7 +457,7 @@ public class LevelUp : MonoBehaviour
 
     void LoadFrontAd()
     {
-        frontAd = new InterstitialAd(isTestMode ? frontTestID : frontID);
+        frontAd = new InterstitialAd(GameInfo.inst.isTestMode ? frontTestID : frontID);
         frontAd.LoadAd(GetAdRequest());
         frontAd.OnAdClosed += (sender, e) =>
         {
@@ -482,7 +482,7 @@ public class LevelUp : MonoBehaviour
 
     void LoadRewardAd()
     {
-        rewardAd = new RewardedAd(isTestMode ? rewardTestID : rewardID);
+        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
         rewardAd.LoadAd(GetAdRequest());
         rewardAd.OnUserEarnedReward += (sender, e) =>
         {

@@ -515,7 +515,10 @@ MonoBehaviour:
   CardsInfo: []
   CharsInfo: []
   MapsInfo: []
+  PlayerMap: 
   Language: Korean
+  isTestMode: 1
+  AdGoldFreeMax: 0
 --- !u!114 &563478247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +546,7 @@ MonoBehaviour:
   MapNameNum: 
   MapInfoNum: 
   MapIconNum: 
+  MapLockInfoNum: 
 --- !u!114 &563478248
 MonoBehaviour:
   m_ObjectHideFlags: 0

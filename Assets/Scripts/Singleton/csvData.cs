@@ -9,14 +9,17 @@ public class MapInfo
     public int MapNameNum;
     public int MapInfoNum;
     public int MapIconNum;
+    public int MapLockInfoNum;
 
-    public MapInfo(int _MapIdx, int _MapNameNum, int _MapInfoNum, int _MapIconNum)
+    public MapInfo(int _MapIdx, int _MapNameNum, int _MapInfoNum, int _MapIconNum, int _MapLockInfoNum)
     {
         MapIdx= _MapIdx;
         MapNameNum= _MapNameNum;
         MapInfoNum= _MapInfoNum;    
         MapIconNum= _MapIconNum;
+        MapLockInfoNum= _MapLockInfoNum;
     }
+
 
 }
 
@@ -116,6 +119,7 @@ public class csvData : MonoBehaviour
     public  List<int> MapNameNum = new List<int>();
     public  List<int> MapInfoNum = new List<int>();
     public  List<int> MapIconNum = new List<int>();
+    public  List<int> MapLockInfoNum = new List<int>();
 
     public static List<int> CardNameNum = new List<int>();
     public static List<int> CardInfoNum = new List<int>();
@@ -155,11 +159,14 @@ public class csvData : MonoBehaviour
             MapNameNum.Add(int.Parse(data[i]["맵이름텍스트번호"].ToString()));
             MapInfoNum.Add(int.Parse(data[i]["맵설명텍스트번호"].ToString()));
             MapIconNum.Add(int.Parse(data[i]["맵아이콘번호"].ToString()));
-            GameInfo.inst.MapsInfo.Add(new MapInfo(i,MapNameNum[i],MapInfoNum[i], MapIconNum[i]));
+            MapLockInfoNum.Add(int.Parse(data[i]["잠금텍스트번호"].ToString()));
+            GameInfo.inst.MapsInfo.Add(new MapInfo(i,MapNameNum[i],MapInfoNum[i], MapIconNum[i],MapLockInfoNum[i]));
+        GameInfo.inst.PlayerMap.Add(0);
 
 
 
         }
+        GameInfo.inst.mapcheck();
     }
     public void Card_Read()
     {
