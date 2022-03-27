@@ -16,6 +16,7 @@ public class SceneStart : MonoBehaviour
         moving.ani = g.GetComponent<Animator>();
         moving.GameStart = true;
         Hpbar.SetActive(true);
+        Time.timeScale = 1f;
         //MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
         //MapManager.instance.GameStart = true;
         MapList[GameInfo.inst.MapIdx].SetActive(true);
@@ -28,6 +29,7 @@ public class SceneStart : MonoBehaviour
     void Start()
     {
         StartCoroutine(IStart());
+
     }
 
     public void CharAddFunc(int i)

@@ -30,6 +30,7 @@ public class LobyUIMgr : MonoBehaviour
         TextReset();
         LobyGoldAc();
         check();
+        Time.timeScale = 1f;
     }
 
 

@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("01_Loby");
     }
     public void SoundCheck()
