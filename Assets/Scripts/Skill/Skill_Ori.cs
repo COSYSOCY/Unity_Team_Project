@@ -157,6 +157,11 @@ int bulletCntMax; // 투사체 최대갯수
         f = info.SkillReal3;
         return f;
     }
+    public virtual void LevelUpFunc()
+    {
+
+    }
+
     public void LevelUp()
     {
 
@@ -177,7 +182,8 @@ int bulletCntMax; // 투사체 최대갯수
         info.SkillReal1 = info.SkillReal1Check[i];
         info.SkillReal2 = info.SkillReal2Check[i];
         info.SkillReal3 = info.SkillReal3Check[i];
-
+        LevelUpFunc();
     }
+
 
 }

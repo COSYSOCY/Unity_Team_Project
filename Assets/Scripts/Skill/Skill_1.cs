@@ -12,7 +12,14 @@ public class Skill_1 : Skill_Ori
         StartCoroutine(Skill_Update());
     }
 
+    public override void LevelUpFunc()
+    {
+        //
+        if (info.Lv==2) // 2레벨이 될경우 실행
+        {
 
+        }
+    }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {

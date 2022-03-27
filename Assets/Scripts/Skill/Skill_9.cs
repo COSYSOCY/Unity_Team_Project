@@ -7,7 +7,14 @@ public class Skill_9 : Skill_Ori
 
     public Vector3 endpos;
 
+    public override void LevelUpFunc()
+    {
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
+        {
 
+        }
+    }
 
     void Start_Func()
     {

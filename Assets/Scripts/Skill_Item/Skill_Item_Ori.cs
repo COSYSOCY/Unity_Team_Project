@@ -34,9 +34,12 @@ public class Skill_Item_Ori : MonoBehaviour
         {
             stat.PlayerHpMax();
         }
+        LevelUpFunc();
+    }
+    public virtual void LevelUpFunc()
+    {
 
-}
-
+    }
     public virtual void StartFunc()
     {
         LevelUp();
