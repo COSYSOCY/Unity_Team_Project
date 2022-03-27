@@ -30,12 +30,22 @@ public class Skill_1 : Skill_Ori
             StartCoroutine(Skill_Update2());
         }
     }
+    float damage()
+    {
+        float f = _Damage();
+        
+        if (GameInfo.inst.PlayerCardCheck[8]>0)
+        {
+            f = f + (GameInfo.inst.PlayerCardCheck[8] * f);
+        }
+        return f;
+    }
     IEnumerator Skill_Update2()
     {
         for (int i = 1; i <= _BulletCnt(); i++)
         {
             GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", bulletPos.transform.position, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.GetComponent<Bullet_Info>().damage = damage();
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
             if (i % 2 == 0)
             {

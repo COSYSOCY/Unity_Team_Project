@@ -11,6 +11,7 @@ public class MainSingleton : MonoBehaviour
     public ItemSystem dropSystem;
     public UIManager uimanager;
     public PlayerStatus playerstat;
+    public GameObject birdtarget;
     private void Awake()
     {
             instance = this;

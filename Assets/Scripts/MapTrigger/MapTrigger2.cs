@@ -38,6 +38,12 @@ public class MapTrigger2 : MonoBehaviour
                 manager.EnemyCreate("Boss_0");
                 stat.EnemyMax += 10;
                 break;
+            case 40:
+                manager.EnemyCreate("Boss_0");
+                break;
+            case 50:
+                manager.EnemyCreate("Boss_0");
+                break;
             case 60:
                 manager.EnemyCreate("Boss_1");
                 stat.EnemyMax += 10;
@@ -49,17 +55,17 @@ public class MapTrigger2 : MonoBehaviour
                 stat.EnemyCreateName[0] = "Enemy_2";
                 break;
             case 120:
-                stat.EnemyMax += 20;
+                stat.EnemyMax += 10;
                 stat.EnemyDes("Enemy_2", 1);
                 stat.EnemyCreateName[0] = "Enemy_3";
                 break;
             case 180:
-                stat.EnemyMax += 20;
+                stat.EnemyMax += 10;
                 stat.EnemyDes("Enemy_3", 2);
                 stat.EnemyCreateName[0] = "Enemy_4";
                 break;
             case 240:
-                stat.EnemyMax += 20;
+                stat.EnemyMax += 10;
                 stat.EnemyDes("Enemy_4", 3);
                 stat.EnemyCreateName[0] = "Enemy_5";
                 break;
@@ -70,6 +76,7 @@ public class MapTrigger2 : MonoBehaviour
                 stat.EnemyMax += 10;
                 break;
             case 420:
+                stat.EnemyMax += 10;
                 stat.EnemyMax += 10;
                 break;
             case 480:

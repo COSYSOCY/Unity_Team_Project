@@ -81,6 +81,11 @@ int bulletCntMax; // 투사체 최대갯수
         f = info.BulletAtCri;
         return f;
     }
+    /// <summary>
+    /// b는 true면 쿨감적용
+    /// </summary>
+    /// <param name="b"> 이 숫자 말야</param>
+    /// <returns></returns>
     protected float _CoolMain(bool b) // b 가 true면 쿨감 적용
     {
          float f;

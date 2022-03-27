@@ -17,11 +17,11 @@ public class EndGameScript : MonoBehaviour
 
     IEnumerator startFunc1()
     {
-        int xp = 500;
+        int xp = Random.Range(100,1000);
         int gold = MainSingleton.instance.playerinfo.Gold;
 
         // юс╫ц
-        gold += 500;
+        gold += Random.Range(100, 1000);
         // 
         yield return new WaitForSecondsRealtime(0.5f);
         if (xp > 0)
@@ -47,6 +47,7 @@ public class EndGameScript : MonoBehaviour
                 int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardIconNum;
 
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
+                bt.GetComponentInChildren<Text>().text = "";
                 bt.GetComponent<Image>().sprite = IconManager.inst.Icons[IconNum];
 
                 GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard[i]);
