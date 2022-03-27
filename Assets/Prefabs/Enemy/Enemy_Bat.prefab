@@ -192,6 +192,8 @@ MonoBehaviour:
   Enemy_Damage: 3
   damagecheck: 0
   player: {fileID: 0}
+  IsBoss: 0
+  NoPosReset: 1
 --- !u!114 &-3566236342721188876
 MonoBehaviour:
   m_ObjectHideFlags: 0

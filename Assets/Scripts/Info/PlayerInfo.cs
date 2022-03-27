@@ -23,6 +23,7 @@ public class PlayerInfo : MonoBehaviour
     public int SkillItemCnt;
     public int SkillMax;
     public int SkillItemMax;
+    public int ADRe = 0;
 
     private void Start()
     {

@@ -32,10 +32,33 @@ public class Enemy : MonoBehaviour
         //nav.enabled = true;
         //
     }
+    IEnumerator moveFunc()
+    {
+        while (true)
+        {
+            if (Vector3.Distance(target.position, transform.position) > 27f )
+            {  //30이상 멀어지면 재배치
+                if (info.IsBoss)
+                {
+                    info.BossMove();
+
+                }
+                else
+                {
+
+                info.EnemyMove();
+                }
+            }
+
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
     public void CreateStart()
     {
         StartCoroutine(UpdateEnemy());
+        info.moveCheck = true;
         nav.speed = info.Speed*0.1f;
+        StartCoroutine(moveFunc()); 
     }
     //SetDestination 버그 수정부분
     void OnDisable()

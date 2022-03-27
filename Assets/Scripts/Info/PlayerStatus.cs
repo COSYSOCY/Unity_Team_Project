@@ -11,7 +11,7 @@ public class PlayerStatus : MonoBehaviour
     public SkillManager manager;
     public UIManager uimanager;
     public bool dead;
-    public GameObject deadObject;
+    public GameObject AdReOb;
     public bool invin=false;
 
     public bool test=false;
@@ -27,6 +27,9 @@ public class PlayerStatus : MonoBehaviour
     public List<bool> EnemyDestory=new List<bool>();
     public float cardHpRegen=0;
     public float cardDefecne=0;
+    public bool IsAdIn = false;
+
+    public List<int> playingCard;
     private void Start()
     {
         StartCoroutine(HpRegen());
@@ -73,6 +76,10 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
+    public void CardDrop(int i)
+    {
+        playingCard.Add(i);
+    }
 
     public void SliderUpdate()
     {
@@ -98,6 +105,10 @@ public class PlayerStatus : MonoBehaviour
 
     public void Hp_Damage(float damage)
     {
+        if (IsAdIn)
+        {
+            return;
+        }
         float f = damage;
         float D = GameInfo.DefencePlus + manager.Defence()+ cardDefecne;
         f = f - D;
@@ -120,17 +131,22 @@ public class PlayerStatus : MonoBehaviour
     }
     public void Dead()
     {
-        deadObject.SetActive(true);
         dead = true;
         Time.timeScale = 0f;
+        if (playerInfo.ADRe==0 && GameInfo.PlayerPoint>=5)
+        {
+            AdReOb.SetActive(true);
+            
+        }
+        else
+        {
+            uimanager.EndGame();
+        }
+
+
 
     }
 
-    public void Replayer()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     public void XpPlus(int xp)
     {
@@ -156,12 +172,14 @@ public class PlayerStatus : MonoBehaviour
     public void LevelUp()
     {
         playerInfo.Xp = playerInfo.MaxXp-playerInfo.Xp;
+        
         if (playerInfo.Xp <=0)
         {
             playerInfo.Xp = 0;
         }
 
         playerInfo.Lv++;
+        uimanager.Leveltext();
         XpSet();
         level.LevelFunc();
     }
@@ -170,44 +188,20 @@ public class PlayerStatus : MonoBehaviour
         playerInfo.MaxXp = XpCheck[playerInfo.Lv-1];
         uimanager.XpSet();
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    //Debug.Log("È÷Æ®");
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        StartCoroutine(PlayerDamage());
-    //        test = true;
-    //    }
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-            
-    //        test = false;
-    //    }
-    //}
 
-    IEnumerator PlayerDamage()
+    public IEnumerator AdIn()
     {
-        if(!dead&&!invin)
-        {
-            HpPlus(-6);
-            invin = true;
-            yield return new WaitForSeconds(0.5f);
-            if (test==true)
-            {
-                invin = false;
-
-                StartCoroutine(PlayerDamage());
-            }
-            else
-            {
-            invin = false;
-
-            }
-        }
+        IsAdIn = true;
+        dead = false;
+        AdReOb.SetActive(false);
+        Time.timeScale = 1f;
+        playerInfo.ADRe++;
+        playerInfo.Hp=playerInfo.MaxHp;
+        SliderUpdate();
+        yield return new WaitForSeconds(3f);
+        IsAdIn = false;
     }
+
 
 
 

@@ -7,6 +7,7 @@ public class MapTrigger1 : MonoBehaviour
     public PlayerInfo info;
     public UIManager ui;
     public PlayerStatus stat;
+    public EnemyManager manager;
     private void Start()
     {
         StartCoroutine(timecheck());
@@ -34,9 +35,11 @@ public class MapTrigger1 : MonoBehaviour
         switch (t)
         {
             case 30:
+                manager.EnemyCreate("Boss_0");
                 stat.EnemyMax += 10;
                 break;
             case 60:
+                manager.EnemyCreate("Boss_1");
                 stat.EnemyMax += 10;
                 stat.EnemyDes("Enemy_1", 0);
                 stat.EnemyCreateName[0] = "Enemy_2";

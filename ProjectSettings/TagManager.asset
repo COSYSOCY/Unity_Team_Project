@@ -15,6 +15,7 @@ TagManager:
   - NestedScrollManager
   - CardManager
   - CharManager
+  - Check2
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
     public Sprite[] icons;
     public Text KillText;
     public Text HpText;
+    public Text LevelText;
+    public GameObject EndGameOb;
     private void Start()
     {
         if (GameInfo.inst.PlayerSE)
@@ -65,12 +67,26 @@ public class UIManager : MonoBehaviour
             GameInfo.inst.PlayerSE = true;
         }
     }
-
+    public void Leveltext()
+    {
+        LevelText.text = "Lv." + playerinfo.Lv;
+    }
     public void SettingOn()
     {
         int hp = (int)playerinfo.Hp;
         int Maxhp = (int)playerinfo.MaxHp;
         HpText.text = hp + " / " + Maxhp;
         KillText.text = playerinfo.Kill.ToString();
+    }
+    public void ReYes()
+    {
+
+            GameInfo.PlayerPoint -= 5;
+            StartCoroutine(MainSingleton.instance.playerstat.AdIn());
+
+    }
+    public void EndGame()
+    {
+        EndGameOb.SetActive(true);
     }
 }

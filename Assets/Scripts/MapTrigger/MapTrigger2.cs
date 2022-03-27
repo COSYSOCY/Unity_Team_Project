@@ -7,6 +7,7 @@ public class MapTrigger2 : MonoBehaviour
     public PlayerInfo info;
     public UIManager ui;
     public PlayerStatus stat;
+    public EnemyManager manager;
     private void Start()
     {
         StartCoroutine(timecheck());

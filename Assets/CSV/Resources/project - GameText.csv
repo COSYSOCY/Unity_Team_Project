@@ -526,8 +526,16 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 524,asd,옵션,Option,テスト,测试
 525,asd,돌아가기,Back,テスト,测试
 526,asd,광고보고 풀기,English Test,テスト,测试
-527,asd,켬,ON,,
-528,asd,끔,OFF,,
-529,asd,음악,Music,,
-530,asd,사운드,Sound,,
-531,asd,데미지표시,Damage Mark,,
+527,asd,켬,ON,テスト,测试
+528,asd,끔,OFF,テスト,测试
+529,asd,음악,Music,テスト,测试
+530,asd,사운드,Sound,テスト,测试
+531,asd,데미지표시,Damage Mark,テスト,测试
+532,,일시정지,Pause,テスト,测试
+533,,능력,English Test,テスト,测试
+534,,장신구,English Test,テスト,测试
+535,,나가게되면 지금 까지 얻었던 정보들이 사라집니다. 정말 나가겠습니까?,English Test,テスト,测试
+536,,부활,resurrection,テスト,测试
+537,,게임종료,GameOver,テスト,测试
+538,,전리품,booty,テスト,测试
+539,,탭해서 나가기,Tab Exit,テスト,测试

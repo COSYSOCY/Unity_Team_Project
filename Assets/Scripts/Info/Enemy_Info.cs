@@ -19,6 +19,9 @@ public class Enemy_Info : MonoBehaviour
     public float Enemy_Damage;
     public bool damagecheck;
     public GameObject player;
+    public bool IsBoss;
+    public bool NoPosReset;
+    public bool moveCheck;
 
     private void Awake()
     {
@@ -66,28 +69,26 @@ public class Enemy_Info : MonoBehaviour
             uimanager.KillUp();
         }
     }
-    void ItemRespawn(int i) // 랜덤아이템생성
-    {
-        int itemRnd = Random.Range(0, 10);
 
-        if (itemRnd <= 5)
-        {
-            if (i==1)
-            {
-                ObjectPooler.SpawnFromPool("item_xp_1", transform.position, transform.rotation);
-            }
-        }
-    }
     public void Dead()
     {
-    ItemRespawn(ItemIdx);
+        MainSingleton.instance.dropSystem.EnemyItemDrop(transform.position, Idx, ItemIdx);
 
+        if (!IsBoss)
+        {
         playerstatus.EnemyCnt--;
+
+        }
         gameObject.SetActive(false);
+        moveCheck = false;
             if (playerstatus.EnemyDestory[Idx] == true)
             {
                 Destroy(gameObject);
             }
+
+
+
+
     }
     IEnumerator Damage(float dagame)
     {
@@ -122,34 +123,33 @@ public class Enemy_Info : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(false);
         }
-    }
-    private void Update()
-    {   
-        if ((player.transform.position - transform.position).magnitude > 30)
-        {  //30이상 멀어지면 재배치
-            EnemyMove();
-        }
-        if ((player.transform.position - transform.position).magnitude > 30 && gameObject.CompareTag("FieldBoss"))
-        {  //30이상 멀어지면서 테그가 FieldBoss면 재배치
-            BossMove();
-        }
 
     }
-    void EnemyMove()
-    {   
-        float range = Random.Range(25f, 30f);
+
+    public void EnemyMove()
+    {
+        float range = Random.Range(23f, 24f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = player.transform.position + (Pos * range);
+        Pos.y = 0;
         transform.position = Pos;
+
+
+
     }
-    void BossMove()
+
+
+
+
+    public void BossMove()
     {
         Vector3 _target = player.transform.position;
-        Vector3 endPos = _target + new Vector3(_target.x - (transform.position.x * 0.9f), 1, _target.z - (transform.position.z * 0.9f));
+        Vector3 endPos = _target + new Vector3((_target.x-transform.position.x)*0.8f , 2, (_target.z- transform.position.z)*0.8f );
         transform.position = endPos;
+        transform.rotation = Quaternion.LookRotation(_target);
     }
     //private void OnBecameVisible()
     //{

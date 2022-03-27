@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
-    public List<Sprite> icons;
+    //public List<Sprite> icons;
     public List<Image> CardImages;
     public GameObject CardPrefab;
     public Transform parent;
@@ -67,7 +67,7 @@ public class CardManager : MonoBehaviour
                 }
                 else
                 {
-                    CardImages[i].sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
+                    CardImages[i].sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[a].CardIconNum];
                     
                     CardImages[i].GetComponentInParent<CardIdx>().Idx = GameInfo.inst.PlayerCardIdxs[i];
                 }
@@ -102,7 +102,7 @@ public class CardManager : MonoBehaviour
                         int a = GameInfo.inst.PlayerCards[i];
                         
                         card.GetComponent<CardIdx>().Idx = a;
-                        card.GetComponent<CardIdx>().image.sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
+                        card.GetComponent<CardIdx>().image.sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[a].CardIconNum];
                     }
 
                 }
@@ -112,7 +112,7 @@ public class CardManager : MonoBehaviour
                     cardlist.Add(card);
                     int a = GameInfo.inst.PlayerCards[i];
                     card.GetComponent<CardIdx>().Idx = a;
-                    card.GetComponent<CardIdx>().image.sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
+                    card.GetComponent<CardIdx>().image.sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[a].CardIconNum];
                 }
 
             }
@@ -174,7 +174,7 @@ public class CardManager : MonoBehaviour
                     GameInfo.inst.PlayerCardIdxs[num] = 0;
                     CardImages[checknum].GetComponentInParent<CardIdx>().Idx = idx;
                     CardImages[num].GetComponentInParent<CardIdx>().Idx = 0;
-                    CardImages[checknum].sprite = icons[iconNum];
+                    CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];
                     CardImages[num].sprite = null;
                     InfoReset();
                     return;
@@ -193,7 +193,7 @@ public class CardManager : MonoBehaviour
 
                     GameInfo.inst.PlayerCardIdxs[checknum] = idx; //¿Œµ¶Ω∫º≥¡§
                     CardImages[checknum].GetComponentInParent<CardIdx>().Idx = idx; //¿Œµ¶Ω∫º≥¡§
-                    CardImages[checknum].sprite = icons[iconNum];
+                    CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];
                     cardlist.RemoveAt(num);
                     GameInfo.inst.PlayerCards.RemoveAt(num);
                     Destroy(ClickObject);
@@ -286,7 +286,7 @@ public class CardManager : MonoBehaviour
         GameObject card = Instantiate(CardPrefab, parent);
         cardlist.Add(card);
         card.GetComponent<CardIdx>().Idx = idx;
-        card.GetComponent<CardIdx>().image.sprite = icons[GameInfo.inst.CardsInfo[idx].CardIconNum];
+        card.GetComponent<CardIdx>().image.sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[idx].CardIconNum];
         GameInfo.inst.PlayerCards.Add(idx);
 
         InfoReset();
@@ -303,7 +303,7 @@ public class CardManager : MonoBehaviour
 
         GameInfo.inst.PlayerCardIdxs[i] = idx; //¿Œµ¶Ω∫º≥¡§
         CardImages[i].GetComponentInParent<CardIdx>().Idx = idx; //¿Œµ¶Ω∫º≥¡§
-        CardImages[i].sprite = icons[iconNum];
+        CardImages[i].sprite = IconManager.inst.Icons[iconNum];
         cardlist.RemoveAt(num);
         GameInfo.inst.PlayerCards.RemoveAt(num);
         Destroy(ClickObject);
@@ -411,7 +411,7 @@ public class CardManager : MonoBehaviour
         int a = GameInfo.inst.PlayerCards[GameInfo.inst.PlayerCards.Count-1];
 
         card.GetComponent<CardIdx>().Idx = a;
-        card.GetComponent<CardIdx>().image.sprite = icons[GameInfo.inst.CardsInfo[a].CardIconNum];
+        card.GetComponent<CardIdx>().image.sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[a].CardIconNum];
         CardNumReset();
         SizeSet();
     }
