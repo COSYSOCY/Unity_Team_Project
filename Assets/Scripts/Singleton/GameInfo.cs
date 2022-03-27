@@ -26,10 +26,9 @@ public class GameInfo : MonoBehaviour
 {
 	public static GameInfo inst;
 	public AudioSource audioSo;
-	public static float PlayerBGM; // 배경음
-	public static float PlayerSE; // 사운드
-	public static bool PlayerVFX; // 이펙트 유무
-	public static bool PlayerDmg; //데미지표시 유무
+	public bool PlayerBGM; // 배경음
+	public bool PlayerSE; // 사운드
+	public bool PlayerDmg; //데미지표시 유무
 	public static int PlayerGold; // 플레이어 골드
 	public static int PlayerPoint; // 플레이어 보석
 

@@ -50,7 +50,7 @@ public class Enemy_Info : MonoBehaviour
         //GameObject clone = Instantiate(TextUi);
         GameObject clone=null;
 
-        if (!GameInfo.PlayerDmg)
+        if (!GameInfo.inst.PlayerDmg)
         {
 
         clone =ObjectPooler.SpawnFromPool("TextUi",transform.position);

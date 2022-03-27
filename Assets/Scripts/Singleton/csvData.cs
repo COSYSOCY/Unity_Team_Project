@@ -160,8 +160,6 @@ public class csvData : MonoBehaviour
 
 
         }
-        GameInfo.inst.CardMax = data.Count;
-        GameInfo.inst.CardCheck();
     }
     public void Card_Read()
     {
