@@ -26,6 +26,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Start()
     {
+        GameInfo.inst.CharsInfo.Clear();
         for (int i = 0; i < GameInfo.inst.CharacterMax; i++)
         {
             GameObject c = Instantiate(CharacterPrefab, parents);
@@ -71,7 +72,7 @@ public class CharacterManager : MonoBehaviour
         GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
         GameInfo.HpRegenPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpRegen;
         GameInfo.DefencePlus = GameInfo.inst.CharsInfo[cnt].CharactersDefece;
-        GameInfo.MoveSpeedPlus = GameInfo.inst.CharsInfo[cnt].CharactersSpeed;
+        GameInfo.inst.MoveSpeedPlus = GameInfo.inst.CharsInfo[cnt].CharactersSpeed;
         GameInfo.DamagePlus = GameInfo.inst.CharsInfo[cnt].CharactersAtPlus;
         GameInfo.Attack_RangePlus = GameInfo.inst.CharsInfo[cnt].CharactersAtRange;
         GameInfo.BulletSpeedPlus = GameInfo.inst.CharsInfo[cnt].CharactersBtSpeed;
@@ -120,7 +121,7 @@ public class CharacterManager : MonoBehaviour
         GameInfo.HpPlus= g.GetComponent<CharacterBtn>().CharactersHpMax;
         GameInfo.HpRegenPlus= g.GetComponent<CharacterBtn>().CharactersHpRegen;
         GameInfo.DefencePlus= g.GetComponent<CharacterBtn>().CharactersDefece;
-        GameInfo.MoveSpeedPlus= g.GetComponent<CharacterBtn>().CharactersSpeed;
+        GameInfo.inst.MoveSpeedPlus= g.GetComponent<CharacterBtn>().CharactersSpeed;
         GameInfo.DamagePlus= g.GetComponent<CharacterBtn>().CharactersAtPlus;
         GameInfo.Attack_RangePlus= g.GetComponent<CharacterBtn>().CharactersAtRange;
         GameInfo.BulletSpeedPlus= g.GetComponent<CharacterBtn>().CharactersBtSpeed;

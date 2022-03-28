@@ -12,6 +12,8 @@ public class SceneStart : MonoBehaviour
     public GameObject Hpbar;
     public IEnumerator IStart()
     {
+
+        MainSingleton.instance.playerstat.IsAdIn = false;
         GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], parent.position, Quaternion.identity, parent);
         moving.ani = g.GetComponent<Animator>();
         moving.GameStart = true;

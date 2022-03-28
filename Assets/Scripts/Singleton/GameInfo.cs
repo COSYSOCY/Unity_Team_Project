@@ -61,7 +61,7 @@ public class GameInfo : MonoBehaviour
 	public static float SkillCoolPlus;//능력 쿨다운 감소%
 	public static float HpRegenPlus;//리젠(상수) 초마다 회복
 	public static float Attack_RangePlus; //공격범위 증가%
-	public static float MoveSpeedPlus; //이동속도 설정
+	public float MoveSpeedPlus; //이동속도 설정
 	public static float DefencePlus; // 방어력증가 (상수)
 	public static float BulletSpeedPlus;//투사체 이속동도증가%
 	public static float BulletTimePlus;//투사체 지속시간 증가%
@@ -82,7 +82,7 @@ public class GameInfo : MonoBehaviour
 		audioSo = inst.GetComponent<AudioSource>();
 		PlayerGold = 600;
 		PlayerPoint = 5;
-
+		Debug.Log("sss1");
 
 	}
 
@@ -101,6 +101,7 @@ public class GameInfo : MonoBehaviour
 		// 임시
 		AdGoldFreeMax = 3;
 		//
+		Debug.Log("sss2");
 	}
 
     public void TestFunc() //처음 할때 주는거 테스트중
