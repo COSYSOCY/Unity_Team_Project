@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GoogleMobileAds.Api;
 
 public class LevelUp : MonoBehaviour
 {
@@ -20,7 +21,36 @@ public class LevelUp : MonoBehaviour
     public GameObject Money;
     public GameObject Heal;
     public PlayerStatus status;
+    public bool IsShow = false;
+    public GameObject ShowText;
+    public GameObject ShowImage;
 
+
+
+    private void Start()
+    {
+        var requestConfiguration = new RequestConfiguration
+           .Builder()
+           .SetTestDeviceIds(new List<string>() 
+           {
+               "44990154B448482F" 
+           }) // test Device ID
+           .build();
+
+        MobileAds.SetRequestConfiguration(requestConfiguration);
+
+        LoadFrontAd();
+        LoadRewardAd();
+    }
+    //private void Update()
+    //{
+    //    FrontAdsBtn.interactable = frontAd.IsLoaded();
+    //    RewardAdsBtn.interactable = rewardAd.IsLoaded();
+    //}
+    AdRequest GetAdRequest()
+    {
+        return new AdRequest.Builder().Build();
+    }
     // Start is called before the first frame update
 
     void LevelupFunc()
@@ -35,7 +65,7 @@ public class LevelUp : MonoBehaviour
             }
             //num = skillManager.Skills;
             int ran;
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
                 ran = Random.Range(0, num.Count);
                 num2.Add(num[ran]);
@@ -100,23 +130,33 @@ public class LevelUp : MonoBehaviour
                 num2.Add(Money);
                 num2.Add(Heal);
                 LevelupUiOb[2].SetActive(false);
+                LevelupUiOb[3].SetActive(false);
             }
             else if(cnt == 1)
             {
                 num2.Add(num[0]);
                 LevelupUiOb[1].SetActive(false);
                 LevelupUiOb[2].SetActive(false);
+                LevelupUiOb[3].SetActive(false);
             }
             else if (cnt == 2)
             {
                 num2.Add(num[0]);
                 num2.Add(num[1]);
                 LevelupUiOb[2].SetActive(false);
+                LevelupUiOb[3].SetActive(false);
+            }
+            else if (cnt == 3)
+            {
+                num2.Add(num[0]);
+                num2.Add(num[1]);
+                LevelupUiOb[2].SetActive(false);
+                LevelupUiOb[3].SetActive(false);
             }
             else
             {
                 int ran;
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     ran = Random.Range(0, num.Count);
                     num2.Add(num[ran]);
@@ -149,7 +189,7 @@ public class LevelUp : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
                 string name = "";
                 int Lv = 0;
@@ -261,6 +301,9 @@ public class LevelUp : MonoBehaviour
         moving.pad.gameObject.SetActive(false);
         moving.StopAllCoroutines();
         moving.move = Vector3.zero;
+        IsShow = false;
+        ShowImage.SetActive(true);
+        ShowText.SetActive(true);
 
         testcheck = true;
 
@@ -271,6 +314,7 @@ public class LevelUp : MonoBehaviour
         LevelupUiOb[0].SetActive(true);
         LevelupUiOb[1].SetActive(true);
         LevelupUiOb[2].SetActive(true);
+        LevelupUiOb[3].SetActive(true);
         LevelupFunc();
     }
 
@@ -382,6 +426,11 @@ public class LevelUp : MonoBehaviour
     }
     public void ButtonClick_4()
     {
+        if (!IsShow)
+        {
+            ShowFunc();
+            return;
+        }
         GameObject ob = num2[3];
         if (ob.GetComponent<Skill_item_Check>().Skill)
         {
@@ -394,4 +443,62 @@ public class LevelUp : MonoBehaviour
 
         }
     }
+    public void ShowFunc()
+    {
+
+        ShowRewardAd();
+    }
+
+    #region 전면 광고
+    const string frontTestID = "ca-app-pub-3940256099942544/8691691433";
+    const string frontID = "ca-app-pub-9521969151385232/7036931465";
+    InterstitialAd frontAd;
+
+
+    void LoadFrontAd()
+    {
+        frontAd = new InterstitialAd(GameInfo.inst.isTestMode ? frontTestID : frontID);
+        frontAd.LoadAd(GetAdRequest());
+        frontAd.OnAdClosed += (sender, e) =>
+        {
+            //Debug.Log("전면광고 성공");
+        };
+    }
+
+    public void ShowFrontAd()
+    {
+        frontAd.Show();
+        LoadFrontAd();
+    }
+    #endregion
+
+
+
+    #region 리워드 광고
+    const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
+    const string rewardID = "ca-app-pub-9521969151385232/8252088014";
+    RewardedAd rewardAd;
+
+
+    void LoadRewardAd()
+    {
+        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd.LoadAd(GetAdRequest());
+        rewardAd.OnUserEarnedReward += (sender, e) =>
+        {
+            //Debug.Log("리워드 성공");
+            IsShow = true;
+            ShowImage.SetActive(false);
+            ShowText.SetActive(false);
+            Time.timeScale = 0f;
+        };
+    }
+
+    public void ShowRewardAd()
+    {
+        rewardAd.Show();
+        LoadRewardAd();
+    }
+    #endregion
+
 }

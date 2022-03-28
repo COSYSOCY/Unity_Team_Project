@@ -11,7 +11,7 @@ public class PlayerStatus : MonoBehaviour
     public SkillManager manager;
     public UIManager uimanager;
     public bool dead;
-    public GameObject deadObject;
+    public GameObject AdReOb;
     public bool invin=false;
 
     public bool test=false;
@@ -25,6 +25,11 @@ public class PlayerStatus : MonoBehaviour
     public List<int> XpCheck;
 
     public List<bool> EnemyDestory=new List<bool>();
+    public float cardHpRegen=0;
+    public float cardDefecne=0;
+    public bool IsAdIn = false;
+
+    public List<int> playingCard;
     private void Start()
     {
         StartCoroutine(HpRegen());
@@ -34,14 +39,23 @@ public class PlayerStatus : MonoBehaviour
         }
         XpSet();
         //uimanager.XpSet();
+        cardHpRegen = CardStat.inst.CardStat_HpRegen();
+        cardDefecne = CardStat.inst.CardStat_Defence();
     }
 
+    public void PlayerHpMax()
+    {
+        float f = 0;
+        f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC();
+        f = f + (f * ((manager.HpPlusPer()+ CardStat.inst.CardStat_HpP()) * 0.01f));
+        playerInfo.MaxHp = f;
+    }
     IEnumerator HpRegen()
     {
         float f;
         while (true)
         {
-            f=(GameInfo.HpRegenPlus+manager.HpRegen())*0.5f;
+            f=(GameInfo.HpRegenPlus+manager.HpRegen()+ cardHpRegen) *0.5f;
             if (f > 0)
             {
             HpPlus(f);
@@ -62,56 +76,18 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-    public void tiemtrigger(float t)
+    public void CardDrop(int i)
     {
-        switch (t)
-        {
-            case 30:
-                EnemyMax += 10;
-                break;
-            case 60:
-                EnemyMax += 10;
-                EnemyDes("Enemy_1", 0);
-                EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 90:
-                EnemyMax += 10;
-                EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 120:
-                EnemyMax += 20;
-                EnemyDes("Enemy_2", 1);
-                EnemyCreateName[0] = "Enemy_3";
-                break;
-            case 180:
-                EnemyMax += 20;
-                EnemyDes("Enemy_3", 2);
-                EnemyCreateName[0] = "Enemy_4";
-                break;
-            case 240:
-                EnemyMax += 20;
-                EnemyDes("Enemy_4", 3);
-                EnemyCreateName[0] = "Enemy_5";
-                break;
-            case 300:
-                EnemyMax += 10;
-                break;
-            case 360:
-                EnemyMax += 10;
-                break;
-            case 420:
-                EnemyMax += 10;
-                break;
-            case 480:
-                break;
-
-            default:
-                break;
-        }
+        playingCard.Add(i);
     }
+
     public void SliderUpdate()
     {
-        //hpbar.value = playerInfo.Hp / MaxHp;
+        if (playerInfo.Hp == 0 || playerInfo.MaxHp == 0)
+        {
+            return;
+        }
+        hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
     }
     public void HpPlus(float _count)
     {
@@ -122,15 +98,19 @@ public class PlayerStatus : MonoBehaviour
             
         }
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
-
+        SliderUpdate();
 
 
     }
 
     public void Hp_Damage(float damage)
     {
+        if (IsAdIn)
+        {
+            return;
+        }
         float f = damage;
-        float D = GameInfo.DefencePlus + manager.Defence();
+        float D = GameInfo.DefencePlus + manager.Defence()+ cardDefecne;
         f = f - D;
 
         if (f < 1)
@@ -147,26 +127,31 @@ public class PlayerStatus : MonoBehaviour
             return;
         }
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
-
+        SliderUpdate();
     }
     public void Dead()
     {
-        deadObject.SetActive(true);
         dead = true;
         Time.timeScale = 0f;
+        if (playerInfo.ADRe==0 && GameInfo.PlayerPoint>=5)
+        {
+            AdReOb.SetActive(true);
+            
+        }
+        else
+        {
+            uimanager.EndGame();
+        }
+
+
 
     }
 
-    public void Replayer()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     public void XpPlus(int xp)
     {
         int i;
-        float f = manager.XpPlus();
+        float f = manager.XpPlus()+GameInfo.XpPlus + CardStat.inst.CardStat_XpPlus();
         f = xp * f * 0.01f;
         i = xp + (int)f;
         playerInfo.Xp += i;
@@ -187,12 +172,14 @@ public class PlayerStatus : MonoBehaviour
     public void LevelUp()
     {
         playerInfo.Xp = playerInfo.MaxXp-playerInfo.Xp;
+        
         if (playerInfo.Xp <=0)
         {
             playerInfo.Xp = 0;
         }
 
         playerInfo.Lv++;
+        uimanager.Leveltext();
         XpSet();
         level.LevelFunc();
     }
@@ -201,44 +188,20 @@ public class PlayerStatus : MonoBehaviour
         playerInfo.MaxXp = XpCheck[playerInfo.Lv-1];
         uimanager.XpSet();
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    //Debug.Log("È÷Æ®");
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        StartCoroutine(PlayerDamage());
-    //        test = true;
-    //    }
-    //}
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-            
-    //        test = false;
-    //    }
-    //}
 
-    IEnumerator PlayerDamage()
+    public IEnumerator AdIn()
     {
-        if(!dead&&!invin)
-        {
-            HpPlus(-6);
-            invin = true;
-            yield return new WaitForSeconds(0.5f);
-            if (test==true)
-            {
-                invin = false;
-
-                StartCoroutine(PlayerDamage());
-            }
-            else
-            {
-            invin = false;
-
-            }
-        }
+        IsAdIn = true;
+        dead = false;
+        AdReOb.SetActive(false);
+        Time.timeScale = 1f;
+        playerInfo.ADRe++;
+        playerInfo.Hp=playerInfo.MaxHp;
+        SliderUpdate();
+        yield return new WaitForSeconds(3f);
+        IsAdIn = false;
     }
+
 
 
 

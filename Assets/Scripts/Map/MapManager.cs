@@ -13,7 +13,7 @@ public class MapManager : MonoBehaviour
 
 	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
 	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
-	private static MapManager instance = null;
+	public static MapManager instance = null;
 
 	private void Awake()
 	{
@@ -26,6 +26,8 @@ public class MapManager : MonoBehaviour
 
 	void Update()
 	{
+
+
 		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
 		UpdateVisibleChunks();
 	}

@@ -43,7 +43,7 @@ int bulletCntMax; // 투사체 최대갯수
         float d2;
         float d3;
         d= Random.Range(info.DamageMin, info.DamageMax);
-        d2 = GameInfo.DamagePlus + manager.AtPlus();
+        d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP();
         d3 = info.BulletAtCri;
         if (Random.Range(0,100f) <= info.BulletAtCri)
         {
@@ -56,7 +56,7 @@ int bulletCntMax; // 투사체 최대갯수
     protected int _BulletCnt()
     {
         int i;
-        i = info.bulletCnt + GameInfo.BulletCntPlus + manager.BulletCnt();
+        i = info.bulletCnt + GameInfo.BulletCntPlus + manager.BulletCnt()+ CardStat.inst.CardStat_BtCnt();
         return i;
     }
     protected float _BulletSpeed()
@@ -81,6 +81,11 @@ int bulletCntMax; // 투사체 최대갯수
         f = info.BulletAtCri;
         return f;
     }
+    /// <summary>
+    /// b는 true면 쿨감적용
+    /// </summary>
+    /// <param name="b"> 이 숫자 말야</param>
+    /// <returns></returns>
     protected float _CoolMain(bool b) // b 가 true면 쿨감 적용
     {
          float f;
@@ -91,7 +96,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
         
-        f2 = GameInfo.SkillCoolPlus+manager.Cool();
+        f2 = GameInfo.SkillCoolPlus+manager.Cool()+ CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2)*0.01f;
         f *= f2;
@@ -107,7 +112,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus + manager.Cool();
+        f2 = GameInfo.SkillCoolPlus + manager.Cool() + CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;
@@ -123,7 +128,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
 
-        f2 = GameInfo.SkillCoolPlus + manager.Cool();
+        f2 = GameInfo.SkillCoolPlus + manager.Cool() + CardStat.inst.CardStat_Cool();
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2) * 0.01f;
         f *= f2;
@@ -157,6 +162,11 @@ int bulletCntMax; // 투사체 최대갯수
         f = info.SkillReal3;
         return f;
     }
+    public virtual void LevelUpFunc()
+    {
+
+    }
+
     public void LevelUp()
     {
 
@@ -177,7 +187,8 @@ int bulletCntMax; // 투사체 최대갯수
         info.SkillReal1 = info.SkillReal1Check[i];
         info.SkillReal2 = info.SkillReal2Check[i];
         info.SkillReal3 = info.SkillReal3Check[i];
-
+        LevelUpFunc();
     }
+
 
 }

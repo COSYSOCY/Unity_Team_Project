@@ -461,15 +461,91 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 459,asd,(장신구20번 텍스트),English Test,テスト,测试
 460,레벨업시 처음고를때 텍스트 설정,신규,New,新しい,新的
 461,레벨업텍스트,레벨,Level,レベル,等级
-462,,큰 동전 가방,English Test,テスト,测试
-463,,치킨,English Test,テスト,测试
-464,,25골드를 추가합니다.,English Test,テスト,测试
-465,,체력을 30 회복합니다.,English Test,テスト,测试
-466,,상점,Shop,テスト,测试
-467,,캐릭터,Character,テスト,测试
-468,,월드,World,テスト,测试
-469,,카드,Card,テスト,测试
-470,,설정,Setting,テスト,测试
-471,,입장,Enter,テスト,测试
-472,,데미지 표시 안하기,Damge UI X,テスト,测试
-473,,플레이,Play,テスト,测试
+462,asd,큰 동전 가방,English Test,テスト,测试
+463,asd,치킨,English Test,テスト,测试
+464,asd,25골드를 추가합니다.,English Test,テスト,测试
+465,asd,체력을 30 회복합니다.,English Test,テスト,测试
+466,asd,상점,Shop,テスト,测试
+467,asd,캐릭터,Character,テスト,测试
+468,asd,월드,World,テスト,测试
+469,asd,카드,Card,テスト,测试
+470,asd,설정,Setting,テスト,测试
+471,asd,입장,Enter,テスト,测试
+472,asd,데미지 표시 안하기,Damge UI X,テスト,测试
+473,asd,플레이,Play,テスト,测试
+474,asd,구매하실껀가요?,Are you sure you want to buy it?,テスト,测试
+475,asd,네,Yes,テスト,测试
+476,asd,아뇨,No,テスト,测试
+477,asd,돈이 부족합니다!!,Not enough money!!,テスト,测试
+478,asd,착용/해제,equip/Unequip,テスト,测试
+479,asd,체력의 카드,English Test,テスト,测试
+480,asd,방어의 카드,English Test,テスト,测试
+481,asd,이속의 카드,English Test,テスト,测试
+482,asd,데미지의 카드,English Test,テスト,测试
+483,asd,천사의 카드,English Test,テスト,测试
+484,asd,악마의 카드,English Test,テスト,测试
+485,asd,정령의 카드,English Test,テスト,测试
+486,asd,단검의 카드,English Test,テスト,测试
+487,asd,ㄴ의 카드,English Test,テスト,测试
+488,asd,ㅇ의카드,English Test,テスト,测试
+489,asd,체력+20,English Test,テスト,测试
+490,asd,방어+2,English Test,テスト,测试
+491,asd,이속+10%,English Test,テスト,测试
+492,asd,데미지+10%,English Test,テスト,测试
+493,asd,체력+5`w`방어+1,Hp+5`w`Defence+1,テスト,测试
+494,asd,데미지+15%,English Test,テスト,测试
+495,asd,체력회복+0.1,English Test,テスト,测试
+496,asd,단검의 데미지가 100%증가합니다,English Test,テスト,测试
+497,asd,투사체증가+1,English Test,テスト,测试
+498,asd,쿨타임 감소+10%,English Test,テスト,测试
+499,asd,팔기,Sell,テスト,测试
+500,asd,카드칸이 가득 차있습니다,Card Full,テスト,测试
+501,asd,확인!,OK!,テスト,测试
+502,asd,합성(미구현),Mix,テスト,测试
+503,asd,푸른초원,English Test,テスト,测试
+504,asd,2맵이름,English Test,テスト,测试
+505,asd,3맵이름,English Test,テスト,测试
+506,asd,4맵이름,English Test,テスト,测试
+507,asd,5맵이름,English Test,テスト,测试
+508,asd,6맵이름,English Test,テスト,测试
+509,asd,7맵이름,English Test,テスト,测试
+510,asd,8맵이름,English Test,テスト,测试
+511,asd,9맵이름,English Test,テスト,测试
+512,asd,10맵이름,English Test,テスト,测试
+513,asd,푸른 초원입니다,English Test,テスト,测试
+514,asd,2맵설명,English Test,テスト,测试
+515,asd,3맵설명,English Test,テスト,测试
+516,asd,4맵설명,English Test,テスト,测试
+517,asd,5맵설명,English Test,テスト,测试
+518,asd,6맵설명,English Test,テスト,测试
+519,asd,7맵설명,English Test,テスト,测试
+520,asd,8맵설명,English Test,テスト,测试
+521,asd,9맵설명,English Test,テスト,测试
+522,asd,10맵설명,English Test,テスト,测试
+523,asd,레벨 업!,Level Up!,テスト,测试
+524,asd,옵션,Option,テスト,测试
+525,asd,돌아가기,Back,テスト,测试
+526,asd,광고보고 풀기,English Test,テスト,测试
+527,asd,켬,ON,テスト,测试
+528,asd,끔,OFF,テスト,测试
+529,asd,음악,Music,テスト,测试
+530,asd,사운드,Sound,テスト,测试
+531,asd,데미지표시,Damage Mark,テスト,测试
+532,,일시정지,Pause,テスト,测试
+533,,능력,English Test,テスト,测试
+534,,장신구,English Test,テスト,测试
+535,,나가게되면 지금 까지 얻었던 정보들이 사라집니다. 정말 나가겠습니까?,English Test,テスト,测试
+536,,부활,resurrection,テスト,测试
+537,,게임종료,GameOver,テスト,测试
+538,,전리품,booty,テスト,测试
+539,,탭해서 나가기,Tab Exit,テスト,测试
+540,,선택하기,Select,テスト,测试
+541,2번맵 안풀린거 설명,2번맵 안풀린거 설명,English Test,テスト,测试
+542,,푸른초원 클리어시 잠금 해제,English Test,テスト,测试
+543,,4번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+544,,5번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+545,,6번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+546,,7번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+547,,8번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+548,,9번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+549,,10번맵 안풀린거 설명 텍스트,English Test,テスト,测试

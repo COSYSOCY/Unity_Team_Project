@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//ca-app-pub-9521969151385232~5659420556
 public class Singleton : MonoBehaviour
 {
     private static Singleton instance = null;

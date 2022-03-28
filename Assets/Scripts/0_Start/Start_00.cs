@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 public class Start_00 : MonoBehaviour
 {
 
-    void Start()
+
+    void Update()
     {
-        SceneManager.LoadScene("01_Loby");
+        if (Input.GetMouseButtonUp(0))
+        {
+            SceneManager.LoadScene("01_Loby");
+            
+        }
     }
 
 }

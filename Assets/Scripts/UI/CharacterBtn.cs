@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterBtn : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CharacterBtn : MonoBehaviour
     public int CharactersIconNum;
     public int CharactersSkillIconNum;
     public int CharactersBSNum;
+    public int CharactersPrice;
     public float CharactersHpMax;
     public float CharactersHpRegen;
     public float CharactersDefece;
@@ -22,11 +24,15 @@ public class CharacterBtn : MonoBehaviour
     public float CharactersBtCool;
     public float CharactersRange;
     public float CharactersXpPlus;
+    public int State;
     public CharacterManager manager;
+
+    public Image MainImage;
+    public GameObject LockImage;
 
     public void ButtonClicks()
     {
-        manager = GameObject.Find("CharacterManager").GetComponent<CharacterManager>();
+        manager = GameObject.FindGameObjectWithTag("CharManager").GetComponent<CharacterManager>();
         manager.CharacterChange(gameObject);
     }
 }

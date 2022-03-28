@@ -7,7 +7,14 @@ public class Skill_12 : Skill_Ori
 
     public GameObject gidomon;
 
+    public override void LevelUpFunc()
+    {
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
+        {
 
+        }
+    }
     void Start_Func()
     {
         LevelUp();

@@ -5,7 +5,14 @@ using UnityEngine;
 public class Skill_13 : Skill_Ori
 {
 
+    public override void LevelUpFunc()
+    {
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
+        {
 
+        }
+    }
 
 
 

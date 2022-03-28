@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
 
-    //EnemyPooling enemyPooling;
-    [SerializeField] private GameObject enemy;
+
     [SerializeField] private Transform player;
 
     //시간 관련
@@ -32,7 +31,7 @@ public class EnemyManager : MonoBehaviour
     //원형 리스폰 추가
     public Vector3 GetRandomPos()
     {
-        float range = Random.Range(25f, 27f);
+        float range = Random.Range(23f, 24f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
@@ -42,16 +41,16 @@ public class EnemyManager : MonoBehaviour
         //float z = Mathf.Sin(ranNum) * 30f;
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = player.position + (Pos * range);
+        Pos.y = 0;
         //Debug.Log((Pos - player.position).magnitude);
         return Pos;
     }
 
-    public Vector3 RandomSphereInPoint()
+    public void EnemyCreate(string s)
     {
-        float radius = Random.Range(60f, 70f);
-        Vector3 getPoint = Random.onUnitSphere;
-        getPoint.y = 0.0f;
-        return (getPoint * radius) + player.transform.position;
+        GameObject enemy = ObjectPooler.SpawnFromPool(s, GetRandomPos(), Quaternion.LookRotation(player.transform.position));
+        enemy.GetComponent<Enemy>().CreateStart();
+        
     }
 
     IEnumerator CreateEnemyTrigger()
@@ -121,7 +120,9 @@ public class EnemyManager : MonoBehaviour
                         float z = Mathf.Sin(i) * 15f;
                         Vector3 circlePos = new Vector3(x, 0, z);
                         //GameObject bat = enemyPooling.MakeEnemy("Enemy");
-                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_6", playerPos + circlePos*1.6f);
+                        Vector3 pos = playerPos + circlePos * 1.6f;
+                        pos.y = 0;
+                        GameObject bat = ObjectPooler.SpawnFromPool("Enemy_6",pos );
                         bat.GetComponent<Enemy>().CreateStart();
                         //플레이어 위치에서 원형으로 생성
                         //bat.transform.position = playerPos + circlePos;
