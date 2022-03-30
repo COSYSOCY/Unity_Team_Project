@@ -64,8 +64,8 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
-        LobyGoldText.text = GameInfo.PlayerGold.ToString("C2");
-        LobyPointText.text = GameInfo.PlayerPoint.ToString("C2");
+        LobyGoldText.text = GameInfo.PlayerGold.ToString("");
+        LobyPointText.text = GameInfo.PlayerPoint.ToString("");
         LobyEnergyText.text = GameInfo.inst.PlayerEnergy + "/" + GameInfo.inst.PlayerEnergyMax;
         LobyUserLevelText.text = GameInfo.inst.PlayerLevel.ToString();
     }
@@ -98,7 +98,7 @@ public class LobyUIMgr : MonoBehaviour
         {
             //GameInfo.inst.audioSo.Pause();
             GameInfo.inst.PlayerSE = true;
-            BGMIcon.sprite = IconManager.inst.Icons[17];
+            SEIcon.sprite = IconManager.inst.Icons[17];
             Sebuton.GetComponent<Image>().color = colors[1];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 528;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
@@ -107,7 +107,7 @@ public class LobyUIMgr : MonoBehaviour
         {
             //GameInfo.inst.audioSo.Play();
             GameInfo.inst.PlayerSE = false;
-            BGMIcon.sprite = IconManager.inst.Icons[16];
+            SEIcon.sprite = IconManager.inst.Icons[16];
             Sebuton.GetComponent<Image>().color = colors[0];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 527;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(527);

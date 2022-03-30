@@ -86,7 +86,8 @@ public class GameInfo : MonoBehaviour
 		audioSo = inst.GetComponent<AudioSource>();
 		PlayerGold = 600;
 		PlayerPoint = 5;
-
+		PlayerEnergy = 50;
+		PlayerEnergyMax = 20;
 	}
 
 	public void CharaMax()
