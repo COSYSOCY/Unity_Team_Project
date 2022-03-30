@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     public void ExitGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("01_Loby");
+        SceneManager.LoadScene("01_Loby_Main");
     }
     public void SoundCheck()
     {
@@ -84,6 +84,13 @@ public class UIManager : MonoBehaviour
 
             GameInfo.PlayerPoint -= 5;
             StartCoroutine(MainSingleton.instance.playerstat.AdIn());
+
+    }
+    public void ReYes2()
+    {
+
+        GameInfo.PlayerPoint -= 5;
+        StartCoroutine(MainSingleton.instance.playerstat.AdIn());
 
     }
     public void EndGame()

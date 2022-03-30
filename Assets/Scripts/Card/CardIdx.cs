@@ -7,6 +7,7 @@ public class CardIdx : MonoBehaviour
 {
     public int Idx;
     public Image image;
+    public GameObject Focus;
     public CardManager cardManager;
     public int num;
     public bool IsPlayerCard;

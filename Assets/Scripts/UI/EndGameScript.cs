@@ -66,7 +66,7 @@ public class EndGameScript : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 Time.timeScale = 1f;
-                SceneManager.LoadScene("01_Loby");
+                SceneManager.LoadScene("01_Loby_Main");
             }
         }
     }

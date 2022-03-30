@@ -23,7 +23,8 @@ public class ShopManager : MonoBehaviour
     {
         if (GameInfo.inst.AdGoldFreeMax >0)
         {
-            ShowRewardAd();
+            LoadRewardAd();
+            rewardAd.Show();
         }
     }
 
@@ -37,24 +38,53 @@ public class ShopManager : MonoBehaviour
         GameInfo.PlayerPoint += 100;
         Loby.LobyGoldAc();
     }
-    public void shopButton1()
+    public void shopGoldButton1()
     {
         if (GameInfo.PlayerPoint >= 50)
         {
             GameInfo.PlayerPoint -= 50;
+            GameInfo.PlayerGold += 650;
+            Loby.LobyGoldAc();
+        }
+    }
+    public void shopGoldButton2()
+    {
+        if (GameInfo.PlayerPoint >= 100)
+        {
+            GameInfo.PlayerPoint -= 100;
+            GameInfo.PlayerGold += 1500;
+            Loby.LobyGoldAc();
+        }
+    }
+    public void shopGoldButton3()
+    {
+        if (GameInfo.PlayerPoint >= 150)
+        {
+            GameInfo.PlayerPoint -= 150;
             GameInfo.PlayerGold += 3000;
             Loby.LobyGoldAc();
         }
     }
-    public void shopButton2()
+    public void shopGoldButton4()
     {
-        if (GameInfo.PlayerPoint >= 120)
+        if (GameInfo.PlayerPoint >= 500)
         {
-            GameInfo.PlayerPoint -= 120;
-            GameInfo.PlayerGold += 9000;
+            GameInfo.PlayerPoint -= 500;
+            GameInfo.PlayerGold += 10000;
             Loby.LobyGoldAc();
         }
     }
+    public void shopGoldButton5()
+    {
+        if (GameInfo.PlayerPoint >= 650)
+        {
+            GameInfo.PlayerPoint -= 650;
+            GameInfo.PlayerGold += 15000;
+            Loby.LobyGoldAc();
+        }
+    }
+
+
     void adstart()
     {
         var requestConfiguration = new RequestConfiguration
@@ -67,8 +97,8 @@ public class ShopManager : MonoBehaviour
 
         MobileAds.SetRequestConfiguration(requestConfiguration);
 
-        LoadFrontAd();
-        LoadRewardAd();
+        //LoadFrontAd();
+        //
     }
     AdRequest GetAdRequest()
     {
@@ -114,7 +144,7 @@ public class ShopManager : MonoBehaviour
         rewardAd.OnUserEarnedReward += (sender, e) =>
         {
             GameInfo.inst.AdGoldFreeMax--;
-            GameInfo.PlayerGold += 500;
+            GameInfo.PlayerGold += 240;
             AdFreeSet();
             Loby.LobyGoldAc();
         };

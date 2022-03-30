@@ -54,7 +54,6 @@ public class PlayerInfo : MonoBehaviour
 
     public float _Speed()
     {
-        Debug.Log("¿Ãº”:::::"+GameInfo.inst.MoveSpeedPlus);
         float s = GameInfo.inst.MoveSpeedPlus;
         float d = manager.Speed() + CardStat.inst.CardStat_Speed();
         s = s + ((d * 0.01f) * s);

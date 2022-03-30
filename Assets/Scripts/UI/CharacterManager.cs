@@ -10,19 +10,24 @@ public class CharacterManager : MonoBehaviour
     public List<Sprite> icons;
     public Image CharImage;
     public Image SkillImage;
-    public Text CharName;
-    public Text CharInfo;
-
-    public GameObject BuyObject;
-    public Text BuyGoldText;
+    public Text CharSkillName1;
+    //public Text CharInfo;
 
     public GameObject CharObject;
     public LobyUIMgr lobyui;
     public GameObject warningOb;
     public Color newcolor;
     public Color newcolor2;
+    public GameObject InfoOb;
+    public GameObject ClickOb;
 
-
+    public GameObject EquipBtn;
+    public GameObject BuyBtn;
+    public Image InfoCharImage;
+    public Image InfoSkillImage;
+    public Text InfoCharInfo;
+    public Text InfoName;
+    public Text BuyText;
 
     private void Start()
     {
@@ -66,8 +71,11 @@ public class CharacterManager : MonoBehaviour
         }
         int cnt=GameInfo.inst.CharacterIdx;
         //Debug.Log(cnt);
+
+
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+
 
         GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
         GameInfo.HpRegenPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpRegen;
@@ -83,8 +91,7 @@ public class CharacterManager : MonoBehaviour
         GameInfo.XpPlus = GameInfo.inst.CharsInfo[cnt].CharactersXpPlus;
 
 
-        //CharImage.sprite = icons[0];
-        //SkillImage.sprite = icons[0];
+
         CharSetString();
 
     }
@@ -92,31 +99,25 @@ public class CharacterManager : MonoBehaviour
     public void CharSetString()
     {
         int cnt = GameInfo.inst.CharacterIdx;
-        CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
-        CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
+        CharSkillName1.text = "";
+        //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
+        //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
 
     }
 
-    public void CharacterChange(GameObject g)
+    public void EquipBtnClick()
     {
-        //Debug.Log(g.name);
-        if (g.GetComponent<CharacterBtn>().State==1)
-        {
-            BuyObject.SetActive(true);
-            BuyGoldText.text = g.GetComponent<CharacterBtn>().CharactersPrice.ToString();
-            CharObject = g;
-        }
-        else
-        {
-
+        InfoOb.SetActive(false);
+        GameObject g = ClickOb;
         int cnt= g.GetComponent<CharacterBtn>().CharacterIdx;
         GameInfo.inst.CharacterIdx = cnt;
         GameInfo.inst.SkillIdx = csvData.CharactersBSNum[cnt];
         //Debug.Log(cnt);
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
-        CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
-        CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
+        CharSetString();
+        //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
+        //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
 
         GameInfo.HpPlus= g.GetComponent<CharacterBtn>().CharactersHpMax;
         GameInfo.HpRegenPlus= g.GetComponent<CharacterBtn>().CharactersHpRegen;
@@ -132,25 +133,47 @@ public class CharacterManager : MonoBehaviour
         GameInfo.XpPlus = g.GetComponent<CharacterBtn>().CharactersXpPlus;
 
 
+
+    }
+
+
+    public void BtnClick(GameObject g,int State)
+    {
+        EquipBtn.SetActive(false);
+        BuyBtn.SetActive(false);
+        ClickOb = g;
+        InfoOb.SetActive(true);
+        if (State == 2)
+        {
+            EquipBtn.SetActive(true);
         }
+        else
+        {
+            BuyBtn.SetActive(true);
+            BuyText.text = ClickOb.GetComponent<CharacterBtn>().CharactersPrice.ToString();
+        }
+        InfoCharImage.sprite = icons[ClickOb.GetComponent<CharacterBtn>().CharactersIconNum];
+        InfoName.text = csvData.GameText(ClickOb.GetComponent<CharacterBtn>().CharactersNameNum);
+        InfoSkillImage.sprite = icons[ClickOb.GetComponent<CharacterBtn>().CharactersSkillIconNum];
+        InfoCharInfo.text = csvData.GameText(ClickOb.GetComponent<CharacterBtn>().CharactersInfoNum);
+        //이미지변경
+        //네임벼녁ㅇ
+        //스킬이미지변경
+        //캐릭터설명 추가
     }
 
     public void BuyButton()
     {
-        if (GameInfo.PlayerGold >= CharObject.GetComponent<CharacterBtn>().CharactersPrice )
+        if (GameInfo.PlayerGold >= ClickOb.GetComponent<CharacterBtn>().CharactersPrice )
         {
-            GameInfo.PlayerGold -= CharObject.GetComponent<CharacterBtn>().CharactersPrice;
+            GameInfo.PlayerGold -= ClickOb.GetComponent<CharacterBtn>().CharactersPrice;
             lobyui.LobyGoldAc();
-            CharObject.GetComponent<CharacterBtn>().MainImage.color = newcolor2;
-            CharObject.GetComponent<CharacterBtn>().LockImage.SetActive(false);
-            CharObject.GetComponent<CharacterBtn>().State = 2;
-            GameInfo.inst.CharacterActive[CharObject.GetComponent<CharacterBtn>().CharacterIdx] = 2;
+            ClickOb.GetComponent<CharacterBtn>().LockImage.SetActive(false);
+            ClickOb.GetComponent<CharacterBtn>().State = 2;
+            GameInfo.inst.CharacterActive[ClickOb.GetComponent<CharacterBtn>().CharacterIdx] = 2;
+            InfoOb.SetActive(false);
+            ClickOb.GetComponent<CharacterBtn>().MainImage.color = newcolor2;
         }
-        else
-        {
-            warningOb.SetActive(true);
-        }
-        BuyObject.SetActive(false);
     }
 
 }

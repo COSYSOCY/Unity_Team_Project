@@ -2429,6 +2429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idx: 0
   image: {fileID: 898926463}
+  Focus: {fileID: 0}
   cardManager: {fileID: 0}
   num: 3
   IsPlayerCard: 1
@@ -3212,15 +3213,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dd24fe7982fb2d64b99fdeedaeeea735, type: 3}
   CharImage: {fileID: 1300436462}
   SkillImage: {fileID: 997502982}
-  CharName: {fileID: 1580574815}
-  CharInfo: {fileID: 117226211}
-  BuyObject: {fileID: 996649779}
-  BuyGoldText: {fileID: 730325632}
+  CharSkillName1: {fileID: 0}
   CharObject: {fileID: 0}
   lobyui: {fileID: 571234312}
   warningOb: {fileID: 1094859222}
   newcolor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0.54901963}
   newcolor2: {r: 1, g: 1, b: 1, a: 1}
+  InfoOb: {fileID: 0}
+  ClickOb: {fileID: 0}
+  EquipBtn: {fileID: 0}
+  BuyBtn: {fileID: 0}
+  InfoCharImage: {fileID: 0}
+  InfoSkillImage: {fileID: 0}
+  InfoCharInfo: {fileID: 0}
+  InfoName: {fileID: 0}
+  BuyText: {fileID: 0}
 --- !u!1 &385470243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,6 +4969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idx: 0
   image: {fileID: 1529769551}
+  Focus: {fileID: 0}
   cardManager: {fileID: 0}
   num: 0
   IsPlayerCard: 1
@@ -4994,11 +5002,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18284619767852d4b9ec782143e558f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgmSlider: {fileID: 0}
-  SeSlider: {fileID: 0}
-  DmgToggle: {fileID: 0}
   LobyGoldText: {fileID: 1940458755}
   LobyPointText: {fileID: 1331631589}
+  LobyEnergyText: {fileID: 0}
+  LobyUserLevelText: {fileID: 0}
   TestList:
   - {fileID: 1047666849}
   - {fileID: 508727614}
@@ -5030,6 +5037,8 @@ MonoBehaviour:
   - {fileID: 694191400}
   - {fileID: 721864023}
   - {fileID: 1633121281}
+  BGMIcon: {fileID: 0}
+  SEIcon: {fileID: 0}
   SettingObject: {fileID: 638329178}
   charmanager: {fileID: 374874594}
   colors:
@@ -5779,6 +5788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idx: 0
   image: {fileID: 157645257}
+  Focus: {fileID: 0}
   cardManager: {fileID: 0}
   num: 2
   IsPlayerCard: 1
@@ -7866,7 +7876,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d1116d72b0cd42c4899553e8a1ae5af0, type: 3}
   LobyMapIcon: {fileID: 1798452061}
   LobyMapName: {fileID: 694191400}
-  LobyMapInfo: {fileID: 721864023}
   LockInfo: {fileID: 1633121281}
   SelectNum: 0
   Loby: {fileID: 1932725929}
@@ -11358,6 +11367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idx: 0
   image: {fileID: 1925488340}
+  Focus: {fileID: 0}
   cardManager: {fileID: 0}
   num: 1
   IsPlayerCard: 1
@@ -12410,13 +12420,9 @@ MonoBehaviour:
   cardlist: []
   CardName: {fileID: 1875590839}
   CardInfo: {fileID: 788050660}
-  ClickColor: {r: 1, g: 1, b: 0, a: 1}
-  BasicColor: {r: 1, g: 1, b: 1, a: 1}
   lobyui: {fileID: 571234312}
   ClickObject: {fileID: 0}
   WarningTextOb: {fileID: 681134736}
-  GoldObject: {fileID: 1366186751}
-  GoldText: {fileID: 458969348}
 --- !u!1 &1461804168
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class PlayerStatus : MonoBehaviour
     public UIManager uimanager;
     public bool dead;
     public GameObject AdReOb;
+    public GameObject AdReObpayBtn;
     public bool invin=false;
 
     public bool test=false;
@@ -133,10 +134,13 @@ public class PlayerStatus : MonoBehaviour
     {
         dead = true;
         Time.timeScale = 0f;
-        if (playerInfo.ADRe==0 && GameInfo.PlayerPoint>=5)
+        if (playerInfo.ADRe==0 )
         {
             AdReOb.SetActive(true);
-            
+            if (GameInfo.PlayerPoint >= 5)
+            {
+                AdReObpayBtn.SetActive(true);
+            }
         }
         else
         {
