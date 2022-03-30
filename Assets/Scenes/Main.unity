@@ -1348,8 +1348,9 @@ GameObject:
   - component: {fileID: 143496600}
   - component: {fileID: 143496599}
   - component: {fileID: 143496601}
+  - component: {fileID: 143496602}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ReText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1431,6 +1432,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: 5}
   m_UseGraphicAlpha: 1
+--- !u!114 &143496602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143496597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5c92c714eb2f6429da0b2a72df10e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idx: 550
 --- !u!1 &148608577
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,7 +8102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 778146710}
   - component: {fileID: 778146709}
-  - component: {fileID: 778146708}
   - component: {fileID: 778146711}
   m_Layer: 0
   m_Name: Main Camera
@@ -8097,14 +8110,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &778146708
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778146707}
-  m_Enabled: 0
 --- !u!20 &778146709
 Camera:
   m_ObjectHideFlags: 0
@@ -8155,13 +8160,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778146707}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
   m_LocalPosition: {x: 0, y: 50, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!114 &778146711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8175,7 +8180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4701004815584131811}
-  offset: {x: 0, y: 30, z: 0}
+  offset: {x: 0, y: 40, z: -8}
 --- !u!1 &806162190
 GameObject:
   m_ObjectHideFlags: 0
@@ -12991,7 +12996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590801db256a61e4abae4a38091dc3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skills:
+  All_Skill:
   - {fileID: 1635998966}
   - {fileID: 1825683207}
   - {fileID: 1210016405}
@@ -13007,7 +13012,7 @@ MonoBehaviour:
   - {fileID: 558249785}
   - {fileID: 615924996}
   - {fileID: 1452574928}
-  Skill_Items:
+  All_Skill_Items:
   - {fileID: 1010264065}
   - {fileID: 1280769297}
   - {fileID: 385692341}
@@ -13015,6 +13020,8 @@ MonoBehaviour:
   - {fileID: 1517399886}
   - {fileID: 838940889}
   - {fileID: 2134257232}
+  Skills: []
+  Skill_Items: []
   Player_Skill: []
   Skill_icon:
   - {fileID: 21300000, guid: a8f4e8f470c1efe44b50e4a4aa91d28a, type: 3}
@@ -13056,6 +13063,27 @@ MonoBehaviour:
   - {fileID: 216165106}
   - {fileID: 1864439630}
   - {fileID: 1699538051}
+  CharSkillAndItem:
+  - Skill:
+    - {fileID: 1635998966}
+    - {fileID: 1825683207}
+    - {fileID: 1210016405}
+    - {fileID: 547790603}
+    - {fileID: 752999191}
+    - {fileID: 549085513}
+    - {fileID: 1711409214}
+    - {fileID: 593982054}
+    - {fileID: 125332048}
+    - {fileID: 567763652}
+    - {fileID: 1412918703}
+    SkillItem:
+    - {fileID: 1010264065}
+    - {fileID: 1280769297}
+    - {fileID: 385692341}
+    - {fileID: 254640741}
+    - {fileID: 1517399886}
+    - {fileID: 838940889}
+    - {fileID: 2134257232}
   Player_Skill_Item: []
   Skill_All_Active: []
   Skill_Active: []
@@ -14234,6 +14262,7 @@ MonoBehaviour:
   - {fileID: 893853498}
   - {fileID: 599411469}
   - {fileID: 623419547}
+  - {fileID: 143496599}
 --- !u!1 &1548316126
 GameObject:
   m_ObjectHideFlags: 0
@@ -16850,7 +16879,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13, y: 13, z: 23}
+  m_Size: {x: 20, y: 13, z: 28}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1828634867
 MeshRenderer:

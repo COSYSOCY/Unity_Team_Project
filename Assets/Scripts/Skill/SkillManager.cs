@@ -2,9 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+[System.Serializable]
+public class CharSkill
+{
+    public List<GameObject> Skill;
+    public List<GameObject> SkillItem;
+}
 
 public class SkillManager : MonoBehaviour
 {
+    public List<GameObject> All_Skill;
+    public List<GameObject> All_Skill_Items;
     public List<GameObject> Skills;
     public List<GameObject> Skill_Items;
     public List<GameObject> Player_Skill;
@@ -14,7 +22,7 @@ public class SkillManager : MonoBehaviour
     public List<Image> ui_skill_Icon;
     public List<Image> ui_skillItem_Icon;
 
-
+    public List<CharSkill> CharSkillAndItem;
     public List<GameObject> Player_Skill_Item;
 
 

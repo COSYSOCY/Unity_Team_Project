@@ -128,7 +128,7 @@ public class Enemy_Info : MonoBehaviour
 
     public void EnemyMove()
     {
-        float range = Random.Range(23f, 24f);
+        float range = Random.Range(28f, 29f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;

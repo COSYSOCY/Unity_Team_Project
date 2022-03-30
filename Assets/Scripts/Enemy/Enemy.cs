@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(target.position, transform.position) > 27f )
-            {  //30이상 멀어지면 재배치
+            if (Vector3.Distance(target.position, transform.position) > 32f )
+            {  //32이상 멀어지면 재배치
                 if (info.IsBoss)
                 {
                     info.BossMove();

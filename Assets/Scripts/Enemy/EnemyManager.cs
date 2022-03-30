@@ -31,7 +31,7 @@ public class EnemyManager : MonoBehaviour
     //원형 리스폰 추가
     public Vector3 GetRandomPos()
     {
-        float range = Random.Range(23f, 24f);
+        float range = Random.Range(28f, 29f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;

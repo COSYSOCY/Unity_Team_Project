@@ -473,7 +473,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 471,asd,입장,Enter,テスト,测试
 472,asd,데미지 표시 안하기,Damge UI X,テスト,测试
 473,asd,플레이,Play,テスト,测试
-474,asd,구매하실껀가요?,Are you sure you want to buy it?,テスト,测试
+474,asd,구매,Buy,テスト,测试
 475,asd,네,Yes,テスト,测试
 476,asd,아뇨,No,テスト,测试
 477,asd,돈이 부족합니다!!,Not enough money!!,テスト,测试
@@ -528,8 +528,8 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 526,asd,광고보고 풀기,English Test,テスト,测试
 527,asd,켬,ON,テスト,测试
 528,asd,끔,OFF,テスト,测试
-529,asd,음악,Music,テスト,测试
-530,asd,사운드,Sound,テスト,测试
+529,asd,사운드,Music,テスト,测试
+530,asd,효과음,Sound,テスト,测试
 531,asd,데미지표시,Damage Mark,テスト,测试
 532,,일시정지,Pause,テスト,测试
 533,,능력,English Test,テスト,测试
@@ -539,7 +539,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 537,,게임종료,GameOver,テスト,测试
 538,,전리품,booty,テスト,测试
 539,,탭해서 나가기,Tab Exit,テスト,测试
-540,,선택하기,Select,テスト,测试
+540,,선택,Select,テスト,测试
 541,2번맵 안풀린거 설명,2번맵 안풀린거 설명,English Test,テスト,测试
 542,,푸른초원 클리어시 잠금 해제,English Test,テスト,测试
 543,,4번맵 안풀린거 설명 텍스트,English Test,テスト,测试
@@ -549,3 +549,4 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
 547,,8번맵 안풀린거 설명 텍스트,English Test,テスト,测试
 548,,9번맵 안풀린거 설명 텍스트,English Test,テスト,测试
 549,,10번맵 안풀린거 설명 텍스트,English Test,テスト,测试
+550,,무료,Free,テスト,测试
