@@ -15,14 +15,15 @@ public class CardManager : MonoBehaviour
     public Text CardName;
     public Text CardInfo;
 
-    public Color ClickColor;
-    public Color BasicColor;
+
+    //public Color ClickColor;
+    //public Color BasicColor;
     public LobyUIMgr lobyui;
 
     public GameObject ClickObject;
     public GameObject WarningTextOb;
-    public GameObject GoldObject;
-    public Text GoldText;
+    //public GameObject GoldObject;
+    //public Text GoldText;
 
 
 
@@ -52,7 +53,7 @@ public class CardManager : MonoBehaviour
         {
             if (GameInfo.inst.PlayerCardIdxs[i] == 0)
             {
-                CardImages[i].sprite = null;
+                CardImages[i].sprite = IconManager.inst.Icons[19];
             }
             else
             {
@@ -63,7 +64,7 @@ public class CardManager : MonoBehaviour
                     Debug.Log("버그");
                     GameInfo.inst.PlayerCardIdxs[i] = 0;
                     a = GameInfo.inst.PlayerCardIdxs[i];
-                    CardImages[i].sprite = null;
+                    CardImages[i].sprite = IconManager.inst.Icons[19];
                 }
                 else
                 {
@@ -137,14 +138,15 @@ public class CardManager : MonoBehaviour
     {
         if (ClickObject != null)
         {
-            ClickObject.GetComponent<Image>().color = BasicColor;
+            //ClickObject.GetComponent<Image>().color = BasicColor;
+            ClickObject.GetComponent<CardIdx>().Focus.SetActive(false);
         }
         CardName.text = "";
         CardName.gameObject.GetComponent<TextIdx>().Idx = 99999; // 빈칸설정
         CardInfo.text = "";
         CardInfo.gameObject.GetComponent<TextIdx>().Idx = 99999; //빈칸설정
         ClickObject = null;
-        GoldObject.SetActive(false);
+        //GoldObject.SetActive(false);
     }
     public void PlayerCardButton(GameObject g) // 플레이어의 카드 버튼 누를때
     {
@@ -175,7 +177,7 @@ public class CardManager : MonoBehaviour
                     CardImages[checknum].GetComponentInParent<CardIdx>().Idx = idx;
                     CardImages[num].GetComponentInParent<CardIdx>().Idx = 0;
                     CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];
-                    CardImages[num].sprite = null;
+                    CardImages[num].sprite = IconManager.inst.Icons[19];
                     InfoReset();
                     return;
                 }
@@ -208,9 +210,11 @@ public class CardManager : MonoBehaviour
         }
         if (ClickObject!=null)
         {
-            ClickObject.GetComponent<Image>().color = BasicColor;
+            //ClickObject.GetComponent<Image>().color = BasicColor;
+            ClickObject.GetComponent<CardIdx>().Focus.SetActive(false);
         }
-        g.GetComponent<Image>().color = ClickColor;
+        //g.GetComponent<Image>().color = ClickColor;
+        g.GetComponent<CardIdx>().Focus.SetActive(true);
         ClickObject = g;
         Info(g);
 
@@ -226,9 +230,9 @@ public class CardManager : MonoBehaviour
         }
         else
         {
-            int gold = GameInfo.inst.CardsInfo[a].CardPrice;
-            GoldObject.SetActive(true);
-            GoldText.text = gold.ToString();
+            //int gold = GameInfo.inst.CardsInfo[a].CardPrice;
+           // GoldObject.SetActive(true);
+           // GoldText.text = gold.ToString();
 
         CardName.text = csvData.GameText(s);
         CardName.gameObject.GetComponent<TextIdx>().Idx = s;
@@ -255,20 +259,22 @@ public class CardManager : MonoBehaviour
         }
         if (ClickObject != null)
         {
-            ClickObject.GetComponent<Image>().color = BasicColor;
+            //ClickObject.GetComponent<Image>().color = BasicColor;
+            ClickObject.GetComponent<CardIdx>().Focus.SetActive(false);
         }
         else
         {
 
         }
 
-        g.GetComponent<Image>().color = ClickColor;
+        //g.GetComponent<Image>().color = ClickColor;
+        g.GetComponent<CardIdx>().Focus.SetActive(true);
         ClickObject = g;
         int a = g.GetComponent<CardIdx>().Idx;
         int s = GameInfo.inst.CardsInfo[a].CardNameNum;
-        int gold = GameInfo.inst.CardsInfo[a].CardPrice;
-        GoldObject.SetActive(true);
-        GoldText.text = gold.ToString();
+       // int gold = GameInfo.inst.CardsInfo[a].CardPrice;
+       // GoldObject.SetActive(true);
+       // GoldText.text = gold.ToString();
         CardName.text = csvData.GameText(s);
         CardName.gameObject.GetComponent<TextIdx>().Idx = s;
         s = GameInfo.inst.CardsInfo[a].CardInfoNum;
@@ -279,10 +285,11 @@ public class CardManager : MonoBehaviour
     public void UnEquipFunc() // 해제
     {
         int idx = ClickObject.GetComponent<CardIdx>().Idx;
-        ClickObject.GetComponent<Image>().color = BasicColor;
+        //ClickObject.GetComponent<Image>().color = BasicColor;
+        ClickObject.GetComponent<CardIdx>().Focus.SetActive(false);
         ClickObject.GetComponent<CardIdx>().Idx = 0;
         GameInfo.inst.PlayerCardIdxs[ClickObject.GetComponent<CardIdx>().num] = 0;
-        ClickObject.GetComponent<CardIdx>().image.sprite = null;
+        ClickObject.GetComponent<CardIdx>().image.sprite = IconManager.inst.Icons[19];
         GameObject card = Instantiate(CardPrefab, parent);
         cardlist.Add(card);
         card.GetComponent<CardIdx>().Idx = idx;
@@ -367,7 +374,7 @@ public class CardManager : MonoBehaviour
             int num = ClickObject.GetComponent<CardIdx>().num;
             CardImages[num].GetComponentInParent<CardIdx>().Idx = 0;
             GameInfo.inst.PlayerCardIdxs[num] = 0;
-            CardImages[num].sprite = null;
+            CardImages[num].sprite = IconManager.inst.Icons[19];
             CardCheck();
         }
         else//인벤칸에서 판매

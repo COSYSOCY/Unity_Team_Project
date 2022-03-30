@@ -32,6 +32,10 @@ public class GameInfo : MonoBehaviour
 	public static int PlayerGold; // 플레이어 골드
 	public static int PlayerPoint; // 플레이어 보석
 
+	public  int PlayerLevel; // 플레이어 레벨
+	public  int PlayerEnergy; // 플레이어 에너지
+	public  int PlayerEnergyMax; // 플레이어 최대에너지
+
 	public int CharacterIdx; //캐릭터번호
 	public int MapIdx; // 맵번호
 	public int SkillIdx; // 스킬번호
@@ -82,7 +86,6 @@ public class GameInfo : MonoBehaviour
 		audioSo = inst.GetComponent<AudioSource>();
 		PlayerGold = 600;
 		PlayerPoint = 5;
-		Debug.Log("sss1");
 
 	}
 
@@ -93,15 +96,20 @@ public class GameInfo : MonoBehaviour
 			CharacterActive.Add(0);
 
 		}
-		CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
-
 		// 임시
 		CharacterActive[1] = 1;
 		CharacterActive[2] = 1;
-		// 임시
-		AdGoldFreeMax = 3;
 		//
-		Debug.Log("sss2");
+		if (PlayerLevel==0)
+        {
+			PlayerLevel = 1;
+			CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
+			AdGoldFreeMax = 3;
+			PlayerEnergy = 50;
+			PlayerEnergyMax = 20;
+
+		}
+		
 	}
 
     public void TestFunc() //처음 할때 주는거 테스트중

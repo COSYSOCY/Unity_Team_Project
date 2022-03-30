@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
     }
     void AdFreeSet()
     {
-        ADFreeCnt.text="("+GameInfo.inst.AdGoldFreeMax+")";
+        //ADFreeCnt.text="("+GameInfo.inst.AdGoldFreeMax+")";
     }
 
     public void AdFreeButton()

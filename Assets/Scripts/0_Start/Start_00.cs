@@ -10,7 +10,7 @@ public class Start_00 : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
-            SceneManager.LoadScene("01_Loby");
+            SceneManager.LoadScene("01_Loby_Main");
             
         }
     }

@@ -33,6 +33,6 @@ public class CharacterBtn : MonoBehaviour
     public void ButtonClicks()
     {
         manager = GameObject.FindGameObjectWithTag("CharManager").GetComponent<CharacterManager>();
-        manager.CharacterChange(gameObject);
+        manager.BtnClick(gameObject, State);
     }
 }

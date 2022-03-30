@@ -24,7 +24,7 @@ public class LevelUp : MonoBehaviour
     public bool IsShow = false;
     public GameObject ShowText;
     public GameObject ShowImage;
-
+    public GameObject Adicon;
 
 
     private void Start()
@@ -40,7 +40,7 @@ public class LevelUp : MonoBehaviour
         MobileAds.SetRequestConfiguration(requestConfiguration);
 
         LoadFrontAd();
-        LoadRewardAd();
+        //LoadRewardAd();
     }
     //private void Update()
     //{
@@ -315,6 +315,7 @@ public class LevelUp : MonoBehaviour
         LevelupUiOb[1].SetActive(true);
         LevelupUiOb[2].SetActive(true);
         LevelupUiOb[3].SetActive(true);
+        Adicon.SetActive(true);
         LevelupFunc();
     }
 
@@ -445,8 +446,9 @@ public class LevelUp : MonoBehaviour
     }
     public void ShowFunc()
     {
-
-        ShowRewardAd();
+        LoadRewardAd(0);
+        rewardAd.Show();  
+        //ShowRewardAd();
     }
 
     #region 전면 광고
@@ -480,25 +482,43 @@ public class LevelUp : MonoBehaviour
     RewardedAd rewardAd;
 
 
-    void LoadRewardAd()
+    void LoadRewardAd(int i)
     {
         rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
         rewardAd.LoadAd(GetAdRequest());
-        rewardAd.OnUserEarnedReward += (sender, e) =>
+        if (i == 0)
         {
-            //Debug.Log("리워드 성공");
-            IsShow = true;
-            ShowImage.SetActive(false);
-            ShowText.SetActive(false);
-            Time.timeScale = 0f;
-        };
-    }
+                rewardAd.OnUserEarnedReward += (sender, e) =>
+                {
+                    //Debug.Log("리워드 성공");
+                    IsShow = true;
+                    ShowImage.SetActive(false);
+                    ShowText.SetActive(false);
+                    Adicon.SetActive(false);
 
-    public void ShowRewardAd()
-    {
-        rewardAd.Show();
-        LoadRewardAd();
+                    Time.timeScale = 0f;
+                };
+        }
+        else if (i==1)
+        {
+            rewardAd.OnUserEarnedReward += (sender, e) =>
+            {
+                Time.timeScale = 1f;
+                StartCoroutine(MainSingleton.instance.playerstat.AdIn());
+            };
+        }
+
     }
+    public void ADRFunc()
+    {
+        LoadRewardAd(1);
+        rewardAd.Show();
+    }
+    //public void ShowRewardAd(int i)
+    //{
+    //    rewardAd.Show();
+    //    LoadRewardAd(i);
+    //}
     #endregion
 
 }

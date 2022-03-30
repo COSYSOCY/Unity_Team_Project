@@ -1732,6 +1732,7 @@ MonoBehaviour:
   IsShow: 0
   ShowText: {fileID: 1127196405}
   ShowImage: {fileID: 620677808}
+  Adicon: {fileID: 1133375146}
 --- !u!4 &167265274
 Transform:
   m_ObjectHideFlags: 0
@@ -7085,7 +7086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &623419545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8154,13 +8155,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778146707}
-  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 0, y: 20, z: -5}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 50, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &778146711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8174,7 +8175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4701004815584131811}
-  offset: {x: 0, y: 20, z: -5}
+  offset: {x: 0, y: 30, z: 0}
 --- !u!1 &806162190
 GameObject:
   m_ObjectHideFlags: 0
@@ -8738,15 +8739,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   GoldText: {fileID: 667177204}
-  Xpbar: {fileID: 0}
+  Xpbar: {fileID: 480095543}
   TimeText: {fileID: 1598097939}
-  Soundimage: {fileID: 0}
+  Soundimage: {fileID: 777425136}
   icons:
-  - {fileID: 21300000, guid: 3886e1bf4e70e4045b254eae058e9b3e, type: 3}
-  - {fileID: 21300000, guid: 0d9b1b1c1306f614daf3022a669701e1, type: 3}
+  - {fileID: 21300000, guid: 8e2ca54f4d1e24971a83483bbf303a0c, type: 3}
+  - {fileID: 21300000, guid: 0c25031178dad4c068ed55b9e33212ad, type: 3}
   KillText: {fileID: 1201271966}
   HpText: {fileID: 77984642}
-  LevelText: {fileID: 0}
+  LevelText: {fileID: 379585903}
   EndGameOb: {fileID: 289978691}
 --- !u!1 &892986481
 GameObject:
@@ -10099,7 +10100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &971108033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11066,7 +11067,7 @@ GameObject:
   - component: {fileID: 1133375149}
   - component: {fileID: 1133375148}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: ADIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13769,6 +13770,7 @@ GameObject:
   - component: {fileID: 1502693566}
   - component: {fileID: 1502693568}
   - component: {fileID: 1502693567}
+  - component: {fileID: 1502693569}
   m_Layer: 5
   m_Name: Button_Setting_Dark
   m_TagString: Untagged
@@ -13833,6 +13835,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502693565}
   m_CullTransparentMesh: 0
+--- !u!114 &1502693569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502693565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1502693567}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 865185821}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SettingOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 865185821}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OptionButton
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1181865732}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1515807337
 GameObject:
   m_ObjectHideFlags: 0
@@ -18454,9 +18536,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 865185821}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ReYes
+      - m_Target: {fileID: 167265273}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: ADRFunc
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19301,6 +19383,10 @@ PrefabInstance:
       propertyPath: deadObject
       value: 
       objectReference: {fileID: 1445900485}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: AdReObpayBtn
+      value: 
+      objectReference: {fileID: 971108032}
     - target: {fileID: 5262546689127081554, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: m_Enabled
       value: 1
