@@ -59,13 +59,13 @@ public class EnemyFunc : MonoBehaviour
     {
         yield return null;
         Vector3 playerPos = MainSingleton.instance.Player.transform.position;
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 36; i++)
         {
-            float x = Mathf.Cos(i) * 15f;
-            float z = Mathf.Sin(i) * 15f;
+            float x = Mathf.Cos(i) * 10f;
+            float z = Mathf.Sin(i) * 10f;
             Vector3 circlePos = new Vector3(x, 0, z);
             //GameObject bat = enemyPooling.MakeEnemy("Enemy");
-            Vector3 pos = playerPos + circlePos * 1.6f;
+            Vector3 pos = playerPos + circlePos * 1.8f;
             pos.y = 0;
             GameObject bat = ObjectPooler.SpawnFromPool(g, pos);
             bat.GetComponent<Enemy>().CreateStart();

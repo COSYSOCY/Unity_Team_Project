@@ -11,6 +11,7 @@ public class MapTrigger1 : MonoBehaviour
     private void Start()
     {
         StartCoroutine(timecheck());
+        startFunc();
     }
 
     IEnumerator timecheck()
@@ -29,15 +30,17 @@ public class MapTrigger1 : MonoBehaviour
             tiemtrigger(info.timeplus);
         }
     }
+    public void startFunc()
+    {
+        StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
+        StartCoroutine(enemyFunc.EnemyCreateFunc2(3, "Enemy_2"));
+        StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
+    }
 
     public void tiemtrigger(int t)
     {
         switch (t)
         {
-            case 1:
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
-                StartCoroutine(enemyFunc.EnemyCreateFunc2(10, "Enemy_2"));
-                break;
             case 60:
                 StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_1"));
@@ -47,17 +50,15 @@ public class MapTrigger1 : MonoBehaviour
                 StartCoroutine(enemyFunc.EnemyCreateFuncBat(3,15f,30f,"Enemy_Bat_1"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_1"));
                 break;
-            case 130:
-                stat.EnemyDes("Enemy_3",2);
-                stat.EnemyDes("Enemy_4",3);
-                stat.EnemyDes("Enemy_5",4);
-                break;
             case 180:
+                stat.EnemyDes("Enemy_3", 2);
+                stat.EnemyDes("Enemy_4", 3);
+                stat.EnemyDes("Enemy_5", 4);
                 StartCoroutine(enemyFunc.BossCreate("Boss_1", enemyFunc.GetRandomPos()));
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(120,0.5f, 0.5f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(240,0.5f, 0.5f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
                 break;
             case 240:
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 0.5f, 0.5f, 1, 1, "Enemy_9"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(240, 0.5f, 0.5f, 1, 1, "Enemy_9"));
                 break;
             case 300:
                 StartCoroutine(enemyFunc.BossCreate("Boss_2", enemyFunc.GetRandomPos()));

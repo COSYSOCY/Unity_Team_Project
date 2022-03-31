@@ -249,6 +249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9577724, guid: e17d60bf3d346414fb392090ace11068, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 13729356, guid: e17d60bf3d346414fb392090ace11068, type: 3}
       propertyPath: m_CastShadows
       value: 0
