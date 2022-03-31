@@ -35,7 +35,6 @@ public class NewSkill_1 : Skill_Ori
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
-        Debug.Log(local);
         for (int i = 1; i <= _BulletCnt(); i++)
         {
             
@@ -47,14 +46,14 @@ public class NewSkill_1 : Skill_Ori
             {
                 bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                StartCoroutine(bullet.GetComponent<Bullet_Info>().DeadObj(_BulletTime()));
+                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale=new Vector3(local, local, local);
             }
             else
             {
                 bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                StartCoroutine(bullet.GetComponent<Bullet_Info>().DeadObj(_BulletTime()));
+                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale=new Vector3(local, local, local);
             }
             yield return new WaitForSeconds(0.1f);

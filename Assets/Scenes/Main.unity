@@ -665,6 +665,9 @@ MonoBehaviour:
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 9212351459336938463, guid: e53bbed3b0fc309489ae18c28cd9efad, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -730,6 +733,12 @@ MonoBehaviour:
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
+    size: 1
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
+    size: 1
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!4 &81247187
 Transform:
@@ -1210,7 +1219,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 125332048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb07eb0a4a7bd34d9897c49d4c88873, type: 3}
+  m_Script: {fileID: 11500000, guid: 64571e717379c3c41aac5ff0cf15cb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -1220,8 +1229,7 @@ MonoBehaviour:
   info: {fileID: 125332051}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
-  endpos: {x: 0, y: 0, z: 0}
+    m_Bits: 192
 --- !u!114 &125332051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,7 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 8
-  Index_Text: 64
+  Index_Text: 66
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -3232,7 +3240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336292649
 Transform:
   m_ObjectHideFlags: 0
@@ -3281,7 +3289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 11
-  Index_Text: 88
+  Index_Text: 90
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -4377,6 +4385,9 @@ MonoBehaviour:
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 9212351459336938463, guid: e53bbed3b0fc309489ae18c28cd9efad, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -4442,6 +4453,12 @@ MonoBehaviour:
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
+    size: 1
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
+    size: 1
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!114 &401227049
 MonoBehaviour:
@@ -5971,7 +5988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
-  Index_Text: 24
+  Index_Text: 26
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6063,7 +6080,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 549085513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987be407f39212d4184294f974a9335b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4719e6e510aa73e41851afa1a48447ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -6073,7 +6090,10 @@ MonoBehaviour:
   info: {fileID: 549085516}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
+  bossmask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &549085516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6087,7 +6107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 5
-  Index_Text: 40
+  Index_Text: 42
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6200,7 +6220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &558249786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6248,7 +6268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 12
-  Index_Text: 96
+  Index_Text: 98
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6435,7 +6455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 567763652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6925c4c1a86896d4983c23e09875b3a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 00977459aa93c81448ddec085406a4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -6445,7 +6465,7 @@ MonoBehaviour:
   info: {fileID: 567763655}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
 --- !u!114 &567763655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6459,7 +6479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 9
-  Index_Text: 72
+  Index_Text: 74
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6630,7 +6650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 593982054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9dcd414b68b8f4d85c2ce21dd4edd2, type: 3}
+  m_Script: {fileID: 11500000, guid: b1e7622d4ac68ea4d8b7cfbcd559b0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -6640,7 +6660,7 @@ MonoBehaviour:
   info: {fileID: 593982057}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
 --- !u!114 &593982057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6654,7 +6674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 7
-  Index_Text: 56
+  Index_Text: 58
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6815,7 +6835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &615924997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6863,7 +6883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 13
-  Index_Text: 104
+  Index_Text: 106
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -7864,7 +7884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
-  Index_Text: 32
+  Index_Text: 34
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -12025,7 +12045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
-  Index_Text: 16
+  Index_Text: 18
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -12924,7 +12944,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412918703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4a85583894e164f8b40e90fb562249, type: 3}
+  m_Script: {fileID: 11500000, guid: b8aa7e4db93eeae4abedbaf089390362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -12935,6 +12955,7 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 0
+  bullet: {fileID: 1760328301}
 --- !u!114 &1412918706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12948,7 +12969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 10
-  Index_Text: 80
+  Index_Text: 82
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -13400,7 +13421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452574929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13414,7 +13435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 14
-  Index_Text: 112
+  Index_Text: 114
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -14459,6 +14480,7 @@ Transform:
   - {fileID: 1828634865}
   - {fileID: 1499604280}
   - {fileID: 880083012}
+  - {fileID: 1760328302}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15911,19 +15933,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711409214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14627ecbf43e4b54c93f22d78511deed, type: 3}
+  m_Script: {fileID: 11500000, guid: 839cc882502d41644af1d4c6a3166e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
-  Player: {fileID: 1567664940}
+  Player: {fileID: 4701004815584131815}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004816619112404}
   info: {fileID: 1711409217}
   layermask:
     serializedVersion: 2
+    m_Bits: 192
+  bossmask:
+    serializedVersion: 2
     m_Bits: 0
-  birdtarget: {fileID: 1499604278}
-  Dack: {fileID: 7783316784364892593, guid: 55b7f7bae9a76e747b5921e41b13c1c1, type: 3}
 --- !u!114 &1711409217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15937,7 +15960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 6
-  Index_Text: 48
+  Index_Text: 50
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -16457,6 +16480,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1760328301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760328302}
+  - component: {fileID: 1760328303}
+  m_Layer: 0
+  m_Name: SkillHelp_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1760328302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760328301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1567664941}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760328303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760328301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f37a65515dbf6d4ca3c57cc8c76c321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1781885281
 GameObject:
   m_ObjectHideFlags: 0
@@ -16878,7 +16944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
-  Index_Text: 8
+  Index_Text: 10
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -16972,7 +17038,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22, y: 13, z: 30}
+  m_Size: {x: 22, y: 13, z: 34}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1828634867
 MeshRenderer:
@@ -17150,7 +17216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1852654328}
   - component: {fileID: 1852654333}
-  - component: {fileID: 1852654332}
   - component: {fileID: 1852654331}
   - component: {fileID: 1852654329}
   m_Layer: 0
@@ -17189,7 +17254,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 1852654332}
+  enemyFunc: {fileID: 1388198332}
 --- !u!114 &1852654331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17203,24 +17268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: 891eb2a01b06132478b6c0108bd31de6, type: 3}
---- !u!114 &1852654332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852654327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
+  Maps: {fileID: 8974632829078057019, guid: b614487449b82cb43b621cdec04388d3, type: 3}
 --- !u!114 &1852654333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17267,6 +17315,9 @@ MonoBehaviour:
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 9086168997757739774, guid: 3560d29d9d6c7524d838df1fc08d37c6, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -17288,62 +17339,56 @@ MonoBehaviour:
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
     size: 100
-  - tag: Enemy_Bat
-    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
-    size: 50
-  - tag: Enemy_1
-    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
-    size: 50
-  - tag: Enemy_2
-    prefab: {fileID: 6876871023749238010, guid: b5eaa4e9b8fe9c94f815d5753b006f0e, type: 3}
-    size: 50
-  - tag: Enemy_3
-    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
-    size: 50
-  - tag: Enemy_4
-    prefab: {fileID: 6876871023749238010, guid: 4b4228d7ea1a236408314b577bed68a3, type: 3}
-    size: 50
-  - tag: Enemy_5
-    prefab: {fileID: 6876871023749238010, guid: 00142f5b95f965d4492e13129fed01ab, type: 3}
-    size: 50
-  - tag: Enemy_6
-    prefab: {fileID: 6876871023749238010, guid: 731ffbe0f83bc1e439402f46d6eaf50c, type: 3}
-    size: 50
   - tag: Item_Info_Text
     prefab: {fileID: 9206490787055995905, guid: c0ba6f4e98dfb484e9473274306b348a, type: 3}
     size: 5
   - tag: item_Card_1
     prefab: {fileID: 6627993160295598616, guid: 043cb63c912d57d44800be7f9ac1c451, type: 3}
     size: 5
-  - tag: Boss_0
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 120
+  - tag: Enemy_2
+    prefab: {fileID: 6876871023749238010, guid: 642476b40c9b25244b8410eb060db4fd, type: 3}
+    size: 120
+  - tag: Enemy_3
+    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
+    size: 120
+  - tag: Enemy_4
+    prefab: {fileID: 6876871023749238010, guid: 8c6481031786ddd44b36ad59764ec42d, type: 3}
+    size: 120
+  - tag: Enemy_5
+    prefab: {fileID: 6876871023749238010, guid: 0371ef02904493d4b84667ef48b0f760, type: 3}
+    size: 120
+  - tag: Enemy_6
+    prefab: {fileID: 6876871023749238010, guid: 0eacfb25993af42448a8a51d96f74daa, type: 3}
+    size: 120
+  - tag: Enemy_7
+    prefab: {fileID: 6876871023749238010, guid: a4045c4656c90ed42b1a89e07c9a9b1a, type: 3}
+    size: 120
+  - tag: Enemy_8
+    prefab: {fileID: 6876871023749238010, guid: a30d14cbe06195343b1d55de28702446, type: 3}
+    size: 120
+  - tag: Enemy_9
+    prefab: {fileID: 6876871023749238010, guid: 89ac931a8bda90540b148c67dbea1eab, type: 3}
+    size: 120
+  - tag: Enemy_Bat_1
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 30
+  - tag: Enemy_Circle_1
+    prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
+    size: 30
+  - tag: Boss_1
     prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
-  - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
   - tag: Boss_2
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
     size: 1
-  - tag: Boss_3
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
     size: 1
-  - tag: Boss_4
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_5
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_6
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_7
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_8
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_9
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!1 &1864439628
 GameObject:

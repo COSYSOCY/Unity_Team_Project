@@ -71,6 +71,7 @@ public class Enemy : MonoBehaviour
         //transform.GetComponent<NavMeshAgent>().gameObject.SetActive(false);
         nav.enabled = false;
         //Invoke("ReAttach", 0.01f);
+        transform.position = new Vector3(-10f, -10f, -10f);
     }
     void ReAttach()
     {

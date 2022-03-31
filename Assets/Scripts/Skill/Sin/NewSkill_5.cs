@@ -38,9 +38,9 @@ public class NewSkill_5 : Skill_Ori
         {
 
             yield return new WaitForSeconds(_CoolMain(true));
+            bullet.SetActive(true);
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
-            bullet.SetActive(true);
 
             
             
@@ -49,17 +49,17 @@ public class NewSkill_5 : Skill_Ori
     IEnumerator Skill_Update3()
     {
         yield return new WaitForSeconds(_CoolSub2(false));
-        StopCoroutine(coroutine);
         bullet.SetActive(false);
+        StopCoroutine(coroutine);
     }
     IEnumerator Skill_Update2()
     {
         while(true)
         { 
             Vector3 pos = bulletPos.transform.position;
-            pos.y = 0;
+            pos.y = 1;
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(bulletPos.transform.position, Player.transform.lossyScale.x*_AtRange(), layermask);
+            Enemys = Physics.OverlapSphere(pos, Player.transform.lossyScale.x*_AtRange(), layermask);
             if (Enemys.Length >0)
             {
                 for (int i = 0; i < Enemys.Length; i++)

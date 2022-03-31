@@ -54,6 +54,7 @@ public class NewSkill_3 : Skill_Ori
                 laser.transform.localScale = new Vector3(local, local, local);
                 Vector3 d = target.transform.position - Player.transform.position;
                 d.Normalize();
+                d.y = 0f;
                 endpos = d * 50;
                 laser.GetComponent<LineRenderer>().SetPosition(0, Player.transform.position);
                 laser.GetComponent<LineRenderer>().SetPosition(1, endpos);

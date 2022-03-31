@@ -11,7 +11,6 @@ public class Bullet_Trigger_Pie : MonoBehaviour
         {
             info.pie--;
             other.GetComponent<Enemy_Info>().Damaged(info.damage);
-            
             if (info.pie <1)
             {
                 gameObject.SetActive(false);

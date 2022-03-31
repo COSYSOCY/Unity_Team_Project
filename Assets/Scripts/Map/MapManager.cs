@@ -74,7 +74,7 @@ public class MapManager : MonoBehaviour
 		{
 			position = coord * size;
 			bounds = new Bounds(position, Vector2.one * size);
-			Vector3 positionV3 = new Vector3(position.x, 0, position.y);
+			Vector3 positionV3 = new Vector3(position.x, 0f, position.y);
 
 			meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
 			meshObject.transform.localScale = Vector3.one * size / 10f;

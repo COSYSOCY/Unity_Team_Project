@@ -8,12 +8,14 @@ public class Bullet_Info : MonoBehaviour
     public int pie;
     public float move;
 
-
-    public IEnumerator DeadObj(float t)
+    public void Destorybullet(float t)
+    {
+        StartCoroutine(DeadObj(t));
+    }
+    IEnumerator DeadObj(float t)
     {
 
         yield return new WaitForSeconds(t);
         gameObject.SetActive(false);
-        //Destroy(gameObject);
     }
 }
