@@ -16,12 +16,13 @@ public class Skill_Info : MonoBehaviour
     public int bulletCnt; // 투사체수
     public int bulletCntMax; // 투사체최대수
     public float BulletSpeed; // 투사체속도
+    public float BulletTime; // 투사체지속시간
     public int BulletPie; // 투사체관통수
     public float BulletAtCri; // 치명타확률
     public float CoolMain; // 쿨타임 메인
     public float CoolSub1; // 쿨타임 서브1
     public float CoolSub2; // 쿨타임 서브2
-    public float AtRange; // 공격범위
+    public float AtRange; // 공격범위(크기)
     public float SkillReal1; // 실수1
     public float SkillReal2; // 실수2
     public float SkillReal3; // 실수3
@@ -42,6 +43,7 @@ public class Skill_Info : MonoBehaviour
     public List<float> BulletSpeedCheck=new List<float>();
     public List<int> BulletPieCheck=new List<int>();
     public List<float> BulletAtCriCheck=new List<float>();
+    public List<float> BulletTimeCheck = new List<float>();
     public List<float> CoolMainCheck=new List<float>();
     public List<float> CoolSub1Check=new List<float>();
     public List<float> CoolSub2Check=new List<float>();
@@ -70,6 +72,7 @@ public class Skill_Info : MonoBehaviour
             BulletSpeedCheck.Add(csvData.SkillBulletSpeed[i]);
             BulletPieCheck.Add(csvData.SkillBulletPie[i]);
             BulletAtCriCheck.Add(csvData.SkillCri[i]);
+            BulletTimeCheck.Add(csvData.SkillBulletTime[i]);
             CoolMainCheck.Add(csvData.SkillCoolTimeMain[i]);
             CoolSub1Check.Add(csvData.SkillCoolTimeSub1[i]);
             CoolSub2Check.Add(csvData.SkillCoolTimeSub2[i]);

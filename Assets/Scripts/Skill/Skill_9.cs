@@ -29,7 +29,7 @@ public class Skill_9 : Skill_Ori
         float Range = 50f;
         while (true)
         {
-            yield return new WaitForSeconds(Cool_Main);
+            yield return new WaitForSeconds(_CoolMain(true));
             Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(50)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {

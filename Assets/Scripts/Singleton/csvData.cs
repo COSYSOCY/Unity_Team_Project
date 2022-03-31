@@ -71,6 +71,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillMaxDamage=new List<float>();
     public static List<float> SkillBulletSpeed=new List<float>();
     public static List<int> SkillBulletPie=new List<int>();
+    public static List<float> SkillBulletTime=new List<float>();
     public static List<float> SkillCri=new List<float>();
     public static List<float> SkillCoolTimeMain=new List<float>();
     public static List<float> SkillCoolTimeSub1=new List<float>();
@@ -250,6 +251,7 @@ public class csvData : MonoBehaviour
             SkillMinDamage.Add(float.Parse(data[i]["최소 데미지"].ToString()));
             SkillMaxDamage.Add(float.Parse(data[i]["최대 데미지"].ToString()));
             SkillBulletSpeed.Add(float.Parse(data[i]["투사체속도"].ToString()));
+            SkillBulletTime.Add(float.Parse(data[i]["투사체지속시간"].ToString()));
             SkillBulletPie.Add(int.Parse(data[i]["관통"].ToString()));
             SkillCri.Add(float.Parse(data[i]["치명타 확률"].ToString()));
             SkillCoolTimeMain.Add(float.Parse(data[i]["쿨타임"].ToString()));
