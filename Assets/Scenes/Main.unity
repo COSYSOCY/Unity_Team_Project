@@ -522,7 +522,6 @@ GameObject:
   m_Component:
   - component: {fileID: 81247187}
   - component: {fileID: 81247186}
-  - component: {fileID: 81247185}
   - component: {fileID: 81247184}
   - component: {fileID: 81247188}
   m_Layer: 0
@@ -546,23 +545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: b614487449b82cb43b621cdec04388d3, type: 3}
---- !u!114 &81247185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81247183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &81247186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,62 +612,50 @@ MonoBehaviour:
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
     size: 100
-  - tag: Enemy_Bat
-    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
-    size: 50
-  - tag: Enemy_1
-    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
-    size: 50
-  - tag: Enemy_2
-    prefab: {fileID: 6876871023749238010, guid: b5eaa4e9b8fe9c94f815d5753b006f0e, type: 3}
-    size: 50
-  - tag: Enemy_3
-    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
-    size: 50
-  - tag: Enemy_4
-    prefab: {fileID: 6876871023749238010, guid: 4b4228d7ea1a236408314b577bed68a3, type: 3}
-    size: 50
-  - tag: Enemy_5
-    prefab: {fileID: 6876871023749238010, guid: 00142f5b95f965d4492e13129fed01ab, type: 3}
-    size: 50
-  - tag: Enemy_6
-    prefab: {fileID: 6876871023749238010, guid: 731ffbe0f83bc1e439402f46d6eaf50c, type: 3}
-    size: 50
   - tag: Item_Info_Text
     prefab: {fileID: 9206490787055995905, guid: c0ba6f4e98dfb484e9473274306b348a, type: 3}
     size: 5
   - tag: item_Card_1
     prefab: {fileID: 6627993160295598616, guid: 043cb63c912d57d44800be7f9ac1c451, type: 3}
     size: 5
-  - tag: Boss_0
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 120
+  - tag: Enemy_2
+    prefab: {fileID: 6876871023749238010, guid: 642476b40c9b25244b8410eb060db4fd, type: 3}
+    size: 120
+  - tag: Enemy_3
+    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
+    size: 120
+  - tag: Enemy_4
+    prefab: {fileID: 6876871023749238010, guid: 8c6481031786ddd44b36ad59764ec42d, type: 3}
+    size: 120
+  - tag: Enemy_5
+    prefab: {fileID: 6876871023749238010, guid: 0371ef02904493d4b84667ef48b0f760, type: 3}
+    size: 120
+  - tag: Enemy_6
+    prefab: {fileID: 6876871023749238010, guid: 0eacfb25993af42448a8a51d96f74daa, type: 3}
+    size: 120
+  - tag: Enemy_7
+    prefab: {fileID: 6876871023749238010, guid: a4045c4656c90ed42b1a89e07c9a9b1a, type: 3}
+    size: 120
+  - tag: Enemy_8
+    prefab: {fileID: 6876871023749238010, guid: a30d14cbe06195343b1d55de28702446, type: 3}
+    size: 120
+  - tag: Enemy_9
+    prefab: {fileID: 6876871023749238010, guid: 89ac931a8bda90540b148c67dbea1eab, type: 3}
+    size: 120
+  - tag: Enemy_Bat_1
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 30
+  - tag: Enemy_Circle_1
+    prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
+    size: 30
+  - tag: Boss_1
     prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
-  - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
   - tag: Boss_2
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_3
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_4
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_5
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_6
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_7
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_8
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_9
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
     size: 1
 --- !u!4 &81247187
 Transform:
@@ -716,7 +686,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 81247185}
+  enemyFunc: {fileID: 1388198332}
 --- !u!1 &87213579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4218,6 @@ GameObject:
   m_Component:
   - component: {fileID: 401227045}
   - component: {fileID: 401227048}
-  - component: {fileID: 401227047}
   - component: {fileID: 401227046}
   - component: {fileID: 401227049}
   m_Layer: 0
@@ -4286,23 +4255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 19a407eddc4ab9a42a6211e5372b6b03, type: 3}
---- !u!114 &401227047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401227044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &401227048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4370,62 +4322,50 @@ MonoBehaviour:
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
     size: 100
-  - tag: Enemy_Bat
-    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
-    size: 50
-  - tag: Enemy_1
-    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
-    size: 50
-  - tag: Enemy_2
-    prefab: {fileID: 6876871023749238010, guid: b5eaa4e9b8fe9c94f815d5753b006f0e, type: 3}
-    size: 50
-  - tag: Enemy_3
-    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
-    size: 50
-  - tag: Enemy_4
-    prefab: {fileID: 6876871023749238010, guid: 4b4228d7ea1a236408314b577bed68a3, type: 3}
-    size: 50
-  - tag: Enemy_5
-    prefab: {fileID: 6876871023749238010, guid: 00142f5b95f965d4492e13129fed01ab, type: 3}
-    size: 50
-  - tag: Enemy_6
-    prefab: {fileID: 6876871023749238010, guid: 731ffbe0f83bc1e439402f46d6eaf50c, type: 3}
-    size: 50
   - tag: Item_Info_Text
     prefab: {fileID: 9206490787055995905, guid: c0ba6f4e98dfb484e9473274306b348a, type: 3}
     size: 5
   - tag: item_Card_1
     prefab: {fileID: 6627993160295598616, guid: 043cb63c912d57d44800be7f9ac1c451, type: 3}
     size: 5
-  - tag: Boss_0
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 120
+  - tag: Enemy_2
+    prefab: {fileID: 6876871023749238010, guid: 642476b40c9b25244b8410eb060db4fd, type: 3}
+    size: 120
+  - tag: Enemy_3
+    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
+    size: 120
+  - tag: Enemy_4
+    prefab: {fileID: 6876871023749238010, guid: 8c6481031786ddd44b36ad59764ec42d, type: 3}
+    size: 120
+  - tag: Enemy_5
+    prefab: {fileID: 6876871023749238010, guid: 0371ef02904493d4b84667ef48b0f760, type: 3}
+    size: 120
+  - tag: Enemy_6
+    prefab: {fileID: 6876871023749238010, guid: 0eacfb25993af42448a8a51d96f74daa, type: 3}
+    size: 120
+  - tag: Enemy_7
+    prefab: {fileID: 6876871023749238010, guid: a4045c4656c90ed42b1a89e07c9a9b1a, type: 3}
+    size: 120
+  - tag: Enemy_8
+    prefab: {fileID: 6876871023749238010, guid: a30d14cbe06195343b1d55de28702446, type: 3}
+    size: 120
+  - tag: Enemy_9
+    prefab: {fileID: 6876871023749238010, guid: 89ac931a8bda90540b148c67dbea1eab, type: 3}
+    size: 120
+  - tag: Enemy_Bat_1
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 30
+  - tag: Enemy_Circle_1
+    prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
+    size: 30
+  - tag: Boss_1
     prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
-  - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
   - tag: Boss_2
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_3
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_4
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_5
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_6
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_7
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_8
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_9
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
     size: 1
 --- !u!114 &401227049
 MonoBehaviour:
@@ -4442,7 +4382,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 401227047}
+  enemyFunc: {fileID: 1388198332}
 --- !u!1 &403111113
 GameObject:
   m_ObjectHideFlags: 0
@@ -5731,16 +5671,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 1428158546}
   CharList:
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
-  - {fileID: 591903698115204484, guid: 5e4b857f7b9ca6e4f8890da4175e6ed8, type: 3}
+  - {fileID: 909545961731707779, guid: 5cacba29a1abb9a4aa2b32001a835a1f, type: 3}
+  - {fileID: 4079568840774800776, guid: 6ba19c0da2faf4d46bc50e07f159cab7, type: 3}
+  - {fileID: 4079568840774800776, guid: 6ba19c0da2faf4d46bc50e07f159cab7, type: 3}
+  - {fileID: 4079568840774800776, guid: 6ba19c0da2faf4d46bc50e07f159cab7, type: 3}
   MapList:
   - {fileID: 81247183}
   - {fileID: 401227044}
@@ -8180,7 +8114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4701004815584131811}
-  offset: {x: 0, y: 40, z: -8}
+  offset: {x: 0, y: 40, z: -10}
 --- !u!1 &806162190
 GameObject:
   m_ObjectHideFlags: 0
@@ -9161,101 +9095,6 @@ MonoBehaviour:
   - tag: Boss_9
     prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
     size: 1
---- !u!1 &901798129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 901798130}
-  - component: {fileID: 901798133}
-  - component: {fileID: 901798132}
-  - component: {fileID: 901798131}
-  m_Layer: 0
-  m_Name: Check2
-  m_TagString: Check2
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &901798130
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901798129}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
-  m_Children: []
-  m_Father: {fileID: 1567664941}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &901798131
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901798129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &901798132
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901798129}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &901798133
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901798129}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &911335143
 GameObject:
   m_ObjectHideFlags: 0
@@ -11307,6 +11146,7 @@ Transform:
   - {fileID: 167265274}
   - {fileID: 1437812189}
   - {fileID: 2542579}
+  - {fileID: 1388198331}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12768,6 +12608,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363120970}
   m_CullTransparentMesh: 0
+--- !u!1 &1388198330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388198331}
+  - component: {fileID: 1388198332}
+  m_Layer: 0
+  m_Name: EnemyFunc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1388198331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388198330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1160336352}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1388198332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388198330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513b70b058d40104bbb6fde417721a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409016177
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,6 +12947,26 @@ MonoBehaviour:
   - {fileID: 1864439630}
   - {fileID: 1699538051}
   CharSkillAndItem:
+  - Skill:
+    - {fileID: 1635998966}
+    - {fileID: 1825683207}
+    - {fileID: 1210016405}
+    - {fileID: 547790603}
+    - {fileID: 752999191}
+    - {fileID: 549085513}
+    - {fileID: 1711409214}
+    - {fileID: 593982054}
+    - {fileID: 125332048}
+    - {fileID: 567763652}
+    - {fileID: 1412918703}
+    SkillItem:
+    - {fileID: 1010264065}
+    - {fileID: 1280769297}
+    - {fileID: 385692341}
+    - {fileID: 254640741}
+    - {fileID: 1517399886}
+    - {fileID: 838940889}
+    - {fileID: 2134257232}
   - Skill:
     - {fileID: 1635998966}
     - {fileID: 1825683207}
@@ -13785,7 +13688,7 @@ Transform:
   m_Children:
   - {fileID: 260500984}
   m_Father: {fileID: 1567664941}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502693565
 GameObject:
@@ -14367,7 +14270,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1828634865}
-  - {fileID: 901798130}
   - {fileID: 1499604280}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -16879,7 +16781,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 13, z: 28}
+  m_Size: {x: 22, y: 13, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1828634867
 MeshRenderer:
