@@ -7,7 +7,7 @@ public class MapTrigger2 : MonoBehaviour
     public PlayerInfo info;
     public UIManager ui;
     public PlayerStatus stat;
-    public EnemyManager manager;
+    public EnemyFunc enemyFunc;
     private void Start()
     {
         StartCoroutine(timecheck());
@@ -34,54 +34,38 @@ public class MapTrigger2 : MonoBehaviour
     {
         switch (t)
         {
-            case 30:
-                manager.EnemyCreate("Boss_0");
-                stat.EnemyMax += 10;
-                break;
-            case 40:
-                manager.EnemyCreate("Boss_0");
-                break;
-            case 50:
-                manager.EnemyCreate("Boss_0");
+            case 1:
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(10, "Enemy_2"));
                 break;
             case 60:
-                manager.EnemyCreate("Boss_1");
-                stat.EnemyMax += 10;
-                stat.EnemyDes("Enemy_1", 0);
-                stat.EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 90:
-                stat.EnemyMax += 10;
-                stat.EnemyCreateName[0] = "Enemy_2";
+                StartCoroutine(enemyFunc.BossCreate("Boss_1", enemyFunc.GetRandomPos()));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_1"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_3", "Enemy_4", "Enemy_5"));
                 break;
             case 120:
-                stat.EnemyMax += 10;
-                stat.EnemyDes("Enemy_2", 1);
-                stat.EnemyCreateName[0] = "Enemy_3";
+                StartCoroutine(enemyFunc.EnemyCreateFuncBat(3, 15f, 30f, "Enemy_Bat_1"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_1"));
+                break;
+            case 130:
+                stat.EnemyDes("Enemy_3", 2);
+                stat.EnemyDes("Enemy_4", 3);
+                stat.EnemyDes("Enemy_5", 4);
                 break;
             case 180:
-                stat.EnemyMax += 10;
-                stat.EnemyDes("Enemy_3", 2);
-                stat.EnemyCreateName[0] = "Enemy_4";
+                StartCoroutine(enemyFunc.BossCreate("Boss_1", enemyFunc.GetRandomPos()));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 0.5f, 0.5f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
                 break;
             case 240:
-                stat.EnemyMax += 10;
-                stat.EnemyDes("Enemy_4", 3);
-                stat.EnemyCreateName[0] = "Enemy_5";
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 0.5f, 0.5f, 1, 1, "Enemy_9"));
                 break;
             case 300:
-                stat.EnemyMax += 10;
+                StartCoroutine(enemyFunc.BossCreate("Boss_2", enemyFunc.GetRandomPos()));
+                StartCoroutine(enemyFunc.EnemyCreateFuncCircle("Enemy_Circle_1"));
                 break;
             case 360:
-                stat.EnemyMax += 10;
-                break;
-            case 420:
-                stat.EnemyMax += 10;
-                stat.EnemyMax += 10;
-                break;
-            case 480:
-                break;
 
+                break;
             default:
                 break;
         }

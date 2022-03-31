@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(target.position, transform.position) > 32f )
-            {  //32이상 멀어지면 재배치
+            if (Vector3.Distance(target.position, transform.position) > 34f )
+            {  //34이상 멀어지면 재배치
                 if (info.IsBoss)
                 {
                     info.BossMove();
@@ -58,7 +58,11 @@ public class Enemy : MonoBehaviour
         StartCoroutine(UpdateEnemy());
         info.moveCheck = true;
         nav.speed = info.Speed*0.1f;
+        if (!info.NoPosReset)
+        {
+
         StartCoroutine(moveFunc()); 
+        }
     }
     //SetDestination 버그 수정부분
     void OnDisable()
