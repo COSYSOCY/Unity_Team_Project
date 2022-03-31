@@ -8,7 +8,7 @@ Idx,name,Hp,Defence,Speed,Dagame,ItemIdx
 6,Enemy_7,17,0,35,6,1
 7,Enemy_8,17,0,35,6,1
 8,Enemy_9,22,0,35,6,1
-9,Enemy_Bat_1,4,0,10,6,1
+9,Enemy_Bat_1,4,0,120,6,1
 10,Enemy_Circle_1,3000,0,5,6,1
 11,Boss_1,100,0,35,6,1001
 12,Boss_2,300,0,35,6,1001

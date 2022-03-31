@@ -58,7 +58,11 @@ public class Enemy : MonoBehaviour
         StartCoroutine(UpdateEnemy());
         info.moveCheck = true;
         nav.speed = info.Speed*0.1f;
+        if (!info.NoPosReset)
+        {
+
         StartCoroutine(moveFunc()); 
+        }
     }
     //SetDestination 버그 수정부분
     void OnDisable()

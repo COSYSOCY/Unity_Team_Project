@@ -11,7 +11,7 @@ public class MapTrigger1 : MonoBehaviour
     private void Start()
     {
         StartCoroutine(timecheck());
-        startFunc();
+        
     }
 
     IEnumerator timecheck()
@@ -32,15 +32,21 @@ public class MapTrigger1 : MonoBehaviour
     }
     public void startFunc()
     {
-        StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
-        StartCoroutine(enemyFunc.EnemyCreateFunc2(3, "Enemy_2"));
-        StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
+        
     }
 
     public void tiemtrigger(int t)
     {
         switch (t)
         {
+            case 1:
+                StartCoroutine(enemyFunc.EnemyCreateFuncBat(3, 15f, 30f, "Enemy_Bat_1"));
+
+
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(3, "Enemy_2"));
+                StartCoroutine(enemyFunc.BossCreate("Boss_1", enemyFunc.GetRandomPos()));
+                break;
             case 60:
                 StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_1"));
