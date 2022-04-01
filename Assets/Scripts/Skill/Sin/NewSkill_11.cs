@@ -5,25 +5,25 @@ using UnityEngine;
 
 public class NewSkill_11 : Skill_Ori
 {
+    void Start_Func() //시작시 설정
+    {
+        manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
+        StartCoroutine(Skill_Update());
 
+
+    }
 
     public override void LevelUpFunc()
     {
         //
-        if (info.Lv == 2) // 2?????? ???? ????
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
 
         }
-    }
 
-
-    void Start_Func()
-    {
-        LevelUp();
-        manager.skill_Add(gameObject, info.Skill_Icon);
-        StartCoroutine(Skill_Update());
     }
-    IEnumerator Skill_Update() // ?????????? ?????? ??????
+    IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
         while (true)

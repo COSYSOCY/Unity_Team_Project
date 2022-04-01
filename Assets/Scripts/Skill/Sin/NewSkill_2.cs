@@ -34,7 +34,7 @@ public class NewSkill_2 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 0;
+        pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys;
         Vector3 endpos;
@@ -50,20 +50,24 @@ public class NewSkill_2 : Skill_Ori
                 target = Enemys[ran].gameObject;
 
 
+                
+                
                 GameObject laser = ObjectPooler.SpawnFromPool("Bullet_2", pos, Quaternion.identity);
                 laser.transform.localScale = new Vector3(local, local, local);
                 Vector3 d = target.transform.position - Player.transform.position;
                 d.Normalize();
-                d.y = 0f;
-                endpos = d * 50;
-                laser.GetComponent<LineRenderer>().SetPosition(0, Player.transform.position);
-                laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
+                
 
-                RaycastHit[] Rhits = Physics.SphereCastAll(Player.transform.position, laser.transform.lossyScale.x, d,layermask);
+                endpos = d * 30;
+                d.y = 1f;
+                laser.GetComponent<LineRenderer>().SetPosition(0, pos);
+                laser.GetComponent<LineRenderer>().SetPosition(1, target.transform.position);
+
+                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d,layermask);
 
                 if (Rhits.Length > 0)
                 {
-                    for (int s = 0; s < Rhits.Length; s++)
+                    for (int s = 0; s > Rhits.Length; s++)
                     {
                         if (Rhits[i].transform.gameObject.activeSelf)
                         {

@@ -3258,7 +3258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 336292648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfae4f970b151c945afb121e01e04762, type: 3}
+  m_Script: {fileID: 11500000, guid: 71ea811f55e94fd42b86bb3521cd791d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
@@ -3268,8 +3268,7 @@ MonoBehaviour:
   info: {fileID: 336292651}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
-  gidomon: {fileID: 2063997867346396075, guid: bb6f5512b9d8472418ef3059f8481d23, type: 3}
+    m_Bits: 192
 --- !u!114 &336292651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19620,6 +19619,14 @@ PrefabInstance:
       propertyPath: AdReObpayBtn
       value: 
       objectReference: {fileID: 971108032}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: Skillactive.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: SkillItemactive.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5262546689127081554, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: m_Enabled
       value: 1

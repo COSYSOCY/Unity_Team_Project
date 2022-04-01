@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 public class Skill_Ori : MonoBehaviour
 {
     public PlayerInfo playerinfo;
@@ -181,6 +180,7 @@ int bulletCntMax; // 투사체 최대갯수
 
         int i = 0;
         info.Lv++;
+        MainSingleton.instance.playerstat.Skillactive[info.Index]++;
         i = info.Lv - 1;
         info.DamageMin = info.DamageCheckMin[i];
         info.DamageMax = info.DamageCheckMax[i];
