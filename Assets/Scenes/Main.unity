@@ -13100,31 +13100,6 @@ MonoBehaviour:
   Skills: []
   Skill_Items: []
   Player_Skill: []
-  Skill_icon:
-  - {fileID: 21300000, guid: a8f4e8f470c1efe44b50e4a4aa91d28a, type: 3}
-  - {fileID: 21300000, guid: 1ba6cf7ed3d896246bcb3e730345fdd5, type: 3}
-  - {fileID: 21300000, guid: ea0bd35a6769ebc46855641393a64d70, type: 3}
-  - {fileID: 21300000, guid: 0f26c4e23172319419080a4207569814, type: 3}
-  - {fileID: 21300000, guid: 1e60fdd609af9ce428aa10d0be929dbb, type: 3}
-  - {fileID: 21300000, guid: 35209de3ddc7d984bbe20f4149a117ff, type: 3}
-  - {fileID: 21300000, guid: c3429c128337a81459831057c2485f91, type: 3}
-  - {fileID: 21300000, guid: dd24fe7982fb2d64b99fdeedaeeea735, type: 3}
-  - {fileID: 21300000, guid: 6ccfc945c7574ee4283b9e768aba5703, type: 3}
-  - {fileID: 21300000, guid: 11d082487c5d54f4cb58e46d26f9d0a5, type: 3}
-  - {fileID: 21300000, guid: d7b334d5fe308f6488efd558c5feb2ef, type: 3}
-  - {fileID: 21300000, guid: 99292da89bea1704b9bcaf8582c58f7f, type: 3}
-  - {fileID: 21300000, guid: 7e1d2f0d0a72d4c489e20b55afd4ca6c, type: 3}
-  - {fileID: 21300000, guid: 1e6ecf9cd0cdc544facac4a0f65deeb7, type: 3}
-  - {fileID: 21300000, guid: 1d1724f97153f3c46aecd41234a1d8e7, type: 3}
-  - {fileID: 21300000, guid: f6e8c9817f5c8694abe159dcd1fea920, type: 3}
-  - {fileID: 21300000, guid: 92dd1af1ab41e244db35c112913b3633, type: 3}
-  - {fileID: 21300000, guid: 51f0c7122f7498b4b9f176550c98a1fe, type: 3}
-  - {fileID: 21300000, guid: 5c88b80609ce7cb42a4d9161ca62ccad, type: 3}
-  - {fileID: 21300000, guid: 3e69bca05366e4d44a77a95eab9f68c3, type: 3}
-  - {fileID: 21300000, guid: f2de6fe8b4d34c64a8428bfe0b387f5e, type: 3}
-  - {fileID: 21300000, guid: 09a5c43cfc733f64883cb22ce67ac4b9, type: 3}
-  - {fileID: 21300000, guid: 6df9248c5ed22ae48b87a0cfb79b5ae7, type: 3}
-  - {fileID: 21300000, guid: fa037fb211d237042898863041211700, type: 3}
   playerinfo: {fileID: 4456675825087984495}
   ui_skill_Icon:
   - {fileID: 761710957}

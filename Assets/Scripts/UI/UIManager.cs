@@ -20,7 +20,11 @@ public class UIManager : MonoBehaviour
     public GameObject EndGameOb;
     private void Start()
     {
-        if (GameInfo.inst.PlayerSE)
+        //if (GameInfo.inst.PlayerSE)
+        //{
+        //    Soundimage.sprite = icons[1];
+        //}
+        if (GameInfo.inst.PlayerBGM)
         {
             Soundimage.sprite = icons[1];
         }
@@ -57,15 +61,28 @@ public class UIManager : MonoBehaviour
     }
     public void SoundCheck()
     {
-        if (GameInfo.inst.PlayerSE)
+        //if (GameInfo.inst.PlayerSE)
+        //{
+        //    Soundimage.sprite = icons[0];
+        //    GameInfo.inst.PlayerSE = false;
+        //}
+        //else
+        //{
+        //    Soundimage.sprite = icons[1];
+        //    GameInfo.inst.PlayerSE = true;
+        //}
+        if (GameInfo.inst.PlayerBGM)
         {
             Soundimage.sprite = icons[0];
-            GameInfo.inst.PlayerSE = false;
+            GameInfo.inst.PlayerBGM = false;
+            GameInfo.inst.audioSo.mute = false;
         }
         else
         {
             Soundimage.sprite = icons[1];
-            GameInfo.inst.PlayerSE = true;
+            GameInfo.inst.PlayerBGM = true;
+            GameInfo.inst.audioSo.mute = true;
+            GameInfo.inst.audioSo.Stop();
         }
     }
     public void Leveltext()

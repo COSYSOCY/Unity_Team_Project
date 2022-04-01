@@ -7066,15 +7066,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
-  - {fileID: 21300000, guid: 45f4390d223be2c42a52269456d15e65, type: 3}
-  - {fileID: 21300000, guid: d7b334d5fe308f6488efd558c5feb2ef, type: 3}
-  - {fileID: 21300000, guid: 1ba6cf7ed3d896246bcb3e730345fdd5, type: 3}
-  - {fileID: 21300000, guid: 35209de3ddc7d984bbe20f4149a117ff, type: 3}
-  - {fileID: 21300000, guid: 11d082487c5d54f4cb58e46d26f9d0a5, type: 3}
-  - {fileID: 21300000, guid: 99292da89bea1704b9bcaf8582c58f7f, type: 3}
-  - {fileID: 21300000, guid: 1e60fdd609af9ce428aa10d0be929dbb, type: 3}
-  - {fileID: 21300000, guid: ea0bd35a6769ebc46855641393a64d70, type: 3}
-  - {fileID: 21300000, guid: dd24fe7982fb2d64b99fdeedaeeea735, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
+  - {fileID: 21300000, guid: 7036fd4791bfd9d429c94b548aa5686e, type: 3}
   CharImage: {fileID: 453387296}
   SkillImage: {fileID: 782077015}
   Skill2Image: {fileID: 0}
@@ -9545,7 +9544,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 43398961}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.24999997
+  m_Size: 0.25
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16664,8 +16663,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538117477}
   m_HandleRect: {fileID: 1538117476}
   m_Direction: 0
-  m_Value: 1.0000005
-  m_Size: 0.7
+  m_Value: 1.0000002
+  m_Size: 0.6999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -30496,10 +30495,10 @@ RectTransform:
   m_Father: {fileID: 1212235598}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 91.46, y: -34}
-  m_SizeDelta: {x: 71.46, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1754278485
 MonoBehaviour:

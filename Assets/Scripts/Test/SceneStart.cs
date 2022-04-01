@@ -26,6 +26,7 @@ public class SceneStart : MonoBehaviour
         //MapManager.instance.GameStart = true;
         MapList[GameInfo.inst.MapIdx].SetActive(true);
         GameInfo.inst.audioSo.Pause();
+        SoundManager.inst.BGMPlay(2);
         yield return new WaitForSeconds(1);
         manager.All_Skill[GameInfo.inst.SkillIdx].SetActive(true);
         

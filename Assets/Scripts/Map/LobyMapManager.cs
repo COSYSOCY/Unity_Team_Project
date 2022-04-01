@@ -9,7 +9,7 @@ public class LobyMapManager : MonoBehaviour
     public Text MapName;
     public Text MapInfo;
     public Image MapIcon;
-    public List<Sprite> icons;
+    //public List<Sprite> icons;
 
     public Image LobyMapIcon;
     public Text LobyMapName;
@@ -47,7 +47,7 @@ public class LobyMapManager : MonoBehaviour
         int NameNum = GameInfo.inst.MapsInfo[MapIdx].MapNameNum;
         int InfoNum = GameInfo.inst.MapsInfo[MapIdx].MapInfoNum;
         int IconNum = GameInfo.inst.MapsInfo[MapIdx].MapIconNum;
-        LobyMapIcon.sprite = icons[IconNum];
+        LobyMapIcon.sprite = IconManager.inst.Icons[IconNum];
         LobyMapName.text = csvData.GameText(NameNum);
        // LobyMapInfo.text = csvData.GameText(InfoNum);
         LobyMapName.GetComponent<TextIdx>().Idx = NameNum;
@@ -60,7 +60,7 @@ public class LobyMapManager : MonoBehaviour
         int InfoNum = GameInfo.inst.MapsInfo[i].MapInfoNum;
         int IconNum = GameInfo.inst.MapsInfo[i].MapIconNum;
         int LockInfoNum = GameInfo.inst.MapsInfo[i].MapLockInfoNum;
-        MapIcon.sprite=icons[IconNum];
+        MapIcon.sprite= IconManager.inst.Icons[IconNum];
         MapName.text= csvData.GameText(NameNum);
         MapInfo.text= csvData.GameText(InfoNum);
         MapName.GetComponent<TextIdx>().Idx = NameNum;
