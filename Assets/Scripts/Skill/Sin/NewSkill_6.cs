@@ -40,18 +40,17 @@ public class NewSkill_6 : Skill_Ori
         yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange()*5f;
+        float local = _AtRange();
         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_6", pos, Quaternion.Euler(new Vector3(0, Random.Range(0, 360f))));
         bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-        bullet.transform.localScale = new Vector3(local, local, local);
         bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
         while (bullet.activeSelf)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
             GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
-            effect.transform.localScale = new Vector3(local * 0.5f, local * 0.5f, local * 0.5f);
+            effect.transform.localScale = new Vector3(local, local, local);
             Collider[] Enemys;
             Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
             if (Enemys.Length > 0)

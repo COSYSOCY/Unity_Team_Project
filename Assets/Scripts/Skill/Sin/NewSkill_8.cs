@@ -37,7 +37,7 @@ public class NewSkill_8 : Skill_Ori
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange()*2f;
+        float local = _AtRange();
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask).ToList();
 
             for (int i = 0; i < _BulletCnt(); i++)

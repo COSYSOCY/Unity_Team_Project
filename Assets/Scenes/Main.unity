@@ -3234,7 +3234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &336292649
 Transform:
   m_ObjectHideFlags: 0
@@ -6208,7 +6208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &558249786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6256,7 +6256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 12
-  Index_Text: 98
+  Index_Text: 100
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6823,7 +6823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &615924997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6871,7 +6871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 13
-  Index_Text: 106
+  Index_Text: 108
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -13409,7 +13409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1452574929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13423,7 +13423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 14
-  Index_Text: 114
+  Index_Text: 116
   Lv: 0
   LvMax: 0
   DamageMin: 0

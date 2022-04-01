@@ -10,6 +10,7 @@ public class Bullet_Trigger_9 : MonoBehaviour
 
     public void StartFunc()
     {
+        check = false;
         StartCoroutine(MoveFunc());
     }
     public IEnumerator MoveFunc()
@@ -21,6 +22,10 @@ public class Bullet_Trigger_9 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * info.move * 0.1f);
+        if (!check)
+            transform.Translate(Vector3.forward * Time.deltaTime * info.move * 0.1f);
+        else
+            transform.Translate(Vector3.back * Time.deltaTime * info.move * 0.1f);
+
     }
 }
