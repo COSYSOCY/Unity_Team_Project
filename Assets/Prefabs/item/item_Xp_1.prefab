@@ -127,10 +127,11 @@ MonoBehaviour:
   speed: 15
   levelstatus: {fileID: 0}
   playerstatus: {fileID: 0}
-  item_stat: 10
+  item_stat: 5
   pullcheck: 0
   playcolcheck: 0
   meshRenderer: {fileID: 4012728732026901076}
+  ItemText: {fileID: 0}
   item_enum: 1
 --- !u!54 &7141286743749433236
 Rigidbody:

@@ -642,7 +642,7 @@ MonoBehaviour:
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_5
-    prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
+    prefab: {fileID: 1010106222350519036, guid: aae8f54fc0574254fbd7a9e51ef27e54, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
@@ -734,6 +734,9 @@ MonoBehaviour:
   - tag: Boss_Test
     prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
+  - tag: item_xp_2
+    prefab: {fileID: 6627993160295598616, guid: a8dbc7eae3ec7c84fab0936805335117, type: 3}
+    size: 100
 --- !u!4 &81247187
 Transform:
   m_ObjectHideFlags: 0
@@ -4355,7 +4358,7 @@ MonoBehaviour:
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_5
-    prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
+    prefab: {fileID: 1010106222350519036, guid: aae8f54fc0574254fbd7a9e51ef27e54, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
@@ -4447,6 +4450,9 @@ MonoBehaviour:
   - tag: Boss_Test
     prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
+  - tag: item_xp_2
+    prefab: {fileID: 6627993160295598616, guid: a8dbc7eae3ec7c84fab0936805335117, type: 3}
+    size: 100
 --- !u!114 &401227049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6080,7 +6086,7 @@ MonoBehaviour:
     m_Bits: 192
   bossmask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &549085516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17251,7 +17257,7 @@ MonoBehaviour:
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_5
-    prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
+    prefab: {fileID: 1010106222350519036, guid: aae8f54fc0574254fbd7a9e51ef27e54, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
@@ -17343,6 +17349,9 @@ MonoBehaviour:
   - tag: Boss_Test
     prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
+  - tag: item_xp_2
+    prefab: {fileID: 6627993160295598616, guid: a8dbc7eae3ec7c84fab0936805335117, type: 3}
+    size: 100
 --- !u!1 &1864439628
 GameObject:
   m_ObjectHideFlags: 0

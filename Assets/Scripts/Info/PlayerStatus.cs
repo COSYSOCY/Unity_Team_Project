@@ -197,6 +197,7 @@ public class PlayerStatus : MonoBehaviour
         uimanager.Leveltext();
         XpSet();
         level.LevelFunc();
+        charFunc();
     }
     public void XpSet()
     {
@@ -217,6 +218,37 @@ public class PlayerStatus : MonoBehaviour
         IsAdIn = false;
     }
 
+
+    public void charFunc()
+    {
+        switch (GameInfo.inst.CharacterIdx)
+        {
+            case 0:
+                if (playerInfo.Lv==10)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if(playerInfo.Lv == 20)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 50)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
 
 
