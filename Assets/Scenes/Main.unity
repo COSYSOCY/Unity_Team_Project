@@ -636,35 +636,29 @@ MonoBehaviour:
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_2
-    prefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
+    prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
   - tag: Bullet_3
-    prefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
-    size: 10
-  - tag: Bullet_4
-    prefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
-    size: 10
-  - tag: Bullet_5
-    prefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
+    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
   - tag: Bullet_7
-    prefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+    prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
     size: 10
   - tag: Bullet_8
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_8_2
-    prefab: {fileID: 1593895901896320269, guid: 24ab5175cf510e14c996b4a85e3975b9, type: 3}
-    size: 10
   - tag: Bullet_9
-    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
+    prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -730,6 +724,12 @@ MonoBehaviour:
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
+    size: 1
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
+    size: 1
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!4 &81247187
 Transform:
@@ -1210,19 +1210,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 125332048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb07eb0a4a7bd34d9897c49d4c88873, type: 3}
+  m_Script: {fileID: 11500000, guid: 64571e717379c3c41aac5ff0cf15cb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 125332051}
-  Cool_Main: 4
-  Cool_sub1: 0
-  Cool_sub2: 0
-  endpos: {x: 0, y: 0, z: 0}
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &125332051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 8
-  Index_Text: 64
+  Index_Text: 66
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -1244,6 +1242,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -1263,6 +1262,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -3231,7 +3231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336292649
 Transform:
   m_ObjectHideFlags: 0
@@ -3260,13 +3260,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 1567664940}
-  bulletPrefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004816619112404}
   info: {fileID: 336292651}
-  Cool_Main: 5
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
   gidomon: {fileID: 2063997867346396075, guid: bb6f5512b9d8472418ef3059f8481d23, type: 3}
 --- !u!114 &336292651
 MonoBehaviour:
@@ -3281,7 +3280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 11
-  Index_Text: 88
+  Index_Text: 90
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -3289,6 +3288,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -3308,6 +3308,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -4346,35 +4347,32 @@ MonoBehaviour:
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_2
-    prefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
+    prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
   - tag: Bullet_3
-    prefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
-    size: 10
-  - tag: Bullet_4
-    prefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
-    size: 10
-  - tag: Bullet_5
-    prefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
+    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
   - tag: Bullet_7
-    prefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+    prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
+    size: 10
+  - tag: Bullet_7_1
+    prefab: {fileID: 1028300517397824, guid: 624bf54b33a5c9d42ab964ccde6bd4d2, type: 3}
     size: 10
   - tag: Bullet_8
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_8_2
-    prefab: {fileID: 1593895901896320269, guid: 24ab5175cf510e14c996b4a85e3975b9, type: 3}
-    size: 10
   - tag: Bullet_9
-    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
+    prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -4440,6 +4438,12 @@ MonoBehaviour:
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
+    size: 1
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
+    size: 1
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!114 &401227049
 MonoBehaviour:
@@ -5930,18 +5934,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 547790603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f7ba04a30368b40b4bbcbb614e6c68, type: 3}
+  m_Script: {fileID: 11500000, guid: 035c4fb1d1651f043aca602848308ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 547790606}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
+  bullet: {fileID: 880083011}
 --- !u!4 &547790605
 Transform:
   m_ObjectHideFlags: 0
@@ -5969,7 +5973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
-  Index_Text: 24
+  Index_Text: 26
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -5977,6 +5981,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -5996,6 +6001,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -6059,18 +6065,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 549085513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987be407f39212d4184294f974a9335b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4719e6e510aa73e41851afa1a48447ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 549085516}
-  Cool_Main: 2
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
+  bossmask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &549085516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6084,7 +6092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 5
-  Index_Text: 40
+  Index_Text: 42
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6092,6 +6100,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -6111,6 +6120,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -6195,7 +6205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &558249786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6210,13 +6220,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 558249788}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &558249787
 Transform:
   m_ObjectHideFlags: 0
@@ -6244,7 +6253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 12
-  Index_Text: 96
+  Index_Text: 98
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6252,6 +6261,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -6271,6 +6281,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -6429,18 +6440,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 567763652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6925c4c1a86896d4983c23e09875b3a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 00977459aa93c81448ddec085406a4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 567763655}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &567763655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6454,7 +6464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 9
-  Index_Text: 72
+  Index_Text: 74
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6462,6 +6472,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -6481,6 +6492,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -6623,18 +6635,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 593982054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9dcd414b68b8f4d85c2ce21dd4edd2, type: 3}
+  m_Script: {fileID: 11500000, guid: b1e7622d4ac68ea4d8b7cfbcd559b0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 593982057}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &593982057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6648,7 +6659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 7
-  Index_Text: 56
+  Index_Text: 58
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6656,6 +6667,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -6675,6 +6687,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -6807,7 +6820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &615924997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6822,13 +6835,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 615924999}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &615924998
 Transform:
   m_ObjectHideFlags: 0
@@ -6856,7 +6868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 13
-  Index_Text: 104
+  Index_Text: 106
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -6864,6 +6876,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -6883,6 +6896,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -7797,9 +7811,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752999193}
-  - component: {fileID: 752999192}
   - component: {fileID: 752999194}
   - component: {fileID: 752999195}
+  - component: {fileID: 752999192}
   m_Layer: 0
   m_Name: Skill5
   m_TagString: Untagged
@@ -7816,18 +7830,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 752999191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7544b568e9e3be648bd184e945a20d93, type: 3}
+  m_Script: {fileID: 11500000, guid: fb24eb457a7cc1246ad20c478cdf67ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
   manager: {fileID: 1428158546}
-  bulletPos: {fileID: 4701004815584131811}
+  bulletPos: {fileID: 1838016306}
   info: {fileID: 752999194}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
+  bullet: {fileID: 1838016307}
 --- !u!4 &752999193
 Transform:
   m_ObjectHideFlags: 0
@@ -7855,7 +7869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
-  Index_Text: 32
+  Index_Text: 34
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -7863,6 +7877,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -7882,6 +7897,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -8715,6 +8731,121 @@ MonoBehaviour:
   HpText: {fileID: 77984642}
   LevelText: {fileID: 379585903}
   EndGameOb: {fileID: 289978691}
+--- !u!1001 &880083010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1567664941}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_Name
+      value: Circle01_lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+--- !u!1 &880083011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+  m_PrefabInstance: {fileID: 880083010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &880083012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
+  m_PrefabInstance: {fileID: 880083010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &892986481
 GameObject:
   m_ObjectHideFlags: 0
@@ -11861,18 +11992,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210016405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb6a79045c1e544fbad8ca872cea2cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 90ea20eb35a61a54d85ff155f2a0b4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 1210016408}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!4 &1210016407
 Transform:
   m_ObjectHideFlags: 0
@@ -11900,7 +12030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
-  Index_Text: 16
+  Index_Text: 18
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -11908,6 +12038,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -11927,6 +12058,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -11983,7 +12115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -98.38}
+  m_AnchoredPosition: {x: 0, y: -98.37988}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234262905
@@ -12797,18 +12929,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412918703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4a85583894e164f8b40e90fb562249, type: 3}
+  m_Script: {fileID: 11500000, guid: b8aa7e4db93eeae4abedbaf089390362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 1412918706}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
+  bullet: {fileID: 1760328301}
 --- !u!114 &1412918706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12822,7 +12954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 10
-  Index_Text: 80
+  Index_Text: 82
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -12830,6 +12962,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -12849,6 +12982,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -13272,7 +13406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452574929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13286,7 +13420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 14
-  Index_Text: 112
+  Index_Text: 114
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -13294,6 +13428,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -13313,6 +13448,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -13335,13 +13471,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 1452574929}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &1452574931
 Transform:
   m_ObjectHideFlags: 0
@@ -14329,6 +14464,8 @@ Transform:
   m_Children:
   - {fileID: 1828634865}
   - {fileID: 1499604280}
+  - {fileID: 880083012}
+  - {fileID: 1760328302}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15054,18 +15191,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635998966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e582ecc2dd5a8a4ab0925d713d26937, type: 3}
+  m_Script: {fileID: 11500000, guid: db63becb16157b941b715441edb5d70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 1635998969}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1635998969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15087,6 +15223,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -15106,6 +15243,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -15780,20 +15918,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711409214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14627ecbf43e4b54c93f22d78511deed, type: 3}
+  m_Script: {fileID: 11500000, guid: 839cc882502d41644af1d4c6a3166e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
-  Player: {fileID: 1567664940}
-  bulletPrefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+  Player: {fileID: 4701004815584131815}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004816619112404}
   info: {fileID: 1711409217}
-  Cool_Main: 5
-  Cool_sub1: 0
-  Cool_sub2: 0
-  birdtarget: {fileID: 1499604278}
-  Dack: {fileID: 7783316784364892593, guid: 55b7f7bae9a76e747b5921e41b13c1c1, type: 3}
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &1711409217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15807,7 +15942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 6
-  Index_Text: 48
+  Index_Text: 50
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -15815,6 +15950,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -15834,6 +15970,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -16325,6 +16462,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1760328301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760328302}
+  - component: {fileID: 1760328303}
+  m_Layer: 0
+  m_Name: SkillHelp_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1760328302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760328301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1567664941}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760328303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760328301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f37a65515dbf6d4ca3c57cc8c76c321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1781885281
 GameObject:
   m_ObjectHideFlags: 0
@@ -16689,9 +16869,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825683209}
-  - component: {fileID: 1825683208}
   - component: {fileID: 1825683210}
   - component: {fileID: 1825683211}
+  - component: {fileID: 1825683208}
   m_Layer: 0
   m_Name: Skill2
   m_TagString: Untagged
@@ -16708,18 +16888,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825683207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef76fd797a8773342b3dfed39ecacae7, type: 3}
+  m_Script: {fileID: 11500000, guid: d715989b26f345b4a998ec74b7c4c598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}
   Player: {fileID: 4701004815584131815}
-  bulletPrefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
   manager: {fileID: 1428158546}
   bulletPos: {fileID: 4701004815584131811}
   info: {fileID: 1825683210}
-  Cool_Main: 0
-  Cool_sub1: 0
-  Cool_sub2: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!4 &1825683209
 Transform:
   m_ObjectHideFlags: 0
@@ -16747,7 +16926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
-  Index_Text: 8
+  Index_Text: 10
   Lv: 0
   LvMax: 0
   DamageMin: 0
@@ -16755,6 +16934,7 @@ MonoBehaviour:
   bulletCnt: 0
   bulletCntMax: 0
   BulletSpeed: 0
+  BulletTime: 0
   BulletPie: 0
   BulletAtCri: 0
   CoolMain: 0
@@ -16774,6 +16954,7 @@ MonoBehaviour:
   BulletSpeedCheck: []
   BulletPieCheck: 
   BulletAtCriCheck: []
+  BulletTimeCheck: []
   CoolMainCheck: []
   CoolSub1Check: []
   CoolSub2Check: []
@@ -16839,7 +17020,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22, y: 13, z: 30}
+  m_Size: {x: 22, y: 13, z: 34}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1828634867
 MeshRenderer:
@@ -16890,6 +17071,93 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828634864}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1838016305
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4701004815584131811}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_Name
+      value: Skill_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+--- !u!4 &1838016306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+  m_PrefabInstance: {fileID: 1838016305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1838016307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
+  m_PrefabInstance: {fileID: 1838016305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1851850061
 GameObject:
   m_ObjectHideFlags: 0
@@ -16930,7 +17198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1852654328}
   - component: {fileID: 1852654333}
-  - component: {fileID: 1852654332}
   - component: {fileID: 1852654331}
   - component: {fileID: 1852654329}
   m_Layer: 0
@@ -16969,7 +17236,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 1852654332}
+  enemyFunc: {fileID: 1388198332}
 --- !u!114 &1852654331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16983,24 +17250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: 891eb2a01b06132478b6c0108bd31de6, type: 3}
---- !u!114 &1852654332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852654327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
+  Maps: {fileID: 8974632829078057019, guid: b614487449b82cb43b621cdec04388d3, type: 3}
 --- !u!114 &1852654333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17018,35 +17268,32 @@ MonoBehaviour:
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_2
-    prefab: {fileID: 7647961879644215747, guid: b179eff8f1b17584eb9020e51546bdbf, type: 3}
+    prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
   - tag: Bullet_3
-    prefab: {fileID: 2058242023998935319, guid: 4dfb81f56affa43448174fd2b4e1b2f9, type: 3}
-    size: 10
-  - tag: Bullet_4
-    prefab: {fileID: 1593895901896320269, guid: ccbdc60699c10c945aa090cad67dda7d, type: 3}
-    size: 10
-  - tag: Bullet_5
-    prefab: {fileID: 2058242023998935319, guid: 605edd9c4c5b9b7409f956880f550c89, type: 3}
+    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
   - tag: Bullet_6
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
   - tag: Bullet_7
-    prefab: {fileID: 8792880933486749509, guid: 985f1a5093822ca4d84cfe747d9c5f0e, type: 3}
+    prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
+    size: 10
+  - tag: Bullet_7_1
+    prefab: {fileID: 1028300517397824, guid: 624bf54b33a5c9d42ab964ccde6bd4d2, type: 3}
     size: 10
   - tag: Bullet_8
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_8_2
-    prefab: {fileID: 1593895901896320269, guid: 24ab5175cf510e14c996b4a85e3975b9, type: 3}
-    size: 10
   - tag: Bullet_9
-    prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
+    prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
     size: 10
+  - tag: Bullet_11
+    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+    size: 1
   - tag: Bullet_12
     prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
     size: 10
@@ -17068,62 +17315,56 @@ MonoBehaviour:
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
     size: 100
-  - tag: Enemy_Bat
-    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
-    size: 50
-  - tag: Enemy_1
-    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
-    size: 50
-  - tag: Enemy_2
-    prefab: {fileID: 6876871023749238010, guid: b5eaa4e9b8fe9c94f815d5753b006f0e, type: 3}
-    size: 50
-  - tag: Enemy_3
-    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
-    size: 50
-  - tag: Enemy_4
-    prefab: {fileID: 6876871023749238010, guid: 4b4228d7ea1a236408314b577bed68a3, type: 3}
-    size: 50
-  - tag: Enemy_5
-    prefab: {fileID: 6876871023749238010, guid: 00142f5b95f965d4492e13129fed01ab, type: 3}
-    size: 50
-  - tag: Enemy_6
-    prefab: {fileID: 6876871023749238010, guid: 731ffbe0f83bc1e439402f46d6eaf50c, type: 3}
-    size: 50
   - tag: Item_Info_Text
     prefab: {fileID: 9206490787055995905, guid: c0ba6f4e98dfb484e9473274306b348a, type: 3}
     size: 5
   - tag: item_Card_1
     prefab: {fileID: 6627993160295598616, guid: 043cb63c912d57d44800be7f9ac1c451, type: 3}
     size: 5
-  - tag: Boss_0
+  - tag: Enemy_1
+    prefab: {fileID: 6876871023749238010, guid: c8954c49b93c5e24e91d96da46a1ea5a, type: 3}
+    size: 120
+  - tag: Enemy_2
+    prefab: {fileID: 6876871023749238010, guid: 642476b40c9b25244b8410eb060db4fd, type: 3}
+    size: 120
+  - tag: Enemy_3
+    prefab: {fileID: 6876871023749238010, guid: 173fa9c0b456d154a9a02b19a604552e, type: 3}
+    size: 120
+  - tag: Enemy_4
+    prefab: {fileID: 6876871023749238010, guid: 8c6481031786ddd44b36ad59764ec42d, type: 3}
+    size: 120
+  - tag: Enemy_5
+    prefab: {fileID: 6876871023749238010, guid: 0371ef02904493d4b84667ef48b0f760, type: 3}
+    size: 120
+  - tag: Enemy_6
+    prefab: {fileID: 6876871023749238010, guid: 0eacfb25993af42448a8a51d96f74daa, type: 3}
+    size: 120
+  - tag: Enemy_7
+    prefab: {fileID: 6876871023749238010, guid: a4045c4656c90ed42b1a89e07c9a9b1a, type: 3}
+    size: 120
+  - tag: Enemy_8
+    prefab: {fileID: 6876871023749238010, guid: a30d14cbe06195343b1d55de28702446, type: 3}
+    size: 120
+  - tag: Enemy_9
+    prefab: {fileID: 6876871023749238010, guid: 89ac931a8bda90540b148c67dbea1eab, type: 3}
+    size: 120
+  - tag: Enemy_Bat_1
+    prefab: {fileID: 365858360500288116, guid: fe1a202fcef31864397581aaaef9c23d, type: 3}
+    size: 30
+  - tag: Enemy_Circle_1
+    prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
+    size: 30
+  - tag: Boss_1
     prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
-  - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
   - tag: Boss_2
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
     size: 1
-  - tag: Boss_3
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+  - tag: Enemy_Test
+    prefab: {fileID: 6876871023749238010, guid: 32545668d7fd824479cdbb1468f5147c, type: 3}
     size: 1
-  - tag: Boss_4
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_5
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_6
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_7
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_8
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
-    size: 1
-  - tag: Boss_9
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+  - tag: Boss_Test
+    prefab: {fileID: 6876871023749238010, guid: 5cfb89f8e97ca054ba23a4f570f28636, type: 3}
     size: 1
 --- !u!1 &1864439628
 GameObject:
@@ -19128,7 +19369,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1523330341}
   m_HandleRect: {fileID: 0}

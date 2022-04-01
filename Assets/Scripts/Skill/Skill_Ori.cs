@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine;
 public class Skill_Ori : MonoBehaviour
 {
     public PlayerInfo playerinfo;
     public GameObject Player; //플레이어
-    public GameObject bulletPrefab; //총알Prefab
+    //public GameObject bulletPrefab; //총알Prefab
     public SkillManager manager;
     public Transform bulletPos;//총알생성위치 (따로 생성되는위치가 필요할때 사용)
     public Skill_Info info;
-    public float Cool_Main;
-    public float Cool_sub1;
-    public float Cool_sub2;
+    public LayerMask layermask;
     protected bool start = false;
+
 
 
     /*
 float _Damage() // 데미지
 int _BulletCnt() // 투사체수
 float _BulletSpeed() // 투사체이동속도
+float _BulletTime() // 투사체 지속시간
 int _BulletPie() // 투사체관통
 float _BulletAtCri() // 크리확률
 float _CoolMain(bool b) // b가 true이면 쿨감적용
@@ -68,6 +68,15 @@ int bulletCntMax; // 투사체 최대갯수
         d = d + (d * (d2 * 0.01f));
         return d;
     }
+    protected float _BulletTime()
+    {
+        float d;
+        float d2;
+        d = info.BulletTime;
+        d2 = GameInfo.BulletTimePlus + manager.BulletTime();
+        d = d + (d * (d2 * 0.01f));
+        return d;
+    }
     protected int _BulletPie()
     {
         int i;
@@ -82,9 +91,9 @@ int bulletCntMax; // 투사체 최대갯수
         return f;
     }
     /// <summary>
-    /// b는 true면 쿨감적용
+    /// 전체적인 쿨다운
     /// </summary>
-    /// <param name="b"> 이 숫자 말야</param>
+    /// <param name="b"> b가 true면 쿨감적용</param>
     /// <returns></returns>
     protected float _CoolMain(bool b) // b 가 true면 쿨감 적용
     {
@@ -177,8 +186,9 @@ int bulletCntMax; // 투사체 최대갯수
         info.DamageMax = info.DamageCheckMax[i];
         info.bulletCnt = info.BulletCntCheck[i];
         info.bulletCntMax = info.BulletCntMaxCheck[i];
-        info.BulletSpeed = info.DamageCheckMin[i];
+        info.BulletSpeed = info.BulletSpeedCheck[i];
         info.BulletPie = info.BulletPieCheck[i];
+        info.BulletTime = info.BulletTimeCheck[i];
         info.BulletAtCri = info.BulletAtCriCheck[i];
         info.CoolMain = info.CoolMainCheck[i];
         info.CoolSub1 = info.CoolSub1Check[i];

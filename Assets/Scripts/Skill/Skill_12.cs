@@ -27,7 +27,7 @@ public class Skill_12 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(Cool_Main);
+            yield return new WaitForSeconds(_CoolMain(true));
             GameObject bullet = Instantiate(gidomon, Player.transform.position, Player.transform.rotation);
             bullet.GetComponent<gidomon>().numberOfObjects = info.bulletCnt;
             bullet.transform.SetParent(Player.transform, true);

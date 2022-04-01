@@ -77,7 +77,7 @@ public class EnemyFunc : MonoBehaviour
     public IEnumerator EnemyCreateFuncBat(int cnt,float min,float max,string g)
     {
         //Vector3 batPos = GetRandomPos();
-        Vector3 batPos = GetRandomPos() * 1.5f;
+        Vector3 batPos = GetRandomPos() * 1.3f;
         for (int a = 0; a < cnt; a++)
         {
             for (int i = 0; i < 20; i++)

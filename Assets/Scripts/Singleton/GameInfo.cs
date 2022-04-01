@@ -159,6 +159,9 @@ public class GameInfo : MonoBehaviour
     {
 		PlayerMap[0] = 1;
 		PlayerMap[1] = 1;
+
+		// юс╫ц
+		PlayerMap[2] = 1;
     }
 	public static void soundcheck()
     {

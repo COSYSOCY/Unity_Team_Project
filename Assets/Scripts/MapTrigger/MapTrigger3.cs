@@ -7,10 +7,11 @@ public class MapTrigger3 : MonoBehaviour
     public PlayerInfo info;
     public UIManager ui;
     public PlayerStatus stat;
-    public EnemyManager manager;
+    public EnemyFunc enemyFunc;
     private void Start()
     {
         StartCoroutine(timecheck());
+
     }
 
     IEnumerator timecheck()
@@ -29,52 +30,19 @@ public class MapTrigger3 : MonoBehaviour
             tiemtrigger(info.timeplus);
         }
     }
+    public void startFunc()
+    {
 
-    public void tiemtrigger(float t)
+    }
+
+    public void tiemtrigger(int t)
     {
         switch (t)
         {
-            case 30:
-                manager.EnemyCreate("Boss_0");
-                stat.EnemyMax += 10;
+            case 1:
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(1, "Enemy_Test"));
+                StartCoroutine(enemyFunc.BossCreate("Boss_Test", enemyFunc.GetRandomPos()));
                 break;
-            case 60:
-                manager.EnemyCreate("Boss_1");
-                stat.EnemyMax += 10;
-                stat.EnemyDes("Enemy_1", 0);
-                stat.EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 90:
-                stat.EnemyMax += 10;
-                stat.EnemyCreateName[0] = "Enemy_2";
-                break;
-            case 120:
-                stat.EnemyMax += 20;
-                stat.EnemyDes("Enemy_2", 1);
-                stat.EnemyCreateName[0] = "Enemy_3";
-                break;
-            case 180:
-                stat.EnemyMax += 20;
-                stat.EnemyDes("Enemy_3", 2);
-                stat.EnemyCreateName[0] = "Enemy_4";
-                break;
-            case 240:
-                stat.EnemyMax += 20;
-                stat.EnemyDes("Enemy_4", 3);
-                stat.EnemyCreateName[0] = "Enemy_5";
-                break;
-            case 300:
-                stat.EnemyMax += 10;
-                break;
-            case 360:
-                stat.EnemyMax += 10;
-                break;
-            case 420:
-                stat.EnemyMax += 10;
-                break;
-            case 480:
-                break;
-
             default:
                 break;
         }

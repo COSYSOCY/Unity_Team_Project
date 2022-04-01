@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Pool_Bullet_7 : MonoBehaviour
 {
-    public void bo()
-    {
+    public ParticleSystem particle;
 
+
+    private void OnEnable()
+    {
+       // particle.Play();
     }
 
     private void OnDisable()
     {
         ObjectPooler.ReturnToPool(gameObject);
-        CancelInvoke();
     }
 }
