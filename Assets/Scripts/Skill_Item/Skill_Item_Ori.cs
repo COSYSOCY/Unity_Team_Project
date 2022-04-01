@@ -11,8 +11,8 @@ public class Skill_Item_Ori : MonoBehaviour
     public SkillManager manager;
     public void LevelUp()
     {
-        
 
+        MainSingleton.instance.playerstat.SkillItemactive[info.Index]++;
         info.Lv++;
         info.HpPlusC=info.HpPlusCCheck[info.Lv];
         info.HpPlusPer = info.HpPlusPerCheck[info.Lv];

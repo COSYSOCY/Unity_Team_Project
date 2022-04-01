@@ -5,12 +5,7 @@ using UnityEngine;
 
 public class NewSkill_7 : Skill_Ori
 {
-    void Start_Func() //시작시 설정
-    {
-        manager.skill_Add(gameObject, info.Skill_Icon);
-        LevelUp();
-        StartCoroutine(Skill_Update());
-    }
+
 
     public override void LevelUpFunc()
     {
@@ -19,52 +14,50 @@ public class NewSkill_7 : Skill_Ori
         {
 
         }
-
     }
 
+
+    void Start_Func()
+    {
+        LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
+        StartCoroutine(Skill_Update());
+    }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            for (int i = 0; i < _BulletCnt(); i++)
-            {
             StartCoroutine(Skill_Update2());
-
-            }
         }
     }
+
     IEnumerator Skill_Update2()
     {
-        yield return null;
+        float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange()*5f;
-        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos, Quaternion.Euler(new Vector3(0, Random.Range(0, 360f))));
-        bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-        bullet.transform.localScale = new Vector3(local, local, local);
-        bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
-        while (bullet.activeSelf)
-        {
+
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.identity);
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.transform.localScale = new Vector3(local, local, local);
+            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.identity);
+            bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet2.transform.localScale = new Vector3(local, local, local);
+
             yield return new WaitForSeconds(0.1f);
-            Vector3 pos2 = bullet.transform.position;
-            pos2.y = 0;
-            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_7_1", pos2, Quaternion.identity);
-            effect.transform.localScale = new Vector3(local * 0.5f, local * 0.5f, local * 0.5f);
-            Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
-            if (Enemys.Length > 0)
-            {
-                for (int i = 0; i < Enemys.Length; i++)
-                {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
-                }
-            }
-        }
+                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,2), Quaternion.identity);
+                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+                    bullet3.transform.localScale = new Vector3(local, local, local);
+            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,-2f), Quaternion.identity);
+            bullet4.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet4.transform.localScale = new Vector3(local, local, local);
+
     }
 
-    private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
+
+    private void OnEnable()
     {
         if (start == false && info.goodstart)
         {

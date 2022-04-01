@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NewSkill_1 : Skill_Ori
@@ -33,31 +34,41 @@ public class NewSkill_1 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
+        pos.y = 0;
         float local = _AtRange();
-        for (int i = 1; i <= _BulletCnt(); i++)
+        List<Collider> Enemys;
+        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
+        Enemys.Sort(delegate (Collider t1, Collider t2) {
+            return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
+        });
+
+        if (Enemys.Count >0)
         {
-            
-            
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", pos, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
+            for (int i = 0; i < _BulletCnt(); i++)
             {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+
+                GameObject target;
+                if (i >= Enemys.Count)
+                {
+                    target = Enemys[0].gameObject;
+                }
+                else
+                {
+                    target = Enemys[i].gameObject;
+                }
+                Vector3 dir = target.transform.position - Player.transform.position;
+                dir.Normalize();
+                dir.y = 0;
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_1", pos, Quaternion.LookRotation(dir));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale=new Vector3(local, local, local);
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.1f);
             }
-            else
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale=new Vector3(local, local, local);
-            }
-            yield return new WaitForSeconds(0.1f);
         }
+        
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요

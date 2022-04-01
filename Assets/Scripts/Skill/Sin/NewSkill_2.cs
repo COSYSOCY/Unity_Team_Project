@@ -34,13 +34,11 @@ public class NewSkill_2 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 0;
+        pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys;
-        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
-        Enemys.Sort(delegate (Collider t1, Collider t2) {
-            return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
-        });
+        Vector3 endpos;
+        Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
 
         if (Enemys.Count >0)
         {
@@ -48,24 +46,45 @@ public class NewSkill_2 : Skill_Ori
             {
 
                 GameObject target;
-                if (i >= Enemys.Count)
+                int ran=Random.Range(0, Enemys.Count);
+                target = Enemys[ran].gameObject;
+
+
+                
+                
+                GameObject laser = ObjectPooler.SpawnFromPool("Bullet_2", pos, Quaternion.identity);
+                laser.transform.localScale = new Vector3(local, local, local);
+                Vector3 d = target.transform.position - Player.transform.position;
+                d.Normalize();
+                
+
+                endpos = d * 30;
+                d.y = 1f;
+                laser.GetComponent<LineRenderer>().SetPosition(0, pos);
+                laser.GetComponent<LineRenderer>().SetPosition(1, target.transform.position);
+
+                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d,layermask);
+
+                if (Rhits.Length > 0)
                 {
-                    target = Enemys[0].gameObject;
+                    for (int s = 0; s > Rhits.Length; s++)
+                    {
+                        if (Rhits[i].transform.gameObject.activeSelf)
+                        {
+                            Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                        }
+                    }
                 }
-                else
+
+
+
+                
+                if (Enemys.Count != 1)
                 {
-                    target = Enemys[i].gameObject;
+                    Enemys.RemoveAt(ran);
+                    yield return new WaitForSeconds(0.1f);
                 }
-                Vector3 dir = target.transform.position - Player.transform.position;
-                dir.Normalize();
-                dir.y = 0;
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_2", pos, Quaternion.LookRotation(dir));
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.1f);
+                
             }
         }
         

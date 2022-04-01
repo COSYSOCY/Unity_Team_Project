@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class NewSkill_3 : Skill_Ori
 {
+    public GameObject bullet;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+        bullet.SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -35,55 +37,17 @@ public class NewSkill_3 : Skill_Ori
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 0;
-        float local = _AtRange();
-        List<Collider> Enemys;
-        Vector3 endpos;
-        Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
-
-        if (Enemys.Count >0)
+        Collider[] Enemys;
+        Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x*_AtRange(), layermask);
+        if (Enemys.Length >0)
         {
-            for (int i = 0; i < _BulletCnt(); i++)
+            for (int i = 0; i < Enemys.Length; i++)
             {
-
-                GameObject target;
-                int ran=Random.Range(0, Enemys.Count);
-                target = Enemys[ran].gameObject;
-
-
-                GameObject laser = ObjectPooler.SpawnFromPool("Bullet_3", pos, Quaternion.identity);
-                laser.transform.localScale = new Vector3(local, local, local);
-                Vector3 d = target.transform.position - Player.transform.position;
-                d.Normalize();
-                d.y = 0f;
-                endpos = d * 50;
-                laser.GetComponent<LineRenderer>().SetPosition(0, Player.transform.position);
-                laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
-
-                RaycastHit[] Rhits = Physics.SphereCastAll(Player.transform.position, laser.transform.lossyScale.x, d,layermask);
-
-                if (Rhits.Length > 0)
-                {
-                    for (int s = 0; s < Rhits.Length; s++)
-                    {
-                        if (Rhits[i].transform.gameObject.activeSelf)
-                        {
-                            Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
-                        }
-                    }
-                }
-
-
-
-                
-                if (Enemys.Count != 1)
-                {
-                    Enemys.RemoveAt(ran);
-                    yield return new WaitForSeconds(0.1f);
-                }
-                
+                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
             }
         }
-        
+
+        yield return null;
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요

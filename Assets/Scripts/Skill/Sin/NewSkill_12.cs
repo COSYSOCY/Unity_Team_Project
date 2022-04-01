@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class NewSkill_11 : Skill_Ori
+public class NewSkill_12 : Skill_Ori
 {
+
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+
 
 
     }

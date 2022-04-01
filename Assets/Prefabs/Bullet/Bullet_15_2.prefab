@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 1593895901896320267}
   - component: {fileID: 1593895901896320268}
   - component: {fileID: -1667437479228031246}
-  - component: {fileID: 2369270188658841395}
   - component: {fileID: 741955132164319297}
   - component: {fileID: -465422106505757293}
-  - component: {fileID: -6275248670291896752}
   - component: {fileID: 7290138893558156850}
   m_Layer: 0
   m_Name: Bullet_15_2
@@ -117,19 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2369270188658841395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593895901896320269}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c3b5a0f9d9a474682b829077bd3726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!114 &741955132164319297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,18 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadTime: 3
---- !u!114 &-6275248670291896752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593895901896320269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b3f6d08b1135e45a7898ac1878879d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7290138893558156850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   pie: 0
+  move: 0

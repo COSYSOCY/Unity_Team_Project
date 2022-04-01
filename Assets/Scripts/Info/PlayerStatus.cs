@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
+    public List<int> Skillactive;
+    public List<int> SkillItemactive;
     public PlayerInfo playerInfo;
     public LevelUp level;
     public SkillManager manager;
@@ -42,6 +44,15 @@ public class PlayerStatus : MonoBehaviour
         //uimanager.XpSet();
         cardHpRegen = CardStat.inst.CardStat_HpRegen();
         cardDefecne = CardStat.inst.CardStat_Defence();
+
+        for (int i = 0; i < manager.All_Skill.Count; i++)
+        {
+            Skillactive.Add(0);
+        }
+        for (int i = 0; i < manager.All_Skill_Items.Count; i++)
+        {
+            SkillItemactive.Add(0);
+        }
     }
 
     public void PlayerHpMax()
