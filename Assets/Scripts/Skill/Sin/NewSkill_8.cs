@@ -35,25 +35,30 @@ public class NewSkill_8 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
-        float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
+        float local = _AtRange()*2f;
+        List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask).ToList();
 
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(5f, 0f, 2f), Quaternion.identity);
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(5f, 0f, -2f), Quaternion.identity);
-            bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet2.transform.localScale = new Vector3(local, local, local);
+            for (int i = 0; i < _BulletCnt(); i++)
+            {
+                int ran = Random.Range(0, Enemys.Count);
+                GameObject target =  Enemys[ran].gameObject;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8", target.transform.position, Quaternion.Euler(new Vector3(-90f,0f)));
+            target.GetComponent<Enemy_Info>().Damaged(_Damage());
+                    bullet.transform.localScale = new Vector3(local, local, local);
 
-            yield return new WaitForSeconds(0.1f);
-                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(-5f, 0f,2), Quaternion.identity);
-                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
-                    bullet3.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(-5f, 0f,-2f), Quaternion.identity);
-            bullet4.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet4.transform.localScale = new Vector3(local, local, local);
+            if (Enemys.Count ==1)
+            {
+                yield break;
+            }
+                Enemys.RemoveAt(ran);
 
+
+            }
+
+        yield return null;
+        
     }
 
 

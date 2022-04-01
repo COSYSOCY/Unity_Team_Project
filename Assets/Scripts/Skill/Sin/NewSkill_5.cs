@@ -5,86 +5,84 @@ using UnityEngine;
 
 public class NewSkill_5 : Skill_Ori
 {
-    float angleRange;
-    public GameObject bullet;
-    IEnumerator coroutine;
+    public LayerMask bossmask;
     void Start_Func() //시작시 설정
     {
-        manager.skill_Add(gameObject,info.Skill_Icon);
+        manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
-        bullet.SetActive(true);
-
-        //
-
-        angleRange = 45f; // 각도
-        //coroutine = Skill_Update2();
     }
 
     public override void LevelUpFunc()
     {
         //
-        if (info.Lv==2) // 2레벨이 될경우 실행
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
 
         }
-        
+
     }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
-        
+
         while (true)
         {
-
             yield return new WaitForSeconds(_CoolMain(true));
-            bullet.SetActive(true);
             StartCoroutine(Skill_Update2());
-            StartCoroutine(Skill_Update3());
-
-            
-            
         }
-    }
-    IEnumerator Skill_Update3()
-    {
-        yield return new WaitForSeconds(_CoolSub2(false));
-        bullet.SetActive(false);
-        //StopCoroutine(coroutine);
     }
     IEnumerator Skill_Update2()
     {
-        while(bullet.activeSelf)
-        { 
-            Vector3 pos = bulletPos.transform.position;
-            pos.y = 1;
-            Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos, Player.transform.lossyScale.x*_AtRange(), layermask);
-            if (Enemys.Length >0)
+        Vector3 pos = bulletPos.transform.position;
+        pos.y = 1;
+        float local = _AtRange();
+        Collider[] Enemys_Boss = Physics.OverlapSphere(Player.transform.position, 30f, bossmask);
+        Collider[] Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask);
+        int ran = Random.Range(0, Enemys.Length);
+        for (int i = 0; i < _BulletCnt(); i++)
+        {
+            GameObject target=null;
+
+            
+
+            if (Enemys_Boss.Length >0)
             {
-                for (int i = 0; i < Enemys.Length; i++)
+                target = Enemys_Boss[0].gameObject;
+            }else
+            {
+                
+
+                if (Enemys.Length >0)
                 {
-                    float dotValue = Mathf.Cos(Mathf.Deg2Rad * (angleRange / 2));
-                    Vector3 direction = Enemys[i].transform.position - bulletPos.transform.position;
-                    direction.Normalize();
-                    if (Vector3.Dot(direction,Player.transform.forward)>dotValue)
-                    {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
-
-                    }
+                    
+                    target = Enemys[ran].gameObject;
                 }
-               
-             }
+            }
+            if (target ==null)
+            {
+                continue;
+            }
+            Vector3 dir = target.transform.position - Player.transform.position ;
+            dir.Normalize();
+            dir.y = 0;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_5", pos, Quaternion.LookRotation(dir));
+            //bullet.transform.LookAt(target.transform);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+            bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
 
-        yield return new WaitForSeconds(_CoolSub1(false));
+            bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.15f);
         }
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
-        if (start==false&&info.goodstart)
+        if (start == false && info.goodstart)
         {
-        Start_Func();
+            Start_Func();
             start = true;
         }
     }

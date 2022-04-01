@@ -35,30 +35,38 @@ public class NewSkill_9 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        Debug.Log("¤»¤»");
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
-        float local = _AtRange()*2f;
-        List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask).ToList();
+        pos.y = 0;
+        float local = _AtRange();
+        List<Collider> Enemys;
+        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
+        Enemys.Sort(delegate (Collider t1, Collider t2) {
+            return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
+        });
 
+        if (Enemys.Count > 0)
+        {
             for (int i = 0; i < _BulletCnt(); i++)
             {
-                int ran = Random.Range(0, Enemys.Count);
-                GameObject target =  Enemys[ran].gameObject;
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", target.transform.position, Quaternion.Euler(new Vector3(-90f,0f)));
-            target.GetComponent<Enemy_Info>().Damaged(_Damage());
-                    bullet.transform.localScale = new Vector3(local, local, local);
 
-            if (Enemys.Count ==1)
-            {
-                yield break;
+                GameObject target= Enemys[0].gameObject;
+
+                Vector3 dir = target.transform.position - Player.transform.position;
+                dir.Normalize();
+                dir.y = 0;
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", pos, Quaternion.LookRotation(dir));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Trigger_9>().CurTime = _BulletTime();
+                bullet.GetComponent<Bullet_Trigger_9>().StartFunc();
+                //bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.2f);
             }
-                Enemys.RemoveAt(ran);
+        }
 
-
-            }
-
-        yield return null;
-        
     }
 
 

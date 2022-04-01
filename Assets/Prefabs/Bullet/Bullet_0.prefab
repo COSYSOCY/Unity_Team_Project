@@ -9,16 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593895901896320265}
+  - component: {fileID: -8656940953688580207}
   - component: {fileID: 1593895901896320266}
   - component: {fileID: 1593895901896320267}
   - component: {fileID: 1593895901896320268}
+  - component: {fileID: -8975944186400795315}
   - component: {fileID: -1667437479228031246}
   - component: {fileID: 2369270188658841395}
-  - component: {fileID: 5872524425340688577}
-  - component: {fileID: -3360394981145668587}
-  - component: {fileID: 1435979675203221404}
+  - component: {fileID: -2616742955828507436}
   m_Layer: 0
-  m_Name: Bullet_15
+  m_Name: Bullet_0
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,11 +33,24 @@ Transform:
   m_GameObject: {fileID: 1593895901896320269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8656940953688580207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593895901896320269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7287feb1b943d1545a74ded10795fec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: -2616742955828507436}
 --- !u!33 &1593895901896320266
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45,7 +58,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593895901896320269}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 964199ec649ef9c4b81c0d63a1fa19e7, type: 3}
 --- !u!23 &1593895901896320267
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +78,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e26cfc6d4c9cc93438838eb95f1c11b6, type: 2}
+  - {fileID: 2100000, guid: 63cdc53f3e081404ebbbc95b44a51616, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,6 +113,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8975944186400795315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593895901896320269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581d805e9b4045c4f844fb70b54a82f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &-1667437479228031246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,7 +137,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -128,35 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c3b5a0f9d9a474682b829077bd3726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 0}
---- !u!114 &5872524425340688577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593895901896320269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caba2063ca396ec42b3a5a43148b9335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
-  info: {fileID: 1435979675203221404}
---- !u!114 &-3360394981145668587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593895901896320269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2a40ff4ea0f2bc439b4a0db4fba7e00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadTime: 5
---- !u!114 &1435979675203221404
+  info: {fileID: -2616742955828507436}
+--- !u!114 &-2616742955828507436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

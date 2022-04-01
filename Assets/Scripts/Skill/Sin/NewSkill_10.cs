@@ -5,7 +5,21 @@ using UnityEngine;
 
 public class NewSkill_10 : Skill_Ori
 {
+    float Radius;
+    public GameObject bullet;
 
+    void Start_Func() //시작시 설정
+    {
+        manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
+        StartCoroutine(Skill_Update());
+        bullet.SetActive(true);
+
+        //
+
+        Radius = 5f; // 거리
+
+    }
 
     public override void LevelUpFunc()
     {
@@ -14,60 +28,50 @@ public class NewSkill_10 : Skill_Ori
         {
 
         }
+
     }
 
-
-    void Start_Func()
-    {
-        LevelUp();
-        manager.skill_Add(gameObject, info.Skill_Icon);
-        StartCoroutine(Skill_Update());
-    }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
         while (true)
         {
+
             yield return new WaitForSeconds(_CoolMain(true));
+           
+            bullet.SetActive(true);
             StartCoroutine(Skill_Update2());
+            StartCoroutine(Skill_Update3());
+
+
+
         }
     }
-
+    IEnumerator Skill_Update3()
+    {
+        yield return new WaitForSeconds(_CoolSub1(false));
+        bullet.SetActive(false);
+    }
     IEnumerator Skill_Update2()
     {
-        Vector3 pos = bulletPos.transform.position;
-        pos.y = 0;
-        float local = _AtRange();
-        List<Collider> Enemys;
-        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
-        Enemys.Sort(delegate (Collider t1, Collider t2) {
-            return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
-        });
-
-        if (Enemys.Count > 0)
+        for (int i = 0; i < _BulletCnt(); i++)
         {
-            for (int i = 0; i < _BulletCnt(); i++)
-            {
-
-                GameObject target= Enemys[0].gameObject;
-
-                Vector3 dir = target.transform.position - Player.transform.position;
-                dir.Normalize();
-                dir.y = 0;
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_10", pos, Quaternion.LookRotation(dir));
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.2f);
-            }
+            float angle = i * Mathf.PI * 2 / _BulletCnt();
+            float x = Mathf.Cos(angle) * Radius;
+            float z = Mathf.Sin(angle) * Radius;
+            Vector3 pos = bullet.transform.position + new Vector3(x, 0, z);
+            float angleDegrees = -angle * Mathf.Rad2Deg;
+            Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
+            //par = Instantiate(BulletD, pos, rot);
+            GameObject par = ObjectPooler.SpawnFromPool("Bullet_10", pos, rot);
+            par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
+            par.GetComponent<Bullet_Info>().damage = _Damage();
+            par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         }
-
+        yield return null;
     }
 
-
-    private void OnEnable()
+    private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
         if (start == false && info.goodstart)
         {

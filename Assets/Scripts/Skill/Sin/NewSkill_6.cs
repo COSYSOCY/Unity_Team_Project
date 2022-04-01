@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class NewSkill_6 : Skill_Ori
 {
-    public LayerMask bossmask;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -29,52 +28,39 @@ public class NewSkill_6 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
+            for (int i = 0; i < _BulletCnt(); i++)
+            {
             StartCoroutine(Skill_Update2());
+
+            }
         }
     }
     IEnumerator Skill_Update2()
     {
+        yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange();
-        Collider[] Enemys_Boss = Physics.OverlapSphere(Player.transform.position, 30f, bossmask);
-        Collider[] Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask);
-        int ran = Random.Range(0, Enemys.Length);
-        for (int i = 0; i < _BulletCnt(); i++)
+        float local = _AtRange()*5f;
+        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_6", pos, Quaternion.Euler(new Vector3(0, Random.Range(0, 360f))));
+        bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+        bullet.transform.localScale = new Vector3(local, local, local);
+        bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
+        while (bullet.activeSelf)
         {
-            GameObject target=null;
-
-            
-
-            if (Enemys_Boss.Length >0)
+            yield return new WaitForSeconds(0.1f);
+            Vector3 pos2 = bullet.transform.position;
+            pos2.y = 0;
+            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
+            effect.transform.localScale = new Vector3(local * 0.5f, local * 0.5f, local * 0.5f);
+            Collider[] Enemys;
+            Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
+            if (Enemys.Length > 0)
             {
-                target = Enemys_Boss[0].gameObject;
-            }else
-            {
-                
-
-                if (Enemys.Length >0)
+                for (int i = 0; i < Enemys.Length; i++)
                 {
-                    
-                    target = Enemys[ran].gameObject;
+                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
                 }
             }
-            if (target ==null)
-            {
-                continue;
-            }
-            Vector3 dir = target.transform.position - Player.transform.position ;
-            dir.Normalize();
-            dir.y = 0;
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_6", pos, Quaternion.LookRotation(dir));
-            //bullet.transform.LookAt(target.transform);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-
-            bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.15f);
         }
     }
 
@@ -86,5 +72,4 @@ public class NewSkill_6 : Skill_Ori
             start = true;
         }
     }
-
 }

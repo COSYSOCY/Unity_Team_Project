@@ -632,44 +632,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Bullet_1
+  - tag: Bullet_0
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
-  - tag: Bullet_2
+  - tag: Bullet_1
     prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
-  - tag: Bullet_3
+  - tag: Bullet_2
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
-  - tag: Bullet_6
+  - tag: Bullet_5
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
-  - tag: Bullet_7
+  - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
     size: 10
-  - tag: Bullet_8
+  - tag: Bullet_6_1
+    prefab: {fileID: 1028300517397824, guid: 624bf54b33a5c9d42ab964ccde6bd4d2, type: 3}
+    size: 1
+  - tag: Bullet_7
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_9
+  - tag: Bullet_8
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
-  - tag: Bullet_10
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_9
+    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
     size: 10
-  - tag: Bullet_11
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_10
+    prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
     size: 1
   - tag: Bullet_12
-    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_13
-    prefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15
-    prefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15_2
-    prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: item_gold
     prefab: {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
@@ -1181,7 +1184,7 @@ GameObject:
   - component: {fileID: 125332051}
   - component: {fileID: 125332052}
   m_Layer: 0
-  m_Name: Skill9
+  m_Name: Skill8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2447,7 +2450,7 @@ GameObject:
   - component: {fileID: 254640744}
   - component: {fileID: 254640743}
   m_Layer: 0
-  m_Name: Skill_Item4
+  m_Name: Skill_Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3226,7 +3229,7 @@ GameObject:
   - component: {fileID: 336292651}
   - component: {fileID: 336292652}
   m_Layer: 0
-  m_Name: Skill12
+  m_Name: Skill11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4184,7 +4187,7 @@ GameObject:
   - component: {fileID: 385692344}
   - component: {fileID: 385692343}
   m_Layer: 0
-  m_Name: Skill_Item3
+  m_Name: Skill_Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4343,47 +4346,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Bullet_1
+  - tag: Bullet_0
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
-  - tag: Bullet_2
+  - tag: Bullet_1
     prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
-  - tag: Bullet_3
+  - tag: Bullet_2
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
-  - tag: Bullet_6
+  - tag: Bullet_5
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
-  - tag: Bullet_7
+  - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
     size: 10
-  - tag: Bullet_7_1
+  - tag: Bullet_6_1
     prefab: {fileID: 1028300517397824, guid: 624bf54b33a5c9d42ab964ccde6bd4d2, type: 3}
-    size: 10
-  - tag: Bullet_8
+    size: 1
+  - tag: Bullet_7
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_9
+  - tag: Bullet_8
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
-  - tag: Bullet_10
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_9
+    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
     size: 10
-  - tag: Bullet_11
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_10
+    prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
     size: 1
   - tag: Bullet_12
-    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_13
-    prefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15
-    prefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15_2
-    prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: item_gold
     prefab: {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
@@ -5919,7 +5922,7 @@ GameObject:
   - component: {fileID: 547790606}
   - component: {fileID: 547790607}
   m_Layer: 0
-  m_Name: Skill4
+  m_Name: Skill3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6036,7 +6039,7 @@ GameObject:
   - component: {fileID: 549085516}
   - component: {fileID: 549085517}
   m_Layer: 0
-  m_Name: Skill6
+  m_Name: Skill5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6078,7 +6081,7 @@ MonoBehaviour:
     m_Bits: 192
   bossmask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!114 &549085516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6200,7 +6203,7 @@ GameObject:
   - component: {fileID: 558249788}
   - component: {fileID: 558249789}
   m_Layer: 0
-  m_Name: Skill13
+  m_Name: Skill12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6411,7 +6414,7 @@ GameObject:
   - component: {fileID: 567763655}
   - component: {fileID: 567763656}
   m_Layer: 0
-  m_Name: Skill10
+  m_Name: Skill9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6606,7 +6609,7 @@ GameObject:
   - component: {fileID: 593982057}
   - component: {fileID: 593982058}
   m_Layer: 0
-  m_Name: Skill8
+  m_Name: Skill7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6815,7 +6818,7 @@ GameObject:
   - component: {fileID: 615924999}
   - component: {fileID: 615925000}
   m_Layer: 0
-  m_Name: Skill14
+  m_Name: Skill13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7815,7 +7818,7 @@ GameObject:
   - component: {fileID: 752999195}
   - component: {fileID: 752999192}
   m_Layer: 0
-  m_Name: Skill5
+  m_Name: Skill4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8502,7 +8505,7 @@ GameObject:
   - component: {fileID: 838940892}
   - component: {fileID: 838940891}
   m_Layer: 0
-  m_Name: Skill_Item6
+  m_Name: Skill_Item5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8740,7 +8743,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
       propertyPath: m_Name
-      value: Circle01_lightning
+      value: SkillHelp_03
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8c0e8fde9e5af4d4e99e9cacc4e2b831, type: 3}
       propertyPath: m_IsActive
@@ -10231,7 +10234,7 @@ GameObject:
   - component: {fileID: 1010264068}
   - component: {fileID: 1010264067}
   m_Layer: 0
-  m_Name: Skill_Item1
+  m_Name: Skill_Item0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11977,7 +11980,7 @@ GameObject:
   - component: {fileID: 1210016408}
   - component: {fileID: 1210016409}
   m_Layer: 0
-  m_Name: Skill3
+  m_Name: Skill2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12466,7 +12469,7 @@ GameObject:
   - component: {fileID: 1280769300}
   - component: {fileID: 1280769299}
   m_Layer: 0
-  m_Name: Skill_Item2
+  m_Name: Skill_Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12900,7 +12903,7 @@ GameObject:
   - component: {fileID: 1412918706}
   - component: {fileID: 1412918707}
   m_Layer: 0
-  m_Name: Skill11
+  m_Name: Skill10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13401,7 +13404,7 @@ GameObject:
   - component: {fileID: 1452574929}
   - component: {fileID: 1452574932}
   m_Layer: 0
-  m_Name: Skill15
+  m_Name: Skill14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14127,7 +14130,7 @@ GameObject:
   - component: {fileID: 1517399889}
   - component: {fileID: 1517399888}
   m_Layer: 0
-  m_Name: Skill_Item5
+  m_Name: Skill_Item4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15162,7 +15165,7 @@ GameObject:
   - component: {fileID: 1635998969}
   - component: {fileID: 1635998970}
   m_Layer: 0
-  m_Name: Skill1
+  m_Name: Skill0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15889,7 +15892,7 @@ GameObject:
   - component: {fileID: 1711409217}
   - component: {fileID: 1711409218}
   m_Layer: 0
-  m_Name: Skill7
+  m_Name: Skill6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16473,7 +16476,7 @@ GameObject:
   - component: {fileID: 1760328302}
   - component: {fileID: 1760328303}
   m_Layer: 0
-  m_Name: SkillHelp_11
+  m_Name: SkillHelp_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16873,7 +16876,7 @@ GameObject:
   - component: {fileID: 1825683211}
   - component: {fileID: 1825683208}
   m_Layer: 0
-  m_Name: Skill2
+  m_Name: Skill1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17080,7 +17083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
       propertyPath: m_Name
-      value: Skill_05
+      value: Skill_04
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5aaaac6f59ef561499e291d870808e63, type: 3}
       propertyPath: m_IsActive
@@ -17264,47 +17267,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Bullet_1
+  - tag: Bullet_0
     prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
-  - tag: Bullet_2
+  - tag: Bullet_1
     prefab: {fileID: 1997882812359486, guid: 3143e5753a0ae4f43888f0ea5ff6f691, type: 3}
     size: 10
-  - tag: Bullet_3
+  - tag: Bullet_2
     prefab: {fileID: 1927010967321763998, guid: 3d31a7ef21e64314e9d53728428acf05, type: 3}
     size: 10
-  - tag: Bullet_6
+  - tag: Bullet_5
     prefab: {fileID: 1593895901896320269, guid: 04302a62b6d1e9e468b92c38f3b9471d, type: 3}
     size: 10
-  - tag: Bullet_7
+  - tag: Bullet_6
     prefab: {fileID: 3563378743140117503, guid: 38579a8917ac5fa4da0f85cbf4935db1, type: 3}
     size: 10
-  - tag: Bullet_7_1
+  - tag: Bullet_6_1
     prefab: {fileID: 1028300517397824, guid: 624bf54b33a5c9d42ab964ccde6bd4d2, type: 3}
-    size: 10
-  - tag: Bullet_8
+    size: 1
+  - tag: Bullet_7
     prefab: {fileID: 1593895901896320269, guid: a87a272e0e3c44544b2052b076cde407, type: 3}
     size: 10
-  - tag: Bullet_9
+  - tag: Bullet_8
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
-  - tag: Bullet_10
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_9
+    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
     size: 10
-  - tag: Bullet_11
-    prefab: {fileID: 1593895901896320269, guid: 25d97d34238f72d4a9cdf0667d3fdb3d, type: 3}
+  - tag: Bullet_10
+    prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
     size: 1
   - tag: Bullet_12
-    prefab: {fileID: 9086168997757739774, guid: bfb840d646538d1439a834fb93f60ef7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_13
-    prefab: {fileID: 3964549511716322835, guid: 2134dd1dbf388a14aac2f356b8e7a5c7, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15
-    prefab: {fileID: 1593895901896320269, guid: a0e8b64d44dc8b7409392a7ae3afa2b3, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: Bullet_15_2
-    prefab: {fileID: 1593895901896320269, guid: 05529cd4ace37674f80c6af6dfb7cb1a, type: 3}
+    prefab: {fileID: 1593895901896320269, guid: d163957b5bf24f24181c560b968e5995, type: 3}
     size: 10
   - tag: item_gold
     prefab: {fileID: 5239949316892803768, guid: df077ca7c0f0f3f488a29814264b5a3e, type: 3}
@@ -19394,7 +19397,7 @@ GameObject:
   - component: {fileID: 2134257234}
   - component: {fileID: 2134257233}
   m_Layer: 0
-  m_Name: Skill_Item7
+  m_Name: Skill_Item6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
