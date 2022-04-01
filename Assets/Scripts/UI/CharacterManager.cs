@@ -11,6 +11,8 @@ public class CharacterManager : MonoBehaviour
     public Image CharImage;
     public Image SkillImage;
     public Text CharSkillName1;
+    public Image SkillImage2;
+    public Text CharSkillName2;
     //public Text CharInfo;
 
     public GameObject CharObject;
@@ -75,6 +77,7 @@ public class CharacterManager : MonoBehaviour
 
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+        SkillImage2.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
 
 
         GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
@@ -98,8 +101,8 @@ public class CharacterManager : MonoBehaviour
 
     public void CharSetString()
     {
-        int cnt = GameInfo.inst.CharacterIdx;
-        CharSkillName1.text = "";
+        int cnt = GameInfo.inst.CharacterIdx;        
+        CharSkillName1.text = ""; CharSkillName2.text = "";
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
 
@@ -115,6 +118,7 @@ public class CharacterManager : MonoBehaviour
         //Debug.Log(cnt);
         CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+        SkillImage2.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
         CharSetString();
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
