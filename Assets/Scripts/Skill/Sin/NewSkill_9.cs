@@ -37,16 +37,14 @@ public class NewSkill_9 : Skill_Ori
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange();
+        float local = _AtRange()*2f;
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask).ToList();
-        
 
             for (int i = 0; i < _BulletCnt(); i++)
             {
-                int ran = Random.Range(0, Enemys.Count - 1);
+                int ran = Random.Range(0, Enemys.Count);
                 GameObject target =  Enemys[ran].gameObject;
-
-                    GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", target.transform.position, Quaternion.identity);
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", target.transform.position, Quaternion.Euler(new Vector3(-90f,0f)));
             target.GetComponent<Enemy_Info>().Damaged(_Damage());
                     bullet.transform.localScale = new Vector3(local, local, local);
 

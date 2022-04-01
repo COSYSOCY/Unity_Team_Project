@@ -38,27 +38,22 @@ public class NewSkill_8 : Skill_Ori
         float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float f1 = 0f;
-        while (true)
-        {
-            for (int i = 1; i <= _BulletCnt(); i++)
-            {
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(5f, 0f, f1), Quaternion.identity);
 
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(5f, 0f, 2f), Quaternion.identity);
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.1f);
-                if (i%2==0)
-                {
-                    GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(-5f, 0f, f1), Quaternion.identity);
-                    bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                    bullet.transform.localScale = new Vector3(local, local, local);
-                    yield return new WaitForSeconds(0.1f);
-                    f1 += 2f;
-                }
-            }
+            bullet.transform.localScale = new Vector3(local, local, local);
+            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(5f, 0f, -2f), Quaternion.identity);
+            bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet2.transform.localScale = new Vector3(local, local, local);
 
-        }
+            yield return new WaitForSeconds(0.1f);
+                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(-5f, 0f,2), Quaternion.identity);
+                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+                    bullet3.transform.localScale = new Vector3(local, local, local);
+            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_8", pos + new Vector3(-5f, 0f,-2f), Quaternion.identity);
+            bullet4.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet4.transform.localScale = new Vector3(local, local, local);
+
     }
 
 

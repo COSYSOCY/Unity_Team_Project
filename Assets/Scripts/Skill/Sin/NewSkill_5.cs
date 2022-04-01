@@ -18,7 +18,7 @@ public class NewSkill_5 : Skill_Ori
         //
 
         angleRange = 45f; // °¢µµ
-        coroutine = Skill_Update2();
+        //coroutine = Skill_Update2();
     }
 
     public override void LevelUpFunc()
@@ -50,11 +50,11 @@ public class NewSkill_5 : Skill_Ori
     {
         yield return new WaitForSeconds(_CoolSub2(false));
         bullet.SetActive(false);
-        StopCoroutine(coroutine);
+        //StopCoroutine(coroutine);
     }
     IEnumerator Skill_Update2()
     {
-        while(true)
+        while(bullet.activeSelf)
         { 
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;

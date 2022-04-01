@@ -38,7 +38,7 @@ public class NewSkill_3 : Skill_Ori
         float local = _AtRange();
         List<Collider> Enemys;
         Vector3 endpos;
-        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
+        Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
 
         if (Enemys.Count >0)
         {
@@ -46,7 +46,7 @@ public class NewSkill_3 : Skill_Ori
             {
 
                 GameObject target;
-                int ran=Random.Range(0, Enemys.Count-1);
+                int ran=Random.Range(0, Enemys.Count);
                 target = Enemys[ran].gameObject;
 
 

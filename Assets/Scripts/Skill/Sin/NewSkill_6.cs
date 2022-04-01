@@ -39,7 +39,7 @@ public class NewSkill_6 : Skill_Ori
         float local = _AtRange();
         Collider[] Enemys_Boss = Physics.OverlapSphere(Player.transform.position, 30f, bossmask);
         Collider[] Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask);
-        int ran = Random.Range(0, Enemys.Length - 1);
+        int ran = Random.Range(0, Enemys.Length);
         for (int i = 0; i < _BulletCnt(); i++)
         {
             GameObject target=null;

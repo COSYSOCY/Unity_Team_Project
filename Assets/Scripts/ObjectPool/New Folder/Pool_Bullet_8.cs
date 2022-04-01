@@ -12,6 +12,5 @@ public class Pool_Bullet_8 : MonoBehaviour
     private void OnDisable()
     {
         ObjectPooler.ReturnToPool(gameObject);
-        CancelInvoke();
     }
 }
