@@ -8,6 +8,14 @@ TagManager:
   - Enemy
   - Item
   - Pull
+  - Check
+  - MapRanObj
+  - Bullet
+  - ParentScrollManager
+  - NestedScrollManager
+  - CardManager
+  - CharManager
+  - Check2
   layers:
   - Default
   - TransparentFX
@@ -16,7 +24,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Boss
   - 
   - 
   - 
