@@ -54,24 +54,25 @@ public class NewSkill_2 : Skill_Ori
                 
                 GameObject laser = ObjectPooler.SpawnFromPool("Bullet_2", pos, Quaternion.identity);
                 laser.transform.localScale = new Vector3(local, local, local);
-                Vector3 d = target.transform.position - Player.transform.position;
-                d.Normalize();
-                
+                Vector3 d = (target.transform.position - laser.transform.position).normalized;
 
-                endpos = d * 30;
-                d.y = 1f;
+
+
+                endpos = target.transform.position+(d * 30);
+                endpos.y = 1f;
+
                 laser.GetComponent<LineRenderer>().SetPosition(0, pos);
-                laser.GetComponent<LineRenderer>().SetPosition(1, target.transform.position);
-
-                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d,layermask);
+                laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
+                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x,d,30f,layermask);
 
                 if (Rhits.Length > 0)
                 {
-                    for (int s = 0; s > Rhits.Length; s++)
+                    for (int s = 0; s < Rhits.Length; s++)
                     {
-                        if (Rhits[i].transform.gameObject.activeSelf)
+                      
+                        if (Rhits[s].transform.gameObject.activeSelf)
                         {
-                            Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                            Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
                         }
                     }
                 }

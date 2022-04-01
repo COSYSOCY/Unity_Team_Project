@@ -34,10 +34,10 @@ public class NewSkill_1 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 0;
+        pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys;
-        Enemys = Physics.OverlapSphere(gameObject.transform.position, 30f, layermask).ToList();
+        Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
         Enemys.Sort(delegate (Collider t1, Collider t2) {
             return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
         });
