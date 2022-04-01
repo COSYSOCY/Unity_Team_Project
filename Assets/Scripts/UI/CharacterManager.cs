@@ -10,7 +10,9 @@ public class CharacterManager : MonoBehaviour
     public List<Sprite> icons;
     public Image CharImage;
     public Image SkillImage;
+    public Image Skill2Image;
     public Text CharSkillName1;
+    public Text CharSkillName2;
     //public Text CharInfo;
 
     public GameObject CharObject;
