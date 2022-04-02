@@ -16,8 +16,14 @@ public class PullRange : MonoBehaviour
 
     }
 
+    public void Check()
+    {
+        radius.radius = GameInfo.Range+ playerinfo.item_range + MainSingleton.instance.skillmanager._Range();
+    }
+    /*
     private void Update()
     {
-        radius.radius = playerinfo.item_range;
+        radius.radius = playerinfo.item_range+MainSingleton.instance.skillmanager._Range();
     }
+    */
 }

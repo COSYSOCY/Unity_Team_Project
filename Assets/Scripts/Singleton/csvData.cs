@@ -98,6 +98,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemBtTime = new List<float>();
     public static List<float> SkillItemGoldPlus = new List<float>();
     public static List<float> SkillItemXpPlus = new List<float>();
+    public static List<float> SkillItemRange = new List<float>();
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
 
@@ -290,6 +291,7 @@ public class csvData : MonoBehaviour
             SkillItemBtTime.Add(float.Parse(data[i]["투사체지속시간증가"].ToString()));
             SkillItemGoldPlus.Add(float.Parse(data[i]["골드획득량"].ToString()));
             SkillItemXpPlus.Add(float.Parse(data[i]["경험치획득량"].ToString()));
+            SkillItemRange.Add(float.Parse(data[i]["자석증가"].ToString()));
             SkillItemReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
             SkillItemReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
         }

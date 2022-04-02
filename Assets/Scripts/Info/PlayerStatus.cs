@@ -140,6 +140,11 @@ public class PlayerStatus : MonoBehaviour
         }
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
         SliderUpdate();
+        if (Skillactive[13]>=1)
+        {
+        MainSingleton.instance.skill_13.Skill13Func();
+
+        }
     }
     public void Dead()
     {

@@ -16,6 +16,10 @@ public class ItemSystem : MonoBehaviour
             {
                 ObjectPooler.SpawnFromPool("item_xp_1", p, Quaternion.identity);
             }
+            if (itemIdx == 2)
+            {
+                ObjectPooler.SpawnFromPool("item_xp_2", p, Quaternion.identity);
+            }
             if (itemRnd >= 950)
             {
                 GameObject card = ObjectPooler.SpawnFromPool("item_Card_1", p, Quaternion.identity);

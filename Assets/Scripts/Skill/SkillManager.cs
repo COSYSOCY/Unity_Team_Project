@@ -240,5 +240,19 @@ public class SkillManager : MonoBehaviour
 
         return f;
     }
+    public float _Range()
+    {
+        float f = 0;
+
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].Range;
+            }
+        }
+
+        return f;
+    }
 
 }
