@@ -189,14 +189,14 @@ public class LobyUIMgr : MonoBehaviour
 
         if (GameInfo.inst.PlayerSE)
         {
-            BGMIcon.sprite = IconManager.inst.Icons[17];
+            SEIcon.sprite = IconManager.inst.Icons[17];
             Sebuton.GetComponent<Image>().color = colors[1];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 528;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
         }
         else
         {
-            BGMIcon.sprite = IconManager.inst.Icons[16];
+            SEIcon.sprite = IconManager.inst.Icons[16];
             Sebuton.GetComponent<Image>().color = colors[0];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 527;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(527);

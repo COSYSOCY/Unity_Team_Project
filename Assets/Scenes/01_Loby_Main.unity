@@ -7072,7 +7072,7 @@ MonoBehaviour:
   BuyBtn: {fileID: 898214212}
   InfoCharImage: {fileID: 907187037}
   InfoSkillImage: {fileID: 1668611148}
-  InfoSkill2Image: {fileID: 1723596207}
+  InfoSkill2Image: {fileID: 768585943}
   InfoCharInfo: {fileID: 1491531020}
   InfoName: {fileID: 907760104}
   BuyText: {fileID: 513428797}
