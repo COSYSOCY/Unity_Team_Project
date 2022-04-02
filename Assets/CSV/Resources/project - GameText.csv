@@ -1,552 +1,592 @@
-Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China
-0,캐릭터시트에있는 0번 이름입니다,쿰아,Kuma,テスト,测试
-1,캐릭터시트에있는 1번 이름입니다,이델다,English Test,テスト,测试
-2,asd,캐릭터이름3,English Test,テスト,测试
-3,asd,캐릭터이름4,English Test,テスト,测试
-4,asd,캐릭터이름5,English Test,テスト,测试
-5,asd,캐릭터이름6,English Test,テスト,测试
-6,asd,캐릭터이름7,English Test,テスト,测试
-7,asd,캐릭터이름8,English Test,テスト,测试
-8,asd,캐릭터이름9,English Test,テスト,测试
-9,asd,캐릭터이름10,English Test,テスト,测试
-10,캐릭터시트에있는 0번 캐릭터설명,"체력 120, 갑옷 +1, 매 10레벨마다 10%의 대미지 추가(최대 +50%)",English Test,テスト,测试
-11,캐릭터시트에있는 1번 캐릭터설명,매 5레벨마다 10%의 경험치 추가(최대 +30%),English Test,テスト,测试
-12,asd,캐릭터3설명,English Test,テスト,测试
-13,asd,캐릭터4설명,English Test,テスト,测试
-14,asd,캐릭터5설명,English Test,テスト,测试
-15,asd,캐릭터6설명,English Test,テスト,测试
-16,asd,캐릭터7설명,English Test,テスト,测试
-17,asd,캐릭터8설명,English Test,テスト,测试
-18,asd,캐릭터9설명,English Test,テスト,测试
-19,asd,캐릭터10설명,English Test,テスト,测试
-20,능력시트에있는 0번 이름,단검(Knife),English Test,テスト,测试
-21,능력시트에있는 1번 이름,채찍,English Test,テスト,测试
-22,능력시트에있는 2번 이름,아이스필드,English Test,テスト,测试
-23,능력시트에있는 3번 이름,원형미사일,English Test,テスト,测试
-24,능력시트에있는 4번 이름,번개,English Test,テスト,测试
-25,능력시트에있는 5번 이름,가까운적에게날리기,English Test,テスト,测试
-26,능력시트에있는 6번 이름,비둘기,English Test,テスト,测试
-27,능력시트에있는 7번 이름,방사공,English Test,テスト,测试
-28,능력시트에있는 8번 이름,레이저,English Test,テスト,测试
-29,능력시트에있는 9번 이름,부메랑,English Test,テスト,测试
-30,능력시트에있는 10번 이름,미사일,English Test,テスト,测试
-31,능력시트에있는 11번 이름,기도문,English Test,テスト,测试
-32,능력시트에있는 12번 이름,헤일,English Test,テスト,测试
-33,능력시트에있는 13번 이름,룬트레이서,English Test,テスト,测试
-34,능력시트에있는 14번 이름,거대총알,English Test,テスト,测试
-35,능력시트에있는 15번이름,즉사,English Test,テスト,测试
-36,asd,능력17이름,English Test,テスト,测试
-37,asd,능력18이름,English Test,テスト,测试
-38,asd,능력19이름,English Test,テスト,测试
-39,asd,능력20이름,English Test,テスト,测试
-40,장신구시트에있는 0번 이름,시금치,English Test,テスト,测试
-41,장신구시트에있는 1번 이름,갑옷,English Test,テスト,测试
-42,장신구시트에있는 2번 이름,칠흑심장,English Test,テスト,测试
-43,장신구시트에있는 3번 이름,붉은심장,English Test,テスト,测试
-44,장신구시트에있는 4번 이름,빈성서,English Test,テスト,测试
-45,장신구시트에있는 5번 이름,촛대,English Test,テスト,测试
-46,장신구시트에있는 6번 이름,브레이서,English Test,テスト,测试
-47,asd,장신구8이름,English Test,テスト,测试
-48,asd,장신구9이름,English Test,テスト,测试
-49,asd,장신구10이름,English Test,テスト,测试
-50,asd,장신구11이름,English Test,テスト,测试
-51,asd,장신구12이름,English Test,テスト,测试
-52,asd,장신구13이름,English Test,テスト,测试
-53,asd,장신구14이름,English Test,テスト,测试
-54,asd,장신구15이름,English Test,テスト,测试
-55,asd,장신구16이름,English Test,テスト,测试
-56,asd,장신구17이름,English Test,テスト,测试
-57,asd,장신구18이름,English Test,テスト,测试
-58,asd,장신구19이름,English Test,テスト,测试
-59,asd,장신구20이름,English Test,テスト,测试
-60,능력시트에있는 능력 0번의 초기 설명,보고 있는 방향으로 빠르게 발사됩니다.,English Test,テスト,测试
-61,능력시트에있는 능력 0번의 1단계 설명,투사체 증가+1,English Test,テスト,测试
-62,능력시트에있는 능력 0번의 2단계 설명,관통증가 +1,English Test,テスト,测试
-63,능력시트에있는 능력 0번의 3단계 설명,데미지 증가+10,English Test,テスト,测试
-64,능력시트에있는 능력 0번의 4단계 설명,데미지 증가+10,English Test,テスト,测试
-65,능력시트에있는 능력 0번의 5단계 설명,데미지 증가+10,English Test,テスト,测试
-66,능력시트에있는 능력 0번의 6단계 설명,데미지 증가+10,English Test,テスト,测试
-67,능력시트에있는 능력 0번의 7단계 설명,데미지 증가+10,English Test,テスト,测试
-68,능력시트에있는 능력 0번의 8단계 설명,데미지 증가+10,English Test,テスト,测试
-69,능력시트에있는 능력 0번의 9단계 설명,데미지 증가+10,English Test,テスト,测试
-70,sad,채찍입니다,English Test,テスト,测试
-71,sad,(능력2번 텍스트),English Test,テスト,测试
-72,sad,(능력2번 텍스트),English Test,テスト,测试
-73,sad,(능력2번 텍스트),English Test,テスト,测试
-74,sad,(능력2번 텍스트),English Test,テスト,测试
-75,sad,(능력2번 텍스트),English Test,テスト,测试
-76,sad,(능력2번 텍스트),English Test,テスト,测试
-77,sad,(능력2번 텍스트),English Test,テスト,测试
-78,sad,(능력2번 텍스트),English Test,テスト,测试
-79,sad,(능력2번 텍스트),English Test,テスト,测试
-80,sad,플레이어 주변에 아이스필드가 생깁니다,English Test,テスト,测试
-81,sad,(능력3번 텍스트),English Test,テスト,测试
-82,sad,(능력3번 텍스트),English Test,テスト,测试
-83,sad,(능력3번 텍스트),English Test,テスト,测试
-84,sad,(능력3번 텍스트),English Test,テスト,测试
-85,sad,(능력3번 텍스트),English Test,テスト,测试
-86,sad,(능력3번 텍스트),English Test,テスト,测试
-87,sad,(능력3번 텍스트),English Test,テスト,测试
-88,sad,(능력3번 텍스트),English Test,テスト,测试
-89,sad,(능력3번 텍스트),English Test,テスト,测试
-90,sad,전방향 미사일 발사(쿨20초),English Test,テスト,测试
-91,sad,(능력4번 텍스트),English Test,テスト,测试
-92,sad,(능력4번 텍스트),English Test,テスト,测试
-93,sad,(능력4번 텍스트),English Test,テスト,测试
-94,sad,(능력4번 텍스트),English Test,テスト,测试
-95,sad,(능력4번 텍스트),English Test,テスト,测试
-96,sad,(능력4번 텍스트),English Test,テスト,测试
-97,sad,(능력4번 텍스트),English Test,テスト,测试
-98,sad,(능력4번 텍스트),English Test,テスト,测试
-99,sad,(능력4번 텍스트),English Test,テスト,测试
-100,sad,범위내 무작위 두명 번개,English Test,テスト,测试
-101,sad,(능력5번 텍스트),English Test,テスト,测试
-102,sad,(능력5번 텍스트),English Test,テスト,测试
-103,sad,(능력5번 텍스트),English Test,テスト,测试
-104,sad,(능력5번 텍스트),English Test,テスト,测试
-105,sad,(능력5번 텍스트),English Test,テスト,测试
-106,sad,(능력5번 텍스트),English Test,テスト,测试
-107,sad,(능력5번 텍스트),English Test,テスト,测试
-108,sad,(능력5번 텍스트),English Test,テスト,测试
-109,sad,(능력5번 텍스트),English Test,テスト,测试
-110,sad,유도,English Test,テスト,测试
-111,sad,(능력6번 텍스트),English Test,テスト,测试
-112,sad,(능력6번 텍스트),English Test,テスト,测试
-113,sad,(능력6번 텍스트),English Test,テスト,测试
-114,sad,(능력6번 텍스트),English Test,テスト,测试
-115,sad,(능력6번 텍스트),English Test,テスト,测试
-116,sad,(능력6번 텍스트),English Test,テスト,测试
-117,sad,(능력6번 텍스트),English Test,テスト,测试
-118,sad,(능력6번 텍스트),English Test,テスト,测试
-119,sad,(능력6번 텍스트),English Test,テスト,测试
-120,sad,원형의 구역을 폭격합니다,English Test,テスト,测试
-121,sad,(능력7번 텍스트),English Test,テスト,测试
-122,sad,(능력7번 텍스트),English Test,テスト,测试
-123,sad,(능력7번 텍스트),English Test,テスト,测试
-124,sad,(능력7번 텍스트),English Test,テスト,测试
-125,sad,(능력7번 텍스트),English Test,テスト,测试
-126,sad,(능력7번 텍스트),English Test,テスト,测试
-127,sad,(능력7번 텍스트),English Test,テスト,测试
-128,sad,(능력7번 텍스트),English Test,テスト,测试
-129,sad,(능력7번 텍스트),English Test,テスト,测试
-130,sad,박히고 뒤로 방사피해,English Test,テスト,测试
-131,sad,(능력8번 텍스트),English Test,テスト,测试
-132,sad,(능력8번 텍스트),English Test,テスト,测试
-133,sad,(능력8번 텍스트),English Test,テスト,测试
-134,sad,(능력8번 텍스트),English Test,テスト,测试
-135,sad,(능력8번 텍스트),English Test,テスト,测试
-136,sad,(능력8번 텍스트),English Test,テスト,测试
-137,sad,(능력8번 텍스트),English Test,テスト,测试
-138,sad,(능력8번 텍스트),English Test,テスト,测试
-139,sad,(능력8번 텍스트),English Test,テスト,测试
-140,sad,일직선 레이저,English Test,テスト,测试
-141,sad,(능력9번 텍스트),English Test,テスト,测试
-142,sad,(능력9번 텍스트),English Test,テスト,测试
-143,sad,(능력9번 텍스트),English Test,テスト,测试
-144,sad,(능력9번 텍스트),English Test,テスト,测试
-145,sad,(능력9번 텍스트),English Test,テスト,测试
-146,sad,(능력9번 텍스트),English Test,テスト,测试
-147,sad,(능력9번 텍스트),English Test,テスト,测试
-148,sad,(능력9번 텍스트),English Test,テスト,测试
-149,sad,(능력9번 텍스트),English Test,テスト,测试
-150,sad,해당지역으로 날리고 돌아옵니다,English Test,テスト,测试
-151,sad,(능력10번 텍스트),English Test,テスト,测试
-152,sad,(능력10번 텍스트),English Test,テスト,测试
-153,sad,(능력10번 텍스트),English Test,テスト,测试
-154,sad,(능력10번 텍스트),English Test,テスト,测试
-155,sad,(능력10번 텍스트),English Test,テスト,测试
-156,sad,(능력10번 텍스트),English Test,テスト,测试
-157,sad,(능력10번 텍스트),English Test,テスト,测试
-158,sad,(능력10번 텍스트),English Test,テスト,测试
-159,sad,(능력10번 텍스트),English Test,テスト,测试
-160,sad,단일타켓미사일,English Test,テスト,测试
-161,sad,(능력11번 텍스트),English Test,テスト,测试
-162,sad,(능력11번 텍스트),English Test,テスト,测试
-163,sad,(능력11번 텍스트),English Test,テスト,测试
-164,sad,(능력11번 텍스트),English Test,テスト,测试
-165,sad,(능력11번 텍스트),English Test,テスト,测试
-166,sad,(능력11번 텍스트),English Test,テスト,测试
-167,sad,(능력11번 텍스트),English Test,テスト,测试
-168,sad,(능력11번 텍스트),English Test,テスト,测试
-169,sad,(능력11번 텍스트),English Test,テスト,测试
-170,sad,기도문이 주변을 회전하며 공격합니다,English Test,テスト,测试
-171,sad,(능력12번 텍스트),English Test,テスト,测试
-172,sad,(능력12번 텍스트),English Test,テスト,测试
-173,sad,(능력12번 텍스트),English Test,テスト,测试
-174,sad,(능력12번 텍스트),English Test,テスト,测试
-175,sad,(능력12번 텍스트),English Test,テスト,测试
-176,sad,(능력12번 텍스트),English Test,テスト,测试
-177,sad,(능력12번 텍스트),English Test,テスト,测试
-178,sad,(능력12번 텍스트),English Test,テスト,测试
-179,sad,(능력12번 텍스트),English Test,テスト,测试
-180,sad,헤일이 날라감,English Test,テスト,测试
-181,sad,(능력13번  텍스트),English Test,テスト,测试
-182,sad,(능력13번  텍스트),English Test,テスト,测试
-183,sad,(능력13번  텍스트),English Test,テスト,测试
-184,sad,(능력13번  텍스트),English Test,テスト,测试
-185,sad,(능력13번  텍스트),English Test,テスト,测试
-186,sad,(능력13번  텍스트),English Test,テスト,测试
-187,sad,(능력13번  텍스트),English Test,テスト,测试
-188,sad,(능력13번  텍스트),English Test,テスト,测试
-189,sad,(능력13번  텍스트),English Test,テスト,测试
-190,sad,무작위 방향 미사일발사,English Test,テスト,测试
-191,sad,(능력14번 텍스트),English Test,テスト,测试
-192,sad,(능력14번 텍스트),English Test,テスト,测试
-193,sad,(능력14번 텍스트),English Test,テスト,测试
-194,sad,(능력14번 텍스트),English Test,テスト,测试
-195,sad,(능력14번 텍스트),English Test,テスト,测试
-196,sad,(능력14번 텍스트),English Test,テスト,测试
-197,sad,(능력14번 텍스트),English Test,テスト,测试
-198,sad,(능력14번 텍스트),English Test,テスト,测试
-199,sad,(능력14번 텍스트),English Test,テスト,测试
-200,sad,박히고 뒤로 거대총알,English Test,テスト,测试
-201,sad,(능력15번 텍스트),English Test,テスト,测试
-202,sad,(능력15번 텍스트),English Test,テスト,测试
-203,sad,(능력15번 텍스트),English Test,テスト,测试
-204,sad,(능력15번 텍스트),English Test,テスト,测试
-205,sad,(능력15번 텍스트),English Test,テスト,测试
-206,sad,(능력15번 텍스트),English Test,テスト,测试
-207,sad,(능력15번 텍스트),English Test,テスト,测试
-208,sad,(능력15번 텍스트),English Test,テスト,测试
-209,sad,(능력15번 텍스트),English Test,テスト,测试
-210,능력시트에있는 능력 16번의 초기 설명,범위내의 모든적 즉사.,English Test,テスト,测试
-211,능력시트에있는 능력 16번의 1단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-212,능력시트에있는 능력 16번의 2단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-213,능력시트에있는 능력 16번의 3단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-214,능력시트에있는 능력 16번의 4단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-215,능력시트에있는 능력 16번의 5단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-216,능력시트에있는 능력 16번의 6단계 설명,"범위2증가 , 쿨타임 -5",English Test,テスト,测试
-217,능력시트에있는 능력 16번의 7단계 설명,"범위3증가 , 쿨타임 -10",English Test,テスト,测试
-218,asd,(능력16번 텍스트),English Test,テスト,测试
-219,asd,(능력16번 텍스트),English Test,テスト,测试
-220,asd,(능력17번 텍스트),English Test,テスト,测试
-221,asd,(능력17번 텍스트),English Test,テスト,测试
-222,asd,(능력17번 텍스트),English Test,テスト,测试
-223,asd,(능력17번 텍스트),English Test,テスト,测试
-224,asd,(능력17번 텍스트),English Test,テスト,测试
-225,asd,(능력17번 텍스트),English Test,テスト,测试
-226,asd,(능력17번 텍스트),English Test,テスト,测试
-227,asd,(능력17번 텍스트),English Test,テスト,测试
-228,asd,(능력17번 텍스트),English Test,テスト,测试
-229,asd,(능력17번 텍스트),English Test,テスト,测试
-230,asd,(능력18번 텍스트),English Test,テスト,测试
-231,asd,(능력18번 텍스트),English Test,テスト,测试
-232,asd,(능력18번 텍스트),English Test,テスト,测试
-233,asd,(능력18번 텍스트),English Test,テスト,测试
-234,asd,(능력18번 텍스트),English Test,テスト,测试
-235,asd,(능력18번 텍스트),English Test,テスト,测试
-236,asd,(능력18번 텍스트),English Test,テスト,测试
-237,asd,(능력18번 텍스트),English Test,テスト,测试
-238,asd,(능력18번 텍스트),English Test,テスト,测试
-239,asd,(능력18번 텍스트),English Test,テスト,测试
-240,asd,(능력19번 텍스트),English Test,テスト,测试
-241,asd,(능력19번 텍스트),English Test,テスト,测试
-242,asd,(능력19번 텍스트),English Test,テスト,测试
-243,asd,(능력19번 텍스트),English Test,テスト,测试
-244,asd,(능력19번 텍스트),English Test,テスト,测试
-245,asd,(능력19번 텍스트),English Test,テスト,测试
-246,asd,(능력19번 텍스트),English Test,テスト,测试
-247,asd,(능력19번 텍스트),English Test,テスト,测试
-248,asd,(능력19번 텍스트),English Test,テスト,测试
-249,asd,(능력19번 텍스트),English Test,テスト,测试
-250,asd,(능력20번 텍스트),English Test,テスト,测试
-251,asd,(능력20번 텍스트),English Test,テスト,测试
-252,asd,(능력20번 텍스트),English Test,テスト,测试
-253,asd,(능력20번 텍스트),English Test,テスト,测试
-254,asd,(능력20번 텍스트),English Test,テスト,测试
-255,asd,(능력20번 텍스트),English Test,テスト,测试
-256,asd,(능력20번 텍스트),English Test,テスト,测试
-257,asd,(능력20번 텍스트),English Test,テスト,测试
-258,asd,(능력20번 텍스트),English Test,テスト,测试
-259,asd,(능력20번 텍스트),English Test,テスト,测试
-260,장신구시트에있는 장신구 0번의 초기 설명,공격력 10% 증가,English Test,テスト,测试
-261,장신구시트에있는 장신구 0번의 1단계 설명,공격력 10% 증가,English Test,テスト,测试
-262,장신구시트에있는 장신구 0번의 2단계 설명,공격력 10% 증가,English Test,テスト,测试
-263,장신구시트에있는 장신구 0번의 3단계 설명,공격력 10% 증가,English Test,テスト,测试
-264,장신구시트에있는 장신구 0번의 4단계 설명,공격력 10% 증가,English Test,テスト,测试
-265,장신구시트에있는 장신구 0번의 5단계 설명,공격력 10% 증가,English Test,テスト,测试
-266,장신구시트에있는 장신구 0번의 6단계 설명,공격력 10% 증가,English Test,テスト,测试
-267,장신구시트에있는 장신구 0번의 7단계 설명,공격력 10% 증가,English Test,テスト,测试
-268,장신구시트에있는 장신구 0번의 8단계 설명,공격력 10% 증가,English Test,テスト,测试
-269,장신구시트에있는 장신구 0번의 9단계 설명,공격력 10% 증가,English Test,テスト,测试
-270,asd,(장신구2번 텍스트),English Test,テスト,测试
-271,asd,(장신구2번 텍스트),English Test,テスト,测试
-272,asd,(장신구2번 텍스트),English Test,テスト,测试
-273,asd,(장신구2번 텍스트),English Test,テスト,测试
-274,asd,(장신구2번 텍스트),English Test,テスト,测试
-275,asd,(장신구2번 텍스트),English Test,テスト,测试
-276,asd,(장신구2번 텍스트),English Test,テスト,测试
-277,asd,(장신구2번 텍스트),English Test,テスト,测试
-278,asd,(장신구2번 텍스트),English Test,テスト,测试
-279,asd,(장신구2번 텍스트),English Test,テスト,测试
-280,asd,(장신구3번 텍스트),English Test,テスト,测试
-281,asd,(장신구3번 텍스트),English Test,テスト,测试
-282,asd,(장신구3번 텍스트),English Test,テスト,测试
-283,asd,(장신구3번 텍스트),English Test,テスト,测试
-284,asd,(장신구3번 텍스트),English Test,テスト,测试
-285,asd,(장신구3번 텍스트),English Test,テスト,测试
-286,asd,(장신구3번 텍스트),English Test,テスト,测试
-287,asd,(장신구3번 텍스트),English Test,テスト,测试
-288,asd,(장신구3번 텍스트),English Test,テスト,测试
-289,asd,(장신구3번 텍스트),English Test,テスト,测试
-290,asd,(장신구4번 텍스트),English Test,テスト,测试
-291,asd,(장신구4번 텍스트),English Test,テスト,测试
-292,asd,(장신구4번 텍스트),English Test,テスト,测试
-293,asd,(장신구4번 텍스트),English Test,テスト,测试
-294,asd,(장신구4번 텍스트),English Test,テスト,测试
-295,asd,(장신구4번 텍스트),English Test,テスト,测试
-296,asd,(장신구4번 텍스트),English Test,テスト,测试
-297,asd,(장신구4번 텍스트),English Test,テスト,测试
-298,asd,(장신구4번 텍스트),English Test,テスト,测试
-299,asd,(장신구4번 텍스트),English Test,テスト,测试
-300,asd,(장신구5번 텍스트),English Test,テスト,测试
-301,asd,(장신구5번 텍스트),English Test,テスト,测试
-302,asd,(장신구5번 텍스트),English Test,テスト,测试
-303,asd,(장신구5번 텍스트),English Test,テスト,测试
-304,asd,(장신구5번 텍스트),English Test,テスト,测试
-305,asd,(장신구5번 텍스트),English Test,テスト,测试
-306,asd,(장신구5번 텍스트),English Test,テスト,测试
-307,asd,(장신구5번 텍스트),English Test,テスト,测试
-308,asd,(장신구5번 텍스트),English Test,テスト,测试
-309,asd,(장신구5번 텍스트),English Test,テスト,测试
-310,asd,(장신구6번 텍스트),English Test,テスト,测试
-311,asd,(장신구6번 텍스트),English Test,テスト,测试
-312,asd,(장신구6번 텍스트),English Test,テスト,测试
-313,asd,(장신구6번 텍스트),English Test,テスト,测试
-314,asd,(장신구6번 텍스트),English Test,テスト,测试
-315,asd,(장신구6번 텍스트),English Test,テスト,测试
-316,asd,(장신구6번 텍스트),English Test,テスト,测试
-317,asd,(장신구6번 텍스트),English Test,テスト,测试
-318,asd,(장신구6번 텍스트),English Test,テスト,测试
-319,asd,(장신구6번 텍스트),English Test,テスト,测试
-320,asd,(장신구7번 텍스트),English Test,テスト,测试
-321,asd,(장신구7번 텍스트),English Test,テスト,测试
-322,asd,(장신구7번 텍스트),English Test,テスト,测试
-323,asd,(장신구7번 텍스트),English Test,テスト,测试
-324,asd,(장신구7번 텍스트),English Test,テスト,测试
-325,asd,(장신구7번 텍스트),English Test,テスト,测试
-326,asd,(장신구7번 텍스트),English Test,テスト,测试
-327,asd,(장신구7번 텍스트),English Test,テスト,测试
-328,asd,(장신구7번 텍스트),English Test,テスト,测试
-329,asd,(장신구7번 텍스트),English Test,テスト,测试
-330,asd,(장신구8번 텍스트),English Test,テスト,测试
-331,asd,(장신구8번 텍스트),English Test,テスト,测试
-332,asd,(장신구8번 텍스트),English Test,テスト,测试
-333,asd,(장신구8번 텍스트),English Test,テスト,测试
-334,asd,(장신구8번 텍스트),English Test,テスト,测试
-335,asd,(장신구8번 텍스트),English Test,テスト,测试
-336,asd,(장신구8번 텍스트),English Test,テスト,测试
-337,asd,(장신구8번 텍스트),English Test,テスト,测试
-338,asd,(장신구8번 텍스트),English Test,テスト,测试
-339,asd,(장신구8번 텍스트),English Test,テスト,测试
-340,asd,(장신구9번 텍스트),English Test,テスト,测试
-341,asd,(장신구9번 텍스트),English Test,テスト,测试
-342,asd,(장신구9번 텍스트),English Test,テスト,测试
-343,asd,(장신구9번 텍스트),English Test,テスト,测试
-344,asd,(장신구9번 텍스트),English Test,テスト,测试
-345,asd,(장신구9번 텍스트),English Test,テスト,测试
-346,asd,(장신구9번 텍스트),English Test,テスト,测试
-347,asd,(장신구9번 텍스트),English Test,テスト,测试
-348,asd,(장신구9번 텍스트),English Test,テスト,测试
-349,asd,(장신구9번 텍스트),English Test,テスト,测试
-350,asd,(장신구10번 텍스트),English Test,テスト,测试
-351,asd,(장신구10번 텍스트),English Test,テスト,测试
-352,asd,(장신구10번 텍스트),English Test,テスト,测试
-353,asd,(장신구10번 텍스트),English Test,テスト,测试
-354,asd,(장신구10번 텍스트),English Test,テスト,测试
-355,asd,(장신구10번 텍스트),English Test,テスト,测试
-356,asd,(장신구10번 텍스트),English Test,テスト,测试
-357,asd,(장신구10번 텍스트),English Test,テスト,测试
-358,asd,(장신구10번 텍스트),English Test,テスト,测试
-359,asd,(장신구10번 텍스트),English Test,テスト,测试
-360,asd,(장신구11번 텍스트),English Test,テスト,测试
-361,asd,(장신구11번 텍스트),English Test,テスト,测试
-362,asd,(장신구11번 텍스트),English Test,テスト,测试
-363,asd,(장신구11번 텍스트),English Test,テスト,测试
-364,asd,(장신구11번 텍스트),English Test,テスト,测试
-365,asd,(장신구11번 텍스트),English Test,テスト,测试
-366,asd,(장신구11번 텍스트),English Test,テスト,测试
-367,asd,(장신구11번 텍스트),English Test,テスト,测试
-368,asd,(장신구11번 텍스트),English Test,テスト,测试
-369,asd,(장신구11번 텍스트),English Test,テスト,测试
-370,asd,(장신구12번 텍스트),English Test,テスト,测试
-371,asd,(장신구12번 텍스트),English Test,テスト,测试
-372,asd,(장신구12번 텍스트),English Test,テスト,测试
-373,asd,(장신구12번 텍스트),English Test,テスト,测试
-374,asd,(장신구12번 텍스트),English Test,テスト,测试
-375,asd,(장신구12번 텍스트),English Test,テスト,测试
-376,asd,(장신구12번 텍스트),English Test,テスト,测试
-377,asd,(장신구12번 텍스트),English Test,テスト,测试
-378,asd,(장신구12번 텍스트),English Test,テスト,测试
-379,asd,(장신구12번 텍스트),English Test,テスト,测试
-380,asd,(장신구13번  텍스트),English Test,テスト,测试
-381,asd,(장신구13번  텍스트),English Test,テスト,测试
-382,asd,(장신구13번  텍스트),English Test,テスト,测试
-383,asd,(장신구13번  텍스트),English Test,テスト,测试
-384,asd,(장신구13번  텍스트),English Test,テスト,测试
-385,asd,(장신구13번  텍스트),English Test,テスト,测试
-386,asd,(장신구13번  텍스트),English Test,テスト,测试
-387,asd,(장신구13번  텍스트),English Test,テスト,测试
-388,asd,(장신구13번  텍스트),English Test,テスト,测试
-389,asd,(장신구13번  텍스트),English Test,テスト,测试
-390,asd,(장신구14번 텍스트),English Test,テスト,测试
-391,asd,(장신구14번 텍스트),English Test,テスト,测试
-392,asd,(장신구14번 텍스트),English Test,テスト,测试
-393,asd,(장신구14번 텍스트),English Test,テスト,测试
-394,asd,(장신구14번 텍스트),English Test,テスト,测试
-395,asd,(장신구14번 텍스트),English Test,テスト,测试
-396,asd,(장신구14번 텍스트),English Test,テスト,测试
-397,asd,(장신구14번 텍스트),English Test,テスト,测试
-398,asd,(장신구14번 텍스트),English Test,テスト,测试
-399,asd,(장신구14번 텍스트),English Test,テスト,测试
-400,asd,(장신구15번 텍스트),English Test,テスト,测试
-401,asd,(장신구15번 텍스트),English Test,テスト,测试
-402,asd,(장신구15번 텍스트),English Test,テスト,测试
-403,asd,(장신구15번 텍스트),English Test,テスト,测试
-404,asd,(장신구15번 텍스트),English Test,テスト,测试
-405,asd,(장신구15번 텍스트),English Test,テスト,测试
-406,asd,(장신구15번 텍스트),English Test,テスト,测试
-407,asd,(장신구15번 텍스트),English Test,テスト,测试
-408,asd,(장신구15번 텍스트),English Test,テスト,测试
-409,asd,(장신구15번 텍스트),English Test,テスト,测试
-410,asd,(장신구16번 텍스트),English Test,テスト,测试
-411,asd,(장신구16번 텍스트),English Test,テスト,测试
-412,asd,(장신구16번 텍스트),English Test,テスト,测试
-413,asd,(장신구16번 텍스트),English Test,テスト,测试
-414,asd,(장신구16번 텍스트),English Test,テスト,测试
-415,asd,(장신구16번 텍스트),English Test,テスト,测试
-416,asd,(장신구16번 텍스트),English Test,テスト,测试
-417,asd,(장신구16번 텍스트),English Test,テスト,测试
-418,asd,(장신구16번 텍스트),English Test,テスト,测试
-419,asd,(장신구16번 텍스트),English Test,テスト,测试
-420,asd,(장신구17번 텍스트),English Test,テスト,测试
-421,asd,(장신구17번 텍스트),English Test,テスト,测试
-422,asd,(장신구17번 텍스트),English Test,テスト,测试
-423,asd,(장신구17번 텍스트),English Test,テスト,测试
-424,asd,(장신구17번 텍스트),English Test,テスト,测试
-425,asd,(장신구17번 텍스트),English Test,テスト,测试
-426,asd,(장신구17번 텍스트),English Test,テスト,测试
-427,asd,(장신구17번 텍스트),English Test,テスト,测试
-428,asd,(장신구17번 텍스트),English Test,テスト,测试
-429,asd,(장신구17번 텍스트),English Test,テスト,测试
-430,asd,(장신구18번 텍스트),English Test,テスト,测试
-431,asd,(장신구18번 텍스트),English Test,テスト,测试
-432,asd,(장신구18번 텍스트),English Test,テスト,测试
-433,asd,(장신구18번 텍스트),English Test,テスト,测试
-434,asd,(장신구18번 텍스트),English Test,テスト,测试
-435,asd,(장신구18번 텍스트),English Test,テスト,测试
-436,asd,(장신구18번 텍스트),English Test,テスト,测试
-437,asd,(장신구18번 텍스트),English Test,テスト,测试
-438,asd,(장신구18번 텍스트),English Test,テスト,测试
-439,asd,(장신구18번 텍스트),English Test,テスト,测试
-440,asd,(장신구19번 텍스트),English Test,テスト,测试
-441,asd,(장신구19번 텍스트),English Test,テスト,测试
-442,asd,(장신구19번 텍스트),English Test,テスト,测试
-443,asd,(장신구19번 텍스트),English Test,テスト,测试
-444,asd,(장신구19번 텍스트),English Test,テスト,测试
-445,asd,(장신구19번 텍스트),English Test,テスト,测试
-446,asd,(장신구19번 텍스트),English Test,テスト,测试
-447,asd,(장신구19번 텍스트),English Test,テスト,测试
-448,asd,(장신구19번 텍스트),English Test,テスト,测试
-449,asd,(장신구19번 텍스트),English Test,テスト,测试
-450,asd,(장신구20번 텍스트),English Test,テスト,测试
-451,asd,(장신구20번 텍스트),English Test,テスト,测试
-452,asd,(장신구20번 텍스트),English Test,テスト,测试
-453,asd,(장신구20번 텍스트),English Test,テスト,测试
-454,asd,(장신구20번 텍스트),English Test,テスト,测试
-455,asd,(장신구20번 텍스트),English Test,テスト,测试
-456,asd,(장신구20번 텍스트),English Test,テスト,测试
-457,asd,(장신구20번 텍스트),English Test,テスト,测试
-458,asd,(장신구20번 텍스트),English Test,テスト,测试
-459,asd,(장신구20번 텍스트),English Test,テスト,测试
-460,레벨업시 처음고를때 텍스트 설정,신규,New,新しい,新的
-461,레벨업텍스트,레벨,Level,レベル,等级
-462,asd,큰 동전 가방,English Test,テスト,测试
-463,asd,치킨,English Test,テスト,测试
-464,asd,25골드를 추가합니다.,English Test,テスト,测试
-465,asd,체력을 30 회복합니다.,English Test,テスト,测试
-466,asd,상점,Shop,テスト,测试
-467,asd,캐릭터,Character,テスト,测试
-468,asd,월드,World,テスト,测试
-469,asd,카드,Card,テスト,测试
-470,asd,설정,Setting,テスト,测试
-471,asd,입장,Enter,テスト,测试
-472,asd,데미지 표시 안하기,Damge UI X,テスト,测试
-473,asd,플레이,Play,テスト,测试
-474,asd,구매,Buy,テスト,测试
-475,asd,네,Yes,テスト,测试
-476,asd,아뇨,No,テスト,测试
-477,asd,돈이 부족합니다!!,Not enough money!!,テスト,测试
-478,asd,착용/해제,equip/Unequip,テスト,测试
-479,asd,체력의 카드,English Test,テスト,测试
-480,asd,방어의 카드,English Test,テスト,测试
-481,asd,이속의 카드,English Test,テスト,测试
-482,asd,데미지의 카드,English Test,テスト,测试
-483,asd,천사의 카드,English Test,テスト,测试
-484,asd,악마의 카드,English Test,テスト,测试
-485,asd,정령의 카드,English Test,テスト,测试
-486,asd,단검의 카드,English Test,テスト,测试
-487,asd,ㄴ의 카드,English Test,テスト,测试
-488,asd,ㅇ의카드,English Test,テスト,测试
-489,asd,체력+20,English Test,テスト,测试
-490,asd,방어+2,English Test,テスト,测试
-491,asd,이속+10%,English Test,テスト,测试
-492,asd,데미지+10%,English Test,テスト,测试
-493,asd,체력+5`w`방어+1,Hp+5`w`Defence+1,テスト,测试
-494,asd,데미지+15%,English Test,テスト,测试
-495,asd,체력회복+0.1,English Test,テスト,测试
-496,asd,단검의 데미지가 100%증가합니다,English Test,テスト,测试
-497,asd,투사체증가+1,English Test,テスト,测试
-498,asd,쿨타임 감소+10%,English Test,テスト,测试
-499,asd,팔기,Sell,テスト,测试
-500,asd,카드칸이 가득 차있습니다,Card Full,テスト,测试
-501,asd,확인!,OK!,テスト,测试
-502,asd,합성(미구현),Mix,テスト,测试
-503,asd,푸른초원,English Test,テスト,测试
-504,asd,2맵이름,English Test,テスト,测试
-505,asd,3맵이름,English Test,テスト,测试
-506,asd,4맵이름,English Test,テスト,测试
-507,asd,5맵이름,English Test,テスト,测试
-508,asd,6맵이름,English Test,テスト,测试
-509,asd,7맵이름,English Test,テスト,测试
-510,asd,8맵이름,English Test,テスト,测试
-511,asd,9맵이름,English Test,テスト,测试
-512,asd,10맵이름,English Test,テスト,测试
-513,asd,푸른 초원입니다,English Test,テスト,测试
-514,asd,2맵설명,English Test,テスト,测试
-515,asd,3맵설명,English Test,テスト,测试
-516,asd,4맵설명,English Test,テスト,测试
-517,asd,5맵설명,English Test,テスト,测试
-518,asd,6맵설명,English Test,テスト,测试
-519,asd,7맵설명,English Test,テスト,测试
-520,asd,8맵설명,English Test,テスト,测试
-521,asd,9맵설명,English Test,テスト,测试
-522,asd,10맵설명,English Test,テスト,测试
-523,asd,레벨 업!,Level Up!,テスト,测试
-524,asd,옵션,Option,テスト,测试
-525,asd,돌아가기,Back,テスト,测试
-526,asd,광고보고 풀기,English Test,テスト,测试
-527,asd,켬,ON,テスト,测试
-528,asd,끔,OFF,テスト,测试
-529,asd,사운드,Music,テスト,测试
-530,asd,효과음,Sound,テスト,测试
-531,asd,데미지표시,Damage Mark,テスト,测试
-532,,일시정지,Pause,テスト,测试
-533,,능력,English Test,テスト,测试
-534,,장신구,English Test,テスト,测试
-535,,나가게되면 지금 까지 얻었던 정보들이 사라집니다. 정말 나가겠습니까?,English Test,テスト,测试
-536,,부활,resurrection,テスト,测试
-537,,게임종료,GameOver,テスト,测试
-538,,전리품,booty,テスト,测试
-539,,탭해서 나가기,Tab Exit,テスト,测试
-540,,선택,Select,テスト,测试
-541,2번맵 안풀린거 설명,2번맵 안풀린거 설명,English Test,テスト,测试
-542,,푸른초원 클리어시 잠금 해제,English Test,テスト,测试
-543,,4번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-544,,5번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-545,,6번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-546,,7번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-547,,8번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-548,,9번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-549,,10번맵 안풀린거 설명 텍스트,English Test,テスト,测试
-550,,무료,Free,テスト,测试
+Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
+0,캐릭터시트에있는 0번 이름입니다,쿰아,Kuma,熊手,熊,Kuma,Kuma
+1,캐릭터시트에있는 1번 이름입니다,이델다,Ilda,ilda.,伊尔尔尔,Ilda,Ilonda
+2,asd,캐릭터이름3,Character name 3,文字名3.,字符名称3.,Zeichenname 3.,Nombre del personaje 3
+3,asd,캐릭터이름4,Character name 4,文字名4.,字符名称4.,Zeichenname 4.,Nombre del personaje 4
+4,asd,캐릭터이름5,Character name 5,文字名5.,字符名称5.,Zeichenname 5.,Nombre del personaje 5
+5,asd,캐릭터이름6,Character name 6,文字名6.,字符名称6.,Zeichenname 6.,Nombre del personaje 6
+6,asd,캐릭터이름7,Character name 7,文字名7.,字符名称7.,Zeichenname 7.,Nombre del personaje 7
+7,asd,캐릭터이름8,Character name 8,文字名8.,字符名称8.,Zeichenname 8.,Nombre del personaje 8
+8,asd,캐릭터이름9,Character name 9,文字名9.,字符名称9.,Zeichenname 9.,Nombre del personaje 9
+9,asd,캐릭터이름10,Character name 10,文字名10.,字符名称10.,Zeichenname 10.,Nombre del personaje 10
+10,캐릭터시트에있는 0번 캐릭터설명,"체력 120, 갑옷 +1, 매 10레벨마다 10%의 대미지 추가(최대 +50%) - 야생성이 많이죽었지만 무기를 사용하는 강력한 쿠마","Stamina 120, armor +1, more than 10 levels per 10% (+ 50%) - a lot of wild, but a powerful Kuma using weapon",Stamina 120、Armor + 1、10％あたり10レベル（+ 50％） - 多くの野生ですが、武器を使った強力なクマ,耐力120，盔甲+1，每10％以上10％（+ 50％） - 很多野生，但使用武器强大的康马,"Ausdauer 120, Rüstung +1, mehr als 10 Stufen pro 10% (+ 50%) - viel wild, aber ein mächtiger Kuma mit Waffe","Stamina 120, armadura +1, más de 10 niveles por 10% (+ 50%) - Mucho salvaje, pero una potente kuma usando arma"
+11,캐릭터시트에있는 1번 캐릭터설명,매 5레벨마다 10%의 경험치 추가(최대 +30%),More than 5 levels of experience (max + 30%),5レベル以上の経験（最大+ 30％）,超过5种经验（最多+ 30％）,Mehr als 5 Erfahrungsstufen (max + 30%),Más de 5 niveles de experiencia (MAX + 30%)
+12,asd,캐릭터3설명,Character 3 Description,文字3説明,字符3描述,Zeichen 3 Beschreibung.,Personaje 3 Descripción
+13,asd,캐릭터4설명,Character 4 Description,文字4説明,字符4描述,Zeichen 4 Beschreibung.,Personaje 4 Descripción
+14,asd,캐릭터5설명,Character 5 Description,文字5説明,字符5描述,Zeichen 5 Beschreibung.,Personaje 5 Descripción
+15,asd,캐릭터6설명,Character 6 Description,文字6説明,字符6描述,Zeichen 6 Beschreibung.,Personaje 6 Descripción
+16,asd,캐릭터7설명,Character 7 Description,文字7の説明,字符7描述,Zeichen 7 Beschreibung.,Personaje 7 Descripción
+17,asd,캐릭터8설명,Character 8 Description,キャラクター8の説明,字符8描述,Zeichen 8 Beschreibung.,Personaje 8 Descripción
+18,asd,캐릭터9설명,Character 9 Description,キャラクター9説明,字符9描述,Zeichen 9 Beschreibung.,Personaje 9 Descripción
+19,asd,캐릭터10설명,Character 10 Description,文字10の説明,字符10描述,Zeichen 10 Beschreibung.,Personaje 10 Descripción
+20,능력시트에있는 0번 이름,너프건,Nuff gun,ノフガン,肚子枪,Nuff-Pistole,Pistola de nuff
+21,능력시트에있는 1번 이름,알불,Help,ヘルプ,帮助,Hilfe,Ayuda
+22,능력시트에있는 2번 이름,레일건,Rail gun,レールガン,轨道枪,Schienenpistole,Pistola
+23,능력시트에있는 3번 이름,자기장,magnetic field,磁場,磁场,Magnetfeld,campo magnético
+24,능력시트에있는 4번 이름,핫도그,Hotdog,ホットドッグ,热狗,Hotdog,Pancho
+25,능력시트에있는 5번 이름,불리건,Dislike,嫌い,dis,Nicht mögen,Disgusto
+26,능력시트에있는 6번 이름,융단폭격,Bumping bombing,爆弾,爆炸轰炸,Bombing Bombarding.,Bombardeo
+27,능력시트에있는 7번 이름,할퀴기,Duck,アヒル,鸭子,Ente,Pato
+28,능력시트에있는 8번 이름,뇌절,Brainberry,ブリーベリー,Brainberry.,Hirnberry,Breakero
+29,능력시트에있는 9번 이름,수리검,Repair,修理,维修,Reparatur,Reparar
+30,능력시트에있는 10번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+31,능력시트에있는 11번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+32,능력시트에있는 12번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+33,능력시트에있는 13번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+34,능력시트에있는 14번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+35,능력시트에있는 15번이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+36,asd,능력17이름,Ability 17 Name,能力17の名前,能力17名称,Fähigkeit 17 Name,Habilidad 17 nombre
+37,asd,능력18이름,Ability 18 Name,能力18の名前,能力18名称,Fähigkeit 18 Name,Habilidad 18 nombre
+38,asd,능력19이름,Ability 19 Name,能力19の名前,能力19名称,Fähigkeit 19 Name,Habilidad 19 nombre
+39,asd,능력20이름,Ability 20 Name,能力20名,能力20名称,Fähigkeit 20 Name,Habilidad 20 nombre
+40,장신구시트에있는 0번 이름,,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!
+41,장신구시트에있는 1번 이름,투사체 수,The number of projectors,プロジェクターの数,投影仪的数量,Die Anzahl der Projektoren,El número de proyectores
+42,장신구시트에있는 2번 이름,쿨다운감소,Cool down reduction,縮小を冷却します,冷却减少,Reduzierung abkühlen,Reducción de enfriamiento
+43,장신구시트에있는 3번 이름,체력,health,健康,健康,die Gesundheit,salud
+44,장신구시트에있는 4번 이름,체력회복,Stamina recovery,スタミナ回復,耐力恢复,Widerherstellung der Kondition,Recuperación de energía
+45,장신구시트에있는 5번 이름,공격범위,Attack range,攻撃範囲,攻击范围,Angriffsreichweite,Rango de ataque
+46,장신구시트에있는 6번 이름,방어력,Defense,防衛,防御,Verteidigung,Defensa
+47,장신구시트에있는 7번 이름,투사체이속,The projector,プロジェクター,投影机,Der Projektor,El proyector
+48,장신구시트에있는 8번 이름,이속,Fee,手数料,费用,Gebühr,Tarifa
+49,장신구시트에있는 9번 이름,경험치증가량,Experienced value,経験豊富な価値,经验丰富的价值,Erfahrener Wert,Valor experimentado
+50,장신구시트에있는 10번 이름,곰의 분노,Bear's Anger,クマの怒り,熊的愤怒,Bears Wut,Ira de oso
+51,장신구시트에있는 11번 이름,개의 분노,Fury,怒って,愤怒,Wut,Furia
+52,장신구시트에있는 12번 이름,아이템자석,Item magnet,アイテムマグネット,物品磁铁,Artikelmagnet,Imán de artículos
+53,,장신구14이름,Ornaments 14 Names,装飾品14の名前,装饰品14个名字,Ornamente 14 Namen.,Adornos 14 nombres
+54,asd,장신구15이름,Jewelry 15 name,ジュエリー15名,珠宝15名称,Schmuck 15 Name,Joyería 15 Nombre
+55,asd,장신구16이름,Ornaments 16 Names,装飾品16の名前,装饰品16名称,Ornamente 16 Namen.,Adornos 16 nombres
+56,asd,장신구17이름,Jewelery 17,ジュエリー17.,珠宝17.,Schmuck 17.,Joyas 17
+57,asd,장신구18이름,Jewelery 18 Name,ジュエリー18名前,珠宝18名称,Schmuck 18 Name,Joyería 18 Nombre
+58,asd,장신구19이름,Jewelry 19 name,ジュエリー19名,珠宝19名称,Schmuck 19 Name,Joyería 19 Nombre
+59,asd,장신구20이름,Jewelery 20 name,ジュエリー20名,珠宝20名称,Schmuck 20 Name,Joyería 20 Nombre
+60,능력시트에있는 능력 0번의 초기 설명,바라보는방향으로 쏩니다,Looking at the direction,方向を見て,看着方向,Blick auf die Richtung,Mirando la dirección
+61,능력시트에있는 능력 0번의 1단계 설명,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+62,능력시트에있는 능력 0번의 2단계 설명,투사체 증가+공격력 +4,Increased projection + Damage +4,投影+ダメージを増やす+ 4,增加投影+损坏+4,Erhöhte Projektion + Beschädigung +4,Mayor proyección + daño +4
+63,능력시트에있는 능력 0번의 3단계 설명,투사체증가,Projection,投影,投影,Projektion,Proyección
+64,능력시트에있는 능력 0번의 4단계 설명,관통 1회 증가,Increased penetration once,一度浸透の増加,增加一次渗透,Einmal erhöhte Penetration,Aumento de la penetración una vez
+65,능력시트에있는 능력 0번의 5단계 설명,투사체증가,Projection,投影,投影,Projektion,Proyección
+66,능력시트에있는 능력 0번의 6단계 설명,투사체증가 공격력+4,Projection joint damage +4,投影ジョイントダメージ+ 4,投影关节损坏+4,Projektionsgelenkschaden +4,Daño de la articulación de proyección +4
+67,능력시트에있는 능력 0번의 7단계 설명,관통 1회 증가,Increased penetration once,一度浸透の増加,增加一次渗透,Einmal erhöhte Penetration,Aumento de la penetración una vez
+68,능력시트에있는 능력 0번의 8단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+69,능력시트에있는 능력 0번의 9단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+70,능력시트에있는 능력 1번의 초기 설명,가까운적에게 에너지볼이 날라갑니다,Energy ball gives close to the nearest,エネルギーボールは最近の近くに与えます,能量球靠近最近的,Energiekugel gibt nahe am nächsten,Bola de energía da cerca de lo más cercano.
+71,능력시트에있는 능력 1번의 1단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
+72,능력시트에있는 능력 1번의 2단계 설명,공격력 8 증가,Increased damage 8,ダメージ8の増加,增加伤害8.,Erhöhter Schaden 8.,Aumento de daño 8
+73,능력시트에있는 능력 1번의 3단계 설명,쿨다운 15%감소,Cool down 15% reduction,15％の削減を冷却してください,降低15％的减少,15% reduzieren,Enfriar el 15% de reducción
+74,능력시트에있는 능력 1번의 4단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
+75,능력시트에있는 능력 1번의 5단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
+76,능력시트에있는 능력 1번의 6단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
+77,능력시트에있는 능력 1번의 7단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
+78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+80,능력시트에있는 능력 2번의 초기 설명,랜덤방향으로 일직선 레이저,Straight line laser in random direction,ランダムな方向の直線レーザー,直线激光随机方向,Gerade Laser in zufälliger Richtung,Línea recta láser en dirección aleatoria
+81,능력시트에있는 능력 2번의 1단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+82,능력시트에있는 능력 2번의 2단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+83,능력시트에있는 능력 2번의 3단계 설명,범위 증가 +10,Range increase +10,範囲は+10を増加させます,范围增加+10,Range-Erhöhung +10.,Aumento de rango +10
+84,능력시트에있는 능력 2번의 4단계 설명,범위 증가 +10,Range increase +10,範囲は+10を増加させます,范围增加+10,Range-Erhöhung +10.,Aumento de rango +10
+85,능력시트에있는 능력 2번의 5단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+86,능력시트에있는 능력 2번의 6단계 설명,범위 증가 +10,Range increase +10,範囲は+10を増加させます,范围增加+10,Range-Erhöhung +10.,Aumento de rango +10
+87,능력시트에있는 능력 2번의 7단계 설명,"공격력 +10, 범위 증가 +10","Damage +10, Range Increase +10",ダメージ+ 10、範​​囲は+10を増やします,损坏+10，范围增加+10,"Beschädigung +10, Reichweite erhöhen +10","Daño +10, aumento del rango +10"
+88,능력시트에있는 능력 2번의 8단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+89,,(능력3번 텍스트),(Ability 3 text),（能力3テキスト）,（能力3文本）,(Fähigkeit 3 ​​Text),(Habilidad 3 texto)
+90,능력시트에있는 능력 3번의 초기 설명,플레이어 주변에 데미지를주는 자기장 생성,Generate magnetic field giving damage around the player,プレーヤーの周りにダメージを与える磁場を生成します,产生磁场在玩家周围造成损坏,"Magnetfeld erzeugen, das Schaden um den Spieler gibt",Generar campo magnético dando daño alrededor del jugador.
+91,능력시트에있는 능력 3번의 1단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
+92,능력시트에있는 능력 3번의 2단계 설명,"쿨다운 15%감소, 공격력 +10","Cool Down 15% Decrease, Damage +10",15％の減少、ダメージ+10を冷やす,降低15％的减少，损坏+10,"Abkühlen 15% Abnahme, Beschädigung +10","Enfriar el 15% de disminución, daño +10"
+93,능력시트에있는 능력 3번의 3단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
+94,능력시트에있는 능력 3번의 4단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
+95,능력시트에있는 능력 3번의 5단계 설명,"쿨다운 15%감소, 공격력 +10","Cool Down 15% Decrease, Damage +10",15％の減少、ダメージ+10を冷やす,降低15％的减少，损坏+10,"Abkühlen 15% Abnahme, Beschädigung +10","Enfriar el 15% de disminución, daño +10"
+96,능력시트에있는 능력 3번의 6단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
+97,능력시트에있는 능력 3번의 7단계 설명,"쿨다운 15%감소, 공격력 +10","Cool Down 15% Decrease, Damage +10",15％の減少、ダメージ+10を冷やす,降低15％的减少，损坏+10,"Abkühlen 15% Abnahme, Beschädigung +10","Enfriar el 15% de disminución, daño +10"
+98,능력시트에있는 능력 3번의 8단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
+99,,(능력4번 텍스트),(Ability 4 times text),（能力4回のテキスト）,（能力4次文本）,(Fähigkeit 4-mal text),(Habilidad 4 veces texto)
+100,능력시트에있는 능력 4번의 초기 설명,총구에서 화염방사기,Flame radiator in muzzle,銃口の炎のラジエーター,火焰散热器在枪口中,Flammenkühler in Mündung,Radiador de la llama en el hocico
+101,능력시트에있는 능력 4번의 1단계 설명,공격력+0.5,Damage +0.5,ダメージ+ 0.5,伤害+0.5,Beschädigung +0.5.,Daño +0.5
+102,능력시트에있는 능력 4번의 2단계 설명,투사체 지속시간 +0.5초,Projectian duration +0.5 seconds,プロジェクティアン期間+ 0.5秒,项目持续时间+0.5秒,"Projektierdauer +0,5 Sekunden",Duración proyectiana +0.5 segundos
+103,능력시트에있는 능력 4번의 3단계 설명,범위증가 +1,Range +1,範囲+1,范围+1,Bereich +1.,Rango +1
+104,능력시트에있는 능력 4번의 4단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
+105,능력시트에있는 능력 4번의 5단계 설명,공격력+0.5,Damage +0.5,ダメージ+ 0.5,伤害+0.5,Beschädigung +0.5.,Daño +0.5
+106,능력시트에있는 능력 4번의 6단계 설명,투사체 지속시간증가 +0.5초,Increased projection duration +0.5 seconds,投影期間+ 0.5秒の増加,增加投影持续时间+0.5秒,"Erhöhte Projektionsdauer +0,5 Sekunden",Mayor duración de proyección +0.5 segundos
+107,능력시트에있는 능력 4번의 7단계 설명,범위증가 +1,Range +1,範囲+1,范围+1,Bereich +1.,Rango +1
+108,능력시트에있는 능력 4번의 8단계 설명,공격력 +1 ,Damage +1,ダメージ+1,损坏+1,Beschädigung +1.,Daños +1
+109,sad,범위증가 +5 지속시간증가 +1초,Range +5 duration increased +1 seconds,範囲+ 5持続時間は+ 1秒増加しました,范围+5持续时间增加+1秒,Bereich +5 Dauer erhöhte +1 Sekunden,Rango +5 Duración aumentó +1 segundos
+110,능력시트에있는 능력 5번의 초기 설명,한명의적에게 집중공격,Focus on one ordinate,縦座標に焦点を当てる,专注于一个纵坐标,Fokus auf eine Ordinate,Centrarse en una ordenada
+111,능력시트에있는 능력 5번의 1단계 설명,투사체 갯수증가 +1,Proof of projectors +1,プロジェクターの証明+1,投影仪证明+1,Nachweis der Projektoren +1,Prueba de proyectores +1
+112,능력시트에있는 능력 5번의 2단계 설명,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+113,능력시트에있는 능력 5번의 3단계 설명,투사체 속도증가 +1,Projective speed increase +1,射影速度は+1を増加させます,投影速度增加+1,Projektive Geschwindigkeit erhöht +1,Aumento de velocidad proyectiva +1
+114,능력시트에있는 능력 5번의 4단계 설명,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+115,능력시트에있는 능력 5번의 5단계 설명,투사체 갯수증가 +1,Proof of projectors +1,プロジェクターの証明+1,投影仪证明+1,Nachweis der Projektoren +1,Prueba de proyectores +1
+116,능력시트에있는 능력 5번의 6단계 설명,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+117,능력시트에있는 능력 5번의 7단계 설명,투사체 갯수증가 +1,Proof of projectors +1,プロジェクターの証明+1,投影仪证明+1,Nachweis der Projektoren +1,Prueba de proyectores +1
+118,능력시트에있는 능력 5번의 8단계 설명,투사체 속도증가 +1,Projective speed increase +1,射影速度は+1を増加させます,投影速度增加+1,Projektive Geschwindigkeit erhöht +1,Aumento de velocidad proyectiva +1
+119,,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+120,융단폭격 1렙,무작위로 포격해주는 함선을 소환 공격력 50,Summoning the ship that is randomly bombarded ATK 50,ATK 50をランダムに衝撃している船を召喚する,召集随机轰炸ATK 50的船舶,"Beschwörung des Schiffes, das zufällig atk 50 bombardiert ist",Convocando el barco que está aleatoriamente bombardeado ATK 50
+121,융단폭격 2렙,함선 크기 증가 +10%,High-length size increase + 10%,高尺度サイズの増加+ 10％,高长尺寸增加+ 10％,In hoher Länge erhöhen Sie + 10%,Aumento de tamaño de alta longitud + 10%
+122,융단폭격 3렙,공격력 +30,Damage +30,ダメージ+30,损坏+30,Beschädigung +30.,Daño +30
+123,융단폭격 4렙,함선 크기 증가 +10%,High-length size increase + 10%,高尺度サイズの増加+ 10％,高长尺寸增加+ 10％,In hoher Länge erhöhen Sie + 10%,Aumento de tamaño de alta longitud + 10%
+124,융단폭격 5렙,쿨타임 -1,Cool time -1,クールな時間-1,冷却时间-1,Kühle Zeit -1.,Tiempo fresco -1
+125,융단폭격 6렙,공격력 +30,Damage +30,ダメージ+30,损坏+30,Beschädigung +30.,Daño +30
+126,융단폭격 7렙,쿨타임 -1,Cool time -1,クールな時間-1,冷却时间-1,Kühle Zeit -1.,Tiempo fresco -1
+127,융단폭격 8렙,공격력 +30,Damage +30,ダメージ+30,损坏+30,Beschädigung +30.,Daño +30
+128,sad,(능력7번 텍스트),(Ability 7 text),（能力7テキスト）,（能力7文本）,(Fähigkeit 7 Text),(Habilidad 7 Texto)
+129,sad,(능력7번 텍스트),(Ability 7 text),（能力7テキスト）,（能力7文本）,(Fähigkeit 7 Text),(Habilidad 7 Texto)
+130,할퀴기 1렙,"곰이 좌우로 크게휘두릅니다 공격력 20, 20","Bears are large right and right. Damage 20, 20","クマは右右に大きい。ダメージ20,20","熊是较大的右边和右。伤害20,20","Bären sind groß und rechts groß. Schaden 20, 20","Los osos son grandes a la derecha y la derecha. Daño 20, 20"
+131,할퀴기 2렙,"공격력 +10, +10","Damage +10, +10","+ 10, +10ダメージを与えます",损坏+10，+10,"Beschädigung +10, +10","Daño +10, +10"
+132,할퀴기 3렙,곰발바닥 크기 증가 +10%,Increased Bear Floor Size + 10%,ベアフロアサイズの増加+ 10％,增加熊楼层+ 10％,Erhöhte Bärenbodengröße + 10%,Mayor tamaño del piso del oso + 10%
+133,할퀴기 4렙,"공격력 +10, +10","Damage +10, +10","+ 10, +10ダメージを与えます",损坏+10，+10,"Beschädigung +10, +10","Daño +10, +10"
+134,할퀴기 5렙,곰발바닥 크기 증가 +10%,Increased Bear Floor Size + 10%,ベアフロアサイズの増加+ 10％,增加熊楼层+ 10％,Erhöhte Bärenbodengröße + 10%,Mayor tamaño del piso del oso + 10%
+135,할퀴기 6렙,쿨타임 -1,Cool time -1,クールな時間-1,冷却时间-1,Kühle Zeit -1.,Tiempo fresco -1
+136,할퀴기 7렙,"공격력 +10, +10","Damage +10, +10","+ 10, +10ダメージを与えます",损坏+10，+10,"Beschädigung +10, +10","Daño +10, +10"
+137,할퀴기 8렙,쿨타임 -1,Cool time -1,クールな時間-1,冷却时间-1,Kühle Zeit -1.,Tiempo fresco -1
+138,sad,(능력8번 텍스트),(Ability 8 text),（能力8テキスト）,（能力8文本）,(Fähigkeit 8 Text),(Habilidad 8 Texto)
+139,sad,(능력8번 텍스트),(Ability 8 text),（能力8テキスト）,（能力8文本）,(Fähigkeit 8 Text),(Habilidad 8 Texto)
+140,능력시트에있는 능력 9번의 초기 설명,범위내 랜덤 적에게 번개,Lightning to random enemies in range,範囲のランダムな敵に稲妻,闪电到范围内的随机敌人,Blitz zu zufälligen Feinden in Reichweite,Relámpagos a los enemigos aleatorios en el rango.
+141,능력시트에있는 능력 9번의 1단계 설명,공격력증가 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
+142,능력시트에있는 능력 9번의 2단계 설명,공격력 증가 + 10,Increased damage + 10,ダメージを増やす+ 10,增加损坏+ 10,Erhöhter Schaden + 10,Mayor daño + 10
+143,능력시트에있는 능력 9번의 3단계 설명,"투사체 증가 + 1, 공격력 증가 +10","Increased projections + 1, increased damage +10",投影+ 1、ダメージの増加+ 10,增加预测+ 1，增加损坏+10,"Erhöhte Projektionen + 1, erhöhter Schaden +10","Mayores proyecciones + 1, mayor daño +10"
+144,능력시트에있는 능력 9번의 4단계 설명,쿨타임 감소 20%,Cool time reduction 20%,クールな時間の削減20％,酷时间减少20％,Kühle Zeitreduzierung 20%,Reducción de tiempo fresco 20%
+145,능력시트에있는 능력 9번의 5단계 설명,공격력 증가 + 20,Increased damage + 20,ダメージを増やす+ 20,增加损坏+ 20,Erhöhter Schaden + 20,Mayor daño + 20
+146,능력시트에있는 능력 9번의 6단계 설명,"투사체 증가 + 2, 공격력 증가 + 10","Increased projections + 2, increased damage + 10",投影+ 2、ダメージの増加+ 10,增加预测+ 2，增加损坏+ 10,"Erhöhte Projektionen + 2, erhöhter Schaden + 10","Mayores proyecciones + 2, mayor daño + 10"
+147,능력시트에있는 능력 9번의 7단계 설명,쿨타임 감소 20% ,Cool time reduction 20%,クールな時間の削減20％,酷时间减少20％,Kühle Zeitreduzierung 20%,Reducción de tiempo fresco 20%
+148,능력시트에있는 능력 9번의 8단계 설명,"공격력 증가 + 20, 투사체 증가 +2","Increased damage + 20, projections increase +2",損傷の増加+ 20、予測は+2を増加させます,增加损坏+ 20，投影增加+2,"Erhöhter Schaden + 20, Prognosen erhöhen +2","Mayor daño + 20, las proyecciones aumentan +2"
+149,,(능력9번 텍스트),(Ability 9th text),（能力第9テキスト）,（能力第9条文字）,(Fähigkeit 9. Text),(Habilidad 9º texto)
+150,능력시트에있는 능력 10번의 초기 설명,가장 가까운적에게 날아가며 부메랑처럼 돌아옵니다,I fly to the nearest closest and returns like a boomerang.,私は最も近い最も近いものに飛び、ブーメランのように戻る。,我飞到最接近的最近，并像旋转邦一样回归。,Ich fliege zum nächsten am nächsten und kehrt wie ein Bumerang zurück.,Vuelo al más cercano más cercano y vuelvo como un boomerang.
+151,능력시트에있는 능력 10번의 1단계 설명,공격력 증가 + 10,Increased damage + 10,ダメージを増やす+ 10,增加损坏+ 10,Erhöhter Schaden + 10,Mayor daño + 10
+152,능력시트에있는 능력 10번의 2단계 설명,투사체 속도 + 10%,Projective speed + 10%,射影速度+ 10％,投影速度+ 10％,Projektive Geschwindigkeit + 10%,Velocidad proyectiva + 10%.
+153,능력시트에있는 능력 10번의 3단계 설명,"공격력 증가 +15, 투사체 증가 +1","Increased attack power +15, projection increase +1",攻撃力の増加+ 15、投影増加+1,增加攻击力+15，投影增加+1,"Erhöhte Angriffsleistung +15, Projektionsanstieg +1","Mayor potencia de ataque +15, aumento de proyección +1"
+154,능력시트에있는 능력 10번의 4단계 설명,"공격력증가 + 10, 범위 증가 + 10","Damage + 10, range increase + 10",ダメージ+ 10、範​​囲は+ 10を増加させます,损坏+ 10，范围增加+ 10,"Beschädigung + 10, Reichweite erhöhen + 10","Daño + 10, aumento del rango + 10"
+155,능력시트에있는 능력 10번의 5단계 설명,투사체 속도 + 20%,Projective Speed ​​+ 20%,射影速度+ 20％,投影速度+ 20％,Projektive Geschwindigkeit + 20%,Velocidad proyectiva + 20%.
+156,능력시트에있는 능력 10번의 6단계 설명,공격력 증가 + 20,Increased damage + 20,ダメージを増やす+ 20,增加损坏+ 20,Erhöhter Schaden + 20,Mayor daño + 20
+157,능력시트에있는 능력 10번의 7단계 설명,범위증가 + 20,Range + 20,範囲+ 20,范围+ 20,Reichweite + 20.,Rango + 20
+158,능력시트에있는 능력 10번의 8단계 설명,공격력증가 20 + 투사체속도 +10%,Damage 20+ projections + 10%,ダメージ20以上の予測+ 10％,损坏20+投影+ 10％,Schaden von 20+ Prognosen + 10%,Daño 20+ Proyecciones + 10%
+159,sad,(능력10번 텍스트),(Ability 10 text),（能力10テキスト）,（能力10文本）,(Fähigkeit 10 Text),(Habilidad 10 texto)
+160,sad,플레이어 주위를 원형으로 돌며 적을 공격합니다,I turn around the player around the player,私はプレーヤーの周りのプレイヤーを向いています,我在播放器周围转身,Ich drehe den Spieler um den Spieler um,Me doy vuelta al jugador alrededor del jugador.
+161,sad,투사체 증가,Increased projector,プロジェクターの増加,增加投影机,Erhöhter Projektor,Mayor proyector
+162,sad,공격력 10 증가,Increase attack power 10,攻撃力10を増やします,增加攻击力量10,Angriffsleistung erhöhen 10,Aumentar el poder de ataque 10
+163,sad,투사체 증가,Increased projector,プロジェクターの増加,增加投影机,Erhöhter Projektor,Mayor proyector
+164,sad,지속시간 1초 증가,Increased duration 1 second,長期間1秒の増加,持续时间增加1秒,Erhöhte Dauer 1 Sekunde,Mayor duración 1 segundo
+165,sad,투사체 증가,Increased projector,プロジェクターの増加,增加投影机,Erhöhter Projektor,Mayor proyector
+166,sad,공격력 10 증가,Increase attack power 10,攻撃力10を増やします,增加攻击力量10,Angriffsleistung erhöhen 10,Aumentar el poder de ataque 10
+167,sad,투사체 증가,Increased projector,プロジェクターの増加,增加投影机,Erhöhter Projektor,Mayor proyector
+168,sad,(능력11번 텍스트),(Ability 11 text),（能力11テキスト）,（能力11文本）,(Fähigkeit 11 Text),(Habilidad 11 Texto)
+169,sad,(능력11번 텍스트),(Ability 11 text),（能力11テキスト）,（能力11文本）,(Fähigkeit 11 Text),(Habilidad 11 Texto)
+170,sad,기도문이 주변을 회전하며 공격합니다,The prayer rotates and attacks around.,祈りは回転し、攻撃します。,祈祷旋转和攻击周围。,Das Gebet dreht sich um und greift herum.,La oración gira y ataca.
+171,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+172,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+173,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+174,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+175,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+176,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+177,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+178,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+179,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
+180,sad,헤일이 날라감,Haled,hal,hal,Haared,Reducido
+181,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+182,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+183,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+184,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+185,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+186,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+187,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+188,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+189,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+190,sad,무작위 방향 미사일발사,Random Direction Missile Launch,ランダムな方向ミサイルの発売,随机方向导弹发射,Zufällige Richtung Rakete Launch,Lanzamiento de misiles de dirección aleatoria
+191,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+192,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+193,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+194,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+195,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+196,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+197,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+198,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+199,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
+200,sad,박히고 뒤로 거대총알,Growth and back huge bullet,成長と背中の巨大な弾丸,生长和背部巨大的子弹,Wachstum und zurück riesiger Kugel,Crecimiento y espalda enorme bala.
+201,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+202,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+203,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+204,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+205,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+206,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+207,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+208,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+209,sad,(능력15번 텍스트),(Ability 15 times text),（能力15回テキスト）,（能力15次文本）,(Fähigkeit 15-mal text),(Habilidad 15 veces texto)
+210,능력시트에있는 능력 16번의 초기 설명,범위내의 모든적 즉사.,Every enemy within the range.,範囲内のすべての敵。,范围内的每个敌人。,Jeder Feind im Bereich.,Cada enemigo dentro del rango.
+211,능력시트에있는 능력 16번의 1단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+212,능력시트에있는 능력 16번의 2단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+213,능력시트에있는 능력 16번의 3단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+214,능력시트에있는 능력 16번의 4단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+215,능력시트에있는 능력 16번의 5단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+216,능력시트에있는 능력 16번의 6단계 설명,"범위2증가 , 쿨타임 -5","Range 2 Increase, Cool Time -5",範囲2の増加、クールな時間-5,范围2增加，冷却时间-5,"Reichweite 2 Erhöhung, kühle Zeit -5","Rango 2 aumento, tiempo fresco -5"
+217,능력시트에있는 능력 16번의 7단계 설명,"범위3증가 , 쿨타임 -10","Range 3 Increase, Cool Time -10",範囲3の増加、クールな時間-10,范围3增加，冷却时间-10,"Bereich 3 erhöhen, kühle Zeit -10","Rango 3 aumento, tiempo fresco -10"
+218,asd,(능력16번 텍스트),(Ability 16 text),（能力16テキスト）,（能力16文本）,(Fähigkeit 16 Text),(Habilidad 16 Texto)
+219,asd,(능력16번 텍스트),(Ability 16 text),（能力16テキスト）,（能力16文本）,(Fähigkeit 16 Text),(Habilidad 16 Texto)
+220,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+221,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+222,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+223,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+224,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+225,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+226,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+227,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+228,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+229,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
+230,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+231,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+232,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+233,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+234,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+235,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+236,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+237,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+238,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+239,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
+240,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+241,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+242,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+243,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+244,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+245,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+246,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+247,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+248,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+249,asd,(능력19번 텍스트),(Ability 19th text),（能力19本文）,（能力19th Text）,(Fähigkeit 19. Text),(Habilidad 19 de texto)
+250,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+251,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+252,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+253,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+254,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+255,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+256,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+257,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+258,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+259,asd,(능력20번 텍스트),(Ability 20 times text),（能力20回のテキスト）,（能力20次文本）,(Fähigkeit 20-mal text),(Habilidad 20 veces texto)
+260,장신구시트에있는 장신구 0번의 초기 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+261,장신구시트에있는 장신구 0번의 1단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+262,장신구시트에있는 장신구 0번의 2단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+263,장신구시트에있는 장신구 0번의 3단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+264,장신구시트에있는 장신구 0번의 4단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+265,장신구시트에있는 장신구 0번의 5단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+266,장신구시트에있는 장신구 0번의 6단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+267,장신구시트에있는 장신구 0번의 7단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+268,장신구시트에있는 장신구 0번의 8단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+269,장신구시트에있는 장신구 0번의 9단계 설명,공격력 10% 증가,Increased damage by 10%,10％のダメージの増加,增加10％的伤害,Erhöhter Schaden um 10%,Mayor daño en un 10%.
+270,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+271,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+272,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+273,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+274,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+275,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+276,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+277,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+278,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+279,asd,투사체 증가+1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+280,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+281,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+282,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+283,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+284,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+285,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+286,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+287,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+288,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+289,asd,쿨타임 8%감소,Cool time reduced 8%,クールな時間は8％減少しました,凉爽的时间减少了8％,Kühle Zeit reduzierte 8%,Tiempo fresco reducido 8%
+290,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+291,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+292,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+293,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+294,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+295,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+296,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+297,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+298,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+299,asd,체력 20 증가,Increased physical strength 20,身体的強度の増加20,增加体力20,Erhöhte körperliche Stärke 20,Mayor fuerza física 20
+300,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+301,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+302,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+303,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+304,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+305,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+306,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+307,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+308,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+309,asd,체력 회복 0.02 증가,Increased physical recovery 0.02,身体回復の増加0.02,增加物理恢复0.02,Erhöhte körperliche Erholung 0.02,Aumento de la recuperación física 0.02
+310,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+311,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+312,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+313,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+314,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+315,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+316,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+317,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+318,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+319,asd,공격범위 10% 증가,Increased attack range by 10%,攻撃範囲が10％の増加,攻击范围增加10％,Erhöhter Angriffsbereich um 10%,Aumento del rango de ataque en un 10%.
+320,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+321,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+322,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+323,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+324,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+325,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+326,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+327,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+328,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+329,asd,방어 2 증가,Increased defense 2,増加防御2.,增加防守2.,Erhöhte Verteidigung 2.,Mayor defensa 2
+330,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+331,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+332,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+333,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+334,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+335,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+336,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+337,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+338,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+339,asd,투사체 이동속도 10% 증가,Increased projector movement speed by 10%,プロジェクターの移動速度が10％の増加,投影仪移动速度增加10％,Erhöhte Projektorbewegungsgeschwindigkeit um 10%,Aumento de la velocidad del movimiento del proyector en un 10%.
+340,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+341,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+342,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+343,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+344,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+345,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+346,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+347,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+348,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+349,asd,이동속도 10% 증가,Movement speed increased by 10%,移動速度は10％増加しました,运动速度增加10％,Die Bewegungsgeschwindigkeit stieg um 10%,La velocidad de movimiento aumentó en un 10%.
+350,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+351,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+352,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+353,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+354,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+355,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+356,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+357,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+358,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+359,asd,경험치 획득량 8%증가,8% increase in experience acquisition,体験習得の8％増加,经验收购增加8％,8% Erhöhung der Erwerbserfassung,Aumento del 8% en la adquisición de la experiencia.
+360,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+361,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+362,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+363,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+364,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+365,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+366,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+367,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+368,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+369,asd,데미지 12%증가,Damage increased by 12%,ダメージは12％増加しました,伤害增加了12％,Schaden um 12% stieg um 12%,El daño aumentó un 12%.
+370,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+371,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+372,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+373,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+374,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+375,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+376,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+377,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+378,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+379,asd,방어 4 증가,Defense 4 Increase,防御4の増加,防守4增加,Verteidigung 4 Erhöhung.,Defensa 4 Aumento
+380,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+381,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+382,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+383,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+384,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+385,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+386,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+387,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+388,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+389,asd,자석 증가,Magnet increase,磁石の増加,磁铁增加,Magneterhöhung.,Aumento del imán
+390,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+391,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+392,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+393,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+394,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+395,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+396,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+397,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+398,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+399,asd,(장신구14번 텍스트),(Ornaments 14 times text),（装飾品14回のテキスト）,（饰品14次文本）,(Verzierungen 14-maltext),(Adornos 14 veces texto)
+400,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+401,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+402,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+403,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+404,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+405,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+406,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+407,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+408,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+409,asd,(장신구15번 텍스트),(Jewelery 15 text),（ジュエリー15テキスト）,（珠宝15文字）,(Schmuck 15 Text),(Joyería 15 Texto)
+410,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+411,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+412,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+413,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+414,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+415,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+416,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+417,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+418,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+419,asd,(장신구16번 텍스트),(Ornaments 16 text),（装飾品16テキスト）,（饰品16文字）,(Ornamente 16 Text),(Adornos 16 texto)
+420,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+421,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+422,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+423,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+424,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+425,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+426,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+427,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+428,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+429,asd,(장신구17번 텍스트),(Ornaments 17th text),（装飾品17番目のテキスト）,（饰品第17篇文本）,(Verzierungen 17. Text),(Adornos 17 de texto)
+430,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+431,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+432,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+433,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+434,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+435,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+436,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+437,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+438,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+439,asd,(장신구18번 텍스트),(Ornaments 18th text),（装飾品18番目のテキスト）,（饰品18th文字）,(Ornamente 18. Text),(Adornos 18 de texto)
+440,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+441,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+442,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+443,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+444,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+445,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+446,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+447,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+448,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+449,asd,(장신구19번 텍스트),(Jewelery 19th text),（ジュエリー19番目のテキスト）,（珠宝第19条文字）,(Schmuck 19. Text),(Joyería 19 de texto)
+450,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+451,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+452,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+453,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+454,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+455,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+456,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+457,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+458,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+459,asd,(장신구20번 텍스트),(Ornaments 20 times text),（装飾品20回のテキスト）,（饰品20次文本）,(Verzierungen 20-mal text),(Adornos 20 veces texto)
+460,레벨업시 처음고를때 텍스트 설정,신규,New,新着,新的,Neu,nuevo
+461,레벨업텍스트,레벨,Level,レベル,等级,Stufe,nivel
+462,asd,큰 동전 가방,Big coin bag,ビッグコインバッグ,大硬币包,Großer Münzsack,Bolsa de moneda grande
+463,asd,치킨,chicken,チキン,鸡,Hähnchen,pollo
+464,asd,25골드를 추가합니다.,25 Add Gold.,25金を追加します。,25加金。,25 Fügen Sie Gold hinzu.,25 Añadir oro.
+465,asd,체력을 30 회복합니다.,Strongest 30 times.,最強30回。,最强的30次。,30 Mal am stärksten.,Más fuerte 30 veces.
+466,asd,상점,Shop,店,店铺,Einkaufen,tienda
+467,asd,캐릭터,Character,キャラクター,人物,Zeichen,Caracteres
+468,asd,월드,World,世界,世界,Welt,mundo
+469,asd,카드,Card,カード,卡片,Karte,Tarjeta
+470,asd,설정,Setting,セットする,放,Satz,Colocar
+471,asd,입장,Enter,入口,入口,Eingang,Entrada
+472,asd,데미지 표시 안하기,Damge UI X,ダメージを表示しないでください,不要显示损坏,Schaden nicht anzeigen,No mostrar daños
+473,asd,플레이,Play,淡い,Paly.,Palzig,Palidecer
+474,asd,구매,Buy,購入,购买,kaufen,compra
+475,asd,네,Yes,うん,是的,ja,Si
+476,asd,아뇨,No,いいえ,不,Nein,no
+477,asd,돈이 부족합니다!!,Not enough money!!,お金は十分ではありません！,金钱还不够！,Geld ist nicht genug !!,El dinero no es suficiente !!
+478,asd,착용/해제,equip/Unequip,すり減る,脱掉,Abnutzen,Desgaste
+479,1번 카드 이름,체력의 카드,Card,カード,卡片,Karte,Tarjeta
+480,2번 카드 이름,방어의 카드,Defense card,防衛カード,防守卡,Verteidigungskarte,Tarjeta de defensa
+481,3번 카드 이름,이속의 카드,Card,カード,卡片,Karte,Tarjeta
+482,4번 카드 이름,데미지의 카드,Damage card,ダメージカード,损伤卡,Schadenkarte,Tarjeta de daño
+483,5번 카드 이름,천사의 카드,Angel's card,天使のカード,天使的卡,Angels Karte,Tarjeta de ángel
+484,6번 카드 이름,악마의 카드,Devil's card,悪魔のカード,魔鬼的卡,Devil's Card,Tarjeta de diablo
+485,7번 카드 이름,정령의 카드,The card of the spirit,精神のカード,圣灵卡,Die Karte des Geistes,La tarjeta del espíritu
+486,8번 카드 이름,단검의 카드,Dagger card,短剣カード,匕首卡,Dolch-Karte,Tarjeta de daga
+487,9번 카드 이름,골드의 카드,Gold card,ゴールドカード,金卡,Goldene Karte,Tarjeta dorada
+488,10번 카드 이름,공격범위의 카드,Attack Range Card,攻撃範囲のカード,攻击范围卡,Angriffsbereichskarte,Tarjeta de rango de ataque
+489,1번 카드 설명,체력+50,Fitness +50,フィットネス+ 50,健身+50,Fitness +50.,Fitness +50
+490,2번 카드 설명,방어+4,Defense +4,防衛+ 4,防御+4,Verteidigung +4.,Defensa +4
+491,3번 카드 설명,이속+20%,Five + 20%,5 + 20％,五+ 20％,Fünf + 20%,Cinco + 20%
+492,4번 카드 설명,데미지+20%,Damage + 20%,ダメージ+ 20％,伤害+ 20％,Beschädigung + 20%,Daño + 20%
+493,5번 카드 설명,투사체증가+1,Projectors +1,プロジェクター+1,投影仪+1,Projektoren +1.,Proyectores +1
+494,6번 카드 설명,쿨타임 감소+15%,Cool time reduction + 15%,クールな時間の削減+ 15％,酷时间减少+ 15％,Kühle Zeitreduzierung + 15%,Reducción de tiempo fresco + 15%
+495,7번 카드 설명,체력회복+0.5,Stamina Recovery +0.5,スタミナの回復+0.5,耐力恢复+0.5,Stamina-Wiederherstellung +0.5.,Recuperación de Stamina +0.5
+496,8번 카드 설명,경험치+50%,Experience + 50%,体験+ 50％,经验+ 50％,Erfahrung + 50%,Experiencia + 50%
+497,9번 카드 설명,골드증가+50%,Gold ₩ + 50%,ゴールド₩+ 50％,金₩+ 50％,Gold ₩ + 50%,Oro ₩ + 50%
+498,10번 카드 설명,공격범위+20%,Attack Range + 20%,攻撃範囲+ 20％,攻击范围+ 20％,Angriffsbereich + 20%,Rango de ataque + 20%
+499,asd,팔기,Sell,売る,卖,Verkaufen,Vender
+500,asd,카드칸이 가득 차있습니다,Card Full,カードカーンがいっぱいになっています,卡汗充满了,Karte Khan ist voll,Tarjeta Khan está llena
+501,asd,확인!,OK!,確認！,确认！,Bestätigen Sie!,¡Confirmar!
+502,asd,합성(미구현),Mix,合成（ユニゴネティン）,合成（Ungonation）,Synthese (Unigonation),Síntesis (Unigonation)
+503,asd,푸른초원,Blue meadow,青い牧草地,蓝色草地,Blaue Wiese.,Prado azul
+504,asd,2맵이름,2 Map Name,2マップ名,2地图名称,2 Kartenname,2 Mapa Nombre
+505,asd,3맵이름,3 Map Name,3マップ名,3地图名称,3 Kartenname,3 Nombre del mapa
+506,asd,4맵이름,4 Map Name,4マップ名,4地图名称,4 Kartenname,4 Nombre del mapa
+507,asd,5맵이름,5 Map Name,5地図名,5地图名称,5 Kartenname,5 Mapa Nombre
+508,asd,6맵이름,6 Map Name,6マップ名,6地图名称,6 Kartenname,6 Nombre del mapa
+509,asd,7맵이름,7 Map Name,7マップ名,7地图名称,7 Kartenname,7 Mapa Nombre
+510,asd,8맵이름,8 Map Name,8マップ名,8地图名称,8 Kartenname,8 Nombre del mapa
+511,asd,9맵이름,9 Map Name,9マップ名,9地图名称,9 Kartenname.,9 Nombre del mapa
+512,asd,10맵이름,10 Map Name,10マップ名,10张地图名称,10 Kartenname,10 Nombre del mapa
+513,asd,집과 광산이 있는 초원,Meadow with house and mine,家と鉱山の牧草地,草甸有房子和我的,Wiese mit Haus und mir,Prado con casa y mía.
+514,asd,2맵설명,2 Map Description,2地図の説明,2地图描述,2 Kartenbeschreibung.,Descripción del mapa 2
+515,asd,3맵설명,3 Map Description,3地図の説明,3地图描述,3 Kartenbeschreibung.,Descripción del mapa 3
+516,asd,4맵설명,4 Map Description,4地図の説明,4地图描述,4 Kartenbeschreibung.,4 Mapa Descripción
+517,asd,5맵설명,5 Map Description,5地図の説明,5地图描述,5 Kartenbeschreibung.,5 Mapa Descripción
+518,asd,6맵설명,6 Map Description,6地図の説明,6地图描述,6 Kartenbeschreibung.,6 Mapa Descripción
+519,asd,7맵설명,7 Map Description,7地図の説明,7地图描述,7 Kartenbeschreibung.,7 Mapa Descripción
+520,asd,8맵설명,8 Map Description,8地図の説明,8地图描述,8 Kartenbeschreibung.,8 Mapa Descripción
+521,asd,9맵설명,9 Map Description,9マップの説明,9地图描述,9 Kartenbeschreibung.,Descripción del mapa 9
+522,asd,10맵설명,10 Map Description,10地図の説明,10地图描述,10 Kartenbeschreibung.,10 Mapa Descripción
+523,asd,레벨 업!,Level Up!,レベルアップ！,升级！,Aufleveln!,¡Elevar a mismo nivel!
+524,asd,옵션,Option,オプション,选项,Möglichkeit,opción
+525,asd,돌아가기,Back,戻る,回去,geh zurück,regresa
+526,asd,광고보고 풀기,Adding advertising,広告を追加する,添加广告,Werbung hinzufügen.,Añadiendo publicidad
+527,asd,켬,ON,オン,在,An,En
+528,asd,끔,OFF,区,ward,Station,pabellón
+529,asd,사운드,Music,音,声音,Klang,sonar
+530,asd,효과음,Sound,音響効果,声音效果,Sound-Effekt,efecto de sonido
+531,asd,데미지표시,Damage Mark,ダメージ表示,损坏显示,Schadensanzeige,Exhibición de daños
+532,,일시정지,Pause,一時停止,暂停,Pause,Pausa
+533,,능력,ability,能力,能力,Fähigkeit,capacidad
+534,,장신구,accessories,付属品,配件,Zubehör,accesorios
+535,,나가게되면 지금 까지 얻었던 정보들이 사라집니다. 정말 나가겠습니까?,"When I get out, the information that I have gained until now is disappeared. Could you really go?",私が出ると、私が得た情報は今まで消えました。あなたは本当に行きますか？,当我离开时，直到现在现在所获得的信息就会消失。你真的可以去吗？,"Wenn ich raus bin, ist die Informationen, die ich bisher gewonnen habe, verschwunden ist. Könnten Sie wirklich gehen?","Cuando salgo, la información que he ganado hasta ahora está desaparecido. ¿Realmente podrías ir?"
+536,,부활,resurrection,復活,复活,Auferstehung,Resurrección
+537,,게임종료,GameOver,ゲームオーバー,游戏结束,Spiel ist aus,juego terminado
+538,,전리품,booty,戦利品,赃物,Beute,botín
+539,,탭해서 나가기,Tab Exit,タップして出発する,点按并离开,Tippen und gehen.,Toca y sale
+540,,선택,Select,選択,选择,Auswahl,Selección
+541,2번맵 안풀린거 설명,2번맵 안풀린거 설명,2nd Map,2地図,第二地图,2. Karte,2do mapa
+542,,푸른초원 클리어시 잠금 해제,Unlocked the blue meadow clearance,青い草原クリアランスのロックを解除しました,解锁蓝色草地清仓,Entriegelt die blaue Wiesenfreiheit,Desbloqueado la liquidación del prado azul
+543,,4번맵 안풀린거 설명 텍스트,Fourth Map Uncontinued Description Text,4番目の地図の未営利の説明テキスト,第四次地图未结合描述文本,Vierte Map unbestreitete Beschreibung Text,Cuarto mapa de descripción incontinuada.
+544,,5번맵 안풀린거 설명 텍스트,5th Map,5番目の地図,第五地图,5. Karte,5to mapa
+545,,6번맵 안풀린거 설명 텍스트,Sixth Map,第6地図,第六地图,Sechste Karte,Sexto mapa
+546,,7번맵 안풀린거 설명 텍스트,7th Maps Distinguished Description Text,7番目の地図識別説明書,第7映射杰出的描述文本,7. Maps Distinguished Beschreibung Text,7mo mapas distinguidos Descripción Texto
+547,,8번맵 안풀린거 설명 텍스트,8th Maps Distinguished Description Text,第8地図識別説明書,第8次映射杰出的描述文本,8. Karten Distinguished Beschreibung Text,8º mapas distinguidos Descripción Texto
+548,,9번맵 안풀린거 설명 텍스트,N 9 Maps Distinguished Description Text,N 9マッピング識別説明テキスト,n 9地图可介绍的描述文本,N 9 Karten Distinguished Beschreibung Text,N 9 mapas distinguidos Descripción Texto
+549,,10번맵 안풀린거 설명 텍스트,10th Map,10回目の地図,第10张图,10. map.,10mo mapa
+550,,무료,Free,自由,自由,kostenlos,gratis
+551,11번 카드 이름,자석의 카드,Magnet card,マグネットカード,磁铁卡,Magnetkarte,Tarjeta magnética
+552,12번 카드 이름,12번 카드 이름,12 card name,12カード名,12卡名称,12 Kartenname,Nombre de la tarjeta 12
+553,13번 카드 이름,13번 카드 이름,13 card name,13カード名,13卡名称,13 Kartenname,Nombre de la tarjeta 13
+554,14번 카드 이름,14번 카드 이름,14 card name,14カード名,14卡名称,14 Kartenname,Nombre de la tarjeta 14
+555,15번 카드 이름,15번 카드 이름,15 card name,15カード名,15卡名称,15 Kartenname,15 Nombre de la tarjeta
+556,16번 카드 이름,16번 카드 이름,16 card name,16カード名,16卡名称,16 Kartenname,Nombre de la tarjeta 16
+557,17번 카드 이름,17번 카드 이름,17 card name,17カード名,17卡名称,17 Kartenname,17 Nombre de la tarjeta
+558,18번 카드 이름,18번 카드 이름,Card name for 18,18のカード名,18个卡片名称,Kartenname für 18,Nombre de la tarjeta para 18
+559,19번 카드 이름,19번 카드 이름,19th Card Name,19枚のカード名,第19张卡名字,19. Kartenname,Nombre de la tarjeta 19
+560,20번 카드 이름,20번 카드 이름,20 card name,カード名20名,20卡名称,20 Kartenname,Nombre de la tarjeta 20
+561,21번 카드 이름,21번 카드 이름,21 card name,カード名,21卡名称,21 Kartenname,Nombre de la tarjeta 21
+562,22번 카드 이름,22번 카드 이름,22 card name,22カード名,22卡名称,22 Kartenname,22 Nombre de la tarjeta
+563,23번 카드 이름,23번 카드 이름,23 card name,23カード名,23卡名称,23 Kartenname,23 Nombre de la tarjeta
+564,24번 카드 이름,24번 카드 이름,24 card name,24カードの名前,24卡名称,24 Kartenname,Nombre de la tarjeta 24
+565,25번 카드 이름,25번 카드 이름,25 card name,25カード名,25卡名称,25 Kartenname,25 Nombre de la tarjeta
+566,26번 카드 이름,26번 카드 이름,Card name 26,カード名26.,卡名称26.,Kartenname 26.,Nombre de la tarjeta 26
+567,27번 카드 이름,27번 카드 이름,27 card name,27カード名,27卡名称,27 Kartenname,27 Nombre de la tarjeta
+568,28번 카드 이름,28번 카드 이름,28 card name,28カード名,28张牌名称,28 Kartenname,28 Nombre de la tarjeta
+569,29번 카드 이름,29번 카드 이름,29 card name,29カードの名前,29卡名称,29 Kartenname,29 Nombre de la tarjeta
+570,30번 카드 이름,30번 카드 이름,30 card name,30カード名,30张牌名称,30 Kartenname,Nombre de la tarjeta 30
+571,11번 카드 설명,자석증가+20%,Magnetosis + 20%,励磁+ 20％,磁索+ 20％,Magnetosis + 20%,Magnetosis + 20%
+572,12번 카드 설명,12번 카드 설명,12 card description,12のカードの説明,12卡描述,12 Kartenbeschreibung.,Descripción de 12 Tarjetas
+573,13번 카드 설명,13번 카드 설명,13 card description,13カードの説明,13卡说明,13 Kartenbeschreibung.,13 Tarjeta Descripción
+574,14번 카드 설명,14번 카드 설명,14 Card Description,14カードの説明,14卡说明,14 Kartenbeschreibung.,Descripción de la tarjeta 14
+575,15번 카드 설명,15번 카드 설명,15 card description,15カードの説明,15卡描述,15 Kartenbeschreibung.,15 tarjeta de la tarjeta
+576,16번 카드 설명,16번 카드 설명,16 Card Description,16カードの説明,16卡描述,16 Kartenbeschreibung.,16 tarjeta de la tarjeta
+577,17번 카드 설명,17번 카드 설명,17th Card Description,17のカードの説明,第17张卡说明,17. Kartenbeschreibung.,Descripción de la tarjeta 17
+578,18번 카드 설명,18번 카드 설명,Card Description,カードの説明,卡描述,Kartenbeschreibung.,Descripción de la tarjeta
+579,19번 카드 설명,19번 카드 설명,19th Card Description,19カードの説明,19张卡说明,19. Kartenbeschreibung.,Descripción de la Tarjeta 19
+580,20번 카드 설명,20번 카드 설명,20 card description,カードの説明,20卡描述,20 Kartenbeschreibung.,20 tarjeta de la tarjeta
+581,21번 카드 설명,21번 카드 설명,21 card description,21カードの説明,21卡说明,21 Kartenbeschreibung.,21 Tarjeta Descripción
+582,22번 카드 설명,22번 카드 설명,22nd card description,22回のカードの説明,第22卡描述,22. Kartenbeschreibung.,Descripción de la tarjeta 22
+583,23번 카드 설명,23번 카드 설명,23 Card Description,23カードの説明,23卡描述,23 Kartenbeschreibung,23 Descripción de la tarjeta
+584,24번 카드 설명,24번 카드 설명,24 card description,24カードの説明,24卡描述,24 Kartenbeschreibung.,Descripción de 24 Tarjetas
+585,25번 카드 설명,25번 카드 설명,25 card description,25のカードの説明,25卡描述,25 Kartenbeschreibung.,25 Tarjetas Descripción
+586,26번 카드 설명,26번 카드 설명,26 card description,26カードの説明,26卡描述,26 Kartenbeschreibung.,26 Tarjeta Descripción
+587,27번 카드 설명,27번 카드 설명,27 Card Description,27カードの説明,27卡说明,27 Kartenbeschreibung.,27 Tarjeta Descripción
+588,28번 카드 설명,28번 카드 설명,28 Card Description,28カードの説明,28卡描述,28 Kartenbeschreibung.,Descripción de la tarjeta 28
+589,29번 카드 설명,29번 카드 설명,29 Card Description,29カードの説明,29卡描述,29 Kartenbeschreibung.,29 Tarjeta Descripción
+590,30번 카드 설명,30번 카드 설명,30 card description,30カードの説明,30卡描述,30 Kartenbeschreibung.,Descripción de 30 Tarjetas

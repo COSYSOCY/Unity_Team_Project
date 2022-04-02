@@ -184,7 +184,7 @@ public class PlayerStatus : MonoBehaviour
     public void GoldPlus(int gold)
     {
         int i;
-        float f = manager.GoldPlus();
+        float f = manager.GoldPlus()+ CardStat.inst.CardStat_GoldPlus();
         f = gold * f * 0.01f;
         i = gold + (int)f;
         uimanager.GoldUp(i);

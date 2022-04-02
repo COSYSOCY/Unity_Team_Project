@@ -147,7 +147,7 @@ int bulletCntMax; // 투사체 최대갯수
         float f;
         float f2;
         f = info.AtRange;
-        f2 = GameInfo.Attack_RangePlus + manager.AtRange();
+        f2 = GameInfo.Attack_RangePlus + manager.AtRange()+CardStat.inst.CardStat_AttackRange();
         f = f + (f * (f2 * 0.01f));
         return f;
     }

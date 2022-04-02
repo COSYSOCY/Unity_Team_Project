@@ -88,6 +88,33 @@ public class CardStat : MonoBehaviour
         return stat;
     }
 
+    public float CardStat_GoldPlus()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_GoldPlus;
+        }
+        return stat;
+    }
+    public float CardStat_AttackRange()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_AttackRange;
+        }
+        return stat;
+    }
+    public float CardStat_Range()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_Range;
+        }
+        return stat;
+    }
 
 
 

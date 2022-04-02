@@ -15,7 +15,7 @@ public class Skill_Item_1 : Skill_Item_Ori
     public override void StartFunc()
     {
         LevelUp();
-        manager.skill_item_Add(gameObject,info.Skill_Icon);
+        manager.skill_item_Add(gameObject, info.Skill_Icon);
 
     }
 
