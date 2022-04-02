@@ -56,11 +56,11 @@ MeshRenderer:
   m_GameObject: {fileID: 6876871023749238010}
   m_Enabled: 0
   m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
@@ -205,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toon Death Knight-Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 126572, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 480822, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -255,6 +259,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13756072, guid: 6d9f9d761f007be4e9080ace59513ce8, type: 3}
+      propertyPath: m_SkinnedMotionVectors
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

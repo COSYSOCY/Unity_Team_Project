@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toon Plant Monster-Pink
       objectReference: {fileID: 0}
+    - target: {fileID: 123144, guid: ecb5bcd325ed8a14ca41901ba1186f53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 468690, guid: ecb5bcd325ed8a14ca41901ba1186f53, type: 3}
       propertyPath: m_RootOrder
       value: 0

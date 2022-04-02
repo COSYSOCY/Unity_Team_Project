@@ -17,6 +17,7 @@ TagManager:
   - CharManager
   - Check2
   - FxTemporaire
+  - Object
   layers:
   - Default
   - TransparentFX
