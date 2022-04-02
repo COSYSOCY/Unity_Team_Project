@@ -33,7 +33,7 @@ public class EnemyFunc : MonoBehaviour
 
         for (int i = 0; i < cnt; i++)
         {
-            int r = Random.Range(0, g.Length-1);
+            int r = Random.Range(0, g.Length);
             int randomcnt = Random.Range(cMin, cMax);
             for (int z = 0; z < randomcnt; z++)
             {
@@ -49,7 +49,7 @@ public class EnemyFunc : MonoBehaviour
         yield return null;
         for (int z = 0; z < cnt; z++)
         {
-            int r = Random.Range(0, g.Length - 1);
+            int r = Random.Range(0, g.Length);
             GameObject enemy = ObjectPooler.SpawnFromPool(g[r], GetRandomPos(), Quaternion.LookRotation(MainSingleton.instance.Player.transform.position));
             enemy.GetComponent<Enemy>().CreateStart();
         }
