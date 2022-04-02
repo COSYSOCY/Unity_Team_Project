@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
        
         if (!GameInfo.inst.PlayerSE)
         {
-            GameInfo.inst.audioSo.PlayOneShot(audios[i]);
+            GameInfo.inst.audioSo2.PlayOneShot(audios[i]);
         }
     }
 }

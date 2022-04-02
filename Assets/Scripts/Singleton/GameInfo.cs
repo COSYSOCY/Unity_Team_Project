@@ -33,6 +33,7 @@ public class GameInfo : MonoBehaviour
 {
 	public static GameInfo inst;
 	public AudioSource audioSo;
+	public AudioSource audioSo2;
 	public bool PlayerBGM; // 배경음
 	public bool PlayerSE; // 사운드
 	public bool PlayerDmg; //데미지표시 유무

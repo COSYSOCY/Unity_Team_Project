@@ -41,7 +41,6 @@ public class NewSkill_4 : Skill_Ori
             bullet.SetActive(true);
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
-            SoundManager.inst.SoundPlay(9);
 
 
 
