@@ -121,7 +121,7 @@ public class Enemy_Info : MonoBehaviour
         }
         if (other.transform.CompareTag("Check"))
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+           transform.GetChild(0).gameObject.SetActive(false);
         }
 
     }
@@ -141,7 +141,31 @@ public class Enemy_Info : MonoBehaviour
 
     }
 
+    public bool IsTargetVisible(Transform _transform)
+    {
+        var planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+        var point = _transform.position;
+        foreach (var plane in planes)
+        {
+            if (plane.GetDistanceToPoint(point) < -1)
+                return false;
+        }
+        return true;
+    }
+    //void Update()
+    //{
 
+    //    if (!IsTargetVisible(transform))
+    //    {
+    //        Debug.Log("¾Èº¸ÀÓ");
+    //        transform.GetChild(0).gameObject.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        transform.GetChild(0).gameObject.SetActive(true);
+
+    //    }
+    //}
 
 
     public void BossMove()

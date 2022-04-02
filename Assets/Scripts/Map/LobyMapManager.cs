@@ -24,6 +24,8 @@ public class LobyMapManager : MonoBehaviour
     public GameObject Lock;
     public GameObject selectBtn;
 
+    public Color color1;
+    public Color color2;
 
     void Start()
     {
@@ -69,12 +71,14 @@ public class LobyMapManager : MonoBehaviour
         if (GameInfo.inst.PlayerMap[SelectNum] == 0)
         {
             Lock.SetActive(true);
+            MapIcon.color = color1;
             selectBtn.SetActive(false);
             LockInfo.GetComponent<TextIdx>().Idx = LockInfoNum;
             LockInfo.text=csvData.GameText(LockInfoNum);
         }
         else
         {
+            MapIcon.color = color2;
             Lock.SetActive(false);
             selectBtn.SetActive(true);
         }
@@ -82,7 +86,8 @@ public class LobyMapManager : MonoBehaviour
 
     public void PlayBtn()
     {
-        SceneManager.LoadScene("Main");
+        //SceneManager.LoadScene("Main");
+        Loading.LoadScene("Main");
     }
     public void moveButton(int i)
     {

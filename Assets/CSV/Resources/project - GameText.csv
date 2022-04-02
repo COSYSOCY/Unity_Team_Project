@@ -39,7 +39,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 37,asd,능력18이름,Ability 18 Name,能力18の名前,能力18名称,Fähigkeit 18 Name,Habilidad 18 nombre
 38,asd,능력19이름,Ability 19 Name,能力19の名前,能力19名称,Fähigkeit 19 Name,Habilidad 19 nombre
 39,asd,능력20이름,Ability 20 Name,能力20名,能力20名称,Fähigkeit 20 Name,Habilidad 20 nombre
-40,장신구시트에있는 0번 이름,,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!
+40,장신구시트에있는 0번 이름,공격력,offense power,犯罪,冒犯力量,Straftat Power.,poder de ofensa
 41,장신구시트에있는 1번 이름,투사체 수,The number of projectors,プロジェクターの数,投影仪的数量,Die Anzahl der Projektoren,El número de proyectores
 42,장신구시트에있는 2번 이름,쿨다운감소,Cool down reduction,縮小を冷却します,冷却减少,Reduzierung abkühlen,Reducción de enfriamiento
 43,장신구시트에있는 3번 이름,체력,health,健康,健康,die Gesundheit,salud
@@ -49,8 +49,8 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 47,장신구시트에있는 7번 이름,투사체이속,The projector,プロジェクター,投影机,Der Projektor,El proyector
 48,장신구시트에있는 8번 이름,이속,Fee,手数料,费用,Gebühr,Tarifa
 49,장신구시트에있는 9번 이름,경험치증가량,Experienced value,経験豊富な価値,经验丰富的价值,Erfahrener Wert,Valor experimentado
-50,장신구시트에있는 10번 이름,곰의 분노,Bear's Anger,クマの怒り,熊的愤怒,Bears Wut,Ira de oso
-51,장신구시트에있는 11번 이름,개의 분노,Fury,怒って,愤怒,Wut,Furia
+50,장신구시트에있는 10번 이름,분노,anger,怒り,愤怒,Zorn,enojo
+51,장신구시트에있는 11번 이름,의지,will,意思,将要,Wille,voluntad
 52,장신구시트에있는 12번 이름,아이템자석,Item magnet,アイテムマグネット,物品磁铁,Artikelmagnet,Imán de artículos
 53,,장신구14이름,Ornaments 14 Names,装飾品14の名前,装饰品14个名字,Ornamente 14 Namen.,Adornos 14 nombres
 54,asd,장신구15이름,Jewelry 15 name,ジュエリー15名,珠宝15名称,Schmuck 15 Name,Joyería 15 Nombre
@@ -590,3 +590,4 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 588,28번 카드 설명,28번 카드 설명,28 Card Description,28カードの説明,28卡描述,28 Kartenbeschreibung.,Descripción de la tarjeta 28
 589,29번 카드 설명,29번 카드 설명,29 Card Description,29カードの説明,29卡描述,29 Kartenbeschreibung.,29 Tarjeta Descripción
 590,30번 카드 설명,30번 카드 설명,30 card description,30カードの説明,30卡描述,30 Kartenbeschreibung.,Descripción de 30 Tarjetas
+591,,로딩중... ,Loading... ,Loading... ,Loading... ,Loading... ,Loading... 
