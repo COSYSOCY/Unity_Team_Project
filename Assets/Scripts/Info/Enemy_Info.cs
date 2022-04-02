@@ -147,7 +147,10 @@ public class Enemy_Info : MonoBehaviour
     public void BossMove()
     {
         Vector3 _target = player.transform.position;
-        Vector3 endPos = _target + new Vector3((_target.x-transform.position.x)*0.8f , 2, (_target.z- transform.position.z)*0.8f );
+        Vector3 d=(_target-transform.position).normalized;
+        d = d * 25f;
+        d.y = 0;
+        Vector3 endPos = _target + d;
         transform.position = endPos;
         transform.rotation = Quaternion.LookRotation(_target);
     }

@@ -8,6 +8,7 @@ public class NewSkill_3 : Skill_Ori
     public GameObject bullet;
     void Start_Func() //시작시 설정
     {
+            SoundManager.inst.SoundPlay(8);
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
@@ -31,7 +32,6 @@ public class NewSkill_3 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(8);
         }
     }
     IEnumerator Skill_Update2()
@@ -48,7 +48,7 @@ public class NewSkill_3 : Skill_Ori
             }
         }
 
-        yield return null;
+        yield return new WaitForSeconds(_CoolSub1(false));
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요

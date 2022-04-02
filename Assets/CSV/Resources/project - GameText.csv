@@ -1,5 +1,5 @@
 Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
-0,캐릭터시트에있는 0번 이름입니다,쿰아,Kuma,熊手,熊,Kuma,Kuma
+0,캐릭터시트에있는 0번 이름입니다,쿰아,Kuma,熊手,熊,Kuma.,Kuma
 1,캐릭터시트에있는 1번 이름입니다,이델다,Ilda,ilda.,伊尔尔尔,Ilda,Ilonda
 2,asd,캐릭터이름3,Character name 3,文字名3.,字符名称3.,Zeichenname 3.,Nombre del personaje 3
 3,asd,캐릭터이름4,Character name 4,文字名4.,字符名称4.,Zeichenname 4.,Nombre del personaje 4
@@ -29,7 +29,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 27,능력시트에있는 7번 이름,할퀴기,Duck,アヒル,鸭子,Ente,Pato
 28,능력시트에있는 8번 이름,뇌절,Brainberry,ブリーベリー,Brainberry.,Hirnberry,Breakero
 29,능력시트에있는 9번 이름,수리검,Repair,修理,维修,Reparatur,Reparar
-30,능력시트에있는 10번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
+30,능력시트에있는 10번 이름,원형도라,Circular Dora,丸太,圆形多拉,Kreisförmige Dora,Dora circular
 31,능력시트에있는 11번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
 32,능력시트에있는 12번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
 33,능력시트에있는 13번 이름,준비중,preparing,準備,准备,Vorbereitung.,preparando
@@ -77,8 +77,8 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 75,능력시트에있는 능력 1번의 5단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
 76,능력시트에있는 능력 1번의 6단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
 77,능력시트에있는 능력 1번의 7단계 설명,투사체 증가 + 2,Increased projections + 2,投影+ 2の増加,增加预测+ 2,Erhöhte Projektionen + 2,Mayores proyecciones + 2
-78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
-79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文字）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文字）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 80,능력시트에있는 능력 2번의 초기 설명,랜덤방향으로 일직선 레이저,Straight line laser in random direction,ランダムな方向の直線レーザー,直线激光随机方向,Gerade Laser in zufälliger Richtung,Línea recta láser en dirección aleatoria
 81,능력시트에있는 능력 2번의 1단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
 82,능력시트에있는 능력 2번의 2단계 설명,공격력 +10,Damage +10,ダメージ+10,损坏+10,Beschädigung +10.,Daño +10
@@ -158,7 +158,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 156,능력시트에있는 능력 10번의 6단계 설명,공격력 증가 + 20,Increased damage + 20,ダメージを増やす+ 20,增加损坏+ 20,Erhöhter Schaden + 20,Mayor daño + 20
 157,능력시트에있는 능력 10번의 7단계 설명,범위증가 + 20,Range + 20,範囲+ 20,范围+ 20,Reichweite + 20.,Rango + 20
 158,능력시트에있는 능력 10번의 8단계 설명,공격력증가 20 + 투사체속도 +10%,Damage 20+ projections + 10%,ダメージ20以上の予測+ 10％,损坏20+投影+ 10％,Schaden von 20+ Prognosen + 10%,Daño 20+ Proyecciones + 10%
-159,sad,(능력10번 텍스트),(Ability 10 text),（能力10テキスト）,（能力10文本）,(Fähigkeit 10 Text),(Habilidad 10 texto)
+159,sad,asdasdsad,Asdasdsad,Asdasdad.,asdasdsad.,Asdasedsad,Asdosdad
 160,sad,플레이어 주위를 원형으로 돌며 적을 공격합니다,I turn around the player around the player,私はプレーヤーの周りのプレイヤーを向いています,我在播放器周围转身,Ich drehe den Spieler um den Spieler um,Me doy vuelta al jugador alrededor del jugador.
 161,sad,투사체 증가,Increased projector,プロジェクターの増加,增加投影机,Erhöhter Projektor,Mayor proyector
 162,sad,공격력 10 증가,Increase attack power 10,攻撃力10を増やします,增加攻击力量10,Angriffsleistung erhöhen 10,Aumentar el poder de ataque 10
@@ -491,7 +491,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 489,1번 카드 설명,체력+50,Fitness +50,フィットネス+ 50,健身+50,Fitness +50.,Fitness +50
 490,2번 카드 설명,방어+4,Defense +4,防衛+ 4,防御+4,Verteidigung +4.,Defensa +4
 491,3번 카드 설명,이속+20%,Five + 20%,5 + 20％,五+ 20％,Fünf + 20%,Cinco + 20%
-492,4번 카드 설명,데미지+20%,Damage + 20%,ダメージ+ 20％,伤害+ 20％,Beschädigung + 20%,Daño + 20%
+492,4번 카드 설명,데미지+20%,Damage + 20%,ダメージ+ 20％,损伤+ 20％,Beschädigung + 20%,Daño + 20%
 493,5번 카드 설명,투사체증가+1,Projectors +1,プロジェクター+1,投影仪+1,Projektoren +1.,Proyectores +1
 494,6번 카드 설명,쿨타임 감소+15%,Cool time reduction + 15%,クールな時間の削減+ 15％,酷时间减少+ 15％,Kühle Zeitreduzierung + 15%,Reducción de tiempo fresco + 15%
 495,7번 카드 설명,체력회복+0.5,Stamina Recovery +0.5,スタミナの回復+0.5,耐力恢复+0.5,Stamina-Wiederherstellung +0.5.,Recuperación de Stamina +0.5
@@ -499,7 +499,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 497,9번 카드 설명,골드증가+50%,Gold ₩ + 50%,ゴールド₩+ 50％,金₩+ 50％,Gold ₩ + 50%,Oro ₩ + 50%
 498,10번 카드 설명,공격범위+20%,Attack Range + 20%,攻撃範囲+ 20％,攻击范围+ 20％,Angriffsbereich + 20%,Rango de ataque + 20%
 499,asd,팔기,Sell,売る,卖,Verkaufen,Vender
-500,asd,카드칸이 가득 차있습니다,Card Full,カードカーンがいっぱいになっています,卡汗充满了,Karte Khan ist voll,Tarjeta Khan está llena
+500,asd,카드칸이 가득 차있습니다,Card Full,カードカーンがいっぱいになっています,卡汗已经满了,Karte Khan ist voll,Tarjeta Khan está llena
 501,asd,확인!,OK!,確認！,确认！,Bestätigen Sie!,¡Confirmar!
 502,asd,합성(미구현),Mix,合成（ユニゴネティン）,合成（Ungonation）,Synthese (Unigonation),Síntesis (Unigonation)
 503,asd,푸른초원,Blue meadow,青い牧草地,蓝色草地,Blaue Wiese.,Prado azul

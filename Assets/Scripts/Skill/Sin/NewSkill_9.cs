@@ -37,7 +37,7 @@ public class NewSkill_9 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
-        pos.y = 0;
+        pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys;
         Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
