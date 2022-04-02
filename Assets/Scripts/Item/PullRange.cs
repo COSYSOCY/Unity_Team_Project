@@ -12,12 +12,27 @@ public class PullRange : MonoBehaviour
     private void Start()
     {
         //radius = GameObject.FindGameObjectWithTag("Pull").GetComponent<SphereCollider>();       
+        if (radius==null)
+        {
+
         radius = GetComponent<SphereCollider>();       
+        }
 
     }
 
+    public void Check()
+    {
+        if (radius == null)
+        {
+
+            radius = GetComponent<SphereCollider>();
+        }
+        radius.radius = GameInfo.Range+ playerinfo.item_range +CardStat.inst.CardStat_Range()+ MainSingleton.instance.skillmanager._Range();
+    }
+    /*
     private void Update()
     {
-        radius.radius = playerinfo.item_range;
+        radius.radius = playerinfo.item_range+MainSingleton.instance.skillmanager._Range();
     }
+    */
 }

@@ -21,6 +21,13 @@ public class CardInfo
 	public float CardStat_Cool;
 	public float CardStat_XpPlus;
 
+
+	public float CardStat_GoldPlus;
+	public float CardStat_AttackRange;
+	public float CardStat_Range;
+
+
+
 }
 public class GameInfo : MonoBehaviour
 {
@@ -139,6 +146,10 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardStat_BtCnt = csvData.CardBtCnt[i];
 			CardsInfo[i].CardStat_Cool = csvData.CardCood[i];
 			CardsInfo[i].CardStat_XpPlus = csvData.CardXpPlus[i];
+
+			CardsInfo[i].CardStat_GoldPlus = csvData.CardGoldPlus[i];
+			CardsInfo[i].CardStat_AttackRange = csvData.CardAttackRange[i];
+			CardsInfo[i].CardStat_Range = csvData.CardRange[i];
 			PlayerCardCheck.Add(0);
 		}
         for (int i = 0; i < PlayerCardMax; i++)

@@ -51,6 +51,7 @@ public class NewSkill_10 : Skill_Ori
     {
         yield return new WaitForSeconds(_CoolSub1(false));
         bullet.SetActive(false);
+        SoundManager.inst.SoundPlay(15);
     }
     IEnumerator Skill_Update2()
     {

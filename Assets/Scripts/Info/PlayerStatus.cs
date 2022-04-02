@@ -140,6 +140,11 @@ public class PlayerStatus : MonoBehaviour
         }
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
         SliderUpdate();
+        if (Skillactive[13]>=1)
+        {
+        MainSingleton.instance.skill_13.Skill13Func();
+
+        }
     }
     public void Dead()
     {
@@ -179,7 +184,7 @@ public class PlayerStatus : MonoBehaviour
     public void GoldPlus(int gold)
     {
         int i;
-        float f = manager.GoldPlus();
+        float f = manager.GoldPlus()+ CardStat.inst.CardStat_GoldPlus();
         f = gold * f * 0.01f;
         i = gold + (int)f;
         uimanager.GoldUp(i);
@@ -197,6 +202,7 @@ public class PlayerStatus : MonoBehaviour
         uimanager.Leveltext();
         XpSet();
         level.LevelFunc();
+        charFunc();
     }
     public void XpSet()
     {
@@ -217,6 +223,37 @@ public class PlayerStatus : MonoBehaviour
         IsAdIn = false;
     }
 
+
+    public void charFunc()
+    {
+        switch (GameInfo.inst.CharacterIdx)
+        {
+            case 0:
+                if (playerInfo.Lv==10)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if(playerInfo.Lv == 20)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                else if (playerInfo.Lv == 50)
+                {
+                    GameInfo.DamagePlus += 10f;
+                }
+                break;
+            default:
+                break;
+        }
+    }
 
 
 

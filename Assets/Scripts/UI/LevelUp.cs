@@ -179,12 +179,12 @@ public class LevelUp : MonoBehaviour
         {
             Skill_name[0].GetComponent<Text>().text = csvData.GameText(462);
             Skill_Lv[0].GetComponent<Text>().text = "";
-            Skill_Image[0].GetComponent<Image>().sprite = skillManager.Skill_icon[14];
+            Skill_Image[0].GetComponent<Image>().sprite = IconManager.inst.Icons[75];
             Skill_Text[0].GetComponent<Text>().text = csvData.GameText(464);
 
             Skill_name[1].GetComponent<Text>().text = csvData.GameText(463);
             Skill_Lv[1].GetComponent<Text>().text = "";
-            Skill_Image[1].GetComponent<Image>().sprite = skillManager.Skill_icon[15];
+            Skill_Image[1].GetComponent<Image>().sprite = IconManager.inst.Icons[74];
             Skill_Text[1].GetComponent<Text>().text = csvData.GameText(465);
         }
         else
@@ -213,7 +213,7 @@ public class LevelUp : MonoBehaviour
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
                     }
 
-                    Skill_Image[i].GetComponent<Image>().sprite = skillManager.Skill_icon[image];
+                    Skill_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image];
                     Skill_Text[i].GetComponent<Text>().text = text;
                 }
                 else
@@ -234,7 +234,7 @@ public class LevelUp : MonoBehaviour
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
                     }
 
-                    Skill_Image[i].GetComponent<Image>().sprite = skillManager.Skill_icon[image];
+                    Skill_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image];
                     Skill_Text[i].GetComponent<Text>().text = text;
                 }
                 

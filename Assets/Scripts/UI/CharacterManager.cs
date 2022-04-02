@@ -7,7 +7,7 @@ public class CharacterManager : MonoBehaviour
 {
     public GameObject CharacterPrefab;
     public Transform parents;
-    public List<Sprite> icons;
+    //public List<Sprite> icons;
     public Image CharImage;
     public Image SkillImage;
     public Image Skill2Image;
@@ -27,6 +27,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject BuyBtn;
     public Image InfoCharImage;
     public Image InfoSkillImage;
+    public Image InfoSkill2Image;
     public Text InfoCharInfo;
     public Text InfoName;
     public Text BuyText;
@@ -44,6 +45,9 @@ public class CharacterManager : MonoBehaviour
             come.CharactersInfoNum = csvData.CharactersInfoNum[i];
             come.CharactersIconNum = csvData.CharactersIconNum[i];
             come.CharactersSkillIconNum = csvData.CharactersSkillIconNum[i];
+
+            come.CharactersSkill_ItemIconNum = csvData.CharactersSkill_ItemIconNum[i];
+
             come.CharactersBSNum = csvData.CharactersBSNum[i];
             come.CharactersPrice = csvData.CharactersPrice[i];
             come.CharactersHpMax = csvData.CharactersHpMax[i];
@@ -58,7 +62,7 @@ public class CharacterManager : MonoBehaviour
             come.CharactersBtCool = csvData.CharactersBtCool[i];
             come.CharactersRange = csvData.CharactersRange[i];
             come.CharactersXpPlus = csvData.CharactersXpPlus[i];
-            come.MainImage.sprite = icons[come.CharactersIconNum];
+            come.MainImage.sprite = IconManager.inst.Icons[come.CharactersIconNum];
             GameInfo.inst.CharsInfo.Add(come);
             if (come.State == 0)
             {
@@ -75,8 +79,10 @@ public class CharacterManager : MonoBehaviour
         //Debug.Log(cnt);
 
 
-        CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
-        SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+        CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
+        SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
+
+        Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
 
 
         GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
@@ -101,7 +107,9 @@ public class CharacterManager : MonoBehaviour
     public void CharSetString()
     {
         int cnt = GameInfo.inst.CharacterIdx;
-        CharSkillName1.text = "";
+
+        CharSkillName1.text = csvData.GameText(csvData.CharactersSkillName[cnt]);
+        CharSkillName2.text = csvData.GameText(csvData.CharactersSkill_ItemName[cnt]);
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
 
@@ -115,8 +123,9 @@ public class CharacterManager : MonoBehaviour
         GameInfo.inst.CharacterIdx = cnt;
         GameInfo.inst.SkillIdx = csvData.CharactersBSNum[cnt];
         //Debug.Log(cnt);
-        CharImage.sprite = icons[csvData.CharactersIconNum[cnt]];
-        SkillImage.sprite = icons[csvData.CharactersSkillIconNum[cnt]];
+        CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
+        SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
+        Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
         CharSetString();
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
@@ -154,9 +163,10 @@ public class CharacterManager : MonoBehaviour
             BuyBtn.SetActive(true);
             BuyText.text = ClickOb.GetComponent<CharacterBtn>().CharactersPrice.ToString();
         }
-        InfoCharImage.sprite = icons[ClickOb.GetComponent<CharacterBtn>().CharactersIconNum];
+        InfoCharImage.sprite = IconManager.inst.Icons[ClickOb.GetComponent<CharacterBtn>().CharactersIconNum];
         InfoName.text = csvData.GameText(ClickOb.GetComponent<CharacterBtn>().CharactersNameNum);
-        InfoSkillImage.sprite = icons[ClickOb.GetComponent<CharacterBtn>().CharactersSkillIconNum];
+        InfoSkillImage.sprite = IconManager.inst.Icons[ClickOb.GetComponent<CharacterBtn>().CharactersSkillIconNum];
+        InfoSkill2Image.sprite = IconManager.inst.Icons[ClickOb.GetComponent<CharacterBtn>().CharactersSkill_ItemIconNum];
         InfoCharInfo.text = csvData.GameText(ClickOb.GetComponent<CharacterBtn>().CharactersInfoNum);
         //ÀÌ¹ÌÁöº¯°æ
         //³×ÀÓº­³á¤·

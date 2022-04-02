@@ -27,12 +27,17 @@ public class Skill_Item_Ori : MonoBehaviour
         info.XpPlus = info.XpPlusCheck[info.Lv];
         info.BulletSpeed = info.BulletSpeedCheck[info.Lv];
         info.BulletTime = info.BulletTimeCheck[info.Lv];
+        info.Range = info.RangeCheck[info.Lv];
         info.Real1 = info.Real1Check[info.Lv];
         info.Real2 = info.Real2Check[info.Lv];
 
         if (info.HpPlusC+ info.HpPlusPer > 0)
         {
             stat.PlayerHpMax();
+        }
+        if (info.Range > 0)
+        {
+            MainSingleton.instance.pullrange.Check();
         }
         LevelUpFunc();
     }

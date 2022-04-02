@@ -16,7 +16,7 @@ public class SkillManager : MonoBehaviour
     public List<GameObject> Skills;
     public List<GameObject> Skill_Items;
     public List<GameObject> Player_Skill;
-    public List<Sprite> Skill_icon;
+    //public List<Sprite> Skill_icon;
     public PlayerInfo playerinfo;
 
     public List<Image> ui_skill_Icon;
@@ -40,7 +40,7 @@ public class SkillManager : MonoBehaviour
     public void skill_Add(GameObject g, int icon)
     {
         //Debug.Log("üũ");
-        ui_skill_Icon[playerinfo.SkillCnt].sprite = Skill_icon[icon];
+        ui_skill_Icon[playerinfo.SkillCnt].sprite = IconManager.inst.Icons[icon];
         playerinfo.SkillCnt++;
         Skill_All_Active.Add(g);
         Skill_Active.Add(g);
@@ -49,7 +49,7 @@ public class SkillManager : MonoBehaviour
     }
     public void skill_item_Add(GameObject g, int icon)
     {
-        ui_skillItem_Icon[playerinfo.SkillItemCnt].sprite = Skill_icon[icon];
+        ui_skillItem_Icon[playerinfo.SkillItemCnt].sprite = IconManager.inst.Icons[icon];
         playerinfo.SkillItemCnt++;
         Skill_All_Active.Add(g);
         Skill_Item_Active.Add(g);
@@ -235,6 +235,20 @@ public class SkillManager : MonoBehaviour
             for (int i = 0; i < Skill_Item_Active.Count; i++)
             {
                 f += ItemInfo[i].BulletTime;
+            }
+        }
+
+        return f;
+    }
+    public float _Range()
+    {
+        float f = 0;
+
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].Range;
             }
         }
 
