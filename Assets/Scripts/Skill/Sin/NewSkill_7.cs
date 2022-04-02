@@ -22,6 +22,7 @@ public class NewSkill_7 : Skill_Ori
         LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
+        
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
@@ -30,6 +31,7 @@ public class NewSkill_7 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
+            SoundManager.inst.SoundPlay(12);
         }
     }
 

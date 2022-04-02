@@ -10,6 +10,7 @@ public class NewSkill_1 : Skill_Ori
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+
     }
 
     public override void LevelUpFunc()
@@ -29,6 +30,7 @@ public class NewSkill_1 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
+            SoundManager.inst.SoundPlay(6);
         }
     }
     IEnumerator Skill_Update2()

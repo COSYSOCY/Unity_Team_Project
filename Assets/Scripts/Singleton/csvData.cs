@@ -45,6 +45,9 @@ public class csvData : MonoBehaviour
     public static List<int> CharactersInfoNum = new List<int>();
     public static List<int> CharactersIconNum = new List<int>();
     public static List<int> CharactersSkillIconNum = new List<int>();
+    public static List<int> CharactersSkill_ItemIconNum = new List<int>();
+    public static List<int> CharactersSkillName = new List<int>();
+    public static List<int> CharactersSkill_ItemName = new List<int>();
     public static List<int> CharactersBSNum = new List<int>();
     public static List<int> CharactersPrice = new List<int>();
     public static List<float> CharactersHpMax = new List<float>();
@@ -98,6 +101,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemBtTime = new List<float>();
     public static List<float> SkillItemGoldPlus = new List<float>();
     public static List<float> SkillItemXpPlus = new List<float>();
+    public static List<float> SkillItemRange = new List<float>();
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
 
@@ -116,6 +120,8 @@ public class csvData : MonoBehaviour
     public  List<string> GameText_English = new List<string>();
     public  List<string> GameText_Japan = new List<string>();
     public  List<string> GameText_China = new List<string>();
+    public  List<string> GameText_Germany = new List<string>();
+    public  List<string> GameText_Spain = new List<string>();
 
     public  List<int> MapNameNum = new List<int>();
     public  List<int> MapInfoNum = new List<int>();
@@ -136,6 +142,9 @@ public class csvData : MonoBehaviour
     public static List<int> CardBtCnt = new List<int>();
     public static List<float> CardCood = new List<float>();
     public static List<float> CardXpPlus = new List<float>();
+    public static List<float> CardGoldPlus = new List<float>();
+    public static List<float> CardAttackRange = new List<float>();
+    public static List<float> CardRange = new List<float>();
 
 
     void Awake()
@@ -189,7 +198,9 @@ public class csvData : MonoBehaviour
             CardBtCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
             CardCood.Add(float.Parse(data[i]["쿨타임"].ToString()));
             CardXpPlus.Add(float.Parse(data[i]["경험치증가"].ToString()));
-
+            CardGoldPlus.Add(float.Parse(data[i]["골드증가"].ToString()));
+            CardAttackRange.Add(float.Parse(data[i]["공격범위증가"].ToString()));
+            CardRange.Add(float.Parse(data[i]["자석증가"].ToString()));
 
         }
         GameInfo.inst.CardMax = data.Count;
@@ -205,6 +216,10 @@ public class csvData : MonoBehaviour
             CharactersInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             CharactersIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             CharactersSkillIconNum.Add(int.Parse(data[i]["무기아이콘번호"].ToString()));
+            CharactersSkill_ItemIconNum.Add(int.Parse(data[i]["장신구아이콘번호"].ToString()));
+
+            CharactersSkillName.Add(int.Parse(data[i]["무기이름텍스트번호"].ToString()));
+            CharactersSkill_ItemName.Add(int.Parse(data[i]["장신구이름텍스트번호"].ToString()));
             CharactersBSNum.Add(int.Parse(data[i]["기본스킬번호"].ToString()));
             CharactersPrice.Add(int.Parse(data[i]["가격"].ToString()));
             CharactersHpMax.Add(float.Parse(data[i]["최대체력"].ToString()));
@@ -219,6 +234,7 @@ public class csvData : MonoBehaviour
             CharactersBtCool.Add(float.Parse(data[i]["쿨타임"].ToString()));
             CharactersRange.Add(float.Parse(data[i]["자석"].ToString()));
             CharactersXpPlus.Add(float.Parse(data[i]["경험치증가"].ToString()));
+
 
         }
         GameInfo.inst.CharacterMax = data.Count;
@@ -290,6 +306,7 @@ public class csvData : MonoBehaviour
             SkillItemBtTime.Add(float.Parse(data[i]["투사체지속시간증가"].ToString()));
             SkillItemGoldPlus.Add(float.Parse(data[i]["골드획득량"].ToString()));
             SkillItemXpPlus.Add(float.Parse(data[i]["경험치획득량"].ToString()));
+            SkillItemRange.Add(float.Parse(data[i]["자석증가"].ToString()));
             SkillItemReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
             SkillItemReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
         }
@@ -314,10 +331,15 @@ public class csvData : MonoBehaviour
             GameText_English.Add(data[i]["English"].ToString());
             GameText_Japan.Add(data[i]["Japan"].ToString());
             GameText_China.Add(data[i]["China"].ToString());
-            GameText_Korean[i] = GameText_Korean[i].Replace("`w`", "\n");
+            GameText_Germany.Add(data[i]["Germany"].ToString());
+            GameText_Spain.Add(data[i]["Spain"].ToString());
+
+    GameText_Korean[i] = GameText_Korean[i].Replace("`w`", "\n");
             GameText_English[i] = GameText_English[i].Replace("`w`", "\n");
             GameText_Japan[i] = GameText_Japan[i].Replace("`w`", "\n");
             GameText_China[i] = GameText_China[i].Replace("`w`", "\n");
+            GameText_Germany[i] = GameText_Germany[i].Replace("`w`", "\n");
+            GameText_Spain[i] = GameText_Spain[i].Replace("`w`", "\n");
         }
 
 
@@ -340,7 +362,14 @@ public class csvData : MonoBehaviour
         {
             return inst.GameText_China[i];
         }
-
+        else if (GameInfo.inst.Language == "Germany")
+        {
+            return inst.GameText_China[i];
+        }
+        else if (GameInfo.inst.Language == "Spain")
+        {
+            return inst.GameText_China[i];
+        }
         else
         {
             return inst.GameText_Korean[i];

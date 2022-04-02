@@ -10,6 +10,12 @@ public class CharacterBtn : MonoBehaviour
     public int CharactersInfoNum;
     public int CharactersIconNum;
     public int CharactersSkillIconNum;
+    public int CharactersSkill_ItemIconNum;
+
+    public int CharactersSkillName;
+    public int CharactersSkill_ItemName;
+
+
     public int CharactersBSNum;
     public int CharactersPrice;
     public float CharactersHpMax;

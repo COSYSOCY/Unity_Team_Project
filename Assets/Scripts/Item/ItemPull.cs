@@ -78,15 +78,22 @@ public class ItemPull : MonoBehaviour
             {
                 case Item_ENUM.gold:
                     playerstatus.GoldPlus(item_stat);
+                    SoundManager.inst.SoundPlay(0);
                     break;
                 case Item_ENUM.XP:
                     playerstatus.XpPlus(item_stat);
+
+                    SoundManager.inst.SoundPlay(1);
                     break;
                 case Item_ENUM.HP:
                     playerstatus.HpPlus(item_stat);
+
+                    SoundManager.inst.SoundPlay(2);
                     break;
                 case Item_ENUM.Card:
                     playerstatus.CardDrop(item_stat);
+                    SoundManager.inst.SoundPlay(3);
+
                     break;
                 default:
                     break;

@@ -33,7 +33,9 @@ public class LobyUIMgr : MonoBehaviour
         LobyGoldAc();
         check();
         Time.timeScale = 1f;
-    }
+        SoundManager.inst.BGMPlay(1);
+     }
+
 
 
 
@@ -76,6 +78,7 @@ public class LobyUIMgr : MonoBehaviour
         {
             GameInfo.inst.audioSo.Pause();
             GameInfo.inst.PlayerBGM = true;
+            GameInfo.inst.audioSo.mute = true;
             BGMIcon.sprite = IconManager.inst.Icons[15];
             Bgmbuton.GetComponent<Image>().color = colors[1];
             Bgmbuton.GetComponentInChildren<TextIdx>().Idx = 528;
@@ -85,6 +88,7 @@ public class LobyUIMgr : MonoBehaviour
         {
             GameInfo.inst.audioSo.Play();
             GameInfo.inst.PlayerBGM = false;
+            GameInfo.inst.audioSo.mute = false;
             BGMIcon.sprite = IconManager.inst.Icons[14];
             Bgmbuton.GetComponent<Image>().color = colors[0];
             Bgmbuton.GetComponentInChildren<TextIdx>().Idx = 527;
@@ -171,6 +175,7 @@ public class LobyUIMgr : MonoBehaviour
             BGMIcon.sprite = IconManager.inst.Icons[15];
             Bgmbuton.GetComponent<Image>().color = colors[1];
             Bgmbuton.GetComponentInChildren<TextIdx>().Idx = 528;
+            GameInfo.inst.audioSo.mute = true;
             Bgmbuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
         }
         else
@@ -178,6 +183,7 @@ public class LobyUIMgr : MonoBehaviour
             BGMIcon.sprite = IconManager.inst.Icons[14];
             Bgmbuton.GetComponent<Image>().color = colors[0];
             Bgmbuton.GetComponentInChildren<TextIdx>().Idx = 527;
+            GameInfo.inst.audioSo.mute = false;
             Bgmbuton.GetComponentInChildren<Text>().text = csvData.GameText(527);
         }
 

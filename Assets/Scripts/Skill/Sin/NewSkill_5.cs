@@ -30,39 +30,44 @@ public class NewSkill_5 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
+            SoundManager.inst.SoundPlay(10);
         }
     }
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange();
+        float local = _SkillReal1();
         Collider[] Enemys_Boss = Physics.OverlapSphere(Player.transform.position, 30f, bossmask);
         Collider[] Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask);
         int ran = Random.Range(0, Enemys.Length);
+        GameObject target = null;
+        if (Enemys_Boss.Length > 0)
+        {
+            target = Enemys_Boss[0].gameObject;
+        }
+        else
+        {
+
+
+            if (Enemys.Length > 0)
+            {
+
+                target = Enemys[ran].gameObject;
+            }
+        }
+        if (target == null)
+        {
+            yield break;
+        }
         for (int i = 0; i < _BulletCnt(); i++)
         {
-            GameObject target=null;
+            
 
             
 
-            if (Enemys_Boss.Length >0)
-            {
-                target = Enemys_Boss[0].gameObject;
-            }else
-            {
-                
 
-                if (Enemys.Length >0)
-                {
-                    
-                    target = Enemys[ran].gameObject;
-                }
-            }
-            if (target ==null)
-            {
-                continue;
-            }
+            
             Vector3 dir = target.transform.position - Player.transform.position ;
             dir.Normalize();
             dir.y = 0;

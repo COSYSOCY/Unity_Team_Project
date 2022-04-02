@@ -23,6 +23,7 @@ public class Skill_ItemInfo : MonoBehaviour
     public float XpPlus; // 경험치획득량%
     public float BulletSpeed; // 투사체이동속도증가%
     public float BulletTime; // 투사체지속시간증가%
+    public float Range; // 자석증가
     public float Real1; // 실수1
     public float Real2; // 실수2
 
@@ -49,6 +50,7 @@ public class Skill_ItemInfo : MonoBehaviour
     public List<float> XpPlusCheck = new List<float>();
     public List<float> BulletSpeedCheck = new List<float>();
     public List<float> BulletTimeCheck = new List<float>();
+    public List<float> RangeCheck = new List<float>();
     public List<float> Real1Check = new List<float>();
     public List<float> Real2Check = new List<float>();
 
@@ -75,6 +77,7 @@ public class Skill_ItemInfo : MonoBehaviour
             XpPlusCheck.Add(csvData.SkillItemXpPlus[i]);
             BulletSpeedCheck.Add(csvData.SkillItemBtSpeed[i]);
             BulletTimeCheck.Add(csvData.SkillItemBtTime[i]);
+            RangeCheck.Add(csvData.SkillItemRange[i]);
             Real1Check.Add(csvData.SkillItemReal1[i]);
             Real2Check.Add(csvData.SkillItemReal2[i]);
         }

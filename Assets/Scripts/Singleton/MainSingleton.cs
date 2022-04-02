@@ -12,6 +12,10 @@ public class MainSingleton : MonoBehaviour
     public UIManager uimanager;
     public PlayerStatus playerstat;
     public GameObject birdtarget;
+    public SkillManager skillmanager;
+
+    public NewSkill_13 skill_13;
+    public PullRange pullrange;
     private void Awake()
     {
             instance = this;
