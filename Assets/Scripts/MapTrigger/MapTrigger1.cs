@@ -42,25 +42,31 @@ public class MapTrigger1 : MonoBehaviour
             case 1:
 
 
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(180, 1, 1, 1, 1, "Enemy_2"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc2(3, "Enemy_2"));
                 break;
             case 60:
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
                 StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_1"));
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(120, 1, 1, 1, 1, "Enemy_3", "Enemy_4", "Enemy_5"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_1"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_3", "Enemy_4", "Enemy_5"));
                 break;
             case 120:
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
                 StartCoroutine(enemyFunc.EnemyCreateFuncBat(3,15f,30f,"Enemy_Bat_1"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_1"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_1"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_3", "Enemy_4", "Enemy_5"));
                 break;
             case 180:
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1, 1, 1, 1, "Enemy_2"));
                 StartCoroutine(enemyFunc.EnemyCreateFuncBat(3, 15f, 30f, "Enemy_Bat_1"));
                 StartCoroutine(enemyFunc.BossCreate("Boss_1", enemyFunc.GetRandomPos()));
-                StartCoroutine(enemyFunc.EnemyCreateFunc1(120,1f, 1f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60,1f, 1f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
                 break;
             case 240:
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 1, "Enemy_9"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 1, "Enemy_6", "Enemy_7", "Enemy_8"));
                 break;
             case 300:
                 StartCoroutine(enemyFunc.BossCreate("Boss_2", enemyFunc.GetRandomPos()));
