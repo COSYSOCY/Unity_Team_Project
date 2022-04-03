@@ -11,6 +11,7 @@ public class CardInfo
 	public int CardInfoNum;
 	public int CardIconNum;
 	public int CardPrice;
+	public int CardFocus;
 	public float CardStat_HpC;
 	public float CardStat_HpP;
 	public float CardStat_HpRegen;
@@ -138,6 +139,7 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardIconNum = csvData.CardIconNum[i];
 			CardsInfo[i].CardLv = csvData.CardLevel[i];
 			CardsInfo[i].CardPrice = csvData.CardPrice[i];
+			CardsInfo[i].CardFocus = csvData.CardFocus[i];
 			CardsInfo[i].CardStat_HpC = csvData.CardHpC[i];
 			CardsInfo[i].CardStat_HpP = csvData.CardHpP[i];
 			CardsInfo[i].CardStat_HpRegen = csvData.CardHpRegen[i];

@@ -3131,7 +3131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabOb: {fileID: 623419544}
-  bootyPrefab: {fileID: 3968560196461505812, guid: c0ac4329127720e41bb995da87cb4754, type: 3}
+  bootyPrefab: {fileID: 3968560196461505812, guid: 2b3293b4c994b62449c3cbe7416b272a, type: 3}
   bootyParent: {fileID: 1740542981}
   IsEnd: 0
 --- !u!1 &305293659

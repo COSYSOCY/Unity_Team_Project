@@ -27,18 +27,36 @@ public class EndGameScript : MonoBehaviour
         if (xp > 0)
         {
             GameObject bt = Instantiate(bootyPrefab, bootyParent);
-            bt.GetComponentInChildren<Text>().text = "X" + xp;
-            bt.GetComponent<Image>().sprite = IconManager.inst.Icons[1];
+            bt.GetComponent<bootyInfo>().myCnt.text = "X" + xp;
+            bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[1];
             //xp더해주기
             yield return new WaitForSecondsRealtime(0.7f);
         }
         if (gold > 0)
         {
             GameObject bt = Instantiate(bootyPrefab, bootyParent);
-            bt.GetComponentInChildren<Text>().text = "X" + gold;
-            bt.GetComponent<Image>().sprite = IconManager.inst.Icons[3];
+            bt.GetComponent<bootyInfo>().myCnt.text = "X" + gold;
+            bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[3];
             GameInfo.PlayerGold += gold;
             yield return new WaitForSecondsRealtime(0.7f);
+        }
+        if (MainSingleton.instance.playerstat.playingCard_Bonus.Count > 0) // 보너스 전리품 카드 추가
+        {
+            for (int i = 0; i < MainSingleton.instance.playerstat.playingCard_Bonus.Count; i++)
+            {
+                int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardIconNum;
+
+                GameObject bt = Instantiate(bootyPrefab, bootyParent);
+                bt.GetComponent<bootyInfo>().myCnt.text = "";
+                bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
+                bt.GetComponent<bootyInfo>().bonus.SetActive(true);
+                GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard_Bonus[i]);
+                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardFocus == 1)
+                {
+                    bt.GetComponent<bootyInfo>().Focus.SetActive(true);
+                }
+                yield return new WaitForSecondsRealtime(0.5f);
+            }
         }
         if (MainSingleton.instance.playerstat.playingCard.Count >0) // 전리품 카드 추가
         {
@@ -47,11 +65,15 @@ public class EndGameScript : MonoBehaviour
                 int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardIconNum;
 
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
-                bt.GetComponentInChildren<Text>().text = "";
-                bt.GetComponent<Image>().sprite = IconManager.inst.Icons[IconNum];
+                bt.GetComponent<bootyInfo>().myCnt.text = "";
+                bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
 
                 GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard[i]);
-                yield return new WaitForSecondsRealtime(0.7f);
+                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardFocus == 1)
+                {
+                    bt.GetComponent<bootyInfo>().Focus.SetActive(true);
+                }
+                yield return new WaitForSecondsRealtime(0.5f);
             }
         }
         IsEnd = true;

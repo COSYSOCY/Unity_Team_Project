@@ -133,6 +133,7 @@ public class csvData : MonoBehaviour
     public static List<int> CardIconNum = new List<int>();
     public static List<int> CardLevel = new List<int>();
     public static List<int> CardPrice = new List<int>();
+    public static List<int> CardFocus = new List<int>();
     public static List<float> CardHpC = new List<float>();
     public static List<float> CardHpP = new List<float>();
     public static List<float> CardHpRegen = new List<float>();
@@ -189,6 +190,7 @@ public class csvData : MonoBehaviour
             CardIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             CardLevel.Add(int.Parse(data[i]["등급"].ToString()));
             CardPrice.Add(int.Parse(data[i]["가격"].ToString()));
+            CardFocus.Add(int.Parse(data[i]["포커스"].ToString()));
             CardHpC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
             CardHpP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
             CardHpRegen.Add(float.Parse(data[i]["회복"].ToString()));

@@ -33,6 +33,7 @@ public class PlayerStatus : MonoBehaviour
     public bool IsAdIn = false;
 
     public List<int> playingCard;
+    public List<int> playingCard_Bonus;
     private void Start()
     {
         StartCoroutine(HpRegen());
