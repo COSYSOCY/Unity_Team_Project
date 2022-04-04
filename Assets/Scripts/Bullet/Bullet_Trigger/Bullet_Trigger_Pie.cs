@@ -9,6 +9,10 @@ public class Bullet_Trigger_Pie : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy")&&other.gameObject.activeSelf)
         {
+            if (info.KnokTime > 0)
+            {
+                other.GetComponent<Enemy_Info>().KnockEnemy(info.KnokTime);
+            }
             info.pie--;
             other.GetComponent<Enemy_Info>().Damaged(info.damage);
             if (info.pie <1)
@@ -16,6 +20,7 @@ public class Bullet_Trigger_Pie : MonoBehaviour
                 gameObject.SetActive(false);
 
             }
+
         }
         
     }

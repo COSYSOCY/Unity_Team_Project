@@ -54,6 +54,10 @@ public class NewSkill_0 : Skill_Ori
             if (i % 2 == 0)
             {
                 bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+
+
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale=new Vector3(local, local, local);
@@ -61,6 +65,9 @@ public class NewSkill_0 : Skill_Ori
             else
             {
                 bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
+
+                    bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale=new Vector3(local, local, local);
@@ -83,13 +90,20 @@ public class NewSkill_0 : Skill_Ori
             if (i % 2 == 0)
             {
                 bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale = new Vector3(local, local, local);
             }
             else
             {
                 bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
+
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale = new Vector3(local, local, local);

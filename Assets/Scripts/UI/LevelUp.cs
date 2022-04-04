@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GoogleMobileAds.Api;
-
+using DG.Tweening;
 public class LevelUp : MonoBehaviour
 {
     public bool testcheck=false;
     public GameObject LevelUiObject;
+    public GameObject LevelUiObject_Effect;
     public SkillManager skillManager;
     public List<GameObject> num; // 실질적으로 뽑아야하는 랜덤
     public List<GameObject> num2; // 랜덤 1~4개 나와야하는것들
@@ -26,7 +27,7 @@ public class LevelUp : MonoBehaviour
     public GameObject ShowImage;
     public GameObject Adicon;
 
-
+    
     private void Start()
     {
         var requestConfiguration = new RequestConfiguration
@@ -55,6 +56,9 @@ public class LevelUp : MonoBehaviour
 
     void LevelupFunc()
     {
+        LevelUiObject_Effect.transform.localScale=new Vector3(0f,0f,0f);
+        
+        LevelUiObject_Effect.transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetUpdate(true);
         int cnt = 0;
 
         if (playerInfo.Lv==2)

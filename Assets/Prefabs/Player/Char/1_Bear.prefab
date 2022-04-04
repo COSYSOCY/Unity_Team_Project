@@ -2453,7 +2453,7 @@ GameObject:
   - component: {fileID: 909545961860235069}
   - component: {fileID: 909545961860235068}
   m_Layer: 0
-  m_Name: Head04
+  m_Name: Eff_Head04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4527,7 +4527,7 @@ GameObject:
   - component: {fileID: 909545962527988757}
   - component: {fileID: 909545962527988756}
   m_Layer: 0
-  m_Name: Body04
+  m_Name: Eff_Body04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

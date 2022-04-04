@@ -22,6 +22,7 @@ public class Enemy_Info : MonoBehaviour
     public bool IsBoss;
     public bool NoPosReset;
     public bool moveCheck;
+    public bool IsKn;
 
     private void Awake()
     {
@@ -63,7 +64,7 @@ public class Enemy_Info : MonoBehaviour
 
         }
         GameObject Effect = ObjectPooler.SpawnFromPool("Enemy_Hit", transform.position, Quaternion.identity);
-
+        //SoundManager.inst.SoundPlay(5);
         Hp -= f;
         if (Hp <1 && gameObject.activeSelf)
         {
@@ -169,7 +170,33 @@ public class Enemy_Info : MonoBehaviour
     //    }
     //}
 
+    public void KnockEnemy(float t)
+    {
+        if (!IsKn)
+        {
 
+        StartCoroutine(KnockbackFunc(t));
+        }
+    }
+    IEnumerator KnockbackFunc(float t)
+    {
+        
+        IsKn = true;
+        float SpeedCheck = Speed;
+        float cultime = 0;
+        float cooltime = t;
+        yield return null;
+        //Vector3 d = (player.transform.position - transform.position).normalized;
+        Speed = 0;
+        while (cultime <= cooltime)
+        {
+            cultime += Time.deltaTime;
+            transform.Translate(Vector3.back * Time.deltaTime * 20);
+            yield return null;
+        }
+        IsKn = false;
+        Speed = SpeedCheck;
+    }
     public void BossMove()
     {
         Vector3 _target = player.transform.position;
