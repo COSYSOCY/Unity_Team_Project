@@ -877,9 +877,6 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
-  - tag: Map
-    prefab: {fileID: 8974632829078057019, guid: b4c6ecbb9da145c49aba89f13bcdee85, type: 3}
-    size: 9
 --- !u!4 &81247187
 Transform:
   m_ObjectHideFlags: 0
@@ -4849,9 +4846,6 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
-  - tag: Map
-    prefab: {fileID: 8974632829078057019, guid: 375b03b7ae62d614eae4654bd6ec4992, type: 3}
-    size: 9
 --- !u!114 &401227049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,7 +6708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Tracked: {fileID: 4701004815584131811}
-  m_Size: {x: 100, y: 20, z: 100}
+  m_Size: {x: 200, y: 20, z: 200}
 --- !u!4 &549603680
 Transform:
   m_ObjectHideFlags: 0
@@ -19311,9 +19305,6 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
-  - tag: Map
-    prefab: {fileID: 8974632829078057019, guid: b543ccb346732544db2ca4e11b990904, type: 3}
-    size: 9
 --- !u!1 &1864439628
 GameObject:
   m_ObjectHideFlags: 0

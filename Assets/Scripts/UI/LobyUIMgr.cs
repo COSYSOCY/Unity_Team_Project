@@ -8,7 +8,7 @@ using TMPro;
 public class LobyUIMgr : MonoBehaviour
 {
     public Text UserLevel;
-    public TextMeshProUGUI UserXp;
+    public Text UserXp;
     public Slider UserXpSlider;
 
     public Text LobyGoldText;

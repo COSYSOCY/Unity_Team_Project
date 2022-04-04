@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
-	public const float maxViewDst = 80;
+	public const float maxViewDst = 120;
 	public Transform viewer;
 	public GameObject Maps;
 	public static Vector2 viewerPosition;
@@ -22,6 +22,8 @@ public class MapManager : MonoBehaviour
 	void Start()
 	{
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / chunkSize);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
 		StartCoroutine(UpdateFunc());
 	}
 
@@ -33,8 +35,7 @@ public class MapManager : MonoBehaviour
 	//}
 	IEnumerator UpdateFunc()
     {
-		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
-		UpdateVisibleChunks();
+
 		yield return new WaitForSeconds(0.1f);
 		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
 		UpdateVisibleChunks();
@@ -103,8 +104,8 @@ public class MapManager : MonoBehaviour
 			bounds = new Bounds(position, Vector2.one * size);
 			Vector3 positionV3 = new Vector3(position.x, 0f, position.y);
 
-			//meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
-			meshObject = ObjectPooler.SpawnFromPool("Map", positionV3, Quaternion.identity); ;
+			meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
+			//meshObject = ObjectPooler.SpawnFromPool("Map", positionV3, Quaternion.identity); ;
 			meshObject.transform.localScale = Vector3.one * size / 10f;
 			SetVisible(false);
 		}

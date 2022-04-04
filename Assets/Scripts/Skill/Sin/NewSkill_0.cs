@@ -45,7 +45,7 @@ public class NewSkill_0 : Skill_Ori
         {
             
             
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_0", pos, bulletPos.transform.rotation);
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_0", Player.transform.position, bulletPos.transform.rotation);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
             if (i % 2 == 0)

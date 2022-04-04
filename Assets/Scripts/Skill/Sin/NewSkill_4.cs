@@ -44,6 +44,7 @@ public class NewSkill_4 : Skill_Ori
 
             yield return new WaitForSeconds(_CoolMain(true));
             bullet.SetActive(true);
+            yield return null;
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
 
@@ -63,7 +64,8 @@ public class NewSkill_4 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        while(bullet.activeSelf)
+        yield return null;
+        while (bullet.activeSelf)
         { 
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;

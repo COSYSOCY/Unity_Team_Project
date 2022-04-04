@@ -59,7 +59,7 @@ public class NewSkill_9 : Skill_Ori
                 Vector3 dir = target.transform.position - Player.transform.position;
                 dir.Normalize();
                 dir.y = 0;
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", pos, Quaternion.LookRotation(dir));
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_9", Player.transform.position, Quaternion.LookRotation(dir));
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Trigger_9>().CurTime = _BulletTime();
                 bullet.GetComponent<Bullet_Trigger_9>().StartFunc();
