@@ -33,7 +33,24 @@ public class MapManager : MonoBehaviour
 	//}
 	IEnumerator UpdateFunc()
     {
-		yield return new WaitForSeconds(0.5f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
 		while (true)
         {
 			viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
