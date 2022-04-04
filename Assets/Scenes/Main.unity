@@ -877,6 +877,9 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Map
+    prefab: {fileID: 8974632829078057019, guid: b4c6ecbb9da145c49aba89f13bcdee85, type: 3}
+    size: 9
 --- !u!4 &81247187
 Transform:
   m_ObjectHideFlags: 0

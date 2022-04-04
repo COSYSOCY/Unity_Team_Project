@@ -47,7 +47,7 @@ public class NewSkill_6 : Skill_Ori
         bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
         while (bullet.activeSelf)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.4f);
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
             GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);

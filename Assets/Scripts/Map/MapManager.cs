@@ -103,7 +103,8 @@ public class MapManager : MonoBehaviour
 			bounds = new Bounds(position, Vector2.one * size);
 			Vector3 positionV3 = new Vector3(position.x, 0f, position.y);
 
-			meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
+			//meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
+			meshObject = ObjectPooler.SpawnFromPool("Map", positionV3, Quaternion.identity); ;
 			meshObject.transform.localScale = Vector3.one * size / 10f;
 			SetVisible(false);
 		}
