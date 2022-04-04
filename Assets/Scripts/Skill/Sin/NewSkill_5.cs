@@ -34,6 +34,11 @@ public class NewSkill_5 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
+        int cnt = _BulletCnt();
+        if (MainSingleton.instance.playerstat.SkillItemactive[7] >= 1)
+        {
+            cnt += 5;
+        }
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _SkillReal1();
@@ -59,7 +64,7 @@ public class NewSkill_5 : Skill_Ori
         {
             yield break;
         }
-        for (int i = 0; i < _BulletCnt(); i++)
+        for (int i = 0; i < cnt; i++)
         {
             
 

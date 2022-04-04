@@ -33,6 +33,11 @@ public class NewSkill_2 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
+        float da = _Damage();
+        if (MainSingleton.instance.playerstat.SkillItemactive[1] >= 1)
+        {
+            da *= 1.2f;
+        }
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
@@ -72,7 +77,7 @@ public class NewSkill_2 : Skill_Ori
                       
                         if (Rhits[s].transform.gameObject.activeSelf)
                         {
-                            Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                            Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(da);
                         }
                     }
                 }

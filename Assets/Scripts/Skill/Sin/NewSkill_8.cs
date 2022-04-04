@@ -35,12 +35,17 @@ public class NewSkill_8 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        int cnt = _BulletCnt();
+        if (MainSingleton.instance.playerstat.SkillItemactive[6] >= 1)
+        {
+            cnt += 2;
+        }
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 20f, layermask).ToList();
 
-            for (int i = 0; i < _BulletCnt(); i++)
+            for (int i = 0; i < cnt; i++)
             {
                 int ran = Random.Range(0, Enemys.Count);
                 GameObject target =  Enemys[ran].gameObject;

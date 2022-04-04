@@ -35,6 +35,11 @@ public class NewSkill_9 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        int cnt = _BulletCnt();
+        if (MainSingleton.instance.playerstat.SkillItemactive[5] >= 1)
+        {
+            cnt += 1;
+        }
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
@@ -46,7 +51,7 @@ public class NewSkill_9 : Skill_Ori
 
         if (Enemys.Count > 0)
         {
-            for (int i = 0; i < _BulletCnt(); i++)
+            for (int i = 0; i < cnt; i++)
             {
 
                 GameObject target= Enemys[0].gameObject;

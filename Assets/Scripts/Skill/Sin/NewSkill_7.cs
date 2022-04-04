@@ -36,23 +36,28 @@ public class NewSkill_7 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        float da = _Damage();
+        if (MainSingleton.instance.playerstat.SkillItemactive[12] >= 1)
+        {
+            da *= 1.2f;
+        }
         float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
 
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.identity);
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.Euler(new Vector3(0,90f,0)));
+                bullet.GetComponent<Bullet_Info>().damage = da;
             bullet.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.identity);
-            bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
+            bullet2.GetComponent<Bullet_Info>().damage = da;
             bullet2.transform.localScale = new Vector3(local, local, local);
 
             yield return new WaitForSeconds(0.1f);
-                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,2), Quaternion.identity);
-                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,2), Quaternion.Euler(new Vector3(0, -90f, 0)));
+                    bullet3.GetComponent<Bullet_Info>().damage = da;
                     bullet3.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,-2f), Quaternion.identity);
-            bullet4.GetComponent<Bullet_Info>().damage = _Damage();
+            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,-2f), Quaternion.Euler(new Vector3(0, -90f, 0)));
+            bullet4.GetComponent<Bullet_Info>().damage = da;
             bullet4.transform.localScale = new Vector3(local, local, local);
 
     }

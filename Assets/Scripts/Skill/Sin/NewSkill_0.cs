@@ -28,6 +28,11 @@ public class NewSkill_0 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
+            if (MainSingleton.instance.playerstat.SkillItemactive[10]>=1)
+            {
+                yield return new WaitForSeconds(0.15f);
+                StartCoroutine(Skill_Update2());
+            }
             //SoundManager.inst.SoundPlay(5);
         }
     }

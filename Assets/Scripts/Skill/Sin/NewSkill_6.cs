@@ -38,6 +38,11 @@ public class NewSkill_6 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
+        float da = _Damage();
+        if (MainSingleton.instance.playerstat.SkillItemactive[8] >= 1)
+        {
+            da *= 1.2f;
+        }
         yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
@@ -58,7 +63,7 @@ public class NewSkill_6 : Skill_Ori
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(da);
                 }
             }
         }

@@ -8,6 +8,11 @@ public class NewSkill_4 : Skill_Ori
     float angleRange;
     public GameObject bullet;
     IEnumerator coroutine;
+
+    bool Skillcheck1 = false;
+
+    public ParticleSystem partic;
+
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -42,7 +47,11 @@ public class NewSkill_4 : Skill_Ori
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
 
-
+            if (!Skillcheck1 && MainSingleton.instance.playerstat.SkillItemactive[4] >= 1)
+            {
+                Skillcheck1 = true;
+                partic.startSize *= 1.2f;
+            }
 
         }
     }

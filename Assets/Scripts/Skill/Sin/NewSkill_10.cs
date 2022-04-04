@@ -54,6 +54,11 @@ public class NewSkill_10 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
+        float times = _BulletTime();
+        if (MainSingleton.instance.playerstat.SkillItemactive[9] >= 1)
+        {
+            times *= 1.2f;
+        }
         for (int i = 0; i < _BulletCnt(); i++)
         {
             float angle = i * Mathf.PI * 2 / _BulletCnt();
@@ -66,7 +71,7 @@ public class NewSkill_10 : Skill_Ori
             GameObject par = ObjectPooler.SpawnFromPool("Bullet_10", pos, rot);
             par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
             par.GetComponent<Bullet_Info>().damage = _Damage();
-            par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            par.GetComponent<Bullet_Info>().Destorybullet(times);
         }
         yield return null;
     }
