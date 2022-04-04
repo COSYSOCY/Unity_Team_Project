@@ -28,6 +28,7 @@ public class csvData : MonoBehaviour
 {
     static csvData inst;
 
+    public string dataPath_PlayerExp;
     public string dataPath_Characters;
     public string dataPath_Enemy;
     public string dataPath_Skill;
@@ -39,6 +40,9 @@ public class csvData : MonoBehaviour
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
+
+
+    public static List<int> PlayerExpMax = new List<int>();
 
 
     public static List<int> CharactersNameNum = new List<int>();
@@ -151,6 +155,7 @@ public class csvData : MonoBehaviour
     void Awake()
     {
         inst = this;
+        Player_EXP_Read();
         Characters_Read();
         Enemy_Read();
         Skill_Read();
@@ -159,6 +164,19 @@ public class csvData : MonoBehaviour
        Exp_Read();
        Card_Read();
        Map_Read();
+    }
+
+    public void Player_EXP_Read()
+    {
+        data = CSVReader.Read(dataPath_PlayerExp);
+        //GameInfo.inst.MapsInfo = new List(MapInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            PlayerExpMax.Add(int.Parse(data[i]["Exp"].ToString()));
+
+
+
+        }
     }
 
     public void Map_Read()

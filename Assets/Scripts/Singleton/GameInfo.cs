@@ -42,7 +42,10 @@ public class GameInfo : MonoBehaviour
 	public static int PlayerPoint; // 플레이어 보석
 
 	public  int PlayerLevel; // 플레이어 레벨
+	public  int PlayerXp; // 플레이어 경험치
+	public  int PlayerXpMax; // 플레이어 최대경험치
 	public  int PlayerEnergy; // 플레이어 에너지
+
 	public  int PlayerEnergyMax; // 플레이어 최대에너지
 
 	public int CharacterIdx; //캐릭터번호
@@ -93,10 +96,6 @@ public class GameInfo : MonoBehaviour
 	{
 		inst = this;
 		audioSo = inst.GetComponent<AudioSource>();
-		PlayerGold = 600;
-		PlayerPoint = 5;
-		PlayerEnergy = 50;
-		PlayerEnergyMax = 20;
 	}
 
 	public void CharaMax()
@@ -113,8 +112,13 @@ public class GameInfo : MonoBehaviour
 		if (PlayerLevel==0)
         {
 			PlayerLevel = 1;
+			PlayerXp = 0;
+			PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
 			CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
 			AdGoldFreeMax = 3;
+
+			PlayerGold = 600;
+			PlayerPoint = 5;
 			PlayerEnergy = 50;
 			PlayerEnergyMax = 20;
 
@@ -122,6 +126,22 @@ public class GameInfo : MonoBehaviour
 		
 	}
 
+	public void PlayerXpPlus(int i)
+    {
+		PlayerXp += i;
+        if (PlayerXp >= PlayerXpMax)
+        {
+			PlayerLevelUp();
+		}
+
+	}
+	public void PlayerLevelUp()
+    {
+		PlayerXp -= PlayerXpMax;
+		PlayerLevel++;
+		PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
+		PlayerXpPlus(0);
+	}
     public void TestFunc() //처음 할때 주는거 테스트중
     {
 		AdGoldFreeMax = 3;

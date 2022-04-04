@@ -43,7 +43,8 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
         {
 
         stick.localPosition = Vector2.zero;
-        pad.gameObject.SetActive(false);
+            pad.gameObject.SetActive(false);
+            //pad.sizeDelta = new Vector2(0, -750);
         StopCoroutine("Movement");
         move = Vector3.zero;
             ani.SetBool("idle", true);

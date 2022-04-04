@@ -505,6 +505,8 @@ MonoBehaviour:
   PlayerSE: 0
   PlayerDmg: 0
   PlayerLevel: 0
+  PlayerXp: 0
+  PlayerXpMax: 0
   PlayerEnergy: 0
   PlayerEnergyMax: 0
   CharacterIdx: 0
@@ -537,6 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575b02cfea38ae8419bde7a75c127235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataPath_PlayerExp: project - PlayerExp_Info
   dataPath_Characters: project - Characters_Info
   dataPath_Enemy: project - Monster_Info
   dataPath_Skill: project - Skill_Info
@@ -1114,10 +1117,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 731a5afdb24ec5744a0ccbd7874d2638, type: 3}
     m_FontSize: 127
-    m_FontStyle: 0
-    m_BestFit: 0
+    m_FontStyle: 1
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 127
     m_Alignment: 4
@@ -1126,7 +1129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Click!!;
+  m_Text: Tab To Start
 --- !u!222 &1692533251
 CanvasRenderer:
   m_ObjectHideFlags: 0

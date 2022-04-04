@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LobyUIMgr : MonoBehaviour
 {
+    public Text UserLevel;
+    public TextMeshProUGUI UserXp;
+    public Slider UserXpSlider;
 
     public Text LobyGoldText;
     public Text LobyPointText;
@@ -66,6 +70,17 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
+        UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
+        UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
+        if (GameInfo.inst.PlayerXp == 0)
+        {
+            UserXpSlider.value = 0;
+        }
+        else
+        {
+        UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
+            
+        }
         LobyGoldText.text = GameInfo.PlayerGold.ToString("");
         LobyPointText.text = GameInfo.PlayerPoint.ToString("");
         LobyEnergyText.text = GameInfo.inst.PlayerEnergy + "/" + GameInfo.inst.PlayerEnergyMax;
