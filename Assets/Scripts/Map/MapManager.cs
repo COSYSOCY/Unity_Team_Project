@@ -11,8 +11,8 @@ public class MapManager : MonoBehaviour
 	int chunkSize = 100;
 	int chunksVisibleInViewDst;
 
-	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
-	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
+	public Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
+	public List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
 	public static MapManager instance = null;
 
 	private void Awake()
@@ -22,15 +22,25 @@ public class MapManager : MonoBehaviour
 	void Start()
 	{
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / chunkSize);
+		StartCoroutine(UpdateFunc());
 	}
 
-	void Update()
-	{
+	//void Update()
+	//{
 
 
-		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
-		UpdateVisibleChunks();
-	}
+
+	//}
+	IEnumerator UpdateFunc()
+    {
+		yield return new WaitForSeconds(0.5f);
+		while (true)
+        {
+			viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+			UpdateVisibleChunks();
+			yield return new WaitForSeconds(1);
+		}
+    }
 	void UpdateVisibleChunks()
 	{
 		for (int i = 0; i < terrainChunksVisibleLastUpdate.Count; i++)
