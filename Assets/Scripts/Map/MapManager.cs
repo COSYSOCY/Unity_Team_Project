@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MapManager : MonoBehaviour
 {
-	public const float maxViewDst = 120;
+	public const float maxViewDst = 80;
 	public Transform viewer;
 	public GameObject Maps;
 	public static Vector2 viewerPosition;

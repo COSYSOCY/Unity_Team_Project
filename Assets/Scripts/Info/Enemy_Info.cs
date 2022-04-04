@@ -94,7 +94,7 @@ public class Enemy_Info : MonoBehaviour
     {
         
         playerstatus.Hp_Damage(dagame);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.2f);
         if (damagecheck==true)
         {
             StartCoroutine(Damage(Enemy_Damage));
