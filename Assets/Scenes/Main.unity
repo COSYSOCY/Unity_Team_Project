@@ -880,6 +880,9 @@ MonoBehaviour:
   - tag: Bullet_0_1
     prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
     size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
 --- !u!4 &81247187
 Transform:
   m_ObjectHideFlags: 0

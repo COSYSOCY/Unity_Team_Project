@@ -62,6 +62,8 @@ public class Enemy_Info : MonoBehaviour
         clone.GetComponent<UIHUDText>().Play(f.ToString("F0"), Color.red, bounds);
 
         }
+        GameObject Effect = ObjectPooler.SpawnFromPool("Enemy_Hit", transform.position, Quaternion.identity);
+
         Hp -= f;
         if (Hp <1 && gameObject.activeSelf)
         {
