@@ -18,8 +18,8 @@ public class NewSkill_4 : Skill_Ori
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
-        bullet.SetActive(true);
-
+        //bullet.SetActive(true);
+        
         //
 
         angleRange = 45f; // °¢µµ

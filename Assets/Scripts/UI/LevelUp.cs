@@ -150,7 +150,8 @@ public class LevelUp : MonoBehaviour
             {
                 num2.Add(num[0]);
                 num2.Add(num[1]);
-                LevelupUiOb[2].SetActive(false);
+                num2.Add(num[2]);
+                //LevelupUiOb[2].SetActive(false);
                 LevelupUiOb[3].SetActive(false);
             }
             else

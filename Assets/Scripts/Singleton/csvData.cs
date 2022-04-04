@@ -384,11 +384,11 @@ public class csvData : MonoBehaviour
         }
         else if (GameInfo.inst.Language == "Germany")
         {
-            return inst.GameText_China[i];
+            return inst.GameText_Germany[i];
         }
         else if (GameInfo.inst.Language == "Spain")
         {
-            return inst.GameText_China[i];
+            return inst.GameText_Spain[i];
         }
         else
         {

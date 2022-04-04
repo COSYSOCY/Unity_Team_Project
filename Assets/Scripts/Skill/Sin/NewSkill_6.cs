@@ -56,7 +56,7 @@ public class NewSkill_6 : Skill_Ori
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
             GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
-            effect.transform.localScale = new Vector3(local, local, local);
+            effect.transform.localScale = new Vector3(local*3, local*3, local*3);
             Collider[] Enemys;
             Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
             if (Enemys.Length > 0)
