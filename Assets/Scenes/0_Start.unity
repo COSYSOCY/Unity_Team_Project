@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 563478252}
   - component: {fileID: 563478253}
   - component: {fileID: 563478254}
+  - component: {fileID: 563478255}
   m_Layer: 0
   m_Name: Singleton
   m_TagString: Untagged
@@ -500,6 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameStart: 0
   audioSo: {fileID: 563478249}
   audioSo2: {fileID: 563478254}
   PlayerBGM: 0
@@ -509,7 +511,7 @@ MonoBehaviour:
   PlayerXp: 0
   PlayerXpMax: 0
   PlayerEnergy: 0
-  PlayerEnergyMax: 0
+  PlayerEnergyMax: 20
   CharacterIdx: 0
   MapIdx: 0
   SkillIdx: 0
@@ -911,6 +913,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &563478255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3626e4df774e2a24b84a91b9fa5304fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverdata:
+    PlayerLevel: 0
+    PlayerXp: 0
+    PlayerEnergy: 0
+    PlayerGold: 0
+    PlayerPoint: 0
+    CharacterIdx: 0
+    CharacterActive: 
+    PlayerCardIdxs: 
+    PlayerCards: 
+    PlayerMap: 
+    Language: 
+    AdGoldFreeMax: 0
 --- !u!1 &1470180554
 GameObject:
   m_ObjectHideFlags: 0

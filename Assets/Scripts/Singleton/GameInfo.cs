@@ -32,6 +32,8 @@ public class CardInfo
 }
 public class GameInfo : MonoBehaviour
 {
+	public bool GameStart=false;
+
 	public static GameInfo inst;
 	public AudioSource audioSo;
 	public AudioSource audioSo2;
@@ -82,7 +84,7 @@ public class GameInfo : MonoBehaviour
 	public static float BulletSpeedPlus;//투사체 이속동도증가%
 	public static float BulletTimePlus;//투사체 지속시간 증가%
 	public static float XpPlus;//Xp증가
-	public string Language = "Korean"; // 언어
+	public string Language; // 언어
 
 
 	public bool isTestMode;
@@ -105,24 +107,7 @@ public class GameInfo : MonoBehaviour
 			CharacterActive.Add(0);
 
 		}
-		// 임시
-		CharacterActive[1] = 1;
-		CharacterActive[2] = 1;
-		//
-		if (PlayerLevel==0)
-        {
-			PlayerLevel = 1;
-			PlayerXp = 0;
-			PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
-			CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
-			AdGoldFreeMax = 3;
 
-			PlayerGold = 600;
-			PlayerPoint = 5;
-			PlayerEnergy = 50;
-			PlayerEnergyMax = 20;
-
-		}
 		
 	}
 
@@ -180,27 +165,14 @@ public class GameInfo : MonoBehaviour
 			PlayerCardIdxs.Add(0);
 
 		}
-		// 임시
-		//PlayerCardIdxs[0] = 1;
-		//PlayerCardIdxs[1] = 2;
-		//PlayerCardIdxs[2] = 3;
-		//PlayerCardIdxs[3] = 0;
 
-
-		// 임시
 	}
-	public void mapcheck()
-    {
-		PlayerMap[0] = 1;
-		PlayerMap[1] = 1;
 
-		// 임시
-		PlayerMap[2] = 1;
-    }
 	public static void soundcheck()
     {
 		inst.audioSo.volume = 1f;
 
 	}
+
 
 }
