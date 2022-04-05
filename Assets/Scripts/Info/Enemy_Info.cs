@@ -23,9 +23,8 @@ public class Enemy_Info : MonoBehaviour
     public bool NoPosReset;
     public bool moveCheck;
     public bool IsKn;
-
+    //히트 점멸
     Material enemyMat;
-    Color colorA;
     public bool onhit;
 
     private void Awake()
@@ -34,7 +33,7 @@ public class Enemy_Info : MonoBehaviour
         playerstatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform = GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
-        enemyMat = transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material;
+        enemyMat = transform.GetChild(0).transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material;//히트점멸용 추가됨
         //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
         Hp_Max = csvData.MonsterHp[Idx];
         Denfece = csvData.MonsterDefence[Idx];
@@ -50,8 +49,8 @@ public class Enemy_Info : MonoBehaviour
 
     public void Damaged(float damage)
     {
+        onhit = true; //히트 확인용 bool값
         StartCoroutine(EnemyHit());
-        onhit = true;
         float f = damage;
         f = damage - Denfece;
         if (f < 1)
@@ -73,7 +72,6 @@ public class Enemy_Info : MonoBehaviour
         GameObject Effect = ObjectPooler.SpawnFromPool("Enemy_Hit", transform.position, Quaternion.identity);
         //SoundManager.inst.SoundPlay(5);
         Hp -= f;
-        onhit = false;
         if (Hp <1 && gameObject.activeSelf)
         {
             Dead();
@@ -84,6 +82,7 @@ public class Enemy_Info : MonoBehaviour
     public void Dead()
     {
         MainSingleton.instance.dropSystem.EnemyItemDrop(transform.position, Idx, ItemIdx);
+        enemyMat.SetColor("_EmissionColor", Color.black * 1f);
 
         if (!IsBoss)
         {
@@ -117,12 +116,14 @@ public class Enemy_Info : MonoBehaviour
         {
             if(onhit)
             {
-                enemyMat.SetColor("_EmissionColor", Color.white * 1f);
-                yield return new WaitForSeconds(0.1f);
+                enemyMat.SetColor("_EmissionColor", Color.white);
+                yield return new WaitForSeconds(0.15f); // 반짝이는 시간 
+                
             }
+            onhit = false;
             if (!onhit)
             {
-                enemyMat.SetColor("_EmissionColor", Color.black * 1f);
+                enemyMat.SetColor("_EmissionColor", Color.black);
             }
             yield return null;
         }

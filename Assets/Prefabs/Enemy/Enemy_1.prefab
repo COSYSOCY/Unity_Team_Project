@@ -183,6 +183,8 @@ MonoBehaviour:
   NoPosReset: 0
   moveCheck: 0
   IsKn: 0
+  enemyMat: {fileID: 2100000, guid: 758b25eb14cd0834bb1831545e187448, type: 2}
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
