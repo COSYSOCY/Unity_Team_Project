@@ -62,7 +62,7 @@ public class NewSkill_0 : Skill_Ori
             {
                 bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
 
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
 
 
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();

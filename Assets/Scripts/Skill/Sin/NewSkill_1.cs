@@ -7,6 +7,7 @@ public class NewSkill_1 : Skill_Ori
 {
     string bulletname = "Bullet_1";
     int UpPie = 0;
+    float UpSpeed = 0;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -23,6 +24,7 @@ public class NewSkill_1 : Skill_Ori
         UpPie = 1;
         bulletname = "Bullet_1_1";
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        UpSpeed = 80f;
     }
     public override void LevelUpFunc()
     {
@@ -75,7 +77,7 @@ public class NewSkill_1 : Skill_Ori
                 GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.LookRotation(dir));
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+UpPie;
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed() + UpSpeed ;
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale = new Vector3(local, local, local);
                 yield return new WaitForSeconds(0.1f);

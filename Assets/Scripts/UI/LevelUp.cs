@@ -62,7 +62,7 @@ public class LevelUp : MonoBehaviour
         LevelUiObject_Effect.transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetUpdate(true);
         int cnt = 0;
 
-        if (playerInfo.Lv==2)
+        if (playerInfo.Lv<=3)
         {
             for (int i = 0; i < skillManager.Skills.Count; i++)
             {
