@@ -24,12 +24,17 @@ public class Enemy_Info : MonoBehaviour
     public bool moveCheck;
     public bool IsKn;
 
+    Material enemyMat;
+    Color colorA;
+    public bool onhit;
+
     private void Awake()
     {
         player = GameObject.Find("Player");
         playerstatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform = GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        enemyMat = transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material;
         //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
         Hp_Max = csvData.MonsterHp[Idx];
         Denfece = csvData.MonsterDefence[Idx];
@@ -45,6 +50,8 @@ public class Enemy_Info : MonoBehaviour
 
     public void Damaged(float damage)
     {
+        StartCoroutine(EnemyHit());
+        onhit = true;
         float f = damage;
         f = damage - Denfece;
         if (f < 1)
@@ -66,6 +73,7 @@ public class Enemy_Info : MonoBehaviour
         GameObject Effect = ObjectPooler.SpawnFromPool("Enemy_Hit", transform.position, Quaternion.identity);
         //SoundManager.inst.SoundPlay(5);
         Hp -= f;
+        onhit = false;
         if (Hp <1 && gameObject.activeSelf)
         {
             Dead();
@@ -95,7 +103,7 @@ public class Enemy_Info : MonoBehaviour
     }
     IEnumerator Damage(float dagame)
     {
-        
+
         playerstatus.Hp_Damage(dagame);
         yield return new WaitForSeconds(0.2f);
         if (damagecheck==true)
@@ -103,6 +111,23 @@ public class Enemy_Info : MonoBehaviour
             StartCoroutine(Damage(Enemy_Damage));
         }
     }
+    IEnumerator EnemyHit()
+    {
+        while(true)
+        {
+            if(onhit)
+            {
+                enemyMat.SetColor("_EmissionColor", Color.white * 1f);
+                yield return new WaitForSeconds(0.1f);
+            }
+            if (!onhit)
+            {
+                enemyMat.SetColor("_EmissionColor", Color.black * 1f);
+            }
+            yield return null;
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -180,7 +205,6 @@ public class Enemy_Info : MonoBehaviour
     }
     IEnumerator KnockbackFunc(float t)
     {
-        
         IsKn = true;
         float SpeedCheck = Speed;
         float cultime = 0;
