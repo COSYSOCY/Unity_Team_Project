@@ -48,7 +48,7 @@ public class simpleFollow_cubeMovement : MonoBehaviour
             case 1:
                 followScript.generalOffset = new Vector3(0, 0.2f, -10);
                 followScript.lookAtTarget = false;
-                followScript.laziness = 10;
+                //followScript.laziness = 10;
                 Camera.main.orthographic = false;
                 Camera.main.transform.rotation = Quaternion.identity;
                 break;
@@ -56,14 +56,14 @@ public class simpleFollow_cubeMovement : MonoBehaviour
             case 2:
                 followScript.generalOffset = new Vector3(0, .8f, -6);
                 followScript.lookAtTarget = true;
-                followScript.laziness = 40;
+                //followScript.laziness = 40;
                 Camera.main.orthographic = false;
                 break;
 
             case 3:
                 followScript.generalOffset = new Vector3(0, 0, -15);
                 followScript.lookAtTarget = false;
-                followScript.laziness = 20;
+                //followScript.laziness = 20;
                 Camera.main.orthographic = true;
                 Camera.main.transform.rotation = Quaternion.identity;
                 break;
