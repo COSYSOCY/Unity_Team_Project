@@ -39,7 +39,7 @@ public class LobyUIMgr : MonoBehaviour
         check();
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
-
+       ServerDataSystem.inst.SaveData();
     }
 
 

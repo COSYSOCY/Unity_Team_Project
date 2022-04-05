@@ -11757,9 +11757,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1010264066}
-  - component: {fileID: 1010264069}
   - component: {fileID: 1010264068}
   - component: {fileID: 1010264067}
+  - component: {fileID: 1010264069}
   m_Layer: 0
   m_Name: Skill_Item0
   m_TagString: Untagged
@@ -11855,9 +11855,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1010264065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6135508709361d140b84bb18ec93a934, type: 3}
+  m_Script: {fileID: 11500000, guid: effb672d05a2a974f909e657a22b3d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
+  info: {fileID: 1010264068}
+  manager: {fileID: 1428158546}
 --- !u!1 &1053552838
 GameObject:
   m_ObjectHideFlags: 0
@@ -14237,9 +14241,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280769298}
-  - component: {fileID: 1280769301}
   - component: {fileID: 1280769300}
   - component: {fileID: 1280769299}
+  - component: {fileID: 1280769301}
   m_Layer: 0
   m_Name: Skill_Item1
   m_TagString: Untagged
@@ -14335,7 +14339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1280769297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ca4d3edbffc614095c3cb6300debe8, type: 3}
+  m_Script: {fileID: 11500000, guid: b8c17646c091a8c499c5b05fa8a80096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerinfo: {fileID: 4456675825087984495}

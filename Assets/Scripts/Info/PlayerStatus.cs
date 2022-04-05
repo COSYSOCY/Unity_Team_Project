@@ -206,10 +206,10 @@ public class PlayerStatus : MonoBehaviour
         uimanager.XpSet();
 
         //XpBar.transform.DOScale(1.1f, 0.1f);
-
+        XpBar.transform.DOKill();
+            XpBar.transform.localScale=new Vector3(2, 1.5f,2);
         if (XpBar.transform.localScale.y <=1.6f)
         {
-            XpBar.transform.localScale=new Vector3(2, 1.5f,2);
             XpBar.transform.DOPunchScale(new Vector3(2, 2.25f, 2), 0.5f,0,0 );
         }
         

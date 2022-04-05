@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a40ff4ea0f2bc439b4a0db4fba7e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadTime: 0.2
+  deadTime: 0.5
 --- !u!114 &9199828574461275990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   damage: 0
   pie: 0
   move: 0
+  KnokTime: 0
 --- !u!114 &2719290320113981263
 MonoBehaviour:
   m_ObjectHideFlags: 0

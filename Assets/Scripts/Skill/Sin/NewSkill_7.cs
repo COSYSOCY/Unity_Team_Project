@@ -53,7 +53,7 @@ public class NewSkill_7 : Skill_Ori
             bullet2.GetComponent<Bullet_Info>().damage = da;
             bullet2.transform.localScale = new Vector3(local, local, local);
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.4f);
                     GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,2), Quaternion.Euler(new Vector3(0, -90f, 0)));
                     bullet3.GetComponent<Bullet_Info>().damage = da;
                     bullet3.transform.localScale = new Vector3(local, local, local);

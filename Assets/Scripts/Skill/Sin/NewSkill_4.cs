@@ -71,7 +71,7 @@ public class NewSkill_4 : Skill_Ori
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos, Player.transform.lossyScale.x*_AtRange()*1.5f, layermask);
+            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x*_AtRange()*1.5f, layermask);
             if (Enemys.Length >0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
