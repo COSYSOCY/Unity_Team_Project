@@ -11,7 +11,12 @@ public class ServerDataSystem : MonoBehaviour
 {
     public ServerData serverdata=new ServerData();
 
+    public static ServerDataSystem inst;
 
+    void Awake()
+    {
+        inst = this;
+    }
     public void SaveData()
     {
         string sDirPath;
@@ -23,11 +28,8 @@ public class ServerDataSystem : MonoBehaviour
         if (di.Exists == false)
 
         {
-
             di.Create();
-
         }
-
         FileStream streamSave = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.OpenOrCreate);
         string jsonData = JsonConvert.SerializeObject(serverdata);
         byte[] data = Encoding.UTF8.GetBytes(jsonData);
@@ -35,28 +37,17 @@ public class ServerDataSystem : MonoBehaviour
         streamSave.Close();
     }
 
-    public void LoadData()
+    public IEnumerator LoadData()
     {
         FileStream streamload = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.Open);
         byte[] data = new byte[streamload.Length];
         streamload.Read(data, 0, data.Length);
         streamload.Close();
         string jsonData = Encoding.UTF8.GetString(data);
-        serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
-    }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SaveData();
-            Debug.Log("세이브요");
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            LoadData();
-            Debug.Log("로드요");
-        }
+        yield return serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
+
+
     }
 }
 
