@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LobyUIMgr : MonoBehaviour
 {
+    public Text UserLevel;
+    public Text UserXp;
+    public Slider UserXpSlider;
 
     public Text LobyGoldText;
     public Text LobyPointText;
@@ -27,6 +31,7 @@ public class LobyUIMgr : MonoBehaviour
 
 
 
+
     private void Start()
     {
         TextReset();
@@ -34,7 +39,8 @@ public class LobyUIMgr : MonoBehaviour
         check();
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
-     }
+       ServerDataSystem.inst.SaveData();
+    }
 
 
 
@@ -66,6 +72,17 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
+        UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
+        UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
+        if (GameInfo.inst.PlayerXp == 0)
+        {
+            UserXpSlider.value = 0;
+        }
+        else
+        {
+        UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
+            
+        }
         LobyGoldText.text = GameInfo.PlayerGold.ToString("");
         LobyPointText.text = GameInfo.PlayerPoint.ToString("");
         LobyEnergyText.text = GameInfo.inst.PlayerEnergy + "/" + GameInfo.inst.PlayerEnergyMax;
@@ -189,14 +206,14 @@ public class LobyUIMgr : MonoBehaviour
 
         if (GameInfo.inst.PlayerSE)
         {
-            BGMIcon.sprite = IconManager.inst.Icons[17];
+            SEIcon.sprite = IconManager.inst.Icons[17];
             Sebuton.GetComponent<Image>().color = colors[1];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 528;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
         }
         else
         {
-            BGMIcon.sprite = IconManager.inst.Icons[16];
+            SEIcon.sprite = IconManager.inst.Icons[16];
             Sebuton.GetComponent<Image>().color = colors[0];
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 527;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(527);

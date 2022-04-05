@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Start_00 : MonoBehaviour
 {
-
+    bool check = false;
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)&&GameInfo.inst.GameStart&&!check)
         {
-            SceneManager.LoadScene("01_Loby_Main");
-            
+            check = true;
+            //StartCoroutine(ServerDataSystem.inst.LoadData());
+            ServerDataSystem.inst.LoadData2();
+           // Destroy(gameObject);    
         }
     }
 

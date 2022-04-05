@@ -5,12 +5,23 @@ using UnityEngine;
 
 public class NewSkill_5 : Skill_Ori
 {
+    float UpCntX=1f;
     public LayerMask bossmask;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpCntX = 2f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -29,12 +40,13 @@ public class NewSkill_5 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(10);
+            SoundManager.inst.SoundPlay(12);
+            yield return Skill_Update2();
         }
     }
     IEnumerator Skill_Update2()
     {
+
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _SkillReal1();
@@ -60,7 +72,7 @@ public class NewSkill_5 : Skill_Ori
         {
             yield break;
         }
-        for (int i = 0; i < _BulletCnt(); i++)
+        for (int i = 0; i < _BulletCnt()*UpCntX; i++)
         {
             
 
@@ -79,7 +91,7 @@ public class NewSkill_5 : Skill_Ori
             bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
 
             bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.15f);
+                yield return new WaitForSeconds(0.1f);
         }
     }
 

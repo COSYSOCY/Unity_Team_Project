@@ -16,6 +16,8 @@ TagManager:
   - CardManager
   - CharManager
   - Check2
+  - FxTemporaire
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - UI
   - Enemy
   - Boss
-  - 
-  - 
+  - Object
+  - Post
   - 
   - 
   - 

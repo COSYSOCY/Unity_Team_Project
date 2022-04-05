@@ -5,11 +5,25 @@ using UnityEngine;
 
 public class NewSkill_2 : Skill_Ori
 {
+    string bulletname = "Bullet_2";
+    float Upcool = 1f;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+
+    }
+    public override void CreateFunc()
+    {
+        bulletname = "Bullet_2_1";
+        Upcool = 0.5f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -27,13 +41,14 @@ public class NewSkill_2 : Skill_Ori
         
         while (true)
         {
-            yield return new WaitForSeconds(_CoolMain(true));
+            yield return new WaitForSeconds(_CoolMain(true)*Upcool);
+            SoundManager.inst.SoundPlay(9);
             StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(7);
         }
     }
     IEnumerator Skill_Update2()
     {
+
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
@@ -53,7 +68,7 @@ public class NewSkill_2 : Skill_Ori
 
                 
                 
-                GameObject laser = ObjectPooler.SpawnFromPool("Bullet_2", pos, Quaternion.identity);
+                GameObject laser = ObjectPooler.SpawnFromPool(bulletname, pos, Quaternion.identity);
                 laser.transform.localScale = new Vector3(local, local, local);
                 Vector3 d = (target.transform.position - laser.transform.position).normalized;
 

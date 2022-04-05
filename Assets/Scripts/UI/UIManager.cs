@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Slider Xpbar;
     public Text TimeText;
     public Image Soundimage;
+    public Image Soundimage2;
     public Sprite[] icons;
     public Text KillText;
     public Text HpText;
@@ -27,7 +28,14 @@ public class UIManager : MonoBehaviour
         if (GameInfo.inst.PlayerBGM)
         {
             Soundimage.sprite = icons[1];
+            
         }
+        if (GameInfo.inst.PlayerSE)
+        {
+            Soundimage2.sprite = icons[3];
+
+        }
+        
     }
     public void KillUp()
     {
@@ -83,6 +91,21 @@ public class UIManager : MonoBehaviour
             GameInfo.inst.PlayerBGM = true;
             GameInfo.inst.audioSo.mute = true;
             GameInfo.inst.audioSo.Stop();
+        }
+
+    }
+    public void SoundCheck2()
+    {
+        if (GameInfo.inst.PlayerSE)
+        {
+            Soundimage2.sprite = icons[2];
+            GameInfo.inst.PlayerSE = false;
+
+        }
+        else
+        {
+            Soundimage2.sprite = icons[3];
+            GameInfo.inst.PlayerSE = true;
         }
     }
     public void Leveltext()

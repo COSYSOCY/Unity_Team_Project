@@ -16,7 +16,11 @@ public class Skill_Item_9 : Skill_Item_Ori
     {
         LevelUp();
         manager.skill_item_Add(gameObject, info.Skill_Icon);
-
+        if (MainSingleton.instance.playerstat.Skillactive[info.CreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill[info.CreateIdx].GetComponent<Skill_Ori>().CreateFunc();
+            CreateFunc();
+        }
     }
 
 

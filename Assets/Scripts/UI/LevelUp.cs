@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GoogleMobileAds.Api;
-
+using DG.Tweening;
 public class LevelUp : MonoBehaviour
 {
     public bool testcheck=false;
     public GameObject LevelUiObject;
+    public GameObject LevelUiObject_Effect;
     public SkillManager skillManager;
     public List<GameObject> num; // 실질적으로 뽑아야하는 랜덤
     public List<GameObject> num2; // 랜덤 1~4개 나와야하는것들
@@ -16,6 +17,7 @@ public class LevelUp : MonoBehaviour
     public GameObject[] Skill_Lv;
     public GameObject[] Skill_Text;
     public GameObject[] Skill_Image;
+    public GameObject[] Create_Image;
     public List<GameObject> LevelupUiOb;
     public PlayerMoving moving;
     public GameObject Money;
@@ -26,7 +28,7 @@ public class LevelUp : MonoBehaviour
     public GameObject ShowImage;
     public GameObject Adicon;
 
-
+    
     private void Start()
     {
         var requestConfiguration = new RequestConfiguration
@@ -55,6 +57,9 @@ public class LevelUp : MonoBehaviour
 
     void LevelupFunc()
     {
+        LevelUiObject_Effect.transform.localScale=new Vector3(0f,0f,0f);
+        
+        LevelUiObject_Effect.transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetUpdate(true);
         int cnt = 0;
 
         if (playerInfo.Lv==2)
@@ -150,7 +155,8 @@ public class LevelUp : MonoBehaviour
             {
                 num2.Add(num[0]);
                 num2.Add(num[1]);
-                LevelupUiOb[2].SetActive(false);
+                num2.Add(num[2]);
+                //LevelupUiOb[2].SetActive(false);
                 LevelupUiOb[3].SetActive(false);
             }
             else
@@ -191,6 +197,7 @@ public class LevelUp : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
+                Create_Image[i].SetActive(false);
                 string name = "";
                 int Lv = 0;
                 int image = 0;
@@ -207,10 +214,19 @@ public class LevelUp : MonoBehaviour
                     if (Lv == 0)
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(460) + "!";
+                        int CIdx = num2[i].GetComponent<Skill_Info>().SkillCreateIdx;
+                        if (MainSingleton.instance.playerstat.SkillItemactive[CIdx]>=1)
+                        {
+
+                        Create_Image[i].SetActive(true);
+                        int image2 = MainSingleton.instance.skillmanager.All_Skill_Items[CIdx].GetComponent<Skill_ItemInfo>().Skill_Icon;
+                        Create_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image2];
+                        }
                     }
                     else
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
+                        
                     }
 
                     Skill_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image];
@@ -228,9 +244,18 @@ public class LevelUp : MonoBehaviour
                     if (Lv == 0)
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(460) + "!";
+                        int CIdx = num2[i].GetComponent<Skill_ItemInfo>().CreateIdx;
+                        if (MainSingleton.instance.playerstat.Skillactive[CIdx] >= 1)
+                        {
+                            Create_Image[i].SetActive(true);
+                        int image2 = MainSingleton.instance.skillmanager.All_Skill[CIdx].GetComponent<Skill_Info>().Skill_Icon;
+                        Create_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image2];
+                        }
+
                     }
                     else
                     {
+                        
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
                     }
 

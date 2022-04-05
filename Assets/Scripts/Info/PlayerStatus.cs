@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
+
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -33,6 +35,10 @@ public class PlayerStatus : MonoBehaviour
     public bool IsAdIn = false;
 
     public List<int> playingCard;
+    public List<int> playingCard_Bonus;
+    public bool Ishit;
+
+    public GameObject XpBar;
     private void Start()
     {
         StartCoroutine(HpRegen());
@@ -61,6 +67,27 @@ public class PlayerStatus : MonoBehaviour
         f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC();
         f = f + (f * ((manager.HpPlusPer()+ CardStat.inst.CardStat_HpP()) * 0.01f));
         playerInfo.MaxHp = f;
+    }
+    IEnumerator HitDmg()
+    {
+        SoundManager.inst.SoundPlay(6);
+        if (Ishit)
+        {
+            yield break;
+        }
+        Ishit = true;
+        GameObject Effect = ObjectPooler.SpawnFromPool("Player_Hit", transform.position, Quaternion.identity);
+        for (int i = 0; i < MainSingleton.instance.HitEffect.Count; i++)
+        {
+            MainSingleton.instance.HitEffect[i].color = Color.red;
+        }
+                yield return new WaitForSeconds(0.15f);
+
+        for (int i = 0; i < MainSingleton.instance.HitEffect.Count; i++)
+        {
+            MainSingleton.instance.HitEffect[i].color = Color.white;
+        }
+        Ishit = false;
     }
     IEnumerator HpRegen()
     {
@@ -138,6 +165,7 @@ public class PlayerStatus : MonoBehaviour
             hpbar.value = 0;
             return;
         }
+        StartCoroutine(HitDmg());
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
         SliderUpdate();
         if (Skillactive[13]>=1)
@@ -176,6 +204,16 @@ public class PlayerStatus : MonoBehaviour
         i = xp + (int)f;
         playerInfo.Xp += i;
         uimanager.XpSet();
+
+        //XpBar.transform.DOScale(1.1f, 0.1f);
+        XpBar.transform.DOKill();
+            XpBar.transform.localScale=new Vector3(2, 1.5f,2);
+        if (XpBar.transform.localScale.y <=1.6f)
+        {
+            XpBar.transform.DOPunchScale(new Vector3(2, 2.25f, 2), 0.5f,0,0 );
+        }
+        
+
         if (playerInfo.Xp >= playerInfo.MaxXp)
         {
             LevelUp();

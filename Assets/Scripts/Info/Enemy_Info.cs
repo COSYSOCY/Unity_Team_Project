@@ -22,6 +22,11 @@ public class Enemy_Info : MonoBehaviour
     public bool IsBoss;
     public bool NoPosReset;
     public bool moveCheck;
+    public bool IsKn;
+    //히트 점멸
+    public SkinnedMeshRenderer[] enemyMat;
+    //public SkinnedMeshRenderer[] enemyMat2;
+    public bool onhit;
 
     private void Awake()
     {
@@ -29,6 +34,7 @@ public class Enemy_Info : MonoBehaviour
         playerstatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
         parentTransform = GameObject.Find("TextUi").GetComponent<Transform>();
         uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        //enemyMat = transform.GetChild(0).transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material;//히트점멸용 추가됨
         //uimanager=GameObject.Find("UIManager").GetComponent<UIManager>();
         Hp_Max = csvData.MonsterHp[Idx];
         Denfece = csvData.MonsterDefence[Idx];
@@ -44,6 +50,8 @@ public class Enemy_Info : MonoBehaviour
 
     public void Damaged(float damage)
     {
+         //히트 확인용 bool값
+        StartCoroutine(EnemyHit());
         float f = damage;
         f = damage - Denfece;
         if (f < 1)
@@ -62,6 +70,8 @@ public class Enemy_Info : MonoBehaviour
         clone.GetComponent<UIHUDText>().Play(f.ToString("F0"), Color.red, bounds);
 
         }
+        GameObject Effect = ObjectPooler.SpawnFromPool("Enemy_Hit", transform.position, Quaternion.identity);
+        //SoundManager.inst.SoundPlay(5);
         Hp -= f;
         if (Hp <1 && gameObject.activeSelf)
         {
@@ -73,6 +83,10 @@ public class Enemy_Info : MonoBehaviour
     public void Dead()
     {
         MainSingleton.instance.dropSystem.EnemyItemDrop(transform.position, Idx, ItemIdx);
+        for (int i = 0; i < enemyMat.Length; i++)
+        {
+        enemyMat[i].material.SetColor("_EmissionColor", Color.black * 1f);
+        }
 
         if (!IsBoss)
         {
@@ -92,14 +106,34 @@ public class Enemy_Info : MonoBehaviour
     }
     IEnumerator Damage(float dagame)
     {
-        
+
         playerstatus.Hp_Damage(dagame);
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.2f);
         if (damagecheck==true)
         {
             StartCoroutine(Damage(Enemy_Damage));
         }
     }
+    IEnumerator EnemyHit()
+    {
+        if (!onhit)
+        {
+            onhit = true;
+            for (int i = 0; i < enemyMat.Length; i++)
+            {
+            enemyMat[i].material.SetColor("_EmissionColor", Color.white);
+
+            }
+            yield return new WaitForSeconds(0.15f); // 반짝이는 시간 
+            for (int i = 0; i < enemyMat.Length; i++)
+            {
+            enemyMat[i].material.SetColor("_EmissionColor", Color.black);
+
+            }
+            onhit = false;
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -121,7 +155,7 @@ public class Enemy_Info : MonoBehaviour
         }
         if (other.transform.CompareTag("Check"))
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+           transform.GetChild(0).gameObject.SetActive(false);
         }
 
     }
@@ -141,13 +175,65 @@ public class Enemy_Info : MonoBehaviour
 
     }
 
+    public bool IsTargetVisible(Transform _transform)
+    {
+        var planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+        var point = _transform.position;
+        foreach (var plane in planes)
+        {
+            if (plane.GetDistanceToPoint(point) < -1)
+                return false;
+        }
+        return true;
+    }
+    //void Update()
+    //{
 
+    //    if (!IsTargetVisible(transform))
+    //    {
+    //        Debug.Log("안보임");
+    //        transform.GetChild(0).gameObject.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        transform.GetChild(0).gameObject.SetActive(true);
 
+    //    }
+    //}
 
+    public void KnockEnemy(float t)
+    {
+        if (!IsKn)
+        {
+
+        StartCoroutine(KnockbackFunc(t));
+        }
+    }
+    IEnumerator KnockbackFunc(float t)
+    {
+        IsKn = true;
+        float SpeedCheck = Speed;
+        float cultime = 0;
+        float cooltime = t;
+        yield return null;
+        //Vector3 d = (player.transform.position - transform.position).normalized;
+        Speed = 0;
+        while (cultime <= cooltime)
+        {
+            cultime += Time.deltaTime;
+            transform.Translate(Vector3.back * Time.deltaTime * 20);
+            yield return null;
+        }
+        IsKn = false;
+        Speed = SpeedCheck;
+    }
     public void BossMove()
     {
         Vector3 _target = player.transform.position;
-        Vector3 endPos = _target + new Vector3((_target.x-transform.position.x)*0.8f , 2, (_target.z- transform.position.z)*0.8f );
+        Vector3 d=(_target-transform.position).normalized;
+        d = d * 25f;
+        d.y = 0;
+        Vector3 endPos = _target + d;
         transform.position = endPos;
         transform.rotation = Quaternion.LookRotation(_target);
     }

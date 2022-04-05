@@ -28,6 +28,7 @@ public class csvData : MonoBehaviour
 {
     static csvData inst;
 
+    public string dataPath_PlayerExp;
     public string dataPath_Characters;
     public string dataPath_Enemy;
     public string dataPath_Skill;
@@ -39,6 +40,9 @@ public class csvData : MonoBehaviour
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
+
+
+    public static List<int> PlayerExpMax = new List<int>();
 
 
     public static List<int> CharactersNameNum = new List<int>();
@@ -83,6 +87,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillReal1=new List<float>();
     public static List<float> SkillReal2=new List<float>();
     public static List<float> SkillReal3=new List<float>();
+    public static List<int> SkillCreateIdx=new List<int>();
 
     public static List<int> SkillItemNameNum = new List<int>();
     public static List<int> SkillItemInfoNum = new List<int>();
@@ -104,7 +109,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemRange = new List<float>();
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
-
+    public static List<int> SkillItemCreateIdx = new List<int>();
 
     public static List<float> MonsterHp = new List<float>();
     public static List<float> MonsterDefence = new List<float>();
@@ -133,6 +138,7 @@ public class csvData : MonoBehaviour
     public static List<int> CardIconNum = new List<int>();
     public static List<int> CardLevel = new List<int>();
     public static List<int> CardPrice = new List<int>();
+    public static List<int> CardFocus = new List<int>();
     public static List<float> CardHpC = new List<float>();
     public static List<float> CardHpP = new List<float>();
     public static List<float> CardHpRegen = new List<float>();
@@ -150,6 +156,7 @@ public class csvData : MonoBehaviour
     void Awake()
     {
         inst = this;
+        Player_EXP_Read();
         Characters_Read();
         Enemy_Read();
         Skill_Read();
@@ -158,6 +165,20 @@ public class csvData : MonoBehaviour
        Exp_Read();
        Card_Read();
        Map_Read();
+        GameInfo.inst.GameStart = true;
+    }
+
+    public void Player_EXP_Read()
+    {
+        data = CSVReader.Read(dataPath_PlayerExp);
+        //GameInfo.inst.MapsInfo = new List(MapInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            PlayerExpMax.Add(int.Parse(data[i]["Exp"].ToString()));
+
+
+
+        }
     }
 
     public void Map_Read()
@@ -176,7 +197,7 @@ public class csvData : MonoBehaviour
 
 
         }
-        GameInfo.inst.mapcheck();
+        
     }
     public void Card_Read()
     {
@@ -189,6 +210,7 @@ public class csvData : MonoBehaviour
             CardIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             CardLevel.Add(int.Parse(data[i]["등급"].ToString()));
             CardPrice.Add(int.Parse(data[i]["가격"].ToString()));
+            CardFocus.Add(int.Parse(data[i]["포커스"].ToString()));
             CardHpC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
             CardHpP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
             CardHpRegen.Add(float.Parse(data[i]["회복"].ToString()));
@@ -262,6 +284,7 @@ public class csvData : MonoBehaviour
             SkillInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             SkillIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             SkillMaxLevel.Add(int.Parse(data[i]["최대레벨"].ToString()));
+            SkillCreateIdx.Add(int.Parse(data[i]["조합인덱스"].ToString()));
             SkillBulletCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
             SkillBulletCntMax.Add(int.Parse(data[i]["투사체최대갯수"].ToString()));
             SkillMinDamage.Add(float.Parse(data[i]["최소 데미지"].ToString()));
@@ -293,6 +316,7 @@ public class csvData : MonoBehaviour
             SkillItemInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             SkillItemIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             SkillItemMaxLevel.Add(int.Parse(data[i]["최대 레벨"].ToString()));
+           SkillItemCreateIdx.Add(int.Parse(data[i]["조합인덱스"].ToString()));
             SkillItemHpPlusC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
             SkillItemHpPlusP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
             SkillItemHpRegen.Add(float.Parse(data[i]["체력회복"].ToString()));
@@ -364,11 +388,11 @@ public class csvData : MonoBehaviour
         }
         else if (GameInfo.inst.Language == "Germany")
         {
-            return inst.GameText_China[i];
+            return inst.GameText_Germany[i];
         }
         else if (GameInfo.inst.Language == "Spain")
         {
-            return inst.GameText_China[i];
+            return inst.GameText_Spain[i];
         }
         else
         {

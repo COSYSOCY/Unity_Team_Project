@@ -12,9 +12,9 @@ public class SceneStart : MonoBehaviour
     public GameObject Hpbar;
     public IEnumerator IStart()
     {
-        CharAddFunc(GameInfo.inst.CharacterIdx);
         MainSingleton.instance.playerstat.IsAdIn = false;
         GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], parent.position, Quaternion.identity, parent);
+        CharAddFunc(GameInfo.inst.CharacterIdx);
         moving.ani = g.GetComponent<Animator>();
         moving.GameStart = true;
         Hpbar.SetActive(true);
@@ -45,6 +45,8 @@ public class SceneStart : MonoBehaviour
         {
             case 0:
                 //추가 액션
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Body04").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Head04").GetComponent<SkinnedMeshRenderer>().material);
                 break;
             case 1:
                 //추가 액션

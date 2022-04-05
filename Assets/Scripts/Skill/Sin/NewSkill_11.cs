@@ -12,6 +12,15 @@ public class NewSkill_11 : Skill_Ori
         StartCoroutine(Skill_Update());
 
 
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -30,7 +39,6 @@ public class NewSkill_11 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(16);
         }
     }
 

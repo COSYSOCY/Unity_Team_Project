@@ -11,6 +11,7 @@ public class CardInfo
 	public int CardInfoNum;
 	public int CardIconNum;
 	public int CardPrice;
+	public int CardFocus;
 	public float CardStat_HpC;
 	public float CardStat_HpP;
 	public float CardStat_HpRegen;
@@ -31,8 +32,11 @@ public class CardInfo
 }
 public class GameInfo : MonoBehaviour
 {
+	public bool GameStart=false;
+
 	public static GameInfo inst;
 	public AudioSource audioSo;
+	public AudioSource audioSo2;
 	public bool PlayerBGM; // 배경음
 	public bool PlayerSE; // 사운드
 	public bool PlayerDmg; //데미지표시 유무
@@ -40,7 +44,10 @@ public class GameInfo : MonoBehaviour
 	public static int PlayerPoint; // 플레이어 보석
 
 	public  int PlayerLevel; // 플레이어 레벨
+	public  int PlayerXp; // 플레이어 경험치
+	public  int PlayerXpMax; // 플레이어 최대경험치
 	public  int PlayerEnergy; // 플레이어 에너지
+
 	public  int PlayerEnergyMax; // 플레이어 최대에너지
 
 	public int CharacterIdx; //캐릭터번호
@@ -77,7 +84,7 @@ public class GameInfo : MonoBehaviour
 	public static float BulletSpeedPlus;//투사체 이속동도증가%
 	public static float BulletTimePlus;//투사체 지속시간 증가%
 	public static float XpPlus;//Xp증가
-	public string Language = "Korean"; // 언어
+	public string Language; // 언어
 
 
 	public bool isTestMode;
@@ -91,10 +98,6 @@ public class GameInfo : MonoBehaviour
 	{
 		inst = this;
 		audioSo = inst.GetComponent<AudioSource>();
-		PlayerGold = 600;
-		PlayerPoint = 5;
-		PlayerEnergy = 50;
-		PlayerEnergyMax = 20;
 	}
 
 	public void CharaMax()
@@ -104,22 +107,26 @@ public class GameInfo : MonoBehaviour
 			CharacterActive.Add(0);
 
 		}
-		// 임시
-		CharacterActive[1] = 1;
-		CharacterActive[2] = 1;
-		//
-		if (PlayerLevel==0)
-        {
-			PlayerLevel = 1;
-			CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
-			AdGoldFreeMax = 3;
-			PlayerEnergy = 50;
-			PlayerEnergyMax = 20;
 
-		}
 		
 	}
 
+	public void PlayerXpPlus(int i)
+    {
+		PlayerXp += i;
+        if (PlayerXp >= PlayerXpMax)
+        {
+			PlayerLevelUp();
+		}
+
+	}
+	public void PlayerLevelUp()
+    {
+		PlayerXp -= PlayerXpMax;
+		PlayerLevel++;
+		PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
+		PlayerXpPlus(0);
+	}
     public void TestFunc() //처음 할때 주는거 테스트중
     {
 		AdGoldFreeMax = 3;
@@ -137,6 +144,7 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardIconNum = csvData.CardIconNum[i];
 			CardsInfo[i].CardLv = csvData.CardLevel[i];
 			CardsInfo[i].CardPrice = csvData.CardPrice[i];
+			CardsInfo[i].CardFocus = csvData.CardFocus[i];
 			CardsInfo[i].CardStat_HpC = csvData.CardHpC[i];
 			CardsInfo[i].CardStat_HpP = csvData.CardHpP[i];
 			CardsInfo[i].CardStat_HpRegen = csvData.CardHpRegen[i];
@@ -157,27 +165,14 @@ public class GameInfo : MonoBehaviour
 			PlayerCardIdxs.Add(0);
 
 		}
-		// 임시
-		//PlayerCardIdxs[0] = 1;
-		//PlayerCardIdxs[1] = 2;
-		//PlayerCardIdxs[2] = 3;
-		//PlayerCardIdxs[3] = 0;
 
-
-		// 임시
 	}
-	public void mapcheck()
-    {
-		PlayerMap[0] = 1;
-		PlayerMap[1] = 1;
 
-		// 임시
-		PlayerMap[2] = 1;
-    }
 	public static void soundcheck()
     {
 		inst.audioSo.volume = 1f;
 
 	}
+
 
 }

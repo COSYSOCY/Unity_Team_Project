@@ -16,6 +16,8 @@ public class ItemPull : MonoBehaviour
     public bool playcolcheck = false;
     public MeshRenderer meshRenderer;
     public GameObject ItemText;
+
+    public GameObject chi;
     
 
 
@@ -113,7 +115,8 @@ public class ItemPull : MonoBehaviour
         }
         if (other.transform.CompareTag("Check") )
         {
-            meshRenderer.enabled = true;
+            chi.SetActive(true);
+            //meshRenderer.enabled = true;
         }
 
     }
@@ -121,7 +124,8 @@ public class ItemPull : MonoBehaviour
     {
         if (other.transform.CompareTag("Check"))
         {
-            meshRenderer.enabled = false;
+            chi.SetActive(false);
+            //meshRenderer.enabled = false;
         }
     }
     IEnumerator itemmove()

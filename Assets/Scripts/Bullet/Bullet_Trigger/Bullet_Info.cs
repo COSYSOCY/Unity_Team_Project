@@ -7,6 +7,7 @@ public class Bullet_Info : MonoBehaviour
     public float damage;
     public int pie;
     public float move;
+    public float KnokTime;
 
     public void Destorybullet(float t)
     {
