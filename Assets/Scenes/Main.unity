@@ -9234,7 +9234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4701004815584131811}
-  lookAtTarget: 1
+  lookAtTarget: 0
   takeOffsetFromInitialPos: 1
   generalOffset: {x: 0, y: 40, z: -10}
   camspeed: 0.6
@@ -21537,6 +21537,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702c4f6c47b82b345ae4ccfa2d362c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinfo: {fileID: 4456675825087984495}
+  stat: {fileID: 2128872704994612918}
+  info: {fileID: 2134257235}
+  manager: {fileID: 1428158546}
 --- !u!114 &2134257234
 MonoBehaviour:
   m_ObjectHideFlags: 0
