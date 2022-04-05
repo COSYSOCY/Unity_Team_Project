@@ -27,7 +27,7 @@ public class NewSkill_17 : Skill_Ori
     }
     public override void CreateFunc()
     {
-
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

@@ -28,6 +28,7 @@ public class Skill_Info : MonoBehaviour
     public float SkillReal3; // 실수3
     public int SkillCreateIdx;//조합인덱스
 
+    public int ActiveIdx;//활성화번수
 
     [Space(16)]
     [Header("스킬설명")]

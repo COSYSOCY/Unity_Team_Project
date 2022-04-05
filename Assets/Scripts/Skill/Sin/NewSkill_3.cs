@@ -33,6 +33,7 @@ public class NewSkill_3 : Skill_Ori
             bullet.gameObject.SetActive(false);
             partic1.gameObject.SetActive(true);
         UpRange = 2;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

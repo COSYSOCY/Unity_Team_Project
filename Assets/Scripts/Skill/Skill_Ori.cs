@@ -12,7 +12,7 @@ public class Skill_Ori : MonoBehaviour
     public LayerMask layermask;
     protected bool start = false;
     public bool CreateUp = false;
-
+    
 
 
     /*

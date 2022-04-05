@@ -27,6 +27,7 @@ public class Skill_ItemInfo : MonoBehaviour
     public float Real1; // 실수1
     public float Real2; // 실수2
     public int CreateIdx; // 실수2
+    public int ActiveIdx; // 활성화 번째
 
 
 

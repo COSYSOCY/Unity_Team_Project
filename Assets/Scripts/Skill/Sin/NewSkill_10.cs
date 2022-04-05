@@ -11,6 +11,7 @@ public class NewSkill_10 : Skill_Ori
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
+
         LevelUp();
         StartCoroutine(Skill_Update());
         bullet.SetActive(true);
@@ -28,6 +29,8 @@ public class NewSkill_10 : Skill_Ori
     public override void CreateFunc()
     {
         UpRange = 3f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

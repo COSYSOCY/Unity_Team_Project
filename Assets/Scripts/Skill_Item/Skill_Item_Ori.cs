@@ -47,7 +47,7 @@ public class Skill_Item_Ori : MonoBehaviour
     }
     public virtual void CreateFunc()
     {
-
+        manager.FoucsOb[info.ActiveIdx+5].SetActive(true);
     }
     public virtual void StartFunc()
     {

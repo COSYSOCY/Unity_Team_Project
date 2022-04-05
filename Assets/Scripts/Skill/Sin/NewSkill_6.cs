@@ -21,6 +21,7 @@ public class NewSkill_6 : Skill_Ori
     public override void CreateFunc()
     {
         UpDamage = 2f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

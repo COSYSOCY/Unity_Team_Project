@@ -31,6 +31,7 @@ public class NewSkill_8 : Skill_Ori
     public override void CreateFunc()
     {
         UpCntx = 2f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {

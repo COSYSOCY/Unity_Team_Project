@@ -39,6 +39,7 @@ public class NewSkill_4 : Skill_Ori
         upangleRange = 60f;
         upbullet1.SetActive(true);
         upbullet2.SetActive(true);
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

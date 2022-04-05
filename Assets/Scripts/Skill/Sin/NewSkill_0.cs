@@ -22,6 +22,7 @@ public class NewSkill_0 : Skill_Ori
         CreateUp = true;
         bulletname = "Bullet_0_1";
         upScale = 0.5f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
         Debug.Log("Å×½ºÆ®");
     }
     public override void LevelUpFunc()

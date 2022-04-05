@@ -22,7 +22,7 @@ public class NewSkill_1 : Skill_Ori
     {
         UpPie = 1;
         bulletname = "Bullet_1_1";
-
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     public override void LevelUpFunc()
     {
