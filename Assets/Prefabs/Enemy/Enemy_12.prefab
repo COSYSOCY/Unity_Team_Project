@@ -182,6 +182,10 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
+  enemyMat:
+  - {fileID: 4518708555874938781}
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,13 +261,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8666222085425565302, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8666222085425565636, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
       propertyPath: m_Name
       value: Toadstool
       objectReference: {fileID: 0}
     - target: {fileID: 8666222085425565636, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8666222085430772420, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
       propertyPath: m_CastShadows
@@ -298,5 +306,10 @@ PrefabInstance:
 --- !u!4 &4518708555878416061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8666222085425075172, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
+  m_PrefabInstance: {fileID: 5111926905612709209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4518708555874938781 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8666222085430772420, guid: 6817f99c996d6954bbc09b0c865d9807, type: 3}
   m_PrefabInstance: {fileID: 5111926905612709209}
   m_PrefabAsset: {fileID: 0}

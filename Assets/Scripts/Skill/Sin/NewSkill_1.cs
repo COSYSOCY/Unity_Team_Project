@@ -53,7 +53,7 @@ public class NewSkill_1 : Skill_Ori
         {
             for (int i = 0; i < cnt; i++)
             {
-
+                SoundManager.inst.SoundPlay(8);
                 GameObject target;
                 if (i >= Enemys.Count)
                 {

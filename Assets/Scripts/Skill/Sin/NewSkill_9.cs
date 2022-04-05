@@ -29,6 +29,7 @@ public class NewSkill_9 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
+            SoundManager.inst.SoundPlay(16);
             StartCoroutine(Skill_Update2());
         }
     }

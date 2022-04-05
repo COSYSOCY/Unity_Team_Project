@@ -182,6 +182,10 @@ MonoBehaviour:
   IsBoss: 1
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
+  enemyMat:
+  - {fileID: 3634607105898385318}
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +307,11 @@ GameObject:
 --- !u!4 &3634607105911636736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471314, guid: cc727ad8412844a4dad709243b618021, type: 3}
+  m_PrefabInstance: {fileID: 3634607105911976466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3634607105898385318 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13729204, guid: cc727ad8412844a4dad709243b618021, type: 3}
   m_PrefabInstance: {fileID: 3634607105911976466}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1885179941082320666

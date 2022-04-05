@@ -196,6 +196,9 @@ MonoBehaviour:
   NoPosReset: 1
   moveCheck: 0
   IsKn: 0
+  enemyMat:
+  - {fileID: 1445905071758166360}
+  onhit: 0
 --- !u!114 &-3566236342721188876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,5 +295,10 @@ PrefabInstance:
 --- !u!4 &1445905071769418088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 401782, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}
+  m_PrefabInstance: {fileID: 1445905071769802782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1445905071758166360 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13799750, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}
   m_PrefabInstance: {fileID: 1445905071769802782}
   m_PrefabAsset: {fileID: 0}
