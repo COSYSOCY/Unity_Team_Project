@@ -151,7 +151,7 @@ MonoBehaviour:
   playcolcheck: 0
   meshRenderer: {fileID: 0}
   ItemText: {fileID: 0}
-  chi: {fileID: 0}
+  chi: {fileID: 52665973029596687}
   item_enum: 3
 --- !u!114 &1323529153900349890
 MonoBehaviour:
