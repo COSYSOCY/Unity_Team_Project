@@ -182,6 +182,8 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3118294153675456976, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3118294153675890160, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
       propertyPath: m_RootOrder

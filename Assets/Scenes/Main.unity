@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 224448041558217906, guid: 95354847711d363408aebd57a0dc92ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -110.79883
+      objectReference: {fileID: 0}
     - target: {fileID: 224659561221535154, guid: 95354847711d363408aebd57a0dc92ae, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -1059.13
@@ -839,7 +843,7 @@ MonoBehaviour:
     prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
     size: 30
   - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
@@ -2263,7 +2267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -135.3}
+  m_AnchoredPosition: {x: 0, y: -135.2998}
   m_SizeDelta: {x: 1040, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177330892
@@ -9210,7 +9214,7 @@ GameObject:
   - component: {fileID: 778146708}
   - component: {fileID: 778146713}
   - component: {fileID: 778146712}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -9317,7 +9321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 4eb1675a9fea4564bbd35f54266b008c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 711a4e6a854e1c342b5d1d9b041a957e, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -9337,7 +9341,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 778146710}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
