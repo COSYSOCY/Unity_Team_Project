@@ -182,6 +182,7 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
