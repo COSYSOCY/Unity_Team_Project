@@ -11,6 +11,7 @@ public class Skill_Ori : MonoBehaviour
     public Skill_Info info;
     public LayerMask layermask;
     protected bool start = false;
+    public bool CreateUp = false;
 
 
 
@@ -174,7 +175,10 @@ int bulletCntMax; // 투사체 최대갯수
     {
 
     }
+    public virtual void CreateFunc()
+    {
 
+    }
     public void LevelUp()
     {
 

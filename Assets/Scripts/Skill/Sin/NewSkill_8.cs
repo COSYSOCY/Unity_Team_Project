@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NewSkill_8 : Skill_Ori
 {
-
+    float UpCntx = 1f;
 
     public override void LevelUpFunc()
     {
@@ -22,6 +22,15 @@ public class NewSkill_8 : Skill_Ori
         LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpCntx = 2f;
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
@@ -36,17 +45,13 @@ public class NewSkill_8 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
-        int cnt = _BulletCnt();
-        if (MainSingleton.instance.playerstat.SkillItemactive[6] >= 1)
-        {
-            cnt += 2;
-        }
+
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 20f, layermask).ToList();
 
-            for (int i = 0; i < cnt; i++)
+            for (int i = 0; i < _BulletCnt()*UpCntx; i++)
             {
                 int ran = Random.Range(0, Enemys.Count);
                 GameObject target =  Enemys[ran].gameObject;

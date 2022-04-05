@@ -7,7 +7,7 @@ public class NewSkill_10 : Skill_Ori
 {
     float Radius;
     public GameObject bullet;
-
+    float UpRange = 1f;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -17,8 +17,17 @@ public class NewSkill_10 : Skill_Ori
 
         //
 
-        Radius = 5f; // 거리
+        Radius = 5.5f; // 거리
 
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpRange = 3f;
     }
 
     public override void LevelUpFunc()
@@ -55,11 +64,7 @@ public class NewSkill_10 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        float times = _BulletTime();
-        if (MainSingleton.instance.playerstat.SkillItemactive[9] >= 1)
-        {
-            times *= 1.2f;
-        }
+        float local = _AtRange();
         for (int i = 0; i < _BulletCnt(); i++)
         {
             float angle = i * Mathf.PI * 2 / _BulletCnt();
@@ -70,9 +75,10 @@ public class NewSkill_10 : Skill_Ori
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
             //par = Instantiate(BulletD, pos, rot);
             GameObject par = ObjectPooler.SpawnFromPool("Bullet_10", pos, rot);
+            par.transform.localScale = new Vector3(local * UpRange, local * UpRange, local * UpRange);
             par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
             par.GetComponent<Bullet_Info>().damage = _Damage();
-            par.GetComponent<Bullet_Info>().Destorybullet(times);
+            par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         }
         yield return null;
     }

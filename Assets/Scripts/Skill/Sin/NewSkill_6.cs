@@ -5,12 +5,22 @@ using UnityEngine;
 
 public class NewSkill_6 : Skill_Ori
 {
+    float UpDamage=1f;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
-        
+
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpDamage = 2f;
     }
 
     public override void LevelUpFunc()
@@ -39,11 +49,6 @@ public class NewSkill_6 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        float da = _Damage();
-        if (MainSingleton.instance.playerstat.SkillItemactive[8] >= 1)
-        {
-            da *= 1.2f;
-        }
         yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
@@ -57,14 +62,14 @@ public class NewSkill_6 : Skill_Ori
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
             GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
-            effect.transform.localScale = new Vector3(local*3, local*3, local*3);
+            effect.transform.localScale = new Vector3(local, local, local);
             Collider[] Enemys;
             Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
             if (Enemys.Length > 0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(da);
+                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage()*UpDamage);
                 }
             }
         }

@@ -100,13 +100,13 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 98,능력시트에있는 능력 3번의 8단계 설명,"범위 증가 +10, 공격력 +10","Range increase +10, damage +10",範囲は+10、ダメージ+ 10を増やします,范围增加+10，损坏+10,"Range-Erhöhung +10, Beschädigung +10","RANGO AUMENTO +10, DAÑO +10"
 99,,(능력4번 텍스트),(Ability 4 times text),（能力4回のテキスト）,（能力4次文本）,(Fähigkeit 4-mal text),(Habilidad 4 veces texto)
 100,능력시트에있는 능력 4번의 초기 설명,총구에서 화염방사기,Flame radiator in muzzle,銃口の炎のラジエーター,火焰散热器在枪口中,Flammenkühler in Mündung,Radiador de la llama en el hocico
-101,능력시트에있는 능력 4번의 1단계 설명,공격력+0.5,Damage +0.5,ダメージ+ 0.5,伤害+0.5,Beschädigung +0.5.,Daño +0.5
-102,능력시트에있는 능력 4번의 2단계 설명,투사체 지속시간 +0.5초,Projectian duration +0.5 seconds,プロジェクティアン期間+ 0.5秒,项目持续时间+0.5秒,"Projektierdauer +0,5 Sekunden",Duración proyectiana +0.5 segundos
-103,능력시트에있는 능력 4번의 3단계 설명,범위증가 +1,Range +1,範囲+1,范围+1,Bereich +1.,Rango +1
+101,능력시트에있는 능력 4번의 1단계 설명,공격력+1,Damage +1,ダメージ+1,损坏+1,Beschädigung +1.,Daños +1
+102,능력시트에있는 능력 4번의 2단계 설명,지속시간 +0.5초,Duration +0.5 seconds,期間+ 0.5秒,持续时间+0.5秒,"Dauer +0,5 Sekunden",Duración +0.5 segundos
+103,능력시트에있는 능력 4번의 3단계 설명,지속시간 +0.5초,Duration +0.5 seconds,期間+ 0.5秒,持续时间+0.5秒,"Dauer +0,5 Sekunden",Duración +0.5 segundos
 104,능력시트에있는 능력 4번의 4단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
-105,능력시트에있는 능력 4번의 5단계 설명,공격력+0.5,Damage +0.5,ダメージ+ 0.5,伤害+0.5,Beschädigung +0.5.,Daño +0.5
-106,능력시트에있는 능력 4번의 6단계 설명,투사체 지속시간증가 +0.5초,Increased projection duration +0.5 seconds,投影期間+ 0.5秒の増加,增加投影持续时间+0.5秒,"Erhöhte Projektionsdauer +0,5 Sekunden",Mayor duración de proyección +0.5 segundos
-107,능력시트에있는 능력 4번의 7단계 설명,범위증가 +1,Range +1,範囲+1,范围+1,Bereich +1.,Rango +1
+105,능력시트에있는 능력 4번의 5단계 설명,공격력+1,Damage +1,ダメージ+1,损坏+1,Beschädigung +1.,Daños +1
+106,능력시트에있는 능력 4번의 6단계 설명,지속시간 +0.5초,Duration +0.5 seconds,期間+ 0.5秒,持续时间+0.5秒,"Dauer +0,5 Sekunden",Duración +0.5 segundos
+107,능력시트에있는 능력 4번의 7단계 설명,"지속시간 +0.5초 , 공격력+1","Duration +0.5 seconds, ATK +1",期間+ 0.5秒、ATK +1,持续时间+0.5秒，ATK +1,"Dauer +0,5 Sekunden, ATK +1","Duración +0.5 segundos, ATK +1"
 108,능력시트에있는 능력 4번의 8단계 설명,공격력 +1 ,Damage +1,ダメージ+1,损坏+1,Beschädigung +1.,Daños +1
 109,sad,범위증가 +5 지속시간증가 +1초,Range +5 duration increased +1 seconds,範囲+ 5持続時間は+ 1秒増加しました,范围+5持续时间增加+1秒,Bereich +5 Dauer erhöhte +1 Sekunden,Rango +5 Duración aumentó +1 segundos
 110,능력시트에있는 능력 5번의 초기 설명,한명의적에게 집중공격,Focus on one ordinate,縦座標に焦点を当てる,专注于一个纵坐标,Fokus auf eine Ordinate,Centrarse en una ordenada

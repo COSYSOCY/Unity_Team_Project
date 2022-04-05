@@ -45,9 +45,18 @@ public class Skill_Item_Ori : MonoBehaviour
     {
 
     }
+    public virtual void CreateFunc()
+    {
+
+    }
     public virtual void StartFunc()
     {
         LevelUp();
+        if (MainSingleton.instance.playerstat.Skillactive[info.CreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill[info.CreateIdx].GetComponent<Skill_Ori>().CreateFunc();
+            CreateFunc();
+        }
     }
     protected void OnEnable()
     {

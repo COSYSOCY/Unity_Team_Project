@@ -6,10 +6,13 @@ using UnityEngine;
 public class NewSkill_4 : Skill_Ori
 {
     float angleRange;
+    float upangleRange;
     public GameObject bullet;
+    public GameObject upbullet1;
+    public GameObject upbullet2;
     IEnumerator coroutine;
 
-    bool Skillcheck1 = false;
+
 
     public ParticleSystem partic;
 
@@ -23,7 +26,19 @@ public class NewSkill_4 : Skill_Ori
         //
         
         angleRange = 60f; // °¢µµ
-        //coroutine = Skill_Update2();
+                          //coroutine = Skill_Update2();
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        //partic.startSize *= 1.2f;
+        upangleRange = 60f;
+        upbullet1.SetActive(true);
+        upbullet2.SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -49,11 +64,7 @@ public class NewSkill_4 : Skill_Ori
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
 
-            if (!Skillcheck1 && MainSingleton.instance.playerstat.SkillItemactive[4] >= 1)
-            {
-                Skillcheck1 = true;
-                partic.startSize *= 1.2f;
-            }
+
 
         }
     }
@@ -76,7 +87,7 @@ public class NewSkill_4 : Skill_Ori
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
-                    float dotValue = Mathf.Cos(Mathf.Deg2Rad * (angleRange / 2));
+                    float dotValue = Mathf.Cos(Mathf.Deg2Rad * ((angleRange+ upangleRange) / 2));
                     Vector3 direction = Enemys[i].transform.position - bulletPos.transform.position;
                     direction.Normalize();
                     if (Vector3.Dot(direction,Player.transform.forward)>dotValue)

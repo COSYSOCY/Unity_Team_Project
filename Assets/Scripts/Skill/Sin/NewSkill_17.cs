@@ -19,6 +19,15 @@ public class NewSkill_17 : Skill_Ori
 
         Radius = 5f; // °Å¸®
 
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+
     }
 
     public override void LevelUpFunc()
