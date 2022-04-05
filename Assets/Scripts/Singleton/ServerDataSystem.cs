@@ -7,8 +7,16 @@ using UnityEngine;
 using Newtonsoft.Json;
 using UnityEngine.SceneManagement;
 
+
+
 public class ServerDataSystem : MonoBehaviour
 {
+    //#if UNITY_EDITOR
+
+    //    public string GPath = Application.dataPath;
+    //#else
+    //    public string GPath = Application.persistentDataPath;
+    //#endif
     public ServerData serverdata=new ServerData();
 
     public static ServerDataSystem inst;
@@ -38,7 +46,6 @@ public class ServerDataSystem : MonoBehaviour
 
 
         string sDirPath;
-
         sDirPath = Application.dataPath + "/Save";
 
         DirectoryInfo di = new DirectoryInfo(sDirPath);
@@ -77,23 +84,52 @@ public class ServerDataSystem : MonoBehaviour
     }
     public IEnumerator LoadData()
     {
+        //GameInfo.inst.PlayerLevel = 1;
+        //GameInfo.inst.PlayerXp = 0;
+        //GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
+        //GameInfo.inst.CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
+        //GameInfo.inst.AdGoldFreeMax = 3;
+
+        //GameInfo.PlayerGold = 600;
+        //GameInfo.PlayerPoint = 5;
+        //GameInfo.inst.PlayerEnergy = 50;
+        //GameInfo.inst.Language = "Korean";
+        //SceneManager.LoadScene("01_Loby_Main");
+        //yield break;
         string Check = Application.dataPath + "/Save/Save.json";
-        if (File.Exists(Check)==false)
+        if (File.Exists(Check))
         {
-            yield return CreateFile();
+            FileStream streamload = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.Open);
+            byte[] data = new byte[streamload.Length];
+            streamload.Read(data, 0, data.Length);
+            streamload.Close();
+            string jsonData = Encoding.UTF8.GetString(data);
+
+            yield return serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
+            GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
+            GameInfo.inst.PlayerXp = serverdata.PlayerXp;
+            GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
+            GameInfo.PlayerGold = serverdata.PlayerGold;
+            GameInfo.PlayerPoint = serverdata.PlayerPoint;
+            GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
+            GameInfo.inst.CharacterActive = serverdata.CharacterActive;
+            GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
+            GameInfo.inst.PlayerCards = serverdata.PlayerCards;
+            GameInfo.inst.PlayerMap = serverdata.PlayerMap;
+            GameInfo.inst.Language = serverdata.Language;
+            GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+
+            GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
+
+            IsSave = true;
+            SceneManager.LoadScene("01_Loby_Main");
+
         }
-        FileStream streamload = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.Open);
-        byte[] data = new byte[streamload.Length];
-        streamload.Read(data, 0, data.Length);
-        streamload.Close();
-        string jsonData = Encoding.UTF8.GetString(data);
-
-        yield return serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
-
-
-
-        if (serverdata.PlayerLevel == 0)
+        else
         {
+            IsSave = true;
+            SceneManager.LoadScene("01_Loby_Main");
+            yield return CreateFile();
             GameInfo.inst.PlayerLevel = 1;
             GameInfo.inst.PlayerXp = 0;
             GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
@@ -103,7 +139,6 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.PlayerGold = 600;
             GameInfo.PlayerPoint = 5;
             GameInfo.inst.PlayerEnergy = 50;
-
 
             SystemLanguage lang = Application.systemLanguage;
 
@@ -134,44 +169,39 @@ public class ServerDataSystem : MonoBehaviour
             {
                 GameInfo.inst.Language = "Korean";
             }
-            
-
-
-        }
-        else
-        {
-            GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
-            GameInfo.inst.PlayerXp = serverdata.PlayerXp;
-            GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
-            GameInfo.PlayerGold = serverdata.PlayerGold;
-            GameInfo.PlayerPoint = serverdata.PlayerPoint;
-            GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
-            GameInfo.inst.CharacterActive = serverdata.CharacterActive;
-            GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
-            GameInfo.inst.PlayerCards = serverdata.PlayerCards;
-            GameInfo.inst.PlayerMap = serverdata.PlayerMap;
-            GameInfo.inst.Language = serverdata.Language;
-            GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
-
-
+            GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
+            // GameInfo.inst.PlayerEnergyMax = 20;
+            SaveData();
             
 
 
 
 
 
-
-
-
         }
-        GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
-       // GameInfo.inst.PlayerEnergyMax = 20;
-        SaveData();
-        IsSave = true;
-        SceneManager.LoadScene("01_Loby_Main");
+        
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+        
+
     }
 
-    void OnDestroy()
+    void OnApplicationQuit()
     {
         if (IsSave)
         {

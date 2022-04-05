@@ -22,7 +22,17 @@ public class EnemyFunc : MonoBehaviour
         return Pos;
     }
 
-    //횟수 ,스폰시간최소,스폰시간최대,최소몹,최대몹,에너미몹,
+
+    /// <summary>
+    /// 횟수 ,스폰시간최소,스폰시간최대,최소몹,최대몹,에너미몹,
+    /// </summary>
+    /// <param name="cnt"></param>
+    /// <param name="sMin"></param>
+    /// <param name="sMax"></param>
+    /// <param name="cMin"></param>
+    /// <param name="cMax"></param>
+    /// <param name="g"></param>
+    /// <returns></returns>
     public IEnumerator EnemyCreateFunc1(int cnt, float sMin, float sMax, int cMin, int cMax, params string[] g)
     {
         
@@ -34,7 +44,7 @@ public class EnemyFunc : MonoBehaviour
         for (int i = 0; i < cnt; i++)
         {
             int r = Random.Range(0, g.Length);
-            int randomcnt = Random.Range(cMin, cMax);
+            int randomcnt = Random.Range(cMin, cMax+1);
             for (int z = 0; z < randomcnt; z++)
             {
             GameObject enemy = ObjectPooler.SpawnFromPool(g[r], GetRandomPos(), Quaternion.LookRotation(MainSingleton.instance.Player.transform.position));
@@ -43,7 +53,12 @@ public class EnemyFunc : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(sMin, sMax));
         }
     }
-
+    /// <summary>
+    /// 횟수
+    /// </summary>
+    /// <param name="cnt"></param>
+    /// <param name="g"></param>
+    /// <returns></returns>
     public IEnumerator EnemyCreateFunc2(int cnt, params string[] g)
     {
         yield return null;

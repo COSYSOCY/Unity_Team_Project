@@ -69,7 +69,7 @@ public class EndGameScript : MonoBehaviour
                 bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
 
                 GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard[i]);
-                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardFocus == 1)
+                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardFocus == 1)
                 {
                     bt.GetComponent<bootyInfo>().Focus.SetActive(true);
                 }

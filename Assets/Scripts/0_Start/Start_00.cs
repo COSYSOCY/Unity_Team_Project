@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Start_00 : MonoBehaviour
 {
-
+    bool check = false;
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0)&&GameInfo.inst.GameStart)
+        if (Input.GetMouseButtonUp(0)&&GameInfo.inst.GameStart&&!check)
         {
+            check = true;
             StartCoroutine(ServerDataSystem.inst.LoadData());
-            
+           // Destroy(gameObject);    
         }
     }
 

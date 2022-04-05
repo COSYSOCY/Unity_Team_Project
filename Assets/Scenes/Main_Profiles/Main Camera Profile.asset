@@ -52,7 +52,7 @@ MonoBehaviour:
     value: -1
   maxLuminance:
     overrideState: 1
-    value: -0.5
+    value: 0
   keyValue:
     overrideState: 0
     value: 1
@@ -155,13 +155,13 @@ MonoBehaviour:
     value: 1
   softKnee:
     overrideState: 1
-    value: 0.5
+    value: 0.4
   clamp:
     overrideState: 1
     value: 65472
   diffusion:
     overrideState: 1
-    value: 7
+    value: 6
   anamorphicRatio:
     overrideState: 1
     value: 0

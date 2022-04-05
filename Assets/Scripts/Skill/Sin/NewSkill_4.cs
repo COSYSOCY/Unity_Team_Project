@@ -21,8 +21,8 @@ public class NewSkill_4 : Skill_Ori
         //bullet.SetActive(true);
 
         //
-        SoundManager.inst.SoundPlay(11);
-        angleRange = 45f; // 각도
+        
+        angleRange = 60f; // 각도
         //coroutine = Skill_Update2();
     }
 
@@ -44,6 +44,7 @@ public class NewSkill_4 : Skill_Ori
 
             yield return new WaitForSeconds(_CoolMain(true));
             bullet.SetActive(true);
+            SoundManager.inst.SoundPlay(11);
             yield return null;
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());
@@ -70,7 +71,7 @@ public class NewSkill_4 : Skill_Ori
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos, Player.transform.lossyScale.x*_AtRange(), layermask);
+            Enemys = Physics.OverlapSphere(pos, Player.transform.lossyScale.x*_AtRange()*1.5f, layermask);
             if (Enemys.Length >0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
