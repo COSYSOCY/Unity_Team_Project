@@ -8,9 +8,9 @@ public class Start_00 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)&&GameInfo.inst.GameStart)
         {
-            SceneManager.LoadScene("01_Loby_Main");
+            StartCoroutine(ServerDataSystem.inst.LoadData());
             
         }
     }

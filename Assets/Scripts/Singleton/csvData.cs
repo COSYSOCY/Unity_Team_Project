@@ -164,6 +164,7 @@ public class csvData : MonoBehaviour
        Exp_Read();
        Card_Read();
        Map_Read();
+        GameInfo.inst.GameStart = true;
     }
 
     public void Player_EXP_Read()
@@ -195,7 +196,7 @@ public class csvData : MonoBehaviour
 
 
         }
-        GameInfo.inst.mapcheck();
+        
     }
     public void Card_Read()
     {
