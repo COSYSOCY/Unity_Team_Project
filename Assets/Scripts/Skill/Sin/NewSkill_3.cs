@@ -11,7 +11,7 @@ public class NewSkill_3 : Skill_Ori
     public GameObject bullet;
     void Start_Func() //시작시 설정
     {
-            SoundManager.inst.SoundPlay(8);
+            SoundManager.inst.SoundPlay(10);
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());

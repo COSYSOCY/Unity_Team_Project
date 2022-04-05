@@ -38,6 +38,7 @@ public class NewSkill_10 : Skill_Ori
         {
 
             yield return new WaitForSeconds(_CoolMain(true));
+            SoundManager.inst.SoundPlay(17);
             bullet.SetActive(true);
             StartCoroutine(Skill_Update2());
             StartCoroutine(Skill_Update3());

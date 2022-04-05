@@ -19,9 +19,9 @@ public class NewSkill_4 : Skill_Ori
         LevelUp();
         StartCoroutine(Skill_Update());
         //bullet.SetActive(true);
-        
-        //
 
+        //
+        SoundManager.inst.SoundPlay(11);
         angleRange = 45f; // °¢µµ
         //coroutine = Skill_Update2();
     }

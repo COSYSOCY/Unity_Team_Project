@@ -27,7 +27,7 @@ public class NewSkill_0 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            
+            SoundManager.inst.SoundPlay(7);
             if (MainSingleton.instance.playerstat.SkillItemactive[10]>=1)
             {
                 StartCoroutine(Skill_Update3());

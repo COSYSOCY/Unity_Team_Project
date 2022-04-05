@@ -843,7 +843,7 @@ MonoBehaviour:
     prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
     size: 30
   - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
@@ -4860,6 +4860,12 @@ MonoBehaviour:
     size: 1
   - tag: Bullet_0_1
     prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
     size: 50
 --- !u!114 &401227049
 MonoBehaviour:
@@ -19493,6 +19499,12 @@ MonoBehaviour:
     size: 1
   - tag: Bullet_0_1
     prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
     size: 50
 --- !u!1 &1864439628
 GameObject:
