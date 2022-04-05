@@ -32,7 +32,7 @@ public class NewSkill_3 : Skill_Ori
 
             bullet.gameObject.SetActive(false);
             partic1.gameObject.SetActive(true);
-        UpRange = 2;
+        UpRange = 2.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
