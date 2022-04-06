@@ -47,25 +47,64 @@ public class NewSkill_7 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        float local = _AtRange();
 
+        float f1 = 0f;
+
+        for (int i = 1; i <= _BulletCnt(); i++)
+        {
+            float ff = 0f;
+            if (Player.transform.rotation.y >=180)
+            {
+                ff = -1f;
+            }
+            Vector3 pos = bulletPos.transform.position;
+            pos.y = 1;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, 90f, 0)));
+
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.transform.localScale = new Vector3(local, local, local);
+            yield return new WaitForSeconds(0.2f);
+            if (i % 2 == 0)
+            {
+                pos = bulletPos.transform.position;
+                pos.y = 1;
+                if (Player.transform.rotation.y >= 180)
+                {
+                    ff = 1f;
+                }
+                GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, -90f, 0)));
+                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.2f);
+                f1 += 2f;
+            }
+        }
+
+
+        
+    }
+
+    IEnumerator testasdasd()
+    {
         float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
 
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.Euler(new Vector3(0,90f,0)));
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
-            bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet2.transform.localScale = new Vector3(local, local, local);
+        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
+        bullet.GetComponent<Bullet_Info>().damage = _Damage();
+        bullet.transform.localScale = new Vector3(local, local, local);
+        GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
+        bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+        bullet2.transform.localScale = new Vector3(local, local, local);
 
-            yield return new WaitForSeconds(0.3f);
-                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,2), Quaternion.Euler(new Vector3(0, -90f, 0)));
-                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
-                    bullet3.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f,-2f), Quaternion.Euler(new Vector3(0, -90f, 0)));
-            bullet4.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet4.transform.localScale = new Vector3(local, local, local);
+        yield return new WaitForSeconds(0.3f);
+        GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, 2), Quaternion.Euler(new Vector3(0, -90f, 0)));
+        bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+        bullet3.transform.localScale = new Vector3(local, local, local);
+        GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, -2f), Quaternion.Euler(new Vector3(0, -90f, 0)));
+        bullet4.GetComponent<Bullet_Info>().damage = _Damage();
+        bullet4.transform.localScale = new Vector3(local, local, local);
         if (CreateUp)
         {
             yield return new WaitForSeconds(0.3f);
@@ -85,8 +124,6 @@ public class NewSkill_7 : Skill_Ori
             bullet8.transform.localScale = new Vector3(local, local, local);
         }
     }
-
-
     private void OnEnable()
     {
         if (start == false && info.goodstart)

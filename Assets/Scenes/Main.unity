@@ -4388,6 +4388,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &356899099
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,6 +4755,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &379585901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5127,6 +5169,18 @@ MonoBehaviour:
   - tag: Player_Hit
     prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
     size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!114 &401227049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6584,6 +6638,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &526078456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11350,6 +11425,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &908301675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11826,6 +11922,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &916861108
 GameObject:
   m_ObjectHideFlags: 0
@@ -15582,6 +15699,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &1247016607
 GameObject:
   m_ObjectHideFlags: 0
@@ -21350,6 +21488,27 @@ MonoBehaviour:
   - tag: item_HP_1
     prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
     size: 1
+  - tag: Bullet_0_1
+    prefab: {fileID: 1593895901896320269, guid: 61264d16c52e0cc46a51775f0a18ff63, type: 3}
+    size: 50
+  - tag: Enemy_Hit
+    prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
+    size: 50
+  - tag: Player_Hit
+    prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
+    size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &1785088164
 GameObject:
   m_ObjectHideFlags: 0
@@ -22150,6 +22309,18 @@ MonoBehaviour:
   - tag: Player_Hit
     prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
     size: 50
+  - tag: Bullet_1_1
+    prefab: {fileID: 1997882812359486, guid: b0a25f260ab45364eb2b22014b31953c, type: 3}
+    size: 10
+  - tag: Bullet_2_1
+    prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
+    size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!1 &1864439628
 GameObject:
   m_ObjectHideFlags: 0
