@@ -87,6 +87,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillReal1=new List<float>();
     public static List<float> SkillReal2=new List<float>();
     public static List<float> SkillReal3=new List<float>();
+    public static List<int> SkillCreateIdx=new List<int>();
 
     public static List<int> SkillItemNameNum = new List<int>();
     public static List<int> SkillItemInfoNum = new List<int>();
@@ -108,7 +109,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemRange = new List<float>();
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
-
+    public static List<int> SkillItemCreateIdx = new List<int>();
 
     public static List<float> MonsterHp = new List<float>();
     public static List<float> MonsterDefence = new List<float>();
@@ -283,6 +284,7 @@ public class csvData : MonoBehaviour
             SkillInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             SkillIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             SkillMaxLevel.Add(int.Parse(data[i]["최대레벨"].ToString()));
+            SkillCreateIdx.Add(int.Parse(data[i]["조합인덱스"].ToString()));
             SkillBulletCnt.Add(int.Parse(data[i]["투사체수"].ToString()));
             SkillBulletCntMax.Add(int.Parse(data[i]["투사체최대갯수"].ToString()));
             SkillMinDamage.Add(float.Parse(data[i]["최소 데미지"].ToString()));
@@ -314,6 +316,7 @@ public class csvData : MonoBehaviour
             SkillItemInfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
             SkillItemIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             SkillItemMaxLevel.Add(int.Parse(data[i]["최대 레벨"].ToString()));
+           SkillItemCreateIdx.Add(int.Parse(data[i]["조합인덱스"].ToString()));
             SkillItemHpPlusC.Add(float.Parse(data[i]["체력증가(상수)"].ToString()));
             SkillItemHpPlusP.Add(float.Parse(data[i]["체력증가(%)"].ToString()));
             SkillItemHpRegen.Add(float.Parse(data[i]["체력회복"].ToString()));

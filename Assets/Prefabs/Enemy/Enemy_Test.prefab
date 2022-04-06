@@ -182,6 +182,7 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 13799750, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}

@@ -182,6 +182,10 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
+  enemyMat:
+  - {fileID: 3869829805204574430}
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,11 +263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 13789778, guid: 029d9185f6e211d43bc030303d81548a, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13789778, guid: 029d9185f6e211d43bc030303d81548a, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13789778, guid: 029d9185f6e211d43bc030303d81548a, type: 3}
       propertyPath: m_DynamicOccludee
@@ -286,5 +290,10 @@ PrefabInstance:
 --- !u!4 &3869829805208042928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 427836, guid: 029d9185f6e211d43bc030303d81548a, type: 3}
+  m_PrefabInstance: {fileID: 3869829805207878284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3869829805204574430 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13789778, guid: 029d9185f6e211d43bc030303d81548a, type: 3}
   m_PrefabInstance: {fileID: 3869829805207878284}
   m_PrefabAsset: {fileID: 0}

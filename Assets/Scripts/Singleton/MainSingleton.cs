@@ -16,6 +16,7 @@ public class MainSingleton : MonoBehaviour
 
     public NewSkill_13 skill_13;
     public PullRange pullrange;
+    public Transform UiTextparentTransform;
 
     public List<Material> HitEffect;
     private void Awake()

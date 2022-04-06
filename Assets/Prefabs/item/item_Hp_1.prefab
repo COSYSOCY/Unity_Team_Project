@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f0e6dda90a876fd49a328fd1b689dbb9, type: 2}
+  - {fileID: 2100000, guid: 72890fe99d23cd343bc2f139e6be0df8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   playcolcheck: 0
   meshRenderer: {fileID: 0}
   ItemText: {fileID: 0}
-  chi: {fileID: 0}
+  chi: {fileID: 7740371005803264272}
   item_enum: 2
 --- !u!114 &1323529153900349890
 MonoBehaviour:

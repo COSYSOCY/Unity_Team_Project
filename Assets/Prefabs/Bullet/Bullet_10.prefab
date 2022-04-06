@@ -9983,6 +9983,7 @@ MonoBehaviour:
   damage: 0
   pie: 0
   move: 0
+  KnokTime: 0
 --- !u!114 &-5191269388169824819
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NewSkill_9 : Skill_Ori
 {
-
+    float UpRange = 1f;
 
     public override void LevelUpFunc()
     {
@@ -22,6 +22,16 @@ public class NewSkill_9 : Skill_Ori
         LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpRange = 3f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
@@ -29,17 +39,14 @@ public class NewSkill_9 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
+            SoundManager.inst.SoundPlay(16);
             StartCoroutine(Skill_Update2());
         }
     }
 
     IEnumerator Skill_Update2()
     {
-        int cnt = _BulletCnt();
-        if (MainSingleton.instance.playerstat.SkillItemactive[5] >= 1)
-        {
-            cnt += 1;
-        }
+
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
         float local = _AtRange();
@@ -51,7 +58,7 @@ public class NewSkill_9 : Skill_Ori
 
         if (Enemys.Count > 0)
         {
-            for (int i = 0; i < cnt; i++)
+            for (int i = 0; i < _BulletCnt(); i++)
             {
 
                 GameObject target= Enemys[0].gameObject;
@@ -66,7 +73,7 @@ public class NewSkill_9 : Skill_Ori
                 //bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
+                bullet.transform.localScale = new Vector3(local*UpRange, local* UpRange, local* UpRange);
                 yield return new WaitForSeconds(0.2f);
             }
         }

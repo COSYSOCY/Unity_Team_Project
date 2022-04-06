@@ -9,6 +9,15 @@ public class NewSkill_15 : Skill_Ori
         manager.skill_Add(gameObject,info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()

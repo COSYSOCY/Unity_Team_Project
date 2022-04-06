@@ -26,7 +26,9 @@ public class Skill_Info : MonoBehaviour
     public float SkillReal1; // 실수1
     public float SkillReal2; // 실수2
     public float SkillReal3; // 실수3
+    public int SkillCreateIdx;//조합인덱스
 
+    public int ActiveIdx;//활성화번수
 
     [Space(16)]
     [Header("스킬설명")]
@@ -52,6 +54,7 @@ public class Skill_Info : MonoBehaviour
     public List<float> SkillReal2Check=new List<float>();
     public List<float> SkillReal3Check=new List<float>();
 
+
     public bool goodstart = false;
 
     void Awake()
@@ -60,6 +63,7 @@ public class Skill_Info : MonoBehaviour
         Skill_Icon = csvData.SkillIconNum[Index_Text];
         bulletCntMax=csvData.SkillBulletCntMax[Index_Text];
         LvMax = csvData.SkillMaxLevel[Index_Text];
+        SkillCreateIdx = csvData.SkillCreateIdx[Index_Text];
         for (int i = Index_Text; i < Index_Text+ csvData.SkillMaxLevel[Index_Text]; i++)
         {
             int a= csvData.SkillInfoNum[i];
@@ -80,6 +84,7 @@ public class Skill_Info : MonoBehaviour
             SkillReal1Check.Add(csvData.SkillReal1[i]);
             SkillReal2Check.Add(csvData.SkillReal2[i]);
             SkillReal3Check.Add(csvData.SkillReal3[i]);
+
 
 
 

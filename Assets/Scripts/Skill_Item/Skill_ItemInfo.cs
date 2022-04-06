@@ -26,6 +26,8 @@ public class Skill_ItemInfo : MonoBehaviour
     public float Range; // 자석증가
     public float Real1; // 실수1
     public float Real2; // 실수2
+    public int CreateIdx; // 실수2
+    public int ActiveIdx; // 활성화 번째
 
 
 
@@ -60,6 +62,7 @@ public class Skill_ItemInfo : MonoBehaviour
         Skill_Item_Name = csvData.GameText(csvData.SkillItemNameNum[Index_Text]);
         Skill_Icon = csvData.SkillItemIconNum[Index_Text];
         LvMax = csvData.SkillItemMaxLevel[Index_Text];
+        CreateIdx = csvData.SkillItemCreateIdx[Index_Text];
         for (int i = Index_Text; i < Index_Text + LvMax; i++)
         {
             int a = csvData.SkillItemInfoNum[i];

@@ -24,6 +24,7 @@ public class SkillManager : MonoBehaviour
 
     public List<CharSkill> CharSkillAndItem;
     public List<GameObject> Player_Skill_Item;
+    public List<GameObject> FoucsOb;
 
 
 
@@ -41,6 +42,8 @@ public class SkillManager : MonoBehaviour
     {
         //Debug.Log("üũ");
         ui_skill_Icon[playerinfo.SkillCnt].sprite = IconManager.inst.Icons[icon];
+        ui_skill_Icon[playerinfo.SkillCnt].gameObject.SetActive(true);
+        g.GetComponent<Skill_Info>().ActiveIdx = playerinfo.SkillCnt;
         playerinfo.SkillCnt++;
         Skill_All_Active.Add(g);
         Skill_Active.Add(g);
@@ -50,6 +53,8 @@ public class SkillManager : MonoBehaviour
     public void skill_item_Add(GameObject g, int icon)
     {
         ui_skillItem_Icon[playerinfo.SkillItemCnt].sprite = IconManager.inst.Icons[icon];
+        ui_skillItem_Icon[playerinfo.SkillItemCnt].gameObject.SetActive(true);
+        g.GetComponent<Skill_ItemInfo>().ActiveIdx = playerinfo.SkillItemCnt;
         playerinfo.SkillItemCnt++;
         Skill_All_Active.Add(g);
         Skill_Item_Active.Add(g);

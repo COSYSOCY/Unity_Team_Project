@@ -17,6 +17,7 @@ public class LevelUp : MonoBehaviour
     public GameObject[] Skill_Lv;
     public GameObject[] Skill_Text;
     public GameObject[] Skill_Image;
+    public GameObject[] Create_Image;
     public List<GameObject> LevelupUiOb;
     public PlayerMoving moving;
     public GameObject Money;
@@ -61,7 +62,7 @@ public class LevelUp : MonoBehaviour
         LevelUiObject_Effect.transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetUpdate(true);
         int cnt = 0;
 
-        if (playerInfo.Lv==2)
+        if (playerInfo.Lv<=3)
         {
             for (int i = 0; i < skillManager.Skills.Count; i++)
             {
@@ -196,6 +197,7 @@ public class LevelUp : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
+                Create_Image[i].SetActive(false);
                 string name = "";
                 int Lv = 0;
                 int image = 0;
@@ -212,10 +214,19 @@ public class LevelUp : MonoBehaviour
                     if (Lv == 0)
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(460) + "!";
+                        int CIdx = num2[i].GetComponent<Skill_Info>().SkillCreateIdx;
+                        if (MainSingleton.instance.playerstat.SkillItemactive[CIdx]>=1)
+                        {
+
+                        Create_Image[i].SetActive(true);
+                        int image2 = MainSingleton.instance.skillmanager.All_Skill_Items[CIdx].GetComponent<Skill_ItemInfo>().Skill_Icon;
+                        Create_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image2];
+                        }
                     }
                     else
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
+                        
                     }
 
                     Skill_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image];
@@ -233,9 +244,18 @@ public class LevelUp : MonoBehaviour
                     if (Lv == 0)
                     {
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(460) + "!";
+                        int CIdx = num2[i].GetComponent<Skill_ItemInfo>().CreateIdx;
+                        if (MainSingleton.instance.playerstat.Skillactive[CIdx] >= 1)
+                        {
+                            Create_Image[i].SetActive(true);
+                        int image2 = MainSingleton.instance.skillmanager.All_Skill[CIdx].GetComponent<Skill_Info>().Skill_Icon;
+                        Create_Image[i].GetComponent<Image>().sprite = IconManager.inst.Icons[image2];
+                        }
+
                     }
                     else
                     {
+                        
                         Skill_Lv[i].GetComponent<Text>().text = csvData.GameText(461) + ": " + (Lv + 1);
                     }
 

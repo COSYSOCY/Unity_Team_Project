@@ -182,6 +182,10 @@ MonoBehaviour:
   IsBoss: 0
   NoPosReset: 0
   moveCheck: 0
+  IsKn: 0
+  enemyMat:
+  - {fileID: 8398373940857941607}
+  onhit: 0
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 3118294153675456976, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118294153675456980, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3118294153675890160, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
       propertyPath: m_RootOrder
@@ -298,5 +306,10 @@ PrefabInstance:
 --- !u!4 &8398373940852637511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3118294153675890160, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
+  m_PrefabInstance: {fileID: 6902730256859030199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &8398373940857941607 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3118294153689058512, guid: 4ee150fee7825a148b7ceb77408044b5, type: 3}
   m_PrefabInstance: {fileID: 6902730256859030199}
   m_PrefabAsset: {fileID: 0}

@@ -12,6 +12,10 @@ public class Bullet_Trigger_Damage : MonoBehaviour
             other.GetComponent<Enemy_Info>().Damaged(info.damage);
             //Debug.Log("üũ");
         }
-
+        if (other.gameObject.CompareTag("DeOb"))
+        {
+            other.GetComponent<DeObjectSystem>().Damaged(info.damage);
+            //Debug.Log("üũ");
+        }
     }
 }

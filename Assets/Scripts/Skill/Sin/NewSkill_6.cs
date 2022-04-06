@@ -5,12 +5,23 @@ using UnityEngine;
 
 public class NewSkill_6 : Skill_Ori
 {
+    float UpDamage=1f;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
-        
+
+        if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
+        {
+            MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
+            CreateFunc();
+        }
+    }
+    public override void CreateFunc()
+    {
+        UpDamage = 2f;
+        manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
 
     public override void LevelUpFunc()
@@ -29,6 +40,7 @@ public class NewSkill_6 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
+            SoundManager.inst.SoundPlay(13);
             for (int i = 0; i < _BulletCnt(); i++)
             {
             StartCoroutine(Skill_Update2());
@@ -38,11 +50,6 @@ public class NewSkill_6 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        float da = _Damage();
-        if (MainSingleton.instance.playerstat.SkillItemactive[8] >= 1)
-        {
-            da *= 1.2f;
-        }
         yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
@@ -52,20 +59,21 @@ public class NewSkill_6 : Skill_Ori
         bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
         while (bullet.activeSelf)
         {
-            yield return new WaitForSeconds(0.4f);
+            
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
-            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
-            effect.transform.localScale = new Vector3(local*3, local*3, local*3);
+            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", bullet.transform.position, Quaternion.identity);
+            effect.transform.localScale = new Vector3(local, local, local);
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
+            Enemys = Physics.OverlapSphere(pos2, Player.transform.lossyScale.x* _AtRange()*0.5f, layermask);
             if (Enemys.Length > 0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(da);
+                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage()*UpDamage);
                 }
             }
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
