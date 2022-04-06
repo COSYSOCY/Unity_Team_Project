@@ -54,6 +54,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+**/SAVE
+*/SAVE
+Assets//SAVE
+Assets/Save/Save.json
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -64,7 +68,3 @@ UserSettings/EditorUserSettings.asset
 UserSettings/EditorUserSettings
 /UserSettings/EditorUserSettings
 **/EditorUserSettings.asset
-**/SAVE
-*/SAVE
-/SAVE
-Assets/Save/Save.json
