@@ -34,12 +34,23 @@ public class LobyUIMgr : MonoBehaviour
 
     private void Start()
     {
+
+        GameInfo.inst.PlayerMap[0] = 1;
+        GameInfo.inst.CharacterActive[0] = 2;
+
         TextReset();
         LobyGoldAc();
         check();
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
-       ServerDataSystem.inst.SaveData();
+
+       ServerDataSystem.inst.SaveData2();
+        Test();
+    }
+
+    public void Test()
+    {
+
     }
 
 

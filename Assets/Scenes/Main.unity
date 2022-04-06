@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: 3c731968c1407394c867ff04abfa0ce6, type: 3}
+  Maps: {fileID: 8974632829078057019, guid: 107c83fe139a75f4aaa090450d04c40b, type: 3}
 --- !u!114 &81247186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
     prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
     size: 30
   - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: 375b03b7ae62d614eae4654bd6ec4992, type: 3}
+  Maps: {fileID: 8974632829078057019, guid: f60986e3e3c39d942a4daa1d77b79b20, type: 3}
 --- !u!114 &401227048
 MonoBehaviour:
   m_ObjectHideFlags: 0

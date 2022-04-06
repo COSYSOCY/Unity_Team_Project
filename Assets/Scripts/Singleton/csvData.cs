@@ -197,7 +197,10 @@ public class csvData : MonoBehaviour
 
 
         }
+
         
+
+
     }
     public void Card_Read()
     {
