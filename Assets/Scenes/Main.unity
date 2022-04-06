@@ -899,6 +899,12 @@ MonoBehaviour:
   - tag: Bullet_2_1
     prefab: {fileID: 1927010967321763998, guid: 7109aad7839de8d40a63140b9d4bfdc2, type: 3}
     size: 10
+  - tag: item_gold_2
+    prefab: {fileID: 8017372287861029996, guid: 81dd40385b35f3d4baadb8a0057abbc6, type: 3}
+    size: 10
+  - tag: item_Hp_1
+    prefab: {fileID: 8017372287861029996, guid: 589ebc2becebd6c48908aba35d5addcd, type: 3}
+    size: 10
 --- !u!4 &81247187
 Transform:
   m_ObjectHideFlags: 0
@@ -17058,6 +17064,7 @@ MonoBehaviour:
   skillmanager: {fileID: 1428158546}
   skill_13: {fileID: 615924997}
   pullrange: {fileID: 6523417664767116158}
+  UiTextparentTransform: {fileID: 618755127}
   HitEffect: []
 --- !u!1 &1445900485
 GameObject:

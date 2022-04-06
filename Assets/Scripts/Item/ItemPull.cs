@@ -94,7 +94,7 @@ public class ItemPull : MonoBehaviour
                     break;
                 case Item_ENUM.Card:
                     playerstatus.CardDrop(item_stat);
-                    SoundManager.inst.SoundPlay(3);
+                    SoundManager.inst.SoundPlay(0);
 
                     break;
                 default:

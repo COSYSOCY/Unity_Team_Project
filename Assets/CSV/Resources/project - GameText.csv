@@ -14,7 +14,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 12,asd,캐릭터3설명,Character 3 Description,文字3説明,字符3描述,Zeichen 3 Beschreibung.,Personaje 3 Descripción
 13,asd,캐릭터4설명,Character 4 Description,文字4説明,字符4描述,Zeichen 4 Beschreibung.,Personaje 4 Descripción
 14,asd,캐릭터5설명,Character 5 Description,文字5説明,字符5描述,Zeichen 5 Beschreibung.,Personaje 5 Descripción
-15,asd,캐릭터6설명,Character 6 Description,文字6説明,字符6描述,Zeichen 6 Beschreibung,Personaje 6 Descripción
+15,asd,캐릭터6설명,Character 6 Description,文字6説明,字符6描述,Zeichen 6 Beschreibung.,Personaje 6 Descripción
 16,asd,캐릭터7설명,Character 7 Description,文字7の説明,字符7描述,Zeichen 7 Beschreibung.,Personaje 7 Descripción
 17,asd,캐릭터8설명,Character 8 Description,キャラクター8の説明,字符8描述,Zeichen 8 Beschreibung.,Personaje 8 Descripción
 18,asd,캐릭터9설명,Character 9 Description,キャラクター9説明,字符9描述,Zeichen 9 Beschreibung.,Personaje 9 Descripción
@@ -49,8 +49,8 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 47,장신구시트에있는 7번 이름,투사체이속,The projector,プロジェクター,投影机,Der Projektor,El proyector
 48,장신구시트에있는 8번 이름,이속,Speed,速度,速度,GESCHWINDIGKEIT,VELOCIDAD
 49,장신구시트에있는 9번 이름,경험치증가량,Experienced value,経験豊富な価値,经验丰富的价值,Erfahrener Wert,Valor experimentado
-50,장신구시트에있는 10번 이름,분노,anger,怒り,愤怒,Zorn,enojo
-51,장신구시트에있는 11번 이름,의지,will,意思,将要,Wille,Voluntad
+50,장신구시트에있는 10번 이름,분노,anger,怒り,愤怒,Wut,enojo
+51,장신구시트에있는 11번 이름,의지,will,意思,将要,Wille,Será
 52,장신구시트에있는 12번 이름,아이템자석,Item magnet,アイテムマグネット,物品磁铁,Artikelmagnet,Imán de artículos
 53,,장신구14이름,Ornaments 14 Names,装飾品14の名前,装饰品14个名字,Ornamente 14 Namen.,Adornos 14 nombres
 54,asd,장신구15이름,Jewelry 15 name,ジュエリー15名,珠宝15名称,Schmuck 15 Name,Joyería 15 Nombre
@@ -76,9 +76,9 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 74,능력시트에있는 능력 1번의 4단계 설명,"투사체 수 증가 + 1 , 공격력 +2","Increased projections + 1, Damage +2",投影+ 1、ダメージ+2の増加,增加预测+ 1，损坏+2,"Erhöhte Projektionen + 1, Beschädigung +2","Mayores proyecciones + 1, Daño +2"
 75,능력시트에있는 능력 1번의 5단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 76,능력시트에있는 능력 1번의 6단계 설명,투사체 수 증가 + 2,Increased projector + 2,プロジェクターの増加+ 2,增加投影仪+ 2,Erhöhter Projektor + 2,Mayor proyector + 2
-77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
-78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
-79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+ 4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
+78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文字）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
+79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文字）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 80,능력시트에있는 능력 2번의 초기 설명,랜덤 적에게 일직선 레이저,Large Laser Laser,大レーザーレーザー,大激光激光器,Großer Laserlaser.,Láser láser grande
 81,능력시트에있는 능력 2번의 1단계 설명,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 82,능력시트에있는 능력 2번의 2단계 설명,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
@@ -88,7 +88,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 86,능력시트에있는 능력 2번의 6단계 설명,"쿨다운 10% 감소,공격력+2","Cool Down 10% Decrease, Damage +2",10％の減少、ダメージ+2を冷やす,冷却10％减少，损坏+2,"Abkühlen Sie 10% Abnehmen, Beschädigung +2","Enfriar el 10% de disminución, daños +2"
 87,능력시트에있는 능력 2번의 7단계 설명,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 88,능력시트에있는 능력 2번의 8단계 설명,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
-89,,(능력3번 텍스트),(Ability 3 text),（能力3テキスト）,（能力3文本）,(Fähigkeit 3 ​​Text),(Habilidad 3 texto)
+89,,(능력3번 텍스트),(Ability 3 text),（能力3テキスト）,（能力3文字）,(Fähigkeit 3 ​​Text),(Habilidad 3 texto)
 90,능력시트에있는 능력 3번의 초기 설명,플레이어 주변에 데미지를주는 자기장 생성,Generate magnetic field giving damage around the player,プレーヤーの周りにダメージを与える磁場を生成します,产生磁场在玩家周围造成损坏,"Magnetfeld erzeugen, das Schaden um den Spieler gibt",Generar campo magnético dando daño alrededor del jugador.
 91,능력시트에있는 능력 3번의 1단계 설명,공격간격 감소,Decrease attack interval,攻撃間隔を減らす,减少攻击间隔,Angriffsintervall verringern,Disminuir el intervalo de ataque
 92,능력시트에있는 능력 3번의 2단계 설명,공격력 + 3,Damage + 3,ダメージ+ 3,损坏+ 3,Beschädigung + 3.,Daño + 3
@@ -99,25 +99,25 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 97,능력시트에있는 능력 3번의 7단계 설명,"공격력 +2 , 공격간격 감소","Damage +2, reduced attack spacing",+ 2、攻撃間隔を減らすこと,损坏+2，减少攻击间距,"Beschädigung +2, reduzierter Angriffsabstand","Daño +2, espacio reducido de ataque."
 98,능력시트에있는 능력 3번의 8단계 설명,"공격력 +2 , 공격간격 감소","Damage +2, reduced attack spacing",+ 2、攻撃間隔を減らすこと,损坏+2，减少攻击间距,"Beschädigung +2, reduzierter Angriffsabstand","Daño +2, espacio reducido de ataque."
 99,,(능력4번 텍스트),(Ability 4 times text),（能力4回のテキスト）,（能力4次文本）,(Fähigkeit 4-mal text),(Habilidad 4 veces texto)
-100,능력시트에있는 능력 4번의 초기 설명,총구에서 화염방사기,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-101,능력시트에있는 능력 4번의 1단계 설명,공격력+2,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-102,능력시트에있는 능력 4번의 2단계 설명,지속시간 +0.5초,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-103,능력시트에있는 능력 4번의 3단계 설명,공격력 +2 쿨다운 10%감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-104,능력시트에있는 능력 4번의 4단계 설명,지속시간 +0.5초,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-105,능력시트에있는 능력 4번의 5단계 설명,"공격 간격감소,공격력 +2",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-106,능력시트에있는 능력 4번의 6단계 설명,쿨다운 감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-107,능력시트에있는 능력 4번의 7단계 설명,공격 간격감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-108,능력시트에있는 능력 4번의 8단계 설명,공격 간격감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+100,능력시트에있는 능력 4번의 초기 설명,총구에서 화염방사기,Flame radiator in muzzle,銃口の炎のラジエーター,火焰散热器在枪口中,Flammenkühler in Mündung,Radiador de la llama en el hocico
+101,능력시트에있는 능력 4번의 1단계 설명,공격력+2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+102,능력시트에있는 능력 4번의 2단계 설명,지속시간 +0.5초,Duration +0.5 seconds,期間+ 0.5秒,持续时间+0.5秒,"Dauer +0,5 Sekunden",Duración +0.5 segundos
+103,능력시트에있는 능력 4번의 3단계 설명,공격력 +2 쿨다운 10%감소,Damage +2 Cool Down 10% reduction,ダメージ+2は10％の減少を冷却します,损坏+2冷却降低10％,Beschädigung +2 Abkühlen 10% Reduktion,Daño +2 enfriar 10% de reducción
+104,능력시트에있는 능력 4번의 4단계 설명,지속시간 +0.5초,Duration +0.5 seconds,期間+ 0.5秒,持续时间+0.5秒,"Dauer +0,5 Sekunden",Duración +0.5 segundos
+105,능력시트에있는 능력 4번의 5단계 설명,"공격 간격감소,공격력 +2","Attack interval, damage +2",攻撃間隔、ダメージ+2,攻击间隔，损坏+2,"Angriffsintervall, Beschädigung +2","Intervalo de ataque, daños +2"
+106,능력시트에있는 능력 4번의 6단계 설명,쿨다운 감소,Cool down reduction,縮小を冷却します,冷却减少,Reduzierung abkühlen,REDUCCIÓN DE ENFRIAMIENTO
+107,능력시트에있는 능력 4번의 7단계 설명,공격 간격감소,Schedule attack interval,スケジュール攻撃間隔,安排攻击间隔,Zeitplan Angriffsintervall,Intervalo de ataque de horario
+108,능력시트에있는 능력 4번의 8단계 설명,공격 간격감소,Schedule attack interval,スケジュール攻撃間隔,安排攻击间隔,Zeitplan Angriffsintervall,Intervalo de ataque de horario
 109,sad,범위증가 +5 지속시간증가 +1초,Range +5 duration increased +1 seconds,範囲+ 5持続時間は+ 1秒増加しました,范围+5持续时间增加+1秒,Bereich +5 Dauer erhöhte +1 Sekunden,Rango +5 Duración aumentó +1 segundos
 110,능력시트에있는 능력 5번의 초기 설명,한명의적에게 집중공격,Focus on one ordinate,縦座標に焦点を当てる,专注于一个纵坐标,Fokus auf eine Ordinate,Centrarse en una ordenada
-111,능력시트에있는 능력 5번의 1단계 설명,투사체 수 증가 +1,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-112,능력시트에있는 능력 5번의 2단계 설명,공격력증가 +2,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-113,능력시트에있는 능력 5번의 3단계 설명,투사체 속도증가 20%,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-114,능력시트에있는 능력 5번의 4단계 설명,투사체 수 증가 +1,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-115,능력시트에있는 능력 5번의 5단계 설명,공격력 +2,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-116,능력시트에있는 능력 5번의 6단계 설명,"쿨다운 10% 감소,공격력+1",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-117,능력시트에있는 능력 5번의 7단계 설명,"투사체 수 증가 +1,공격력+2",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-118,능력시트에있는 능력 5번의 8단계 설명,"투사체 수 증가 +1,공격력+2",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+111,능력시트에있는 능력 5번의 1단계 설명,투사체 수 증가 +1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+112,능력시트에있는 능력 5번의 2단계 설명,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+113,능력시트에있는 능력 5번의 3단계 설명,투사체 속도증가 20%,20% projection rate,20％の投影率,20％投影率,20% Projektionsrate,Tasa de proyección del 20%
+114,능력시트에있는 능력 5번의 4단계 설명,투사체 수 증가 +1,Increased projections +1,投影+ 1の増加,增加预测+1,Erhöhte Projektionen +1.,Mayores proyecciones +1
+115,능력시트에있는 능력 5번의 5단계 설명,공격력 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
+116,능력시트에있는 능력 5번의 6단계 설명,"쿨다운 10% 감소,공격력+1","Cool Down 10% Decrease, Damage +1",10％の減少、ダメージ+1を冷やす,冷却10％的减少，损坏+1,"Abkühlen 10% Abnahme, Beschädigung +1","Enfriar 10% de disminución, daños +1"
+117,능력시트에있는 능력 5번의 7단계 설명,"투사체 수 증가 +1,공격력+2","Increased projector +1, damage +2",プロジェクター+1、ダメージ+2の増加,增加投影仪+1，损坏+2,"Erhöhter Projektor +1, Beschädigung +2","Mayor proyector +1, daños +2"
+118,능력시트에있는 능력 5번의 8단계 설명,"투사체 수 증가 +1,공격력+2","Increased projector +1, damage +2",プロジェクター+1、ダメージ+2の増加,增加投影仪+1，损坏+2,"Erhöhter Projektor +1, Beschädigung +2","Mayor proyector +1, daños +2"
 119,,공격력증가 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
 120,융단폭격 1렙,무작위로 포격해주는 함선을 소환 공격력 50,Summoning the ship that is randomly bombarded ATK 50,ATK 50をランダムに衝撃している船を召喚する,召集随机轰炸ATK 50的船舶,"Beschwörung des Schiffes, das zufällig atk 50 bombardiert ist",Convocando el barco que está aleatoriamente bombardeado ATK 50
 121,융단폭격 2렙,공격력+4,Damage +4,ダメージ+ 4,损坏+4,Beschädigung +4.,Daño +4
@@ -150,23 +150,23 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 148,능력시트에있는 능력 9번의 8단계 설명,"투사체 수 증가,공격력+2","Increased projector, damage +2",プロジェクターの増加、ダメージ+2,增加投影仪，损坏+2,"Erhöhter Projektor, Schaden +2","Mayor proyector, daños +2"
 149,,(능력9번 텍스트),(Ability 9th text),（能力第9テキスト）,（能力第9条文字）,(Fähigkeit 9. Text),(Habilidad 9º texto)
 150,능력시트에있는 능력 10번의 초기 설명,가장 가까운적에게 날아가며 부메랑처럼 돌아옵니다,I fly to the nearest closest and returns like a boomerang.,私は最も近い最も近いものに飛び、ブーメランのように戻る。,我飞到最接近的最近，并像旋转邦一样回归。,Ich fliege zum nächsten am nächsten und kehrt wie ein Bumerang zurück.,Vuelo al más cercano más cercano y vuelvo como un boomerang.
-151,능력시트에있는 능력 10번의 1단계 설명,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-152,능력시트에있는 능력 10번의 2단계 설명,쿨다운 10% 감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-153,능력시트에있는 능력 10번의 3단계 설명,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-154,능력시트에있는 능력 10번의 4단계 설명,공격력 +4,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-155,능력시트에있는 능력 10번의 5단계 설명,치명타+20%,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-156,능력시트에있는 능력 10번의 6단계 설명,쿨다운10%감소,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-157,능력시트에있는 능력 10번의 7단계 설명,"투사체 수 증가,공격력+4",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-158,능력시트에있는 능력 10번의 8단계 설명,"투사체 수 증가,공격력+4",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+151,능력시트에있는 능력 10번의 1단계 설명,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
+152,능력시트에있는 능력 10번의 2단계 설명,쿨다운 10% 감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
+153,능력시트에있는 능력 10번의 3단계 설명,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
+154,능력시트에있는 능력 10번의 4단계 설명,공격력 +4,Damage +4,ダメージ+ 4,损坏+4,Beschädigung +4.,Daño +4
+155,능력시트에있는 능력 10번의 5단계 설명,치명타+20%,Critical + 20%,クリティカル+ 20％,临界+ 20％,Kritisch + 20%,Crítico + 20%
+156,능력시트에있는 능력 10번의 6단계 설명,쿨다운10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
+157,능력시트에있는 능력 10번의 7단계 설명,"투사체 수 증가,공격력+4","Increase the number of projections, ATK +4",投影数、ATK + 4を増やします,增加投影的数量，ATK +4,"Erhöhen Sie die Anzahl der Projektionen, ATK +4","Aumente el número de proyecciones, ATK +4"
+158,능력시트에있는 능력 10번의 8단계 설명,"투사체 수 증가,공격력+4","Increase the number of projections, ATK +4",投影数、ATK + 4を増やします,增加投影的数量，ATK +4,"Erhöhen Sie die Anzahl der Projektionen, ATK +4","Aumente el número de proyecciones, ATK +4"
 159,sad,asdasdsad,Asdasdsad,Asdasdad.,asdasdsad.,Asdasedsad,Asdosdad
 160,sad,플레이어 주위를 원형으로 돌며 적을 공격합니다,I turn around the player around the player,私はプレーヤーの周りのプレイヤーを向いています,我在播放器周围转身,Ich drehe den Spieler um den Spieler um,Me doy vuelta al jugador alrededor del jugador.
-161,sad,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+161,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 162,sad,공격력 +5,Damage +5,ダメージ+5,损坏+5,Beschädigung +5.,Daño +5
-163,sad,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-164,sad,지속시간 +1,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-165,sad,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-166,sad,"공격력+3,쿨다운 20% 감소",로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
-167,sad,투사체 수 증가,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+163,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
+164,sad,지속시간 +1,Duration +1,期間+1,持续时间+1,Dauer +1.,DURACIÓN +1
+165,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
+166,sad,"공격력+3,쿨다운 20% 감소","Damage +3, Cool Down 20% reduction",ダメージ+ 3、20％の削減を冷却してください,损坏+3，减少20％,"Beschädigung +3, abkühlen Sie 20% Reduzierung","Daño +3, enfríe el 20% de reducción del 20%"
+167,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 168,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 169,sad,투사체 수 증가,Increase the number of projectors,プロジェクターの数を増やします,增加投影仪的数量,Erhöhen Sie die Anzahl der Projektoren,Aumentar el número de proyectores
 170,sad,기도문이 주변을 회전하며 공격합니다,The prayer rotates and attacks around.,祈りは回転し、攻撃します。,祈祷旋转和攻击周围。,Das Gebet dreht sich um und greift herum.,La oración gira y ataca.
@@ -180,15 +180,15 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 178,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
 179,sad,(능력12번 텍스트),(Ability 12 text),（能力12テキスト）,（能力12文本）,(Fähigkeit 12 Text),(Habilidad 12 Texto)
 180,sad,헤일이 날라감,Haled,hal,hal,Haared,Reducido
-181,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-182,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-183,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-184,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-185,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-186,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-187,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-188,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
-189,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文字）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+181,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+182,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+183,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+184,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+185,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+186,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+187,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+188,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
+189,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
 190,sad,무작위 방향 미사일발사,Random Direction Missile Launch,ランダムな方向ミサイルの発売,随机方向导弹发射,Zufällige Richtung Rakete Launch,Lanzamiento de misiles de dirección aleatoria
 191,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
 192,sad,(능력14번 텍스트),(Ability 14 text),（能力14テキスト）,（能力14文本）,(Fähigkeit 14 Text),(Habilidad 14 Texto)
@@ -470,7 +470,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 468,asd,월드,World,世界,世界,WELT,MUNDO
 469,asd,카드,Card,カード,卡片,KARTE,TARJETA
 470,asd,설정,Setting,setting,环境,Einstellung,Ajuste
-471,asd,입장,Enter,入力,进入,BETRETEN,INGRESAR
+471,asd,입장,Enter,入力,进入,EINGABE,INGRESAR
 472,asd,데미지표시,Damage Numbers,ダメージ数,损害数字,Beschädigungsnummern,Números de daño
 473,asd,플레이,Play,遊ぶ,玩,ABSPIELEN,JUGAR
 474,asd,구매,Buy,買う,买,KAUFEN,COMPRAR
@@ -491,13 +491,13 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 489,1번 카드 설명,체력+50,Fitness +50,フィットネス+ 50,健身+50,Fitness +50.,Fitness +50
 490,2번 카드 설명,방어+4,Defense +4,防衛+ 4,防御+4,Verteidigung +4.,Defensa +4
 491,3번 카드 설명,이속+20%,Five + 20%,5 + 20％,五+ 20％,Fünf + 20%,Cinco + 20%
-492,4번 카드 설명,데미지+20%,Damage + 20%,ダメージ+ 20％,伤害+ 20％,Beschädigung + 20%,Daño + 20%
+492,4번 카드 설명,데미지+20%,Damage + 20%,ダメージ+ 20％,损伤+ 20％,Beschädigung + 20%,Daño + 20%
 493,5번 카드 설명,투사체증가+1,Projectors +1,プロジェクター+1,投影仪+1,Projektoren +1.,Proyectores +1
 494,6번 카드 설명,쿨타임 감소+15%,Cool time reduction + 15%,クールな時間の削減+ 15％,酷时间减少+ 15％,Kühle Zeitreduzierung + 15%,Reducción de tiempo fresco + 15%
 495,7번 카드 설명,체력회복+0.5,Stamina Recovery +0.5,スタミナの回復+0.5,耐力恢复+0.5,Stamina-Wiederherstellung +0.5.,Recuperación de Stamina +0.5
-496,8번 카드 설명,경험치+10%,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+496,8번 카드 설명,경험치+10%,Experience + 10%,経験+ 10％,经验+ 10％,Erfahrung + 10%,Experiencia + 10%
 497,9번 카드 설명,골드증가+50%,Gold ₩ + 50%,ゴールド₩+ 50％,金₩+ 50％,Gold ₩ + 50%,Oro ₩ + 50%
-498,10번 카드 설명,공격범위+10%,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+498,10번 카드 설명,공격범위+10%,Attack Range + 10%,攻撃範囲+ 10％,攻击范围+ 10％,Angriffsbereich + 10%,Rango de ataque + 10%
 499,asd,팔기,Sell,売る,卖,Verkaufen,Vender
 500,asd,카드칸이 가득 차있습니다,Card Full,カードが完全に,卡片,Karte voll,Tarjeta llena
 501,asd,확인!,OK!,わかった！,好的！,OK!,OK!

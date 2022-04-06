@@ -18,6 +18,7 @@ TagManager:
   - Check2
   - FxTemporaire
   - Object
+  - DeOb
   layers:
   - Default
   - TransparentFX
