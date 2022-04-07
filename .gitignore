@@ -56,8 +56,12 @@ sysinfo.txt
 *.unitypackage
 **/SAVE
 */SAVE
-Assets//SAVE
+
+**/Save
+*/Save
+Assets/SAVE
 Assets/Save/Save.json
+Assets/Save
 
 # Crashlytics generated file
 crashlytics-build.properties

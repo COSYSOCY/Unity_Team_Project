@@ -190,6 +190,7 @@ public class PlayerStatus : MonoBehaviour
             hpbar.value = 0;
             return;
         }
+        camerashake();
         StartCoroutine(HitDmg());
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
         SliderUpdate();

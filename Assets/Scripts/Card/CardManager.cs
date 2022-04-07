@@ -34,17 +34,17 @@ public class CardManager : MonoBehaviour
     void SizeSet()
     {
         float f = 0;
-        if (GameInfo.inst.PlayerCards.Count > 5)
+        if (GameInfo.inst.PlayerCards.Count > 4)
         {
-            f = (GameInfo.inst.PlayerCards.Count / 5) * 200f;
-            f += 200f;
+            f = (GameInfo.inst.PlayerCards.Count / 4) * 280f;
+            f += 1500f;
         }
         else
         {
-            f = 200;
+            f = 1500;
         }
 
-        rectTrans.sizeDelta = new Vector2(rectTrans.sizeDelta.x, f + 200f); //크기설정
+        rectTrans.sizeDelta = new Vector2(rectTrans.sizeDelta.x, f + 0f); //크기설정
     }
     // Start is called before the first frame update
     void Start()

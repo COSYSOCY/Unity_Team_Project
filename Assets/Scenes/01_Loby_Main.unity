@@ -34670,7 +34670,7 @@ MonoBehaviour:
   - {fileID: 839805144}
   CardPrefab: {fileID: 6317072819463840284, guid: b1faba5dbdd3063449ee2fe6e37c9282, type: 3}
   parent: {fileID: 573360125}
-  rectTrans: {fileID: 498418218}
+  rectTrans: {fileID: 573360125}
   ClickIdx: 0
   cardlist: []
   CardName: {fileID: 766063496}
