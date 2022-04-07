@@ -40,6 +40,10 @@ public class UIManager : MonoBehaviour
     public void KillUp()
     {
         playerinfo.Kill++;
+        if (MainSingleton.instance.playerstat.SkillItemactive[16] >= 1)
+        {
+            MainSingleton.instance.item16.Func();
+        }
         //KillText.text =""+playerinfo.Kill;
     }
     public void GoldUp(int gold)

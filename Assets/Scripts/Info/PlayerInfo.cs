@@ -25,6 +25,8 @@ public class PlayerInfo : MonoBehaviour
     public int SkillItemMax;
     public int ADRe = 0;
 
+    public float BounsDmg = 0;
+
     private void Start()
     {
         //Hp = 200f;

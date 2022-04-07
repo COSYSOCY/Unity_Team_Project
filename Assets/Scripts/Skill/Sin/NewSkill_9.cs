@@ -70,7 +70,7 @@ public class NewSkill_9 : Skill_Ori
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Trigger_9>().CurTime = _BulletTime();
                 bullet.GetComponent<Bullet_Trigger_9>().StartFunc();
-                //bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale = new Vector3(local*UpRange, local* UpRange, local* UpRange);

@@ -184,6 +184,7 @@ MonoBehaviour:
   Hp_Max: 1
   Denfece: 0
   Speed: 0
+  SpeedOri: 0
   ItemIdx: 0
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
@@ -199,6 +200,7 @@ MonoBehaviour:
   enemyMat:
   - {fileID: 4498418631511251684}
   onhit: 0
+  nav: {fileID: -3990043763293345170}
 --- !u!114 &-3566236342721188876
 MonoBehaviour:
   m_ObjectHideFlags: 0

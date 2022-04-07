@@ -31,6 +31,9 @@ public class Skill_Item_Ori : MonoBehaviour
         info.Real1 = info.Real1Check[info.Lv];
         info.Real2 = info.Real2Check[info.Lv];
 
+        info.Pie = info.PieCheck[info.Lv];
+        info.DmgPer = info.DmgPerCheck[info.Lv];
+
         if (info.HpPlusC+ info.HpPlusPer > 0)
         {
             stat.PlayerHpMax();

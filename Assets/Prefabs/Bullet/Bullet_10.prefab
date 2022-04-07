@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 54777970317930892}
   - component: {fileID: -8845444771760199463}
   - component: {fileID: -3872233590964687420}
-  - component: {fileID: -5191269388169824819}
+  - component: {fileID: 9177086078887620850}
   m_Layer: 0
   m_Name: Bullet_10
   m_TagString: Untagged
@@ -9984,7 +9984,7 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
---- !u!114 &-5191269388169824819
+--- !u!114 &9177086078887620850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9993,7 +9993,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1374267004960804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db45692a7722e2d4581d028a49ddd4a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7287feb1b943d1545a74ded10795fec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: -3872233590964687420}

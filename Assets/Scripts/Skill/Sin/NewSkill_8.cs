@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NewSkill_8 : Skill_Ori
 {
-    float UpCntx = 1f;
+
 
     public override void LevelUpFunc()
     {
@@ -30,7 +30,7 @@ public class NewSkill_8 : Skill_Ori
     }
     public override void CreateFunc()
     {
-        UpCntx = 2f;
+        CreateUp = true;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
@@ -40,10 +40,61 @@ public class NewSkill_8 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(15);
+            if (CreateUp)
+            {
+            StartCoroutine(Skill_Update3());
+
+            }
+            else
+            {
             StartCoroutine(Skill_Update2());
+
+            }
         }
     }
+    IEnumerator Skill_Update3()
+    {
 
+        Vector3 pos = bulletPos.transform.position;
+        pos.y = 1;
+        float local = _AtRange();
+        List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 20f, layermask).ToList();
+
+        for (int i = 0; i < _BulletCnt(); i++)
+        {
+            int ran = Random.Range(0, Enemys.Count);
+            GameObject target = Enemys[ran].gameObject;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_8", target.transform.position, Quaternion.Euler(new Vector3(-90f, 0f)));
+
+
+            Collider[] Enemyss;
+            bullet.transform.localScale = new Vector3(local, local, local);
+            Enemyss = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x * local, layermask);
+            if (Enemyss.Length > 0)
+            {
+                for (int z = 0; z < Enemyss.Length; z++)
+                {
+                    Enemyss[z].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                }
+            }
+
+
+
+
+            bullet.transform.localScale = new Vector3(local, local, local);
+
+            if (Enemys.Count == 1)
+            {
+                yield break;
+            }
+            Enemys.RemoveAt(ran);
+
+
+        }
+
+        yield return null;
+
+    }
     IEnumerator Skill_Update2()
     {
 
@@ -52,7 +103,7 @@ public class NewSkill_8 : Skill_Ori
         float local = _AtRange();
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 20f, layermask).ToList();
 
-            for (int i = 0; i < _BulletCnt()*UpCntx; i++)
+            for (int i = 0; i < _BulletCnt(); i++)
             {
                 int ran = Random.Range(0, Enemys.Count);
                 GameObject target =  Enemys[ran].gameObject;

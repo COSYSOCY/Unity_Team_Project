@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Enemy_Info : MonoBehaviour
 {
     public int Idx ;
@@ -10,6 +10,7 @@ public class Enemy_Info : MonoBehaviour
     public float Denfece;
 
     public float Speed;
+    public float SpeedOri;
     public int ItemIdx;
 
     public GameObject TextUi;
@@ -23,10 +24,14 @@ public class Enemy_Info : MonoBehaviour
     public bool NoPosReset;
     public bool moveCheck;
     public bool IsKn;
+    public bool IsStun;
     //È÷Æ® Á¡¸ê
     public SkinnedMeshRenderer[] enemyMat;
     //public SkinnedMeshRenderer[] enemyMat2;
     public bool onhit;
+    public NavMeshAgent nav;
+
+    public GameObject StunEffect;
 
     private void Awake()
     {
@@ -39,6 +44,7 @@ public class Enemy_Info : MonoBehaviour
         Hp_Max = csvData.MonsterHp[Idx];
         Denfece = csvData.MonsterDefence[Idx];
         Speed = csvData.MonsterSpeed[Idx];
+        SpeedOri = Speed;
         ItemIdx = csvData.MonsterItemIdx[Idx];
         Enemy_Damage = csvData.MonsterDamage[Idx];
     }
@@ -209,15 +215,48 @@ public class Enemy_Info : MonoBehaviour
         StartCoroutine(KnockbackFunc(t));
         }
     }
+    public void StunFunc(float t)
+    {
+        if (!IsStun)
+        {
+
+            StartCoroutine(Stun(t));
+        }
+    }
+
+    IEnumerator Stun(float t)
+    {
+        if (IsStun)
+        {
+            yield break;
+
+        }
+        StunEffect.SetActive(true);
+        IsStun = true;
+        float SpeedCheck = Speed;
+        Speed = 0;
+
+
+        yield return new WaitForSeconds(t);
+        StunEffect.SetActive(false);
+        Speed = SpeedCheck;
+        IsStun = false;
+    }
+
     IEnumerator KnockbackFunc(float t)
     {
+        if (IsKn)
+        {
+            yield break;
+        }
         IsKn = true;
         float SpeedCheck = Speed;
         float cultime = 0;
         float cooltime = t;
         yield return null;
         //Vector3 d = (player.transform.position - transform.position).normalized;
-        Speed = 0;
+        //Speed = 0;
+        //nav.isStopped = true;
         while (cultime <= cooltime)
         {
             cultime += Time.deltaTime;
@@ -225,7 +264,8 @@ public class Enemy_Info : MonoBehaviour
             yield return null;
         }
         IsKn = false;
-        Speed = SpeedCheck;
+        //nav.isStopped = false;
+        //Speed = SpeedCheck;
     }
     public void BossMove()
     {

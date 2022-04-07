@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class NewSkill_17 : Skill_Ori
 {
-    float Radius;
-    public GameObject bullet;
+
 
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
-        bullet.SetActive(true);
 
-        //
 
-        Radius = 5f; // 거리
 
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
@@ -47,38 +43,33 @@ public class NewSkill_17 : Skill_Ori
         {
 
             yield return new WaitForSeconds(_CoolMain(true));
-           
-            bullet.SetActive(true);
-            StartCoroutine(Skill_Update2());
-            StartCoroutine(Skill_Update3());
+
+            yield return StartCoroutine(Skill_Update2());
+
 
 
 
         }
     }
-    IEnumerator Skill_Update3()
-    {
-        yield return new WaitForSeconds(_CoolSub1(false));
-        bullet.SetActive(false);
-        SoundManager.inst.SoundPlay(15);
-    }
+
     IEnumerator Skill_Update2()
     {
+        Vector3 pos = bulletPos.transform.position;
+        pos.y = 1;
+        float local = _AtRange();
+
         for (int i = 0; i < _BulletCnt(); i++)
         {
-            float angle = i * Mathf.PI * 2 / _BulletCnt();
-            float x = Mathf.Cos(angle) * Radius;
-            float z = Mathf.Sin(angle) * Radius;
-            Vector3 pos = bullet.transform.position + new Vector3(x, 0, z);
-            float angleDegrees = -angle * Mathf.Rad2Deg;
-            Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
-            //par = Instantiate(BulletD, pos, rot);
-            GameObject par = ObjectPooler.SpawnFromPool("Bullet_17", pos, rot);
-            par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
-            par.GetComponent<Bullet_Info>().damage = _Damage();
-            par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            SoundManager.inst.SoundPlay(8);
+
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_17", Player.transform.position, Random.rotation);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage() ;
+            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+            bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            bullet.transform.localScale = new Vector3(local, local, local);
+            yield return new WaitForSeconds(0.1f);
         }
-        yield return null;
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요

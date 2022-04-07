@@ -36,38 +36,25 @@ public class NewSkill_15 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(5);
+            yield return StartCoroutine(Skill_Update2());
         }
     }
     IEnumerator Skill_Update2()
     {
-        Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
-        float local = _AtRange();
-        for (int i = 1; i <= _BulletCnt(); i++)
+        float Sp = 50;
+        MainSingleton.instance.playerinfo.Speed += Sp;
+        for (int i = 0; i < 10; i++)
         {
-            
-            
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", pos, bulletPos.transform.rotation);
+            Vector3 pos = bulletPos.transform.position;
+            pos.y = 0;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", pos, Quaternion.identity);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale=new Vector3(local, local, local);
-            }
-            else
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale=new Vector3(local, local, local);
-            }
-            yield return new WaitForSeconds(0.1f);
+            bullet.GetComponent<Bullet_Info>().pie = _BulletPie() ;
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            yield return new WaitForSeconds(0.5f);
         }
+        MainSingleton.instance.playerinfo.Speed -= Sp;
+
     }
 
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요

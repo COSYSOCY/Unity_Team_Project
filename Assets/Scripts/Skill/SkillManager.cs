@@ -76,6 +76,21 @@ public class SkillManager : MonoBehaviour
 
         return f;
     }
+
+    public float DmgPer()
+    {
+        float f = 0;
+
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].DmgPer;
+            }
+        }
+
+        return f;
+    }
     public float HpPlusPer()
     {
         float f = 0;
@@ -259,5 +274,18 @@ public class SkillManager : MonoBehaviour
 
         return f;
     }
+    public int _Pie()
+    {
+        int f = 0;
 
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].Pie;
+            }
+        }
+
+        return f;
+    }
 }

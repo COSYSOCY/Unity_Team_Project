@@ -171,6 +171,7 @@ MonoBehaviour:
   Hp_Max: 2
   Denfece: 0
   Speed: 0
+  SpeedOri: 0
   ItemIdx: 0
   TextUi: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
   parentTransform: {fileID: 0}
@@ -186,10 +187,7 @@ MonoBehaviour:
   enemyMat:
   - {fileID: 8240462544524516999}
   onhit: 0
-  asd: {r: 0, g: 0, b: 0, a: 0}
-  as2:
-    serializedVersion: 2
-    rgba: 0
+  nav: {fileID: 3984187361017688308}
 --- !u!114 &5008390881065307629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100460, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100460, guid: c6a5fbda98111fe47958dcde4e4a3c21, type: 3}
       propertyPath: m_StaticEditorFlags

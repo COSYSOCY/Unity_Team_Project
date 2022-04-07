@@ -34,6 +34,13 @@ public class PlayerStatus : MonoBehaviour
     public float cardDefecne=0;
     public bool IsAdIn = false;
 
+
+    public int ReCnt = 0;
+    public int In = 0;
+    public int shield = 0;
+
+
+
     public List<int> playingCard;
     public List<int> playingCard_Bonus;
     public bool Ishit;
@@ -144,8 +151,21 @@ public class PlayerStatus : MonoBehaviour
 
     public void Hp_Damage(float damage)
     {
+        if (MainSingleton.instance.playerstat.SkillItemactive[17] >= 1)
+        {
+            MainSingleton.instance.item17.Func();
+        }
         if (IsAdIn)
         {
+            return;
+        }
+        if (In != 0)
+        {
+            return;
+        }
+        if (shield >=1)
+        {
+            shield--;
             return;
         }
         float f = damage;
@@ -168,16 +188,28 @@ public class PlayerStatus : MonoBehaviour
         StartCoroutine(HitDmg());
         hpbar.value = playerInfo.Hp / playerInfo.MaxHp;
         SliderUpdate();
-        if (Skillactive[13]>=1)
-        {
-        MainSingleton.instance.skill_13.Skill13Func();
 
-        }
+    }
+    IEnumerator ReFunc()
+    {
+        
+        yield return new WaitForSeconds(2f);
+        In--;
     }
     public void Dead()
     {
+        if (ReCnt >0)
+        {
+            ReCnt--;
+            In++;
+            playerInfo.Hp = playerInfo.MaxHp;
+            SliderUpdate();
+            StartCoroutine(ReFunc());
+            return;
+        }
         dead = true;
         Time.timeScale = 0f;
+        
         if (playerInfo.ADRe==0 )
         {
             AdReOb.SetActive(true);

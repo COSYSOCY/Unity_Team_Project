@@ -89,6 +89,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillReal3=new List<float>();
     public static List<int> SkillCreateIdx=new List<int>();
 
+
     public static List<int> SkillItemNameNum = new List<int>();
     public static List<int> SkillItemInfoNum = new List<int>();
     public static List<int> SkillItemIconNum = new List<int>();
@@ -110,6 +111,8 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
     public static List<int> SkillItemCreateIdx = new List<int>();
+    public static List<int> SkillItemPie = new List<int>();
+    public static List<float> SkillItemDmgPer = new List<float>();
 
     public static List<float> MonsterHp = new List<float>();
     public static List<float> MonsterDefence = new List<float>();
@@ -336,6 +339,9 @@ public class csvData : MonoBehaviour
             SkillItemRange.Add(float.Parse(data[i]["자석증가"].ToString()));
             SkillItemReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
             SkillItemReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
+
+            SkillItemPie.Add(int.Parse(data[i]["관통"].ToString()));
+            SkillItemDmgPer.Add(float.Parse(data[i]["치명타"].ToString()));
         }
     }
 

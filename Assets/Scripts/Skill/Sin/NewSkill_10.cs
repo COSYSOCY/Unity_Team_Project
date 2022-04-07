@@ -71,9 +71,11 @@ public class NewSkill_10 : Skill_Ori
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
             //par = Instantiate(BulletD, pos, rot);
             GameObject par = ObjectPooler.SpawnFromPool("Bullet_10", pos, rot);
+
             par.transform.localScale = new Vector3(local * UpRange, local * UpRange, local * UpRange);
             par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
             par.GetComponent<Bullet_Info>().damage = _Damage();
+            par.GetComponent<Bullet_Info>().pie = _BulletPie();
             par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         }
         yield return null;
