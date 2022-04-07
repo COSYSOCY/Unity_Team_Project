@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: 3c731968c1407394c867ff04abfa0ce6, type: 3}
+  Maps: {fileID: 8974632829078057019, guid: f60986e3e3c39d942a4daa1d77b79b20, type: 3}
 --- !u!114 &81247186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
     prefab: {fileID: 6876871023749238010, guid: d123bca8ddab22f499072adb5c9f4acf, type: 3}
     size: 30
   - tag: Boss_1
-    prefab: {fileID: 6876871023749238010, guid: 5ffa74c1a56301e4ebeee18d1091d82a, type: 3}
+    prefab: {fileID: 6876871023749238010, guid: 4d68aba0e69724144ad95ebdb3b1e4b6, type: 3}
     size: 1
   - tag: Boss_2
     prefab: {fileID: 6876871023749238010, guid: ae363bdb336efe941b28ea8ec2175efd, type: 3}
@@ -19202,7 +19202,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622587898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0da45539f8a32064c9763feb2e54c305, type: 3}
   m_Name: 
@@ -24598,10 +24598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702c4f6c47b82b345ae4ccfa2d362c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerinfo: {fileID: 4456675825087984495}
-  stat: {fileID: 2128872704994612918}
-  info: {fileID: 2134257235}
-  manager: {fileID: 1428158546}
 --- !u!114 &2134257234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24792,6 +24788,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1579671272}
     - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: camer
+      value: 
+      objectReference: {fileID: 778146707}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: hpbar
       value: 
       objectReference: {fileID: 2110300932}
@@ -24808,6 +24808,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1428158546}
     - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: shakestr
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: uimanager
       value: 
       objectReference: {fileID: 865185821}
@@ -24819,6 +24823,10 @@ PrefabInstance:
       propertyPath: AdReObpayBtn
       value: 
       objectReference: {fileID: 971108032}
+    - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
+      propertyPath: shakeduration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5119629327591888331, guid: 97831a885808a76488d5cb820e0abb55, type: 3}
       propertyPath: Skillactive.Array.size
       value: 0

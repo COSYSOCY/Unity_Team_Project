@@ -114,12 +114,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add28236c135a6e4abeeaabc68ec626b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Skillactive: 
+  SkillItemactive: 
   playerInfo: {fileID: 7448565387035373586}
   level: {fileID: 0}
   manager: {fileID: 0}
   uimanager: {fileID: 0}
   dead: 0
-  deadObject: {fileID: 0}
+  AdReOb: {fileID: 0}
+  AdReObpayBtn: {fileID: 0}
   invin: 0
   test: 0
   EnemyCnt: 0
@@ -136,6 +139,11 @@ MonoBehaviour:
   EnemyDestory: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   cardHpRegen: 0
   cardDefecne: 0
+  IsAdIn: 0
+  playingCard: 
+  playingCard_Bonus: 
+  Ishit: 0
+  XpBar: {fileID: 0}
 --- !u!195 &5262546689127081554
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -189,6 +197,7 @@ MonoBehaviour:
   SkillItemCnt: 0
   SkillMax: 6
   SkillItemMax: 6
+  ADRe: 0
 --- !u!1 &1998058046127359144
 GameObject:
   m_ObjectHideFlags: 0

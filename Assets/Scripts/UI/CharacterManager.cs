@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CharacterManager : MonoBehaviour
     public Image Skill2Image;
     public Text CharSkillName1;
     public Text CharSkillName2;
+    public Text mainName;
     //public Text CharInfo;
 
     public GameObject CharObject;
@@ -79,9 +81,9 @@ public class CharacterManager : MonoBehaviour
         //Debug.Log(cnt);
 
 
+        mainName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
-
         Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
 
 
