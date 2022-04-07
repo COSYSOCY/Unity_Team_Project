@@ -17,7 +17,10 @@ public class PlayerStatus : MonoBehaviour
     public bool dead;
     public GameObject AdReOb;
     public GameObject AdReObpayBtn;
+    public float shakeduration;
+    public float shakestr;
     public bool invin=false;
+    public GameObject camer;
 
     public bool test=false;
 
@@ -79,11 +82,13 @@ public class PlayerStatus : MonoBehaviour
     {
         SoundManager.inst.SoundPlay(6);
         if (Ishit)
-        {
+        {            
             yield break;
         }
         Ishit = true;
+        camerashake();
         GameObject Effect = ObjectPooler.SpawnFromPool("Player_Hit", transform.position, Quaternion.identity);
+        
         for (int i = 0; i < MainSingleton.instance.HitEffect.Count; i++)
         {
             MainSingleton.instance.HitEffect[i].color = Color.red;
@@ -326,7 +331,13 @@ public class PlayerStatus : MonoBehaviour
     }
 
 
-
+    public void camerashake()
+    {
+        if(Ishit == true)
+        {
+            camer.transform.DOShakePosition(0.5f, 1.5f);
+        }        
+    }
 
 
 }

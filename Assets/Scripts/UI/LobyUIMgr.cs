@@ -7,11 +7,12 @@ using TMPro;
 
 public class LobyUIMgr : MonoBehaviour
 {
-    public Text UserLevel;
+    
+    public TextMeshProUGUI UserLevel;
     public Text UserXp;
     public Slider UserXpSlider;
 
-    public Text LobyGoldText;
+    public TextMeshProUGUI LobyGoldText;
     public Text LobyPointText;
     public Text LobyEnergyText;
     public Text LobyUserLevelText;
