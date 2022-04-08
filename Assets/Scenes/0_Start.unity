@@ -445,6 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563478244}
+  - component: {fileID: 563478256}
   - component: {fileID: 563478246}
   - component: {fileID: 563478245}
   - component: {fileID: 563478247}
@@ -990,6 +991,33 @@ MonoBehaviour:
     Language: 
     AdGoldFreeMax: 0
   IsSave: 0
+--- !u!114 &563478256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563478243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7240ce465ff2adc4585bd83cfcf9831e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerUp_Hp: 0
+  PowerUp_HpRegen: 0
+  PowerUp_Defence: 0
+  PowerUp_Speed: 0
+  PowerUp_Dmg: 0
+  PowerUp_Cri: 0
+  PowerUp_Cool: 0
+  PowerUp_XpPlus: 0
+  PowerUp_GoldPlus: 0
+  PowerUp_AtRange: 0
+  PowerUp_BtSpeed: 0
+  PowerUp_BtTime: 0
+  PowerUp_Range: 0
+  PowerUp_Re: 0
+  PowerUp_BtCnt: 0
 --- !u!1 &1470180554
 GameObject:
   m_ObjectHideFlags: 0
