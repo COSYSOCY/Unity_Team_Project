@@ -872,6 +872,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
   - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
+  CharaIcons:
+  - {fileID: 8400000, guid: 2081eef21f974d04a97864cc31ac0003, type: 2}
+  - {fileID: 8400000, guid: 812ebdfbaa66cf84580ad32865f76298, type: 2}
+  - {fileID: 8400000, guid: 5d2088ba3ee6e55479842ab29f21b5f7, type: 2}
+  - {fileID: 8400000, guid: c035af06d305d96418a07f1efeb22e38, type: 2}
+  - {fileID: 8400000, guid: 4e042a4346c1084499d5401e373d5b03, type: 2}
+  - {fileID: 8400000, guid: 83e64491a2b32f248ae5d3ad367e626f, type: 2}
+  - {fileID: 8400000, guid: 909c61d13eaf9d44eb9fd332de9fe8ec, type: 2}
+  - {fileID: 8400000, guid: 36a66baddb5b13840814a18c06e1ebe2, type: 2}
+  - {fileID: 8400000, guid: 95064aaa5d457d44ea05c086eb02a36d, type: 2}
+  - {fileID: 8400000, guid: f9f534a15bf9c47458deaf69480a3c61, type: 2}
 --- !u!82 &563478254
 AudioSource:
   m_ObjectHideFlags: 0

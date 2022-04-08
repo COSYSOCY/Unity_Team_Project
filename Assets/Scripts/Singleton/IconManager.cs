@@ -7,6 +7,7 @@ public class IconManager : MonoBehaviour
 {
     public static IconManager inst;
 	public Sprite[] Icons;
+	public RenderTexture[] CharaIcons;
 
 	void Awake()
 	{

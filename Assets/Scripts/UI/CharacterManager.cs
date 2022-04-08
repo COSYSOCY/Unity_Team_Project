@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject CharacterPrefab;
     public Transform parents;
     //public List<Sprite> icons;
+    public RawImage RawCharaImage; //로우이미지
     public Image CharImage;
     public Image SkillImage;
     public Image Skill2Image;
@@ -83,6 +84,7 @@ public class CharacterManager : MonoBehaviour
 
         mainName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
+        RawCharaImage.texture = IconManager.inst.CharaIcons[cnt]; //로우이미지
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
         Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
 
@@ -128,6 +130,7 @@ public class CharacterManager : MonoBehaviour
         GameInfo.inst.SkillIdx = csvData.CharactersBSNum[cnt];
         //Debug.Log(cnt);
         CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
+        RawCharaImage.texture = IconManager.inst.CharaIcons[cnt]; //로우이미지
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
         Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
         CharSetString();
