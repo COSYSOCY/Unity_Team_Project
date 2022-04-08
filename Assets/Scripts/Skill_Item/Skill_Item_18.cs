@@ -31,11 +31,11 @@ public class Skill_Item_18 : Skill_Item_Ori
         while (true)
         {
             float f = info.Real2;
-            playerinfo.BounsDmg +=f;
+            playerinfo.Bonus_Dmg +=f;
             // 액션
             efffectOb.SetActive(true);
             yield return new WaitForSeconds(10f);
-            playerinfo.BounsDmg -=f;
+            playerinfo.Bonus_Dmg -= f;
             efffectOb.SetActive(false);
             //액션
             yield return new WaitForSeconds(info.Real1-10);

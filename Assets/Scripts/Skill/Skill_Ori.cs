@@ -43,7 +43,7 @@ int bulletCntMax; // 투사체 최대갯수
         float d2;
         float d3;
         d= Random.Range(info.DamageMin, info.DamageMax);
-        d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP()+ playerinfo.BounsDmg;
+        d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP()+ playerinfo.Bonus_Dmg;
         d3 = info.BulletAtCri;
         if (Random.Range(0,100f) <= info.BulletAtCri+manager.DmgPer() + CardStat.inst.CardStat_DmgPer())
         {
