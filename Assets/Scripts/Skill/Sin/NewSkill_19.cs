@@ -114,7 +114,7 @@ public class NewSkill_19 : Skill_Ori
 
 
         GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_19", pos, Quaternion.Euler(new Vector3(0, 0, 0)));
-        bullet3.transform.Translate(new Vector3(0, 0, -1));
+        bullet3.transform.Translate(new Vector3(2, 0, 0));
         bullet3.GetComponent<Bullet_Info>().damage = _Damage();
         bullet3.GetComponent<Bullet_Info>().pie = _BulletPie();
         bullet3.GetComponent<Bullet_Info>().KnokTime = 0.1f;
@@ -128,7 +128,7 @@ public class NewSkill_19 : Skill_Ori
         bullet4.GetComponent<Bullet_Info>().move = _BulletSpeed();
         bullet4.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         bullet4.transform.localScale = new Vector3(local, local, local);
-        bullet4.transform.Translate(new Vector3(0, 0, -1));
+        bullet4.transform.Translate(new Vector3(-2, 0, 0));
 
 
 

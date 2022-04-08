@@ -511,7 +511,7 @@ MonoBehaviour:
   PlayerXp: 0
   PlayerXpMax: 0
   PlayerEnergy: 0
-  PlayerEnergyMax: 20
+  PlayerEnergyMax: 0
   CharacterIdx: 0
   MapIdx: 0
   SkillIdx: 0
@@ -857,6 +857,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
   - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
   - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: d052adf34c9e03948b7a01352cd678f3, type: 3}
+  - {fileID: 21300000, guid: d052adf34c9e03948b7a01352cd678f3, type: 3}
+  - {fileID: 21300000, guid: d052adf34c9e03948b7a01352cd678f3, type: 3}
+  - {fileID: 21300000, guid: d052adf34c9e03948b7a01352cd678f3, type: 3}
+  - {fileID: 21300000, guid: d052adf34c9e03948b7a01352cd678f3, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
+  - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
+  - {fileID: 21300000, guid: d337399e611b279458929eda48b19924, type: 3}
 --- !u!82 &563478254
 AudioSource:
   m_ObjectHideFlags: 0
@@ -966,12 +979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverdata:
-    PlayerLevel: 0
-    PlayerXp: 0
-    PlayerEnergy: 0
     PlayerGold: 0
-    PlayerPoint: 0
     CharacterIdx: 0
+    MapIdx: 0
     CharacterActive: 
     PlayerCardIdxs: 
     PlayerCards: 

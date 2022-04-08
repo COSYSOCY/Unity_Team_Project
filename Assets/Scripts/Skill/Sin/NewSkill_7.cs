@@ -47,6 +47,7 @@ public class NewSkill_7 : Skill_Ori
 
     IEnumerator Skill_Update2()
     {
+        
         float local = _AtRange();
 
         float f1 = 0f;
@@ -54,7 +55,7 @@ public class NewSkill_7 : Skill_Ori
         for (int i = 1; i <= _BulletCnt(); i++)
         {
             float ff = 0f;
-            if (Player.transform.rotation.y >=180)
+            if (Player.transform.rotation.eulerAngles.y >= 180)
             {
                 ff = -1f;
             }
@@ -69,7 +70,7 @@ public class NewSkill_7 : Skill_Ori
             {
                 pos = bulletPos.transform.position;
                 pos.y = 1;
-                if (Player.transform.rotation.y >= 180)
+                if (Player.transform.rotation.eulerAngles.y >= 180)
                 {
                     ff = 1f;
                 }

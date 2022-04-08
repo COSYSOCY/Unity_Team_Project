@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class NewSkill_12 : Skill_Ori
 {
+
     string bulletname = "Bullet_12";
-    float upDa = 1f;
+    int Uppie = 0;
+    float UpScale=0;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -24,8 +26,8 @@ public class NewSkill_12 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        bulletname = "Bullet_12_1";
-        upDa = 1.5f;
+        Uppie = 999;
+        UpScale = 2;
     }
 
     public override void LevelUpFunc()
@@ -51,15 +53,15 @@ public class NewSkill_12 : Skill_Ori
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange();
+        float local = _AtRange()+ UpScale;
 
             for (int i = 0; i < _BulletCnt(); i++)
             {
                 SoundManager.inst.SoundPlay(8);
 
-                GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Random.rotation);
-                bullet.GetComponent<Bullet_Info>().damage = _Damage()* upDa;
-                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+                GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+Uppie;
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
                 bullet.transform.localScale = new Vector3(local, local, local);

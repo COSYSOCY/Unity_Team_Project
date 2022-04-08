@@ -155,6 +155,10 @@ public class csvData : MonoBehaviour
     public static List<float> CardAttackRange = new List<float>();
     public static List<float> CardRange = new List<float>();
 
+    public static List<float> CardDmgPer = new List<float>();
+    public static List<float> CardBuSpeed = new List<float>();
+    public static List<float> CardBuTime = new List<float>();
+
 
     void Awake()
     {
@@ -229,6 +233,9 @@ public class csvData : MonoBehaviour
             CardGoldPlus.Add(float.Parse(data[i]["골드증가"].ToString()));
             CardAttackRange.Add(float.Parse(data[i]["공격범위증가"].ToString()));
             CardRange.Add(float.Parse(data[i]["자석증가"].ToString()));
+            CardDmgPer.Add(float.Parse(data[i]["치명타"].ToString()));
+            CardBuSpeed.Add(float.Parse(data[i]["투사체이동시간"].ToString()));
+            CardBuTime.Add(float.Parse(data[i]["투사체지속시간"].ToString()));
 
         }
         GameInfo.inst.CardMax = data.Count;

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class NewSkill_30 : Skill_Ori
 {
-    string bulletname = "Bullet_0";
-    float upScale = 0;
+    float UpCntX = 1f;
+    public LayerMask bossmask;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -20,12 +20,10 @@ public class NewSkill_30 : Skill_Ori
     }
     public override void CreateFunc()
     {
-        CreateUp = true;
-        bulletname = "Bullet_0_1";
-        upScale = 0.5f;
+        UpCntX = 2f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("테스트");
     }
+
     public override void LevelUpFunc()
     {
         //
@@ -42,76 +40,61 @@ public class NewSkill_30 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            StartCoroutine(Skill_Update2());
-
+            SoundManager.inst.SoundPlay(12);
+            yield return Skill_Update2();
         }
     }
-
     IEnumerator Skill_Update2()
     {
+
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange() + upScale;
-        for (int i = 1; i <= _BulletCnt(); i++)
+        float local = _SkillReal1();
+        Collider[] Enemys_Boss = Physics.OverlapSphere(Player.transform.position, 30f, bossmask);
+        Collider[] Enemys = Physics.OverlapSphere(Player.transform.position, 30f, layermask);
+        int ran = Random.Range(0, Enemys.Length);
+        GameObject target = null;
+        if (Enemys_Boss.Length > 0)
+        {
+            target = Enemys_Boss[0].gameObject;
+        }
+        else
         {
 
 
-            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
+            if (Enemys.Length > 0)
+            {
+
+                target = Enemys[ran].gameObject;
+            }
+        }
+        if (target == null)
+        {
+            yield break;
+        }
+        for (int i = 0; i < _BulletCnt() * UpCntX; i++)
+        {
+
+
+
+
+
+
+            Vector3 dir = target.transform.position - Player.transform.position;
+            dir.Normalize();
+            dir.y = 0;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_30", pos, Quaternion.LookRotation(dir));
+            //bullet.transform.LookAt(target.transform);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+            bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
 
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-            else
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-
-            if (CreateUp)
-            {
-                GameObject bullet2 = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-                bullet2.transform.Translate(Vector3.back * 4f);
-                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet2.GetComponent<Bullet_Info>().pie = _BulletPie();
-                if (i % 2 == 0)
-                {
-                    bullet2.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
-                }
-                else
-                {
-                    bullet2.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
-                }
-            }
+            bullet.transform.localScale = new Vector3(local, local, local);
             yield return new WaitForSeconds(0.1f);
         }
     }
+
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
         if (start == false && info.goodstart)

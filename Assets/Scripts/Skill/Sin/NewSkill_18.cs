@@ -68,7 +68,7 @@ public class NewSkill_18 : Skill_Ori
     {
         float x = Random.Range(-11f, 11f);
         float z = Random.Range(-17f, 26f);
-        Vector3 pos = new Vector3(x, 1, z);
+        Vector3 pos = new Vector3(Player.transform.position.x + x, 1, Player.transform.position.z+z);
         return pos;
     }
     IEnumerator Skill_Update2()
@@ -79,6 +79,7 @@ public class NewSkill_18 : Skill_Ori
         for (int z = 0; z < _BulletCnt(); z++)
         {
             GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_18", RandomPos(), Quaternion.identity);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
             bullet.transform.localScale = new Vector3(local, local, local);
 

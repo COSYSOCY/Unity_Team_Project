@@ -15,7 +15,7 @@ public class SkillManager : MonoBehaviour
     public List<GameObject> All_Skill_Items;
     public List<GameObject> Skills;
     public List<GameObject> Skill_Items;
-    public List<GameObject> Player_Skill;
+   // public List<GameObject> Player_Skill;
     //public List<Sprite> Skill_icon;
     public PlayerInfo playerinfo;
 

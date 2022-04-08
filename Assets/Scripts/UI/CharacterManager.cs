@@ -36,6 +36,7 @@ public class CharacterManager : MonoBehaviour
 
     private void Start()
     {
+        
         GameInfo.inst.CharsInfo.Clear();
         for (int i = 0; i < GameInfo.inst.CharacterMax; i++)
         {
@@ -70,15 +71,14 @@ public class CharacterManager : MonoBehaviour
             {
                 c.SetActive(false);
             }
-            else if (come.State==1)
+            else if (come.State == 1)
             {
                 come.MainImage.color = newcolor;
                 come.LockImage.SetActive(true);
             }
 
         }
-        int cnt=GameInfo.inst.CharacterIdx;
-        //Debug.Log(cnt);
+        int cnt = GameInfo.inst.CharacterIdx;
 
 
         mainName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
@@ -100,7 +100,7 @@ public class CharacterManager : MonoBehaviour
         GameInfo.Range = GameInfo.inst.CharsInfo[cnt].CharactersRange;
         GameInfo.XpPlus = GameInfo.inst.CharsInfo[cnt].CharactersXpPlus;
 
-
+        GameInfo.inst.SkillIdx = GameInfo.inst.CharsInfo[cnt].CharactersBSNum;
 
         CharSetString();
 
@@ -112,6 +112,8 @@ public class CharacterManager : MonoBehaviour
 
         CharSkillName1.text = csvData.GameText(csvData.CharactersSkillName[cnt]);
         CharSkillName2.text = csvData.GameText(csvData.CharactersSkill_ItemName[cnt]);
+        ///
+
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
 

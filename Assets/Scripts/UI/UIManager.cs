@@ -126,14 +126,14 @@ public class UIManager : MonoBehaviour
     public void ReYes()
     {
 
-            GameInfo.PlayerPoint -= 5;
+            //GameInfo.PlayerPoint -= 5;
             StartCoroutine(MainSingleton.instance.playerstat.AdIn());
 
     }
     public void ReYes2()
     {
 
-        GameInfo.PlayerPoint -= 5;
+        //GameInfo.PlayerPoint -= 5;
         StartCoroutine(MainSingleton.instance.playerstat.AdIn());
 
     }

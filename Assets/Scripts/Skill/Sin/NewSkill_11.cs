@@ -22,7 +22,7 @@ public class NewSkill_11 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        upScale = 2;
+        upScale = 2.5f;
     }
 
     public override void LevelUpFunc()
@@ -47,12 +47,13 @@ public class NewSkill_11 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
+        pos.y = 1;
         for (int i = 0; i < _BulletCnt(); i++)
         {
             float local = _AtRange() + upScale;
             pos.y = 1;
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_11", Player.transform.position, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = 1;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_11", pos, bulletPos.transform.rotation);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
             bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
             bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());

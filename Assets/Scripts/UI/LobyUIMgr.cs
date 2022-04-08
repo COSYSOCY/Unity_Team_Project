@@ -51,7 +51,19 @@ public class LobyUIMgr : MonoBehaviour
 
     public void Test()
     {
-
+        GameInfo.inst.PlayerMap[0] = 1;
+        GameInfo.inst.PlayerMap[1] = 1;
+        GameInfo.inst.PlayerMap[2] = 1;
+        GameInfo.inst.CharacterActive[0] = 2;
+        GameInfo.inst.CharacterActive[1] = 2;
+        GameInfo.inst.CharacterActive[2] = 2;
+        GameInfo.inst.CharacterActive[3] = 2;
+        GameInfo.inst.CharacterActive[4] = 2;
+        GameInfo.inst.CharacterActive[5] = 2;
+        GameInfo.inst.CharacterActive[6] = 2;
+        GameInfo.inst.CharacterActive[7] = 2;
+        GameInfo.inst.CharacterActive[8] = 2;
+        GameInfo.inst.CharacterActive[9] = 2;
     }
 
 
@@ -84,21 +96,21 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
-        UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
-        UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
-        if (GameInfo.inst.PlayerXp == 0)
-        {
-            UserXpSlider.value = 0;
-        }
-        else
-        {
-        UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
+        //UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
+        //UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
+        //if (GameInfo.inst.PlayerXp == 0)
+        //{
+        //    UserXpSlider.value = 0;
+        //}
+        //else
+        //{
+        //UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
             
-        }
+        //}
         LobyGoldText.text = GameInfo.PlayerGold.ToString("");
-        LobyPointText.text = GameInfo.PlayerPoint.ToString("");
-        LobyEnergyText.text = GameInfo.inst.PlayerEnergy + "/" + GameInfo.inst.PlayerEnergyMax;
-        LobyUserLevelText.text = GameInfo.inst.PlayerLevel.ToString();
+        //LobyPointText.text = GameInfo.PlayerPoint.ToString("");
+       // LobyEnergyText.text = GameInfo.inst.PlayerEnergy + "/" + GameInfo.inst.PlayerEnergyMax;
+        //LobyUserLevelText.text = GameInfo.inst.PlayerLevel.ToString();
     }
 
     public void BgmButtn()

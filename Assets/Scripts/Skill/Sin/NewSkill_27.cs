@@ -5,13 +5,23 @@ using UnityEngine;
 
 public class NewSkill_27 : Skill_Ori
 {
-    string bulletname = "Bullet_0";
-    float upScale = 0;
-    void Start_Func() //시작시 설정
+
+    public override void LevelUpFunc()
     {
-        manager.skill_Add(gameObject, info.Skill_Icon);
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
+        {
+
+        }
+    }
+
+
+    void Start_Func()
+    {
         LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
+
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
             MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
@@ -21,98 +31,74 @@ public class NewSkill_27 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        bulletname = "Bullet_0_1";
-        upScale = 0.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("테스트");
     }
-    public override void LevelUpFunc()
-    {
-        //
-        if (info.Lv == 2) // 2레벨이 될경우 실행
-        {
-
-        }
-
-    }
-
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
+            SoundManager.inst.SoundPlay(14);
             StartCoroutine(Skill_Update2());
-
         }
     }
 
     IEnumerator Skill_Update2()
     {
-        Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
-        float local = _AtRange() + upScale;
+        float local = _AtRange();
+
+        float f1 = 0f;
+
         for (int i = 1; i <= _BulletCnt(); i++)
         {
+            float ff = 0f;
+            if (Player.transform.rotation.eulerAngles.y >= 180)
+            {
+                ff = -1f;
+            }
+            Vector3 pos = bulletPos.transform.position;
+            pos.y = 1;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(5f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, 90f, 0)));
 
-
-            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-            else
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-
+            bullet.transform.localScale = new Vector3(local, local, local);
             if (CreateUp)
             {
-                GameObject bullet2 = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-                bullet2.transform.Translate(Vector3.back * 4f);
-                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet2.GetComponent<Bullet_Info>().pie = _BulletPie();
-                if (i % 2 == 0)
+                GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(f1, 0f, 2), Quaternion.Euler(new Vector3(0, 0f, 0)));
+
+                bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet3.transform.localScale = new Vector3(local, local, local);
+            }
+            yield return new WaitForSeconds(0.2f);
+            if (i % 2 == 0)
+            {
+                pos = bulletPos.transform.position;
+                pos.y = 1;
+                if (Player.transform.rotation.eulerAngles.y >= 180)
                 {
-                    bullet2.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
+                    ff = 1f;
                 }
-                else
+                GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(5f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, -90f, 0)));
+                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.2f);
+                f1 += 2f;
+                if (CreateUp)
                 {
-                    bullet2.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
+                    GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(f1, 0f, -2), Quaternion.Euler(new Vector3(0, 180f, 0)));
 
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
+                    bullet3.GetComponent<Bullet_Info>().damage = _Damage();
+                    bullet3.transform.localScale = new Vector3(local, local, local);
                 }
             }
-            yield return new WaitForSeconds(0.1f);
         }
+
+
+
     }
-    private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
+
+    private void OnEnable()
     {
         if (start == false && info.goodstart)
         {

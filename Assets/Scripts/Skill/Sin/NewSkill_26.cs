@@ -24,7 +24,7 @@ public class NewSkill_26 : Skill_Ori
         bulletname = "Bullet_26_1";
         upScale = 0.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("Å×½ºÆ®");
+        
     }
     public override void LevelUpFunc()
     {
@@ -54,7 +54,7 @@ public class NewSkill_26 : Skill_Ori
         float local = _AtRange() + upScale;
         for (int i = 1; i <= _BulletCnt(); i++)
         {
-
+ 
 
             GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();

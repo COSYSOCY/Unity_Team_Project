@@ -41,6 +41,9 @@ public class PlayerStatus : MonoBehaviour
     public int ReCnt = 0;
     public int In = 0;
     public int shield = 0;
+    public GameObject shiledOb;
+    public GameObject shiledOb2;
+
 
 
 
@@ -171,6 +174,7 @@ public class PlayerStatus : MonoBehaviour
         if (shield >=1)
         {
             shield--;
+            shiledOb2.SetActive(false);
             return;
         }
         float f = damage;
@@ -200,7 +204,13 @@ public class PlayerStatus : MonoBehaviour
     {
         
         yield return new WaitForSeconds(2f);
+        shiledOb.SetActive(false);
         In--;
+    }
+    public void Shiled()
+    {
+        shield = 1;
+        shiledOb2.SetActive(true);
     }
     public void Dead()
     {
@@ -209,6 +219,7 @@ public class PlayerStatus : MonoBehaviour
             ReCnt--;
             In++;
             playerInfo.Hp = playerInfo.MaxHp;
+            shiledOb.SetActive(true);
             SliderUpdate();
             StartCoroutine(ReFunc());
             return;
@@ -219,10 +230,10 @@ public class PlayerStatus : MonoBehaviour
         if (playerInfo.ADRe==0 )
         {
             AdReOb.SetActive(true);
-            if (GameInfo.PlayerPoint >= 5)
-            {
-                AdReObpayBtn.SetActive(true);
-            }
+            //if (GameInfo.PlayerPoint >= 5)
+            //{
+            //    AdReObpayBtn.SetActive(true);
+            //}
         }
         else
         {
@@ -295,7 +306,9 @@ public class PlayerStatus : MonoBehaviour
         playerInfo.ADRe++;
         playerInfo.Hp=playerInfo.MaxHp;
         SliderUpdate();
+        shiledOb.SetActive(true);
         yield return new WaitForSeconds(3f);
+        shiledOb.SetActive(false);
         IsAdIn = false;
     }
 
@@ -340,5 +353,14 @@ public class PlayerStatus : MonoBehaviour
         }        
     }
 
-
+    public void TimeIn(float t)
+    {
+        StartCoroutine(ITimein(t));
+    }
+    IEnumerator ITimein(float t)
+    {
+        In++;
+        yield return new WaitForSeconds(1);
+        In--;
+    }
 }

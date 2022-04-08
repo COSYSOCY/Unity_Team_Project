@@ -45,7 +45,7 @@ int bulletCntMax; // 투사체 최대갯수
         d= Random.Range(info.DamageMin, info.DamageMax);
         d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP()+ playerinfo.BounsDmg;
         d3 = info.BulletAtCri;
-        if (Random.Range(0,100f) <= info.BulletAtCri+manager.DmgPer())
+        if (Random.Range(0,100f) <= info.BulletAtCri+manager.DmgPer() + CardStat.inst.CardStat_DmgPer())
         {
             d2 += 50f;
         }
@@ -64,7 +64,7 @@ int bulletCntMax; // 투사체 최대갯수
         float d;
         float d2;
         d = info.BulletSpeed;
-        d2 = GameInfo.BulletSpeedPlus+manager.BulletSpeed();
+        d2 = GameInfo.BulletSpeedPlus+manager.BulletSpeed()+CardStat.inst.CardStat_BuSpeed();
         d = d + (d * (d2 * 0.01f));
         return d;
     }
@@ -73,7 +73,7 @@ int bulletCntMax; // 투사체 최대갯수
         float d;
         float d2;
         d = info.BulletTime;
-        d2 = GameInfo.BulletTimePlus + manager.BulletTime();
+        d2 = GameInfo.BulletTimePlus + manager.BulletTime() + CardStat.inst.CardStat_BuTime();
         d = d + (d * (d2 * 0.01f));
         return d;
     }

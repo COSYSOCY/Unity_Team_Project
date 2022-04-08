@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class NewSkill_28 : Skill_Ori
 {
-    string bulletname = "Bullet_0";
-    float upScale = 0;
+
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -21,10 +20,8 @@ public class NewSkill_28 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        bulletname = "Bullet_0_1";
-        upScale = 0.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("테스트");
+
     }
     public override void LevelUpFunc()
     {
@@ -43,75 +40,52 @@ public class NewSkill_28 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
-
+            // SoundManager.inst.SoundPlay(6);
         }
     }
-
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange() + upScale;
-        for (int i = 1; i <= _BulletCnt(); i++)
+        float local = _AtRange();
+        List<Collider> Enemys;
+        Enemys = Physics.OverlapSphere(pos, 30f, layermask).ToList();
+        Enemys.Sort(delegate (Collider t1, Collider t2) {
+            return ((t1.transform.position - Player.transform.position).magnitude).CompareTo((t2.transform.position - Player.transform.position).magnitude);
+        });
+
+        if (Enemys.Count > 0)
         {
-
-
-            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
+            for (int i = 0; i < _BulletCnt(); i++)
             {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-            else
-            {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-
-            if (CreateUp)
-            {
-                GameObject bullet2 = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-                bullet2.transform.Translate(Vector3.back * 4f);
-                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet2.GetComponent<Bullet_Info>().pie = _BulletPie();
-                if (i % 2 == 0)
+                SoundManager.inst.SoundPlay(8);
+                GameObject target;
+                if (i >= Enemys.Count)
                 {
-                    bullet2.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
+                    target = Enemys[0].gameObject;
                 }
                 else
                 {
-                    bullet2.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
+                    target = Enemys[i].gameObject;
                 }
+                Vector3 dir = target.transform.position - Player.transform.position;
+                dir.Normalize();
+                dir.y = 0;
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_28", Player.transform.position, Quaternion.LookRotation(dir));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+
+                bullet.GetComponent<Bullet_Info>().Up = CreateUp;
+
+                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.1f);
             }
-            yield return new WaitForSeconds(0.1f);
         }
+
     }
+
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
         if (start == false && info.goodstart)
@@ -120,5 +94,6 @@ public class NewSkill_28 : Skill_Ori
             start = true;
         }
     }
+
 
 }

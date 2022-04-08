@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NewSkill_15 : Skill_Ori
 {
+    float Speed = 0;
+    float UpTime =0;
+    int UpCnt = 0;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -18,14 +21,16 @@ public class NewSkill_15 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        UpTime = 1f;
+        UpCnt = 10;
     }
 
     public override void LevelUpFunc()
     {
         //
-        if (info.Lv==2) // 2레벨이 될경우 실행
+        if (info.Lv==6) // 2레벨이 될경우 실행
         {
-
+            Speed = 0;
         }
         
     }
@@ -41,18 +46,22 @@ public class NewSkill_15 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        float Sp = 50;
+        float local = _AtRange() ;
+        float Sp = Speed+_SkillReal3();
+        int cnt= (int)_SkillReal1();
         MainSingleton.instance.playerinfo.Speed += Sp;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < cnt+ UpCnt; i++)
         {
             Vector3 pos = bulletPos.transform.position;
             pos.y = 0;
             GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", pos, Quaternion.identity);
             bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie() ;
-            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-            yield return new WaitForSeconds(0.5f);
+            bullet.transform.localScale = new Vector3(local, local, local);
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime()+ UpTime);
+            yield return new WaitForSeconds(_SkillReal2());
         }
+        yield return new WaitForSeconds(_CoolSub1(false));
         MainSingleton.instance.playerinfo.Speed -= Sp;
 
     }

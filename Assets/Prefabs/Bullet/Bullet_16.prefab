@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2539051013721631361}
   - component: {fileID: -6282435416412557739}
   - component: {fileID: 5375436326350604989}
+  - component: {fileID: 3624258871949189351}
   m_Layer: 0
   m_Name: Bullet_16
   m_TagString: Untagged
@@ -79,12 +80,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7217426784219245589}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3624258871949189351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217426784219245589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b61d57b8b943540a6d36f178b2956b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadTime: 0.5
 --- !u!1001 &4790385732775234059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,15 +116,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4592664104363496, guid: de73b98ff812c774783bd145fc25cadb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592664104363496, guid: de73b98ff812c774783bd145fc25cadb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592664104363496, guid: de73b98ff812c774783bd145fc25cadb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4592664104363496, guid: de73b98ff812c774783bd145fc25cadb, type: 3}
       propertyPath: m_LocalPosition.x

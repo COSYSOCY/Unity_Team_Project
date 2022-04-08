@@ -116,7 +116,33 @@ public class CardStat : MonoBehaviour
         return stat;
     }
 
-
+    public float CardStat_DmgPer()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_DmgPer;
+        }
+        return stat;
+    }
+    public float CardStat_BuSpeed()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_BuSpeed;
+        }
+        return stat;
+    }
+    public float CardStat_BuTime()
+    {
+        float stat = 0;
+        for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            stat += GameInfo.inst.CardsInfo[GameInfo.inst.PlayerCardIdxs[i]].CardStat_BuTime;
+        }
+        return stat;
+    }
 
     void Awake()
 	{

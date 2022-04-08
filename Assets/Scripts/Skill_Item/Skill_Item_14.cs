@@ -27,7 +27,7 @@ public class Skill_Item_14 : Skill_Item_Ori
     {
         while (true)
         {
-            MainSingleton.instance.playerstat.shield = 1;
+            MainSingleton.instance.playerstat.Shiled();
             // 보호막 액션
             yield return new WaitForSeconds(info.Real1);
 

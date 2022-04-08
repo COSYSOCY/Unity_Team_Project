@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7217426784219245593}
   - component: {fileID: 7217426784219245590}
-  - component: {fileID: 7217426784219245591}
-  - component: {fileID: 7217426784219245588}
+  - component: {fileID: 2313969422278118575}
   - component: {fileID: 2539051013721631361}
   - component: {fileID: 3342554275929976277}
   - component: {fileID: 4905800713553834208}
+  - component: {fileID: 3211027252740580841}
   m_Layer: 0
   m_Name: Bullet_17
   m_TagString: Untagged
@@ -45,20 +45,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7217426784219245589}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &7217426784219245591
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217426784219245589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.45
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7217426784219245588
+--- !u!114 &2313969422278118575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217426784219245589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7287feb1b943d1545a74ded10795fec6, type: 3}
+  m_Script: {fileID: 11500000, guid: caba2063ca396ec42b3a5a43148b9335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 4905800713553834208}
@@ -112,6 +99,20 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+--- !u!136 &3211027252740580841
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217426784219245589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2740293425064162897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,6 +171,18 @@ PrefabInstance:
     - target: {fileID: 198587663974982988, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198587663974982988, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.066037714
+      objectReference: {fileID: 0}
+    - target: {fileID: 198587663974982988, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.05062464
+      objectReference: {fileID: 0}
+    - target: {fileID: 198587663974982988, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.033953354
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54389543268620354, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}

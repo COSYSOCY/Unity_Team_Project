@@ -24,7 +24,7 @@ public class NewSkill_0 : Skill_Ori
         //upScale = 0.5f;
         upDa = 1.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("Å×½ºÆ®");
+
     }
     public override void LevelUpFunc()
     {

@@ -29,6 +29,7 @@ public class Skill_Item_16 : Skill_Item_Ori
         float HpPlus= info.Real2;
         if (MainSingleton.instance.playerinfo.Kill %i==0)
         {
+            GameObject bullet = ObjectPooler.SpawnFromPool("itemEffect_16", MainSingleton.instance.Player.transform.position, Quaternion.identity);
             MainSingleton.instance.playerstat.HpPlus(HpPlus);
         }
     }

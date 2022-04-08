@@ -27,12 +27,13 @@ public class ServerDataSystem : MonoBehaviour
     }
     public void SaveData()
     {
-        serverdata.PlayerLevel= GameInfo.inst.PlayerLevel;
-         serverdata.PlayerXp= GameInfo.inst.PlayerXp;
-          serverdata.PlayerEnergy= GameInfo.inst.PlayerEnergy;
+       // serverdata.PlayerLevel= GameInfo.inst.PlayerLevel;
+         //serverdata.PlayerXp= GameInfo.inst.PlayerXp;
+         // serverdata.PlayerEnergy= GameInfo.inst.PlayerEnergy;
           serverdata.PlayerGold= GameInfo.PlayerGold;
-          serverdata.PlayerPoint= GameInfo.PlayerPoint;
+         // serverdata.PlayerPoint= GameInfo.PlayerPoint;
          serverdata.CharacterIdx= GameInfo.inst.CharacterIdx;
+         serverdata.MapIdx = GameInfo.inst.MapIdx;
           serverdata.CharacterActive= GameInfo.inst.CharacterActive;
           serverdata.PlayerCardIdxs= GameInfo.inst.PlayerCardIdxs;
          serverdata.PlayerCards= GameInfo.inst.PlayerCards;
@@ -66,12 +67,11 @@ public class ServerDataSystem : MonoBehaviour
 
     public void SaveData2()
     {
-        serverdata.PlayerLevel = GameInfo.inst.PlayerLevel;
-        serverdata.PlayerXp = GameInfo.inst.PlayerXp;
-        serverdata.PlayerEnergy = GameInfo.inst.PlayerEnergy;
+
         serverdata.PlayerGold = GameInfo.PlayerGold;
-        serverdata.PlayerPoint = GameInfo.PlayerPoint;
+
         serverdata.CharacterIdx = GameInfo.inst.CharacterIdx;
+        serverdata.MapIdx = GameInfo.inst.MapIdx;
         serverdata.CharacterActive = GameInfo.inst.CharacterActive;
         serverdata.PlayerCardIdxs = GameInfo.inst.PlayerCardIdxs;
         serverdata.PlayerCards = GameInfo.inst.PlayerCards;
@@ -116,7 +116,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.AdGoldFreeMax = 3;
 
             GameInfo.PlayerGold = 600;
-            GameInfo.PlayerPoint = 5;
+            //GameInfo.PlayerPoint = 5;
             GameInfo.inst.PlayerEnergy = 50;
 
             GameInfo.inst.PlayerMap[0] = 1;
@@ -158,18 +158,33 @@ public class ServerDataSystem : MonoBehaviour
         {
             string jsonData = PlayerPrefs.GetString("Save");
             serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
-            GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
-            GameInfo.inst.PlayerXp = serverdata.PlayerXp;
-            GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
+            //GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
+            //GameInfo.inst.PlayerXp = serverdata.PlayerXp;
+            //GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
             GameInfo.PlayerGold = serverdata.PlayerGold;
-            GameInfo.PlayerPoint = serverdata.PlayerPoint;
+            //GameInfo.PlayerPoint = serverdata.PlayerPoint;
             GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
-            GameInfo.inst.CharacterActive = serverdata.CharacterActive;
+            GameInfo.inst.MapIdx = serverdata.MapIdx;
+
             GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
-            GameInfo.inst.PlayerMap = serverdata.PlayerMap;
+
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+
+
+            for (int i = 0; i < serverdata.CharacterActive.Count; i++)
+            {
+                GameInfo.inst.CharacterActive[i] = serverdata.CharacterActive[i];
+            }
+            for (int i = 0; i < serverdata.PlayerMap.Count; i++)
+            {
+                GameInfo.inst.PlayerMap[i] = serverdata.PlayerMap[i];
+            }
+
+
+
+
 
             GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
 
@@ -202,20 +217,29 @@ public class ServerDataSystem : MonoBehaviour
             string jsonData = Encoding.UTF8.GetString(data);
             serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
             //yield return serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
-            GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
-            GameInfo.inst.PlayerXp = serverdata.PlayerXp;
-            GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
+            //GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
+            //GameInfo.inst.PlayerXp = serverdata.PlayerXp;
+            //GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;
             GameInfo.PlayerGold = serverdata.PlayerGold;
-            GameInfo.PlayerPoint = serverdata.PlayerPoint;
+            //GameInfo.PlayerPoint = serverdata.PlayerPoint;
             GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
-            GameInfo.inst.CharacterActive = serverdata.CharacterActive;
+            GameInfo.inst.MapIdx = serverdata.MapIdx;
+            
             GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
-            GameInfo.inst.PlayerMap = serverdata.PlayerMap;
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
 
             GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
+
+            for (int i = 0; i < serverdata.CharacterActive.Count; i++)
+            {
+                GameInfo.inst.CharacterActive[i] = serverdata.CharacterActive[i];
+            }
+            for (int i = 0; i < serverdata.PlayerMap.Count; i++)
+            {
+                GameInfo.inst.PlayerMap[i] = serverdata.PlayerMap[i];
+            }
 
             IsSave = true;
             SceneManager.LoadScene("01_Loby_Main");
@@ -233,7 +257,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.PlayerMap[0] = 1;
 
             GameInfo.PlayerGold = 600;
-            GameInfo.PlayerPoint = 5;
+            //GameInfo.PlayerPoint = 5;
             GameInfo.inst.PlayerEnergy = 50;
             SceneManager.LoadScene("01_Loby_Main");
 
@@ -310,12 +334,9 @@ public class ServerDataSystem : MonoBehaviour
 [System.Serializable]
 public class ServerData
 {
-    public int PlayerLevel; // 플레이어 레벨
-    public int PlayerXp; // 플레이어 경험치
-    public int PlayerEnergy; // 플레이어 에너지
     public int PlayerGold; // 플레이어 골드
-    public int PlayerPoint; // 플레이어 보석
     public int CharacterIdx;
+    public int MapIdx;
     public List<int> CharacterActive;
     public List<int> PlayerCardIdxs;
     public List<int> PlayerCards;

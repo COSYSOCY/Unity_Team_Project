@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7217426784219245593}
   - component: {fileID: 7217426784219245590}
-  - component: {fileID: 7217426784219245591}
   - component: {fileID: 7217426784219245588}
   - component: {fileID: 2539051013721631361}
   - component: {fileID: 3342554275929976277}
   - component: {fileID: 4905800713553834208}
+  - component: {fileID: 7010920648229145232}
   m_Layer: 0
   m_Name: Bullet_19
   m_TagString: Untagged
@@ -45,19 +45,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7217426784219245589}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &7217426784219245591
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7217426784219245589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.45
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7217426784219245588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +99,20 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+--- !u!136 &7010920648229145232
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217426784219245589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1073072685222384828
 PrefabInstance:
   m_ObjectHideFlags: 0

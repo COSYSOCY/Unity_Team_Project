@@ -62,11 +62,12 @@ public class NewSkill_17 : Skill_Ori
         {
             SoundManager.inst.SoundPlay(8);
 
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_17", Player.transform.position, Random.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage() ;
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_17", Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
             bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
             bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            bullet.GetComponent<Bullet_Info>().KnokTime=_BulletTime();
+            bullet.GetComponent<Bullet_Info>().real1=local;
             bullet.transform.localScale = new Vector3(local, local, local);
             yield return new WaitForSeconds(0.1f);
         }

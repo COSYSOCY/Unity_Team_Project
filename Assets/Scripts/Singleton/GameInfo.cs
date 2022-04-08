@@ -27,6 +27,10 @@ public class CardInfo
 	public float CardStat_AttackRange;
 	public float CardStat_Range;
 
+	public float CardStat_DmgPer;
+	public float CardStat_BuSpeed;
+	public float CardStat_BuTime;
+
 
 
 }
@@ -41,7 +45,7 @@ public class GameInfo : MonoBehaviour
 	public bool PlayerSE; // 사운드
 	public bool PlayerDmg; //데미지표시 유무
 	public static int PlayerGold; // 플레이어 골드
-	public static int PlayerPoint; // 플레이어 보석
+	//public static int PlayerPoint; // 플레이어 보석
 
 	public  int PlayerLevel; // 플레이어 레벨
 	public  int PlayerXp; // 플레이어 경험치
@@ -105,7 +109,6 @@ public class GameInfo : MonoBehaviour
 		for (int i = 0; i < CharacterMax; i++)
 		{
 			CharacterActive.Add(0);
-
 		}
 
 		
@@ -158,6 +161,10 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardStat_GoldPlus = csvData.CardGoldPlus[i];
 			CardsInfo[i].CardStat_AttackRange = csvData.CardAttackRange[i];
 			CardsInfo[i].CardStat_Range = csvData.CardRange[i];
+
+			CardsInfo[i].CardStat_DmgPer = csvData.CardDmgPer[i];
+			CardsInfo[i].CardStat_BuSpeed = csvData.CardBuSpeed[i];
+			CardsInfo[i].CardStat_BuTime = csvData.CardBuTime[i];
 			PlayerCardCheck.Add(0);
 		}
         for (int i = 0; i < PlayerCardMax; i++)

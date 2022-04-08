@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Skill_Item_18 : Skill_Item_Ori
 {
+    public GameObject efffectOb;
     public override void LevelUpFunc()
     {
         //
@@ -32,8 +33,10 @@ public class Skill_Item_18 : Skill_Item_Ori
             float f = info.Real2;
             playerinfo.BounsDmg +=f;
             // 액션
+            efffectOb.SetActive(true);
             yield return new WaitForSeconds(10f);
             playerinfo.BounsDmg -=f;
+            efffectOb.SetActive(false);
             //액션
             yield return new WaitForSeconds(info.Real1-10);
         }

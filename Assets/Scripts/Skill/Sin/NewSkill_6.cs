@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NewSkill_6 : Skill_Ori
 {
+
     float UpDamage=1f;
     void Start_Func() //시작시 설정
     {

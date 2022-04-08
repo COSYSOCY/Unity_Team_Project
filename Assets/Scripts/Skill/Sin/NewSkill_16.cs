@@ -48,13 +48,13 @@ public class NewSkill_16 : Skill_Ori
     {
         float x = Random.Range(-11f, 11f);
         float z = Random.Range(-17f, 26f);
-        Vector3 pos = new Vector3(x,1,z) ;
+        Vector3 pos = new Vector3(Player.transform.position.x + x,1, Player.transform.position.z+z) ;
         return pos;
     }
     IEnumerator Skill_Update2()
     {
 
-        float local = _AtRange()+ Upscale;
+        float local = _AtRange()+ Upscale+1;
 
         for (int z = 0; z < _BulletCnt(); z++)
         {

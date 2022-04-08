@@ -5,13 +5,27 @@ using UnityEngine;
 
 public class NewSkill_29 : Skill_Ori
 {
-    string bulletname = "Bullet_0";
-    float upScale = 0;
+    float angleRange;
+    float upangleRange;
+    public GameObject bullet;
+    public bool stop = false;
+
+
+
+
+    public ParticleSystem partic;
+
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
+        //bullet.SetActive(true);
+
+        //
+
+        angleRange = 50f; // 각도
+                          //coroutine = Skill_Update2();
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
             MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
@@ -21,11 +35,11 @@ public class NewSkill_29 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        bulletname = "Bullet_0_1";
-        upScale = 0.5f;
+        StopAllCoroutines();
+        StartCoroutine(Skill_Update4());
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("테스트");
     }
+
     public override void LevelUpFunc()
     {
         //
@@ -41,77 +55,102 @@ public class NewSkill_29 : Skill_Ori
 
         while (true)
         {
+            if (stop)
+            {
+                yield break;
+            }
             yield return new WaitForSeconds(_CoolMain(true));
+            if (stop)
+            {
+                yield break;
+            }
+            bullet.SetActive(true);
+            SoundManager.inst.SoundPlay(11);
+            yield return null;
             StartCoroutine(Skill_Update2());
+            StartCoroutine(Skill_Update3());
+
+
 
         }
     }
+    IEnumerator Skill_Update3()
+    {
+        if (stop)
+        {
+            yield break;
+        }
+        yield return new WaitForSeconds(_CoolSub2(false));
+        if (stop)
+        {
+            yield break;
+        }
+        bullet.SetActive(false);
+        //StopCoroutine(coroutine);
+    }
+    IEnumerator Skill_Update4()
+    {
+        yield return new WaitForSeconds(0.5f);
+        bullet.SetActive(true);
+        while (true)
+        {
+            
+            Vector3 pos = bulletPos.transform.position;
+            pos.y = 1;
+            Collider[] Enemys;
+            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x * _AtRange() * 1.7f, layermask);
+            if (Enemys.Length > 0)
+            {
+                for (int i = 0; i < Enemys.Length; i++)
+                {
+                    float dotValue = Mathf.Cos(Mathf.Deg2Rad * ((angleRange + upangleRange) / 2));
+                    Vector3 direction = Enemys[i].transform.position - bulletPos.transform.position;
+                    direction.Normalize();
+                    if (Vector3.Dot(direction, Player.transform.forward) > dotValue)
+                    {
+                        Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
 
+                    }
+                }
+
+            }
+
+            yield return new WaitForSeconds(_CoolSub1(false));
+        }
+    }
     IEnumerator Skill_Update2()
     {
-        Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
-        float local = _AtRange() + upScale;
-        for (int i = 1; i <= _BulletCnt(); i++)
+        yield return new WaitForSeconds(0.1f);
+        while (bullet.activeSelf)
         {
-
-
-            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
-            if (i % 2 == 0)
+            if (stop)
             {
-                bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
+                yield break;
             }
-            else
+            Vector3 pos = bulletPos.transform.position;
+            pos.y = 1;
+            Collider[] Enemys;
+            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x * _AtRange() * 2f, layermask);
+            if (Enemys.Length > 0)
             {
-                bullet.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
-
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                bullet.transform.localScale = new Vector3(local, local, local);
-            }
-
-            if (CreateUp)
-            {
-                GameObject bullet2 = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-                bullet2.transform.Translate(Vector3.back * 4f);
-                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet2.GetComponent<Bullet_Info>().pie = _BulletPie();
-                if (i % 2 == 0)
+                for (int i = 0; i < Enemys.Length; i++)
                 {
-                    bullet2.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
+                    float dotValue = Mathf.Cos(Mathf.Deg2Rad * ((angleRange + upangleRange) / 2));
+                    Vector3 direction = Enemys[i].transform.position - bulletPos.transform.position;
+                    direction.Normalize();
+                    if (Vector3.Dot(direction, Player.transform.forward) > dotValue)
+                    {
+                        Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
 
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
+                    }
                 }
-                else
-                {
-                    bullet2.transform.Translate(new Vector3((i / 2) * 1, 0f, 0f));
 
-                    bullet2.GetComponent<Bullet_Info>().KnokTime = 0.2f;
-
-                    bullet2.GetComponent<Bullet_Info>().move = _BulletSpeed();
-                    bullet2.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
-                    bullet2.transform.localScale = new Vector3(local, local, local);
-                }
             }
-            yield return new WaitForSeconds(0.1f);
+
+            yield return new WaitForSeconds(_CoolSub1(false));
         }
     }
+
     private void OnEnable() // 중복방지용 버그처리용스크립트인데 신경쓰지마세요
     {
         if (start == false && info.goodstart)

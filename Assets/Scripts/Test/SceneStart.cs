@@ -20,7 +20,7 @@ public class SceneStart : MonoBehaviour
         Hpbar.SetActive(true);
         manager.Skills = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].Skill;
         manager.Skill_Items = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].SkillItem;
-
+        
         Time.timeScale = 1f;
         //MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
         //MapManager.instance.GameStart = true;

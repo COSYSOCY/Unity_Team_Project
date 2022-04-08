@@ -29,6 +29,8 @@ public class LobyMapManager : MonoBehaviour
 
     void Start()
     {
+
+
         int MapIdx = GameInfo.inst.MapIdx;
         SelectNum = MapIdx;
         startmapsetting();

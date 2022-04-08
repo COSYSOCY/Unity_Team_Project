@@ -30,14 +30,14 @@ public class Skill_Item_17 : Skill_Item_Ori
     {
         int i = (int)info.Real2;
         float t = (int)info.Real1;
-        float s = 2;
+        float s = 3;
         Cnt++;
         if (Cnt>=i)
         {
             Vector3 pos = MainSingleton.instance.Player.transform.position;
             pos.y = 1f;
             Collider[] Enemys;
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_Item_17", pos, Quaternion.identity);
+            GameObject bullet = ObjectPooler.SpawnFromPool("itemEffect_17", pos, Quaternion.Euler(new Vector3(-90,0,0)));
             Enemys = Physics.OverlapSphere(MainSingleton.instance.Player.transform.position, MainSingleton.instance.Player.transform.lossyScale.x * s, layermask);
             if (Enemys.Length > 0)
             {
@@ -46,7 +46,7 @@ public class Skill_Item_17 : Skill_Item_Ori
                     Enemys[x].transform.GetComponent<Enemy_Info>().StunFunc(t);
                 }
             }
-
+            MainSingleton.instance.playerstat.TimeIn(0.5f);
             Cnt = 0;
         }
     }

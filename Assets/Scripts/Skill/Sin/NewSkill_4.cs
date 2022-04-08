@@ -77,7 +77,7 @@ public class NewSkill_4 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
-        yield return null;
+        yield return new WaitForSeconds(0.1f);
         while (bullet.activeSelf)
         { 
             Vector3 pos = bulletPos.transform.position;
