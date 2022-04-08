@@ -198,7 +198,7 @@ public class csvData : MonoBehaviour
     }
     public void PowerUp_Read()
     {
-        data = CSVReader.Read(dataPath_PlayerExp);
+        data = CSVReader.Read(dataPath_PowerUp);
         //GameInfo.inst.MapsInfo = new List(MapInfo);
         for (int i = 0; i < data.Count; i++)
         {
