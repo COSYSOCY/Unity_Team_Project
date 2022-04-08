@@ -5734,14 +5734,14 @@ MonoBehaviour:
   Roulette_Content: {fileID: 1805430854}
   Arrow: {fileID: 439600199}
   SkillSprite:
-  - {fileID: 21300000, guid: c4c00c203babee7510320a8b9259eb31, type: 3}
-  - {fileID: 21300000, guid: e618dbc67e24a27d63403e71d47ee5e2, type: 3}
-  - {fileID: 21300000, guid: 0160c19176b396a072569a275a0f8af8, type: 3}
-  - {fileID: 21300000, guid: 5a345366d88666e6737909e0ee240e36, type: 3}
-  - {fileID: 21300000, guid: 0017b2750f9008dd923cdceda60343ee, type: 3}
-  - {fileID: 21300000, guid: 288fd5e16ce1a9a55e6f36e6c8db3de5, type: 3}
-  - {fileID: 21300000, guid: 43cfa7812328aeb5a3c597ec13497887, type: 3}
-  - {fileID: 21300000, guid: 7315cb8a5778aba0a5f51477d9461950, type: 3}
+  - {fileID: 21300000, guid: 1762849528f45a240a291c0a17f5e7d1, type: 3}
+  - {fileID: 21300000, guid: 4c1d8f4202699bb43ae919b54f7adcec, type: 3}
+  - {fileID: 21300000, guid: a5a237e9dca8ce04c8c87372e182113a, type: 3}
+  - {fileID: 21300000, guid: 54de2b311597b37418d730c688544879, type: 3}
+  - {fileID: 21300000, guid: 6cca793292daab8478f5ad33dae4e30f, type: 3}
+  - {fileID: 21300000, guid: 55be125e85815ae49bbfd4627282f227, type: 3}
+  - {fileID: 21300000, guid: 8a2a460d26487124eb52084d587c5fd6, type: 3}
+  - {fileID: 21300000, guid: c20ee67ca1ce8c544836635d16afc5a2, type: 3}
   DisplayItemSlot:
   - {fileID: 1625771320}
   - {fileID: 1092896207}
@@ -18527,17 +18527,35 @@ MonoBehaviour:
   - {fileID: 1544351768}
   - {fileID: 682175606}
   SkillSprite:
-  - {fileID: 21300000, guid: c4c00c203babee7510320a8b9259eb31, type: 3}
-  - {fileID: 21300000, guid: e618dbc67e24a27d63403e71d47ee5e2, type: 3}
-  - {fileID: 21300000, guid: 0160c19176b396a072569a275a0f8af8, type: 3}
-  - {fileID: 21300000, guid: 5a345366d88666e6737909e0ee240e36, type: 3}
-  - {fileID: 21300000, guid: 0017b2750f9008dd923cdceda60343ee, type: 3}
-  - {fileID: 21300000, guid: 288fd5e16ce1a9a55e6f36e6c8db3de5, type: 3}
-  - {fileID: 21300000, guid: 43cfa7812328aeb5a3c597ec13497887, type: 3}
-  - {fileID: 21300000, guid: 7315cb8a5778aba0a5f51477d9461950, type: 3}
-  - {fileID: 21300000, guid: 4548f513d4c2b8ae6028d26938bc5946, type: 3}
-  - {fileID: 21300000, guid: 29c86aed6fa5c98cd96b0dc8c911d36c, type: 3}
-  - {fileID: 21300000, guid: 5c35d056d3a8c63a6acd991afa46ae02, type: 3}
+  - {fileID: 21300000, guid: 1762849528f45a240a291c0a17f5e7d1, type: 3}
+  - {fileID: 21300000, guid: 4c1d8f4202699bb43ae919b54f7adcec, type: 3}
+  - {fileID: 21300000, guid: a5a237e9dca8ce04c8c87372e182113a, type: 3}
+  - {fileID: 21300000, guid: 4c34c9903d732914491a235851c481e0, type: 3}
+  - {fileID: 21300000, guid: 8a2a460d26487124eb52084d587c5fd6, type: 3}
+  - {fileID: 21300000, guid: 860544d043722a94b85bd945d3a5e0eb, type: 3}
+  - {fileID: 21300000, guid: 7483a3c248f80cb4da79a60d84c90f42, type: 3}
+  - {fileID: 21300000, guid: 20e2e5fb3c63791498ed77fdbd6696d5, type: 3}
+  - {fileID: 21300000, guid: c20ee67ca1ce8c544836635d16afc5a2, type: 3}
+  - {fileID: 21300000, guid: 781efc519ddf2dd40a8ae9a157cd4281, type: 3}
+  - {fileID: 21300000, guid: 938540a9143436e46a3a41776e76566d, type: 3}
+  - {fileID: 21300000, guid: 1762849528f45a240a291c0a17f5e7d1, type: 3}
+  - {fileID: 21300000, guid: 4c1d8f4202699bb43ae919b54f7adcec, type: 3}
+  - {fileID: 21300000, guid: a5a237e9dca8ce04c8c87372e182113a, type: 3}
+  - {fileID: 21300000, guid: 54de2b311597b37418d730c688544879, type: 3}
+  - {fileID: 21300000, guid: 6cca793292daab8478f5ad33dae4e30f, type: 3}
+  - {fileID: 21300000, guid: 55be125e85815ae49bbfd4627282f227, type: 3}
+  - {fileID: 21300000, guid: 9d557ea45109839479a88cd54c2464ad, type: 3}
+  - {fileID: 21300000, guid: 4c34c9903d732914491a235851c481e0, type: 3}
+  - {fileID: 21300000, guid: aae616134037141408cf628298d6d046, type: 3}
+  - {fileID: 21300000, guid: d7da3bd9318766645b49086d79931b83, type: 3}
+  - {fileID: 21300000, guid: cde6f4bd89ce6bc4ba2dd6df763932a0, type: 3}
+  - {fileID: 21300000, guid: 8a2a460d26487124eb52084d587c5fd6, type: 3}
+  - {fileID: 21300000, guid: 860544d043722a94b85bd945d3a5e0eb, type: 3}
+  - {fileID: 21300000, guid: 7483a3c248f80cb4da79a60d84c90f42, type: 3}
+  - {fileID: 21300000, guid: 20e2e5fb3c63791498ed77fdbd6696d5, type: 3}
+  - {fileID: 21300000, guid: c20ee67ca1ce8c544836635d16afc5a2, type: 3}
+  - {fileID: 21300000, guid: 781efc519ddf2dd40a8ae9a157cd4281, type: 3}
+  - {fileID: 21300000, guid: 938540a9143436e46a3a41776e76566d, type: 3}
   DisplayItemSlots:
   - SlotSprite:
     - {fileID: 883488533}
@@ -31869,7 +31887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
-  Maps: {fileID: 8974632829078057019, guid: c16277a96f0748241b3327a39aa969da, type: 3}
+  Maps: {fileID: 8974632829078057019, guid: 227435814e6d1e74597540233891f06c, type: 3}
 --- !u!114 &1852654333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32187,7 +32205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1872774343
 RectTransform:
   m_ObjectHideFlags: 0
