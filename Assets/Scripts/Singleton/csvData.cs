@@ -37,6 +37,7 @@ public class csvData : MonoBehaviour
     public string dataPath_String;
     public string dataPath_Card;
     public string dataPath_Map;
+    public string dataPath_PowerUp;
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
@@ -160,9 +161,30 @@ public class csvData : MonoBehaviour
     public static List<float> CardBuTime = new List<float>();
 
 
+
+
+
+
+
+
+    public static List<int> Pu_NameNum = new List<int>();
+    public static List<int> Pu_InfoNum = new List<int>();
+    public static List<int> Pu_LevelMax = new List<int>();
+    public static List<int> Pu_Cost1 = new List<int>();
+    public static List<int> Pu_Cost2 = new List<int>();
+    public static List<int> Pu_Cost3 = new List<int>();
+    public static List<int> Pu_Cost4 = new List<int>();
+    public static List<int> Pu_Cost5 = new List<int>();
+    public static List<int> Pu_Cost6 = new List<int>();
+    public static List<int> Pu_Cost7 = new List<int>();
+    public static List<int> Pu_Cost8 = new List<int>();
+    public static List<int> Pu_Cost9 = new List<int>();
+    public static List<int> Pu_Cost10 = new List<int>();
+
     void Awake()
     {
         inst = this;
+        PowerUp_Read();
         Player_EXP_Read();
         Characters_Read();
         Enemy_Read();
@@ -173,6 +195,30 @@ public class csvData : MonoBehaviour
        Card_Read();
        Map_Read();
         GameInfo.inst.GameStart = true;
+    }
+    public void PowerUp_Read()
+    {
+        data = CSVReader.Read(dataPath_PlayerExp);
+        //GameInfo.inst.MapsInfo = new List(MapInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            Pu_NameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            Pu_InfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            Pu_LevelMax.Add(int.Parse(data[i]["최대레벨"].ToString()));
+            Pu_Cost1.Add(int.Parse(data[i]["1단계비용"].ToString()));
+            Pu_Cost2.Add(int.Parse(data[i]["2단계비용"].ToString()));
+            Pu_Cost3.Add(int.Parse(data[i]["3단계비용"].ToString()));
+            Pu_Cost4.Add(int.Parse(data[i]["4단계비용"].ToString()));
+            Pu_Cost5.Add(int.Parse(data[i]["5단계비용"].ToString()));
+            Pu_Cost6.Add(int.Parse(data[i]["6단계비용"].ToString()));
+            Pu_Cost7.Add(int.Parse(data[i]["7단계비용"].ToString()));
+            Pu_Cost8.Add(int.Parse(data[i]["8단계비용"].ToString()));
+            Pu_Cost9.Add(int.Parse(data[i]["9단계비용"].ToString()));
+            Pu_Cost10.Add(int.Parse(data[i]["10단계비용"].ToString()));
+
+
+
+        }
     }
 
     public void Player_EXP_Read()

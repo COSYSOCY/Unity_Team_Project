@@ -27,8 +27,11 @@ public class SceneStart : MonoBehaviour
         MapList[GameInfo.inst.MapIdx].SetActive(true);
         GameInfo.inst.audioSo.Pause();
         SoundManager.inst.BGMPlay(2);
-        MainSingleton.instance.pullrange.Check();
+        MainSingleton.instance.playerinfo.PowerUp();
         yield return new WaitForSeconds(1);
+        MainSingleton.instance.pullrange.Check();
+        MainSingleton.instance.playerstat.PlayerHpMax();
+        MainSingleton.instance.playerinfo.Hp = MainSingleton.instance.playerinfo.MaxHp;
         manager.All_Skill[GameInfo.inst.SkillIdx].SetActive(true);
         
 
@@ -45,6 +48,7 @@ public class SceneStart : MonoBehaviour
         {
             case 0:
                 //추가 액션
+                MainSingleton.instance.playerinfo.Bonus_BtCnt++;
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Body04").GetComponent<SkinnedMeshRenderer>().material);
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Head04").GetComponent<SkinnedMeshRenderer>().material);
                 break;
@@ -91,6 +95,8 @@ public class SceneStart : MonoBehaviour
                 //추가 액션
                 break;
             case 9:
+                MainSingleton.instance.playerinfo.Bonus_Range+=2f;
+                
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Body06").GetComponent<SkinnedMeshRenderer>().material);
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Head06").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션

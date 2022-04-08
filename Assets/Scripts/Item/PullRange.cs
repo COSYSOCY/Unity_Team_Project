@@ -27,7 +27,7 @@ public class PullRange : MonoBehaviour
 
             radius = GetComponent<SphereCollider>();
         }
-        radius.radius = GameInfo.Range+ playerinfo.item_range +CardStat.inst.CardStat_Range()+ MainSingleton.instance.skillmanager._Range();
+        radius.radius = GameInfo.Range+ playerinfo.item_range +CardStat.inst.CardStat_Range()+ MainSingleton.instance.skillmanager._Range() + PowerUpInfo.instance._Range()+playerinfo.Bonus_Range;
     }
     /*
     private void Update()

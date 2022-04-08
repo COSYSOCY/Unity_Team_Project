@@ -77,7 +77,7 @@ public class PlayerStatus : MonoBehaviour
     public void PlayerHpMax()
     {
         float f = 0;
-        f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC();
+        f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC()+ PowerUpInfo.instance._Hp();
         f = f + (f * ((manager.HpPlusPer()+ CardStat.inst.CardStat_HpP()) * 0.01f));
         playerInfo.MaxHp = f;
     }
@@ -109,7 +109,7 @@ public class PlayerStatus : MonoBehaviour
         float f;
         while (true)
         {
-            f=(GameInfo.HpRegenPlus+manager.HpRegen()+ cardHpRegen) *0.5f;
+            f=(GameInfo.HpRegenPlus+manager.HpRegen()+ cardHpRegen+ PowerUpInfo.instance._HpRegen()) *0.5f;
             if (f > 0)
             {
             HpPlus(f);
@@ -178,7 +178,7 @@ public class PlayerStatus : MonoBehaviour
             return;
         }
         float f = damage;
-        float D = GameInfo.DefencePlus + manager.Defence()+ cardDefecne;
+        float D = GameInfo.DefencePlus + manager.Defence()+ cardDefecne+ PowerUpInfo.instance._Defence()+playerInfo.Bonus_Defence;
         f = f - D;
 
         if (f < 1)
@@ -248,7 +248,7 @@ public class PlayerStatus : MonoBehaviour
     public void XpPlus(int xp)
     {
         int i;
-        float f = manager.XpPlus()+GameInfo.XpPlus + CardStat.inst.CardStat_XpPlus();
+        float f = manager.XpPlus()+GameInfo.XpPlus + CardStat.inst.CardStat_XpPlus()+ PowerUpInfo.instance._XpPlus()+playerInfo.Bonus_XpPuls;
         f = xp * f * 0.01f;
         i = xp + (int)f;
         playerInfo.Xp += i;
@@ -271,9 +271,10 @@ public class PlayerStatus : MonoBehaviour
     public void GoldPlus(int gold)
     {
         int i;
-        float f = manager.GoldPlus()+ CardStat.inst.CardStat_GoldPlus();
-        f = gold * f * 0.01f;
-        i = gold + (int)f;
+        //float f = manager.GoldPlus()+ CardStat.inst.CardStat_GoldPlus()+ PowerUpInfo.instance._Gold();
+        //f = gold * f * 0.01f;
+        //i = gold + (int)f;
+        i = gold;
         uimanager.GoldUp(i);
     }
     public void LevelUp()
@@ -318,48 +319,29 @@ public class PlayerStatus : MonoBehaviour
         switch (GameInfo.inst.CharacterIdx)
         {
             case 0:
-                if (playerInfo.Lv==15)
-                {
-                    playerInfo.Bonus_Dmg += 10f;
-                }
-                else if(playerInfo.Lv == 30)
-                {
-                    playerInfo.Bonus_Dmg += 10f;
-                }
-                else if (playerInfo.Lv == 45)
-                {
-                    playerInfo.Bonus_Dmg += 10f;
-                }
-                else if (playerInfo.Lv == 60)
-                {
-                    playerInfo.Bonus_Dmg += 10f;
-                }
-                else if (playerInfo.Lv == 75)
-                {
-                    playerInfo.Bonus_Dmg += 10f;
-                }
+                
                 break;
 
             case 1:
                 if (playerInfo.Lv == 15)
                 {
-                    playerInfo.Bonus_AtRange += 10f;
+                    playerInfo.Bonus_Defence += 1f;
                 }
                 else if (playerInfo.Lv == 30)
                 {
-                    playerInfo.Bonus_AtRange += 10f;
+                    playerInfo.Bonus_Defence += 1f;
                 }
                 else if (playerInfo.Lv == 45)
                 {
-                    playerInfo.Bonus_AtRange += 10f;
+                    playerInfo.Bonus_Defence += 1f;
                 }
                 else if (playerInfo.Lv == 60)
                 {
-                    playerInfo.Bonus_AtRange += 10f;
+                    playerInfo.Bonus_Defence += 1f;
                 }
                 else if (playerInfo.Lv == 75)
                 {
-                    playerInfo.Bonus_AtRange += 10f;
+                    playerInfo.Bonus_Defence += 1f;
                 }
                 break;
             case 2:
@@ -387,62 +369,152 @@ public class PlayerStatus : MonoBehaviour
             case 3:
                 if (playerInfo.Lv == 10)
                 {
-
+                    playerInfo.Bonus_XpPuls += 5f;
                 }
                 else if (playerInfo.Lv == 20)
                 {
-
+                    playerInfo.Bonus_XpPuls += 5f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_XpPuls += 5f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    playerInfo.Bonus_XpPuls += 5f;
+                }
+                else if (playerInfo.Lv == 50)
+                {
+                    playerInfo.Bonus_XpPuls += 5f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_XpPuls += 5f;
                 }
                 break;
             case 4:
                 if (playerInfo.Lv == 10)
                 {
-
+                    playerInfo.Bonus_Cri += 3f;
                 }
                 else if (playerInfo.Lv == 20)
                 {
-
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 50)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 70)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 80)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 90)
+                {
+                    playerInfo.Bonus_Cri += 3f;
+                }
+                else if (playerInfo.Lv == 100)
+                {
+                    playerInfo.Bonus_Cri += 3f;
                 }
                 break;
             case 5:
-                if (playerInfo.Lv == 10)
+                if (playerInfo.Lv == 15)
                 {
-
+                    playerInfo.Bonus_AtRange += 10f;
                 }
-                else if (playerInfo.Lv == 20)
+                else if (playerInfo.Lv == 30)
                 {
-
+                    playerInfo.Bonus_AtRange += 10f;
                 }
+                else if (playerInfo.Lv == 45)
+                {
+                    playerInfo.Bonus_AtRange += 10f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_AtRange += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_AtRange += 10f;
+                }
+               
                 break;
             case 6:
-                if (playerInfo.Lv == 10)
+                if (playerInfo.Lv == 15)
                 {
-
+                    playerInfo.Bonus_Dmg += 10f;
                 }
-                else if (playerInfo.Lv == 20)
+                else if (playerInfo.Lv == 30)
                 {
-
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 45)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
                 }
                 break;
             case 7:
-                if (playerInfo.Lv == 10)
+                if (playerInfo.Lv == 15)
                 {
-
+                    playerInfo.Bonus_BtTime += 10f;
                 }
-                else if (playerInfo.Lv == 20)
+                else if (playerInfo.Lv == 30)
                 {
-
+                    playerInfo.Bonus_BtTime += 10f;
+                }
+                else if (playerInfo.Lv == 45)
+                {
+                    playerInfo.Bonus_BtTime += 10f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_BtTime += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_BtTime += 10f;
                 }
                 break;
             case 8:
-                if (playerInfo.Lv == 10)
+                if (playerInfo.Lv == 30)
                 {
-
+                    playerInfo.Bonus_BtCnt += 1;
                 }
-                else if (playerInfo.Lv == 20)
+                else if (playerInfo.Lv == 60)
                 {
-
+                    playerInfo.Bonus_BtCnt += 1;
                 }
+                else if (playerInfo.Lv == 9)
+                {
+                    playerInfo.Bonus_BtCnt += 1;
+                }
+
                 break;
             case 9:
                 if (playerInfo.Lv == 10)

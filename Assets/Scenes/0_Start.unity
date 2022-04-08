@@ -551,6 +551,7 @@ MonoBehaviour:
   dataPath_String: project - GameText
   dataPath_Card: project - Card_Info
   dataPath_Map: project - Map_Info
+  dataPath_PowerUp: project - PowerUp_Info
   GameText_Korean: []
   GameText_English: []
   GameText_Japan: []
