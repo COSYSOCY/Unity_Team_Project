@@ -77,8 +77,11 @@ public class NewSkill_32 : Skill_Ori
                 endpos = target.transform.position + (d * 30);
                 endpos.y = 1f;
 
-                laser.GetComponent<LineRenderer>().SetPosition(0, pos);
-                laser.GetComponent<LineRenderer>().SetPosition(1, endpos);
+                laser.transform.GetChild(0).GetComponent<LineRenderer>().SetPosition(0, pos);
+                laser.transform.GetChild(0).GetComponent<LineRenderer>().SetPosition(1, endpos);
+
+                laser.transform.GetChild(1).GetComponent<LineRenderer>().SetPosition(0, pos);
+                laser.transform.GetChild(1).GetComponent<LineRenderer>().SetPosition(1, endpos);
                 RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d, 30f, layermask);
 
                 if (Rhits.Length > 0)

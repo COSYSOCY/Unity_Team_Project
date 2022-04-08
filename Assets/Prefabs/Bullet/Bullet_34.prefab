@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9198147467259929463}
   - component: {fileID: -1885599628596539402}
   - component: {fileID: 472555964183081101}
-  - component: {fileID: 6357663071008730696}
+  - component: {fileID: 7427983840841128275}
   m_Layer: 0
   m_Name: Bullet_34
   m_TagString: Untagged
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  - {fileID: 2100000, guid: b91a41e12d16bb442af690aeefae0afc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6357663071008730696
+--- !u!114 &7427983840841128275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,7 +153,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7114765295065333393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7287feb1b943d1545a74ded10795fec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cb349db2776594438ea8cc1f668be46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 9198147467259929463}
+  check: 0
+  CurTime: 0

@@ -99,6 +99,9 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0
 --- !u!136 &1250425562487103755
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -123,6 +126,10 @@ PrefabInstance:
     - target: {fileID: 1079946990457772, guid: 2e10c38d7d83154429c2fb51c652e1fb, type: 3}
       propertyPath: m_Name
       value: Projectile 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079946990457772, guid: 2e10c38d7d83154429c2fb51c652e1fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4494156932542222, guid: 2e10c38d7d83154429c2fb51c652e1fb, type: 3}
       propertyPath: m_RootOrder

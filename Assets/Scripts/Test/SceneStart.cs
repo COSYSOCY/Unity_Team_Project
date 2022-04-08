@@ -49,22 +49,52 @@ public class SceneStart : MonoBehaviour
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Head04").GetComponent<SkinnedMeshRenderer>().material);
                 break;
             case 1:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Body6").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Dog").GetComponent<SkinnedMeshRenderer>().material);
+
                 //추가 액션
                 break;
             case 2:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body03").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head03").GetComponent<SkinnedMeshRenderer>().material);
+
                 //추가 액션
                 break;
             case 3:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body14").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head14").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
                 break;
             case 4:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body11").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head11").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
                 break;
             case 5:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body12").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head12").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
                 break;
             case 6:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body05").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head05").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
+                break;
+            case 7:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body16").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head16").GetComponent<SkinnedMeshRenderer>().material);
+                //추가 액션
+                break;
+            case 8:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body19").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head19").GetComponent<SkinnedMeshRenderer>().material);
+                //추가 액션
+                break;
+            case 9:
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Body06").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Head06").GetComponent<SkinnedMeshRenderer>().material);
+                //추가 액션
+                break;
                 break;
             default:
                 break;

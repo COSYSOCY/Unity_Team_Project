@@ -25,6 +25,7 @@ public class NewSkill_12 : Skill_Ori
     }
     public override void CreateFunc()
     {
+        bulletname = "Bullet_12_1";
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
         Uppie = 999;
         UpScale = 2;

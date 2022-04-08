@@ -2938,7 +2938,7 @@ GameObject:
   - component: {fileID: 4077467901236530220}
   - component: {fileID: 4139314787641768410}
   m_Layer: 0
-  m_Name: Body6
+  m_Name: Eff_Body6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3183,7 +3183,7 @@ GameObject:
   - component: {fileID: 4074002598016956152}
   - component: {fileID: 4164221850205047264}
   m_Layer: 0
-  m_Name: 2_Dog
+  m_Name: 1_Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4067,7 +4067,7 @@ GameObject:
   - component: {fileID: 4074061855746034268}
   - component: {fileID: 4143215420930908686}
   m_Layer: 0
-  m_Name: Dog
+  m_Name: Eff_Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
