@@ -16,6 +16,7 @@ public class MainSingleton : MonoBehaviour
 
     public Skill_Item_16 item16;
     public Skill_Item_17 item17;
+    public Skill_Item_31 item31;
     public PullRange pullrange;
     public Transform UiTextparentTransform;
 

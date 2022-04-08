@@ -21663,6 +21663,7 @@ MonoBehaviour:
   skillmanager: {fileID: 1428158546}
   item16: {fileID: 1371024046}
   item17: {fileID: 1691115463}
+  item31: {fileID: 210419233}
   pullrange: {fileID: 6523417664767116158}
   UiTextparentTransform: {fileID: 618755127}
   HitEffect: []

@@ -20,7 +20,7 @@ public class NewSkill_35 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Upscale = 5f;
+        Upscale = 3f;
     }
 
     public override void LevelUpFunc()
@@ -31,6 +31,12 @@ public class NewSkill_35 : Skill_Ori
 
         }
 
+    }
+    float damage()
+    {
+        float d = _Damage();
+        d = d + (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] * 3);
+        return d;
     }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
@@ -63,7 +69,7 @@ public class NewSkill_35 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
-                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
             }
         }
         g.SetActive(false);

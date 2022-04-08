@@ -318,25 +318,140 @@ public class PlayerStatus : MonoBehaviour
         switch (GameInfo.inst.CharacterIdx)
         {
             case 0:
-                if (playerInfo.Lv==10)
+                if (playerInfo.Lv==15)
                 {
-                    GameInfo.DamagePlus += 10f;
+                    playerInfo.Bonus_Dmg += 10f;
                 }
-                else if(playerInfo.Lv == 20)
+                else if(playerInfo.Lv == 30)
                 {
-                    GameInfo.DamagePlus += 10f;
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 45)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_Dmg += 10f;
+                }
+                break;
+
+            case 1:
+                if (playerInfo.Lv == 15)
+                {
+                    playerInfo.Bonus_AtRange += 10f;
                 }
                 else if (playerInfo.Lv == 30)
                 {
-                    GameInfo.DamagePlus += 10f;
+                    playerInfo.Bonus_AtRange += 10f;
                 }
-                else if (playerInfo.Lv == 40)
+                else if (playerInfo.Lv == 45)
                 {
-                    GameInfo.DamagePlus += 10f;
+                    playerInfo.Bonus_AtRange += 10f;
                 }
-                else if (playerInfo.Lv == 50)
+                else if (playerInfo.Lv == 60)
                 {
-                    GameInfo.DamagePlus += 10f;
+                    playerInfo.Bonus_AtRange += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_AtRange += 10f;
+                }
+                break;
+            case 2:
+                if (playerInfo.Lv == 15)
+                {
+                    playerInfo.Bonus_BtSpeed += 10f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_BtSpeed += 10f;
+                }
+                else if (playerInfo.Lv == 45)
+                {
+                    playerInfo.Bonus_BtSpeed += 10f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_BtSpeed += 10f;
+                }
+                else if (playerInfo.Lv == 75)
+                {
+                    playerInfo.Bonus_BtSpeed += 10f;
+                }
+                break;
+            case 3:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 4:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 5:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 6:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 7:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 8:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
+                }
+                break;
+            case 9:
+                if (playerInfo.Lv == 10)
+                {
+
+                }
+                else if (playerInfo.Lv == 20)
+                {
+
                 }
                 break;
             default:

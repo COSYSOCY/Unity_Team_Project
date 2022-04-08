@@ -44,6 +44,10 @@ public class UIManager : MonoBehaviour
         {
             MainSingleton.instance.item16.Func();
         }
+        if (MainSingleton.instance.playerstat.SkillItemactive[31] >= 1)
+        {
+            MainSingleton.instance.item31.Func();
+        }
         //KillText.text =""+playerinfo.Kill;
     }
     public void GoldUp(int gold)

@@ -25,7 +25,13 @@ public class PlayerInfo : MonoBehaviour
     public int SkillItemMax;
     public int ADRe = 0;
 
-    public float BounsDmg = 0;
+
+
+
+
+    public float Bonus_Dmg = 0f;
+    public float Bonus_AtRange = 0f;
+    public float Bonus_BtSpeed = 0f;
 
     private void Start()
     {
