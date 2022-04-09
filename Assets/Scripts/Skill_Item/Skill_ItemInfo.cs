@@ -68,6 +68,7 @@ public class Skill_ItemInfo : MonoBehaviour
         Skill_Item_Name = csvData.GameText(csvData.SkillItemNameNum[Index_Text]);
         Skill_Icon = csvData.SkillItemIconNum[Index_Text];
         LvMax = csvData.SkillItemMaxLevel[Index_Text];
+        
         CreateIdx = csvData.SkillItemCreateIdx[Index_Text];
         for (int i = Index_Text; i < Index_Text + LvMax; i++)
         {

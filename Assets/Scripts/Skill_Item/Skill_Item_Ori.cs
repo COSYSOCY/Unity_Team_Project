@@ -14,25 +14,26 @@ public class Skill_Item_Ori : MonoBehaviour
 
         MainSingleton.instance.playerstat.SkillItemactive[info.Index]++;
         info.Lv++;
-        info.HpPlusC=info.HpPlusCCheck[info.Lv];
-        info.HpPlusPer = info.HpPlusPerCheck[info.Lv];
-        info.HpRegen = info.HpRegenCheck[info.Lv];
-        info.Defence = info.DefenceCheck[info.Lv];
-        info.AtPlus = info.AtPlusCheck[info.Lv];
-        info.Cool = info.CoolCheck[info.Lv];
-        info.AtRange = info.AtRangeCheck[info.Lv];
-        info.Speed = info.SpeedCheck[info.Lv];
-        info.BulletCnt = info.BulletCntCheck[info.Lv];
-        info.GoldPlus = info.GoldPlusCheck[info.Lv];
-        info.XpPlus = info.XpPlusCheck[info.Lv];
-        info.BulletSpeed = info.BulletSpeedCheck[info.Lv];
-        info.BulletTime = info.BulletTimeCheck[info.Lv];
-        info.Range = info.RangeCheck[info.Lv];
-        info.Real1 = info.Real1Check[info.Lv];
-        info.Real2 = info.Real2Check[info.Lv];
 
-        info.Pie = info.PieCheck[info.Lv];
-        info.DmgPer = info.DmgPerCheck[info.Lv];
+        info.HpPlusC=info.HpPlusCCheck[info.Lv - 1];
+        info.HpPlusPer = info.HpPlusPerCheck[info.Lv - 1];
+        info.HpRegen = info.HpRegenCheck[info.Lv - 1];
+        info.Defence = info.DefenceCheck[info.Lv - 1];
+        info.AtPlus = info.AtPlusCheck[info.Lv - 1];
+        info.Cool = info.CoolCheck[info.Lv - 1];
+        info.AtRange = info.AtRangeCheck[info.Lv - 1];
+        info.Speed = info.SpeedCheck[info.Lv - 1];
+        info.BulletCnt = info.BulletCntCheck[info.Lv - 1];
+        info.GoldPlus = info.GoldPlusCheck[info.Lv - 1];
+        info.XpPlus = info.XpPlusCheck[info.Lv - 1];
+        info.BulletSpeed = info.BulletSpeedCheck[info.Lv - 1];
+        info.BulletTime = info.BulletTimeCheck[info.Lv - 1];
+        info.Range = info.RangeCheck[info.Lv - 1];
+        info.Real1 = info.Real1Check[info.Lv - 1];
+        info.Real2 = info.Real2Check[info.Lv - 1];
+
+        info.Pie = info.PieCheck[info.Lv - 1];
+        info.DmgPer = info.DmgPerCheck[info.Lv - 1];
 
         if (info.HpPlusC+ info.HpPlusPer > 0)
         {
@@ -54,6 +55,7 @@ public class Skill_Item_Ori : MonoBehaviour
     }
     public virtual void StartFunc()
     {
+        Debug.Log("¤±¤¤¤·");
         LevelUp();
         if (MainSingleton.instance.playerstat.Skillactive[info.CreateIdx] >= 1)
         {

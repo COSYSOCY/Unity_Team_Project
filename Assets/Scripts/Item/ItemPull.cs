@@ -83,7 +83,7 @@ public class ItemPull : MonoBehaviour
                     SoundManager.inst.SoundPlay(0);
                     break;
                 case Item_ENUM.XP:
-                    playerstatus.XpPlus(item_stat);
+                   playerstatus.XpPlus(item_stat);
 
                     SoundManager.inst.SoundPlay(1);
                     break;

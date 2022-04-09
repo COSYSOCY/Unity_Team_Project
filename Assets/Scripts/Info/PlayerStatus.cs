@@ -202,8 +202,12 @@ public class PlayerStatus : MonoBehaviour
     }
     IEnumerator ReFunc()
     {
-        
+        MainSingleton.instance.nav.radius += 3;
+        yield return null;
+        hpbar.value = 1f;
         yield return new WaitForSeconds(2f);
+        MainSingleton.instance.nav.radius -= 3;
+        SliderUpdate();
         shiledOb.SetActive(false);
         In--;
     }
@@ -248,6 +252,9 @@ public class PlayerStatus : MonoBehaviour
 
     public void XpPlus(int xp)
     {
+        if (xp !=0)
+        {
+
         int i;
         float f = manager.XpPlus()+GameInfo.XpPlus + CardStat.inst.CardStat_XpPlus()+ PowerUpInfo.instance._XpPlus()+playerInfo.Bonus_XpPuls;
         f = xp * f * 0.01f;
@@ -261,6 +268,7 @@ public class PlayerStatus : MonoBehaviour
         if (XpBar.transform.localScale.y <=1.6f)
         {
             XpBar.transform.DOPunchScale(new Vector3(2, 2.25f, 2), 0.5f,0,0 );
+        }
         }
         
 
@@ -280,7 +288,7 @@ public class PlayerStatus : MonoBehaviour
     }
     public void LevelUp()
     {
-        playerInfo.Xp = playerInfo.MaxXp-playerInfo.Xp;
+        playerInfo.Xp = playerInfo.Xp- playerInfo.MaxXp;
         
         if (playerInfo.Xp <=0)
         {
@@ -307,10 +315,13 @@ public class PlayerStatus : MonoBehaviour
         Time.timeScale = 1f;
         playerInfo.ADRe++;
         playerInfo.Hp=playerInfo.MaxHp;
+        shiledOb.SetActive(true);
+        MainSingleton.instance.nav.radius += 3;
+        yield return null;
         SliderUpdate();
         SoundManager.inst.SoundPlay(22);
-        shiledOb.SetActive(true);
         yield return new WaitForSeconds(2f);
+        MainSingleton.instance.nav.radius -= 3;
         shiledOb.SetActive(false);
         IsAdIn = false;
     }

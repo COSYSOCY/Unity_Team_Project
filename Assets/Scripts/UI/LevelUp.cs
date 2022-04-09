@@ -362,6 +362,7 @@ public class LevelUp : MonoBehaviour
             // gameObject.GetComponent<Skill_Info>().LevelUpCheck();
             Ob.GetComponent<Skill_Ori>().LevelUp();
         }
+        status.XpPlus(0);
         //skillManager.Skill_All_Active.Add(Ob);
 
 
@@ -383,6 +384,7 @@ public class LevelUp : MonoBehaviour
             // gameObject.GetComponent<Skill_Info>().LevelUpCheck();
             Ob.GetComponent<Skill_Item_Ori>().LevelUp();
         }
+        status.XpPlus(0);
         //skillManager.Skill_All_Active.Add(Ob);
 
 
@@ -398,6 +400,7 @@ public class LevelUp : MonoBehaviour
             Time.timeScale = 1f;
             LevelUiObject.SetActive(false);
             testcheck = false;
+            status.XpPlus(0);
         }
         else
         {
@@ -422,6 +425,7 @@ public class LevelUp : MonoBehaviour
             Time.timeScale = 1f;
             LevelUiObject.SetActive(false);
             testcheck = false;
+            status.XpPlus(0);
         }
         else
         {
