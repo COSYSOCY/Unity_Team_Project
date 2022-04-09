@@ -6,11 +6,14 @@ using UnityEngine;
 public class NewSkill_12 : Skill_Ori
 {
 
+    string bulletname = "Bullet_12";
+    int Uppie = 0;
+    float UpScale=0;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
-
+        StartCoroutine(Skill_Update());
 
 
 
@@ -22,7 +25,10 @@ public class NewSkill_12 : Skill_Ori
     }
     public override void CreateFunc()
     {
+        bulletname = "Bullet_12_1";
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        Uppie = 999;
+        UpScale = 2;
     }
 
     public override void LevelUpFunc()
@@ -34,23 +40,35 @@ public class NewSkill_12 : Skill_Ori
         }
 
     }
-    public void Skill_Func() // 실질적으로 실행되는 스크립트
+    IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
-        float local = _AtRange();
+        while (true)
+        {
+            yield return new WaitForSeconds(_CoolMain(true));
+            yield return StartCoroutine(Skill_Update2());
+            
+        }
+    }
+    IEnumerator Skill_Update2()
+    {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_12", pos, Quaternion.identity);
-        bullet.transform.localScale = new Vector3(local, local, local);
-        Collider[] Enemys;
-        Enemys = Physics.OverlapSphere(Player.transform.position, bullet.transform.lossyScale.x * _AtRange(), layermask);
-        if (Enemys.Length > 0)
-        {
-            for (int i = 0; i < Enemys.Length; i++)
+        float local = _AtRange()+ UpScale;
+
+            for (int i = 0; i < _BulletCnt(); i++)
             {
-                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+            SoundManager.inst.SoundPlay(26);
+
+            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+Uppie;
+                bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+                bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+                bullet.transform.localScale = new Vector3(local, local, local);
+                yield return new WaitForSeconds(0.1f);
             }
-        }
+
 
     }
 

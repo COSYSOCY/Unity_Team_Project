@@ -17,21 +17,16 @@ public class EndGameScript : MonoBehaviour
 
     IEnumerator startFunc1()
     {
-        int xp = Random.Range(100,1000);
+        //int xp = Random.Range(100,1000);
         int gold = MainSingleton.instance.playerinfo.Gold;
-
-        // 임시
-        gold += Random.Range(100, 1000);
+        float AddGold;
+        float f = MainSingleton.instance.skillmanager.GoldPlus() + CardStat.inst.CardStat_GoldPlus() + PowerUpInfo.instance._GoldPlus();
+        AddGold = gold;
+        AddGold = AddGold * (f * 0.01f);
+        
         // 
         yield return new WaitForSecondsRealtime(0.5f);
-        if (xp > 0)
-        {
-            GameObject bt = Instantiate(bootyPrefab, bootyParent);
-            bt.GetComponent<bootyInfo>().myCnt.text = "X" + xp;
-            bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[1];
-            //xp더해주기
-            yield return new WaitForSecondsRealtime(0.7f);
-        }
+        
         if (gold > 0)
         {
             GameObject bt = Instantiate(bootyPrefab, bootyParent);
@@ -40,14 +35,24 @@ public class EndGameScript : MonoBehaviour
             GameInfo.PlayerGold += gold;
             yield return new WaitForSecondsRealtime(0.7f);
         }
+        if (AddGold > 0)
+        {
+            GameObject bt = Instantiate(bootyPrefab, bootyParent);
+            bt.GetComponent<bootyInfo>().myCnt.text = "X" + (int)AddGold;
+            bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[3];
+            bt.GetComponent<bootyInfo>().bonus.SetActive(true);
+            GameInfo.PlayerGold += (int)AddGold;
+            //xp더해주기
+            yield return new WaitForSecondsRealtime(0.7f);
+        }
         if (MainSingleton.instance.playerstat.playingCard_Bonus.Count > 0) // 보너스 전리품 카드 추가
         {
             for (int i = 0; i < MainSingleton.instance.playerstat.playingCard_Bonus.Count; i++)
             {
                 int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardIconNum;
-
+                int Lv = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardLv;
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
-                bt.GetComponent<bootyInfo>().myCnt.text = "";
+                bt.GetComponent<bootyInfo>().myCnt.text = "Lv."+ Lv;
                 bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
                 bt.GetComponent<bootyInfo>().bonus.SetActive(true);
                 GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard_Bonus[i]);
@@ -63,9 +68,10 @@ public class EndGameScript : MonoBehaviour
             for (int i = 0; i < MainSingleton.instance.playerstat.playingCard.Count; i++)
             {
                 int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardIconNum;
-
+                int Lv = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardLv;
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
-                bt.GetComponent<bootyInfo>().myCnt.text = "";
+
+                bt.GetComponent<bootyInfo>().myCnt.text = "Lv." + Lv;
                 bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
 
                 GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard[i]);

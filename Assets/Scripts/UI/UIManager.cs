@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     public Text HpText;
     public Text LevelText;
     public GameObject EndGameOb;
+    public Text[] SkillLvText;
     private void Start()
     {
         //if (GameInfo.inst.PlayerSE)
@@ -40,6 +41,14 @@ public class UIManager : MonoBehaviour
     public void KillUp()
     {
         playerinfo.Kill++;
+        if (MainSingleton.instance.playerstat.SkillItemactive[16] >= 1)
+        {
+            MainSingleton.instance.item16.Func();
+        }
+        if (MainSingleton.instance.playerstat.SkillItemactive[31] >= 1)
+        {
+            MainSingleton.instance.item31.Func();
+        }
         //KillText.text =""+playerinfo.Kill;
     }
     public void GoldUp(int gold)
@@ -118,18 +127,49 @@ public class UIManager : MonoBehaviour
         int Maxhp = (int)playerinfo.MaxHp;
         HpText.text = hp + " / " + Maxhp;
         KillText.text = playerinfo.Kill.ToString();
+
+        for (int i = 0; i < MainSingleton.instance.skillmanager.Skill_Active.Count; i++)
+        {
+            int Lv = MainSingleton.instance.skillmanager.Skill_Active[i].GetComponent<Skill_Info>().Lv;
+            int LvMax = MainSingleton.instance.skillmanager.Skill_Active[i].GetComponent<Skill_Info>().LvMax;
+            if (Lv>= LvMax)
+            {
+                SkillLvText[i].text = csvData.GameText(1022);
+
+            }
+            else
+            {
+            SkillLvText[i].text =Lv+"/"+ LvMax;
+
+            }
+        }
+        for (int i = 0; i < MainSingleton.instance.skillmanager.Skill_Item_Active.Count; i++)
+        {
+            int Lv = MainSingleton.instance.skillmanager.Skill_Item_Active[i].GetComponent<Skill_ItemInfo>().Lv;
+            int LvMax = MainSingleton.instance.skillmanager.Skill_Item_Active[i].GetComponent<Skill_ItemInfo>().LvMax;
+            if (Lv >= LvMax)
+            {
+                SkillLvText[i+6].text = csvData.GameText(1022);
+
+            }
+            else
+            {
+                SkillLvText[i+6].text = Lv + "/" + LvMax;
+
+            }
+        }
     }
     public void ReYes()
     {
 
-            GameInfo.PlayerPoint -= 5;
+            //GameInfo.PlayerPoint -= 5;
             StartCoroutine(MainSingleton.instance.playerstat.AdIn());
 
     }
     public void ReYes2()
     {
 
-        GameInfo.PlayerPoint -= 5;
+        //GameInfo.PlayerPoint -= 5;
         StartCoroutine(MainSingleton.instance.playerstat.AdIn());
 
     }

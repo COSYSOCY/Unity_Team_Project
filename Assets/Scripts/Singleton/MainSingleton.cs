@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MainSingleton : MonoBehaviour
 {
@@ -14,8 +15,13 @@ public class MainSingleton : MonoBehaviour
     public GameObject birdtarget;
     public SkillManager skillmanager;
 
-    public NewSkill_13 skill_13;
+    public Skill_Item_16 item16;
+    public Skill_Item_17 item17;
+    public Skill_Item_31 item31;
     public PullRange pullrange;
+    public Transform UiTextparentTransform;
+
+    public NavMeshAgent nav;
 
     public List<Material> HitEffect;
     private void Awake()

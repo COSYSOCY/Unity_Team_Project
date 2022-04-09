@@ -28,6 +28,7 @@ public class csvData : MonoBehaviour
 {
     static csvData inst;
 
+    public string dataPath_MixInfo;
     public string dataPath_PlayerExp;
     public string dataPath_Characters;
     public string dataPath_Enemy;
@@ -37,6 +38,7 @@ public class csvData : MonoBehaviour
     public string dataPath_String;
     public string dataPath_Card;
     public string dataPath_Map;
+    public string dataPath_PowerUp;
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
@@ -89,6 +91,7 @@ public class csvData : MonoBehaviour
     public static List<float> SkillReal3=new List<float>();
     public static List<int> SkillCreateIdx=new List<int>();
 
+
     public static List<int> SkillItemNameNum = new List<int>();
     public static List<int> SkillItemInfoNum = new List<int>();
     public static List<int> SkillItemIconNum = new List<int>();
@@ -110,6 +113,8 @@ public class csvData : MonoBehaviour
     public static List<float> SkillItemReal1 = new List<float>();
     public static List<float> SkillItemReal2 = new List<float>();
     public static List<int> SkillItemCreateIdx = new List<int>();
+    public static List<int> SkillItemPie = new List<int>();
+    public static List<float> SkillItemDmgPer = new List<float>();
 
     public static List<float> MonsterHp = new List<float>();
     public static List<float> MonsterDefence = new List<float>();
@@ -152,10 +157,42 @@ public class csvData : MonoBehaviour
     public static List<float> CardAttackRange = new List<float>();
     public static List<float> CardRange = new List<float>();
 
+    public static List<float> CardDmgPer = new List<float>();
+    public static List<float> CardBuSpeed = new List<float>();
+    public static List<float> CardBuTime = new List<float>();
+
+
+
+
+
+
+
+
+    public static List<int> Pu_NameNum = new List<int>();
+    public static List<int> Pu_InfoNum = new List<int>();
+    public static List<int> Pu_LevelMax = new List<int>();
+    public static List<int> Pu_Cost1 = new List<int>();
+    public static List<int> Pu_Cost2 = new List<int>();
+    public static List<int> Pu_Cost3 = new List<int>();
+    public static List<int> Pu_Cost4 = new List<int>();
+    public static List<int> Pu_Cost5 = new List<int>();
+    public static List<int> Pu_Cost6 = new List<int>();
+    public static List<int> Pu_Cost7 = new List<int>();
+    public static List<int> Pu_Cost8 = new List<int>();
+    public static List<int> Pu_Cost9 = new List<int>();
+    public static List<int> Pu_Cost10 = new List<int>();
+
+
+
+    public static List<float> MixPer = new List<float>();
+
+
 
     void Awake()
     {
         inst = this;
+        Mix_Read();
+        PowerUp_Read();
         Player_EXP_Read();
         Characters_Read();
         Enemy_Read();
@@ -166,6 +203,40 @@ public class csvData : MonoBehaviour
        Card_Read();
        Map_Read();
         GameInfo.inst.GameStart = true;
+    }
+    public void Mix_Read()
+    {
+        data = CSVReader.Read(dataPath_MixInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            MixPer.Add(float.Parse(data[i]["확률"].ToString()));
+
+
+
+        }
+    }
+    public void PowerUp_Read()
+    {
+        data = CSVReader.Read(dataPath_PowerUp);
+        for (int i = 0; i < data.Count; i++)
+        {
+            Pu_NameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
+            Pu_InfoNum.Add(int.Parse(data[i]["설명텍스트번호"].ToString()));
+            Pu_LevelMax.Add(int.Parse(data[i]["최대레벨"].ToString()));
+            Pu_Cost1.Add(int.Parse(data[i]["1단계비용"].ToString()));
+            Pu_Cost2.Add(int.Parse(data[i]["2단계비용"].ToString()));
+            Pu_Cost3.Add(int.Parse(data[i]["3단계비용"].ToString()));
+            Pu_Cost4.Add(int.Parse(data[i]["4단계비용"].ToString()));
+            Pu_Cost5.Add(int.Parse(data[i]["5단계비용"].ToString()));
+            Pu_Cost6.Add(int.Parse(data[i]["6단계비용"].ToString()));
+            Pu_Cost7.Add(int.Parse(data[i]["7단계비용"].ToString()));
+            Pu_Cost8.Add(int.Parse(data[i]["8단계비용"].ToString()));
+            Pu_Cost9.Add(int.Parse(data[i]["9단계비용"].ToString()));
+            Pu_Cost10.Add(int.Parse(data[i]["10단계비용"].ToString()));
+
+
+
+        }
     }
 
     public void Player_EXP_Read()
@@ -192,12 +263,15 @@ public class csvData : MonoBehaviour
             MapIconNum.Add(int.Parse(data[i]["맵아이콘번호"].ToString()));
             MapLockInfoNum.Add(int.Parse(data[i]["잠금텍스트번호"].ToString()));
             GameInfo.inst.MapsInfo.Add(new MapInfo(i,MapNameNum[i],MapInfoNum[i], MapIconNum[i],MapLockInfoNum[i]));
-        GameInfo.inst.PlayerMap.Add(0);
+            GameInfo.inst.PlayerMap.Add(0);
 
 
 
         }
+
         
+
+
     }
     public void Card_Read()
     {
@@ -223,6 +297,9 @@ public class csvData : MonoBehaviour
             CardGoldPlus.Add(float.Parse(data[i]["골드증가"].ToString()));
             CardAttackRange.Add(float.Parse(data[i]["공격범위증가"].ToString()));
             CardRange.Add(float.Parse(data[i]["자석증가"].ToString()));
+            CardDmgPer.Add(float.Parse(data[i]["치명타"].ToString()));
+            CardBuSpeed.Add(float.Parse(data[i]["투사체이동시간"].ToString()));
+            CardBuTime.Add(float.Parse(data[i]["투사체지속시간"].ToString()));
 
         }
         GameInfo.inst.CardMax = data.Count;
@@ -333,6 +410,9 @@ public class csvData : MonoBehaviour
             SkillItemRange.Add(float.Parse(data[i]["자석증가"].ToString()));
             SkillItemReal1.Add(float.Parse(data[i]["실수_1"].ToString()));
             SkillItemReal2.Add(float.Parse(data[i]["실수_2"].ToString()));
+
+            SkillItemPie.Add(int.Parse(data[i]["관통"].ToString()));
+            SkillItemDmgPer.Add(float.Parse(data[i]["치명타"].ToString()));
         }
     }
 

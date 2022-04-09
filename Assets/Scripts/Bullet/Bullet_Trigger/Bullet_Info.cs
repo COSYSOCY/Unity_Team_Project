@@ -8,6 +8,9 @@ public class Bullet_Info : MonoBehaviour
     public int pie;
     public float move;
     public float KnokTime;
+    public float real1;
+    public float real2;
+    public bool Up = false;
 
     public void Destorybullet(float t)
     {

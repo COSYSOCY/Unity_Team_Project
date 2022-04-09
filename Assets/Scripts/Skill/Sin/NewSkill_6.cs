@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NewSkill_6 : Skill_Ori
 {
+
     float UpDamage=1f;
     void Start_Func() //시작시 설정
     {
@@ -59,13 +60,13 @@ public class NewSkill_6 : Skill_Ori
         bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;
         while (bullet.activeSelf)
         {
-            yield return new WaitForSeconds(0.4f);
+            
             Vector3 pos2 = bullet.transform.position;
             pos2.y = 0;
-            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", pos2, Quaternion.identity);
+            GameObject effect = ObjectPooler.SpawnFromPool("Bullet_6_1", bullet.transform.position, Quaternion.identity);
             effect.transform.localScale = new Vector3(local, local, local);
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(pos2, effect.transform.lossyScale.x * _AtRange(), layermask);
+            Enemys = Physics.OverlapSphere(pos2, Player.transform.lossyScale.x* _AtRange()*0.5f, layermask);
             if (Enemys.Length > 0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
@@ -73,6 +74,7 @@ public class NewSkill_6 : Skill_Ori
                     Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage()*UpDamage);
                 }
             }
+            yield return new WaitForSeconds(0.3f);
         }
     }
 

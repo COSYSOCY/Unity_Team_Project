@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NewSkill_14 : Skill_Ori
 {
+    float Upscale = 0f;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -19,6 +20,7 @@ public class NewSkill_14 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        Upscale = 5f;
     }
 
     public override void LevelUpFunc()
@@ -38,12 +40,11 @@ public class NewSkill_14 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(8);
         }
     }
     IEnumerator Skill_Update2()
     {
-        float local = _AtRange();
+        float local = _AtRange()+ Upscale;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 0;
         Collider[] Enemys;

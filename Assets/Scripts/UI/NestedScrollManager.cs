@@ -13,7 +13,7 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public RectTransform[] BtnRect, BtnImageRect;
 
-    const int SIZE = 4;
+    const int SIZE = 5;
     float[] pos = new float[SIZE];
     float distance, targetPos, curPos;
     bool isDrag;
@@ -28,7 +28,7 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 
         //거리에 따라 0~1인 pos대입
 
-        distance = 1f / (SIZE - 1);
+        distance = 1f / (SIZE - 1f);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
     }
 

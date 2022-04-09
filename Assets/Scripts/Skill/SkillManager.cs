@@ -15,7 +15,7 @@ public class SkillManager : MonoBehaviour
     public List<GameObject> All_Skill_Items;
     public List<GameObject> Skills;
     public List<GameObject> Skill_Items;
-    public List<GameObject> Player_Skill;
+   // public List<GameObject> Player_Skill;
     //public List<Sprite> Skill_icon;
     public PlayerInfo playerinfo;
 
@@ -71,6 +71,21 @@ public class SkillManager : MonoBehaviour
             for (int i = 0; i < Skill_Item_Active.Count; i++)
             {
                 f += ItemInfo[i].HpPlusC;
+            }
+        }
+
+        return f;
+    }
+
+    public float DmgPer()
+    {
+        float f = 0;
+
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].DmgPer;
             }
         }
 
@@ -259,5 +274,18 @@ public class SkillManager : MonoBehaviour
 
         return f;
     }
+    public int _Pie()
+    {
+        int f = 0;
 
+        if (Skill_Item_Active.Count >= 1)
+        {
+            for (int i = 0; i < Skill_Item_Active.Count; i++)
+            {
+                f += ItemInfo[i].Pie;
+            }
+        }
+
+        return f;
+    }
 }

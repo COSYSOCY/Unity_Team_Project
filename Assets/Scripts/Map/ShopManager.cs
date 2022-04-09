@@ -30,58 +30,58 @@ public class ShopManager : MonoBehaviour
 
     public void CheatGold()
     {
-        GameInfo.PlayerGold += 100;
+        GameInfo.PlayerGold += 1000;
         Loby.LobyGoldAc();
     }
     public void CheatPoint()
     {
-        GameInfo.PlayerPoint += 100;
-        Loby.LobyGoldAc();
+        //GameInfo.PlayerPoint += 100;
+        //Loby.LobyGoldAc();
     }
     public void shopGoldButton1()
     {
-        if (GameInfo.PlayerPoint >= 50)
-        {
-            GameInfo.PlayerPoint -= 50;
-            GameInfo.PlayerGold += 650;
-            Loby.LobyGoldAc();
-        }
+        //if (GameInfo.PlayerPoint >= 50)
+        //{
+        //    GameInfo.PlayerPoint -= 50;
+        //    GameInfo.PlayerGold += 650;
+        //    Loby.LobyGoldAc();
+        //}
     }
     public void shopGoldButton2()
     {
-        if (GameInfo.PlayerPoint >= 100)
-        {
-            GameInfo.PlayerPoint -= 100;
-            GameInfo.PlayerGold += 1500;
-            Loby.LobyGoldAc();
-        }
+        //if (GameInfo.PlayerPoint >= 100)
+        //{
+        //    GameInfo.PlayerPoint -= 100;
+        //    GameInfo.PlayerGold += 1500;
+        //    Loby.LobyGoldAc();
+        //}
     }
     public void shopGoldButton3()
     {
-        if (GameInfo.PlayerPoint >= 150)
-        {
-            GameInfo.PlayerPoint -= 150;
-            GameInfo.PlayerGold += 3000;
-            Loby.LobyGoldAc();
-        }
+        //if (GameInfo.PlayerPoint >= 150)
+        //{
+        //    GameInfo.PlayerPoint -= 150;
+        //    GameInfo.PlayerGold += 3000;
+        //    Loby.LobyGoldAc();
+        //}
     }
     public void shopGoldButton4()
     {
-        if (GameInfo.PlayerPoint >= 500)
-        {
-            GameInfo.PlayerPoint -= 500;
-            GameInfo.PlayerGold += 10000;
-            Loby.LobyGoldAc();
-        }
+        //if (GameInfo.PlayerPoint >= 500)
+        //{
+        //    GameInfo.PlayerPoint -= 500;
+        //    GameInfo.PlayerGold += 10000;
+        //    Loby.LobyGoldAc();
+        //}
     }
     public void shopGoldButton5()
     {
-        if (GameInfo.PlayerPoint >= 650)
-        {
-            GameInfo.PlayerPoint -= 650;
-            GameInfo.PlayerGold += 15000;
-            Loby.LobyGoldAc();
-        }
+        //if (GameInfo.PlayerPoint >= 650)
+        //{
+        //    GameInfo.PlayerPoint -= 650;
+        //    GameInfo.PlayerGold += 15000;
+        //    Loby.LobyGoldAc();
+        //}
     }
 
 

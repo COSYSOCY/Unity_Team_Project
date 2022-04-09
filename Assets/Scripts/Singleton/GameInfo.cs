@@ -27,6 +27,10 @@ public class CardInfo
 	public float CardStat_AttackRange;
 	public float CardStat_Range;
 
+	public float CardStat_DmgPer;
+	public float CardStat_BuSpeed;
+	public float CardStat_BuTime;
+
 
 
 }
@@ -41,7 +45,7 @@ public class GameInfo : MonoBehaviour
 	public bool PlayerSE; // 사운드
 	public bool PlayerDmg; //데미지표시 유무
 	public static int PlayerGold; // 플레이어 골드
-	public static int PlayerPoint; // 플레이어 보석
+	//public static int PlayerPoint; // 플레이어 보석
 
 	public  int PlayerLevel; // 플레이어 레벨
 	public  int PlayerXp; // 플레이어 경험치
@@ -86,11 +90,17 @@ public class GameInfo : MonoBehaviour
 	public static float XpPlus;//Xp증가
 	public string Language; // 언어
 
+	public List<int> Card_Lv1;
+	public List<int> Card_Lv2;
+	public List<int> Card_Lv3;
+	public List<int> Card_Lv4;
+	public List<int> Card_Lv5;
 
 	public bool isTestMode;
 	//상점
 	public int AdGoldFreeMax; // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
-
+							  //파워업
+	public List<int> Player_PowerUp;
 
 
 
@@ -105,7 +115,6 @@ public class GameInfo : MonoBehaviour
 		for (int i = 0; i < CharacterMax; i++)
 		{
 			CharacterActive.Add(0);
-
 		}
 
 		
@@ -158,6 +167,31 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardStat_GoldPlus = csvData.CardGoldPlus[i];
 			CardsInfo[i].CardStat_AttackRange = csvData.CardAttackRange[i];
 			CardsInfo[i].CardStat_Range = csvData.CardRange[i];
+
+			CardsInfo[i].CardStat_DmgPer = csvData.CardDmgPer[i];
+			CardsInfo[i].CardStat_BuSpeed = csvData.CardBuSpeed[i];
+			CardsInfo[i].CardStat_BuTime = csvData.CardBuTime[i];
+
+            switch (CardsInfo[i].CardLv)
+            {
+				case 1:
+					Card_Lv1.Add(i);
+					break;
+				case 2:
+					Card_Lv2.Add(i);
+					break;
+				case 3:
+					Card_Lv3.Add(i);
+					break;
+				case 4:
+					Card_Lv4.Add(i);
+					break;
+				case 5:
+					Card_Lv5.Add(i);
+					break;
+				default:
+					break;
+			}
 			PlayerCardCheck.Add(0);
 		}
         for (int i = 0; i < PlayerCardMax; i++)
@@ -167,7 +201,31 @@ public class GameInfo : MonoBehaviour
 		}
 
 	}
+	public List<int> Cards_Lv(int lv)
+    {
+		switch (lv)
+		{
+			case 1:
+				return Card_Lv1;
 
+			case 2:
+				return Card_Lv2;
+
+			case 3:
+				return Card_Lv3;
+
+			case 4:
+				return Card_Lv4;
+
+			case 5:
+				return Card_Lv5;
+
+			default:
+				return Card_Lv1;
+
+		}
+		return Card_Lv1;
+	}
 	public static void soundcheck()
     {
 		inst.audioSo.volume = 1f;

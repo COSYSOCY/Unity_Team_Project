@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NewSkill_11 : Skill_Ori
 {
+    float upScale = 0;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -21,6 +22,7 @@ public class NewSkill_11 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        upScale = 2.5f;
     }
 
     public override void LevelUpFunc()
@@ -38,33 +40,28 @@ public class NewSkill_11 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            StartCoroutine(Skill_Update2());
+            yield return StartCoroutine(Skill_Update2());
+            SoundManager.inst.SoundPlay(18);
         }
     }
 
     IEnumerator Skill_Update2()
     {
-        float local = _AtRange();
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float f1 = 0f;
+        for (int i = 0; i < _BulletCnt(); i++)
+        {
+            float local = _AtRange() + upScale;
+            pos.y = 1;
+            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_11", pos, bulletPos.transform.rotation);
+            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
+            bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
+            bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
+            bullet.transform.localScale = new Vector3(local, local, local);
+            yield return new WaitForSeconds(0.5f);
+        }
 
-            for (int i = 1; i <= _BulletCnt(); i++)
-            {
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_11", pos + new Vector3(5f, 0f, f1), Quaternion.identity);
-
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.1f);
-                if (i % 2 == 0)
-                {
-                    GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_11", pos + new Vector3(-5f, 0f, f1), Quaternion.identity);
-                    bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                    bullet.transform.localScale = new Vector3(local, local, local);
-                    yield return new WaitForSeconds(0.1f);
-                    f1 += 2f;
-                }
-            }
 
 
     }

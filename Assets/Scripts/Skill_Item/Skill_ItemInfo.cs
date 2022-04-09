@@ -29,6 +29,9 @@ public class Skill_ItemInfo : MonoBehaviour
     public int CreateIdx; // 실수2
     public int ActiveIdx; // 활성화 번째
 
+    public int Pie; // 관통
+    public float DmgPer; // 치명타
+
 
 
     [Space(16)]
@@ -56,12 +59,16 @@ public class Skill_ItemInfo : MonoBehaviour
     public List<float> Real1Check = new List<float>();
     public List<float> Real2Check = new List<float>();
 
+    public List<int> PieCheck = new List<int>();
+    public List<float> DmgPerCheck = new List<float>();
+
     public bool goodstart = false;
     void Awake()
     {
         Skill_Item_Name = csvData.GameText(csvData.SkillItemNameNum[Index_Text]);
         Skill_Icon = csvData.SkillItemIconNum[Index_Text];
         LvMax = csvData.SkillItemMaxLevel[Index_Text];
+        
         CreateIdx = csvData.SkillItemCreateIdx[Index_Text];
         for (int i = Index_Text; i < Index_Text + LvMax; i++)
         {
@@ -83,6 +90,11 @@ public class Skill_ItemInfo : MonoBehaviour
             RangeCheck.Add(csvData.SkillItemRange[i]);
             Real1Check.Add(csvData.SkillItemReal1[i]);
             Real2Check.Add(csvData.SkillItemReal2[i]);
+
+            PieCheck.Add(csvData.SkillItemPie[i]);
+            DmgPerCheck.Add(csvData.SkillItemDmgPer[i]);
+
+
         }
         goodstart = true;
         gameObject.SetActive(false);

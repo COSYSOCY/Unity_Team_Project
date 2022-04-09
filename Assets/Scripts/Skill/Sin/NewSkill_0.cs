@@ -5,7 +5,7 @@ using UnityEngine;
 public class NewSkill_0 : Skill_Ori
 {
     string bulletname="Bullet_0";
-    float upScale = 0;
+    float upDa = 1;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -20,10 +20,11 @@ public class NewSkill_0 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        bulletname = "Bullet_0_1";
-        upScale = 0.5f;
+        //bulletname = "Bullet_0_1";
+        //upScale = 0.5f;
+        upDa = 1.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Debug.Log("테스트");
+
     }
     public override void LevelUpFunc()
     {
@@ -46,23 +47,25 @@ public class NewSkill_0 : Skill_Ori
             //SoundManager.inst.SoundPlay(5);
         }
     }
+
+
     IEnumerator Skill_Update2()
     {
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange()+ upScale;
+        float local = _AtRange();
         for (int i = 1; i <= _BulletCnt(); i++)
         {
             
             
             GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, bulletPos.transform.rotation);
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
+            bullet.GetComponent<Bullet_Info>().damage = _Damage()*upDa;
             bullet.GetComponent<Bullet_Info>().pie = _BulletPie();
             if (i % 2 == 0)
             {
                 bullet.transform.Translate(new Vector3((i / 2) * -1, 0f, 0f));
 
-                bullet.GetComponent<Bullet_Info>().KnokTime = 0.2f;
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
 
 
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();

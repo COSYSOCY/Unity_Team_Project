@@ -14,16 +14,16 @@ public class Enemy : MonoBehaviour
     //[SerializeField] private float moveSpeed;
     private bool isDead;
 
-    NavMeshAgent nav;
+    //NavMeshAgent nav;
     public Enemy_Info info;
     private Renderer enemyColor;
 
     void Awake()
     {
-        nav = GetComponent<NavMeshAgent>();
         enemyColor = gameObject.GetComponent<Renderer>();
         enemyPoolPos = GameObject.Find("EnemyList").GetComponent<Transform>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        //nav = GetComponent<NavMeshAgent>();
     }
     private void OnEnable()
     {
@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
     {
         StartCoroutine(UpdateEnemy());
         info.moveCheck = true;
-        nav.speed = info.Speed*0.1f;
+        info.nav.speed = info.Speed*0.1f;
         if (!info.NoPosReset)
         {
 
@@ -67,9 +67,9 @@ public class Enemy : MonoBehaviour
     //SetDestination 버그 수정부분
     void OnDisable()
     {
-        nav.gameObject.SetActive(false);
+        info.nav.gameObject.SetActive(false);
         //transform.GetComponent<NavMeshAgent>().gameObject.SetActive(false);
-        nav.enabled = false;
+        info.nav.enabled = false;
         //Invoke("ReAttach", 0.01f);
         transform.position = new Vector3(-10f, -10f, -10f);
     }
@@ -81,12 +81,16 @@ public class Enemy : MonoBehaviour
     // --------------------
     void NavEnemy(Vector3 _target)
     {
-        nav.SetDestination(_target);
+        if (info.Speed>0)
+        {
+
+            info.nav.SetDestination(_target);
+        }
     }
     IEnumerator UpdateEnemy()
     {
         yield return new WaitForSeconds(0.2f);
-        nav.enabled = true;
+        info.nav.enabled = true;
         while (!isDead)
         {
             StartCoroutine(EnemyTarget());
