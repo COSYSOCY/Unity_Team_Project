@@ -83,6 +83,7 @@ public class CharacterManager : MonoBehaviour
 
 
         mainName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
+        //mainName.GetComponent<TextIdx>().Idx = csvData.CharactersNameNum[cnt];
         CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
         RawCharaImage.texture = IconManager.inst.CharaIcons[cnt]; //로우이미지
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
@@ -111,7 +112,7 @@ public class CharacterManager : MonoBehaviour
     public void CharSetString()
     {
         int cnt = GameInfo.inst.CharacterIdx;
-
+        mainName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         CharSkillName1.text = csvData.GameText(csvData.CharactersSkillName[cnt]);
         CharSkillName2.text = csvData.GameText(csvData.CharactersSkill_ItemName[cnt]);
         ///
@@ -133,6 +134,7 @@ public class CharacterManager : MonoBehaviour
         RawCharaImage.texture = IconManager.inst.CharaIcons[cnt]; //로우이미지
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
         Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
+
         CharSetString();
         //CharName.text = csvData.GameText(csvData.CharactersNameNum[cnt]);
         //CharInfo.text = csvData.GameText(csvData.CharactersInfoNum[cnt]);
@@ -169,6 +171,10 @@ public class CharacterManager : MonoBehaviour
         {
             BuyBtn.SetActive(true);
             BuyText.text = ClickOb.GetComponent<CharacterBtn>().CharactersPrice.ToString();
+            if (true)
+            {
+
+            }
         }
         InfoCharImage.sprite = IconManager.inst.Icons[ClickOb.GetComponent<CharacterBtn>().CharactersIconNum];
         InfoName.text = csvData.GameText(ClickOb.GetComponent<CharacterBtn>().CharactersNameNum);

@@ -1,7 +1,7 @@
 Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
-0,곰,쿰아,Kuma,熊手,熊,Kuma,Kuma
+0,곰,쿰아,Kuma,熊手,熊,Kuma.,Kuma
 1,개,독크나이트,Doll,人形,玩具娃娃,Puppe,Muñeca
-2,외계인,이티,II,ii,二,II,II
+2,외계인,이티,ET,ET,ET,ET,ET
 3,방독면,화방,Fire,火,火,Feuer,Fuego
 4,람보,람보,Lambo,ランボー,Lambo.,Lambo.,Lambo
 5,바주카,바카,Baka,バカ,巴卡,Baka,Baka
@@ -51,9 +51,9 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 49,장신구시트에있는 9번 이름,경험치증가량,Experienced value,経験豊富な価値,经验丰富的价值,Erfahrener Wert,Valor experimentado
 50,장신구시트에있는 10번 이름,아이템자석,Item magnet,アイテムマグネット,物品磁铁,Artikelmagnet,Imán de artículos
 51,장신구시트에있는 11번 이름,골드획득량,Gold acquisition amount,金取得量,金收购金额,Goldakquisitionsbetrag.,Cantidad de adquisición de oro
-52,장신구시트에있는 12번 이름,경험치획득량,Experience depreciation,減価償却を経験する,经验贬值,Abschreibungen erleben,Experiencia depreciación
-53,13,투사체수,Proofer,校長,校样器,Proofer,Corrector
-54,14,관통,Penetrate,貫く,穿透,Durchdringen,Penetrar
+52,장신구시트에있는 12번 이름,투사체수,Proofer,校長,校样器,Proofer,Corrector
+53,13,관통,Penetrate,貫く,穿透,Durchdringen,Penetrar
+54,14,방어막,Shield,シールド,盾,Schild,Escudo
 55,15,부활,resurrection,復活,复活,Auferstehung,Resurrección
 56,16,흡혈,Vampire,吸血鬼,吸血鬼,Vampir,Vampiro
 57,17,피격 스턴,Digust Stern,Digust Stern.,Digust Stern.,Daumstock-Stern,Severo
@@ -76,7 +76,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 74,능력시트에있는 능력 1번의 4단계 설명,"투사체 수 증가 + 1 , 공격력 +2","Increased projections + 1, Damage +2",投影+ 1、ダメージ+2の増加,增加预测+ 1，损坏+2,"Erhöhte Projektionen + 1, Beschädigung +2","Mayores proyecciones + 1, Daño +2"
 75,능력시트에있는 능력 1번의 5단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 76,능력시트에있는 능력 1번의 6단계 설명,투사체 수 증가 + 1,Increase the number of projectors + 1,プロジェクターの数を増やしてください,增加投影仪的数量+ 1,Erhöhen Sie die Anzahl der Projektoren + 1,Aumente el número de proyectores + 1
-77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
+77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+ 4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
 78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 80,능력시트에있는 능력 2번의 초기 설명,랜덤 적에게 일직선 레이저,Large Laser Laser,大レーザーレーザー,大激光激光器,Großer Laserlaser.,Láser láser grande
@@ -182,7 +182,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 180,sad,무작위 적을 향해 발사됩니다.,It is fired towards random.,それはランダムに向かって発砲されます。,它被射向随机。,Es wird in Richtung zufällig abgefeuert.,Está despedido hacia el azar.
 181,sad,투사체 수 +1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 182,sad,공격력 +5,Damage +5,ダメージ+5,损坏+5,Beschädigung +5.,Daño +5
-183,sad,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+183,sad,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 184,sad,"쿨다운 10%감소,공격력+5","Cool Down 10% Decrease, Damage +5",10％の減少、ダメージ+5を冷やす,冷却10％的减少，损坏+5,"Abkühlen 10% Abnehmen, Beschädigung +5","Enfriar el 10% de disminución, daños +5"
 185,sad,쿨다운 10% 감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 186,sad,"쿨다운 10% 감소,투사체 수+1","Cool down 10% reduction, number of projections +1",10％の減少、投影数+ 1,降低10％的减少，投影次数+1,"Abkühlen Sie 10% Reduktion, Anzahl der Prognosen +1","Enfriar el 10% de reducción, número de proyecciones +1"
@@ -190,7 +190,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 188,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
 189,sad,(능력13번  텍스트),(Ability 13 text),（能力13テキスト）,（能力13文本）,(Fähigkeit 13 Text),(Habilidad 13 texto)
 190,sad,튕기는 미사일을 날립니다.,Bounce missiles.,ミサイルをバウンスします。,弹跳导弹。,Bounce-Raketen.,Misiles de rebote.
-191,sad,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+191,sad,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 192,sad,지속시간 +20%,Duration + 20%,期間+ 20％,持续时间+ 20％,Dauer + 20%,DURACIÓN + 20%
 193,sad,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 194,sad,공격력+4,Damage +4,ダメージ+ 4,损坏+4,Beschädigung +4.,Daño +4
@@ -224,29 +224,29 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 222,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 223,asd,투사체 수 +1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 224,asd,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
-225,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+225,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 226,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
-227,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
-228,asd,ㅁ,hair,髪,头发,Haar,Cabello
+227,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
+228,asd,ㅁ,hair,髪,头发,Haar,Pelo
 229,asd,(능력17번 텍스트),(Ability 17 text),（能力17テキスト）,（能力17文本）,(Fähigkeit 17 Text),(Habilidad 17 Texto)
 230,asd,무작위 적에게 발사되어 여러방향으로 나눠집니다,Landed to random and divided in various directions,ランダムに着陸し、さまざまな方向に分けられました,降落到随机，分为各个方向,Landete zu zufällig und aufgeteilt in verschiedene Richtungen,Aterrizado al azar y dividido en varias direcciones
-231,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+231,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 232,asd,공격력+4,Damage +4,ダメージ+ 4,损坏+4,Beschädigung +4.,Daño +4
 233,asd,지속시간+20%,Duration + 20%,期間+ 20％,持续时间+ 20％,Dauer + 20%,DURACIÓN + 20%
 234,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 235,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 236,asd,공격력+4,Damage +4,ダメージ+ 4,损坏+4,Beschädigung +4.,Daño +4
-237,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+237,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 238,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
 239,asd,(능력18번 텍스트),(Ability 18 text),（能力18テキスト）,（能力18文字）,(Fähigkeit 18 Text),(Habilidad 18 Texto)
 240,asd,무작위 구역에 토네이도를 소환합니다,Summons Tornado in random zone,ランダムゾーンで竜巻を召喚します,随机区的传票龙卷风,Beschwören Sie Tornado in der zufälligen Zone,Cumplir Tornado en Zona Randa
-241,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+241,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 242,asd,공격력 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
 243,asd,지속시간 +10%,Duration + 10%,期間+ 10％,持续时间+ 10％,Dauer + 10%,DURACIÓN + 10%
 244,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 245,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 246,asd,공격력 +2,Damage +2,ダメージ+2,损坏+2,Beschädigung +2.,Daño +2
-247,asd,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+247,asd,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 248,asd,위아래로 발사되는 미사일을 쏩니다,Missile to be launched up and down,上下に発売されるミサイル,导弹上下发射,"Rakete, um auf und ab zu starten",Misil para ser lanzado arriba y abajo
 249,asd,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
 250,asd,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
@@ -501,7 +501,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 499,,팔기,Sell,売る,卖,Verkaufen,Vender
 500,asd,카드칸이 가득 차있습니다,Card Full,カードが完全に,卡片,Karte voll,Tarjeta llena
 501,asd,확인!,OK!,わかった！,好的！,OK!,OK!
-502,asd,합성(미구현),Mix,ミックス,混合,MISCHEN,MEZCLA
+502,asd,합성창,Mix State,ミックス状態,混合状态,Mischzustand,Estado de mezcla
 503,asd,푸른초원,Blue meadow,青い牧草地,蓝色草地,Blaue Wiese.,Prado azul
 504,asd,2맵이름,2 Map Name,2マップ名,2地图名称,2 Kartenname,2 Mapa Nombre
 505,asd,3맵이름,3 Map Name,3マップ名,3地图名称,3 Kartenname,3 Nombre del mapa
@@ -543,12 +543,12 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 541,2번맵 안풀린거 설명,2번맵 안풀린거 설명,2nd Map,2地図,第二地图,2. Karte,2do mapa
 542,,푸른초원 클리어시 잠금 해제,Unlocked the blue meadow clearance,青い草原クリアランスのロックを解除しました,解锁蓝色草地清仓,Entriegelt die blaue Wiesenfreiheit,Desbloqueado la liquidación del prado azul
 543,,4번맵 안풀린거 설명 텍스트,Fourth Map Uncontinued Description Text,4番目の地図の未営利の説明テキスト,第四次地图未结合描述文本,Vierte Map unbestreitete Beschreibung Text,Cuarto mapa de descripción incontinuada.
-544,,5번맵 안풀린거 설명 텍스트,5th Map,5番目の地図,第五地图,5. Karte,5to mapa
-545,,6번맵 안풀린거 설명 텍스트,Sixth Map,第6地図,第六地图,Sechste Karte,Sexto mapa
-546,,7번맵 안풀린거 설명 텍스트,7th Maps Distinguished Description Text,7番目の地図識別説明書,第7映射杰出的描述文本,7. Maps Distinguished Beschreibung Text,7mo mapas distinguidos Descripción Texto
-547,,8번맵 안풀린거 설명 텍스트,8th Maps Distinguished Description Text,第8地図識別説明書,第8次映射杰出的描述文本,8. Karten Distinguished Beschreibung Text,8º mapas distinguidos Descripción Texto
-548,,9번맵 안풀린거 설명 텍스트,N 9 Maps Distinguished Description Text,N 9マッピング識別説明テキスト,n 9地图可介绍的描述文本,N 9 Karten Distinguished Beschreibung Text,N 9 mapas distinguidos Descripción Texto
-549,,10번맵 안풀린거 설명 텍스트,10th Map,10回目の地図,第10张图,10. map.,10mo mapa
+544,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
+545,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
+546,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
+547,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
+548,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
+549,,준비중.,Getting ready.,準備をする。,做好准备。,Fertig werden.,Preparándose.
 550,,무료,Free,Free,Free,Free,Free
 551,11번 카드 이름,합일,Slope,スロープ,坡,Neigung,Pendiente
 552,12번 카드 이름,선견,foresight,先見,远见,Voraussicht,Previsión
@@ -575,7 +575,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 573,13번 카드 설명,골드획득량+1%,Gold Acquisition + 1%,金取得+ 1％,金收购+ 1％,Goldakquisition + 1%,Adquisición de oro + 1%.
 574,14번 카드 설명,200킬마다 데미지 0.1%,Damage to 200 kilometers 0.1%,200キロメートルのダメージ0.1％,损坏200公里0.1％,"Schaden von 200 Kilometern 0,1%",Daños a 200 kilómetros 0.1%.
 575,15번 카드 설명,200킬마다 체력+1,Stamina every 200 kilometers +1,200キロメートル毎にスタミナ+1,耐力每200公里+1,Ausdauer alle 200 Kilometer +1,Stamina cada 200 kilómetros +1
-576,16번 카드 설명,1분마다 경험치획득량+0.5%,Every minute experience value + 0.5%,毎分経験値+ 0.5％,每分钟经验值+ 0.5％,"Jede Minute Erfahrung + 0,5%",Cada minuto de valor de experiencia + 0.5%.
+576,16번 카드 설명,1분마다 경험치획득량+0.5%,Every minute experience value + 0.5%,毎分経験値+ 0.5％,每分钟体验值+ 0.5％,"Jede Minute Erfahrung + 0,5%",Cada minuto de valor de experiencia + 0.5%.
 577,17번 카드 설명,융단폭격 범위+10,Bumping Range +10,ぶつかる範囲+ 10,碰撞范围+10,Stößelbereich +10.,Rango de choque +10
 578,18번 카드 설명,화염방사기 데미지+8%,Flame Radiator Damage + 8%,炎ラジエーターダメージ+ 8％,火焰散热器损伤+ 8％,Flammenkühler-Schaden + 8%,Daño del radiador de la llama + 8%.
 579,19번 카드 설명,원형로봇 데미지+5%,Circular Robot Damage + 5%,円形ロボットダメージ+ 5％,圆形机器人伤害+ 5％,Kreisroboterschaden + 5%,Daño de robot circular + 5%.
@@ -673,7 +673,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 671,능력시트에있는 능력28번의 4단계 설명,"투사체 수 + 1 , 공격력 +2","Words + 1, Damage +2",単語+ 1、ダメージ+2,单词+ 1，伤害+2,"Wörter + 1, Beschädigung +2","Palabras + 1, Daño +2"
 672,능력시트에있는 능력28번의 5단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 673,능력시트에있는 능력28번의 6단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
-674,능력시트에있는 능력28번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
+674,능력시트에있는 능력28번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+ 4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
 675,능력시트에있는 능력28번의 8단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
 676,능력시트에있는 능력28번의 9단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
 677,능력시트에있는 능력29번의 초기 설명,총구에서 화염방사기,Flame radiator in muzzle,銃口の炎のラジエーター,火焰散热器在枪口中,Flammenkühler in Mündung,Radiador de la llama en el hocico
@@ -788,7 +788,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 786,33번 카드이름,부여,grant,許す,授予,GEWÄHREN,CONCEDER
 787,34번 카드이름,분발,exertion,勤労,用力,ANSTRENGUNG,ESFUERZO
 788,35번 카드이름,투지,Point,点,观点,Punkt,Punto
-789,36번 카드이름,쿨감,Cool,いいね,凉爽的,Cool,Frio
+789,36번 카드이름,쿨감,Cool,涼しい,凉爽的,Cool,Frio
 790,37번 카드이름,12번,12 times,12回,12次,12 mal,12 veces
 791,38번 카드이름,수리검,Repair,修理,修理,Reparatur,Reparar
 792,39번 카드이름,13번,13 times,13回,13次,13 mal,13 veces
@@ -809,7 +809,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 807,54번 카드이름,분발,exertion,勤労,用力,ANSTRENGUNG,ESFUERZO
 808,55번 카드이름,투지,Point,点,观点,Punkt,Punto
 809,56번 카드이름,확대,enlargement,拡大,放大,Erweiterung,Ampliación
-810,57번 카드이름,쿨감,Cool,いいね,凉爽的,Cool,Frio
+810,57번 카드이름,쿨감,Cool,涼しい,凉爽的,Cool,Frio
 811,58번 카드이름,헬파이어,Hellfire,hellfire,地狱火,Höllenfeuer,Infierno
 812,59번 카드이름,블레이즈,Blaze,bl,火焰,Blaze,Resplandor
 813,60번 카드이름,근성,Museum,美術館,博物馆,Museum,Museo
@@ -919,7 +919,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 917,94번 카드설명,"200킬마다 쿨다운감소+1.5%,자석0.2","Cool down reduction in 200 kilometers + 1.5%, Magnet 0.2",200キロメートル+ 1.5％、マグネット0.2でのクールダウン低減,减少200公里+ 1.5％，磁铁0.2,"Abkühlen der Reduktion in 200 Kilometern + 1,5%, Magnet 0,2","Reducción fresca en 200 kilómetros + 1.5%, imán 0.2"
 918,95번 카드설명,부활+1,Resurrection +1,復活+1,复活+1,Auferstehung +1.,Resurrection +1
 919,96번 카드설명,관통+1,Penetration +1,浸透+1,渗透+1,Penetration +1.,Penetración +1
-920,97번 카드설명,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+920,97번 카드설명,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 921,98번 카드설명,ㅁㄴㅇ,ㅁ ㅁ ㅇ,ㅁㅁㅁ,ㅁㅁㅇ,ㅁ ㅁ ㅇ.,ㅁ ㅁ ㅇ
 922,99번 카드설명,ㅁㄴㅇ,ㅁ ㅁ ㅇ,ㅁㅁㅁ,ㅁㅁㅇ,ㅁ ㅁ ㅇ.,ㅁ ㅁ ㅇ
 923,100번 카드설명,ㅁㄴㅇ,ㅁ ㅁ ㅇ,ㅁㅁㅁ,ㅁㅁㅇ,ㅁ ㅁ ㅇ.,ㅁ ㅁ ㅇ
@@ -938,9 +938,9 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 936,능력31번 2단계 설명,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 937,능력31번 3단계 설명,투사체 수 +1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 938,능력31번 4단계 설명,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
-939,능력31번 5단계 설명,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+939,능력31번 5단계 설명,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 940,능력31번 6단계 설명,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
-941,능력31번 7단계 설명,투사체 수+1,The number of projections +1,投影数+1,投影的数量+1,Die Anzahl der Projektionen +1,El número de proyecciones +1
+941,능력31번 7단계 설명,투사체 수+1,The number of projectors +1,プロジェクターの数+1,投影仪数量+1,Die Anzahl der Projektoren +1,El número de proyectores +1
 942,능력31번 8단계 설명,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
 943,능력31번 9단계 설명,쿨다운 -10%,Cool Down -10%,クールダウン -  10％,冷却至10％,Abkühlen -10%,Enfriar hacia abajo -10%
 944,능력.32.초기설명.,랜덤 적에게 일직선 레이저,Large Laser Laser,大レーザーレーザー,大激光激光器,Großer Laserlaser.,Láser láser grande
@@ -1018,3 +1018,41 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 1016,장신구 35 4 단계 설명,달걀 폭탄 공격력+3,Egg bomb damage +3,卵の爆弾のダメージ+3,蛋炸弹伤害+3,Eierbombenschaden +3,Daño de la bomba de huevo +3
 1017,장신구 35 5 단계 설명,달걀 폭탄 공격력+3,Egg bomb damage +3,卵の爆弾のダメージ+3,蛋炸弹伤害+3,Eierbombenschaden +3,Daño de la bomba de huevo +3
 1018,장신구 35 6 단계 설명,달걀 폭탄 공격력+3,Egg bomb damage +3,卵の爆弾のダメージ+3,蛋炸弹伤害+3,Eierbombenschaden +3,Daño de la bomba de huevo +3
+1019,파워업,파워업,Power Up,パワーアップ,充电,EINSCHALTEN,ENCENDER
+1020,,모두,ALL,全て,全部,Alles,Todos
+1021,,취소,Cancel,キャンセル,取消,Absagen,Cancelar
+1022,,최대,Max,max,最大限度,Max,Max
+1023,,체력,health,健康,健康,Gesundheit,Salud
+1024,,체력회복,Stamina recovery,スタミナ回復,耐力恢复,Widerherstellung der Kondition,Recuperación de energía
+1025,,방어력,Defense,防衛,防御,Verteidigung,Defensa
+1026,,이동속도,speed,速度,速度,GESCHWINDIGKEIT,VELOCIDAD
+1027,,데미지,damage,ダメージ,损害,Schaden,Daño
+1028,,치명타,Critical Hit,クリティカルヒット,临界命中,KRITISCHER TREFFER,GOLPE CRÍTICO
+1029,,쿨타임,Cool time,クールな時間,凉爽的时间,Coole Zeit,Tiempo agradable o tiempo fresco
+1030,,경험치,Experience,経験,经验,Erfahrung,Experiencia
+1031,,골드,gold,ゴールド,金子,GOLD,ORO
+1032,,공격범위,Attack range,攻撃範囲,攻击范围,Angriffsreichweite,Rango de ataque
+1033,,투사체 이동속도,Projective movement speed,射影運動スピード,投影机动速度,Projektive Bewegungsgeschwindigkeit.,Velocidad de movimiento proyectivo
+1034,,투사체 지속시간,Projectivity duration,射影期間,投影率持续时间,Projektivitätsdauer.,Duración de la proyección
+1035,,자석,magnet,磁石,磁铁,Magnet,Imán
+1036,,부활,resurrection,復活,复活,Auferstehung,Resurrección
+1037,,투사체 수,The number of projectors,プロジェクターの数,投影仪的数量,Die Anzahl der Projektoren,El número de proyectores
+1038,,레벨 당 최대 체력을 3 증가시킵니다. (최대 +30),Increases the maximum physical strength per level. (Max +30),レベルあたりの最大の物理的強度を高めます。 （最大+ 30）,增加每级的最大体力。 （MAX +30）,Erhöht die maximale körperliche Festigkeit pro Niveau. (Max +30),Aumenta la fuerza física máxima por nivel. (Max +30)
+1039,,레벨 당 체력회복을 0.05 증가시킵니다. (최대 +0.5),Increases physical restoration per level to 0.05. (Max +0.5),レベルあたりの物理的な復元を0.05に増やします。 （最大+ 0.5）,将每个级别的物理恢复增加至0.05。 （最大+0.5）,"Erhöht die physikalische Wiederherstellung pro Level auf 0,05. (Max +0,5)",Aumenta la restauración física por nivel a 0.05. (Max +0.5)
+1040,,레벨 당 방어를 3 증가시킵니다. (최대 +30),Increases defenses per level. (Max +30),レベルあたりの防御を増やします。 （最大+ 30）,每个级别增加防御。 （MAX +30）,Erhöht die Verteidigung pro Ebene. (Max +30),Aumenta las defensas por nivel. (Max +30)
+1041,,레벨 당 이동속도를 2% 증가시킵니다. (최대 +20%),Movement speed per level increases 2%. (Max + 20%),レベルあたりの移動速度は2％増加します。 （最大+ 20％）,每个级别的运动速度增加2％。 （最多+ 20％）,Die Bewegungsgeschwindigkeit pro Höhe steigt um 2%. (Max + 20%),La velocidad de movimiento por nivel aumenta el 2%. (Max + 20%)
+1042,,레벨 당 데미지를 2% 증가시킵니다. (최대 +20%),Increases damage per level by 2%. (Max + 20%),レベルごとのダメージを2％増加させます。 （最大+ 20％）,每级伤害提高2％。 （最多+ 20％）,Erhöht den Schaden pro Niveau um 2%. (Max + 20%),Aumenta el daño por nivel en un 2%. (Max + 20%)
+1043,,레벨 당 치명타를 1% 증가시킵니다. (최대 +10%),Increases 1% of the critical per level. (Max + 10%),重大度の1％を増やします。 （最大+ 10％）,增加每个级别的1％。 （最多+ 10％）,Erhöht 1% des kritischen Werts pro Level. (Max + 10%),Aumenta el 1% del nivel crítico por nivel. (Max + 10%)
+1044,,레벨 당 쿨다운을 1% 감소시킵니다. (최대 +10%),Reduces the cooldown per level by 1%. (Max + 10%),1レベルあたりのクールダウンを1％減らします。 （最大+ 10％）,将每个级别的冷却量减少1％。 （最多+ 10％）,Reduziert die Abklingzeit pro Level um 1%. (Max + 10%),Reduce el reutilización por nivel en un 1%. (Max + 10%)
+1045,,레벨 당 경험치획득량을 1% 증가시킵니다. (최대 +5%),Experienced experience of levels per level to 1%. (Max + 5%),レベルごとのレベルの経験豊富な経験は1％です。 （最大+ 5％）,经验丰富的每级水平经验为1％。 （最多+ 5％）,Erfahrene Erfahrung mit Level pro Level auf 1%. (Max + 5%),Experiencia experimentada de niveles por nivel a 1%. (Max + 5%)
+1046,,레벨 당 골드획득량을 0.5 증가시킵니다. (최대 +5%),Increases the gold earnings per level by 0.5. (Max + 5%),レベルあたりの金の収益を0.5で増やします。 （最大+ 5％）,将每级的黄金盈利增加0.5。 （最多+ 5％）,"Erhöht das Goldertrag pro Niveau um 0,5. (Max + 5%)",Aumenta las ganancias de oro por nivel por 0.5. (Max + 5%)
+1047,,레벨 당 공격범위를 1% 증가시킵니다. (최대 +10%),Increases the attack range per level by 1%. (Max + 10%),レベルあたりの攻撃範囲を1％増やします。 （最大+ 10％）,将攻击范围提高1％。 （最多+ 10％）,Erhöht den Angriffsbereich pro Niveau um 1%. (Max + 10%),Aumenta el rango de ataque por nivel en un 1%. (Max + 10%)
+1048,,레벨 당 투사체 이동속도를 1% 증가시킵니다. (최대 +10%),Increases the projector movement speed per level by 1%. (Max + 10%),1レベルあたりのプロジェクタの移動速度を1％増やします。 （最大+ 10％）,将投影机移动速度提高1％。 （最多+ 10％）,Erhöht die Projektorbewegungsgeschwindigkeit pro Niveau um 1%. (Max + 10%),Aumenta la velocidad del movimiento del proyector por nivel en un 1%. (Max + 10%)
+1049,,레벨 당 투사체 지속시간을 1% 증가시킵니다. (최대 +10%),Increases the duration of the projector per level by 1%. (Max + 10%),レベルごとのプロジェクターの期間を1％増やします。 （最大+ 10％）,将投影机的持续时间增加1％。 （最多+ 10％）,Erhöht die Dauer des Projektors pro Niveau um 1%. (Max + 10%),Aumenta la duración del proyector por nivel en un 1%. (Max + 10%)
+1050,,레벨 당 자석을 0.5 증가시킵니다. (최대 +4),The magnet per level increases 0.5. (Max +4),レベル当たりの磁石は0.5増加する。 （最大+ 4）,每级磁体增加0.5。 （MAX +4）,"Der Magnet pro Pegel erhöht 0,5. (Max +4)",El imán por nivel aumenta 0.5. (Max +4)
+1051,,레벨 당  부활횟수를 1 증가시킵니다. (최대 +1),The number of resurrection per level increases 1. (Max +1),レベルあたりの再循環の数が増えます。（最大+ 1）,每级重复次数增加1.（MAX +1）,Die Anzahl der Nachdrückung pro Pegel erhöht sich 1. (max +1),El número de resurección por nivel aumenta 1. (MAX +1)
+1052,,레벨 당 투사체 수를 1 증가시킵니다. (최대 +1),Increases the number of projectors per level. (Max +1),レベルあたりのプロジェクターの数を増やします。 （最大+ 1）,增加每级的投影仪数量。 （max +1）,Erhöht die Anzahl der Projektoren pro Ebene. (Max +1),Aumenta el número de proyectores por nivel. (Max +1)
+1053,,합성,Mix,ミックス,混合,MISCHEN,MEZCLA
+1054,,나가기,Exit,出口,出口,AUSFAHRT,SALIDA
+1055,,합성 성공!,Mix Success!,成功をミックス！,搭配成功！,Mixerfolg!,¡Mezclar el éxito!
+1056,,합성 실패!,Mix Fail!,ミックス失敗！,混合失败！,Mix Fail!,¡Mezcla fallar!

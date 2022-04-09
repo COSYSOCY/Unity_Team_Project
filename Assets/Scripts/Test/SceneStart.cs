@@ -101,7 +101,7 @@ public class SceneStart : MonoBehaviour
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Head06").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
                 break;
-                break;
+                
             default:
                 break;
         }

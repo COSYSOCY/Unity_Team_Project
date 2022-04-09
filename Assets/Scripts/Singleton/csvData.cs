@@ -28,6 +28,7 @@ public class csvData : MonoBehaviour
 {
     static csvData inst;
 
+    public string dataPath_MixInfo;
     public string dataPath_PlayerExp;
     public string dataPath_Characters;
     public string dataPath_Enemy;
@@ -181,9 +182,16 @@ public class csvData : MonoBehaviour
     public static List<int> Pu_Cost9 = new List<int>();
     public static List<int> Pu_Cost10 = new List<int>();
 
+
+
+    public static List<float> MixPer = new List<float>();
+
+
+
     void Awake()
     {
         inst = this;
+        Mix_Read();
         PowerUp_Read();
         Player_EXP_Read();
         Characters_Read();
@@ -196,10 +204,20 @@ public class csvData : MonoBehaviour
        Map_Read();
         GameInfo.inst.GameStart = true;
     }
+    public void Mix_Read()
+    {
+        data = CSVReader.Read(dataPath_MixInfo);
+        for (int i = 0; i < data.Count; i++)
+        {
+            MixPer.Add(float.Parse(data[i]["확률"].ToString()));
+
+
+
+        }
+    }
     public void PowerUp_Read()
     {
         data = CSVReader.Read(dataPath_PowerUp);
-        //GameInfo.inst.MapsInfo = new List(MapInfo);
         for (int i = 0; i < data.Count; i++)
         {
             Pu_NameNum.Add(int.Parse(data[i]["이름텍스트번호"].ToString()));
@@ -245,7 +263,7 @@ public class csvData : MonoBehaviour
             MapIconNum.Add(int.Parse(data[i]["맵아이콘번호"].ToString()));
             MapLockInfoNum.Add(int.Parse(data[i]["잠금텍스트번호"].ToString()));
             GameInfo.inst.MapsInfo.Add(new MapInfo(i,MapNameNum[i],MapInfoNum[i], MapIconNum[i],MapLockInfoNum[i]));
-        GameInfo.inst.PlayerMap.Add(0);
+            GameInfo.inst.PlayerMap.Add(0);
 
 
 

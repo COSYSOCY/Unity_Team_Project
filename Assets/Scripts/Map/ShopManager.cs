@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
 
     public void CheatGold()
     {
-        GameInfo.PlayerGold += 100;
+        GameInfo.PlayerGold += 1000;
         Loby.LobyGoldAc();
     }
     public void CheatPoint()

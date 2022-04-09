@@ -36,8 +36,7 @@ public class LobyUIMgr : MonoBehaviour
     private void Start()
     {
 
-        GameInfo.inst.PlayerMap[0] = 1;
-        GameInfo.inst.CharacterActive[0] = 2;
+        
 
         TextReset();
         LobyGoldAc();
@@ -46,24 +45,6 @@ public class LobyUIMgr : MonoBehaviour
         SoundManager.inst.BGMPlay(1);
 
        ServerDataSystem.inst.SaveData2();
-        Test();
-    }
-
-    public void Test()
-    {
-        GameInfo.inst.PlayerMap[0] = 1;
-        GameInfo.inst.PlayerMap[1] = 1;
-        GameInfo.inst.PlayerMap[2] = 1;
-        GameInfo.inst.CharacterActive[0] = 2;
-        GameInfo.inst.CharacterActive[1] = 2;
-        GameInfo.inst.CharacterActive[2] = 2;
-        GameInfo.inst.CharacterActive[3] = 2;
-        GameInfo.inst.CharacterActive[4] = 2;
-        GameInfo.inst.CharacterActive[5] = 2;
-        GameInfo.inst.CharacterActive[6] = 2;
-        GameInfo.inst.CharacterActive[7] = 2;
-        GameInfo.inst.CharacterActive[8] = 2;
-        GameInfo.inst.CharacterActive[9] = 2;
     }
 
 

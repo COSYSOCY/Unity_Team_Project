@@ -121,7 +121,7 @@ public class ServerDataSystem : MonoBehaviour
 
             GameInfo.inst.PlayerMap[0] = 1;
 
-
+            testFunc();
             SceneManager.LoadScene("01_Loby_Main");
             SystemLanguage lang = Application.systemLanguage;
 
@@ -242,8 +242,9 @@ public class ServerDataSystem : MonoBehaviour
             }
 
             IsSave = true;
+            testFunc();
             SceneManager.LoadScene("01_Loby_Main");
-
+            
         }
         else
         {
@@ -259,6 +260,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.PlayerGold = 600;
             //GameInfo.PlayerPoint = 5;
             GameInfo.inst.PlayerEnergy = 50;
+            testFunc();
             SceneManager.LoadScene("01_Loby_Main");
 
             yield return StartCoroutine(CreateFile());
@@ -305,9 +307,6 @@ public class ServerDataSystem : MonoBehaviour
 
 
 
-
-
-
             
 
 
@@ -320,7 +319,29 @@ public class ServerDataSystem : MonoBehaviour
         
 
     }
+    void testFunc()
+    {
+        IsSave = true;
+        GameInfo.inst.CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
+        GameInfo.inst.AdGoldFreeMax = 3;
+        GameInfo.PlayerGold = 0;
+        GameInfo.inst.PlayerMap[0] = 1;
+        GameInfo.inst.PlayerMap[1] = 1;
+        GameInfo.inst.PlayerMap[2] = 1;
+        GameInfo.inst.PlayerMap[3] = 1;
 
+
+        GameInfo.inst.CharacterActive[0] = 2;
+        GameInfo.inst.CharacterActive[1] = 1;
+        GameInfo.inst.CharacterActive[2] = 1;
+        GameInfo.inst.CharacterActive[3] = 1;
+        GameInfo.inst.CharacterActive[4] = 1;
+        GameInfo.inst.CharacterActive[5] = 1;
+        GameInfo.inst.CharacterActive[6] = 1;
+        GameInfo.inst.CharacterActive[7] = 1;
+        GameInfo.inst.CharacterActive[8] = 1;
+        GameInfo.inst.CharacterActive[9] = 1;
+    }
     void OnApplicationQuit()
     {
         if (IsSave)

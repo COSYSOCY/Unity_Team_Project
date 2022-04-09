@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class CardIdx : MonoBehaviour
 {
     public int Idx;
+    public int Lv;
     public Image image;
+    public Text Lv_Text;
     public GameObject Focus;
     public CardManager cardManager;
     public int num;
     public bool IsPlayerCard;
+    public bool IsMixCard;
+    public GameObject MixSelect;
+
+    public bool MixOk;
 
     private void Start()
     {
@@ -23,6 +29,10 @@ public class CardIdx : MonoBehaviour
     public void InvenCard()
     {
         cardManager.InvenCardButton(gameObject);
+    }
+    public void MixCard()
+    {
+        cardManager.MixCardButton(gameObject);
     }
 
 }
