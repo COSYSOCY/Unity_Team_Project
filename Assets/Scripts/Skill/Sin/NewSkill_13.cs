@@ -40,6 +40,7 @@ public class NewSkill_13: Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
+
             // SoundManager.inst.SoundPlay(6);
         }
     }
@@ -58,7 +59,8 @@ public class NewSkill_13: Skill_Ori
         {
             for (int i = 0; i < _BulletCnt(); i++)
             {
-                SoundManager.inst.SoundPlay(8);
+
+                SoundManager.inst.SoundPlay(19);
                 GameObject target;
                 if (i >= Enemys.Count)
                 {

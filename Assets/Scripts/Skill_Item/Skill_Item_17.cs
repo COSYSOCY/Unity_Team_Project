@@ -48,6 +48,7 @@ public class Skill_Item_17 : Skill_Item_Ori
             }
             MainSingleton.instance.playerstat.TimeIn(0.5f);
             Cnt = 0;
+            SoundManager.inst.SoundPlay(24);
         }
     }
 

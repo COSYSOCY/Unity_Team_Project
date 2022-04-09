@@ -47,7 +47,7 @@ public class NewSkill_12 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             yield return StartCoroutine(Skill_Update2());
-            // SoundManager.inst.SoundPlay(6);
+            
         }
     }
     IEnumerator Skill_Update2()
@@ -58,9 +58,9 @@ public class NewSkill_12 : Skill_Ori
 
             for (int i = 0; i < _BulletCnt(); i++)
             {
-                SoundManager.inst.SoundPlay(8);
+            SoundManager.inst.SoundPlay(26);
 
-                GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
+            GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+Uppie;
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();

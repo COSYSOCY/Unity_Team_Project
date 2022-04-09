@@ -14,23 +14,30 @@ public class Bullet_Trigger : MonoBehaviour
             {
                 other.GetComponent<Enemy_Info>().KnockEnemy(info.KnokTime);
             }
-            info.pie--;
-            other.GetComponent<Enemy_Info>().Damaged(info.damage);
-            if (info.pie <1)
+            if (info.pie!=0)
             {
-                gameObject.SetActive(false);
+
+                info.pie--;
+                other.GetComponent<Enemy_Info>().Damaged(info.damage);
+                if (info.pie <1)
+                {
+                    gameObject.SetActive(false);
+
+                }
 
             }
-
         }
         else if (other.gameObject.CompareTag("DeOb"))
             {
                 other.GetComponent<DeObjectSystem>().Damaged(info.damage);
-            info.pie--;
-            if (info.pie < 1)
+            if (info.pie != 0)
             {
-                gameObject.SetActive(false);
+                info.pie--;
+                if (info.pie < 1)
+                {
+                    gameObject.SetActive(false);
 
+                }
             }
         }
 

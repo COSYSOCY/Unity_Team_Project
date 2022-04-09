@@ -41,7 +41,7 @@ public class NewSkill_31 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
-            SoundManager.inst.SoundPlay(6);
+            SoundManager.inst.SoundPlay(28);
         }
     }
     Vector3 RandomPos()

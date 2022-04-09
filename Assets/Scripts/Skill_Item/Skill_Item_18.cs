@@ -34,6 +34,7 @@ public class Skill_Item_18 : Skill_Item_Ori
             playerinfo.Bonus_Dmg +=f;
             // ¾×¼Ç
             efffectOb.SetActive(true);
+            SoundManager.inst.SoundPlay(25);
             yield return new WaitForSeconds(10f);
             playerinfo.Bonus_Dmg -= f;
             efffectOb.SetActive(false);

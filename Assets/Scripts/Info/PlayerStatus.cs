@@ -221,6 +221,7 @@ public class PlayerStatus : MonoBehaviour
             playerInfo.Hp = playerInfo.MaxHp;
             shiledOb.SetActive(true);
             SliderUpdate();
+            SoundManager.inst.SoundPlay(22);
             StartCoroutine(ReFunc());
             return;
         }
@@ -307,8 +308,9 @@ public class PlayerStatus : MonoBehaviour
         playerInfo.ADRe++;
         playerInfo.Hp=playerInfo.MaxHp;
         SliderUpdate();
+        SoundManager.inst.SoundPlay(22);
         shiledOb.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         shiledOb.SetActive(false);
         IsAdIn = false;
     }

@@ -60,7 +60,7 @@ public class NewSkill_17 : Skill_Ori
 
         for (int i = 0; i < _BulletCnt(); i++)
         {
-            SoundManager.inst.SoundPlay(8);
+            SoundManager.inst.SoundPlay(20);
 
             GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_17", Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
             bullet.GetComponent<Bullet_Info>().damage = _Damage();

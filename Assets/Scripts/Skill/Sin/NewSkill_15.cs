@@ -42,6 +42,7 @@ public class NewSkill_15 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             yield return StartCoroutine(Skill_Update2());
+            SoundManager.inst.SoundPlay(27);
         }
     }
     IEnumerator Skill_Update2()

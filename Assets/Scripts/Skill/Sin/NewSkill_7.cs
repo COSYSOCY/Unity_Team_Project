@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class NewSkill_7 : Skill_Ori
 {
-
+    float Upscale = 0f;
+    int Upcnt = 0;
 
     public override void LevelUpFunc()
     {
@@ -31,7 +32,8 @@ public class NewSkill_7 : Skill_Ori
     }
     public override void CreateFunc()
     {
-        CreateUp = true;
+        //Upscale = 4f;
+        Upcnt = 2;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
@@ -48,24 +50,16 @@ public class NewSkill_7 : Skill_Ori
     IEnumerator Skill_Update2()
     {
         
-        float local = _AtRange();
+        float local = _AtRange()+ Upscale;
 
         float f1 = 0f;
-
-        for (int i = 1; i <= _BulletCnt(); i++)
+        Vector3 pos = bulletPos.transform.position;
+        pos.y = 1;
+        for (int i = 1; i <= _BulletCnt()+ Upcnt; i++)
         {
             float ff = 0f;
-            if (Player.transform.rotation.eulerAngles.y >= 180)
-            {
-                ff = -1f;
-            }
-            Vector3 pos = bulletPos.transform.position;
-            pos.y = 1;
-            GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, 90f, 0)));
 
-            bullet.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet.transform.localScale = new Vector3(local, local, local);
-            yield return new WaitForSeconds(0.2f);
+            
             if (i % 2 == 0)
             {
                 pos = bulletPos.transform.position;
@@ -74,57 +68,45 @@ public class NewSkill_7 : Skill_Ori
                 {
                     ff = 1f;
                 }
-                GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, -90f, 0)));
-                bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.transform.localScale = new Vector3(local, local, local);
-                yield return new WaitForSeconds(0.2f);
-                f1 += 2f;
+                else
+                {
+                    ff = -1f;
+                }
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0f, 0)));
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
+                bullet.transform.localScale = new Vector3(local, 2, local*0.5f);
+                yield return new WaitForSeconds(0.15f);
+                f1 += 3f;
             }
+            else
+            {
+                pos = bulletPos.transform.position;
+                pos.y = 1;
+                if (Player.transform.rotation.eulerAngles.y >= 180)
+                {
+                    ff = -1f;
+                }
+                else
+                {
+                    ff = 1f;
+                }
+
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0, 0)));
+
+                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
+                bullet.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                yield return new WaitForSeconds(0.15f);
+            }
+            
         }
 
 
         
     }
 
-    IEnumerator testasdasd()
-    {
-        float local = _AtRange();
-        Vector3 pos = bulletPos.transform.position;
-        pos.y = 1;
 
-        GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
-        bullet.GetComponent<Bullet_Info>().damage = _Damage();
-        bullet.transform.localScale = new Vector3(local, local, local);
-        GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, -2f), Quaternion.Euler(new Vector3(0, 90f, 0)));
-        bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-        bullet2.transform.localScale = new Vector3(local, local, local);
-
-        yield return new WaitForSeconds(0.3f);
-        GameObject bullet3 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, 2), Quaternion.Euler(new Vector3(0, -90f, 0)));
-        bullet3.GetComponent<Bullet_Info>().damage = _Damage();
-        bullet3.transform.localScale = new Vector3(local, local, local);
-        GameObject bullet4 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, -2f), Quaternion.Euler(new Vector3(0, -90f, 0)));
-        bullet4.GetComponent<Bullet_Info>().damage = _Damage();
-        bullet4.transform.localScale = new Vector3(local, local, local);
-        if (CreateUp)
-        {
-            yield return new WaitForSeconds(0.3f);
-            GameObject bullet5 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 8f), Quaternion.Euler(new Vector3(0, 90f, 0)));
-            bullet5.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet5.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet6 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(5f, 0f, 4f), Quaternion.Euler(new Vector3(0, 90f, 0)));
-            bullet6.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet6.transform.localScale = new Vector3(local, local, local);
-
-            yield return new WaitForSeconds(0.3f);
-            GameObject bullet7 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, 8), Quaternion.Euler(new Vector3(0, -90f, 0)));
-            bullet7.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet7.transform.localScale = new Vector3(local, local, local);
-            GameObject bullet8 = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(-5f, 0f, 4f), Quaternion.Euler(new Vector3(0, -90f, 0)));
-            bullet8.GetComponent<Bullet_Info>().damage = _Damage();
-            bullet8.transform.localScale = new Vector3(local, local, local);
-        }
-    }
     private void OnEnable()
     {
         if (start == false && info.goodstart)

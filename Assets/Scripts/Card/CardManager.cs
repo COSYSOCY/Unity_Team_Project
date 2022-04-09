@@ -731,15 +731,30 @@ public class CardManager : MonoBehaviour
     }
     public void CardNumReset()
     {
+        
         if (cardlist.Count>0)
         {
             for (int i = 0; i < cardlist.Count; i++)
             {
                 cardlist[i].GetComponent<CardIdx>().num = i;
+                
             }
 
         }
 
+    }
+    public void PlayerCardReset()
+    {
+        GameInfo.inst.PlayerCards.Clear();
+        if (cardlist.Count > 0)
+        {
+            for (int i = 0; i < cardlist.Count; i++)
+            {
+                
+                GameInfo.inst.PlayerCards.Add(cardlist[i].GetComponent<CardIdx>().Idx);
+            }
+
+        }
     }
 
     public void ItemAdd(int i)
@@ -920,6 +935,7 @@ public class CardManager : MonoBehaviour
 
     IEnumerator IMixStart()
     {
+        //CardNumReset();
         int Lv = MixCardE[0].GetComponent<CardIdx>().Lv;
         float ran = Random.Range(0.01f, 100f);
 
@@ -950,10 +966,11 @@ public class CardManager : MonoBehaviour
         {
 
         int num = MixCardE[i].GetComponent<CardIdx>().num;
-            Debug.Log("¹øÈ£:::" + num);
-            cardlist.Remove(MixCardE[i]);
-            //cardlist.RemoveAt(num);
+            GameInfo.inst.PlayerCards[num] = 999;
         GameInfo.inst.PlayerCards.RemoveAt(num);
+            //cardlist.Remove(MixCardE[i]);
+            cardlist.RemoveAt(num);
+
         Destroy(MixCardE[i]);
             MixCardE[i] = null;
             MixCard[i].GetComponent<CardIdx>().Lv = 0;
@@ -961,6 +978,10 @@ public class CardManager : MonoBehaviour
             MixCard[i].GetComponent<CardIdx>().image.sprite= IconManager.inst.Icons[133];
             MixCard[i].GetComponent<CardIdx>().Idx = 0;
             MixCard[i].GetComponent<CardIdx>().Focus.SetActive(false);
+            yield return null;
+            CardNumReset();
+            yield return null;
+
         }
 
         
@@ -990,6 +1011,7 @@ public class CardManager : MonoBehaviour
 
         //CardCation(CaIdx);
         MixOk(0);
+        PlayerCardReset();
         //InfoReset();
         //SizeSet();
         //CardNumReset();
