@@ -44,10 +44,7 @@ public class BoxScritps : MonoBehaviour
     }
     IEnumerator IBoxFunc(int cnt)
     {
-        for (int i = 0; i < Slot.Count; i++)
-        {
-            Slot[i].SetActive(false);
-        }
+        
         for (int i = 0; i < cnt; i++)
         {
             yield return(RandomUp(i));
@@ -70,6 +67,10 @@ public class BoxScritps : MonoBehaviour
     IEnumerator RandomUp(int Idx)
     {
         CheckList.Clear();
+        for (int i = 0; i < Slot.Count; i++)
+        {
+            Slot[i].SetActive(false);
+        }
         int ImageNum = 0;
         int RandomGold = Random.Range(0, 100);
         int idx = 0;
