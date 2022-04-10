@@ -893,6 +893,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a9d3c563c7723f8408f3e51090bc5eeb, type: 3}
   - {fileID: 21300000, guid: 6ab91a1b3ac6f084e803010d208fc725, type: 3}
   - {fileID: 21300000, guid: 72f28ca191c2f4b18b6ace1d3a7ea55b, type: 3}
+  - {fileID: 21300000, guid: 77669ae4db1d0054e8988cd0918634bf, type: 3}
+  - {fileID: 21300000, guid: 61e22d7eab5ba8741b9e6ad0a7262876, type: 3}
+  - {fileID: 21300000, guid: f04a91a8462d50f47bc0269cf2a0467f, type: 3}
+  - {fileID: 21300000, guid: a1143a614e1ab994899ef2a7d2f82a37, type: 3}
+  - {fileID: 21300000, guid: 3782830179a794249bb6dfe0fbca90d6, type: 3}
+  - {fileID: 21300000, guid: ad9d4c3be962a80438c279efa800bafe, type: 3}
+  - {fileID: 21300000, guid: 8c12995b4054b7044aef43034a790e6e, type: 3}
+  - {fileID: 21300000, guid: c09f37ed926f2b547ba00dd9a43d842f, type: 3}
+  - {fileID: 21300000, guid: fef47da0e67a5d94baf13cd3d6cf689b, type: 3}
   CharaIcons:
   - {fileID: 8400000, guid: 2081eef21f974d04a97864cc31ac0003, type: 2}
   - {fileID: 8400000, guid: 812ebdfbaa66cf84580ad32865f76298, type: 2}
@@ -904,6 +913,9 @@ MonoBehaviour:
   - {fileID: 8400000, guid: 36a66baddb5b13840814a18c06e1ebe2, type: 2}
   - {fileID: 8400000, guid: 95064aaa5d457d44ea05c086eb02a36d, type: 2}
   - {fileID: 8400000, guid: f9f534a15bf9c47458deaf69480a3c61, type: 2}
+  - {fileID: 8400000, guid: a90f5c059e3da754caf5803ab3f8a052, type: 2}
+  - {fileID: 8400000, guid: fdd3a9286ea223d49a4f7a71d30fac22, type: 2}
+  - {fileID: 8400000, guid: c92dd3eaadbf624409315354f0ab0c5e, type: 2}
 --- !u!82 &563478254
 AudioSource:
   m_ObjectHideFlags: 0

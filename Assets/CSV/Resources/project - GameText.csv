@@ -1,5 +1,5 @@
 Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
-0,곰,쿰아,Kuma,熊手,熊,Kuma.,Kuma
+0,곰,쿰아,Kuma,熊手,熊,Kuma,Kuma
 1,개,독크나이트,Doll,人形,玩具娃娃,Puppe,Muñeca
 2,외계인,이티,ET,ET,ET,ET,ET
 3,방독면,화방,Fire,火,火,Feuer,Fuego
@@ -9,7 +9,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 7,활든애,궁전,Palace,城,宫,Palast,Palacio
 8,닌자,나토,NATO,ナトゥー,北约,Nato.,OTAN
 9,닭,꼬꼬,Snap,スナップ,折断,Snap.,QUEBRAR
-10,곰,투사체 수+1 `w`야생성이 많이죽었지만 무기를 사용하는 강력한 쿠마,"The number of projections +1 `W` Wildlife died, but a powerful Kuma using weapon",射精の数+1 w野生生物が死亡したが、武器を使用した強力なクマ,投影的数量+1“w`野生动物死亡，但使用武器的强大的kuma,"Die Anzahl der Projektionen +1 `w` Wildlife starb, aber ein mächtiger Kuma mit Waffe","El número de proyecciones +1 `W` La vida silvestre murió, pero una potente kuma usando arma"
+10,곰,"투사체 수+1 , 매 30레벨 달성마다 치명타 +5%(최대 +15%) `w`야생성이 많이죽었지만 무기를 사용하는 강력한 쿠마","The number of projectors +1, Every 30 levels are achievement of critical + 5% (maximum + 15%) `W` Wild,",プロジェクターの数+ 1、30レベルの重要な純度+ 5％（最大+ 15％） `W wild,投影仪+1的数量，每30个级别的临界+ 5％（最大+ 15％）`w` wild，,"Die Anzahl der Projektoren +1, alle 30 Ebenen von kritischem + 5% (maximal + 15%) `w` wild,","El número de proyectores +1, cada 30 niveles de logro de crítico + 5% (máximo + 15%) `W` Wild,"
 11,개,매 15레벨마다 방어+1(최대+5) `w`칼과 갑옷으로 무장해서 단단하지만 느린 독크나이트,"Every 15 levels are defense +1 (max +5) `W` knife and armor armor, but slow, slow, slow older",15レベルごとに防衛+ 1（最大+ 5） `W`ナイフアーマーアーマー、遅く、遅い、遅い年上,每15个级别都是防御+1（MAX +5）`W`刀盔甲盔甲，但慢，慢，较慢,"Alle 15 Ebenen sind Verteidigung +1 (MAX +5) `W` Messer Armor Rüstung, aber langsam, langsam, langsam älter","Cada 15 niveles son la defensa +1 (máx. +5) de la armadura de la armadura de cuchillo, pero lenta, lenta, lenta mayor"
 12,외계인,매 15레벨마다 투사체 속도 +10%(최대50%) `w`외계기술로 상식적으로 말이 안되게 투사체 속도를 증가시킴,Every 15 levels of projection rate + 10% (up to 50%) `W`s exceeding the projection rate,投影速度の15レベル+ 10％（最大50％） `wは投影速度を超える,每15级投影率+ 10％（高达50％）`W`s超过投影率,Alle 15 Stufen der Projektionsrate + 10% (bis zu 50%) `s überschreitet die Projektionsrate,Cada 15 niveles de tasa de proyección + 10% (hasta un 50%) `W` S excedente de la tasa de proyección
 13,방독면,매 10레벨마다 경험치+5%(최대 +30%) `w`방독면을 쓴 과묵하지만 자기 할일을 충실히 하는 녀석,Every 10 levels of experience + 5% (max + 30%) `W`,10レベルの経験+ 5％（最大+ 30％） `W`,每10级经验+ 5％（最多+ 30％）`w`,Alle 10 Erfahrungsstufen + 5% (max + 30%) `w`,Cada 10 niveles de experiencia + 5% (MAX + 30%) `W`
@@ -18,7 +18,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 16,스나이퍼,매 15레벨마다 데미지+10%(최대 +50%) `w` 자칭 고독한 스나이퍼,Damage + 10% (maximum + 50%) every 15 levels (maximum + 50%) `W` self-identical solitude sniper,15レベルごとに+ 10％（最大+ 50％）のダメージ（最大+ 50％）「W」自己同一孤独スナイパー,每15个级别（最大+ 50％）`W`的损伤+ 10％（最大+ 50％）,Schaden + 10% (maximal + 50%) alle 15 Ebenen (maximal + 50%) `W` Self-identischer Einsamkeitssnisper,Daño + 10% (máximo + 50%) cada 15 niveles (máximo + 50%) 'W` Solitud autocontrola Sniper
 17,활든애,매 15레벨마다 투사체 지속시간+10%(최대 +50%) `w` 느리지만 쿨한 궁사,"Every 15 levels of projections duration + 10% (max + 50%) `W` slow,",予測期間の15レベル+ 10％（最大+ 50％） `W`が遅く、,每15个级别的预测持续时间+ 10％（最多+ 50％）'w slow，,Alle 15 Stufen der Projektionsdauer + 10% (max + 50%) `w`,"Cada 15 niveles de proyecciones DURACIÓN + 10% (MAX + 50%) `W` lento,"
 18,닌자,매 30레벨마다 투사체 수+1(최대 +3) `w` 돈만  주면 모든일을 다하는 고급 인력,Every 30 levels of projectors +1 (max +3) `W`,プロジェクターの30レベル+1（最大+ 3） `W`,每30级投影仪+1（MAX +3）`W`,Alle 30 Stufen von Projektoren +1 (max +3) `w`,Cada 30 niveles de proyectores +1 (MAX +3) `W`
-19,닭,자석 +2 `w` 본인의 달걀에 폭탄을 넣고 다니는 이상한 존재,Magnets +2 `W` I put a bomb on my eggs,磁石+ 2 `w '私は私の卵に爆弾を置きます,磁铁+2`w`我把炸弹放在鸡蛋上,Magnete +2 `w` Ich legte eine Bombe auf meine Eier,Imanes +2 `w 'puse una bomba en mis huevos
+19,닭,"자석 +2 , 매 30레벨 달성마다 치명타 +5%(최대 +15%)`w` 본인의 달걀에 폭탄을 넣고 다니는 이상한 존재","Magnets +2, 30 levels perched percentage + 5% (maximum + 15%) `W` is a strange presence to put bombs on your eggs","磁石+ 2,30段階止め率+ 5％（最大+ 15％） `W`はあなたの卵に爆弾を入れるための奇妙な存在です。",磁铁+2，30级栖息百分比+ 5％（最大+ 15％）`w`是将炸弹放在鸡蛋上的奇怪的存在,"Magnete +2, 30 Stufen totierter Prozentsatz + 5% (maximal + 15%) ""W"" ist eine seltsame Präsenz, um Bomben auf Ihre Eier zu bringen","Imanes +2, 30 niveles PORCENTAJO PERSONADO + 5% (MÁXIMO + 15%) `W` es una presencia extraña para poner bombas en tus huevos"
 20,능력시트에있는 0번 이름,너프건,Nuff gun,ノフガン,肚子枪,Nuff-Pistole,Pistola de nuff
 21,능력시트에있는 1번 이름,데스건,Death gun,死銃,死枪,Todeswaffe,Pistola de muerte
 22,능력시트에있는 2번 이름,레일건,Rail gun,レールガン,轨道枪,Schienenpistole,Pistola
@@ -76,7 +76,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 74,능력시트에있는 능력 1번의 4단계 설명,"투사체 수 증가 + 1 , 공격력 +2","Increased projections + 1, Damage +2",投影+ 1、ダメージ+2の増加,增加预测+ 1，损坏+2,"Erhöhte Projektionen + 1, Beschädigung +2","Mayores proyecciones + 1, Daño +2"
 75,능력시트에있는 능력 1번의 5단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 76,능력시트에있는 능력 1번의 6단계 설명,투사체 수 증가 + 1,Increase the number of projectors + 1,プロジェクターの数を増やしてください,增加投影仪的数量+ 1,Erhöhen Sie die Anzahl der Projektoren + 1,Aumente el número de proyectores + 1
-77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+ 4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
+77,능력시트에있는 능력 1번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
 78,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 79,,(능력2번 텍스트),(Ability 2 text),（能力2テキスト）,（能力2文本）,(Fähigkeit 2 Text),(Habilidad 2 Texto)
 80,능력시트에있는 능력 2번의 초기 설명,랜덤 적에게 일직선 레이저,Large Laser Laser,大レーザーレーザー,大激光激光器,Großer Laserlaser.,Láser láser grande
@@ -134,7 +134,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 132,할퀴기 3렙,쿨다운 감소 10%,Cool down reduction 10%,クールダウン削減10％,冷却减少10％,Abkühlen von weniger als 10%,Reducción fresca del 10%
 133,할퀴기 4렙,공격력 +3,Damage +3,ダメージ+3,损坏+3,Beschädigung +3.,Daño +3
 134,할퀴기 5렙,"쿨다운 감소 10% , 공격력+2","Cool down reduction 10%, Damage +2",低減10％、ダメージ+2,冷却减少10％，损坏+2,"Abkühlen Sie die Reduzierung von 10%, Beschädigung +2","Reducción fresca del 10%, daños +2"
-135,할퀴기 6렙,공격력+5,로드 중...,로드 중...,로드 중...,로드 중...,로드 중...
+135,할퀴기 6렙,공격력+5,Damage +5,ダメージ+5,损坏+5,Beschädigung +5.,Daño +5
 136,할퀴기 7렙,공격력+5,#REF!,#REF!,#REF!,#REF!,#REF!
 137,할퀴기 8렙,"쿨다운 감소 10% , 공격력+5",Damage +5,ダメージ+5,损坏+5,Beschädigung +5.,Daño +5
 138,sad,쿨다운 10% 감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
@@ -673,7 +673,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 671,능력시트에있는 능력28번의 4단계 설명,"투사체 수 + 1 , 공격력 +2","Words + 1, Damage +2",単語+ 1、ダメージ+2,单词+ 1，伤害+2,"Wörter + 1, Beschädigung +2","Palabras + 1, Daño +2"
 672,능력시트에있는 능력28번의 5단계 설명,쿨다운 10%감소,Cool down 10% reduction,10％の削減を冷却してください,冷却10％的减少,Abkühlen Sie 10% Reduktion,Enfriar el 10% de reducción
 673,능력시트에있는 능력28번의 6단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
-674,능력시트에있는 능력28번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+ 4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
+674,능력시트에있는 능력28번의 7단계 설명,"치명타 + 10%, 공격력 +4","Critical + 10%, Damage +4",重要+ 10％、ダメージ+4,临界+ 10％，伤害+4,"Kritisch + 10%, Beschädigung +4","Crítico + 10%, Daño +4"
 675,능력시트에있는 능력28번의 8단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
 676,능력시트에있는 능력28번의 9단계 설명,투사체 수 + 1,Wooden number + 1,木製数+ 1,木制数字+ 1,Holznummer + 1,Número de madera + 1
 677,능력시트에있는 능력29번의 초기 설명,총구에서 화염방사기,Flame radiator in muzzle,銃口の炎のラジエーター,火焰散热器在枪口中,Flammenkühler in Mündung,Radiador de la llama en el hocico
@@ -864,7 +864,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 862,39번 카드설명,ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ13번 스킬데미지+5%,ㅁ ㅁ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ,ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ,,ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ,ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ ㅇ
 863,40번 카드설명,데스건 데미지+5%,Death Gam Damage + 5%,死のGAMダメージ+ 5％,死手术损伤+ 5％,Todes-Gam-Schaden + 5%,Death Gam DAÑO + 5%
 864,41번 카드설명,체력+15,Stamina +15,スタミナ+ 15,耐力+15,Ausdauer +15.,Stamina +15
-865,42번 카드설명,체력회복+0.3,Stamina Recovery +0.3,スタミナの回復+0.3,耐力恢复+0.3,Stamina-Wiederherstellung +0.3.,Recuperación de Stamina +0.3
+865,42번 카드설명,체력회복+0.3,Stamina Recovery +0.3,スタミナの回復+ 0.3,耐力恢复+0.3,Stamina-Wiederherstellung +0.3.,Recuperación de Stamina +0.3
 866,43번 카드설명,데미지+9%,Damage + 9%,ダメージ+ 9％,损伤+ 9％,Schaden + 9%,Daño + 9%
 867,44번 카드설명,치명타+6%,Critical + 6%,クリティカル+ 6％,临界+ 6％,Kritisch + 6%,Crítico + 6%
 868,45번 카드설명,공격범위+6%,Attack Range + 6%,攻撃範囲+ 6％,攻击范围+ 6％,Angriffsbereich + 6%,Rango de ataque + 6%
@@ -914,7 +914,7 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 912,89번 카드설명,"투사체지속시간+10%,투사체이동속도+5%","Projective duration + 10%, projection movement speed + 5%",射影期間+ 10％、投影移動速度+ 5％,投影持续时间+ 10％，投影运动速度+ 5％,"Projektive Dauer + 10%, Projektionsbewegung Geschwindigkeit + 5%","Duración proyectiva + 10%, velocidad de movimiento de proyección + 5%"
 913,90번 카드설명,"자석+1,데미지+8%","Magnets +1, Damage + 8%",磁石+ 1、ダメージ+ 8％,磁铁+1，损坏+ 8％,"Magnete +1, Schaden + 8%","Imanes +1, daño + 8%."
 914,91번 카드설명,"경험치획득량+15%,골드획득량+3%","Experienced value + 15%, gold acquisition + 3%",経験豊富な価値+ 15％、ゴールド獲得+ 3％,经验丰富的价值+ 15％，金收购+ 3％,"Erfahrener Wert + 15%, Goldakquisition + 3%","Valor experimentado + 15%, adquisición de oro + 3%"
-915,92번 카드설명,"골드획득량+5%,체력회복+0.3","Gold Acquisition + 5%, Stamina Recovery +0.3",ゴールド取得+ 5％、スタミナ回復+ 0.3,金收购+ 5％，耐力恢复+0.3,"Goldakquisition + 5%, Stamina-Wiederherstellung +0.3","Adquisición de oro + 5%, Recuperación de Stamina +0.3"
+915,92번 카드설명,"골드획득량+5%,체력회복+0.3","Gold Acquisition + 5%, Stamina Recovery +0.3",ゴールド取得+ 5％、スタミナ回復+ 0.3,金收购+ 5％，耐力恢复+0.3,"Goldakquisition + 5%, Stamina Recovery +0.3","Adquisición de oro + 5%, Recuperación de Stamina +0.3"
 916,93번 카드설명,"200킬마다 데미지+2%,치명타+0.8%","Damage + 2% per kilometer, critical + 0.8%",損傷+ 1キロメートルあたり2％、クリティカル+ 0.8％,损坏+每公里％2％，临界+ 0.8％,"Beschädigung + 2% pro Kilometer, kritisch + 0,8%","Daño + 2% por kilómetro, crítico + 0.8%"
 917,94번 카드설명,"200킬마다 쿨다운감소+1.5%,자석0.2","Cool down reduction in 200 kilometers + 1.5%, Magnet 0.2",200キロメートル+ 1.5％、マグネット0.2でのクールダウン低減,减少200公里+ 1.5％，磁铁0.2,"Abkühlen der Reduktion in 200 Kilometern + 1,5%, Magnet 0,2","Reducción fresca en 200 kilómetros + 1.5%, imán 0.2"
 918,95번 카드설명,부활+1,Resurrection +1,復活+1,复活+1,Auferstehung +1.,Resurrection +1
@@ -1044,8 +1044,8 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 1042,,레벨 당 데미지를 2% 증가시킵니다. (최대 +20%),Increases damage per level by 2%. (Max + 20%),レベルごとのダメージを2％増加させます。 （最大+ 20％）,每级伤害提高2％。 （最多+ 20％）,Erhöht den Schaden pro Niveau um 2%. (Max + 20%),Aumenta el daño por nivel en un 2%. (Max + 20%)
 1043,,레벨 당 치명타를 1% 증가시킵니다. (최대 +10%),Increases 1% of the critical per level. (Max + 10%),重大度の1％を増やします。 （最大+ 10％）,增加每个级别的1％。 （最多+ 10％）,Erhöht 1% des kritischen Werts pro Level. (Max + 10%),Aumenta el 1% del nivel crítico por nivel. (Max + 10%)
 1044,,레벨 당 쿨다운을 1% 감소시킵니다. (최대 +10%),Reduces the cooldown per level by 1%. (Max + 10%),1レベルあたりのクールダウンを1％減らします。 （最大+ 10％）,将每个级别的冷却量减少1％。 （最多+ 10％）,Reduziert die Abklingzeit pro Level um 1%. (Max + 10%),Reduce el reutilización por nivel en un 1%. (Max + 10%)
-1045,,레벨 당 경험치획득량을 1% 증가시킵니다. (최대 +5%),Experienced experience of levels per level to 1%. (Max + 5%),レベルごとのレベルの経験豊富な経験は1％です。 （最大+ 5％）,经验丰富的每级水平经验为1％。 （最多+ 5％）,Erfahrene Erfahrung mit Level pro Level auf 1%. (Max + 5%),Experiencia experimentada de niveles por nivel a 1%. (Max + 5%)
-1046,,레벨 당 골드획득량을 0.5 증가시킵니다. (최대 +5%),Increases the gold earnings per level by 0.5. (Max + 5%),レベルあたりの金の収益を0.5で増やします。 （最大+ 5％）,将每级的黄金盈利增加0.5。 （最多+ 5％）,"Erhöht das Goldertrag pro Niveau um 0,5. (Max + 5%)",Aumenta las ganancias de oro por nivel por 0.5. (Max + 5%)
+1045,,레벨 당 경험치획득량을 1% 증가시킵니다. (최대 +5%),Experienced experience of levels per level to 1%. (Max + 5%),レベルごとのレベルの経験豊富な経験は1％です。 （最大+ 5％）,经验丰富的每级水平经验为1％。 （最多+ 5％）,Erfahrene Erfahrung mit Level pro Level auf 1%. (Max + 5%),Experiencia experimentada de niveles por nivel a 1%. (Máximo + 5%)
+1046,,레벨 당 골드획득량을 0.5 증가시킵니다. (최대 +5%),Increases the gold earnings per level by 0.5. (Max + 5%),レベルあたりの金の収益を0.5で増やします。 （最大+ 5％）,将每级的黄金盈利增加0.5。 （最多+ 5％）,"Erhöht das Goldertrag pro Niveau um 0,5. (Max + 5%)",Aumenta las ganancias de oro por nivel por 0.5. (Máximo + 5%)
 1047,,레벨 당 공격범위를 1% 증가시킵니다. (최대 +10%),Increases the attack range per level by 1%. (Max + 10%),レベルあたりの攻撃範囲を1％増やします。 （最大+ 10％）,将攻击范围提高1％。 （最多+ 10％）,Erhöht den Angriffsbereich pro Niveau um 1%. (Max + 10%),Aumenta el rango de ataque por nivel en un 1%. (Max + 10%)
 1048,,레벨 당 투사체 이동속도를 1% 증가시킵니다. (최대 +10%),Increases the projector movement speed per level by 1%. (Max + 10%),1レベルあたりのプロジェクタの移動速度を1％増やします。 （最大+ 10％）,将投影机移动速度提高1％。 （最多+ 10％）,Erhöht die Projektorbewegungsgeschwindigkeit pro Niveau um 1%. (Max + 10%),Aumenta la velocidad del movimiento del proyector por nivel en un 1%. (Max + 10%)
 1049,,레벨 당 투사체 지속시간을 1% 증가시킵니다. (최대 +10%),Increases the duration of the projector per level by 1%. (Max + 10%),レベルごとのプロジェクターの期間を1％増やします。 （最大+ 10％）,将投影机的持续时间增加1％。 （最多+ 10％）,Erhöht die Dauer des Projektors pro Niveau um 1%. (Max + 10%),Aumenta la duración del proyector por nivel en un 1%. (Max + 10%)
@@ -1056,3 +1056,66 @@ Idx,(설명칸 CSV에 안들어감),Korea,English,Japan,China,Germany,Spain
 1054,,나가기,Exit,出口,出口,AUSFAHRT,SALIDA
 1055,,합성 성공!,Mix Success!,成功をミックス！,搭配成功！,Mixerfolg!,¡Mezclar el éxito!
 1056,,합성 실패!,Mix Fail!,ミックス失敗！,混合失败！,Mix Fail!,¡Mezcla fallar!
+1057,캐릭터 10번 이름,법사,,,,,
+1058,캐릭터 11번 이름,법사2,,,,,
+1059,캐릭터 12번 이름,기사,,,,,
+1060,캐릭터 10번 설명,매 15레벨마다 데미지+5%(최대+25%) `w`칼과 갑옷으로 무장해서 단단하지만 느린 독크나이트,,,,,
+1061,캐릭터 11번 설명,매 15레벨마다 쿨다운감소 -3%(최대-15%) `w`외계기술로 상식적으로 말이 안되게 투사체 속도를 증가시킴,,,,,
+1062,캐릭터 12번 설명,매 15레벨마다 체력+20(최대 +100) `w`칼과 갑옷으로 무장해서 단단하지만 느린 놈,,,,,
+1063,능력시트에있는 36번 이름,빛광선,,,,,
+1064,능력시트에있는 37번 이름,낙뢰,,,,,
+1065,능력시트에있는 38번 이름,휠윈드,,,,,
+1066,장신구시트에있는 37번 이름,선,,,,,
+1067,장신구시트에있는 38번 이름,자석,,,,,
+1068,장신구시트에있는 39번 이름,빛의방어막,,,,,
+1069,능력.36.초기설명.,무작위 한명을 집중적으로 공격하는 광선을 날립니다,,,,,
+1070,능력.36.1.단계 설명,공격 간격 줄임,,,,,
+1071,능력.36.2.단계 설명,공격 간격 줄임,,,,,
+1072,능력.36.3.단계 설명,공격 간격 줄임,,,,,
+1073,능력.36.4.단계 설명,공격 간격 줄임,,,,,
+1074,능력.36.5.단계 설명,공격 간격 줄임,,,,,
+1075,능력.36.6.단계 설명,공격 간격 줄임,,,,,
+1076,능력.36.7.단계 설명,공격 간격 줄임,,,,,
+1077,능력.36.8.단계 설명,공격 간격 줄임,,,,,
+1078,능력.36.9.단계 설명,공격 간격 줄임,,,,,
+1079,능력.37.초기설명.,무작위 적들에게 낙뢰를 쏩니다,,,,,
+1080,능력.37.1.단계 설명,투사체 수 증가,,,,,
+1081,능력.37.2.단계 설명,투사체 수 증가,,,,,
+1082,능력.37.3.단계 설명,공격력 +3,,,,,
+1083,능력.37.4.단계 설명,쿨다운 감소,,,,,
+1084,능력.37.5.단계 설명,"투사체 수 증가,공격력+1",,,,,
+1085,능력.37.6.단계 설명,"쿨다운 감소,공격력+2",,,,,
+1086,능력.37.7.단계 설명,"투사체 수 증가,공격력+2",,,,,
+1087,능력.37.8.단계 설명,"투사체 수 증가,공격력+2",,,,,
+1088,능력.37.9.단계 설명,공격력+4,,,,,
+1089,능력.38.초기설명.,주변의 적들을 공격합니다,,,,,
+1090,능력.38.1.단계 설명,공격력 +5,,,,,
+1091,능력.38.2.단계 설명,공격범위 +10%,,,,,
+1092,능력.38.3.단계 설명,공격력 +5,,,,,
+1093,능력.38.4.단계 설명,쿨다운 -10%,,,,,
+1094,능력.38.5.단계 설명,공격범위 +10%,,,,,
+1095,능력.38.6.단계 설명,쿨다운 -10%,,,,,
+1096,능력.38.7.단계 설명,공격력 +5,,,,,
+1097,능력.38.8.단계 설명,쿨다운 -10%,,,,,
+1098,능력.38.9.단계 설명,공격력 +5,,,,,
+1099,장신구 36 초기설명,빛광선 데미지+2,,,,,
+1100,장신구 36 1 단계 설명,빛광선 데미지+2,,,,,
+1101,장신구 36 2 단계 설명,빛광선 데미지+2,,,,,
+1102,장신구 36 3 단계 설명,빛광선 데미지+2,,,,,
+1103,장신구 36 4 단계 설명,빛광선 데미지+2,,,,,
+1104,장신구 36 5 단계 설명,빛광선 데미지+2,,,,,
+1105,장신구 36 6 단계 설명,빛광선 데미지+2,,,,,
+1106,장신구 37 초기설명,자석 +0.5,,,,,
+1107,장신구 37 1 단계 설명,자석 +0.5,,,,,
+1108,장신구 37 2 단계 설명,자석 +0.5,,,,,
+1109,장신구 37 3 단계 설명,자석 +0.5,,,,,
+1110,장신구 37 4 단계 설명,자석 +0.5,,,,,
+1111,장신구 37 5 단계 설명,자석 +0.5,,,,,
+1112,장신구 37 6 단계 설명,자석 +0.5,,,,,
+1113,장신구 38 초기설명,18초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1114,장신구 38 1 단계 설명,16초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1115,장신구 38 2 단계 설명,14초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1116,장신구 38 3 단계 설명,12초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1117,장신구 38 4 단계 설명,10초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1118,장신구 38 5 단계 설명,8초마다 1회 데미지 막아주는 방어막 생성,,,,,
+1119,장신구 38 6 단계 설명,6초마다 1회 데미지 막아주는 방어막 생성,,,,,

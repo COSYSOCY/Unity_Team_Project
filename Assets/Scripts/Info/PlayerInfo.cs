@@ -38,6 +38,9 @@ public class PlayerInfo : MonoBehaviour
     public float Bonus_BtSpeed = 0f;
     public float Bonus_BtTime = 0f;
     public float Bonus_Defence = 0f;
+    public float Bonus_Cool = 0f;
+    public float Bonus_HpC = 0f;
+    public float Bonus_HpP = 0f;
 
     private void Start()
     {

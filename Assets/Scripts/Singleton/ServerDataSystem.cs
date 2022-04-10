@@ -341,6 +341,9 @@ public class ServerDataSystem : MonoBehaviour
         GameInfo.inst.CharacterActive[7] = 1;
         GameInfo.inst.CharacterActive[8] = 1;
         GameInfo.inst.CharacterActive[9] = 1;
+        GameInfo.inst.CharacterActive[10] = 1;
+        GameInfo.inst.CharacterActive[11] = 1;
+        GameInfo.inst.CharacterActive[12] = 1;
     }
     void OnApplicationQuit()
     {

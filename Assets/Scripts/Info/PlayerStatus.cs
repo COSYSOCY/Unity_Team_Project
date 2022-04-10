@@ -77,8 +77,8 @@ public class PlayerStatus : MonoBehaviour
     public void PlayerHpMax()
     {
         float f = 0;
-        f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC()+ PowerUpInfo.instance._Hp();
-        f = f + (f * ((manager.HpPlusPer()+ CardStat.inst.CardStat_HpP()) * 0.01f));
+        f = GameInfo.HpPlus + CardStat.inst.CardStat_HpC()+ manager.HpPlusC()+ PowerUpInfo.instance._Hp()+ playerInfo.Bonus_HpC;
+        f = f + (f * ((manager.HpPlusPer()+ playerInfo.Bonus_HpP+CardStat.inst.CardStat_HpP()) * 0.01f));
         playerInfo.MaxHp = f;
     }
     IEnumerator HitDmg()
@@ -332,7 +332,18 @@ public class PlayerStatus : MonoBehaviour
         switch (GameInfo.inst.CharacterIdx)
         {
             case 0:
-                
+                if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_Cri += 5f;
+                }
+                else if (playerInfo.Lv == 60)
+                {
+                    playerInfo.Bonus_Cri += 5f;
+                }
+                else if (playerInfo.Lv == 90)
+                {
+                    playerInfo.Bonus_Cri += 5f;
+                }
                 break;
 
             case 1:
@@ -523,20 +534,90 @@ public class PlayerStatus : MonoBehaviour
                 {
                     playerInfo.Bonus_BtCnt += 1;
                 }
-                else if (playerInfo.Lv == 9)
+                else if (playerInfo.Lv == 90)
                 {
                     playerInfo.Bonus_BtCnt += 1;
                 }
 
                 break;
             case 9:
-                if (playerInfo.Lv == 10)
+                if (playerInfo.Lv == 30)
                 {
-
+                    playerInfo.Bonus_Cri += 5f;
                 }
-                else if (playerInfo.Lv == 20)
+                else if (playerInfo.Lv == 60)
                 {
-
+                    playerInfo.Bonus_Cri += 5f;
+                }
+                else if (playerInfo.Lv == 90)
+                {
+                    playerInfo.Bonus_Cri += 5f;
+                }
+                break;
+            case 10:
+                if (playerInfo.Lv == 15)
+                {
+                    playerInfo.Bonus_Dmg += 5f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_Dmg += 5f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    playerInfo.Bonus_Dmg += 5f;
+                }
+                else if (playerInfo.Lv == 55)
+                {
+                    playerInfo.Bonus_Dmg += 5f;
+                }
+                else if (playerInfo.Lv == 70)
+                {
+                    playerInfo.Bonus_Dmg += 5f;
+                }
+                break;
+            case 11:
+                if (playerInfo.Lv == 15)
+                {
+                    playerInfo.Bonus_Cool += 3f;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_Cool += 3f;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    playerInfo.Bonus_Cool += 3f;
+                }
+                else if (playerInfo.Lv == 55)
+                {
+                    playerInfo.Bonus_Cool += 3f;
+                }
+                else if (playerInfo.Lv == 70)
+                {
+                    playerInfo.Bonus_Cool += 3f;
+                }
+                break;
+            case 12:
+                if (playerInfo.Lv == 15)
+                {
+                    playerInfo.Bonus_HpC += 20;
+                }
+                else if (playerInfo.Lv == 30)
+                {
+                    playerInfo.Bonus_HpC += 20;
+                }
+                else if (playerInfo.Lv == 40)
+                {
+                    playerInfo.Bonus_HpC += 20;
+                }
+                else if (playerInfo.Lv == 55)
+                {
+                    playerInfo.Bonus_HpC += 20;
+                }
+                else if (playerInfo.Lv == 70)
+                {
+                    playerInfo.Bonus_HpC += 20;
                 }
                 break;
             default:

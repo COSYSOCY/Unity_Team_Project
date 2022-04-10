@@ -105,7 +105,7 @@ int bulletCntMax; // 투사체 최대갯수
             return f;
         }
         
-        f2 = GameInfo.SkillCoolPlus+manager.Cool()+ CardStat.inst.CardStat_Cool()+ PowerUpInfo.instance._Cool();
+        f2 = GameInfo.SkillCoolPlus+manager.Cool()+ CardStat.inst.CardStat_Cool()+ PowerUpInfo.instance._Cool()+playerinfo.Bonus_Cool;
         Mathf.Clamp(f2, 0, 50f);
         f2 = (100 - f2)*0.01f;
         f *= f2;

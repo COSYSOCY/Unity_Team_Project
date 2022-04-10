@@ -23,6 +23,8 @@ public class MainSingleton : MonoBehaviour
 
     public NavMeshAgent nav;
 
+    public PlayerMoving playermoving;
+
     public List<Material> HitEffect;
     private void Awake()
     {
