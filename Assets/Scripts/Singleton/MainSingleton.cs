@@ -26,6 +26,7 @@ public class MainSingleton : MonoBehaviour
     public PlayerMoving playermoving;
 
     public List<Material> HitEffect;
+    public BoxScritps BoxScritp;
     private void Awake()
     {
             instance = this;
