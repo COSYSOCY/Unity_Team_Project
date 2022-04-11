@@ -85,7 +85,7 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
    void VerticalScrollUp()
     { 
 
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 1; i < SIZE; i++)
             if (contentTr.GetChild(i).GetComponent<ScrollScript>() && curPos != pos[i] && targetPos == pos[i])
                 contentTr.GetChild(i).GetChild(1).GetComponent<Scrollbar>().value = 1;
     }
