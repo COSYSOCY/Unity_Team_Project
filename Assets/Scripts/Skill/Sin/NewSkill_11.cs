@@ -40,8 +40,8 @@ public class NewSkill_11 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            yield return StartCoroutine(Skill_Update2());
             SoundManager.inst.SoundPlay(18);
+            yield return StartCoroutine(Skill_Update2());
         }
     }
 

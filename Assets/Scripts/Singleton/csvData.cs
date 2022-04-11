@@ -133,6 +133,20 @@ public class csvData : MonoBehaviour
     public  List<string> GameText_Germany = new List<string>();
     public  List<string> GameText_Spain = new List<string>();
 
+    public  List<string> GameText_Portugal = new List<string>();
+    public  List<string> GameText_Sweden = new List<string>();
+    public  List<string> GameText_Italy = new List<string>();
+    public  List<string> GameText_ind = new List<string>();
+    public  List<string> GameText_ukr = new List<string>();
+    public  List<string> GameText_rus = new List<string>();
+    public  List<string> GameText_tha = new List<string>();
+    public  List<string> GameText_pol = new List<string>();
+    public  List<string> GameText_fra = new List<string>();
+    public  List<string> GameText_tur = new List<string>();
+
+
+
+
     public  List<int> MapNameNum = new List<int>();
     public  List<int> MapInfoNum = new List<int>();
     public  List<int> MapIconNum = new List<int>();
@@ -443,12 +457,38 @@ public class csvData : MonoBehaviour
             GameText_Germany.Add(data[i]["Germany"].ToString());
             GameText_Spain.Add(data[i]["Spain"].ToString());
 
+            GameText_Portugal.Add(data[i]["Portugal"].ToString());
+            GameText_Sweden.Add(data[i]["Sweden"].ToString());
+            GameText_Italy.Add(data[i]["Italy"].ToString());
+            GameText_ind.Add(data[i]["ind"].ToString());
+            GameText_ukr.Add(data[i]["ukr"].ToString());
+            GameText_rus.Add(data[i]["rus"].ToString());
+            GameText_tha.Add(data[i]["tha"].ToString());
+            GameText_pol.Add(data[i]["pol"].ToString());
+            GameText_fra.Add(data[i]["fra"].ToString());
+            GameText_tur.Add(data[i]["tur"].ToString());
+
+
+                      
+
+
     GameText_Korean[i] = GameText_Korean[i].Replace("`w`", "\n");
             GameText_English[i] = GameText_English[i].Replace("`w`", "\n");
             GameText_Japan[i] = GameText_Japan[i].Replace("`w`", "\n");
             GameText_China[i] = GameText_China[i].Replace("`w`", "\n");
             GameText_Germany[i] = GameText_Germany[i].Replace("`w`", "\n");
             GameText_Spain[i] = GameText_Spain[i].Replace("`w`", "\n");
+
+            GameText_Portugal[i] = GameText_Portugal[i].Replace("`w`", "\n");
+            GameText_Sweden[i] = GameText_Sweden[i].Replace("`w`", "\n");
+            GameText_Italy[i] = GameText_Italy[i].Replace("`w`", "\n");
+            GameText_ind[i] = GameText_ind[i].Replace("`w`", "\n");
+            GameText_ukr[i] = GameText_ukr[i].Replace("`w`", "\n");
+            GameText_rus[i] = GameText_rus[i].Replace("`w`", "\n");
+            GameText_tha[i] = GameText_tha[i].Replace("`w`", "\n");
+            GameText_pol[i] = GameText_pol[i].Replace("`w`", "\n");
+            GameText_fra[i] = GameText_fra[i].Replace("`w`", "\n");
+            GameText_tur[i] = GameText_tur[i].Replace("`w`", "\n");
         }
 
 
@@ -479,6 +519,50 @@ public class csvData : MonoBehaviour
         {
             return inst.GameText_Spain[i];
         }
+
+        else if (GameInfo.inst.Language == "Sweden")
+        {
+            return inst.GameText_Sweden[i];
+        }
+        else if (GameInfo.inst.Language == "Portugal")
+        {
+            return inst.GameText_Portugal[i];
+        }
+        else if (GameInfo.inst.Language == "Italy")
+        {
+            return inst.GameText_Italy[i];
+        }
+        else if (GameInfo.inst.Language == "ind")
+        {
+            return inst.GameText_ind[i];
+        }
+        else if (GameInfo.inst.Language == "ukr")
+        {
+            return inst.GameText_ukr[i];
+        }
+        else if (GameInfo.inst.Language == "rus")
+        {
+            return inst.GameText_rus[i];
+        }
+        else if (GameInfo.inst.Language == "tha")
+        {
+            return inst.GameText_tha[i];
+        }
+        else if (GameInfo.inst.Language == "pol")
+        {
+            return inst.GameText_pol[i];
+        }
+        else if (GameInfo.inst.Language == "fra")
+        {
+            return inst.GameText_fra[i];
+        }
+        else if (GameInfo.inst.Language == "tur")
+        {
+            return inst.GameText_tur[i];
+        }
+
+                  
+
         else
         {
             return inst.GameText_Korean[i];

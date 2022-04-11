@@ -5,8 +5,31 @@ using UnityEngine;
 public class EnemyFunc : MonoBehaviour
 {
 
+    public Vector3 GetRaGetRandomPos2()
+    {
+        float x = 0;
+        float z = 0;
+        int Ran = Random.Range(0, 2);
+        if (Ran==0)
+        {
+            x = MainSingleton.instance.Player.transform.position.x + (-18);
+        }
+        else
+        {
+            x = MainSingleton.instance.Player.transform.position.x + 18;
+        }
+        z = Random.Range(-22f, 22f);
+        return new Vector3(x, 0, z);
+    }
     public Vector3 GetRandomPos()
     {
+        if (GameInfo.inst.MapIdx==2)
+        {
+            return GetRaGetRandomPos2();
+        }
+        else
+        {
+
         float range = Random.Range(30f, 31f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
@@ -18,8 +41,10 @@ public class EnemyFunc : MonoBehaviour
         Vector3 Pos = new Vector3(x, 0, z);
         Pos = MainSingleton.instance.Player.transform.position + (Pos * range);
         Pos.y = 0;
-        //Debug.Log((Pos - player.position).magnitude);
-        return Pos;
+            return Pos;
+            //Debug.Log((Pos - player.position).magnitude);
+        }
+        return new Vector3(0, 0, 0);
     }
 
 

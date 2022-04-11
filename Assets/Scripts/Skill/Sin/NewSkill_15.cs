@@ -49,6 +49,8 @@ public class NewSkill_15 : Skill_Ori
     }
     IEnumerator Skill_Update2()
     {
+        int icheck = GameInfo.inst.PlayerCardCheck[59];
+        float add= icheck * GameInfo.inst.CardsInfo[59].CardStat_Real1;
         float local = _AtRange() ;
         float Sp = Speed+_SkillReal3();
         int cnt= (int)_SkillReal1();
@@ -65,7 +67,7 @@ public class NewSkill_15 : Skill_Ori
             bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime()+ UpTime);
             yield return new WaitForSeconds(_SkillReal2());
         }
-        yield return new WaitForSeconds(_CoolSub1(false));
+        yield return new WaitForSeconds(_CoolSub1(false)+ add);
         bullet.SetActive(false);
         MainSingleton.instance.playerinfo.Speed -= Sp;
 

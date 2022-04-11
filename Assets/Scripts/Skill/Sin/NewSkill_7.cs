@@ -46,11 +46,22 @@ public class NewSkill_7 : Skill_Ori
             StartCoroutine(Skill_Update2());
         }
     }
+    float Range()
+    {
+        float d = _AtRange();
+        int i = GameInfo.inst.PlayerCardCheck[20];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[20].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
+        return d;
+    }
     IEnumerator Skill_Update2()
     {
         
-        float local = _AtRange()+ Upscale;
+        float local = Range()+ Upscale;
 
         float f1 = 0f;
         Vector3 pos = bulletPos.transform.position;

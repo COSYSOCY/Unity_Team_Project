@@ -25,6 +25,7 @@ public class MapTrigger1 : MonoBehaviour
             {
                 info.timeM++;
                 info.timeS = info.timeS - 60;
+                MainSingleton.instance.playerinfo.Min1Func();
             }
             ui.TimeCheck();
             tiemtrigger(info.timeplus);

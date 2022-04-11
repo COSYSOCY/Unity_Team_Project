@@ -27,6 +27,18 @@ public class NewSkill_3 : Skill_Ori
             bullet.SetActive(true);
         }
     }
+    float damage()
+    {
+        float d = _Damage();
+        int i = GameInfo.inst.PlayerCardCheck[79];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[79].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
+
+        return d;
+    }
     public override void CreateFunc()
     {
 
@@ -70,7 +82,7 @@ public class NewSkill_3 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
-                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
             }
         }
 

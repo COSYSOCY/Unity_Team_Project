@@ -30,6 +30,8 @@ public class LobyUIMgr : MonoBehaviour
     public GameObject Sebuton;
     public GameObject Dmgbuton;
 
+    public GameObject[] langob;
+
 
 
 
@@ -43,17 +45,92 @@ public class LobyUIMgr : MonoBehaviour
         check();
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
-
+        LangFunc();
        ServerDataSystem.inst.SaveData2();
     }
 
 
 
+    public void LangFunc()
+    {
+        for (int i = 0; i < langob.Length; i++)
+        {
+            langob[i].SetActive(false);
+        }
 
+        if (GameInfo.inst.Language == "English")
+        {
+            langob[1].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "Japan")
+        {
+            langob[2].SetActive(true);
+
+        }
+        else if (GameInfo.inst.Language == "China")
+        {
+            langob[3].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "Germany")
+        {
+            langob[4].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "Spain")
+        {
+            langob[5].SetActive(true);
+        }
+
+        else if (GameInfo.inst.Language == "Portugal")
+        {
+            langob[6].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "Sweden")
+        {
+            langob[7].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "Italy")
+        {
+            langob[8].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "ind")
+        {
+            langob[9].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "ukr")
+        {
+            langob[10].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "rus")
+        {
+            langob[11].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "tha")
+        {
+            langob[12].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "pol")
+        {
+            langob[13].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "fra")
+        {
+            langob[14].SetActive(true);
+        }
+        else if (GameInfo.inst.Language == "tur")
+        {
+            langob[15].SetActive(true);
+        }
+        else
+        {
+            langob[0].SetActive(true);
+        }
+    }
 
     public void SettingButton()
     {
         SettingObject.SetActive(true);
+        
+
     }
     public void DmgCheckButton()
     {
@@ -150,6 +227,7 @@ public class LobyUIMgr : MonoBehaviour
         GameInfo.inst.Language = s;
 
         TextReset();
+        LangFunc();
     }
     public void TextReset()
     {

@@ -40,10 +40,10 @@ public class NewSkill_6 : Skill_Ori
         float d = _AtRange();
         int i = GameInfo.inst.PlayerCardCheck[17];
         //GameInfo.inst.CardsInfo[17].CardStat_Real1
-        float d2 = 0;
-        float d3 = i * GameInfo.inst.CardsInfo[17].CardStat_Real1;
-        d = d + d3;
-        d = d + (d * d2 * 0.01f);
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[17].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
         return d;
     }
@@ -55,7 +55,7 @@ public class NewSkill_6 : Skill_Ori
         {
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(13);
-            for (int i = 0; i < _BulletCnt(); i++)
+            for (int i = 0; i < _BulletCnt()+GameInfo.inst.PlayerCardCheck[78]; i++)
             {
             StartCoroutine(Skill_Update2());
 

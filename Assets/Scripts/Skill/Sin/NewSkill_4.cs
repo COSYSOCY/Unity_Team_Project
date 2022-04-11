@@ -51,19 +51,20 @@ public class NewSkill_4 : Skill_Ori
         }
         
     }
+
     float damage()
     {
         float d = _Damage();
         int i = GameInfo.inst.PlayerCardCheck[18];
+        int i2 = GameInfo.inst.PlayerCardCheck[77];
         //GameInfo.inst.CardsInfo[17].CardStat_Real1
-        float d2 = 0;
-        float d3 = i* GameInfo.inst.CardsInfo[17].CardStat_Real1;
-        d = d + d3;
-        d = d + (d * d2 * 0.01f);
+        float d_C = 0;
+        float d_P = (i * GameInfo.inst.CardsInfo[18].CardStat_Real1)+(i2* GameInfo.inst.CardsInfo[77].CardStat_Real1);
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
         return d;
     }
-
 
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트

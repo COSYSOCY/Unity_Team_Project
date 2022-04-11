@@ -6025,6 +6025,8 @@ MonoBehaviour:
   ExitOb: {fileID: 0}
   ReText: {fileID: 0}
   IsGo: 0
+  ButtonOb: {fileID: 0}
+  GoText: {fileID: 0}
 --- !u!1 &353900067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,7 +6187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 356501749}
   - component: {fileID: 356501754}
-  - component: {fileID: 356501753}
   - component: {fileID: 356501752}
   - component: {fileID: 356501750}
   m_Layer: 0
@@ -6224,7 +6225,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 356501753}
+  manager: {fileID: 0}
 --- !u!114 &356501752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6239,23 +6240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 039e46680ce090045b02bb14583e6cbf, type: 3}
---- !u!114 &356501753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356501748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &356501754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6815,7 +6799,6 @@ GameObject:
   m_Component:
   - component: {fileID: 377199973}
   - component: {fileID: 377199978}
-  - component: {fileID: 377199977}
   - component: {fileID: 377199976}
   - component: {fileID: 377199974}
   m_Layer: 0
@@ -6854,7 +6837,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 377199977}
+  manager: {fileID: 0}
 --- !u!114 &377199976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6869,23 +6852,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 90b392516b760bc47aa35d734bf32a9e, type: 3}
---- !u!114 &377199977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377199972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &377199978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9811,7 +9777,6 @@ GameObject:
   m_Component:
   - component: {fileID: 518115451}
   - component: {fileID: 518115456}
-  - component: {fileID: 518115455}
   - component: {fileID: 518115454}
   - component: {fileID: 518115452}
   m_Layer: 0
@@ -9850,7 +9815,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 518115455}
+  manager: {fileID: 0}
 --- !u!114 &518115454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9865,23 +9830,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: cba51b9496657a3439a25e329d12e09a, type: 3}
---- !u!114 &518115455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518115450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &518115456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17030,7 +16978,6 @@ GameObject:
   m_Component:
   - component: {fileID: 896154308}
   - component: {fileID: 896154313}
-  - component: {fileID: 896154312}
   - component: {fileID: 896154311}
   - component: {fileID: 896154309}
   m_Layer: 0
@@ -17069,7 +17016,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 896154312}
+  manager: {fileID: 0}
 --- !u!114 &896154311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17084,23 +17031,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 3ad98ed8ba8867a4a9777eb46bc80f09, type: 3}
---- !u!114 &896154312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896154307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &896154313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17594,7 +17524,6 @@ GameObject:
   m_Component:
   - component: {fileID: 911871502}
   - component: {fileID: 911871507}
-  - component: {fileID: 911871506}
   - component: {fileID: 911871505}
   - component: {fileID: 911871503}
   m_Layer: 0
@@ -17633,7 +17562,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 911871506}
+  manager: {fileID: 0}
 --- !u!114 &911871505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17648,23 +17577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 05ffe949b4f59ea4b99bed8b8bbfe524, type: 3}
---- !u!114 &911871506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911871501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &911871507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23006,7 +22918,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1246007568}
   - component: {fileID: 1246007573}
-  - component: {fileID: 1246007572}
   - component: {fileID: 1246007571}
   - component: {fileID: 1246007569}
   m_Layer: 0
@@ -23045,7 +22956,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 1246007572}
+  manager: {fileID: 0}
 --- !u!114 &1246007571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23060,23 +22971,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 7beebe8b6786256409f19f72f5fe7b46, type: 3}
---- !u!114 &1246007572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246007567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &1246007573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32898,7 +32792,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1781885282}
   - component: {fileID: 1781885287}
-  - component: {fileID: 1781885286}
   - component: {fileID: 1781885285}
   - component: {fileID: 1781885283}
   m_Layer: 0
@@ -32937,7 +32830,7 @@ MonoBehaviour:
   info: {fileID: 4456675825087984495}
   ui: {fileID: 865185821}
   stat: {fileID: 2128872704994612918}
-  manager: {fileID: 1781885286}
+  enemyFunc: {fileID: 1388198332}
 --- !u!114 &1781885285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32952,23 +32845,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewer: {fileID: 4701004815584131811}
   Maps: {fileID: 8974632829078057019, guid: 3e4da8d0cc4b8774cae50e8e105da875, type: 3}
---- !u!114 &1781885286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781885281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3fe27f447ddef42901a81a3c87116f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4701004815584131811}
-  batTime: 15
-  circleTime: 90
-  respawnTime: 0.5
-  playerstat: {fileID: 2128872704994612918}
 --- !u!114 &1781885287
 MonoBehaviour:
   m_ObjectHideFlags: 0

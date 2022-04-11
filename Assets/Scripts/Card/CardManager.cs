@@ -52,6 +52,10 @@ public class CardManager : MonoBehaviour
     public Image MixEndIcon;
 
     public int Checkint = 0;
+    public int GoldCost = 0;
+    public GameObject BuyCardOb;
+    public Text GoldCostText;
+    public LobyUIMgr loby;
     //public GameObject GoldObject;
     //public Text GoldText;
 
@@ -90,9 +94,15 @@ public class CardManager : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    {             
-
+    {
         for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
+        {
+            PlayerCard[i].GetComponent<CardIdx>().Lock = false;
+            CardImages[i].sprite = IconManager.inst.Icons[19];
+        }
+        
+        
+            for (int i = 0; i < GameInfo.inst.PlayerCardMax; i++)
         {
             if (GameInfo.inst.PlayerCardIdxs[i] == 0)
             {
@@ -234,6 +244,9 @@ public class CardManager : MonoBehaviour
                 if (ClickObject.GetComponent<CardIdx>().IsPlayerCard) // 장비칸에서 장비칸
                 {
                     int checknum = g.GetComponent<CardIdx>().num;
+
+                    int CardLv = ClickObject.GetComponent<CardIdx>().Lv;
+
                     int idx = ClickObject.GetComponent<CardIdx>().Idx;
                     int num = ClickObject.GetComponent<CardIdx>().num;
                     int iconNum = GameInfo.inst.CardsInfo[idx].CardIconNum;
@@ -242,7 +255,15 @@ public class CardManager : MonoBehaviour
                     CardImages[checknum].GetComponentInParent<CardIdx>().Idx = idx;
                     CardImages[num].GetComponentInParent<CardIdx>().Idx = 0;
                     CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];
-                    CardImages[num].sprite = IconManager.inst.Icons[19];                    
+                    CardImages[num].sprite = IconManager.inst.Icons[19];
+
+                    CardImages[checknum].GetComponentInParent<CardIdx>().Lv_Text.text = "★" + CardLv;//레벨설정
+                    CardImages[checknum].GetComponentInParent<CardIdx>().Lv = CardLv;
+                    CardImages[num].GetComponentInParent<CardIdx>().Lv_Text.text = "";
+                    CardImages[num].GetComponentInParent<CardIdx>().Lv= 0;
+
+
+
 
                     InfoReset();
                     return;
@@ -254,6 +275,7 @@ public class CardManager : MonoBehaviour
                     //이동액션
                     //Debug.Log("체크");
                     int checknum = g.GetComponent<CardIdx>().num;
+                    int CardLv = ClickObject.GetComponent<CardIdx>().Lv;
                     int idx = ClickObject.GetComponent<CardIdx>().Idx;
                     int num = ClickObject.GetComponent<CardIdx>().num;
                     int iconNum = GameInfo.inst.CardsInfo[idx].CardIconNum;
@@ -261,7 +283,11 @@ public class CardManager : MonoBehaviour
 
                     GameInfo.inst.PlayerCardIdxs[checknum] = idx; //인덱스설정
                     CardImages[checknum].GetComponentInParent<CardIdx>().Idx = idx; //인덱스설정
-                    CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];                    
+                    CardImages[checknum].sprite = IconManager.inst.Icons[iconNum];
+                    CardImages[checknum].GetComponentInParent<CardIdx>().Lv_Text.text = "★" + CardLv;//레벨설정
+                    CardImages[checknum].GetComponentInParent<CardIdx>().Lv=CardLv;//레벨설정
+                    //CardImages[checknum].GetComponent<CardIdx>().Lv_Text.text = "★" + CardLv;
+
                     cardlist.RemoveAt(num);
                     GameInfo.inst.PlayerCards.RemoveAt(num);
                     Destroy(ClickObject);
@@ -852,6 +878,13 @@ public class CardManager : MonoBehaviour
             cardlist[i].GetComponent<CardIdx>().image.color = CardColor[0];
             cardlist[i].GetComponent<CardIdx>().MixOk = true;
         }
+        for (int i = 0; i < PlayerCard.Count; i++)
+        {
+            PlayerCard[i].GetComponent<CardIdx>().Focus.SetActive(false);
+            PlayerCard[i].GetComponent<CardIdx>().MixSelect.SetActive(false);
+            PlayerCard[i].GetComponent<CardIdx>().image.color = CardColor[0];
+            PlayerCard[i].GetComponent<CardIdx>().MixOk = true;
+        }
 
     }
 
@@ -935,6 +968,7 @@ public class CardManager : MonoBehaviour
         {
             return;
         }
+        MixButtonOb.SetActive(false);
         StartCoroutine(IMixStart());
     }
 
@@ -1038,6 +1072,34 @@ public class CardManager : MonoBehaviour
             MixLoading.GetComponent<RectTransform>().localScale = new Vector3(a, a, a);
             //yield return new WaitForSeconds(0.1f);
             yield return null;
+        }
+    }
+
+    public void BuyCard(int idx)
+    {
+        int BuyIdx = 0;
+
+        if (GameInfo.inst.PlayerCardMax<=7)
+        {
+            //뜨게하기.
+            BuyIdx = GameInfo.inst.PlayerCardMax;
+            GoldCost = PlayerCard[BuyIdx].GetComponent<CardIdx>().GoldCost;
+            GoldCostText.text = GoldCost.ToString();
+            BuyCardOb.SetActive(true);
+        }
+
+    }
+
+    public void BuyFunc()
+    {
+        if (GameInfo.PlayerGold >= GoldCost)
+        {
+            GameInfo.PlayerGold -= GoldCost;
+            loby.LobyGoldAc();
+            BuyCardOb.SetActive(false);
+            PlayerCard[GameInfo.inst.PlayerCardMax].GetComponent<CardIdx>().Lock = false;
+            CardImages[GameInfo.inst.PlayerCardMax].sprite = IconManager.inst.Icons[19];
+            GameInfo.inst.PlayerCardMax++;
         }
     }
 }

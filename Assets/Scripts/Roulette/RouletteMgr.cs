@@ -19,7 +19,8 @@ public class RouletteMgr : MonoBehaviour
     int ItemCnt = 8;
     public Text ReText;
     public bool IsGo = false;
-
+    public GameObject ButtonOb;
+    public GameObject GoText;
 
 
     public void StartFUnc()
@@ -50,7 +51,7 @@ public class RouletteMgr : MonoBehaviour
         IsGo = true;
         ExitOb.SetActive(false);
         StartCoroutine(StartRoulette());
-
+        ButtonOb.SetActive(false);
     }
 
     IEnumerator StartRoulette()
@@ -100,6 +101,7 @@ public class RouletteMgr : MonoBehaviour
        // Debug.Log(" LV UP Index : " + ResultIndexList[closetIndex]);
         ReTextFunc(ResultIndexList[closetIndex]);
         GameInfo.inst.Roulette = ResultIndexList[closetIndex] + 1000;
+        GoText.SetActive(true);
     }
 
     void ReTextFunc(int i)

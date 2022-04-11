@@ -33,15 +33,26 @@ public class NewSkill_16 : Skill_Ori
         }
         
     }
+    float damage()
+    {
+        float d = _Damage();
+        int i = GameInfo.inst.PlayerCardCheck[58];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[58].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
+        return d;
+    }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
         
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            StartCoroutine(Skill_Update2());
             SoundManager.inst.SoundPlay(28);
+            StartCoroutine(Skill_Update2());
         }
     }
     Vector3 RandomPos()
@@ -67,7 +78,7 @@ public class NewSkill_16 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
-                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
             }
         }
 
