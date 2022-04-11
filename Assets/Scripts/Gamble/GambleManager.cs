@@ -31,10 +31,21 @@ public class GambleManager : MonoBehaviour
     }
     public void ItemAd()
     {
-        if (GameInfo.inst.AdCardFreeMax > 0)
+        
+         if (GameInfo.inst.AdCardFreeMax > 0)
         {
+            if (GameInfo.inst.PcTestMode)
+            {
+                GameInfo.inst.AdCardFreeMax--;
+                ShopManager.AdFreeSet();
+                ItemPick(1);
+            }
+            else
+            {
+
             ShopManager.LoadRewardAd2();
             ShopManager.rewardAd.Show();
+            }
         }
         
         //

@@ -502,6 +502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PcTestMode: 1
+  isTestMode: 1
   GameStart: 0
   audioSo: {fileID: 563478249}
   audioSo2: {fileID: 563478254}
@@ -534,7 +536,6 @@ MonoBehaviour:
   Card_Lv3: 
   Card_Lv4: 
   Card_Lv5: 
-  isTestMode: 1
   AdGoldFreeMax: 0
   AdCardFreeMax: 0
   Player_PowerUp: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

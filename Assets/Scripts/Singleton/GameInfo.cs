@@ -36,6 +36,9 @@ public class CardInfo
 }
 public class GameInfo : MonoBehaviour
 {
+	public bool PcTestMode = false;
+	public bool isTestMode;
+
 	public bool GameStart=false;
 
 	public static GameInfo inst;
@@ -96,7 +99,6 @@ public class GameInfo : MonoBehaviour
 	public List<int> Card_Lv4;
 	public List<int> Card_Lv5;
 
-	public bool isTestMode;
 	//상점
 	public int AdGoldFreeMax; // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
 	public int AdCardFreeMax; // 하루 광고보면 카드 최대횟수 현재 서버로 저장해야함

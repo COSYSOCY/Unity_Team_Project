@@ -17,14 +17,18 @@ public class ShopManager : MonoBehaviour
         AdFreeSet();
         adstart();
     }
-    void AdFreeSet()
+    public void AdFreeSet()
     {
         ADFreeCnt_Gold.text="("+GameInfo.inst.AdGoldFreeMax+")";
         ADFreeCnt_Card.text="("+GameInfo.inst.AdCardFreeMax+")";
     }
     public void RouletteFunc()
     {
-        if (!Roulette.IsGo)
+        if (GameInfo.inst.PcTestMode)
+        {
+            Roulette.SpinFreeBtn();
+        }
+        else if (!Roulette.IsGo)
         {
             LoadRewardAd3();
             rewardAd.Show();
@@ -33,10 +37,21 @@ public class ShopManager : MonoBehaviour
 
     public void AdFreeButton()
     {
-        if (GameInfo.inst.AdGoldFreeMax >0)
+        if (GameInfo.inst.AdGoldFreeMax > 0)
         {
+            if (GameInfo.inst.PcTestMode)
+            {
+                GameInfo.inst.AdGoldFreeMax--;
+                GameInfo.PlayerGold += 240;
+                AdFreeSet();
+                Loby.LobyGoldAc();
+            }
+            else
+            {
+
             LoadRewardAd();
             rewardAd.Show();
+            }
         }
     }
 
