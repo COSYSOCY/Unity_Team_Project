@@ -536,7 +536,9 @@ MonoBehaviour:
   Card_Lv5: 
   isTestMode: 1
   AdGoldFreeMax: 0
+  AdCardFreeMax: 0
   Player_PowerUp: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Roulette: 0
 --- !u!114 &563478247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,7 +802,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 166826d410fb95349a655545715f2595, type: 3}
   - {fileID: 21300000, guid: f841269dc8516a34c875e1715c1a5cc5, type: 3}
   - {fileID: 21300000, guid: 10f577ac72fce4843aab48bba5fd294f, type: 3}
-  - {fileID: 21300000, guid: 65d44cd159408524ebfaed16aa4ea4ac, type: 3}
+  - {fileID: 21300000, guid: e54d5ff6866381240ac1d2838b1224be, type: 3}
   - {fileID: 21300000, guid: 1ddf9343777a04359b13d3a8b3f8b1cd, type: 3}
   - {fileID: 21300000, guid: 1ddf9343777a04359b13d3a8b3f8b1cd, type: 3}
   - {fileID: 21300000, guid: 1ddf9343777a04359b13d3a8b3f8b1cd, type: 3}
@@ -899,10 +901,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a1143a614e1ab994899ef2a7d2f82a37, type: 3}
   - {fileID: 21300000, guid: 3782830179a794249bb6dfe0fbca90d6, type: 3}
   - {fileID: 21300000, guid: ad9d4c3be962a80438c279efa800bafe, type: 3}
-  - {fileID: 21300000, guid: 8c12995b4054b7044aef43034a790e6e, type: 3}
-  - {fileID: 21300000, guid: c09f37ed926f2b547ba00dd9a43d842f, type: 3}
-  - {fileID: 21300000, guid: fef47da0e67a5d94baf13cd3d6cf689b, type: 3}
+  - {fileID: 21300000, guid: 6b477faf7e3060743a5040a2fff7acf1, type: 3}
+  - {fileID: 21300000, guid: d226b6e50d2c4444aa3eaf9cbb7d7917, type: 3}
+  - {fileID: 21300000, guid: 8184fcaacde0ee44c8c194bc64422bef, type: 3}
   - {fileID: 21300000, guid: 541be1bd87b334dad95c40656fc379ee, type: 3}
+  - {fileID: 21300000, guid: 30bdd32f12b9a4aa2a30001178f0679c, type: 3}
+  - {fileID: 21300000, guid: e50903c0d87b64085978f6cec2ae3f87, type: 3}
+  - {fileID: 21300000, guid: b8e2a211143e84776bb8ea1730115895, type: 3}
   CharaIcons:
   - {fileID: 8400000, guid: 2081eef21f974d04a97864cc31ac0003, type: 2}
   - {fileID: 8400000, guid: 812ebdfbaa66cf84580ad32865f76298, type: 2}

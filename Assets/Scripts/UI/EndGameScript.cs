@@ -20,7 +20,7 @@ public class EndGameScript : MonoBehaviour
         //int xp = Random.Range(100,1000);
         int gold = MainSingleton.instance.playerinfo.Gold;
         float AddGold;
-        float f = MainSingleton.instance.skillmanager.GoldPlus() + CardStat.inst.CardStat_GoldPlus() + PowerUpInfo.instance._GoldPlus();
+        float f = MainSingleton.instance.skillmanager.GoldPlus() + CardStat.inst.CardStat_GoldPlus() + PowerUpInfo.instance._GoldPlus()+MainSingleton.instance.playerinfo.Bonus_GoldPuls;
         AddGold = gold;
         AddGold = AddGold * (f * 0.01f);
         

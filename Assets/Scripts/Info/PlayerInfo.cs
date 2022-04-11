@@ -42,6 +42,9 @@ public class PlayerInfo : MonoBehaviour
     public float Bonus_HpC = 0f;
     public float Bonus_HpP = 0f;
 
+    public float Bonus_SpeedP = 0f;
+    public float Bonus_GoldPuls = 0;
+
     private void Start()
     {
         //Hp = 200f;
@@ -76,7 +79,7 @@ public class PlayerInfo : MonoBehaviour
     public float _Speed()
     {
         float s = GameInfo.inst.MoveSpeedPlus+Speed;
-        float d = manager.Speed() + CardStat.inst.CardStat_Speed()+ PowerUpInfo.instance._Speed();
+        float d = manager.Speed() + CardStat.inst.CardStat_Speed()+ PowerUpInfo.instance._Speed()+ Bonus_SpeedP;
         s = s + ((d * 0.01f) * s);
         return s;
     }

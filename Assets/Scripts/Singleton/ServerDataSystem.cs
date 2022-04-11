@@ -324,6 +324,7 @@ public class ServerDataSystem : MonoBehaviour
         IsSave = true;
         GameInfo.inst.CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
         GameInfo.inst.AdGoldFreeMax = 3;
+        GameInfo.inst.AdCardFreeMax = 3;
         GameInfo.PlayerGold = 0;
         GameInfo.inst.PlayerMap[0] = 1;
         GameInfo.inst.PlayerMap[1] = 1;

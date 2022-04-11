@@ -12,6 +12,7 @@ public class SceneStart : MonoBehaviour
     public GameObject Hpbar;
     public IEnumerator IStart()
     {
+        RouletFunc();
         MainSingleton.instance.playerstat.IsAdIn = false;
         GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], parent.position, Quaternion.identity, parent);
         CharAddFunc(GameInfo.inst.CharacterIdx);
@@ -20,7 +21,6 @@ public class SceneStart : MonoBehaviour
         Hpbar.SetActive(true);
         manager.Skills = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].Skill;
         manager.Skill_Items = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].SkillItem;
-        
         Time.timeScale = 1f;
         //MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
         //MapManager.instance.GameStart = true;
@@ -41,6 +41,42 @@ public class SceneStart : MonoBehaviour
         StartCoroutine(IStart());
 
     }
+
+    public void RouletFunc()
+    {
+
+        switch (GameInfo.inst.Roulette)
+        {
+
+            case 1000:
+                MainSingleton.instance.playerinfo.Bonus_Dmg += 20;
+                break;
+            case 1001:
+            MainSingleton.instance.playerstat.ReCnt++;
+                break;
+            case 1002:
+            MainSingleton.instance.playerinfo.Bonus_SpeedP += 20;
+                break;
+            case 1003:
+            MainSingleton.instance.playerinfo.Bonus_GoldPuls += 20;
+                break;
+            case 1004:
+            MainSingleton.instance.playerinfo.Bonus_XpPuls += 20;
+        break;
+            case 1005:
+            MainSingleton.instance.playerinfo.Bonus_HpC += 50;
+        break;
+            case 1006:
+            MainSingleton.instance.playerinfo.Bonus_Cool += 20;
+                break;
+            case 1007:
+             MainSingleton.instance.playerinfo.Bonus_Cri += 10;
+        break;
+            default:
+                break;
+        }
+
+}
 
     public void CharAddFunc(int i)
     {

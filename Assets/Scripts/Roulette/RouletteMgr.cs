@@ -11,13 +11,23 @@ public class RouletteMgr : MonoBehaviour
 
     public Sprite[] SkillSprite;
     public Image[] DisplayItemSlot;
+    public GameObject ExitOb;
+ 
 
     List<int> StartList = new List<int>();
     List<int> ResultIndexList = new List<int>();
     int ItemCnt = 8;
+    public Text ReText;
+    public bool IsGo = false;
 
-    private void Start()
+
+
+    public void StartFUnc()
     {
+        IsGo = false;
+        ReText.text = "";
+        ExitOb.SetActive(true);
+        DisplayItemSlot[8].sprite = IconManager.inst.Icons[146];
         for (int i = 0; i < ItemCnt; i++)
         {
             StartList.Add(i);
@@ -30,17 +40,22 @@ public class RouletteMgr : MonoBehaviour
             DisplayItemSlot[i].sprite = SkillSprite[StartList[randomIndex]];
             StartList.RemoveAt(randomIndex);
         }
+
+
     }
 
-
     public void SpinFreeBtn()
-    {       
+    {
+
+        IsGo = true;
+        ExitOb.SetActive(false);
         StartCoroutine(StartRoulette());
+
     }
 
     IEnumerator StartRoulette()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         float randomSpd = Random.Range(1.0f, 5.0f);
         float rotateSpeed = 100f * randomSpd;
@@ -56,6 +71,8 @@ public class RouletteMgr : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         Result();
+        yield return new WaitForSeconds(2f);
+        Loading.LoadScene("Main");
     }
 
     void Result()
@@ -80,6 +97,41 @@ public class RouletteMgr : MonoBehaviour
         }
         DisplayItemSlot[ItemCnt].sprite = DisplayItemSlot[closetIndex].sprite;
 
-        Debug.Log(" LV UP Index : " + ResultIndexList[closetIndex]);
+       // Debug.Log(" LV UP Index : " + ResultIndexList[closetIndex]);
+        ReTextFunc(ResultIndexList[closetIndex]);
+        GameInfo.inst.Roulette = ResultIndexList[closetIndex] + 1000;
+    }
+
+    void ReTextFunc(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                ReText.text = csvData.GameText(1120);
+                break;
+            case 1:
+                ReText.text = csvData.GameText(1121);
+                break;
+            case 2:
+                ReText.text = csvData.GameText(1122);
+                break;
+            case 3:
+                ReText.text = csvData.GameText(1123);
+                break;
+            case 4:
+                ReText.text = csvData.GameText(1124);
+                break;
+            case 5:
+                ReText.text = csvData.GameText(1125);
+                break;
+            case 6:
+                ReText.text = csvData.GameText(1126);
+                break;
+            case 7:
+                ReText.text = csvData.GameText(1127);
+                break;
+            default:
+                break;
+        }
     }
 }
