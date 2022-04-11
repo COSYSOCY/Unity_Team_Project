@@ -49,7 +49,31 @@ public class UIManager : MonoBehaviour
         {
             MainSingleton.instance.item31.Func();
         }
+        if (playerinfo.Kill%200==0)
+        {
+            Kill200Func();
+        }
         //KillText.text =""+playerinfo.Kill;
+    }
+    void Kill200Func()
+    {
+        playerinfo.Bonus_Dmg += (GameInfo.inst.PlayerCardCheck[14] * GameInfo.inst.CardsInfo[14].CardStat_Real1);
+        playerinfo.Bonus_HpC += (GameInfo.inst.PlayerCardCheck[15] * GameInfo.inst.CardsInfo[15].CardStat_Real1);
+
+        playerinfo.Bonus_Dmg += (GameInfo.inst.PlayerCardCheck[34] * GameInfo.inst.CardsInfo[34].CardStat_Real1);
+        playerinfo.Bonus_Cri += (GameInfo.inst.PlayerCardCheck[35] * GameInfo.inst.CardsInfo[35].CardStat_Real1);
+
+        playerinfo.Bonus_Dmg += (GameInfo.inst.PlayerCardCheck[54] * GameInfo.inst.CardsInfo[54].CardStat_Real1);
+
+        playerinfo.Bonus_HpC += (GameInfo.inst.PlayerCardCheck[55] * GameInfo.inst.CardsInfo[55].CardStat_Real1);
+
+        playerinfo.Bonus_Dmg += (GameInfo.inst.PlayerCardCheck[73] * GameInfo.inst.CardsInfo[73].CardStat_Real1);
+        playerinfo.Bonus_SpeedP += (GameInfo.inst.PlayerCardCheck[74] * GameInfo.inst.CardsInfo[74].CardStat_Real1);
+
+        playerinfo.Bonus_Dmg += (GameInfo.inst.PlayerCardCheck[93] * GameInfo.inst.CardsInfo[93].CardStat_Real1);
+        playerinfo.Bonus_Cool += (GameInfo.inst.PlayerCardCheck[94] * GameInfo.inst.CardsInfo[94].CardStat_Real1);
+        MainSingleton.instance.playerstat.PlayerHpMax();
+
     }
     public void GoldUp(int gold)
     {

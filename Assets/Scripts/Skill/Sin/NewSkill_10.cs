@@ -32,7 +32,18 @@ public class NewSkill_10 : Skill_Ori
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
+    float damage()
+    {
+        float d = _Damage();
+        int i = GameInfo.inst.PlayerCardCheck[19];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[19].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
+        return d;
+    }
     public override void LevelUpFunc()
     {
         //
@@ -74,7 +85,7 @@ public class NewSkill_10 : Skill_Ori
 
             par.transform.localScale = new Vector3(local * UpRange, local * UpRange, local * UpRange);
             par.transform.parent = bullet.gameObject.transform;// 기도문 오브젝트아래 자식객체로 큐브생성
-            par.GetComponent<Bullet_Info>().damage = _Damage();
+            par.GetComponent<Bullet_Info>().damage = damage();
             par.GetComponent<Bullet_Info>().pie = _BulletPie();
             par.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         }

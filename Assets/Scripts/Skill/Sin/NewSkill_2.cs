@@ -58,7 +58,7 @@ public class NewSkill_2 : Skill_Ori
 
         if (Enemys.Count >0)
         {
-            for (int i = 0; i < _BulletCnt(); i++)
+            for (int i = 0; i < _BulletCnt()+ GameInfo.inst.PlayerCardCheck[76]; i++)
             {
 
                 GameObject target;

@@ -15,6 +15,9 @@ public class CardIdx : MonoBehaviour
     public bool IsPlayerCard;
     public bool IsMixCard;
     public GameObject MixSelect;
+    public int GoldCost;
+
+    public bool Lock = false;
 
     public bool MixOk;
 
@@ -24,7 +27,16 @@ public class CardIdx : MonoBehaviour
     }
     public void PlayerCard()
     {
+        if (!Lock)
+        {
+
         cardManager.PlayerCardButton(gameObject);
+        }
+        else
+        {
+
+        cardManager.BuyCard(Idx);
+        }
     }
     public void InvenCard()
     {

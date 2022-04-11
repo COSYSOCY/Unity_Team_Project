@@ -176,9 +176,33 @@ public class Enemy_Info : MonoBehaviour
 
     }
 
+    public Vector3 GetRaGetRandomPos2()
+    {
+        float x = 0;
+        float z = 0;
+        int Ran = Random.Range(0, 2);
+        if (Ran == 0)
+        {
+            x = player.transform.position.x + (-20);
+        }
+        else
+        {
+            x = player.transform.position.x + 20;
+        }
+        z = Random.Range(-22f, 22f);
+        return new Vector3(x, 0, z);
+    }
     public void EnemyMove()
     {
-        float range = Random.Range(28f, 29f);
+        if (GameInfo.inst.MapIdx == 2)
+        {
+        transform.position = GetRaGetRandomPos2();
+
+        }
+        else
+        {
+
+            float range = Random.Range(28f, 29f);
         int ran = Random.Range(0, 360);
         float x = Mathf.Cos(ran) * 1f;
         float z = Mathf.Sin(ran) * 1f;
@@ -186,6 +210,7 @@ public class Enemy_Info : MonoBehaviour
         Pos = player.transform.position + (Pos * range);
         Pos.y = 0;
         transform.position = Pos;
+        }
 
 
 
@@ -277,8 +302,33 @@ public class Enemy_Info : MonoBehaviour
         //nav.isStopped = false;
         //Speed = SpeedCheck;
     }
+    public Vector3 GetRaGetRandomPos3()
+    {
+        float r = player.transform.rotation.eulerAngles.y;
+        float x = 0;
+        if (r >= 180)
+        {
+        Debug.Log("left");
+            x = player.transform.position.x+ (-15);
+        }
+        else
+        {
+        Debug.Log("right");
+            x = player.transform.position.x + 15;
+        }
+
+        return new Vector3(x, 0, player.transform.position.z);
+    }
     public void BossMove()
     {
+        if (GameInfo.inst.MapIdx == 2)
+        {
+            transform.position = GetRaGetRandomPos3();
+
+        }
+        else
+        {
+
         Vector3 _target = player.transform.position;
         Vector3 d=(_target-transform.position).normalized;
         d = d * 25f;
@@ -286,6 +336,7 @@ public class Enemy_Info : MonoBehaviour
         Vector3 endPos = _target + d;
         transform.position = endPos;
         transform.rotation = Quaternion.LookRotation(_target);
+        }
     }
     //private void OnBecameVisible()
     //{

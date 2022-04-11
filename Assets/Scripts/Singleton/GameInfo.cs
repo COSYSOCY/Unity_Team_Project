@@ -69,6 +69,7 @@ public class GameInfo : MonoBehaviour
 
 	// 카드
 	public int PlayerCardMax; // 게임의 카드 착용 최대갯수
+	public int GameSystemCardMax=8; // 게임시스템의 착용횟수
 	public int CardMax; // 게임의 카드정보 최대갯수
 	public List<int> PlayerCardIdxs; // 플레이어 카드 정보 게임의 카드 최대갯수가 4개라면 1,2,3,4 1번 슬룻에 1번카드 2번슬룻에 2번카드 3번슬룻에3번카드4번슬룻에 4번카드
 	public List<int> PlayerCardCheck; // 플레이어 카드체크 손쉽게 확인하는법 PlayerCardCheck[10]=2 라면 인덱스10번의 카드가 2개 착용중이라는 뜻
@@ -203,7 +204,7 @@ public class GameInfo : MonoBehaviour
 			}
 			PlayerCardCheck.Add(0);
 		}
-        for (int i = 0; i < PlayerCardMax; i++)
+        for (int i = 0; i < GameSystemCardMax; i++)
         {
 			PlayerCardIdxs.Add(0);
 

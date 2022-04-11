@@ -78,6 +78,11 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.PlayerMap = GameInfo.inst.PlayerMap;
         serverdata.Language = GameInfo.inst.Language;
         serverdata.AdGoldFreeMax = GameInfo.inst.AdGoldFreeMax;
+        serverdata.PlayerCardMax = GameInfo.inst.PlayerCardMax;
+        serverdata.Player_PowerUp = GameInfo.inst.Player_PowerUp;
+
+
+        
         string jsonData = JsonConvert.SerializeObject(serverdata);
         PlayerPrefs.SetString("Save", jsonData);
     }
@@ -166,11 +171,19 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
             GameInfo.inst.MapIdx = serverdata.MapIdx;
 
-            GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
+            for (int i = 0; i < serverdata.Player_PowerUp.Count; i++)
+            {
+                GameInfo.inst.Player_PowerUp[i] = serverdata.Player_PowerUp[i];
+            }
+            for (int i = 0; i < serverdata.PlayerCardIdxs.Count; i++)
+            {
+                GameInfo.inst.PlayerCardIdxs[i] = serverdata.PlayerCardIdxs[i];
+            }
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
 
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+            GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
 
 
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
@@ -225,13 +238,23 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
             GameInfo.inst.MapIdx = serverdata.MapIdx;
             
-            GameInfo.inst.PlayerCardIdxs = serverdata.PlayerCardIdxs;
+
+
+            for (int i = 0; i < serverdata.PlayerCardIdxs.Count; i++)
+            {
+                GameInfo.inst.PlayerCardIdxs[i] = serverdata.PlayerCardIdxs[i];
+            }
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+            GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
 
             GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
-
+            
+            for (int i = 0; i < serverdata.Player_PowerUp.Count; i++)
+            {
+                GameInfo.inst.Player_PowerUp[i] = serverdata.Player_PowerUp[i];
+            }
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
             {
                 GameInfo.inst.CharacterActive[i] = serverdata.CharacterActive[i];
@@ -330,6 +353,7 @@ public class ServerDataSystem : MonoBehaviour
         GameInfo.inst.PlayerMap[1] = 1;
         GameInfo.inst.PlayerMap[2] = 1;
         GameInfo.inst.PlayerMap[3] = 1;
+        GameInfo.inst.PlayerCardMax = 0;
 
 
         GameInfo.inst.CharacterActive[0] = 2;
@@ -363,11 +387,14 @@ public class ServerData
     public int CharacterIdx;
     public int MapIdx;
     public List<int> CharacterActive;
+    public List<int> Player_PowerUp;
     public List<int> PlayerCardIdxs;
     public List<int> PlayerCards;
     public List<int> PlayerMap;
     public string Language;
     public int AdGoldFreeMax;
+    public int AdCardFreeMax;
+    public int PlayerCardMax;
 
 }
 

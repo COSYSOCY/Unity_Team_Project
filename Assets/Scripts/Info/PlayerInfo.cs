@@ -83,4 +83,14 @@ public class PlayerInfo : MonoBehaviour
         s = s + ((d * 0.01f) * s);
         return s;
     }
+
+    public void Min1Func()
+    {
+        Bonus_XpPuls += (GameInfo.inst.PlayerCardCheck[16] * GameInfo.inst.CardsInfo[16].CardStat_Real1);
+        Bonus_Cool += (GameInfo.inst.PlayerCardCheck[36] * GameInfo.inst.CardsInfo[36].CardStat_Real1);
+
+        Bonus_Cool += (GameInfo.inst.PlayerCardCheck[57] * GameInfo.inst.CardsInfo[57].CardStat_Real1);
+        Bonus_AtRange += (GameInfo.inst.PlayerCardCheck[56] * GameInfo.inst.CardsInfo[56].CardStat_Real1);
+
+    }
 }

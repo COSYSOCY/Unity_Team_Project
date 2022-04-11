@@ -522,6 +522,7 @@ MonoBehaviour:
   CharacterActive: 
   CharacterMax: 0
   PlayerCardMax: 4
+  GameSystemCardMax: 8
   CardMax: 0
   PlayerCardIdxs: 
   PlayerCardCheck: 
@@ -570,6 +571,16 @@ MonoBehaviour:
   GameText_China: []
   GameText_Germany: []
   GameText_Spain: []
+  GameText_Portugal: []
+  GameText_Sweden: []
+  GameText_Italy: []
+  GameText_ind: []
+  GameText_ukr: []
+  GameText_rus: []
+  GameText_tha: []
+  GameText_pol: []
+  GameText_fra: []
+  GameText_tur: []
   MapNameNum: 
   MapInfoNum: 
   MapIconNum: 
@@ -727,7 +738,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aa4f43ab6e5614745b39797546c6960f, type: 3}
   - {fileID: 8300000, guid: 60a05acb323bad349a777731c6e6c3ea, type: 3}
   - {fileID: 8300000, guid: d24f35454e2bdab4087eb366e836394d, type: 3}
-  - {fileID: 8300000, guid: 535313e0ac2b5ee4d901034dcc0074d6, type: 3}
+  - {fileID: 8300000, guid: 7009e532bf16fac45929cc6a5df76bc6, type: 3}
   - {fileID: 8300000, guid: fece269dda1bcc04397024ca87ff5ab8, type: 3}
   - {fileID: 8300000, guid: 3b7c8ad2249a8084a8d0c3e87dc7453c, type: 3}
   - {fileID: 8300000, guid: 0cccde0d177118341b5137df1f7f9090, type: 3}
@@ -910,6 +921,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 30bdd32f12b9a4aa2a30001178f0679c, type: 3}
   - {fileID: 21300000, guid: e50903c0d87b64085978f6cec2ae3f87, type: 3}
   - {fileID: 21300000, guid: b8e2a211143e84776bb8ea1730115895, type: 3}
+  - {fileID: 21300000, guid: 4d994859ab9984da1bf99b0192dd6132, type: 3}
   CharaIcons:
   - {fileID: 8400000, guid: 2081eef21f974d04a97864cc31ac0003, type: 2}
   - {fileID: 8400000, guid: 812ebdfbaa66cf84580ad32865f76298, type: 2}
@@ -1037,11 +1049,14 @@ MonoBehaviour:
     CharacterIdx: 0
     MapIdx: 0
     CharacterActive: 
+    Player_PowerUp: 
     PlayerCardIdxs: 
     PlayerCards: 
     PlayerMap: 
     Language: 
     AdGoldFreeMax: 0
+    AdCardFreeMax: 0
+    PlayerCardMax: 0
   IsSave: 0
 --- !u!114 &563478256
 MonoBehaviour:

@@ -30,7 +30,18 @@ public class NewSkill_12 : Skill_Ori
         Uppie = 999;
         UpScale = 2;
     }
+    float damage()
+    {
+        float d = _Damage();
+        int i = GameInfo.inst.PlayerCardCheck[37];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[37].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
+        return d;
+    }
     public override void LevelUpFunc()
     {
         //
@@ -61,7 +72,7 @@ public class NewSkill_12 : Skill_Ori
             SoundManager.inst.SoundPlay(26);
 
             GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.Euler(new Vector2(0,Random.Range(0,360f))));
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().damage = damage();
                 bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+Uppie;
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed();
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());

@@ -35,7 +35,18 @@ public class NewSkill_1 : Skill_Ori
         }
         
     }
+    float damage()
+    {
+        float d = _Damage();
+        int i = GameInfo.inst.PlayerCardCheck[40];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d_C = 0;
+        float d_P = i * GameInfo.inst.CardsInfo[40].CardStat_Real1;
+        d = d + d_C;
+        d = d + (d * d_P * 0.01f);
 
+        return d;
+    }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
         
@@ -75,7 +86,7 @@ public class NewSkill_1 : Skill_Ori
                 dir.Normalize();
                 dir.y = 0;
                 GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.LookRotation(dir));
-                bullet.GetComponent<Bullet_Info>().damage = _Damage();
+                bullet.GetComponent<Bullet_Info>().damage = damage();
                 bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+UpPie;
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed() + UpSpeed ;
                 bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());

@@ -37,7 +37,7 @@ int bulletCntMax; // 투사체 최대갯수
 예시 ( info.bulletCntMax )
      */
 
-    protected float _Damage()
+    protected float _Damage(float CriAdd = 0f)
     {
         float d;
         float d2;
@@ -45,7 +45,7 @@ int bulletCntMax; // 투사체 최대갯수
         d= Random.Range(info.DamageMin, info.DamageMax);
         d2 = GameInfo.DamagePlus + manager.AtPlus()+CardStat.inst.CardStat_DamageP()+ playerinfo.Bonus_Dmg+ PowerUpInfo.instance._Dmg();
         d3 = info.BulletAtCri;
-        if (Random.Range(0,100f) <= info.BulletAtCri+manager.DmgPer() + CardStat.inst.CardStat_DmgPer()+ PowerUpInfo.instance._Cri()+playerinfo.Bonus_Cri)
+        if (Random.Range(0,100f) <= info.BulletAtCri+manager.DmgPer() + CardStat.inst.CardStat_DmgPer()+ PowerUpInfo.instance._Cri()+playerinfo.Bonus_Cri+ CriAdd)
         {
             d2 += 50f;
         }
