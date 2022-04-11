@@ -127,7 +127,8 @@ public class BoxScritps : MonoBehaviour
     public void ExitFunc()
     {
         Time.timeScale = 1f;
-        MainSingleton.instance.playerinfo.Gold += Gold;
+       // MainSingleton.instance.playerinfo.Gold += Gold;
+        MainSingleton.instance.uimanager.GoldUp(Gold);
         BoxUiOb1.SetActive(false);
     }
 }
