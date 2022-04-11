@@ -35,6 +35,19 @@ public class NewSkill_6 : Skill_Ori
 
     }
 
+    float Range()
+    {
+        float d = _AtRange();
+        int i = GameInfo.inst.PlayerCardCheck[17];
+        //GameInfo.inst.CardsInfo[17].CardStat_Real1
+        float d2 = 0;
+        float d3 = i * GameInfo.inst.CardsInfo[17].CardStat_Real1;
+        d = d + d3;
+        d = d + (d * d2 * 0.01f);
+
+        return d;
+    }
+
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
     {
 
@@ -54,7 +67,7 @@ public class NewSkill_6 : Skill_Ori
         yield return null;
         Vector3 pos = bulletPos.transform.position;
         pos.y = 1;
-        float local = _AtRange();
+        float local = Range();
         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_6", pos, Quaternion.Euler(new Vector3(0, Random.Range(0, 360f))));
         bullet.GetComponent<Bullet_Info>().Destorybullet(_BulletTime());
         bullet.GetComponent<Bullet_Info>().move = _BulletSpeed()/2;

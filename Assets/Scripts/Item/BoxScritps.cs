@@ -28,7 +28,7 @@ public class BoxScritps : MonoBehaviour
     public void BoxFunc1()
     {
         Gold = 0;
-        Cnt = Random.Range(1,2);
+        Cnt = Random.Range(1,3);
         CheckList.Clear();
         Time.timeScale = 0f;
         BoxImage.sprite = icon[1];
@@ -37,9 +37,14 @@ public class BoxScritps : MonoBehaviour
         OpenOb.SetActive(true);
         ExitOb.SetActive(false);
         GoldText.text = "";
+        for (int i = 0; i < Slot.Count; i++)
+        {
+            Slot[i].SetActive(false);
+        }
     }
     public void OpenFunc()
     {
+        OpenOb.SetActive(false);
         StartCoroutine(IBoxFunc(Cnt));
     }
     IEnumerator IBoxFunc(int cnt)
@@ -51,9 +56,9 @@ public class BoxScritps : MonoBehaviour
             
         }
         BoxUiOb2.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.1f);
-
-        OpenOb.SetActive(false);
+        
+        //yield return new WaitForSecondsRealtime(0.1f);
+        yield return Effect();
         ExitOb.SetActive(true);
         BoxImage.sprite = icon[0];
         GoldText.text = Gold.ToString();
@@ -63,7 +68,17 @@ public class BoxScritps : MonoBehaviour
         }
         BoxUiOb2.SetActive(false);
     }
-
+    IEnumerator Effect()
+    {
+        float a = 1f;
+        for (int i = 0; i < 50; i++)
+        {
+            a += 0.6f;
+            BoxUiOb2.GetComponent<RectTransform>().localScale = new Vector3(a, a, a);
+            //yield return new WaitForSeconds(0.1f);
+            yield return null;
+        }
+    }
     IEnumerator RandomUp(int Idx)
     {
         CheckList.Clear();

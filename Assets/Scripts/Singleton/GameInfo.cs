@@ -31,6 +31,9 @@ public class CardInfo
 	public float CardStat_BuSpeed;
 	public float CardStat_BuTime;
 
+	public float CardStat_Real1;
+	public float CardStat_Real2;
+
 
 
 }
@@ -174,6 +177,9 @@ public class GameInfo : MonoBehaviour
 			CardsInfo[i].CardStat_DmgPer = csvData.CardDmgPer[i];
 			CardsInfo[i].CardStat_BuSpeed = csvData.CardBuSpeed[i];
 			CardsInfo[i].CardStat_BuTime = csvData.CardBuTime[i];
+
+			CardsInfo[i].CardStat_Real1 = csvData.CardReal1[i];
+			CardsInfo[i].CardStat_Real2 = csvData.CardReal2[i];
 
             switch (CardsInfo[i].CardLv)
             {

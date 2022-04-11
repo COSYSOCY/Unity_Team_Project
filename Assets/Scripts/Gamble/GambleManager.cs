@@ -19,6 +19,8 @@ public class GambleManager : MonoBehaviour
     public RectTransform PickLoading2;
     public CardManager CardManager;
     public LobyUIMgr lobyManager;
+
+    public Animator BoxAni;
     //GameInfo.inst.PlayerCards.Add(i);
     public void ResetFunc()
     {
@@ -89,6 +91,9 @@ public class GambleManager : MonoBehaviour
 
     IEnumerator IitemPick(int Cnt)
     {
+        BoxAni.Play("Box1");
+        PickOb1.SetActive(false);
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < Cnt; i++)
         {
             RandomItem(i);
