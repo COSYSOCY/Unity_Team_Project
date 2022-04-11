@@ -5,27 +5,10 @@ using UnityEngine;
 
 public class BirdRotate : MonoBehaviour
 {
-    
-        public GameObject circle;
-        
-        public float speed = 100;
-        
-    
-
-        public void Start()
-        {
-        circle = GameObject.Find("SkillObject");
-    }
-
         public void Update()
         {
-            
-            OrbitAround();
+
+        transform.Rotate(0, 200f * Time.deltaTime, 0);
         }
 
-        public void OrbitAround() // 플레이어 주위 공전
-        {            
-            transform.RotateAround(circle.transform.position, Vector3.down, speed * Time.deltaTime);
-        }
-    
 }

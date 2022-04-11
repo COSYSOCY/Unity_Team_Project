@@ -7,48 +7,18 @@ public class Skill_12 : Skill_Ori
 
     public GameObject gidomon;
 
-    public override void LevelUp()
+    public override void LevelUpFunc()
     {
-        switch (info.Lv)
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                info.bulletCnt++;
-                break;
-            case 2:
-                info.bulletCnt++;
-                break;
-            case 3:
-                info.bulletCnt++;
-                break;
-            case 4:
-                info.bulletCnt++;
-                break;
-            case 5:
-                info.bulletCnt++;
-                break;
-            case 6:
-                info.bulletCnt++;
-                break;
-            case 7:
-                info.bulletCnt++;
-                break;
-            default:
-                break;
+
         }
-
-        info.Lv++;
     }
-
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 1;
-        info.Damage = 1f;
-
+        LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -57,18 +27,18 @@ public class Skill_12 : Skill_Ori
     {
         while (true)
         {
-            yield return new WaitForSeconds(Cool_Main);
+            yield return new WaitForSeconds(_CoolMain(true));
             GameObject bullet = Instantiate(gidomon, Player.transform.position, Player.transform.rotation);
             bullet.GetComponent<gidomon>().numberOfObjects = info.bulletCnt;
             bullet.transform.SetParent(Player.transform, true);
-            bullet.GetComponent<gidomon>().Dagame = info.Damage;
+            bullet.GetComponent<gidomon>().Dagame = _Damage();
         }
     }
 
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

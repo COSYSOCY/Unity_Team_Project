@@ -9,23 +9,21 @@ public class Enemy : MonoBehaviour
     public Transform enemyPoolPos;
 
     private Transform target;
-    private int hp = 100;
-    private int enemyDmg = 20;
     private float atkDelay;
     private float atkCoolTime;
-    [SerializeField] private float moveSpeed;
+    //[SerializeField] private float moveSpeed;
     private bool isDead;
 
-    NavMeshAgent nav;
-
+    //NavMeshAgent nav;
+    public Enemy_Info info;
     private Renderer enemyColor;
 
     void Awake()
     {
-        nav = GetComponent<NavMeshAgent>();
         enemyColor = gameObject.GetComponent<Renderer>();
         enemyPoolPos = GameObject.Find("EnemyList").GetComponent<Transform>();
         target = GameObject.Find("Player").GetComponent<Transform>();
+        //nav = GetComponent<NavMeshAgent>();
     }
     private void OnEnable()
     {
@@ -34,17 +32,46 @@ public class Enemy : MonoBehaviour
         //nav.enabled = true;
         //
     }
+    IEnumerator moveFunc()
+    {
+        while (true)
+        {
+            if (Vector3.Distance(target.position, transform.position) > 34f )
+            {  //34이상 멀어지면 재배치
+                if (info.IsBoss)
+                {
+                    info.BossMove();
+
+                }
+                else
+                {
+
+                info.EnemyMove();
+                }
+            }
+
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
     public void CreateStart()
     {
         StartCoroutine(UpdateEnemy());
+        info.moveCheck = true;
+        info.nav.speed = info.Speed*0.1f;
+        if (!info.NoPosReset)
+        {
+
+        StartCoroutine(moveFunc()); 
+        }
     }
     //SetDestination 버그 수정부분
     void OnDisable()
     {
-        nav.gameObject.SetActive(false);
+        info.nav.gameObject.SetActive(false);
         //transform.GetComponent<NavMeshAgent>().gameObject.SetActive(false);
-        nav.enabled = false;
+        info.nav.enabled = false;
         //Invoke("ReAttach", 0.01f);
+        transform.position = new Vector3(-10f, -10f, -10f);
     }
     void ReAttach()
     {
@@ -54,12 +81,16 @@ public class Enemy : MonoBehaviour
     // --------------------
     void NavEnemy(Vector3 _target)
     {
-        nav.SetDestination(_target);
+        if (info.Speed>0)
+        {
+
+            info.nav.SetDestination(_target);
+        }
     }
     IEnumerator UpdateEnemy()
     {
         yield return new WaitForSeconds(0.2f);
-        nav.enabled = true;
+        info.nav.enabled = true;
         while (!isDead)
         {
             StartCoroutine(EnemyTarget());
@@ -72,14 +103,14 @@ public class Enemy : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
         //transform.rotation= Quaternion.LookRotation(target.transform.position);
-        nav.speed = moveSpeed;
+        //nav.speed = moveSpeed;
         NavEnemy(target.position);
         //yield return new WaitForSeconds(0.2f);
         yield return null;
     }
     IEnumerator MoveEnemy()
     {
-        nav.speed = moveSpeed;
+        //nav.speed = moveSpeed;
         NavEnemy(target.position);
         yield return null;
     }

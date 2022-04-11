@@ -7,50 +7,19 @@ public class Skill_9 : Skill_Ori
 
     public Vector3 endpos;
 
-    public override void LevelUp()
+    public override void LevelUpFunc()
     {
-        switch (info.Lv)
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                info.bulletCnt++;
-                break;
-            case 2:
-                info.bulletCnt++;
-                //..;
-                break;
-            case 3:
-                info.bulletCnt++;
-                //..
-                break;
-            case 4:
-                //.
-                break;
-            case 5:
-                //.
-                break;
-            case 6:
-                //.
-                break;
-            case 7:
-                //.
-                break;
-            default:
-                break;
-        }
 
-        info.Lv++;
+        }
     }
 
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 1;
-        info.Damage = 1f;
-
+        LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -60,7 +29,7 @@ public class Skill_9 : Skill_Ori
         float Range = 50f;
         while (true)
         {
-            yield return new WaitForSeconds(Cool_Main);
+            yield return new WaitForSeconds(_CoolMain(true));
             Collider[] hits = Physics.OverlapSphere(Player.transform.position, Range);//플레이어 위치에 범위(50)내에 오브젝트 배열로 받기
             if (hits.Length > 0)
             {
@@ -93,7 +62,7 @@ public class Skill_9 : Skill_Ori
                             {
                                 if (Rhits[i].transform.CompareTag("Enemy") && Rhits[i].transform.gameObject.activeSelf)
                                 {
-                                    Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(info.Damage);
+                                    Rhits[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
 
 
                                 }
@@ -115,7 +84,7 @@ public class Skill_9 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

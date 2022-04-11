@@ -4,48 +4,18 @@ using UnityEngine;
 
 public class Skill_15: Skill_Ori
 {
-    public override void LevelUp()
+    public override void LevelUpFunc()
     {
-        switch (info.Lv)
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                info.bulletCnt++;
-                break;
-            case 2:
-                info.bulletCnt++;
-                break;
-            case 3:
-                info.bulletCnt++;
-                break;
-            case 4:
-                info.bulletCnt++;
-                break;
-            case 5:
-                info.bulletCnt++;
-                break;
-            case 6:
-                info.bulletCnt++;
-                break;
-            case 7:
-                info.bulletCnt++;
-                break;
-            default:
-                break;
+
         }
-
-        info.Lv++;
     }
-
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 1;
-        info.Damage = 1f;
-
+        LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -82,7 +52,7 @@ public class Skill_15: Skill_Ori
                     {
                         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_15", Player.transform.position, Player.transform.rotation);
                         bullet.transform.LookAt(enemy.transform);
-                        bullet.GetComponent<Bullet_Trigger_15>().Damage = info.Damage;
+                        bullet.GetComponent<Bullet_Info>().damage = _Damage();
                         yield return new WaitForSeconds(0.15f);
                     }
 
@@ -97,7 +67,7 @@ public class Skill_15: Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false&&info.goodstart)
         {
         Start_Func();
             start = true;

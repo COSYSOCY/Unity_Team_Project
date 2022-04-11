@@ -11,9 +11,9 @@ public class MapManager : MonoBehaviour
 	int chunkSize = 100;
 	int chunksVisibleInViewDst;
 
-	Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
-	List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
-	private static MapManager instance = null;
+	public Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
+	public List<TerrainChunk> terrainChunksVisibleLastUpdate = new List<TerrainChunk>();
+	public static MapManager instance = null;
 
 	private void Awake()
 	{
@@ -22,13 +22,43 @@ public class MapManager : MonoBehaviour
 	void Start()
 	{
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / chunkSize);
-	}
-
-	void Update()
-	{
 		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
 		UpdateVisibleChunks();
+		StartCoroutine(UpdateFunc());
 	}
+
+	//void Update()
+	//{
+
+
+
+	//}
+	IEnumerator UpdateFunc()
+    {
+
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+		UpdateVisibleChunks();
+		yield return new WaitForSeconds(0.1f);
+		while (true)
+        {
+			viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+			UpdateVisibleChunks();
+			yield return new WaitForSeconds(1);
+		}
+    }
 	void UpdateVisibleChunks()
 	{
 		for (int i = 0; i < terrainChunksVisibleLastUpdate.Count; i++)
@@ -72,9 +102,10 @@ public class MapManager : MonoBehaviour
 		{
 			position = coord * size;
 			bounds = new Bounds(position, Vector2.one * size);
-			Vector3 positionV3 = new Vector3(position.x, 0, position.y);
+			Vector3 positionV3 = new Vector3(position.x, 0f, position.y);
 
 			meshObject = Instantiate(instance.Maps, positionV3, Quaternion.identity);
+			//meshObject = ObjectPooler.SpawnFromPool("Map", positionV3, Quaternion.identity); ;
 			meshObject.transform.localScale = Vector3.one * size / 10f;
 			SetVisible(false);
 		}

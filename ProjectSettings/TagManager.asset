@@ -8,6 +8,18 @@ TagManager:
   - Enemy
   - Item
   - Pull
+  - Check
+  - MapRanObj
+  - Bullet
+  - ParentScrollManager
+  - NestedScrollManager
+  - CardManager
+  - CharManager
+  - Check2
+  - FxTemporaire
+  - Object
+  - DeOb
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -16,20 +28,20 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Boss
+  - Object
+  - Post
+  - CharaPanel1
+  - CharaPanel2
+  - CharaPanel3
+  - CharaPanel4
+  - CharaPanel5
+  - CharaPanel6
+  - CharaPanel7
+  - CharaPanel8
+  - CharaPanel9
+  - CharaPanel10
+  - Player
   - 
   - 
   - 

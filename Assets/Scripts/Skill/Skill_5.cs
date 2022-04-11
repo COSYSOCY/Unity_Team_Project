@@ -6,49 +6,20 @@ public class Skill_5 : Skill_Ori
 {
 
 
-
-    public override void LevelUp()
+    public override void LevelUpFunc()
     {
-        switch (info.Lv)
+        //
+        if (info.Lv == 2) // 2레벨이 될경우 실행
         {
-            case 0:
-                //아무것도아님
-                break;
-            case 1:
-                info.bulletCnt += 2;
-                break;
-            case 2:
-                info.bulletCnt += 2;
-                break;
-            case 3:
-                info.bulletCnt += 2;
-                break;
-            case 4:
-                //.
-                break;
-            case 5:
-                //.
-                break;
-            case 6:
-                //.
-                break;
-            case 7:
-                //.
-                break;
-            default:
-                break;
-        }
 
-        info.Lv++;
+        }
     }
+
 
     void Start_Func()
     {
-        //시작시 설정
-        info.Lv = 1;
-        info.bulletCnt = 2;
-        info.Damage = 1f;
-
+        LevelUp();
+        manager.skill_Add(gameObject, info.Skill_Icon);
         StartCoroutine(Skill_Update());
     }
 
@@ -77,7 +48,7 @@ public class Skill_5 : Skill_Ori
                     {
                         int random = Random.Range(0, Enemys.Count - 1);//랜덤뽑기!.
                         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_5", Enemys[random].transform.position, Quaternion.identity); //생성
-                        Enemys[random].GetComponent<Enemy_Info>().Damaged(info.Damage);
+                        Enemys[random].GetComponent<Enemy_Info>().Damaged(_Damage());
                         //Destroy(bullet, 0.5f);
                     }
 
@@ -91,7 +62,7 @@ public class Skill_5 : Skill_Ori
 
     private void OnEnable()
     {
-        if (start==false)
+        if (start==false && info.goodstart)
         {
         Start_Func();
             start = true;

@@ -6,7 +6,7 @@ using System;
 
 public class ObjectPooler : MonoBehaviour
 {
-	static ObjectPooler inst;
+	public static ObjectPooler inst;
 	void Awake() => inst = this;
 
 	[Serializable]
@@ -17,9 +17,13 @@ public class ObjectPooler : MonoBehaviour
 		public int size;
 	}
 
-	[SerializeField] Pool[] pools;
+	[SerializeField] 
+	public Pool[] pools;
 	List<GameObject> spawnObjects;
 	Dictionary<string, Queue<GameObject>> poolDictionary;
+	
+	public static Dictionary<string, List<GameObject>> Enemy_Check;
+
 	readonly string INFO = " 오브젝트에 다음을 적으세요 \nvoid OnDisable()\n{\n" +
 		"    ObjectPooler.ReturnToPool(gameObject);    // 한 객체에 한번만 \n" +
 		"    CancelInvoke();    // Monobehaviour에 Invoke가 있다면 \n}";
@@ -103,6 +107,7 @@ public class ObjectPooler : MonoBehaviour
 		{
 			Pool pool = Array.Find(pools, x => x.tag == tag);
 			var obj = CreateNewObject(pool.tag, pool.prefab);
+			Enemy_Check[pool.tag].Add(obj);
 			ArrangePool(obj);
 		}
 
@@ -119,14 +124,16 @@ public class ObjectPooler : MonoBehaviour
 	{
 		spawnObjects = new List<GameObject>();
 		poolDictionary = new Dictionary<string, Queue<GameObject>>();
-
+		Enemy_Check = new Dictionary<string, List<GameObject>>();
 		// 미리 생성
 		foreach (Pool pool in pools)
 		{
 			poolDictionary.Add(pool.tag, new Queue<GameObject>());
+			Enemy_Check.Add(pool.tag,new List<GameObject>());
 			for (int i = 0; i < pool.size; i++)
 			{
 				var obj = CreateNewObject(pool.tag, pool.prefab);
+				Enemy_Check[pool.tag].Add(obj);
 				ArrangePool(obj);
 			}
 
