@@ -16,6 +16,7 @@ public class GambleManager : MonoBehaviour
     public GameObject PickOb1;
     public GameObject PickOb2;
     public GameObject PickLoading;
+    public RectTransform PickLoading2;
     public CardManager CardManager;
     public LobyUIMgr lobyManager;
     //GameInfo.inst.PlayerCards.Add(i);
@@ -93,7 +94,7 @@ public class GambleManager : MonoBehaviour
             RandomItem(i);
         }
         PickLoading.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return Effect();
         for (int i = 0; i < Cnt; i++)
         {
             GambleSlot[i].SetActive(true);
@@ -102,6 +103,18 @@ public class GambleManager : MonoBehaviour
         PickOb1.SetActive(false);
         PickOb2.SetActive(true);
         PickLoading.SetActive(false);
+    }
+
+    IEnumerator Effect()
+    {
+        float a = 1f;
+        for (int i = 0; i < 50; i++)
+        {
+            a += 0.6f;
+            PickLoading2.localScale=new Vector3(a, a, a);
+            //yield return new WaitForSeconds(0.1f);
+            yield return null;
+        }
     }
 
     void RandomItem(int idx)
