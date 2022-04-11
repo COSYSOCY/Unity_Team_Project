@@ -475,8 +475,19 @@ public class LevelUp : MonoBehaviour
     }
     public void ShowFunc()
     {
-        LoadRewardAd(0);
-        rewardAd.Show();  
+        if (GameInfo.inst.PcTestMode)
+        {
+            IsShow = true;
+            ShowImage.SetActive(false);
+            ShowText.SetActive(false);
+            Adicon.SetActive(false);
+        }
+        else
+        {
+            LoadRewardAd(0);
+            rewardAd.Show();
+        }
+        
         //ShowRewardAd();
     }
 
@@ -540,8 +551,17 @@ public class LevelUp : MonoBehaviour
     }
     public void ADRFunc()
     {
-        LoadRewardAd(1);
+        if (GameInfo.inst.PcTestMode)
+        {
+            Time.timeScale = 1f;
+            StartCoroutine(MainSingleton.instance.playerstat.AdIn());
+        }
+        else
+        {
+
+            LoadRewardAd(1);
         rewardAd.Show();
+        }
     }
     //public void ShowRewardAd(int i)
     //{

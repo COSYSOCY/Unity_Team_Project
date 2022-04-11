@@ -161,6 +161,9 @@ public class csvData : MonoBehaviour
     public static List<float> CardBuSpeed = new List<float>();
     public static List<float> CardBuTime = new List<float>();
 
+    public static List<float> CardReal1 = new List<float>();
+    public static List<float> CardReal2 = new List<float>();
+
 
 
 
@@ -300,6 +303,8 @@ public class csvData : MonoBehaviour
             CardDmgPer.Add(float.Parse(data[i]["치명타"].ToString()));
             CardBuSpeed.Add(float.Parse(data[i]["투사체이동시간"].ToString()));
             CardBuTime.Add(float.Parse(data[i]["투사체지속시간"].ToString()));
+            CardReal1.Add(float.Parse(data[i]["실수1"].ToString()));
+            CardReal2.Add(float.Parse(data[i]["실수2"].ToString()));
 
         }
         GameInfo.inst.CardMax = data.Count;

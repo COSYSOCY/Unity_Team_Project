@@ -52,6 +52,9 @@ public class Enemy_Info : MonoBehaviour
     private void OnEnable()
     {
         Hp = Hp_Max;
+        IsKn = false;
+        IsStun = false;
+        onhit = false;
     }
 
     public void Damaged(float damage)
@@ -89,6 +92,13 @@ public class Enemy_Info : MonoBehaviour
     public void Dead()
     {
         MainSingleton.instance.dropSystem.EnemyItemDrop(transform.position, Idx, ItemIdx);
+
+        IsKn = false;
+        IsStun = false;
+        onhit = false;
+        Speed = csvData.MonsterSpeed[Idx];
+        SpeedOri = Speed;
+
         for (int i = 0; i < enemyMat.Length; i++)
         {
         enemyMat[i].material.SetColor("_EmissionColor", Color.black * 1f);

@@ -12,7 +12,7 @@ public class LobyUIMgr : MonoBehaviour
     public Text UserXp;
     public Slider UserXpSlider;
 
-    public TextMeshProUGUI LobyGoldText;
+    public Text LobyGoldText;
     public Text LobyPointText;
     public Text LobyEnergyText;
     public Text LobyUserLevelText;

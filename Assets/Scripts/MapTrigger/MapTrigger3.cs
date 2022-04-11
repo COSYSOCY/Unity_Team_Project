@@ -40,7 +40,11 @@ public class MapTrigger3 : MonoBehaviour
         switch (t)
         {
             case 1:
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(15, "Boss_1"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc2(1, "Enemy_Test"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(8, "Enemy_9"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(8, "Enemy_10"));
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(8, "Enemy_11"));
                 StartCoroutine(enemyFunc.BossCreate("Boss_Test", enemyFunc.GetRandomPos()));
                 break;
             default:

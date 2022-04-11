@@ -29,8 +29,9 @@ public class ItemSystem : MonoBehaviour
         }
         if (itemIdx == 1001)
         {
-            GameObject card = ObjectPooler.SpawnFromPool("item_Card_1", p, Quaternion.identity);
-            card.GetComponent<ItemPull>().CardCreate(Random.Range(1, 10));
+            //GameObject card = ObjectPooler.SpawnFromPool("item_Card_1", p, Quaternion.identity);
+            //card.GetComponent<ItemPull>().CardCreate(Random.Range(1, 10));
+            GameObject Box = ObjectPooler.SpawnFromPool("Box_Skill", p, Quaternion.identity);
         }
 
     }

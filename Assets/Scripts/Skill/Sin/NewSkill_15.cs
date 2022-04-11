@@ -7,6 +7,7 @@ public class NewSkill_15 : Skill_Ori
     float Speed = 0;
     float UpTime =0;
     int UpCnt = 0;
+    public GameObject bullet;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject,info.Skill_Icon);
@@ -41,8 +42,9 @@ public class NewSkill_15 : Skill_Ori
         while (true)
         {
             yield return new WaitForSeconds(_CoolMain(true));
-            yield return StartCoroutine(Skill_Update2());
             SoundManager.inst.SoundPlay(27);
+            yield return StartCoroutine(Skill_Update2());
+            
         }
     }
     IEnumerator Skill_Update2()
@@ -51,6 +53,7 @@ public class NewSkill_15 : Skill_Ori
         float Sp = Speed+_SkillReal3();
         int cnt= (int)_SkillReal1();
         MainSingleton.instance.playerinfo.Speed += Sp;
+        bullet.SetActive(true);
         for (int i = 0; i < cnt+ UpCnt; i++)
         {
             Vector3 pos = bulletPos.transform.position;
@@ -63,6 +66,7 @@ public class NewSkill_15 : Skill_Ori
             yield return new WaitForSeconds(_SkillReal2());
         }
         yield return new WaitForSeconds(_CoolSub1(false));
+        bullet.SetActive(false);
         MainSingleton.instance.playerinfo.Speed -= Sp;
 
     }

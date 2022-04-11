@@ -12,6 +12,7 @@ public class SceneStart : MonoBehaviour
     public GameObject Hpbar;
     public IEnumerator IStart()
     {
+        RouletFunc();
         MainSingleton.instance.playerstat.IsAdIn = false;
         GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], parent.position, Quaternion.identity, parent);
         CharAddFunc(GameInfo.inst.CharacterIdx);
@@ -20,7 +21,6 @@ public class SceneStart : MonoBehaviour
         Hpbar.SetActive(true);
         manager.Skills = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].Skill;
         manager.Skill_Items = manager.CharSkillAndItem[GameInfo.inst.CharacterIdx].SkillItem;
-        
         Time.timeScale = 1f;
         //MapManager.instance.Maps = MapList[GameInfo.inst.MapIdx];
         //MapManager.instance.GameStart = true;
@@ -42,13 +42,49 @@ public class SceneStart : MonoBehaviour
 
     }
 
+    public void RouletFunc()
+    {
+
+        switch (GameInfo.inst.Roulette)
+        {
+
+            case 1000:
+                MainSingleton.instance.playerinfo.Bonus_Dmg += 20;
+                break;
+            case 1001:
+            MainSingleton.instance.playerstat.ReCnt++;
+                break;
+            case 1002:
+            MainSingleton.instance.playerinfo.Bonus_SpeedP += 20;
+                break;
+            case 1003:
+            MainSingleton.instance.playerinfo.Bonus_GoldPuls += 20;
+                break;
+            case 1004:
+            MainSingleton.instance.playerinfo.Bonus_XpPuls += 20;
+        break;
+            case 1005:
+            MainSingleton.instance.playerinfo.Bonus_HpC += 50;
+        break;
+            case 1006:
+            MainSingleton.instance.playerinfo.Bonus_Cool += 20;
+                break;
+            case 1007:
+             MainSingleton.instance.playerinfo.Bonus_Cri += 10;
+        break;
+            default:
+                break;
+        }
+
+}
+
     public void CharAddFunc(int i)
     {
         switch (i)
         {
             case 0:
                 //추가 액션
-                MainSingleton.instance.playerinfo.Bonus_BtCnt++;
+                //MainSingleton.instance.playerinfo.Bonus_BtCnt++;
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Body04").GetComponent<SkinnedMeshRenderer>().material);
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Eff_Head04").GetComponent<SkinnedMeshRenderer>().material);
                 break;
@@ -95,13 +131,38 @@ public class SceneStart : MonoBehaviour
                 //추가 액션
                 break;
             case 9:
-                MainSingleton.instance.playerinfo.Bonus_Range+=2f;
+                //MainSingleton.instance.playerinfo.Bonus_Range+=2f;
                 
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Body06").GetComponent<SkinnedMeshRenderer>().material);
                 MainSingleton.instance.HitEffect.Add(GameObject.Find("Head06").GetComponent<SkinnedMeshRenderer>().material);
                 //추가 액션
                 break;
-                
+            case 10:
+
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Belt1").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Cloth1").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Glove6").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Helm5").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Shoe1").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("ShoulderPad5").GetComponent<SkinnedMeshRenderer>().material);
+
+                break;
+            case 11:
+
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Cloth4").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Glove3").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Helm6").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Shoe5").GetComponent<SkinnedMeshRenderer>().material);
+                break;
+            case 12:
+
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Cloth6").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Glove1").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Helm6").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("Shoe2").GetComponent<SkinnedMeshRenderer>().material);
+                MainSingleton.instance.HitEffect.Add(GameObject.Find("ShoulderPad3").GetComponent<SkinnedMeshRenderer>().material);
+
+                break;
             default:
                 break;
         }

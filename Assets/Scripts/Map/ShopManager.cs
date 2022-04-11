@@ -7,30 +7,57 @@ using GoogleMobileAds.Api;
 public class ShopManager : MonoBehaviour
 {
     public LobyUIMgr Loby;
-    public Text ADFreeCnt;
+    public Text ADFreeCnt_Gold;
+    public Text ADFreeCnt_Card;
+    public GambleManager Gamble;
+    public RouletteMgr Roulette;
     // Start is called before the first frame update
     void Start()
     {
         AdFreeSet();
         adstart();
     }
-    void AdFreeSet()
+    public void AdFreeSet()
     {
-        ADFreeCnt.text="("+GameInfo.inst.AdGoldFreeMax+")";
+        ADFreeCnt_Gold.text="("+GameInfo.inst.AdGoldFreeMax+")";
+        ADFreeCnt_Card.text="("+GameInfo.inst.AdCardFreeMax+")";
+    }
+    public void RouletteFunc()
+    {
+        if (GameInfo.inst.PcTestMode)
+        {
+            Roulette.SpinFreeBtn();
+        }
+        else if (!Roulette.IsGo)
+        {
+            LoadRewardAd3();
+            rewardAd.Show();
+        }
     }
 
     public void AdFreeButton()
     {
-        if (GameInfo.inst.AdGoldFreeMax >0)
+        if (GameInfo.inst.AdGoldFreeMax > 0)
         {
+            if (GameInfo.inst.PcTestMode)
+            {
+                GameInfo.inst.AdGoldFreeMax--;
+                GameInfo.PlayerGold += 240;
+                AdFreeSet();
+                Loby.LobyGoldAc();
+            }
+            else
+            {
+
             LoadRewardAd();
             rewardAd.Show();
+            }
         }
     }
 
     public void CheatGold()
     {
-        GameInfo.PlayerGold += 1000;
+        GameInfo.PlayerGold += 5000;
         Loby.LobyGoldAc();
     }
     public void CheatPoint()
@@ -134,7 +161,7 @@ public class ShopManager : MonoBehaviour
     #region ¸®¿öµå ±¤°í
     const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
     const string rewardID = "ca-app-pub-9521969151385232/8252088014";
-    RewardedAd rewardAd;
+    public RewardedAd rewardAd;
 
 
     void LoadRewardAd()
@@ -147,6 +174,26 @@ public class ShopManager : MonoBehaviour
             GameInfo.PlayerGold += 240;
             AdFreeSet();
             Loby.LobyGoldAc();
+        };
+    }
+    public void LoadRewardAd2()
+    {
+        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd.LoadAd(GetAdRequest());
+        rewardAd.OnUserEarnedReward += (sender, e) =>
+        {
+            GameInfo.inst.AdCardFreeMax--;
+            AdFreeSet();
+            Gamble.ItemPick(1);
+        };
+    }
+    public void LoadRewardAd3()
+    {
+        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd.LoadAd(GetAdRequest());
+        rewardAd.OnUserEarnedReward += (sender, e) =>
+        {
+            Roulette.SpinFreeBtn();
         };
     }
 

@@ -42,6 +42,7 @@ public class CardManager : MonoBehaviour
     public GameObject MixButtonOb;
 
     public GameObject MixLoading;
+    public GameObject MixLoading2;
     public GameObject MixEnd;
 
     public Text MixEndR;
@@ -49,6 +50,8 @@ public class CardManager : MonoBehaviour
     public Text MixEndLvText;
     public Text MixEndInfo;
     public Image MixEndIcon;
+
+    public int Checkint = 0;
     //public GameObject GoldObject;
     //public Text GoldText;
 
@@ -779,6 +782,7 @@ public class CardManager : MonoBehaviour
         SizeSet();
         CardCation(CaIdx);
         card.name = "Card : " + a;
+        MixOk(Checkint);
     }
 
     public void itemcheat()
@@ -853,6 +857,7 @@ public class CardManager : MonoBehaviour
 
     public void MixOk(int MixLv)
     {
+        Checkint = MixLv;
         for (int i = 0; i < cardlist.Count; i++)
         {
             cardlist[i].GetComponent<CardIdx>().image.color = CardColor[1];
@@ -985,7 +990,8 @@ public class CardManager : MonoBehaviour
         }
 
         
-        MixLoading.SetActive(true);
+        //MixLoading.SetActive(true);
+        
         //GameObject card = Instantiate(CardPrefab, parent);
         //cardlist.Add(card);
         //card.GetComponent<CardIdx>().Idx = CardIdx;
@@ -1000,8 +1006,12 @@ public class CardManager : MonoBehaviour
         MixEndInfo.text = csvData.GameText(GameInfo.inst.CardsInfo[CardIdx].CardInfoNum);
         MixEndIcon.sprite = IconManager.inst.Icons[GameInfo.inst.CardsInfo[CardIdx].CardIconNum];
         MixEndLvText.text = "¡Ú" + Lv + " -> ¡Ú" + CardLv;
-        yield return new WaitForSeconds(1);
+        MixLoading2.SetActive(true);
+        yield return Effect();
+        //yield return new WaitForSeconds(1);
         MixLoading.SetActive(false);
+        MixLoading2.SetActive(false);
+        //MixLoading.SetActive(false);
         MixEnd.SetActive(true);
 
 
@@ -1016,5 +1026,18 @@ public class CardManager : MonoBehaviour
         //SizeSet();
         //CardNumReset();
         //CardCheck();
+    }
+
+    IEnumerator Effect()
+    {
+        MixLoading.SetActive(true);
+        float a = 1f;
+        for (int i = 0; i < 50; i++)
+        {
+            a += 0.6f;
+            MixLoading.GetComponent<RectTransform>().localScale = new Vector3(a, a, a);
+            //yield return new WaitForSeconds(0.1f);
+            yield return null;
+        }
     }
 }
