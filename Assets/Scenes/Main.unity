@@ -1334,10 +1334,10 @@ MonoBehaviour:
     size: 10
   - tag: item_xp_1
     prefab: {fileID: 8017372287861029996, guid: ea84e6182485f674e84f72d93ccd1819, type: 3}
-    size: 100
+    size: 400
   - tag: TextUi
     prefab: {fileID: 905756001578832793, guid: e74876b8663452a498e1c744777dab3d, type: 3}
-    size: 50
+    size: 500
   - tag: Item_Info_Text
     prefab: {fileID: 9206490787055995905, guid: c0ba6f4e98dfb484e9473274306b348a, type: 3}
     size: 5
@@ -1421,7 +1421,7 @@ MonoBehaviour:
     size: 50
   - tag: Enemy_Hit
     prefab: {fileID: 100000, guid: 1acf5c5446751884fba59256bfca27a8, type: 3}
-    size: 50
+    size: 400
   - tag: Player_Hit
     prefab: {fileID: 1993168194859322, guid: 86a18699fcc592c4ba5082d95520fd0b, type: 3}
     size: 50

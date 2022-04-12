@@ -106,7 +106,11 @@ public class BoxScritps : MonoBehaviour
                 LvMax = MainSingleton.instance.skillmanager.Skill_All_Active[i].GetComponent<Skill_ItemInfo>().LvMax;
                 idx = MainSingleton.instance.skillmanager.Skill_All_Active[i].GetComponent<Skill_ItemInfo>().Index;
             }
-            if (Lv < LvMax)
+            if (Lv >= LvMax)
+            {
+                
+            }
+            else
             {
                 CheckList.Add(MainSingleton.instance.skillmanager.Skill_All_Active[i]);
             }
@@ -115,16 +119,39 @@ public class BoxScritps : MonoBehaviour
         {
             int random = Random.Range(0, CheckList.Count);
             GameObject ob = MainSingleton.instance.skillmanager.Skill_All_Active[random];
+            int Lv = 0;
+            int LvMax = 0;
             if (ob.GetComponent<Skill_item_Check>().Skill)
             {
-                ob.GetComponent<Skill_Ori>().LevelUp();
-                ImageNum = ob.GetComponent<Skill_Info>().Skill_Icon;
+                Lv = ob.GetComponent<Skill_Info>().Lv;
+                LvMax = ob.GetComponent<Skill_Info>().LvMax;
             }
             else
             {
-                ob.GetComponent<Skill_Item_Ori>().LevelUp();
-                ImageNum = ob.GetComponent<Skill_ItemInfo>().Skill_Icon;
+                Lv = ob.GetComponent<Skill_ItemInfo>().Lv;
+                LvMax = ob.GetComponent<Skill_ItemInfo>().LvMax;
             }
+            if (Lv >= LvMax)
+            {
+                int RandomGoldAdd = Random.Range(100, 201);
+                Gold += RandomGoldAdd;
+                ImageNum = 143;
+            }
+            else
+            {
+                if (ob.GetComponent<Skill_item_Check>().Skill)
+                {
+                    ob.GetComponent<Skill_Ori>().LevelUp();
+                    ImageNum = ob.GetComponent<Skill_Info>().Skill_Icon;
+                }
+                else
+                {
+                    ob.GetComponent<Skill_Item_Ori>().LevelUp();
+                    ImageNum = ob.GetComponent<Skill_ItemInfo>().Skill_Icon;
+                }
+            }
+
+            
         }
         else
         {
