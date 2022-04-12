@@ -25,7 +25,7 @@ public class NewSkill_4 : Skill_Ori
 
         //
         
-        angleRange = 60f; // 각도
+        angleRange = 50f; // 각도
                           //coroutine = Skill_Update2();
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
@@ -36,7 +36,7 @@ public class NewSkill_4 : Skill_Ori
     public override void CreateFunc()
     {
         //partic.startSize *= 1.2f;
-        upangleRange = 60f;
+        upangleRange = 50f;
         upbullet1.SetActive(true);
         upbullet2.SetActive(true);
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
@@ -98,7 +98,7 @@ public class NewSkill_4 : Skill_Ori
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x*_AtRange()*1.5f, layermask);
+            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x*_AtRange()*3f, layermask);
             if (Enemys.Length >0)
             {
                 for (int i = 0; i < Enemys.Length; i++)

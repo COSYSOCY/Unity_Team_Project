@@ -73,7 +73,7 @@ public class NewSkill_27 : Skill_Ori
                 GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(4f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0f, 0)));
                 bullet2.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet2.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-                bullet2.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                bullet2.transform.localScale = new Vector3(local, 2, local );
                 yield return new WaitForSeconds(0.15f);
                 
                 if (CreateUp)
@@ -87,7 +87,7 @@ public class NewSkill_27 : Skill_Ori
                     GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(4f * ff, 0f, -3+(-f1)), Quaternion.Euler(new Vector3(0, 0f, 0)));
                     bullet.GetComponent<Bullet_Info>().damage = _Damage();
                     bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-                    bullet.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                    bullet.transform.localScale = new Vector3(local, 2, local );
                     yield return new WaitForSeconds(0.15f);
                 }
                 f1 += 3f;
@@ -106,7 +106,7 @@ public class NewSkill_27 : Skill_Ori
                 GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(4f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0f, 0)));
 
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
-                bullet.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                bullet.transform.localScale = new Vector3(local, 2, local);
                 bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
                 yield return new WaitForSeconds(0.15f);
                 if (CreateUp)
@@ -120,7 +120,7 @@ public class NewSkill_27 : Skill_Ori
                     GameObject bullet2 = ObjectPooler.SpawnFromPool("Bullet_27", pos + new Vector3(4f * ff, 0f, -3+(-f1)), Quaternion.Euler(new Vector3(0, 0f, 0)));
 
                     bullet2.GetComponent<Bullet_Info>().damage = _Damage();
-                    bullet2.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                    bullet2.transform.localScale = new Vector3(local, 2, local );
                     bullet2.GetComponent<Bullet_Info>().KnokTime = 0.1f;
                     yield return new WaitForSeconds(0.15f);
                 }

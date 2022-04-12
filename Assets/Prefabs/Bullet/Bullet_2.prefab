@@ -85,7 +85,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.7222233
+        value: 1
         inSlope: 8.207869
         outSlope: 8.207869
         tangentMode: 0
@@ -93,20 +93,29 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.07358053
-        value: 1
+        time: 0.20970088
+        value: 0.13450557
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.28526437
+      - serializedVersion: 3
+        time: 0.6858712
+        value: 0.97076035
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.36350268, b: 0.102941155, a: 1}
+      key0: {r: 0.7075472, g: 0.56403524, b: 0.60542613, a: 1}
       key1: {r: 1, g: 0, b: 0, a: 1}
       key2: {r: 0.92190677, g: 1, b: 0.19117647, a: 0}
       key3: {r: 0.92190677, g: 1, b: 0.19117647, a: 0}
@@ -182,3 +191,6 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0

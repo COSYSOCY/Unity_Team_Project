@@ -91,6 +91,7 @@ MonoBehaviour:
   KnokTime: 0
   real1: 0
   real2: 0
+  Up: 0
 --- !u!136 &-4814116987481799418
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -130,15 +131,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226734501463134, guid: 79ab01a354ae5e94091e5c7fc532a85e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4226734501463134, guid: 79ab01a354ae5e94091e5c7fc532a85e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4226734501463134, guid: 79ab01a354ae5e94091e5c7fc532a85e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4226734501463134, guid: 79ab01a354ae5e94091e5c7fc532a85e, type: 3}
       propertyPath: m_LocalPosition.x

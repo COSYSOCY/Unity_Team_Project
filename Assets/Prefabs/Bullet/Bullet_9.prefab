@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -1885599628596539402}
   - component: {fileID: 472555964183081101}
   - component: {fileID: 6357663071008730696}
+  - component: {fileID: 4535865802926704082}
   m_Layer: 0
   m_Name: Bullet_9
   m_TagString: Untagged
@@ -102,6 +103,9 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0
 --- !u!114 &7187835202966845854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +159,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 9198147467259929463}
+--- !u!95 &4535865802926704082
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114765295065333393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d9a3e5e3a7367846a9a4390fed46b0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

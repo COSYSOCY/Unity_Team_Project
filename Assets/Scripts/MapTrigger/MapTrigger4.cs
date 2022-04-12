@@ -42,6 +42,17 @@ public class MapTrigger4 : MonoBehaviour
         {
             case 1:
 
+                StartCoroutine(enemyFunc.EnemyCreateFunc2(5, "Enemy_Test"));
+                break;
+            default:
+                break;
+        }
+        return;
+
+        switch (t)
+        {
+            case 1:
+
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 1, "Enemy_2"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc2(10, "Enemy_2"));
                 break;

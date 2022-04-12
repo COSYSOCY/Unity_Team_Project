@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4253227929428793234}
   - component: {fileID: 1323529153900349890}
   - component: {fileID: 4832701759852169298}
+  - component: {fileID: 8981737148843085019}
   m_Layer: 0
   m_Name: item_Xp_1
   m_TagString: Untagged
@@ -181,3 +182,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8981737148843085019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017372287861029996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85263b24806ae3842a4a2dc53e0e0b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemObj: {fileID: 0}

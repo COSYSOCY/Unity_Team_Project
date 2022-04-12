@@ -14589,7 +14589,7 @@ Transform:
   m_GameObject: {fileID: 1997882812359486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5205859, y: 1.5205859, z: 1.5205859}
   m_Children:
   - {fileID: 4187161648812440}
   - {fileID: 4281975313455494}
@@ -14853,7 +14853,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 0.35294113, b: 0.95537555, a: 1}
-      maxColor: {r: 0.91974497, g: 0, b: 1, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.85207975, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -19414,7 +19414,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8, z: 0.8}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54151073696178080
 Rigidbody:
@@ -19486,3 +19486,6 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0
