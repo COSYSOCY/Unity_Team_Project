@@ -56,6 +56,8 @@ public class MapTrigger1 : MonoBehaviour
             case 60:
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 2, "Enemy_2"));
                 StartCoroutine(enemyFunc.BossCreate("Boss_1",enemyFunc.GetRandomPos()));
+
+
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 2, "Enemy_1"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc1(60, 1f, 1f, 1, 2, "Enemy_3", "Enemy_4", "Enemy_5"));
                 StartCoroutine(enemyFunc.EnemyCreateFunc2(7, "Enemy_3"));

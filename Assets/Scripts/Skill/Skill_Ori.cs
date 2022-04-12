@@ -184,6 +184,10 @@ int bulletCntMax; // 투사체 최대갯수
 
         int i = 0;
         info.Lv++;
+        if (info.Lv>= info.LvMax)
+        {
+            info.Lv = info.LvMax;
+        }
         MainSingleton.instance.playerstat.Skillactive[info.Index]++;
         i = info.Lv - 1;
         info.DamageMin = info.DamageCheckMin[i];

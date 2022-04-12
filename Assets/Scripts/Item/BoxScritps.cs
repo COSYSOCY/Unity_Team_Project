@@ -53,7 +53,7 @@ public class BoxScritps : MonoBehaviour
         for (int i = 0; i < cnt; i++)
         {
             yield return(RandomUp(i));
-            
+            yield return null;
         }
         BoxUiOb2.SetActive(true);
         

@@ -14,6 +14,10 @@ public class Skill_Item_Ori : MonoBehaviour
 
         MainSingleton.instance.playerstat.SkillItemactive[info.Index]++;
         info.Lv++;
+        if (info.Lv >= info.LvMax)
+        {
+            info.Lv = info.LvMax;
+        }
 
         info.HpPlusC=info.HpPlusCCheck[info.Lv - 1];
         info.HpPlusPer = info.HpPlusPerCheck[info.Lv - 1];
