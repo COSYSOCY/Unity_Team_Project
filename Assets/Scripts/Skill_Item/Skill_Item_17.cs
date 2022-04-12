@@ -16,14 +16,15 @@ public class Skill_Item_17 : Skill_Item_Ori
     }
     public override void StartFunc()
     {
-        LevelUp();
         manager.skill_item_Add(gameObject, info.Skill_Icon);
+        LevelUp();
         if (MainSingleton.instance.playerstat.Skillactive[info.CreateIdx] >= 1)
         {
             MainSingleton.instance.skillmanager.All_Skill[info.CreateIdx].GetComponent<Skill_Ori>().CreateFunc();
             CreateFunc();
         }
         Cnt = 0;
+        CoolTimesystem.SetCoolint(0, (int)info.Real2);
     }
 
     public void Func()
@@ -32,6 +33,7 @@ public class Skill_Item_17 : Skill_Item_Ori
         float t = (int)info.Real1;
         float s = 3;
         Cnt++;
+        CoolTimesystem.SetCoolint(Cnt, i);
         if (Cnt>=i)
         {
             Vector3 pos = MainSingleton.instance.Player.transform.position;

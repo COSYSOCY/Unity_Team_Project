@@ -50,6 +50,7 @@ public class NewSkill_5 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(12);
             yield return Skill_Update2();

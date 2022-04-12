@@ -41,7 +41,7 @@ public class NewSkill_17 : Skill_Ori
 
         while (true)
         {
-
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
 
             yield return StartCoroutine(Skill_Update2());

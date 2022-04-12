@@ -7,6 +7,7 @@ public class NewSkill_32 : Skill_Ori
 {
     string bulletname = "Bullet_32";
     float UpScale = 0f;
+    public LayerMask DmgLayermask;
     void Start_Func() //시작시 설정
     {
         manager.skill_Add(gameObject, info.Skill_Icon);
@@ -41,6 +42,7 @@ public class NewSkill_32 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true) );
             SoundManager.inst.SoundPlay(30);
             StartCoroutine(Skill_Update2());
@@ -82,7 +84,7 @@ public class NewSkill_32 : Skill_Ori
 
                 laser.transform.GetChild(1).GetComponent<LineRenderer>().SetPosition(0, pos);
                 laser.transform.GetChild(1).GetComponent<LineRenderer>().SetPosition(1, endpos);
-                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d, 30f, layermask);
+                RaycastHit[] Rhits = Physics.SphereCastAll(pos, laser.transform.lossyScale.x, d, 30f, DmgLayermask);
 
                 if (Rhits.Length > 0)
                 {
@@ -91,7 +93,15 @@ public class NewSkill_32 : Skill_Ori
 
                         if (Rhits[s].transform.gameObject.activeSelf)
                         {
+                            if (Rhits[i].transform.CompareTag("DeOb"))
+                            {
+                                Rhits[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                            }
+                            else
+                            {
                             Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+
+                            }
                         }
                     }
                 }

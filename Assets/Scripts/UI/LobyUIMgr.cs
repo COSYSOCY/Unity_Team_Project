@@ -30,6 +30,8 @@ public class LobyUIMgr : MonoBehaviour
     public GameObject Sebuton;
     public GameObject Dmgbuton;
 
+    public GameObject Coolbuton;
+
     public GameObject[] langob;
 
 
@@ -149,6 +151,26 @@ public class LobyUIMgr : MonoBehaviour
             Dmgbuton.GetComponent<Image>().color = colors[0];
             Dmgbuton.GetComponentInChildren<TextIdx>().Idx = 527;
             Dmgbuton.GetComponentInChildren<Text>().text = csvData.GameText(527);
+        }
+    }
+
+    public void CoolCheckButton()
+    {
+        if (!GameInfo.inst.PlayerCoolUi)
+        {
+            //GameInfo.inst.audioSo.Pause();
+            GameInfo.inst.PlayerCoolUi = true;
+            Coolbuton.GetComponent<Image>().color = colors[1];
+            Coolbuton.GetComponentInChildren<TextIdx>().Idx = 528;
+            Coolbuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
+        }
+        else
+        {
+            //GameInfo.inst.audioSo.Play();
+            GameInfo.inst.PlayerCoolUi = false;
+            Coolbuton.GetComponent<Image>().color = colors[0];
+            Coolbuton.GetComponentInChildren<TextIdx>().Idx = 527;
+            Coolbuton.GetComponentInChildren<Text>().text = csvData.GameText(527);
         }
     }
 
@@ -301,7 +323,20 @@ public class LobyUIMgr : MonoBehaviour
             Sebuton.GetComponentInChildren<TextIdx>().Idx = 527;
             Sebuton.GetComponentInChildren<Text>().text = csvData.GameText(527);
         }
+        if (GameInfo.inst.PlayerCoolUi)
+        {
 
+            Coolbuton.GetComponent<Image>().color = colors[1];
+            Coolbuton.GetComponentInChildren<TextIdx>().Idx = 528;
+            Coolbuton.GetComponentInChildren<Text>().text = csvData.GameText(528);
+        }
+        else
+        {
+
+            Coolbuton.GetComponent<Image>().color = colors[0];
+            Coolbuton.GetComponentInChildren<TextIdx>().Idx = 527;
+            Coolbuton.GetComponentInChildren<Text>().text = csvData.GameText(527);
+        }
 
 
     }

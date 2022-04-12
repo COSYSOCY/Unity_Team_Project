@@ -20,8 +20,8 @@ public class NewSkill_7 : Skill_Ori
 
     void Start_Func()
     {
-        LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
         StartCoroutine(Skill_Update());
 
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
@@ -41,6 +41,7 @@ public class NewSkill_7 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(14);
             StartCoroutine(Skill_Update2());
@@ -83,10 +84,10 @@ public class NewSkill_7 : Skill_Ori
                 {
                     ff = -1f;
                 }
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0f, 0)));
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f*ff, 0f, f1), Quaternion.Euler(new Vector3(0, 80f, 0)));
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-                bullet.transform.localScale = new Vector3(local, 2, local*0.5f);
+                bullet.transform.localScale = new Vector3(local, 2, local);
                 yield return new WaitForSeconds(0.15f);
                 f1 += 3f;
             }
@@ -103,11 +104,11 @@ public class NewSkill_7 : Skill_Ori
                     ff = 1f;
                 }
 
-                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, 0, 0)));
+                GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_7", pos + new Vector3(4f * ff, 0f, f1), Quaternion.Euler(new Vector3(0, -80f, 0)));
 
                 bullet.GetComponent<Bullet_Info>().damage = _Damage();
                 bullet.GetComponent<Bullet_Info>().KnokTime = 0.1f;
-                bullet.transform.localScale = new Vector3(local, 2, local * 0.5f);
+                bullet.transform.localScale = new Vector3(local, 2, local);
                 yield return new WaitForSeconds(0.15f);
             }
             

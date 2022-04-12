@@ -100,6 +100,9 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0
 --- !u!136 &3211027252740580841
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -128,6 +131,18 @@ PrefabInstance:
     - target: {fileID: 4275669200269430, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275669200269430, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275669200269430, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275669200269430, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4275669200269430, guid: 6d7cc81026e11b041a930c7840a41bda, type: 3}
       propertyPath: m_LocalPosition.x

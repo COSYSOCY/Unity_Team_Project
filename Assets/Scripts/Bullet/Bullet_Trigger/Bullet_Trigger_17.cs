@@ -27,14 +27,7 @@ public class Bullet_Trigger_17 : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("DeOb"))
         {
-            if (MainSingleton.instance.playerstat.SkillItemactive[17] >= 1)
-            {
-                Create2(other.gameObject);
-            }
-            else
-            {
-                Create1(other.gameObject);
-            }
+            other.GetComponent<DeObjectSystem>().Damaged(info.damage);
             gameObject.SetActive(false);
         }
 

@@ -24,8 +24,8 @@ public class NewSkill_9 : Skill_Ori
 
     void Start_Func()
     {
-        LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
         StartCoroutine(Skill_Update());
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
@@ -35,7 +35,7 @@ public class NewSkill_9 : Skill_Ori
     }
     public override void CreateFunc()
     {
-        UpRange = 3f;
+        UpRange = 2f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
     }
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
@@ -43,6 +43,7 @@ public class NewSkill_9 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(16);
             StartCoroutine(Skill_Update2());

@@ -19,8 +19,8 @@ public class NewSkill_37 : Skill_Ori
 
     void Start_Func()
     {
-        LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
         StartCoroutine(Skill_Update());
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
@@ -38,6 +38,7 @@ public class NewSkill_37 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(15);
 

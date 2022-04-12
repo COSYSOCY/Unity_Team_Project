@@ -44,6 +44,7 @@ public class NewSkill_35 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
         }
@@ -69,7 +70,15 @@ public class NewSkill_35 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
+                if (Enemys[i].transform.CompareTag("DeOb"))
+                {
+                    Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                }
+                else
+                {
                 Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
+
+                }
             }
         }
         g.SetActive(false);

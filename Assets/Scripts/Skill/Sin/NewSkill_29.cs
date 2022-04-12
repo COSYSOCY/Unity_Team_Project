@@ -24,7 +24,7 @@ public class NewSkill_29 : Skill_Ori
 
         //
 
-        angleRange = 50f; // 각도
+        angleRange = 80f; // 각도
                           //coroutine = Skill_Update2();
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {
@@ -38,6 +38,7 @@ public class NewSkill_29 : Skill_Ori
         StopAllCoroutines();
         StartCoroutine(Skill_Update4());
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        CoolTimesystem.NoCool();
     }
 
     public override void LevelUpFunc()
@@ -59,6 +60,7 @@ public class NewSkill_29 : Skill_Ori
             {
                 yield break;
             }
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             if (stop)
             {
@@ -98,7 +100,7 @@ public class NewSkill_29 : Skill_Ori
             Vector3 pos = bulletPos.transform.position;
             pos.y = 1;
             Collider[] Enemys;
-            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x * _AtRange() * 1.7f, layermask);
+            Enemys = Physics.OverlapSphere(Player.transform.position, Player.transform.lossyScale.x * _AtRange() * 2.5f, layermask);
             if (Enemys.Length > 0)
             {
                 for (int i = 0; i < Enemys.Length; i++)
@@ -108,7 +110,15 @@ public class NewSkill_29 : Skill_Ori
                     direction.Normalize();
                     if (Vector3.Dot(direction, Player.transform.forward) > dotValue)
                     {
+                        if (Enemys[i].transform.CompareTag("DeOb"))
+                        {
+                            Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                        }
+                        else
+                        {
+
                         Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                        }
 
                     }
                 }

@@ -24,10 +24,18 @@ public class Bullet_Trigger_18 : MonoBehaviour
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
+                    if (Enemys[i].CompareTag("DeOb"))
+                    {
+                        Enemys[i].GetComponent<DeObjectSystem>().Damaged(info.damage);
+                    }
+                    else
+                    {
+
                     Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(info.damage);
                     if (MainSingleton.instance.playerstat.SkillItemactive[18] >= 1)
                     {
                         Enemys[i].transform.GetComponent<Enemy_Info>().StunFunc(2f);
+                    }
                     }
                 }
             }

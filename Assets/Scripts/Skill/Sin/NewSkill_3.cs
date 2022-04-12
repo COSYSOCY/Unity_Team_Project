@@ -62,6 +62,7 @@ public class NewSkill_3 : Skill_Ori
     {
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(false));
             yield return new WaitForSeconds(_CoolMain(false));
 
             float ar = _AtRange();
@@ -82,7 +83,15 @@ public class NewSkill_3 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
+                if (Enemys[i].transform.CompareTag("DeOb"))
+                {
+                    Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(damage());
+                }
+                else
+                {
+
                 Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
+                }
             }
         }
 

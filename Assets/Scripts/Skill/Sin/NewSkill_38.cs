@@ -19,6 +19,7 @@ public class NewSkill_38 : Skill_Ori
     }
     public override void CreateFunc()
     {
+
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
         UpCool = 0.5f;
     }
@@ -38,6 +39,7 @@ public class NewSkill_38 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true) * UpCool);
             yield return new WaitForSeconds(_CoolMain(true)* UpCool);
             StartCoroutine(Skill_Update2());
         }
@@ -57,7 +59,15 @@ public class NewSkill_38 : Skill_Ori
         {
             for (int i = 0; i < Enemys.Length; i++)
             {
+                if (Enemys[i].transform.CompareTag("DeOb"))
+                {
+                    Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                }
+                else
+                {
+
                 Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+                }
             }
         }
 

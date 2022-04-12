@@ -14,7 +14,9 @@ public class SceneStart : MonoBehaviour
     {
         RouletFunc();
         MainSingleton.instance.playerstat.IsAdIn = false;
-        GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], parent.position, Quaternion.identity, parent);
+        Vector3 pos = parent.position;
+        pos.y = -0.25f;
+        GameObject g = Instantiate(CharList[GameInfo.inst.CharacterIdx], pos, Quaternion.identity, parent);
         CharAddFunc(GameInfo.inst.CharacterIdx);
         moving.ani = g.GetComponent<Animator>();
         moving.GameStart = true;

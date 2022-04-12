@@ -27,6 +27,8 @@ public class MainSingleton : MonoBehaviour
 
     public List<Material> HitEffect;
     public BoxScritps BoxScritp;
+    public SkillCoolTimeSystem[] CoolTimeSystem;
+    public SkillCoolTimeSystem[] CoolTimeSystem_Item;
     private void Awake()
     {
             instance = this;

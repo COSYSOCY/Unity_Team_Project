@@ -25,6 +25,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _DiffuseBoost: 2.94
-    - _InvFade: 1
+    - _InvFade: 2.56
     m_Colors: []
   m_BuildTextureStacks: []

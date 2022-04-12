@@ -14589,7 +14589,7 @@ Transform:
   m_GameObject: {fileID: 1997882812359486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1111, y: 1.1111, z: 1.1111}
   m_Children:
   - {fileID: 4187161648812440}
   - {fileID: 4281975313455494}
@@ -19485,3 +19485,7 @@ MonoBehaviour:
   damage: 0
   pie: 0
   move: 0
+  KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0

@@ -7,8 +7,10 @@ public class NewSkill_26 : Skill_Ori
 {
     string bulletname = "Bullet_26";
     float upScale = 0;
+    
     void Start_Func() //시작시 설정
     {
+
         manager.skill_Add(gameObject, info.Skill_Icon);
         LevelUp();
         StartCoroutine(Skill_Update());
@@ -17,6 +19,8 @@ public class NewSkill_26 : Skill_Ori
             MainSingleton.instance.skillmanager.All_Skill_Items[info.SkillCreateIdx].GetComponent<Skill_Item_Ori>().CreateFunc();
             CreateFunc();
         }
+        
+
     }
     public override void CreateFunc()
     {
@@ -41,6 +45,7 @@ public class NewSkill_26 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
 

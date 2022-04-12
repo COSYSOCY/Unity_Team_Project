@@ -12,7 +12,7 @@ public class Skill_Ori : MonoBehaviour
     public LayerMask layermask;
     protected bool start = false;
     public bool CreateUp = false;
-    
+    protected SkillCoolTimeSystem CoolTimesystem;
 
 
     /*
@@ -95,7 +95,7 @@ int bulletCntMax; // 투사체 최대갯수
     /// </summary>
     /// <param name="b"> b가 true면 쿨감적용</param>
     /// <returns></returns>
-    protected float _CoolMain(bool b) // b 가 true면 쿨감 적용
+    public float _CoolMain(bool b) // b 가 true면 쿨감 적용
     {
          float f;
          float f2;
@@ -184,6 +184,10 @@ int bulletCntMax; // 투사체 최대갯수
 
         int i = 0;
         info.Lv++;
+        if (info.Lv>= info.LvMax)
+        {
+            info.Lv = info.LvMax;
+        }
         MainSingleton.instance.playerstat.Skillactive[info.Index]++;
         i = info.Lv - 1;
         info.DamageMin = info.DamageCheckMin[i];
@@ -202,6 +206,11 @@ int bulletCntMax; // 투사체 최대갯수
         info.SkillReal2 = info.SkillReal2Check[i];
         info.SkillReal3 = info.SkillReal3Check[i];
         LevelUpFunc();
+        if (CoolTimesystem ==null)
+        {
+            CoolTimesystem = MainSingleton.instance.CoolTimeSystem[manager.Skill_Active.Count-1];
+            CoolTimesystem.startFUnc(info.Skill_Icon);
+        }
     }
 
 

@@ -50,6 +50,7 @@ public class GameInfo : MonoBehaviour
 	public bool PlayerBGM; // 배경음
 	public bool PlayerSE; // 사운드
 	public bool PlayerDmg; //데미지표시 유무
+	public bool PlayerCoolUi; //쿨타임표시 유무
 	public static int PlayerGold; // 플레이어 골드
 	//public static int PlayerPoint; // 플레이어 보석
 
