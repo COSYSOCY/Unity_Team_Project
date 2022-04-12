@@ -62,6 +62,7 @@ public class NewSkill_3 : Skill_Ori
     {
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(false));
             yield return new WaitForSeconds(_CoolMain(false));
 
             float ar = _AtRange();

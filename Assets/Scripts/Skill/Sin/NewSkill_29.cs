@@ -38,6 +38,7 @@ public class NewSkill_29 : Skill_Ori
         StopAllCoroutines();
         StartCoroutine(Skill_Update4());
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
+        CoolTimesystem.NoCool();
     }
 
     public override void LevelUpFunc()
@@ -59,6 +60,7 @@ public class NewSkill_29 : Skill_Ori
             {
                 yield break;
             }
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             if (stop)
             {

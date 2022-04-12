@@ -29,6 +29,7 @@ public class Skill_Item_14 : Skill_Item_Ori
         {
             MainSingleton.instance.playerstat.Shiled();
             SoundManager.inst.SoundPlay(23);
+            CoolTimesystem.NextFunc(info.Real1);
             // 보호막 액션
             yield return new WaitForSeconds(info.Real1);
 

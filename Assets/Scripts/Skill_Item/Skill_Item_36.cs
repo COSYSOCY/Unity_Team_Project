@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Skill_Item_36 : Skill_Item_Ori
 {
+    public GameObject efffectOb;
     public override void LevelUpFunc()
     {
         //
@@ -20,6 +21,26 @@ public class Skill_Item_36 : Skill_Item_Ori
         {
             MainSingleton.instance.skillmanager.All_Skill[info.CreateIdx].GetComponent<Skill_Ori>().CreateFunc();
             CreateFunc();
+        }
+        StartCoroutine(func());
+    }
+
+    IEnumerator func()
+    {
+        yield return null;
+        while (true)
+        {
+            float f = info.Real2;
+            playerinfo.Bonus_Dmg += f;
+            // 액션
+            efffectOb.SetActive(true);
+            SoundManager.inst.SoundPlay(25);
+            CoolTimesystem.NextFunc(info.Real1);
+            yield return new WaitForSeconds(10f);
+            playerinfo.Bonus_Dmg -= f;
+            efffectOb.SetActive(false);
+            //액션
+            yield return new WaitForSeconds(info.Real1 - 10);
         }
     }
 

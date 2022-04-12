@@ -72,7 +72,7 @@ public class NewSkill_4 : Skill_Ori
         
         while (true)
         {
-
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             bullet.SetActive(true);
             SoundManager.inst.SoundPlay(11);

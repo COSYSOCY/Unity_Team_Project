@@ -53,6 +53,7 @@ public class NewSkill_6 : Skill_Ori
 
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             SoundManager.inst.SoundPlay(13);
             for (int i = 0; i < _BulletCnt()+GameInfo.inst.PlayerCardCheck[78]; i++)

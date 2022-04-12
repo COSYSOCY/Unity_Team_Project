@@ -24,6 +24,7 @@ public class Skill_Item_17 : Skill_Item_Ori
             CreateFunc();
         }
         Cnt = 0;
+        CoolTimesystem.SetCoolint(0, (int)info.Real2);
     }
 
     public void Func()
@@ -32,6 +33,7 @@ public class Skill_Item_17 : Skill_Item_Ori
         float t = (int)info.Real1;
         float s = 3;
         Cnt++;
+        CoolTimesystem.SetCoolint(Cnt, i);
         if (Cnt>=i)
         {
             Vector3 pos = MainSingleton.instance.Player.transform.position;

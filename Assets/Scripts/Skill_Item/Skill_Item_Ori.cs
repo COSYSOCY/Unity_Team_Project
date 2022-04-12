@@ -9,6 +9,8 @@ public class Skill_Item_Ori : MonoBehaviour
     public Skill_ItemInfo info;
     protected bool startcheck = false;
     public SkillManager manager;
+    protected SkillCoolTimeSystem CoolTimesystem;
+    public bool NoCoolUi = true;
     public void LevelUp()
     {
 
@@ -48,6 +50,11 @@ public class Skill_Item_Ori : MonoBehaviour
             MainSingleton.instance.pullrange.Check();
         }
         LevelUpFunc();
+        if (CoolTimesystem == null)
+        {
+            CoolTimesystem = MainSingleton.instance.CoolTimeSystem_Item[manager.Skill_Item_Active.Count];
+            CoolTimesystem.startFUnc(info.Skill_Icon, NoCoolUi);
+        }
     }
     public virtual void LevelUpFunc()
     {
@@ -59,8 +66,9 @@ public class Skill_Item_Ori : MonoBehaviour
     }
     public virtual void StartFunc()
     {
-        Debug.Log("けいし");
+        //Debug.Log("けいし");
         LevelUp();
+        
         if (MainSingleton.instance.playerstat.Skillactive[info.CreateIdx] >= 1)
         {
             MainSingleton.instance.skillmanager.All_Skill[info.CreateIdx].GetComponent<Skill_Ori>().CreateFunc();

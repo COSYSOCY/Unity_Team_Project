@@ -41,6 +41,7 @@ public class NewSkill_2 : Skill_Ori
         
         while (true)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true) * Upcool);
             yield return new WaitForSeconds(_CoolMain(true)*Upcool);
             SoundManager.inst.SoundPlay(9);
             StartCoroutine(Skill_Update2());

@@ -84,6 +84,7 @@ public class NewSkill_36 : Skill_Ori
         yield return null;
         while (Enemy !=null)
         {
+            CoolTimesystem.NextFunc(_CoolMain(true));
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
         }
