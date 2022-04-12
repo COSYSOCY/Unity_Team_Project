@@ -41,8 +41,8 @@ public class SkillCoolTimeSystem : MonoBehaviour
     }
     public void NoCool()
     {
-        gameObject.SetActive(false);
-        return;
+        //gameObject.SetActive(false);
+        //return;
         CoolText.text = "";
         Filled.fillAmount = 1;
     }

@@ -108,7 +108,15 @@ public class NewSkill_4 : Skill_Ori
                     direction.Normalize();
                     if (Vector3.Dot(direction,Player.transform.forward)>dotValue)
                     {
-                    Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
+                        if (Enemys[i].transform.CompareTag("DeOb"))
+                        {
+                            Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(damage());
+                        }
+                        else
+                        {
+
+                        Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(damage());
+                        }
 
                     }
                 }

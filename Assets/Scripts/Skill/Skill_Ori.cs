@@ -208,7 +208,7 @@ int bulletCntMax; // 투사체 최대갯수
         LevelUpFunc();
         if (CoolTimesystem ==null)
         {
-            CoolTimesystem = MainSingleton.instance.CoolTimeSystem[manager.Skill_Active.Count];
+            CoolTimesystem = MainSingleton.instance.CoolTimeSystem[manager.Skill_Active.Count-1];
             CoolTimesystem.startFUnc(info.Skill_Icon);
         }
     }

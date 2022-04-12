@@ -60,7 +60,7 @@ MonoBehaviour:
   CulTime: 0
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
 --- !u!114 &2539051013721631361
 MonoBehaviour:
   m_ObjectHideFlags: 0

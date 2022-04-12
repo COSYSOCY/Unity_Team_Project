@@ -68,7 +68,15 @@ public class NewSkill_31 : Skill_Ori
             {
                 for (int i = 0; i < Enemys.Length; i++)
                 {
+                    if (Enemys[i].transform.CompareTag("DeOb"))
+                    {
+                        Enemys[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                    }
+                    else
+                    {
                     Enemys[i].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
+
+                    }
                 }
             }
 

@@ -413,7 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -554,7 +554,7 @@ MonoBehaviour:
   info: {fileID: 19789723}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!1001 &40564062
 PrefabInstance:
@@ -1402,7 +1402,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -1576,10 +1576,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -2547,7 +2547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5671,7 +5671,7 @@ RectTransform:
   - {fileID: 444109293}
   - {fileID: 1654841328}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5766,7 +5766,7 @@ RectTransform:
   - {fileID: 811195969}
   - {fileID: 1698583280}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6789,7 +6789,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -6963,10 +6963,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -7013,7 +7013,7 @@ RectTransform:
   - {fileID: 2065463655}
   - {fileID: 1883253602}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7224,7 +7224,7 @@ MonoBehaviour:
   CreateUp: 0
   bossmask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &371527791
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,7 +7401,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -7575,10 +7575,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -8010,7 +8010,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -8184,10 +8184,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -9511,6 +9511,8 @@ RectTransform:
   m_Children:
   - {fileID: 2096178705}
   - {fileID: 110817188}
+  - {fileID: 1523032185}
+  - {fileID: 687028194}
   - {fileID: 2110300931}
   - {fileID: 356899100}
   - {fileID: 1181865733}
@@ -9522,8 +9524,6 @@ RectTransform:
   - {fileID: 289978692}
   - {fileID: 990042171}
   - {fileID: 1872774343}
-  - {fileID: 687028194}
-  - {fileID: 1523032185}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10384,7 +10384,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -10558,10 +10558,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -11265,7 +11265,7 @@ MonoBehaviour:
   info: {fileID: 547790606}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
   partic1: {fileID: 976663717}
   bullet: {fileID: 880083011}
@@ -11566,7 +11566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12626,7 +12626,7 @@ MonoBehaviour:
   info: {fileID: 593982057}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!114 &593982057
 MonoBehaviour:
@@ -12837,7 +12837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13296,7 +13296,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 469214312}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13354,7 +13354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13580,7 +13580,7 @@ MonoBehaviour:
   info: {fileID: 622841406}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!114 &622841405
 MonoBehaviour:
@@ -14084,7 +14084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14650,7 +14650,7 @@ RectTransform:
   - {fileID: 1089719556}
   - {fileID: 121192611}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 13
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15237,6 +15237,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   CreateUp: 0
+  DmgLayermask:
+    serializedVersion: 2
+    m_Bits: 4194496
 --- !u!114 &716610363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15493,7 +15496,7 @@ MonoBehaviour:
   info: {fileID: 752999194}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
   bullet: {fileID: 2067268597}
   upbullet1: {fileID: 570283052}
@@ -16179,7 +16182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16254,7 +16257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18318,7 +18321,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -18492,10 +18495,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -18864,7 +18867,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -19038,10 +19041,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -20279,7 +20282,7 @@ RectTransform:
   m_Children:
   - {fileID: 1880305093}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20375,7 +20378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20450,7 +20453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20875,7 +20878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23807,7 +23810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23950,7 +23953,7 @@ RectTransform:
   - {fileID: 1785088165}
   - {fileID: 686353234}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -29268,7 +29271,7 @@ MonoBehaviour:
   info: {fileID: 1201395504}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
   bullet: {fileID: 1152902645}
   BLine: {fileID: 1152902646}
@@ -29472,6 +29475,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   CreateUp: 0
+  DmgLayermask:
+    serializedVersion: 2
+    m_Bits: 4194496
 --- !u!4 &1210016407
 Transform:
   m_ObjectHideFlags: 0
@@ -30099,7 +30105,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -30273,10 +30279,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -30512,7 +30518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -36697,7 +36703,7 @@ MonoBehaviour:
   info: {fileID: 1342752903}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!114 &1342752902
 MonoBehaviour:
@@ -37378,7 +37384,7 @@ MonoBehaviour:
   info: {fileID: 1412918706}
   layermask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   CreateUp: 0
   bullet: {fileID: 1760328301}
 --- !u!114 &1412918706
@@ -37572,7 +37578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -38840,7 +38846,7 @@ RectTransform:
   - {fileID: 1318614034}
   - {fileID: 855360421}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -38977,7 +38983,7 @@ MonoBehaviour:
   info: {fileID: 1451900300}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!114 &1451900299
 MonoBehaviour:
@@ -39134,7 +39140,7 @@ MonoBehaviour:
   info: {fileID: 1452574929}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!4 &1452574931
 Transform:
@@ -40379,10 +40385,10 @@ RectTransform:
   - {fileID: 1293726919}
   - {fileID: 1249155444}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 14
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 511, y: 68.5}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -40922,7 +40928,7 @@ MonoBehaviour:
   info: {fileID: 1544883206}
   layermask:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 192
   CreateUp: 0
 --- !u!114 &1544883205
 MonoBehaviour:
@@ -41176,7 +41182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -41674,7 +41680,7 @@ RectTransform:
   m_Children:
   - {fileID: 280040783}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -44725,7 +44731,7 @@ MonoBehaviour:
   info: {fileID: 1711409217}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
 --- !u!114 &1711409217
 MonoBehaviour:
@@ -45656,7 +45662,7 @@ MonoBehaviour:
   info: {fileID: 1752396370}
   layermask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 4194496
   CreateUp: 0
   bullet: {fileID: 1463742441}
   stop: 0
@@ -45990,7 +45996,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -46164,10 +46170,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -47090,7 +47096,7 @@ MonoBehaviour:
     prefab: {fileID: 1904432780994438, guid: ed5da9034a07c40498ba2698202466f7, type: 3}
     size: 10
   - tag: Bullet_9
-    prefab: {fileID: 7114765295065333393, guid: 795faac335eef954e8c600775e284e91, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: e1afec9648ec41b48a7f66a95724b79c, type: 3}
     size: 10
   - tag: Bullet_10
     prefab: {fileID: 1374267004960804, guid: 67923abfb3a99c74b8d39092215b5d6e, type: 3}
@@ -47264,10 +47270,10 @@ MonoBehaviour:
     prefab: {fileID: 7217426784219245589, guid: 0f500e88fe68ac74c93a5d24d87c50c1, type: 3}
     size: 1
   - tag: Bullet_34
-    prefab: {fileID: 7114765295065333393, guid: b2acba4b0d81ee748bd07242c1ef0993, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: 1b083a2dff2e87d4ab85011fd8f5ffb4, type: 3}
     size: 1
   - tag: Bullet_34_1
-    prefab: {fileID: 7114765295065333393, guid: 51c61783ea196664d9b655540e9c08f0, type: 3}
+    prefab: {fileID: 7217426784219245589, guid: cf532131b402fa3488954a5b7f350ef2, type: 3}
     size: 1
   - tag: Bullet_35
     prefab: {fileID: 7217426784219245589, guid: 5302ad410e8e80e44800d2539868c8e6, type: 3}
@@ -47332,7 +47338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -47589,7 +47595,7 @@ RectTransform:
   - {fileID: 439600199}
   - {fileID: 353755717}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -53941,7 +53947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -54016,7 +54022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -54079,7 +54085,7 @@ RectTransform:
   m_Children:
   - {fileID: 1489162289}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -54670,7 +54676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -54745,7 +54751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -55185,7 +55191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -56003,7 +56009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -56442,7 +56448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -56688,7 +56694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -56743,7 +56749,7 @@ RectTransform:
   - {fileID: 90347623}
   - {fileID: 1430331285}
   m_Father: {fileID: 469214312}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -9984,6 +9984,9 @@ MonoBehaviour:
   pie: 0
   move: 0
   KnokTime: 0
+  real1: 0
+  real2: 0
+  Up: 0
 --- !u!114 &9177086078887620850
 MonoBehaviour:
   m_ObjectHideFlags: 0

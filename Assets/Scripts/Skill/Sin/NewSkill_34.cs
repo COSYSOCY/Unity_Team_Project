@@ -19,8 +19,8 @@ public class NewSkill_34 : Skill_Ori
 
     void Start_Func()
     {
-        LevelUp();
         manager.skill_Add(gameObject, info.Skill_Icon);
+        LevelUp();
         StartCoroutine(Skill_Update());
         if (MainSingleton.instance.playerstat.SkillItemactive[info.SkillCreateIdx] >= 1)
         {

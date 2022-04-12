@@ -52,7 +52,7 @@ public class Skill_Item_Ori : MonoBehaviour
         LevelUpFunc();
         if (CoolTimesystem == null)
         {
-            CoolTimesystem = MainSingleton.instance.CoolTimeSystem_Item[manager.Skill_Item_Active.Count];
+            CoolTimesystem = MainSingleton.instance.CoolTimeSystem_Item[manager.Skill_Item_Active.Count-1];
             CoolTimesystem.startFUnc(info.Skill_Icon, NoCoolUi);
         }
     }

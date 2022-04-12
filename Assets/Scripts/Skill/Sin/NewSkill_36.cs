@@ -84,7 +84,7 @@ public class NewSkill_36 : Skill_Ori
         yield return null;
         while (Enemy !=null)
         {
-            CoolTimesystem.NextFunc(_CoolMain(true));
+            
             yield return new WaitForSeconds(_CoolMain(true));
             StartCoroutine(Skill_Update2());
         }
@@ -157,10 +157,18 @@ public class NewSkill_36 : Skill_Ori
             
             if (Enemy != null&&Enemy.activeSelf)
             {
+                if (Enemy.transform.CompareTag("DeOb"))
+                {
+                    Enemy.transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                }
+                else
+                {
                 Enemy.GetComponent<Enemy_Info>().Damaged(damage());
+
+                }
+            CoolTimesystem.NextFunc(_CoolMain(false));
             }
             yield return new WaitForSeconds(_CoolMain(false));
-            
         }
     }
     IEnumerator Skill_Update4()
