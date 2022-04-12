@@ -530,7 +530,7 @@ Idx,(설명칸 CSV에 안들어감),(설명칸 CSV에 안들어감),Korea,Englis
 528,,asd,끔,OFF,オフ,离开,AUS,APAGADO,FORA,AV,SPENTO,बंद,Вимкнений,ВЫКЛЮЧЕННЫЙ,ปิด,WYŁĄCZONY,DÉSACTIVÉ,KAPALI
 529,,asd,음악,Music,音楽,音乐,MUSIK,MÚSICA,MÚSICA,MUSIK,MUSICA,संगीत,Музика,МУЗЫКА,ดนตรี,MUZYKA,MUSIQUE,MÜZİK
 530,,asd,효과음,Sound,音,声音,Klang,Sonar,Som,Ljud,Suono,आवाज़,Звук,Звук,เสียง,Dźwięk,Son,Ses
-531,,asd,데미지표시,Damage Number,ダメージナンバー,损伤号码,Schadensnummer,Número de daños,Número de dano,Skadardummer,Numero di danno,क्षति संख्या,Пошкодження,Номер урона,จำนวนความเสียหาย,Numer uszkodzenia,Nombre de dommages,Hasar numarası
+531,,asd,데미지 표시,Damage Number,ダメージナンバー,损伤号码,Schadensnummer,Número de daños,Número de dano,Skadardummer,Numero di danno,क्षति संख्या,Пошкодження,Номер урона,จำนวนความเสียหาย,Numer uszkodzenia,Nombre de dommages,Hasar numarası
 532,,,일시정지,Pause,一時停止,暂停,Pause,Pausa,Pausa,Paus,Pausa,रोकना,Пауза,Пауза,หยุด,Pauza,Pause,Duraklat
 533,,,능력,ability,能力,能力,Fähigkeit,Habilidad,Habilidade,Förmåga,Capacità,योग्यता,Здатність,Способность,ความสามารถ,Umiejętność,Capacité,Kabiliyet
 534,,,장신구,accessories,付属品,配件,Zubehör,Accesorios,Acessórios,Tillbehör,Accessori,सामान,Аксесуари,Аксессуары,เครื่องประดับ,Akcesoria,Accessoires,Aksesuarlar
@@ -1136,3 +1136,4 @@ Idx,(설명칸 CSV에 안들어감),(설명칸 CSV에 안들어감),Korea,Englis
 1134,,,카드,Card,カード,卡片,KARTE,TARJETA,CARTÃO,KORT,CARTA,कार्ड,Карта,КАРТА,การ์ด,KARTA,CARTE,Kart
 1135,,,카드칸을 열겠습니까 ?,Do you open the cardboard?,段ボールを開けますか？,你打开纸板吗？,Öffnen Sie die Karton?,¿Abres el cartón?,Você abre o papelão?,Öppnar du kartongen?,Apri il cartone?,क्या आप कार्डबोर्ड खोलते हैं?,Ви відкриваєте картон?,Вы открываете картон?,คุณเปิดกระดาษแข็งหรือไม่,Czy otwierasz karton?,Ouvrez-vous le carton?,Kartonu açıyor musun?
 1136,,,잠시뒤에 시작합니다.,Start after a while.,しばらくの後に始めます。,一段时间后开始。,Beginnen Sie nach einer Weile.,Empezar después de un tiempo.,Começar depois de um tempo.,Börja efter ett tag.,Inizia dopo un po '.,थोड़ी देर के बाद शुरू करें।,Почніть через деякий час.,Начать через некоторое время.,เริ่มหลังจากผ่านไปสักพัก,Zacznij po chwili.,Commencez après un moment.,Bir süre sonra başlayın.
+1137,,,쿨타임 표시,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI,Cooldown UI

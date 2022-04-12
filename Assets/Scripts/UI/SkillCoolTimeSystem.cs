@@ -14,6 +14,10 @@ public class SkillCoolTimeSystem : MonoBehaviour
     public float CurTime;
     public void NextFunc(float t)
     {
+        if (GameInfo.inst.PlayerCoolUi)
+        {
+            return;
+        }
         CoolTime = t;
         CurTime = 0;
         Filled.fillAmount = 0;
@@ -23,6 +27,10 @@ public class SkillCoolTimeSystem : MonoBehaviour
     }
     public void startFUnc(int i, bool b = false)
     {
+        if (GameInfo.inst.PlayerCoolUi)
+        {
+            return;
+        }
         if (b)
         {
         //gameObject.SetActive(false);
@@ -36,11 +44,16 @@ public class SkillCoolTimeSystem : MonoBehaviour
         CurTime = 0;
         Filled.fillAmount = 1;
         CoolText.text = "";
+
         gameObject.SetActive(true);
         }
     }
     public void NoCool()
     {
+        if (GameInfo.inst.PlayerCoolUi)
+        {
+            return;
+        }
         //gameObject.SetActive(false);
         //return;
         CoolText.text = "";
@@ -48,7 +61,10 @@ public class SkillCoolTimeSystem : MonoBehaviour
     }
     public void SetCoolint(int i,int Max)
     {
-
+        if (GameInfo.inst.PlayerCoolUi)
+        {
+            return;
+        }
         float CText = Max - i;
         if (i==0)
         {
@@ -64,7 +80,10 @@ public class SkillCoolTimeSystem : MonoBehaviour
     }
     IEnumerator Func()
     {
-        
+        if (GameInfo.inst.PlayerCoolUi)
+        {
+            yield break;
+        }
         while (CurTime < CoolTime)
         {
             CurTime +=Time.deltaTime;
