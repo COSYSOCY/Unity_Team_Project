@@ -27,8 +27,31 @@ public class BoxScritps : MonoBehaviour
 
     public void BoxFunc1()
     {
-        Gold = 0;
-        Cnt = Random.Range(1,3);
+        float random = Random.Range(0.01f, 100f);
+        float RandomCnt2 = 40;
+        float RandomCnt3 = 20;
+        float RandomCnt4 = 10;
+        float RandomCnt5 = 3;
+        if (random <= RandomCnt5)
+        {
+            Cnt = 5;
+        }
+        else if (random <= RandomCnt4)
+        {
+            Cnt = 4;
+        }
+        else if (random <= RandomCnt3)
+        {
+            Cnt = 3;
+        }
+        else if (random <= RandomCnt2)
+        {
+            Cnt = 2;
+        }
+        else
+        {
+            Cnt = 1;
+        }
         CheckList.Clear();
         Time.timeScale = 0f;
         BoxImage.sprite = icon[1];

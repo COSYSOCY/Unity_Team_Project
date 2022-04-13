@@ -12,6 +12,13 @@ public class ShopManager : MonoBehaviour
     public GambleManager Gamble;
     public RouletteMgr Roulette;
     // Start is called before the first frame update
+
+    public Text savetext;
+
+   public void savetest()
+    {
+        savetext.text=ServerDataSystem.inst.SaveData2();
+    }
     void Start()
     {
         AdFreeSet();
