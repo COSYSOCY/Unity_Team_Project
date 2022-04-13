@@ -17,6 +17,7 @@ public class ShopManager : MonoBehaviour
 
    public void savetest()
     {
+        //ServerDataSystem.inst.SaveData();
         savetext.text=ServerDataSystem.inst.SaveData2();
     }
     void Start()
