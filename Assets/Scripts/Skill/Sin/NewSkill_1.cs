@@ -83,10 +83,12 @@ public class NewSkill_1 : Skill_Ori
                 {
                     target = Enemys[i].gameObject;
                 }
+                pos = bulletPos.transform.position;
+                pos.y = 1;
                 Vector3 dir = target.transform.position - Player.transform.position;
                 dir.Normalize();
                 dir.y = 0;
-                GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, Player.transform.position, Quaternion.LookRotation(dir));
+                GameObject bullet = ObjectPooler.SpawnFromPool(bulletname, pos, Quaternion.LookRotation(dir));
                 bullet.GetComponent<Bullet_Info>().damage = damage();
                 bullet.GetComponent<Bullet_Info>().pie = _BulletPie()+UpPie;
                 bullet.GetComponent<Bullet_Info>().move = _BulletSpeed() + UpSpeed ;

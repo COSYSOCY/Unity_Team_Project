@@ -65,9 +65,10 @@ public class ServerDataSystem : MonoBehaviour
         streamSave.Close();
     }
 
-    public void SaveData2()
+    public string SaveData2()
     {
-
+        //PlayerPrefs.SetString("Save", "zzz");
+        //return (PlayerPrefs.GetString("Save"));
         serverdata.PlayerGold = GameInfo.PlayerGold;
 
         serverdata.CharacterIdx = GameInfo.inst.CharacterIdx;
@@ -84,7 +85,14 @@ public class ServerDataSystem : MonoBehaviour
 
         
         string jsonData = JsonConvert.SerializeObject(serverdata);
-        PlayerPrefs.SetString("Save", jsonData);
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        string format = System.Convert.ToBase64String(bytes); 
+        PlayerPrefs.SetString("Save", format);
+        return (PlayerPrefs.GetString("Save"));
+    }
+    public void saveReset()
+    {
+        PlayerPrefs.SetString("Save", "");
     }
 
     public IEnumerator CreateFile()
@@ -162,7 +170,9 @@ public class ServerDataSystem : MonoBehaviour
         else
         {
             string jsonData = PlayerPrefs.GetString("Save");
-            serverdata = JsonConvert.DeserializeObject<ServerData>(jsonData);
+            byte[] bytes = System.Convert.FromBase64String(jsonData);
+            string reformat = System.Text.Encoding.UTF8.GetString(bytes);
+            serverdata = JsonConvert.DeserializeObject<ServerData>(reformat);
             //GameInfo.inst.PlayerLevel = serverdata.PlayerLevel;
             //GameInfo.inst.PlayerXp = serverdata.PlayerXp;
             //GameInfo.inst.PlayerEnergy = serverdata.PlayerEnergy;

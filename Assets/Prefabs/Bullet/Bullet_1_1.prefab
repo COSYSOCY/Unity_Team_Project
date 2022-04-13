@@ -14567,12 +14567,12 @@ GameObject:
   - component: {fileID: 4387073695559136}
   - component: {fileID: 199924835779171580}
   - component: {fileID: 198056607281063266}
-  - component: {fileID: 65019340949975606}
   - component: {fileID: 54151073696178080}
   - component: {fileID: 4656894670031603463}
   - component: {fileID: 6462637820840935910}
   - component: {fileID: -2732459205189589401}
   - component: {fileID: 34449435702671365}
+  - component: {fileID: 4022255928200532525}
   m_Layer: 0
   m_Name: Bullet_1_1
   m_TagString: Untagged
@@ -19403,19 +19403,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!65 &65019340949975606
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997882812359486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54151073696178080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19489,3 +19476,17 @@ MonoBehaviour:
   real1: 0
   real2: 0
   Up: 0
+--- !u!136 &4022255928200532525
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997882812359486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
