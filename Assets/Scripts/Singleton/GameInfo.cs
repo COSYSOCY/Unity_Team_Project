@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,7 +53,7 @@ public class GameInfo : MonoBehaviour
 	public bool PlayerDmg; //데미지표시 유무
 	public bool PlayerCoolUi; //쿨타임표시 유무
 	public static int PlayerGold; // 플레이어 골드
-	//public static int PlayerPoint; // 플레이어 보석
+	public int PlayerKill; // 플레이어 킬수
 
 	public  int PlayerLevel; // 플레이어 레벨
 	public  int PlayerXp; // 플레이어 경험치
@@ -110,6 +111,10 @@ public class GameInfo : MonoBehaviour
 							  //파워업
 	public List<int> Player_PowerUp;
 	public int Roulette = 0;
+
+
+	//====== 시간관리
+	public DateTime Daycom1;
 
 
 	void Awake()

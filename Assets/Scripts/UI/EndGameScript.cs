@@ -82,6 +82,7 @@ public class EndGameScript : MonoBehaviour
                 yield return new WaitForSecondsRealtime(0.5f);
             }
         }
+        GameInfo.inst.PlayerKill += MainSingleton.instance.playerinfo.Kill;
         IsEnd = true;
         tabOb.SetActive(true);
 

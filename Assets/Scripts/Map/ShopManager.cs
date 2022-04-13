@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using GoogleMobileAds.Api;
+using System;
 
 public class ShopManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class ShopManager : MonoBehaviour
 
     public Text savetext;
 
+    public Text OneDaytext;
+
    public void savetest()
     {
         //ServerDataSystem.inst.SaveData();
@@ -24,6 +27,60 @@ public class ShopManager : MonoBehaviour
     {
         AdFreeSet();
         adstart();
+        dayfunc();
+    }
+    public void dayfunc()
+    {
+        DateTime nowTime = DateTime.Now;
+        TimeSpan timeDif = nowTime - GameInfo.inst.Daycom1;
+        if (timeDif.Days > 0)
+        {
+            OneDaytext.text = csvData.GameText(1138);
+        }
+        else
+        {
+            StartCoroutine(TimeUpdate());
+        }
+
+    }
+    public void DayFunc1()
+    {
+        DateTime nowTime = DateTime.Now;
+        TimeSpan timeDif = nowTime -GameInfo.inst.Daycom1 ;
+        if (timeDif.Days > 0)
+        {
+            Gamble.DayFunc();
+            GameInfo.inst.Daycom1 = nowTime.AddDays(1);
+            StartCoroutine(TimeUpdate());
+        }
+    }
+    IEnumerator TimeUpdate()
+    {
+        string H;
+        string M;
+        DateTime nowTime;
+        TimeSpan timeDif;
+        while (true)
+        {
+            nowTime = DateTime.Now;
+            timeDif =  GameInfo.inst.Daycom1 - nowTime;
+            
+            if (timeDif.Days < 0)
+            {
+                OneDaytext.text = csvData.GameText(1138);
+                break;
+            }
+            else
+            {
+                H = timeDif.Hours.ToString();
+                M = timeDif.Minutes.ToString();
+                OneDaytext.text = H + csvData.GameText(1139) + M + csvData.GameText(1140);
+            }
+            yield return new WaitForSeconds(1f);
+            //TimeSpan timeDif= GameInfo.inst.Daycom1
+
+            //H = nowTime.Hour-;
+        }
     }
     public void AdFreeSet()
     {

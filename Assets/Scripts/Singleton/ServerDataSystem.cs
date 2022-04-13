@@ -81,6 +81,7 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.AdGoldFreeMax = GameInfo.inst.AdGoldFreeMax;
         serverdata.PlayerCardMax = GameInfo.inst.PlayerCardMax;
         serverdata.Player_PowerUp = GameInfo.inst.Player_PowerUp;
+        serverdata.Daycom1 = GameInfo.inst.Daycom1;
 
 
         
@@ -133,7 +134,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.PlayerEnergy = 50;
 
             GameInfo.inst.PlayerMap[0] = 1;
-
+            
             testFunc();
             SceneManager.LoadScene("01_Loby_Main");
             SystemLanguage lang = Application.systemLanguage;
@@ -194,6 +195,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
             GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
+            GameInfo.inst.Daycom1 = serverdata.Daycom1;
 
 
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
@@ -258,6 +260,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
             GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
+            GameInfo.inst.Daycom1 = serverdata.Daycom1;
 
             GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
             
@@ -379,6 +382,9 @@ public class ServerDataSystem : MonoBehaviour
         GameInfo.inst.CharacterActive[10] = 1;
         GameInfo.inst.CharacterActive[11] = 1;
         GameInfo.inst.CharacterActive[12] = 1;
+
+        GameInfo.inst.Daycom1 = DateTime.Now.AddDays(-2);
+
     }
     void OnApplicationQuit()
     {
@@ -405,6 +411,7 @@ public class ServerData
     public int AdGoldFreeMax;
     public int AdCardFreeMax;
     public int PlayerCardMax;
+    public DateTime Daycom1;
 
 }
 

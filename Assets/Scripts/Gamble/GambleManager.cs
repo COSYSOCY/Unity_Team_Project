@@ -21,6 +21,8 @@ public class GambleManager : MonoBehaviour
     public LobyUIMgr lobyManager;
 
     public Animator BoxAni;
+
+    public GameObject gambleob;
     //GameInfo.inst.PlayerCards.Add(i);
     public void ResetFunc()
     {
@@ -79,6 +81,20 @@ public class GambleManager : MonoBehaviour
     {
         ResetFunc();
     }
+    public void DayFunc()
+    {
+        gambleob.SetActive(true);
+        BoxImage.sprite = IconManager.inst.Icons[144];
+        PickOb1.SetActive(true);
+        PickOb2.SetActive(false);
+        for (int i = 0; i < GambleSlot.Length; i++)
+        {
+            GambleSlot[i].SetActive(false);
+        }
+        PickOb1.SetActive(false);
+        PickOb2.SetActive(false);
+        StartCoroutine(IitemPick(1,1));
+    }
     public void ItemPick(int i)
     {
         StartCoroutine(IitemPick(i));   
@@ -89,14 +105,23 @@ public class GambleManager : MonoBehaviour
         ResetFunc();
     }
 
-    IEnumerator IitemPick(int Cnt)
+    IEnumerator IitemPick(int Cnt,int Check=0)
     {
         BoxAni.Play("Box1");
         PickOb1.SetActive(false);
         yield return new WaitForSeconds(1);
         for (int i = 0; i < Cnt; i++)
         {
+            if (Check==1)
+            {
+            RandomItem2(i);
+
+            }
+            else
+            {
+
             RandomItem(i);
+            }
         }
         PickLoading.SetActive(true);
         yield return Effect();
@@ -108,6 +133,10 @@ public class GambleManager : MonoBehaviour
         PickOb1.SetActive(false);
         PickOb2.SetActive(true);
         PickLoading.SetActive(false);
+        //if (Check==1)
+        //{
+        //    gambleob.SetActive(false);
+        //}
     }
 
     IEnumerator Effect()
@@ -121,7 +150,50 @@ public class GambleManager : MonoBehaviour
             yield return null;
         }
     }
+    void RandomItem2(int idx)
+    {
 
+        float Pick3 = 10f;
+        float Pick4 = 4f;
+        float Pick5 = 1f;
+        int IconNum = 0;
+        int NameNum = 0;
+        int CardLv = 0;
+        int RandomIdx = 0;
+        int Lv = 1;
+        float Ran = Random.Range(0.01f, 100f);
+        if (Ran <= Pick5)
+        {
+            Lv = 5;
+        }
+        else if (Ran <= Pick4)
+        {
+            Lv = 4;
+
+        }
+        else if (Ran <= Pick3)
+        {
+            Lv = 3;
+        }
+        else
+        {
+            Lv = 2;
+        }
+
+
+        int ranList = Random.Range(0, GameInfo.inst.Cards_Lv(Lv).Count);
+        RandomIdx = GameInfo.inst.Cards_Lv(Lv)[ranList];
+
+
+        IconNum = GameInfo.inst.CardsInfo[RandomIdx].CardIconNum;
+        NameNum = GameInfo.inst.CardsInfo[RandomIdx].CardNameNum;
+        CardLv = GameInfo.inst.CardsInfo[RandomIdx].CardLv;
+
+        GambleSlotImage[idx].sprite = IconManager.inst.Icons[IconNum];
+        GambleSlotLv[idx].text = "¡Ú" + CardLv;
+        GambleSlotName[idx].text = csvData.GameText(NameNum);
+        CardManager.ItemAdd(RandomIdx);
+    }
     void RandomItem(int idx)
     {
         //float Pick1 = 0f;
