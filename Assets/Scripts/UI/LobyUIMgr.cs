@@ -34,6 +34,8 @@ public class LobyUIMgr : MonoBehaviour
 
     public GameObject[] langob;
 
+    public TextMeshProUGUI killtext;
+
 
 
 
@@ -49,9 +51,10 @@ public class LobyUIMgr : MonoBehaviour
         SoundManager.inst.BGMPlay(1);
         LangFunc();
        ServerDataSystem.inst.SaveData2();
+        killtext.text = GameInfo.inst.PlayerKill.ToString();
     }
 
-
+    
 
     public void LangFunc()
     {

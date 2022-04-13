@@ -29,6 +29,7 @@ public class ShopManager : MonoBehaviour
         adstart();
         dayfunc();
     }
+
     public void dayfunc()
     {
         DateTime nowTime = DateTime.Now;
@@ -84,8 +85,35 @@ public class ShopManager : MonoBehaviour
     }
     public void AdFreeSet()
     {
-        ADFreeCnt_Gold.text="("+GameInfo.inst.AdGoldFreeMax+")";
-        ADFreeCnt_Card.text="("+GameInfo.inst.AdCardFreeMax+")";
+        DateTime dateTime = DateTime.Now;
+        for (int i = 0; i < GameInfo.inst.IsAdGold.Length; i++)
+        {
+            if (GameInfo.inst.IsAdGold[i])
+            {
+                TimeSpan timeDif = dateTime - GameInfo.inst.AdGoldTime[i];
+                if (timeDif.Days >0)
+                {
+                    GameInfo.inst.IsAdGold[i] = false;
+                }
+            }
+        }
+        for (int i = 0; i < GameInfo.inst.IsAdCard.Length; i++)
+        {
+            if (GameInfo.inst.IsAdCard[i])
+            {
+                TimeSpan timeDif = dateTime - GameInfo.inst.AdCardTime[i];
+                if (timeDif.Days > 0)
+                {
+                    GameInfo.inst.IsAdCard[i] = false;
+                }
+            }
+        }
+
+
+
+
+        ADFreeCnt_Gold.text="("+GameInfo.inst.AdGoldFreeMax()+")";
+        ADFreeCnt_Card.text="("+GameInfo.inst.AdCardFreeMax()+")";
     }
     public void RouletteFunc()
     {
@@ -99,14 +127,46 @@ public class ShopManager : MonoBehaviour
             rewardAd.Show();
         }
     }
+    public void AdGoldFunc()
+    {
+        if (GameInfo.inst.AdGoldFreeMax() == 0)
+        {
+            return;
+        }
+        for (int i = 0; i < GameInfo.inst.IsAdGold.Length; i++)
+        {
+            if (!GameInfo.inst.IsAdGold[i])
+            {
+                GameInfo.inst.IsAdGold[i] = true;
+                GameInfo.inst.AdGoldTime[i] = DateTime.Now.AddHours(8);
+                return;
+            }
+        }
+    }
+    public void AdCardFunc()
+    {
+        if (GameInfo.inst.AdCardFreeMax() == 0)
+        {
+            return;
+        }
+        for (int i = 0; i < GameInfo.inst.IsAdCard.Length; i++)
+        {
+            if (!GameInfo.inst.IsAdCard[i])
+            {
+                GameInfo.inst.IsAdCard[i] = true;
+                GameInfo.inst.AdCardTime[i] = DateTime.Now.AddHours(8);
+                return;
+            }
+        }
+    }
 
     public void AdFreeButton()
     {
-        if (GameInfo.inst.AdGoldFreeMax > 0)
+        if (GameInfo.inst.AdGoldFreeMax() > 0)
         {
             if (GameInfo.inst.PcTestMode)
             {
-                GameInfo.inst.AdGoldFreeMax--;
+                AdGoldFunc();
                 GameInfo.PlayerGold += 240;
                 AdFreeSet();
                 Loby.LobyGoldAc();
@@ -235,7 +295,8 @@ public class ShopManager : MonoBehaviour
         rewardAd.LoadAd(GetAdRequest());
         rewardAd.OnUserEarnedReward += (sender, e) =>
         {
-            GameInfo.inst.AdGoldFreeMax--;
+            // GameInfo.inst.AdGoldFreeMax--;
+            AdGoldFunc();
             GameInfo.PlayerGold += 240;
             AdFreeSet();
             Loby.LobyGoldAc();
@@ -247,7 +308,8 @@ public class ShopManager : MonoBehaviour
         rewardAd.LoadAd(GetAdRequest());
         rewardAd.OnUserEarnedReward += (sender, e) =>
         {
-            GameInfo.inst.AdCardFreeMax--;
+            // GameInfo.inst.AdCardFreeMax--;
+            AdCardFunc();
             AdFreeSet();
             Gamble.ItemPick(1);
         };

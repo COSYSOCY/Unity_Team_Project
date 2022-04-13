@@ -197,6 +197,10 @@ public class LevelUp : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
+                if (i >=num2.Count)
+                {
+                    break;
+                }
                 Create_Image[i].SetActive(false);
                 string name = "";
                 int Lv = 0;

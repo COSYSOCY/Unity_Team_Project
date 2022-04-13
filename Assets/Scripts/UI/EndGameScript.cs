@@ -85,6 +85,41 @@ public class EndGameScript : MonoBehaviour
         GameInfo.inst.PlayerKill += MainSingleton.instance.playerinfo.Kill;
         IsEnd = true;
         tabOb.SetActive(true);
+        EndMissionFUnc();
+    }
+
+    void EndMissionFUnc()
+    {
+        // 첫 플레이 0
+        if (GameInfo.inst.Player_Mission[0] == 0)
+        {
+            GameInfo.inst.Player_Mission[0] = 1;
+        }
+        // 100킬 2
+        if (GameInfo.inst.Player_Mission[2]==0 && GameInfo.inst.PlayerKill >=100)
+        {
+            GameInfo.inst.Player_Mission[2] = 1;
+        }
+        //1000킬 3
+        if (GameInfo.inst.Player_Mission[3] == 0 && GameInfo.inst.PlayerKill >= 1000)
+        {
+            GameInfo.inst.Player_Mission[3] = 1;
+        }
+        //1000킬 3
+        if (GameInfo.inst.Player_Mission[3] == 0 && GameInfo.inst.PlayerKill >= 1000)
+        {
+            GameInfo.inst.Player_Mission[3] = 1;
+        }
+        //100레벨 달성 4
+        if (GameInfo.inst.Player_Mission[4] == 0 && MainSingleton.instance.playerinfo.Lv>=100)
+        {
+            GameInfo.inst.Player_Mission[4] = 1;
+        }
+        //10000킬 5
+        if (GameInfo.inst.Player_Mission[5] == 0 && GameInfo.inst.PlayerKill >= 10000)
+        {
+            GameInfo.inst.Player_Mission[5] = 1;
+        }
 
     }
 

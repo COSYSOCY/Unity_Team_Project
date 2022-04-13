@@ -106,16 +106,54 @@ public class GameInfo : MonoBehaviour
 	public List<int> Card_Lv5;
 
 	//상점
-	public int AdGoldFreeMax; // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
-	public int AdCardFreeMax; // 하루 광고보면 카드 최대횟수 현재 서버로 저장해야함
+	 // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
+	 // 하루 광고보면 카드 최대횟수 현재 서버로 저장해야함
 							  //파워업
 	public List<int> Player_PowerUp;
 	public int Roulette = 0;
 
+	//
+	public List<int> Player_Mission;
 
 	//====== 시간관리
-	public DateTime Daycom1;
+	public DateTime Daycom1; // 일일보상
+	public DateTime Daycom2; // 연속보상
+	public DateTime Daycom3; // 월보상
+	
+	public int DayCom2Int;
+	public int DayCom3Int;
 
+	//===
+	//== 광고 3회
+	public bool[] IsAdGold;
+	public DateTime[] AdGoldTime=new DateTime[3];
+	public bool[] IsAdCard;
+	public DateTime[] AdCardTime=new DateTime[3];
+	public int AdGoldFreeMax()
+    {
+		int cnt = 0;
+        for (int i = 0; i < IsAdGold.Length; i++)
+        {
+            if (!IsAdGold[i])
+            {
+				cnt++;
+            }
+        }
+		return cnt;
+    }
+
+	public int AdCardFreeMax()
+    {
+		int cnt = 0;
+		for (int i = 0; i < IsAdCard.Length; i++)
+		{
+			if (!IsAdCard[i])
+			{
+				cnt++;
+			}
+		}
+		return cnt;
+	}
 
 	void Awake()
 	{
@@ -149,11 +187,7 @@ public class GameInfo : MonoBehaviour
 		PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
 		PlayerXpPlus(0);
 	}
-    public void TestFunc() //처음 할때 주는거 테스트중
-    {
-		AdGoldFreeMax = 3;
 
-	}
 
     public void CardCheck()
     {

@@ -25,52 +25,48 @@ public class ServerDataSystem : MonoBehaviour
     {
         inst = this;
     }
-    public void SaveData()
-    {
-       // serverdata.PlayerLevel= GameInfo.inst.PlayerLevel;
-         //serverdata.PlayerXp= GameInfo.inst.PlayerXp;
-         // serverdata.PlayerEnergy= GameInfo.inst.PlayerEnergy;
-          serverdata.PlayerGold= GameInfo.PlayerGold;
-         // serverdata.PlayerPoint= GameInfo.PlayerPoint;
-         serverdata.CharacterIdx= GameInfo.inst.CharacterIdx;
-         serverdata.MapIdx = GameInfo.inst.MapIdx;
-          serverdata.CharacterActive= GameInfo.inst.CharacterActive;
-          serverdata.PlayerCardIdxs= GameInfo.inst.PlayerCardIdxs;
-         serverdata.PlayerCards= GameInfo.inst.PlayerCards;
-         serverdata.PlayerMap= GameInfo.inst.PlayerMap;
-         serverdata.Language= GameInfo.inst.Language;
-         serverdata.AdGoldFreeMax= GameInfo.inst.AdGoldFreeMax;
+    //public void SaveData()
+    //{
+    //      serverdata.PlayerGold= GameInfo.PlayerGold;
+    //     serverdata.CharacterIdx= GameInfo.inst.CharacterIdx;
+    //     serverdata.MapIdx = GameInfo.inst.MapIdx;
+    //      serverdata.CharacterActive= GameInfo.inst.CharacterActive;
+    //      serverdata.PlayerCardIdxs= GameInfo.inst.PlayerCardIdxs;
+    //     serverdata.PlayerCards= GameInfo.inst.PlayerCards;
+    //     serverdata.PlayerMap= GameInfo.inst.PlayerMap;
+    //     serverdata.Language= GameInfo.inst.Language;
+    //     serverdata.IsAdGold = GameInfo.inst.IsAdGold;
+    //     serverdata.AdGoldTime = GameInfo.inst.AdGoldTime;
+    //     serverdata.IsAdCard = GameInfo.inst.IsAdCard;
+    //     serverdata.AdCardTime = GameInfo.inst.AdCardTime;
 
 
 
 
 
+    //string sDirPath;
+    //    sDirPath = Application.dataPath + "/Save";
 
-        string sDirPath;
-        sDirPath = Application.dataPath + "/Save";
+    //    DirectoryInfo di = new DirectoryInfo(sDirPath);
 
-        DirectoryInfo di = new DirectoryInfo(sDirPath);
+    //    if (di.Exists == false)
 
-        if (di.Exists == false)
-
-        {
-            di.Create();
+    //    {
+    //        di.Create();
             
-        }
-        FileStream streamSave = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.Create);
-        string jsonData = JsonConvert.SerializeObject(serverdata);
-        byte[] data = Encoding.UTF8.GetBytes(jsonData);
-        streamSave.Write(data, 0, data.Length);
-        streamSave.Flush();
-        streamSave.Close();
-    }
+    //    }
+    //    FileStream streamSave = new FileStream(Application.dataPath + "/Save/Save.json", FileMode.Create);
+    //    string jsonData = JsonConvert.SerializeObject(serverdata);
+    //    byte[] data = Encoding.UTF8.GetBytes(jsonData);
+    //    streamSave.Write(data, 0, data.Length);
+    //    streamSave.Flush();
+    //    streamSave.Close();
+    //}
 
     public string SaveData2()
     {
-        //PlayerPrefs.SetString("Save", "zzz");
-        //return (PlayerPrefs.GetString("Save"));
-        serverdata.PlayerGold = GameInfo.PlayerGold;
 
+        serverdata.PlayerGold = GameInfo.PlayerGold;
         serverdata.CharacterIdx = GameInfo.inst.CharacterIdx;
         serverdata.MapIdx = GameInfo.inst.MapIdx;
         serverdata.CharacterActive = GameInfo.inst.CharacterActive;
@@ -78,13 +74,29 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.PlayerCards = GameInfo.inst.PlayerCards;
         serverdata.PlayerMap = GameInfo.inst.PlayerMap;
         serverdata.Language = GameInfo.inst.Language;
-        serverdata.AdGoldFreeMax = GameInfo.inst.AdGoldFreeMax;
+        serverdata.IsAdGold = GameInfo.inst.IsAdGold;
+        serverdata.AdGoldTime = GameInfo.inst.AdGoldTime;
+        serverdata.IsAdCard = GameInfo.inst.IsAdCard;
+        serverdata.AdCardTime = GameInfo.inst.AdCardTime;
         serverdata.PlayerCardMax = GameInfo.inst.PlayerCardMax;
         serverdata.Player_PowerUp = GameInfo.inst.Player_PowerUp;
         serverdata.Daycom1 = GameInfo.inst.Daycom1;
+        serverdata.PlayerKill = GameInfo.inst.PlayerKill;
+
+        serverdata.Daycom2 = GameInfo.inst.Daycom2;
+        serverdata.Daycom3 = GameInfo.inst.Daycom3;
+        serverdata.DayCom2Int = GameInfo.inst.DayCom2Int;
+        serverdata.DayCom3Int = GameInfo.inst.DayCom3Int;
+        serverdata.Player_Mission = GameInfo.inst.Player_Mission;
 
 
-        
+
+
+
+
+
+
+
         string jsonData = JsonConvert.SerializeObject(serverdata);
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jsonData);
         string format = System.Convert.ToBase64String(bytes); 
@@ -122,18 +134,8 @@ public class ServerDataSystem : MonoBehaviour
         if (PlayerPrefs.GetString("Save")=="")
         {
             
-            IsSave = true;
-            GameInfo.inst.PlayerLevel = 1;
-            GameInfo.inst.PlayerXp = 0;
-            GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
-            GameInfo.inst.CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
-            GameInfo.inst.AdGoldFreeMax = 3;
 
-            GameInfo.PlayerGold = 600;
-            //GameInfo.PlayerPoint = 5;
-            GameInfo.inst.PlayerEnergy = 50;
 
-            GameInfo.inst.PlayerMap[0] = 1;
             
             testFunc();
             SceneManager.LoadScene("01_Loby_Main");
@@ -193,14 +195,27 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
 
             GameInfo.inst.Language = serverdata.Language;
-            GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+            GameInfo.inst.IsAdGold = serverdata.IsAdGold;
+            GameInfo.inst.AdGoldTime = serverdata.AdGoldTime;
+            GameInfo.inst.IsAdCard = serverdata.IsAdCard;
+            GameInfo.inst.AdCardTime = serverdata.AdCardTime;
             GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
             GameInfo.inst.Daycom1 = serverdata.Daycom1;
+            GameInfo.inst.PlayerKill = serverdata.PlayerKill;
+
+            GameInfo.inst.Daycom2 = serverdata.Daycom2;
+            GameInfo.inst.Daycom3 = serverdata.Daycom3;
+            GameInfo.inst.DayCom2Int = serverdata.DayCom2Int;
+            GameInfo.inst.DayCom3Int = serverdata.DayCom3Int;
 
 
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
             {
                 GameInfo.inst.CharacterActive[i] = serverdata.CharacterActive[i];
+            }
+            for (int i = 0; i < serverdata.Player_Mission.Count; i++)
+            {
+                GameInfo.inst.Player_Mission[i] = serverdata.Player_Mission[i];
             }
             for (int i = 0; i < serverdata.PlayerMap.Count; i++)
             {
@@ -217,6 +232,7 @@ public class ServerDataSystem : MonoBehaviour
             SceneManager.LoadScene("01_Loby_Main");
         }
     }
+    /*
     public IEnumerator LoadData()
     {
         //GameInfo.inst.PlayerLevel = 1;
@@ -259,6 +275,7 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.PlayerCards = serverdata.PlayerCards;
             GameInfo.inst.Language = serverdata.Language;
             GameInfo.inst.AdGoldFreeMax = serverdata.AdGoldFreeMax;
+            GameInfo.inst.AdCardFreeMax = serverdata.AdCardFreeMax;
             GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
             GameInfo.inst.Daycom1 = serverdata.Daycom1;
 
@@ -355,12 +372,18 @@ public class ServerDataSystem : MonoBehaviour
         
 
     }
+    */
     void testFunc()
     {
         IsSave = true;
         GameInfo.inst.CharacterActive[0] = 2; //기본캐릭 무조건 있어야함.
-        GameInfo.inst.AdGoldFreeMax = 3;
-        GameInfo.inst.AdCardFreeMax = 3;
+
+
+
+
+
+
+
         GameInfo.PlayerGold = 0;
         GameInfo.inst.PlayerMap[0] = 1;
         GameInfo.inst.PlayerMap[1] = 1;
@@ -412,6 +435,17 @@ public class ServerData
     public int AdCardFreeMax;
     public int PlayerCardMax;
     public DateTime Daycom1;
+    public int PlayerKill;
+    public bool[] IsAdGold;
+    public DateTime[] AdGoldTime;
+    public bool[] IsAdCard;
+    public DateTime[] AdCardTime;
+    public DateTime Daycom2; // 연속보상
+    public DateTime Daycom3; // 월보상
+
+    public int DayCom2Int;
+    public int DayCom3Int;
+    public List<int> Player_Mission;
 
 }
 

@@ -592,6 +592,7 @@ MonoBehaviour:
   PlayerSE: 0
   PlayerDmg: 0
   PlayerCoolUi: 0
+  PlayerKill: 0
   PlayerLevel: 0
   PlayerXp: 0
   PlayerXpMax: 0
@@ -619,10 +620,13 @@ MonoBehaviour:
   Card_Lv3: 
   Card_Lv4: 
   Card_Lv5: 
-  AdGoldFreeMax: 0
-  AdCardFreeMax: 0
   Player_PowerUp: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Roulette: 0
+  Player_Mission: 
+  DayCom2Int: 0
+  DayCom3Int: 0
+  IsAdGold: 000000
+  IsAdCard: 000000
 --- !u!114 &563478247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +650,7 @@ MonoBehaviour:
   dataPath_Card: project - Card_Info
   dataPath_Map: project - Map_Info
   dataPath_PowerUp: project - PowerUp_Info
+  dataPath_Mission: project - Mission_Info
   GameText_Korean: []
   GameText_English: []
   GameText_Japan: []
@@ -1003,6 +1008,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e50903c0d87b64085978f6cec2ae3f87, type: 3}
   - {fileID: 21300000, guid: b8e2a211143e84776bb8ea1730115895, type: 3}
   - {fileID: 21300000, guid: 4d994859ab9984da1bf99b0192dd6132, type: 3}
+  - {fileID: 21300000, guid: 569904c70f66b4a2cbb0482482b83146, type: 3}
+  - {fileID: 21300000, guid: 7c38c7d15aadb4e56bbb037a9285528f, type: 3}
+  - {fileID: 21300000, guid: 711e54b18d920433a89247353713f9a8, type: 3}
+  - {fileID: 21300000, guid: 711e54b18d920433a89247353713f9a8, type: 3}
+  - {fileID: 21300000, guid: b6b4f6129a1f64a27affcb31b0cef5b5, type: 3}
+  - {fileID: 21300000, guid: 711e54b18d920433a89247353713f9a8, type: 3}
+  - {fileID: 21300000, guid: ed1040a00dc884dc8a1cecce7ccc33c4, type: 3}
+  - {fileID: 21300000, guid: ed1040a00dc884dc8a1cecce7ccc33c4, type: 3}
+  - {fileID: 21300000, guid: 7c38c7d15aadb4e56bbb037a9285528f, type: 3}
+  - {fileID: 21300000, guid: ed1040a00dc884dc8a1cecce7ccc33c4, type: 3}
+  - {fileID: 21300000, guid: ed1040a00dc884dc8a1cecce7ccc33c4, type: 3}
+  - {fileID: 21300000, guid: 7c38c7d15aadb4e56bbb037a9285528f, type: 3}
   CharaIcons:
   - {fileID: 8400000, guid: 2081eef21f974d04a97864cc31ac0003, type: 2}
   - {fileID: 8400000, guid: 812ebdfbaa66cf84580ad32865f76298, type: 2}
@@ -1138,6 +1155,12 @@ MonoBehaviour:
     AdGoldFreeMax: 0
     AdCardFreeMax: 0
     PlayerCardMax: 0
+    PlayerKill: 0
+    IsAdGold: 
+    IsAdCard: 
+    DayCom2Int: 0
+    DayCom3Int: 0
+    Player_Mission: 
   IsSave: 0
 --- !u!114 &563478256
 MonoBehaviour:

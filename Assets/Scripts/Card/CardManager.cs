@@ -809,6 +809,17 @@ public class CardManager : MonoBehaviour
         CardCation(CaIdx);
         card.name = "Card : " + a;
         MixOk(Checkint);
+
+        //4¼º È¹µæ 11
+        if (GameInfo.inst.Player_Mission[11] == 0 && i==4)
+        {
+            GameInfo.inst.Player_Mission[11] = 1;
+        }
+        //5¼º È¹µæ 8
+        if (GameInfo.inst.Player_Mission[8] == 0 && i == 5)
+        {
+            GameInfo.inst.Player_Mission[8] = 1;
+        }
     }
 
     public void itemcheat()
@@ -1100,6 +1111,11 @@ public class CardManager : MonoBehaviour
             PlayerCard[GameInfo.inst.PlayerCardMax].GetComponent<CardIdx>().Lock = false;
             CardImages[GameInfo.inst.PlayerCardMax].sprite = IconManager.inst.Icons[19];
             GameInfo.inst.PlayerCardMax++;
+            //¹Ì¼Ç Ä«µåÄ­ ¿­±â 1
+            if (GameInfo.inst.Player_Mission[1] == 0 && GameInfo.inst.PlayerCardMax >= 1)
+            {
+                GameInfo.inst.Player_Mission[1] = 1;
+            }
         }
     }
 }

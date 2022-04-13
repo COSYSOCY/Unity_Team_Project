@@ -37,11 +37,12 @@ public class GambleManager : MonoBehaviour
     public void ItemAd()
     {
         
-         if (GameInfo.inst.AdCardFreeMax > 0)
+         if (GameInfo.inst.AdCardFreeMax() > 0)
         {
             if (GameInfo.inst.PcTestMode)
             {
-                GameInfo.inst.AdCardFreeMax--;
+                //GameInfo.inst.AdCardFreeMax--;
+                ShopManager.AdCardFunc();
                 ShopManager.AdFreeSet();
                 ItemPick(1);
             }
