@@ -29485,7 +29485,7 @@ MonoBehaviour:
   CreateUp: 0
   DmgLayermask:
     serializedVersion: 2
-    m_Bits: 4194496
+    m_Bits: 192
 --- !u!4 &1210016407
 Transform:
   m_ObjectHideFlags: 0

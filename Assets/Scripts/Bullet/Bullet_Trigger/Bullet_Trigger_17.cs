@@ -21,8 +21,8 @@ public class Bullet_Trigger_17 : MonoBehaviour
                 Create1(other.gameObject);
             }
 
-
-                gameObject.SetActive(false);
+            other.GetComponent<Enemy_Info>().Damaged(info.damage);
+            gameObject.SetActive(false);
             
         }
         else if (other.gameObject.CompareTag("DeOb"))

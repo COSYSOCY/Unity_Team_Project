@@ -90,15 +90,15 @@ public class NewSkill_2 : Skill_Ori
                       
                         if (Rhits[s].transform.gameObject.activeSelf)
                         {
-                            if (Rhits[i].transform.CompareTag("DeOb"))
-                            {
-                                Rhits[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
-                            }
-                            else
-                            {
+                            //if (Rhits[i].transform.CompareTag("DeOb"))
+                            //{
+                            //    Rhits[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                            //}
+                            //else
+                            //{
 
                             Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
-                            }
+                            //
                         }
                     }
                 }

@@ -186,8 +186,8 @@ public class DayManager : MonoBehaviour
     {
         for (int i = 0; i < Day30GoldCost.Length; i++)
         {
-            //Day30Ob[i].transform.GetChild(4).transform.GetComponent<TextMeshProUGUI>().text = Day30GoldCost[i].ToString();
-           // Day30Ob[i].transform.GetChild(3).transform.GetComponent<TextMeshProUGUI>().text = (i+1).ToString();
+            Day30Ob[i].transform.GetChild(4).transform.GetComponent<TextMeshProUGUI>().text = Day30GoldCost[i].ToString();
+            Day30Ob[i].transform.GetChild(3).transform.GetComponent<TextMeshProUGUI>().text = (i+1).ToString();
         }
         if (GameInfo.inst.DayCom3Int == 0)
         {
@@ -208,7 +208,7 @@ public class DayManager : MonoBehaviour
                 for (int i = 0; i < 30; i++)
                 {
                     Day30Ob[i].transform.GetChild(0).gameObject.SetActive(false);
-                    Day30Ob[i].transform.GetChild(1).gameObject.SetActive(false);
+                    Day30Ob[i].transform.GetChild(2).gameObject.SetActive(false);
                 }
                 StartCoroutine(TimeFunc30());
             }
@@ -228,7 +228,8 @@ public class DayManager : MonoBehaviour
             {
                 for (int i = 0; i < GameInfo.inst.DayCom3Int; i++)
                 {
-                  Day30Ob[i].transform.GetChild(1).gameObject.SetActive(true);
+                  Day30Ob[i].transform.GetChild(2).gameObject.SetActive(true);
+                    //Debug.Log("³Ê¶ß´Ï?");
                 }
                 StartCoroutine(TimeFunc30());
             }
@@ -240,7 +241,7 @@ public class DayManager : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             Day30Ob[i].transform.GetChild(0).gameObject.SetActive(false);
-            Day30Ob[i].transform.GetChild(1).gameObject.SetActive(false);
+            Day30Ob[i].transform.GetChild(2).gameObject.SetActive(false);
 
 
         }
@@ -294,10 +295,10 @@ public class DayManager : MonoBehaviour
     {
         for (int i = 0; i < GameInfo.inst.DayCom3Int; i++)
         {
-            Day30Ob[i].transform.GetChild(1).gameObject.SetActive(true);
+            Day30Ob[i].transform.GetChild(2).gameObject.SetActive(true);
         }
         IsButtonDay7[idx] = true;
-        Day30Ob[idx].transform.GetChild(1).gameObject.SetActive(false);
+        Day30Ob[idx].transform.GetChild(2).gameObject.SetActive(false);
         Day30Ob[idx].transform.GetChild(0).gameObject.SetActive(true);
     }
 
@@ -311,7 +312,7 @@ public class DayManager : MonoBehaviour
         {
             Day30Good(GameInfo.inst.DayCom3Int);
             IsButtonDay30[idx] = false;
-            Day30Ob[idx].transform.GetChild(1).gameObject.SetActive(true);
+            Day30Ob[idx].transform.GetChild(2).gameObject.SetActive(true);
             Day30Ob[idx].transform.GetChild(0).gameObject.SetActive(false);
             //GameInfo.inst.Daycom2 = DateTime.Now;
             GameInfo.inst.Daycom3 = DateTime.Now.AddDays(1);

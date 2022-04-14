@@ -134,6 +134,8 @@ public class GambleManager : MonoBehaviour
         PickOb1.SetActive(false);
         PickOb2.SetActive(true);
         PickLoading.SetActive(false);
+
+        BoxImage.gameObject.transform.GetComponent<RectTransform>().rotation=Quaternion.Euler(0,0,0);
         //if (Check==1)
         //{
         //    gambleob.SetActive(false);

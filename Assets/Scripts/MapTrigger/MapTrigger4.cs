@@ -38,16 +38,7 @@ public class MapTrigger4 : MonoBehaviour
 
     public void tiemtrigger(int t)
     {
-        //switch (t)
-        //{
-        //    case 1:
-
-        //        StartCoroutine(enemyFunc.EnemyCreateFunc2(5, "Enemy_Test"));
-        //        break;
-        //    default:
-        //        break;
-        //}
-        //return;
+       
 
         switch (t)
         {

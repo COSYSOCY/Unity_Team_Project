@@ -20,7 +20,7 @@ public class NewSkill_0 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        //bulletname = "Bullet_0_1";
+        bulletname = "Bullet_0_1";
         //upScale = 0.5f;
         upDa = 1.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);

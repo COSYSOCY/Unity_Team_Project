@@ -811,12 +811,12 @@ public class CardManager : MonoBehaviour
         MixOk(Checkint);
 
         //4¼º È¹µæ 11
-        if (GameInfo.inst.Player_Mission[11] == 0 && i==4)
+        if (GameInfo.inst.Player_Mission[11] == 0 && CardLv == 4)
         {
             GameInfo.inst.Player_Mission[11] = 1;
         }
         //5¼º È¹µæ 8
-        if (GameInfo.inst.Player_Mission[8] == 0 && i == 5)
+        if (GameInfo.inst.Player_Mission[8] == 0 && CardLv == 5)
         {
             GameInfo.inst.Player_Mission[8] = 1;
         }
