@@ -34,9 +34,10 @@ public class ShopManager : MonoBehaviour
     {
         DateTime nowTime = DateTime.Now;
         TimeSpan timeDif = nowTime - GameInfo.inst.Daycom1;
-        if (timeDif.Days > 0)
+        if (timeDif.TotalSeconds > 0)
         {
             OneDaytext.text = csvData.GameText(1138);
+            OneDaytext.GetComponent<TextIdx>().Idx = 1138;
         }
         else
         {
@@ -48,7 +49,7 @@ public class ShopManager : MonoBehaviour
     {
         DateTime nowTime = DateTime.Now;
         TimeSpan timeDif = nowTime -GameInfo.inst.Daycom1 ;
-        if (timeDif.Days > 0)
+        if (timeDif.TotalSeconds > 0)
         {
             Gamble.DayFunc();
             GameInfo.inst.Daycom1 = nowTime.AddDays(1);
@@ -57,6 +58,7 @@ public class ShopManager : MonoBehaviour
     }
     IEnumerator TimeUpdate()
     {
+            yield return new WaitForSeconds(1f);
         string H;
         string M;
         DateTime nowTime;
@@ -65,10 +67,10 @@ public class ShopManager : MonoBehaviour
         {
             nowTime = DateTime.Now;
             timeDif =  GameInfo.inst.Daycom1 - nowTime;
-            
-            if (timeDif.Days < 0)
+            if (timeDif.TotalSeconds < 0)
             {
                 OneDaytext.text = csvData.GameText(1138);
+                OneDaytext.GetComponent<TextIdx>().Idx = 1138;
                 break;
             }
             else

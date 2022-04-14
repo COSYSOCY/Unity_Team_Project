@@ -24347,7 +24347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5c92c714eb2f6429da0b2a72df10e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idx: 1138
+  Idx: 99999
 --- !u!114 &489929770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24396,7 +24396,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC77C\uC77C\uBCF4\uC0C1"
+  m_Text: 
 --- !u!222 &489929772
 CanvasRenderer:
   m_ObjectHideFlags: 0

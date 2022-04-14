@@ -21,7 +21,7 @@ public class NewSkill_16 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Upscale = 2f;
+        Upscale = 1.5f;
     }
 
     public override void LevelUpFunc()
