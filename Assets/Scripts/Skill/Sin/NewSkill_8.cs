@@ -70,7 +70,7 @@ public class NewSkill_8 : Skill_Ori
 
             Collider[] Enemyss;
             bullet.transform.localScale = new Vector3(local, local, local);
-            Enemyss = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x * local, layermask);
+            Enemyss = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x , layermask);
             if (Enemyss.Length > 0)
             {
                 for (int z = 0; z < Enemyss.Length; z++)

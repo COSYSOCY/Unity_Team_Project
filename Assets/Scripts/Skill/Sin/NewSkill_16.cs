@@ -21,7 +21,7 @@ public class NewSkill_16 : Skill_Ori
     public override void CreateFunc()
     {
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
-        Upscale = 1.5f;
+        Upscale = 2f;
     }
 
     public override void LevelUpFunc()
@@ -74,7 +74,7 @@ public class NewSkill_16 : Skill_Ori
         Collider[] Enemys;
         GameObject bullet = ObjectPooler.SpawnFromPool("Bullet_16", RandomPos(), Quaternion.identity);
         bullet.transform.localScale = new Vector3(local, local, local);
-        Enemys = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x * local, layermask);
+        Enemys = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x, layermask);
         if (Enemys.Length > 0)
         {
             for (int i = 0; i < Enemys.Length; i++)
