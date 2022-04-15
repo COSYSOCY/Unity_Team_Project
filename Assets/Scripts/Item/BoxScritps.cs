@@ -23,6 +23,9 @@ public class BoxScritps : MonoBehaviour
     public int Gold = 0;
     public Text GoldText;
 
+    public GameObject goldeff;
+    public GameObject cardeff;
+
     public int Cnt;
 
     public void BoxFunc1()
@@ -196,5 +199,20 @@ public class BoxScritps : MonoBehaviour
        // MainSingleton.instance.playerinfo.Gold += Gold;
         MainSingleton.instance.uimanager.GoldUp(Gold);
         BoxUiOb1.SetActive(false);
+    }
+
+    public void BoxFunc2()
+    {
+        float random = Random.Range(0.01f, 100f);
+        float RandomCnt2 = 50; 
+        if(random >= RandomCnt2)
+        {
+            Instantiate(goldeff);
+        }
+        else
+        {
+            Instantiate(cardeff);            
+        }
+        
     }
 }
