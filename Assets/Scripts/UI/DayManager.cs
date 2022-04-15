@@ -221,7 +221,7 @@ public class DayManager : MonoBehaviour
             if (ts.TotalSeconds>0)
             {
 
-                Day7Ok(GameInfo.inst.DayCom3Int);
+                Day30Ok(GameInfo.inst.DayCom3Int);
 
             }
             else
