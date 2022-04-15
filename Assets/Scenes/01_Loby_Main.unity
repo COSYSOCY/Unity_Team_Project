@@ -51020,7 +51020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 1400
 --- !u!222 &982957320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55177,10 +55177,10 @@ RectTransform:
   m_Father: {fileID: 1230873086}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: 150}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1071910289
 MonoBehaviour:
@@ -73337,7 +73337,7 @@ MonoBehaviour:
   IsPlayerCard: 1
   IsMixCard: 0
   MixSelect: {fileID: 168937206}
-  GoldCost: 100000
+  GoldCost: 50000
   Lock: 1
   MixOk: 0
 --- !u!1 &1470880036
@@ -74837,7 +74837,7 @@ MonoBehaviour:
   IsPlayerCard: 1
   IsMixCard: 0
   MixSelect: {fileID: 1082923681}
-  GoldCost: 50000
+  GoldCost: 30000
   Lock: 1
   MixOk: 0
 --- !u!1 &1503663744
@@ -75512,7 +75512,7 @@ MonoBehaviour:
   IsPlayerCard: 1
   IsMixCard: 0
   MixSelect: {fileID: 102861400}
-  GoldCost: 800
+  GoldCost: 1000
   Lock: 1
   MixOk: 0
 --- !u!114 &1510554352
@@ -76420,7 +76420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 300
 --- !u!222 &1528287704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77977,7 +77977,7 @@ MonoBehaviour:
   IsPlayerCard: 1
   IsMixCard: 0
   MixSelect: {fileID: 682103972}
-  GoldCost: 400
+  GoldCost: 500
   Lock: 1
   MixOk: 0
 --- !u!114 &1554581385
@@ -83554,7 +83554,7 @@ MonoBehaviour:
   - {fileID: 514352041}
   - {fileID: 4650693}
   Day30Text: {fileID: 413140567}
-  Day30GoldCost: 2c0100002c0100002c0100002c0100002c0100009001000090010000900100009001000090010000f4010000f4010000f4010000f4010000f40100005802000058020000580200005802000058020000bc020000bc020000bc020000bc020000bc0200002003000020030000200300002003000020030000
+  Day30GoldCost: 2c0100002c0100002c0100002c010000f40100002c0100002c0100002c0100002c010000bc0200002c0100002c0100002c0100002c010000e80300002c0100002c0100002c0100002c010000dc0500002c0100002c0100002c0100002c010000d0070000f4010000f4010000f4010000f4010000b80b0000
 --- !u!1 &1647563631
 GameObject:
   m_ObjectHideFlags: 0
@@ -93324,10 +93324,10 @@ RectTransform:
   m_Father: {fileID: 1230873086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -350, y: 150}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1853732726
 MonoBehaviour:
@@ -100316,7 +100316,7 @@ MonoBehaviour:
   IsPlayerCard: 1
   IsMixCard: 0
   MixSelect: {fileID: 501348347}
-  GoldCost: 200
+  GoldCost: 250
   Lock: 1
   MixOk: 0
 --- !u!114 &2012088124

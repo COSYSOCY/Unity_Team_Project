@@ -160,7 +160,7 @@ public class BoxScritps : MonoBehaviour
             }
             if (Lv >= LvMax)
             {
-                int RandomGoldAdd = Random.Range(100, 201);
+                int RandomGoldAdd = Random.Range(30, 50);
                 Gold += RandomGoldAdd;
                 ImageNum = 143;
             }
@@ -182,7 +182,7 @@ public class BoxScritps : MonoBehaviour
         }
         else
         {
-            int RandomGoldAdd = Random.Range(100, 201);
+            int RandomGoldAdd = Random.Range(30, 50);
             Gold += RandomGoldAdd;
             ImageNum = 143;
             

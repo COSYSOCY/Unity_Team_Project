@@ -169,7 +169,7 @@ public class ShopManager : MonoBehaviour
             if (GameInfo.inst.PcTestMode)
             {
                 AdGoldFunc();
-                GameInfo.PlayerGold += 240;
+                GameInfo.PlayerGold += 250;
                 AdFreeSet();
                 Loby.LobyGoldAc();
             }

@@ -21,6 +21,33 @@ public class EndGameScript : MonoBehaviour
         int gold = MainSingleton.instance.playerinfo.Gold;
         float AddGold;
         float f = MainSingleton.instance.skillmanager.GoldPlus() + CardStat.inst.CardStat_GoldPlus() + PowerUpInfo.instance._GoldPlus()+MainSingleton.instance.playerinfo.Bonus_GoldPuls;
+        
+
+
+        if (MainSingleton.instance.playerinfo.Clear)
+        {
+            float Pick2 = 15f;
+            float Pick3 = 2f;
+
+            int cardidx = 0;
+            int CardLv = 0;
+            float Ran = Random.Range(0.01f, 100f);
+            if (Ran <= Pick3)
+            {
+                CardLv = 3;
+            }
+            else if (Ran <= Pick2)
+            {
+                CardLv = 2;
+            }
+            else
+            {
+                CardLv = 1;
+            }
+            cardidx = GameInfo.inst.RandomCard(CardLv);
+            MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            gold += Random.Range(100, 300);
+        }
         AddGold = gold;
         AddGold = AddGold * (f * 0.01f);
         

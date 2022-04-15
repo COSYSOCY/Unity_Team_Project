@@ -282,5 +282,11 @@ public class GameInfo : MonoBehaviour
 
 	}
 
+	public int RandomCard(int Lv)
+    {
+		int random = UnityEngine.Random.Range(0, Cards_Lv(Lv).Count);
+		return random;
+	}
+
 
 }

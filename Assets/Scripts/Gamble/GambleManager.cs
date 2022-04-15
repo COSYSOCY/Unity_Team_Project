@@ -58,8 +58,8 @@ public class GambleManager : MonoBehaviour
     }
     public void ItemPickButton(int i)
     {
-        int GoldCost1 = 100;
-        int GoldCost5 = 500;
+        int GoldCost1 = 300;
+        int GoldCost5 = 1400;
         if (i ==1)
         {
             if (GameInfo.PlayerGold >= GoldCost1)
@@ -155,10 +155,10 @@ public class GambleManager : MonoBehaviour
     }
     void RandomItem2(int idx)
     {
-
-        float Pick3 = 10f;
-        float Pick4 = 4f;
-        float Pick5 = 1f;
+        float Pick2 = 10;
+        float Pick3 = 2f;
+        float Pick4 = 1f;
+        float Pick5 = 0.1f;
         int IconNum = 0;
         int NameNum = 0;
         int CardLv = 0;
@@ -178,9 +178,13 @@ public class GambleManager : MonoBehaviour
         {
             Lv = 3;
         }
-        else
+        else if (Ran <= Pick2)
         {
             Lv = 2;
+        }
+        else
+        {
+            Lv = 1;
         }
 
 
@@ -200,7 +204,7 @@ public class GambleManager : MonoBehaviour
     void RandomItem(int idx)
     {
         //float Pick1 = 0f;
-        float Pick2 = 30f;
+        float Pick2 = 20f;
         float Pick3 = 5f;
         float Pick4 = 1f;
         float Pick5 = 0.1f;
