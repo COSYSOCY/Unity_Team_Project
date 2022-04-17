@@ -91,6 +91,16 @@ public class MissionManager : MonoBehaviour
             GameInfo.inst.Player_Mission[idx] = 2;
             GameInfo.PlayerGold+= csvData.MissionGold[idx];
             loby.LobyGoldAc();
+
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
         }
     }
 

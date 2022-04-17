@@ -136,7 +136,15 @@ public class GambleManager : MonoBehaviour
         PickOb2.SetActive(true);
         PickLoading.SetActive(false);
 
-        
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         //if (Check==1)
         //{
         //    gambleob.SetActive(false);

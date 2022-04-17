@@ -71,8 +71,9 @@ public class LobyUIMgr : MonoBehaviour
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
         LangFunc();
-       ServerDataSystem.inst.ServerSave();
-        killtext.text = GameInfo.inst.PlayerKill.ToString();
+        //ServerDataSystem.inst.ServerSave();
+        ServerDataSystem.inst.SaveData2asdasdasd();
+         killtext.text = GameInfo.inst.PlayerKill.ToString();
         
         if (!GameInfo.inst.PcTestMode)
         {
@@ -222,6 +223,15 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         //UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
         //UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
         //if (GameInfo.inst.PlayerXp == 0)
@@ -231,7 +241,7 @@ public class LobyUIMgr : MonoBehaviour
         //else
         //{
         //UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
-            
+
         //}
         LobyGoldText.text = GameInfo.PlayerGold.ToString("");
         //LobyPointText.text = GameInfo.PlayerPoint.ToString("");
@@ -296,6 +306,15 @@ public class LobyUIMgr : MonoBehaviour
 
         TextReset();
         LangFunc();
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
     }
     public void TextReset()
     {

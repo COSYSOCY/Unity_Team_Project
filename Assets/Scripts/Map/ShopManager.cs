@@ -302,6 +302,15 @@ public class ShopManager : MonoBehaviour
             GameInfo.PlayerGold += 240;
             AdFreeSet();
             Loby.LobyGoldAc();
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
         };
     }
     public void LoadRewardAd2()
@@ -314,6 +323,8 @@ public class ShopManager : MonoBehaviour
             AdCardFunc();
             AdFreeSet();
             Gamble.ItemPick(1);
+
+
         };
     }
     public void LoadRewardAd3()

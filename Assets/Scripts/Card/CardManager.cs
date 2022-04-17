@@ -496,6 +496,15 @@ public class CardManager : MonoBehaviour
         SizeSet();
         CardCheck();
         CardCation(CaIdx);
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
     }
     public void EquipFunc(int i) // Âø¿ë
     {
@@ -520,6 +529,15 @@ public class CardManager : MonoBehaviour
 
         CardNumReset();
         CardCheck();
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
     }
     public void EquipFunc2(int i) // ÇÕ¼ºÂø¿ë
     {
@@ -549,6 +567,7 @@ public class CardManager : MonoBehaviour
             MixButtonOb.SetActive(true);
         }
         InfoReset();
+
     }
     public void UnEquipFunc2(int i) // ÇÕ¼ºÇØÁ¦
     {
@@ -1067,6 +1086,15 @@ public class CardManager : MonoBehaviour
         //CardCation(CaIdx);
         MixOk(0);
         PlayerCardReset();
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         //InfoReset();
         //SizeSet();
         //CardNumReset();

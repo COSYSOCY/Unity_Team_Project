@@ -172,6 +172,15 @@ public class DayManager : MonoBehaviour
             GameInfo.inst.DayCom2Int++;
 
             StartCoroutine(TimeFunc());
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
         }
     }
 
@@ -179,6 +188,7 @@ public class DayManager : MonoBehaviour
     {
         GameInfo.PlayerGold += Day7GoldCost[idx];
         loby.LobyGoldAc();
+        
     }
     #endregion
 
@@ -320,6 +330,15 @@ public class DayManager : MonoBehaviour
             GameInfo.inst.DayCom3Int++;
 
             StartCoroutine(TimeFunc30());
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
         }
     }
 

@@ -300,7 +300,7 @@ public class ServerDataSystem : MonoBehaviour
     }
     void loadCheck(bool su, string data)
     {
-
+        IsSave = true;
         Data = data;
         if (Data == "")
         {
@@ -611,8 +611,8 @@ public class ServerDataSystem : MonoBehaviour
             }
             else
             {
-
-            ServerSave();
+                SaveData2asdasdasd();
+                //ServerSave();
             }
 
         }
