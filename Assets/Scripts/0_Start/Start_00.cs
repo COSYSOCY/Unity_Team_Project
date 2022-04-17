@@ -8,6 +8,7 @@ public class Start_00 : MonoBehaviour
 
     void Update()
     {
+        return;
         if (Input.GetMouseButtonUp(0)&&GameInfo.inst.GameStart&&!check)
         {
             check = true;
