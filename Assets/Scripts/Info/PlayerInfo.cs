@@ -29,7 +29,6 @@ public class PlayerInfo : MonoBehaviour
 
 
 
-
     public int Bonus_BtCnt = 0;
     public float Bonus_Range = 0;
     public float Bonus_XpPuls = 0;

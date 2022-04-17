@@ -76,14 +76,15 @@ public class EndGameScript : MonoBehaviour
         {
             for (int i = 0; i < MainSingleton.instance.playerstat.playingCard_Bonus.Count; i++)
             {
-                int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardIconNum;
-                int Lv = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardLv;
+                int cardidx = MainSingleton.instance.playerstat.playingCard_Bonus[i];
+                int IconNum = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+                int Lv = GameInfo.inst.CardsInfo[cardidx].CardLv;
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
                 bt.GetComponent<bootyInfo>().myCnt.text = "Lv."+ Lv;
                 bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
                 bt.GetComponent<bootyInfo>().bonus.SetActive(true);
-                GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard_Bonus[i]);
-                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardFocus == 1)
+                GameInfo.inst.PlayerCards.Add(cardidx);
+                if (GameInfo.inst.CardsInfo[cardidx].CardFocus == 1)
                 {
                     bt.GetComponent<bootyInfo>().Focus.SetActive(true);
                 }
@@ -94,15 +95,16 @@ public class EndGameScript : MonoBehaviour
         {
             for (int i = 0; i < MainSingleton.instance.playerstat.playingCard.Count; i++)
             {
-                int IconNum = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardIconNum;
-                int Lv = GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard_Bonus[i]].CardLv;
+                int cardidx = MainSingleton.instance.playerstat.playingCard[i];
+                int IconNum = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+                int Lv = GameInfo.inst.CardsInfo[cardidx].CardLv;
                 GameObject bt = Instantiate(bootyPrefab, bootyParent);
 
                 bt.GetComponent<bootyInfo>().myCnt.text = "Lv." + Lv;
                 bt.GetComponent<bootyInfo>().myicon.sprite = IconManager.inst.Icons[IconNum];
 
-                GameInfo.inst.PlayerCards.Add(MainSingleton.instance.playerstat.playingCard[i]);
-                if (GameInfo.inst.CardsInfo[MainSingleton.instance.playerstat.playingCard[i]].CardFocus == 1)
+                GameInfo.inst.PlayerCards.Add(cardidx);
+                if (GameInfo.inst.CardsInfo[cardidx].CardFocus == 1)
                 {
                     bt.GetComponent<bootyInfo>().Focus.SetActive(true);
                 }

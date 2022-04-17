@@ -843,6 +843,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6fcfa5e0531e6304fa59755a5caecd0d, type: 3}
   - {fileID: 8300000, guid: c9fca7c8a9a036c4aacfc6511a43ba1d, type: 3}
   - {fileID: 8300000, guid: f3245c2f2e4d25a4ab9163c4f8150ca1, type: 3}
+  - {fileID: 8300000, guid: bd8b22edc90f825448bf22f4b8c7d3c9, type: 3}
   BGM:
   - {fileID: 0}
   - {fileID: 8300000, guid: 7cefe889a5a9c014ab9aa9f8bf7177ec, type: 3}

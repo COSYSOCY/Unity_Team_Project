@@ -14426,6 +14426,8 @@ GameObject:
   - component: {fileID: 4276777941511644377}
   - component: {fileID: 4276777941497515697}
   - component: {fileID: 4276777941497646851}
+  - component: {fileID: 7170801625123534533}
+  - component: {fileID: 6116049196262348959}
   m_Layer: 0
   m_Name: Coinpower
   m_TagString: Untagged
@@ -19112,3 +19114,28 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7170801625123534533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276777941511407189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a260c0b0b04bc4a9dfe326d09d0167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6116049196262348959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4276777941511407189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b61d57b8b943540a6d36f178b2956b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadTime: 0.4

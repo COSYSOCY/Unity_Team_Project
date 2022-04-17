@@ -20,42 +20,47 @@ public class ItemSystem : MonoBehaviour
             {
                 ObjectPooler.SpawnFromPool("item_xp_2", p, Quaternion.identity);
             }
-            if (itemRnd >= 950)
+            if (itemRnd >= 990)
             {
                 GameObject card = ObjectPooler.SpawnFromPool("item_Card_1", p, Quaternion.identity);
-                card.GetComponent<ItemPull>().CardCreate(Random.Range(1, 10));
+                card.GetComponent<ItemPull>().CardCreate(GameInfo.inst.RandomCard(1));
             }
 
         }
-        if (itemIdx == 1001)
+        if (itemIdx == 1001 && Random.Range(0, 101) >=50)
         {
             //GameObject card = ObjectPooler.SpawnFromPool("item_Card_1", p, Quaternion.identity);
             //card.GetComponent<ItemPull>().CardCreate(Random.Range(1, 10));
             GameObject Box = ObjectPooler.SpawnFromPool("Box_Skill", p, Quaternion.identity);
+            //Box.GetComponent<BoxTrigger>().Cnt = 1;
         }
-        if ( Idx==1)
+        if (itemIdx == 1002 )
         {
+
+            GameObject Box = ObjectPooler.SpawnFromPool("Box_Skill", p, Quaternion.identity);
+            Box.GetComponent<BoxTrigger>().idx = 1;
             float Pick2 = 10;
             float Pick3 = 1f;
 
             int cardidx = 0;
             int Lv = 0;
             float Ran = Random.Range(0.01f, 100f);
-        if (Ran <= Pick3)
-        {
-            Lv = 3;
-        }
-        else if (Ran <= Pick2)
-        {
-            Lv = 2;
-        }
-        else
-        {
-            Lv = 1;
-        }
-            cardidx=GameInfo.inst.RandomCard(Lv);
+            if (Ran <= Pick3)
+            {
+                Lv = 3;
+            }
+            else if (Ran <= Pick2)
+            {
+                Lv = 2;
+            }
+            else
+            {
+                Lv = 1;
+            }
+            cardidx = GameInfo.inst.RandomCard(Lv);
             MainSingleton.instance.playerstat.playingCard.Add(cardidx);
         }
+
 
     }
 

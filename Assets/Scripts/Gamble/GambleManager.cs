@@ -125,6 +125,7 @@ public class GambleManager : MonoBehaviour
             }
         }
         PickLoading.SetActive(true);
+        BoxImage.gameObject.transform.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
         yield return Effect();
         for (int i = 0; i < Cnt; i++)
         {
@@ -135,7 +136,7 @@ public class GambleManager : MonoBehaviour
         PickOb2.SetActive(true);
         PickLoading.SetActive(false);
 
-        BoxImage.gameObject.transform.GetComponent<RectTransform>().rotation=Quaternion.Euler(0,0,0);
+        
         //if (Check==1)
         //{
         //    gambleob.SetActive(false);
