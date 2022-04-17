@@ -596,8 +596,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PcTestMode: 0
+  PcTestMode: 1
   isTestMode: 1
+  UserName: 
+  Id: 
   GameStart: 0
   audioSo: {fileID: 563478249}
   audioSo2: {fileID: 563478254}
@@ -1176,6 +1178,7 @@ MonoBehaviour:
     DayCom3Int: 0
     Player_Mission: 
   IsSave: 0
+  Data: 
 --- !u!114 &563478256
 MonoBehaviour:
   m_ObjectHideFlags: 0

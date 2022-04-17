@@ -9,6 +9,8 @@ using GooglePlayGames.BasicApi.Events;
 
 public class GPGSBinder
 {
+
+
     static GPGSBinder inst = new GPGSBinder();
     public static GPGSBinder Inst => inst;
 
@@ -160,5 +162,4 @@ public class GPGSBinder
             onEventsLoaded?.Invoke(status == ResponseStatus.Success, events);
         });
     }
-
 }

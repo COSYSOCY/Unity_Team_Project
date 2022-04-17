@@ -298,9 +298,10 @@ public class ServerDataSystem : MonoBehaviour
             SceneManager.LoadScene("01_Loby_Main");
         }
     }
-    public void ServerLoad()
+    void loadCheck(bool su, string data)
     {
-        GPGSBinder.Inst.LoadCloud("mysave", (success, data) => Data = data);
+
+        Data = data;
         if (Data == "")
         {
             testFunc();
@@ -411,6 +412,11 @@ public class ServerDataSystem : MonoBehaviour
             IsSave = true;
             SceneManager.LoadScene("01_Loby_Main");
         }
+    }
+    public void ServerLoad()
+    {
+        GPGSBinder.Inst.LoadCloud("mysave", (success, data) => loadCheck(success,data));
+        
     }
 
     public void Testgo()
