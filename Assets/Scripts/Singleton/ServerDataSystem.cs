@@ -163,10 +163,37 @@ public class ServerDataSystem : MonoBehaviour
                 case SystemLanguage.Spanish:
                     GameInfo.inst.Language = "Spain";
                     break;
+                case SystemLanguage.Portuguese:
+                    GameInfo.inst.Language = "Portugal";
+                    break;
+                case SystemLanguage.Swedish:
+                    GameInfo.inst.Language = "Sweden";
+                    break;
+                case SystemLanguage.Italian:
+                    GameInfo.inst.Language = "Italy";
+                    break;
+                case SystemLanguage.Ukrainian:
+                    GameInfo.inst.Language = "ukr";
+                    break;
+                case SystemLanguage.Russian:
+                    GameInfo.inst.Language = "rus";
+                    break;
+                case SystemLanguage.Thai:
+                    GameInfo.inst.Language = "tha";
+                    break;
+                case SystemLanguage.Polish:
+                    GameInfo.inst.Language = "pol";
+                    break;
+                case SystemLanguage.French:
+                    GameInfo.inst.Language = "fra";
+                    break;
+                case SystemLanguage.Turkish:
+                    GameInfo.inst.Language = "tur";
+                    break;
             }
             if (GameInfo.inst.Language == "")
             {
-                GameInfo.inst.Language = "Korean";
+                GameInfo.inst.Language = "English";
             }
             SaveData2();
         }

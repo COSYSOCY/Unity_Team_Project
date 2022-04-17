@@ -1,6 +1,7 @@
 <dependencies>
   <packages>
     <package>com.google.android.gms:play-services-ads:20.6.0</package>
+    <package>com.google.games:gpgs-plugin-support:0.11.01</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/androidx.annotation.annotation-1.2.0.jar</file>
@@ -54,8 +55,8 @@
     <file>Assets/Plugins/Android/com.google.guava.listenablefuture-1.0.jar</file>
   </files>
   <settings>
-    <setting name="androidAbis" value="armeabi-v7a" />
-    <setting name="bundleId" value="com.COSYL.UnityTeamProject" />
+    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="bundleId" value="com.cosyl.fantasysurvivors" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />
