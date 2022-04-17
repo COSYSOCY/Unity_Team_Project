@@ -37,7 +37,15 @@ public class GPGSBinder
         PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptAlways, (success) =>
         {
             onLoginSuccess?.Invoke(success == SignInStatus.Success, Social.localUser);
+            if (ServerDataSystem.inst.IsSave == false)
+            {
+                ServerDataSystem.inst.ServerLoad();
+                GameInfo.inst.UserName= Social.localUser.userName;
+                GameInfo.inst.Id= Social.localUser.id;
+
+            }
         });
+        
     }
 
     public void Logout()

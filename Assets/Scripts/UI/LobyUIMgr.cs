@@ -4,10 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+public class leaderboardInfo
+{
+    public string ID;
+    public long Kill;
+    public int rank;
+    public leaderboardInfo(int _rank, string _ID, long _Kill)
+    {
+        ID = _ID;
+        Kill = _Kill;
+        rank = _rank;
+    }
+}
 public class LobyUIMgr : MonoBehaviour
 {
-    
+
     public TextMeshProUGUI UserLevel;
     public Text UserXp;
     public Slider UserXpSlider;
@@ -36,6 +47,16 @@ public class LobyUIMgr : MonoBehaviour
 
     public TextMeshProUGUI killtext;
 
+    string log;
+
+    public List<leaderboardInfo> leadrKill;
+    public leaderboardInfo myrank;
+
+
+    // ·©Å·
+
+    public TextMeshProUGUI UserName;
+    public TextMeshProUGUI UserRank;
 
 
 
@@ -50,8 +71,30 @@ public class LobyUIMgr : MonoBehaviour
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
         LangFunc();
-       ServerDataSystem.inst.SaveData2();
+       ServerDataSystem.inst.ServerSave();
         killtext.text = GameInfo.inst.PlayerKill.ToString();
+        
+        if (!GameInfo.inst.PcTestMode)
+        {
+            GPGSBinder.Inst.ReportLeaderboard(GPGSIds.leaderboard_killcnt, GameInfo.inst.PlayerKill, success => log = $"{success}");
+
+            GPGSBinder.Inst.LoadAllLeaderboardArray(GPGSIds.leaderboard_killcnt, scores =>
+            {
+                log = "";
+                for (int i = 0; i < scores.Length; i++)
+                {
+
+                    if (scores[i].userID== GameInfo.inst.Id)
+                    {
+                        myrank=new leaderboardInfo(scores[i].rank, scores[i].userID, scores[i].value);
+                        UserName.text = GameInfo.inst.UserName;
+                        UserRank.text = scores[i].rank.ToString();
+
+                    }
+                    leadrKill.Add(new leaderboardInfo(scores[i].rank,scores[i].userID,scores[i].value));
+                }
+            });
+        }
     }
 
     

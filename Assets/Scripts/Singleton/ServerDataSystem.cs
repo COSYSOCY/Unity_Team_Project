@@ -21,6 +21,8 @@ public class ServerDataSystem : MonoBehaviour
 
     public static ServerDataSystem inst;
     public bool IsSave = false;
+
+    public string Data;
     void Awake()
     {
         inst = this;
@@ -63,7 +65,7 @@ public class ServerDataSystem : MonoBehaviour
     //    streamSave.Close();
     //}
 
-    public string SaveData2()
+    public string SaveData2asdasdasd()
     {
 
         serverdata.PlayerGold = GameInfo.PlayerGold;
@@ -82,7 +84,6 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.Player_PowerUp = GameInfo.inst.Player_PowerUp;
         serverdata.Daycom1 = GameInfo.inst.Daycom1;
         serverdata.PlayerKill = GameInfo.inst.PlayerKill;
-
         serverdata.Daycom2 = GameInfo.inst.Daycom2;
         serverdata.Daycom3 = GameInfo.inst.Daycom3;
         serverdata.DayCom2Int = GameInfo.inst.DayCom2Int;
@@ -102,6 +103,43 @@ public class ServerDataSystem : MonoBehaviour
         string format = System.Convert.ToBase64String(bytes); 
         PlayerPrefs.SetString("Save", format);
         return (PlayerPrefs.GetString("Save"));
+    }
+    public void ServerSave()
+    {
+        serverdata.PlayerGold = GameInfo.PlayerGold;
+        serverdata.CharacterIdx = GameInfo.inst.CharacterIdx;
+        serverdata.MapIdx = GameInfo.inst.MapIdx;
+        serverdata.CharacterActive = GameInfo.inst.CharacterActive;
+        serverdata.PlayerCardIdxs = GameInfo.inst.PlayerCardIdxs;
+        serverdata.PlayerCards = GameInfo.inst.PlayerCards;
+        serverdata.PlayerMap = GameInfo.inst.PlayerMap;
+        serverdata.Language = GameInfo.inst.Language;
+        serverdata.IsAdGold = GameInfo.inst.IsAdGold;
+        serverdata.AdGoldTime = GameInfo.inst.AdGoldTime;
+        serverdata.IsAdCard = GameInfo.inst.IsAdCard;
+        serverdata.AdCardTime = GameInfo.inst.AdCardTime;
+        serverdata.PlayerCardMax = GameInfo.inst.PlayerCardMax;
+        serverdata.Player_PowerUp = GameInfo.inst.Player_PowerUp;
+        serverdata.Daycom1 = GameInfo.inst.Daycom1;
+        serverdata.PlayerKill = GameInfo.inst.PlayerKill;
+        serverdata.Daycom2 = GameInfo.inst.Daycom2;
+        serverdata.Daycom3 = GameInfo.inst.Daycom3;
+        serverdata.DayCom2Int = GameInfo.inst.DayCom2Int;
+        serverdata.DayCom3Int = GameInfo.inst.DayCom3Int;
+        serverdata.Player_Mission = GameInfo.inst.Player_Mission;
+
+
+
+
+
+
+
+
+
+        string jsonData = JsonConvert.SerializeObject(serverdata);
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        string format = System.Convert.ToBase64String(bytes);
+        GPGSBinder.Inst.SaveCloud("mysave", format, success => Data=format);
     }
     public void saveReset()
     {
@@ -129,8 +167,9 @@ public class ServerDataSystem : MonoBehaviour
         streamSave.Close();
         yield return null;
     }
-    public void LoadData2()
+    public void LoadData2adasdasdasd()
     {
+        
         if (PlayerPrefs.GetString("Save")=="")
         {
             
@@ -195,7 +234,7 @@ public class ServerDataSystem : MonoBehaviour
             {
                 GameInfo.inst.Language = "English";
             }
-            SaveData2();
+            //SaveData2();
         }
         else
         {
@@ -258,6 +297,126 @@ public class ServerDataSystem : MonoBehaviour
             IsSave = true;
             SceneManager.LoadScene("01_Loby_Main");
         }
+    }
+    public void ServerLoad()
+    {
+        GPGSBinder.Inst.LoadCloud("mysave", (success, data) => Data = data);
+        if (Data == "")
+        {
+            testFunc();
+            SceneManager.LoadScene("01_Loby_Main");
+            SystemLanguage lang = Application.systemLanguage;
+
+            switch (lang)
+            {
+                case SystemLanguage.Korean:
+                    GameInfo.inst.Language = "Korean";
+                    break;
+
+                case SystemLanguage.English:
+                    GameInfo.inst.Language = "English";
+                    break;
+
+                case SystemLanguage.Japanese:
+                    GameInfo.inst.Language = "Japan";
+                    break;
+                case SystemLanguage.Chinese:
+                    GameInfo.inst.Language = "China";
+                    break;
+                case SystemLanguage.German:
+                    GameInfo.inst.Language = "Germany";
+                    break;
+                case SystemLanguage.Spanish:
+                    GameInfo.inst.Language = "Spain";
+                    break;
+                case SystemLanguage.Portuguese:
+                    GameInfo.inst.Language = "Portugal";
+                    break;
+                case SystemLanguage.Swedish:
+                    GameInfo.inst.Language = "Sweden";
+                    break;
+                case SystemLanguage.Italian:
+                    GameInfo.inst.Language = "Italy";
+                    break;
+                case SystemLanguage.Ukrainian:
+                    GameInfo.inst.Language = "ukr";
+                    break;
+                case SystemLanguage.Russian:
+                    GameInfo.inst.Language = "rus";
+                    break;
+                case SystemLanguage.Thai:
+                    GameInfo.inst.Language = "tha";
+                    break;
+                case SystemLanguage.Polish:
+                    GameInfo.inst.Language = "pol";
+                    break;
+                case SystemLanguage.French:
+                    GameInfo.inst.Language = "fra";
+                    break;
+                case SystemLanguage.Turkish:
+                    GameInfo.inst.Language = "tur";
+                    break;
+            }
+            if (GameInfo.inst.Language == "")
+            {
+                GameInfo.inst.Language = "English";
+            }
+            ServerSave();
+        }
+        else
+        {
+            string jsonData = Data;
+            byte[] bytes = System.Convert.FromBase64String(jsonData);
+            string reformat = System.Text.Encoding.UTF8.GetString(bytes);
+            serverdata = JsonConvert.DeserializeObject<ServerData>(reformat);
+
+            GameInfo.PlayerGold = serverdata.PlayerGold;
+            GameInfo.inst.CharacterIdx = serverdata.CharacterIdx;
+            GameInfo.inst.MapIdx = serverdata.MapIdx;
+            for (int i = 0; i < serverdata.Player_PowerUp.Count; i++)
+            {
+                GameInfo.inst.Player_PowerUp[i] = serverdata.Player_PowerUp[i];
+            }
+            for (int i = 0; i < serverdata.PlayerCardIdxs.Count; i++)
+            {
+                GameInfo.inst.PlayerCardIdxs[i] = serverdata.PlayerCardIdxs[i];
+            }
+            GameInfo.inst.PlayerCards = serverdata.PlayerCards;
+            GameInfo.inst.Language = serverdata.Language;
+            GameInfo.inst.IsAdGold = serverdata.IsAdGold;
+            GameInfo.inst.AdGoldTime = serverdata.AdGoldTime;
+            GameInfo.inst.IsAdCard = serverdata.IsAdCard;
+            GameInfo.inst.AdCardTime = serverdata.AdCardTime;
+            GameInfo.inst.PlayerCardMax = serverdata.PlayerCardMax;
+            GameInfo.inst.Daycom1 = serverdata.Daycom1;
+            GameInfo.inst.PlayerKill = serverdata.PlayerKill;
+            GameInfo.inst.Daycom2 = serverdata.Daycom2;
+            GameInfo.inst.Daycom3 = serverdata.Daycom3;
+            GameInfo.inst.DayCom2Int = serverdata.DayCom2Int;
+            GameInfo.inst.DayCom3Int = serverdata.DayCom3Int;
+
+            for (int i = 0; i < serverdata.CharacterActive.Count; i++)
+            {
+                GameInfo.inst.CharacterActive[i] = serverdata.CharacterActive[i];
+            }
+            for (int i = 0; i < serverdata.Player_Mission.Count; i++)
+            {
+                GameInfo.inst.Player_Mission[i] = serverdata.Player_Mission[i];
+            }
+            for (int i = 0; i < serverdata.PlayerMap.Count; i++)
+            {
+                GameInfo.inst.PlayerMap[i] = serverdata.PlayerMap[i];
+            }
+            GameInfo.inst.PlayerXpMax = csvData.PlayerExpMax[GameInfo.inst.PlayerLevel];
+            IsSave = true;
+            SceneManager.LoadScene("01_Loby_Main");
+        }
+    }
+
+    public void Testgo()
+    {
+        testFunc();
+        SceneManager.LoadScene("01_Loby_Main");
     }
     /*
     public IEnumerator LoadData()
@@ -440,7 +599,15 @@ public class ServerDataSystem : MonoBehaviour
     {
         if (IsSave)
         {
-        SaveData2();
+            if (GameInfo.inst.PcTestMode)
+            {
+                SaveData2asdasdasd();
+            }
+            else
+            {
+
+            ServerSave();
+            }
 
         }
     }

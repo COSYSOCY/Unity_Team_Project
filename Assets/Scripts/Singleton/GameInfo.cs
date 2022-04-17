@@ -36,13 +36,14 @@ public class CardInfo
 	public float CardStat_Real2;
 
 
-
 }
 public class GameInfo : MonoBehaviour
 {
 	public bool PcTestMode = false;
 	public bool isTestMode;
 
+	public string UserName;
+	public string Id;
 	public bool GameStart=false;
 
 	public static GameInfo inst;
