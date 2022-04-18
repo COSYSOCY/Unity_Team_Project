@@ -88,5 +88,14 @@ public class PowerUpManager : MonoBehaviour
         {
             ClickOb.GetComponent<Loby_PowerUpInfo>().MainLvText.text = ClickOb.GetComponent<Loby_PowerUpInfo>().Level + " / " + ClickOb.GetComponent<Loby_PowerUpInfo>().MaxLv;
         }
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
     }
 }

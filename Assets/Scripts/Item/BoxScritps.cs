@@ -23,10 +23,34 @@ public class BoxScritps : MonoBehaviour
     public int Gold = 0;
     public Text GoldText;
 
-    public int Cnt;
+    public GameObject goldeff;
+    public GameObject cardeff;
 
-    public void BoxFunc1()
+    public int Cnt;
+    public Animator boxani;
+
+
+
+    // »Ì±â
+    public UIManager uimanager;
+    public GameObject ob;
+    public Image[] ComBoxImage;
+    public Image[] ComImage;
+    public GameObject[] ComButton;
+    public GameObject ComLoading;
+    public int Comint;
+    public Animator[] ComBoxani;
+    public bool ComAd;
+    public bool ComNo=false;
+    public void BoxFunc1(int idx)
     {
+        if (idx==0)
+        {
+            Cnt = 1;
+        }
+        else
+        {
+
         float random = Random.Range(0.01f, 100f);
         float RandomCnt2 = 40;
         float RandomCnt3 = 20;
@@ -52,6 +76,7 @@ public class BoxScritps : MonoBehaviour
         {
             Cnt = 1;
         }
+        }
         CheckList.Clear();
         Time.timeScale = 0f;
         BoxImage.sprite = icon[1];
@@ -72,11 +97,14 @@ public class BoxScritps : MonoBehaviour
     }
     IEnumerator IBoxFunc(int cnt)
     {
-        
+        boxani.Play("Box1");
+        yield return new WaitForSecondsRealtime(1);
+        BoxImage.gameObject.transform.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
         for (int i = 0; i < cnt; i++)
         {
             yield return(RandomUp(i));
-            yield return null;
+
+                yield return null;
         }
         BoxUiOb2.SetActive(true);
         
@@ -101,6 +129,19 @@ public class BoxScritps : MonoBehaviour
             //yield return new WaitForSeconds(0.1f);
             yield return null;
         }
+    }
+    IEnumerator Effect2()
+    {
+        ComLoading.SetActive(true);
+        float a = 1f;
+        for (int i = 0; i < 50; i++)
+        {
+            a += 0.6f;
+            ComLoading.GetComponent<RectTransform>().localScale = new Vector3(a, a, a);
+            //yield return new WaitForSeconds(0.1f);
+            yield return null;
+        }
+        ComLoading.SetActive(false);
     }
     IEnumerator RandomUp(int Idx)
     {
@@ -156,7 +197,7 @@ public class BoxScritps : MonoBehaviour
             }
             if (Lv >= LvMax)
             {
-                int RandomGoldAdd = Random.Range(100, 201);
+                int RandomGoldAdd = Random.Range(30, 50);
                 Gold += RandomGoldAdd;
                 ImageNum = 143;
             }
@@ -178,7 +219,7 @@ public class BoxScritps : MonoBehaviour
         }
         else
         {
-            int RandomGoldAdd = Random.Range(100, 201);
+            int RandomGoldAdd = Random.Range(30, 50);
             Gold += RandomGoldAdd;
             ImageNum = 143;
             
@@ -195,5 +236,183 @@ public class BoxScritps : MonoBehaviour
        // MainSingleton.instance.playerinfo.Gold += Gold;
         MainSingleton.instance.uimanager.GoldUp(Gold);
         BoxUiOb1.SetActive(false);
+    }
+
+    public void BoxFunc2()
+    {
+        float random = Random.Range(0.01f, 100f);
+        float RandomCnt2 = 50; 
+        if(random >= RandomCnt2)
+        {
+            Instantiate(goldeff);
+        }
+        else
+        {
+            Instantiate(cardeff);            
+        }
+        
+    }
+
+    public void ComStart()
+    {
+        ob.SetActive(true);
+        for (int i = 0; i < ComBoxImage.Length; i++)
+        {
+            ComBoxImage[i].sprite = icon[1];
+            ComImage[i].transform.parent.gameObject.SetActive(false);
+        }
+        ComButton[0].SetActive(false);
+        ComButton[1].SetActive(false);
+        Comint = 999;
+        ComAd = false;
+        ComNo = false;
+    }
+    public void ComOpen(int idx)
+    {
+        if (ComNo)
+        {
+            return;
+        }
+        if (Comint!=idx)
+        {
+            Comint = idx;
+            ComButton[0].SetActive(false);
+            ComButton[1].SetActive(false);
+            ComNo = true;
+            StartCoroutine(ComOpenFunc(Comint));
+        }
+    }
+
+    IEnumerator ComOpenFunc(int idx)
+    {
+        
+        ComBoxani[idx].Play("Box1");
+        yield return new WaitForSecondsRealtime(1);
+        ComBoxImage[idx].gameObject.transform.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, 0);
+        
+        //¿­¾î
+
+
+
+        //yield return new WaitForSecondsRealtime(0.1f);
+        yield return Effect2();
+        ComSlotOpen(idx);
+        ExitOb.SetActive(true);
+
+        if (!ComAd)
+        {
+
+            ComButton[0].SetActive(true);
+        }
+        ComButton[1].SetActive(true);
+
+        ComBoxImage[idx].sprite = icon[0];
+
+    }
+
+    void ComSlotOpen(int Idx)
+    {
+        int Lv = 0;
+        int cardidx = 0;
+        float random = Random.Range(0.01f, 100f);
+        float RandomCnt1 = 30;
+        float RandomCnt2 = 30;
+        float RandomCnt3 = 5;
+        float RandomCnt4 = 1;
+        float RandomCnt5 = 0.1f;
+        int Imageicon = 0;
+        if (random <= RandomCnt5)
+        {
+            Lv = 5;
+            cardidx = GameInfo.inst.RandomCard(Lv);
+            Imageicon = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+            if (ComAd)
+            {
+            MainSingleton.instance.playerstat.playingCard_Bonus.Add(cardidx);
+            }
+            else
+            {
+            MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            }
+        }
+        else if (random <= RandomCnt4)
+        {
+            Lv = 4;
+            cardidx = GameInfo.inst.RandomCard(Lv);
+            Imageicon = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+            if (ComAd)
+            {
+                MainSingleton.instance.playerstat.playingCard_Bonus.Add(cardidx);
+            }
+            else
+            {
+                MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            }
+        }
+        else if (random <= RandomCnt3)
+        {
+            Lv = 3;
+            cardidx = GameInfo.inst.RandomCard(Lv);
+            Imageicon = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+            if (ComAd)
+            {
+                MainSingleton.instance.playerstat.playingCard_Bonus.Add(cardidx);
+            }
+            else
+            {
+                MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            }
+        }
+        else if (random <= RandomCnt2)
+        {
+            Lv = 2;
+            cardidx = GameInfo.inst.RandomCard(Lv);
+            Imageicon = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+            if (ComAd)
+            {
+                MainSingleton.instance.playerstat.playingCard_Bonus.Add(cardidx);
+            }
+            else
+            {
+                MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            }
+        }
+        else if (random <= RandomCnt1)
+        {
+            Lv = 1;
+            cardidx = GameInfo.inst.RandomCard(Lv);
+            Imageicon = GameInfo.inst.CardsInfo[cardidx].CardIconNum;
+            if (ComAd)
+            {
+                MainSingleton.instance.playerstat.playingCard_Bonus.Add(cardidx);
+            }
+            else
+            {
+                MainSingleton.instance.playerstat.playingCard.Add(cardidx);
+            }
+        }
+        else
+        {
+            Lv = 0;
+            Imageicon = 143;
+            MainSingleton.instance.playerstat.GoldPlus(300);
+        }
+
+
+        ComImage[Idx].sprite=IconManager.inst.Icons[Imageicon];
+        ComImage[Idx].transform.parent.gameObject.SetActive(true);
+
+    }
+    public void ComAdButton()
+    {
+        ComNo = false;
+        ComAd = true;
+        ComButton[0].SetActive(false);
+        ComButton[1].SetActive(false);
+    }
+    public void ComEndButton()
+    {
+        ob.SetActive(false);
+        uimanager.EndGame();
     }
 }

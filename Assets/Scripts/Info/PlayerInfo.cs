@@ -24,7 +24,7 @@ public class PlayerInfo : MonoBehaviour
     public int SkillMax;
     public int SkillItemMax;
     public int ADRe = 0;
-
+    public bool Clear = false;
 
 
 

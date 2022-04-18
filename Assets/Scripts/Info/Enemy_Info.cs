@@ -49,13 +49,6 @@ public class Enemy_Info : MonoBehaviour
         Enemy_Damage = csvData.MonsterDamage[Idx];
     }
 
-    private void OnEnable()
-    {
-        Hp = Hp_Max;
-        IsKn = false;
-        IsStun = false;
-        onhit = false;
-    }
 
     public void Damaged(float damage)
     {
@@ -108,6 +101,15 @@ public class Enemy_Info : MonoBehaviour
         {
         playerstatus.EnemyCnt--;
 
+        }
+        else
+        {
+            GameObject Effect = ObjectPooler.SpawnFromPool("Coinpower", transform.position, Quaternion.identity);
+        }
+
+        if (Idx==30 || Idx==31)
+        {
+            MainSingleton.instance.playerstat.GameClearFunc();
         }
         gameObject.SetActive(false);
         moveCheck = false;

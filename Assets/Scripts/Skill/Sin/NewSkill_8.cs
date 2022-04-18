@@ -14,6 +14,14 @@ public class NewSkill_8 : Skill_Ori
         {
 
         }
+        if (info.Lv == 8) // 8레벨이 될경우 실행
+        {
+            //8 레벨 획득
+            if (GameInfo.inst.Player_Mission[16] == 0)
+            {
+                GameInfo.inst.MissionGo(16);
+            }
+        }
     }
 
 
@@ -70,7 +78,7 @@ public class NewSkill_8 : Skill_Ori
 
             Collider[] Enemyss;
             bullet.transform.localScale = new Vector3(local, local, local);
-            Enemyss = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x * local, layermask);
+            Enemyss = Physics.OverlapSphere(bullet.transform.position, bullet.transform.lossyScale.x , layermask);
             if (Enemyss.Length > 0)
             {
                 for (int z = 0; z < Enemyss.Length; z++)

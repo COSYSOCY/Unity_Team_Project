@@ -34,7 +34,14 @@ public class NewSkill_2 : Skill_Ori
         {
 
         }
-        
+        if (info.Lv == 8) // 8레벨이 될경우 실행
+        {
+            //8 레벨 획득
+            if (GameInfo.inst.Player_Mission[9] == 0)
+            {
+                GameInfo.inst.MissionGo(9);
+            }
+        }
     }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트
@@ -90,15 +97,15 @@ public class NewSkill_2 : Skill_Ori
                       
                         if (Rhits[s].transform.gameObject.activeSelf)
                         {
-                            if (Rhits[i].transform.CompareTag("DeOb"))
-                            {
-                                Rhits[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
-                            }
-                            else
-                            {
+                            //if (Rhits[i].transform.CompareTag("DeOb"))
+                            //{
+                            //    Rhits[i].transform.GetComponent<DeObjectSystem>().Damaged(_Damage());
+                            //}
+                            //else
+                            //{
 
                             Rhits[s].transform.GetComponent<Enemy_Info>().Damaged(_Damage());
-                            }
+                            //
                         }
                     }
                 }

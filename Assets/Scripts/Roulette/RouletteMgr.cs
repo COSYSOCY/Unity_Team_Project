@@ -72,7 +72,17 @@ public class RouletteMgr : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         Result();
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         yield return new WaitForSeconds(2f);
+
         Loading.LoadScene("Main");
     }
 

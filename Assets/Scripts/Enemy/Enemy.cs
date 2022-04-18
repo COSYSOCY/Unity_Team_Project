@@ -53,11 +53,17 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
     }
-    public void CreateStart()
+    public void CreateStart(float Hpc=0f,float HpP=0f)
     {
+        float hp = info.Hp_Max + Hpc;
+        hp = hp + (hp * HpP * 0.01f);
         StartCoroutine(UpdateEnemy());
+        info.Hp = hp;
         info.moveCheck = true;
         info.nav.speed = info.Speed*0.1f;
+        info.IsKn = false;
+        info.IsStun = false;
+        info.onhit = false;
         if (!info.NoPosReset)
         {
 

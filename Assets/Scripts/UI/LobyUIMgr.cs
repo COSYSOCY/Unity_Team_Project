@@ -7,7 +7,7 @@ using TMPro;
 
 public class LobyUIMgr : MonoBehaviour
 {
-    
+
     public TextMeshProUGUI UserLevel;
     public Text UserXp;
     public Slider UserXpSlider;
@@ -34,24 +34,42 @@ public class LobyUIMgr : MonoBehaviour
 
     public GameObject[] langob;
 
+    //public TextMeshProUGUI killtext;
+
+    string log;
+
+    //public List<leaderboardInfo> leadrKill;
+    //public leaderboardInfo myrank;
+
+
+    // 랭킹
+
+    //public TextMeshProUGUI UserName;
+    //public TextMeshProUGUI UserRank;
 
 
 
     private void Start()
     {
 
-        
 
+        // 테스트
+        
+        // 테스트
         TextReset();
         LobyGoldAc();
         check();
         Time.timeScale = 1f;
         SoundManager.inst.BGMPlay(1);
         LangFunc();
-       ServerDataSystem.inst.SaveData2();
+        //ServerDataSystem.inst.ServerSave();
+        ServerDataSystem.inst.SaveData2asdasdasd();
+         
+        
+
     }
 
-
+    
 
     public void LangFunc()
     {
@@ -176,6 +194,15 @@ public class LobyUIMgr : MonoBehaviour
 
     public void LobyGoldAc()
     {
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         //UserLevel.text = GameInfo.inst.PlayerLevel.ToString();
         //UserXp.text = GameInfo.inst.PlayerXp.ToString()+"/"+GameInfo.inst.PlayerXpMax.ToString();
         //if (GameInfo.inst.PlayerXp == 0)
@@ -185,7 +212,7 @@ public class LobyUIMgr : MonoBehaviour
         //else
         //{
         //UserXpSlider.value = GameInfo.inst.PlayerXp / GameInfo.inst.PlayerXpMax;
-            
+
         //}
         LobyGoldText.text = GameInfo.PlayerGold.ToString("");
         //LobyPointText.text = GameInfo.PlayerPoint.ToString("");
@@ -250,6 +277,15 @@ public class LobyUIMgr : MonoBehaviour
 
         TextReset();
         LangFunc();
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
     }
     public void TextReset()
     {

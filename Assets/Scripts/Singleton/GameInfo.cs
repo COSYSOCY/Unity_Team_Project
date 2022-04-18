@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,13 +36,14 @@ public class CardInfo
 	public float CardStat_Real2;
 
 
-
 }
 public class GameInfo : MonoBehaviour
 {
 	public bool PcTestMode = false;
 	public bool isTestMode;
 
+	public string UserName;
+	public string Id;
 	public bool GameStart=false;
 
 	public static GameInfo inst;
@@ -52,7 +54,10 @@ public class GameInfo : MonoBehaviour
 	public bool PlayerDmg; //데미지표시 유무
 	public bool PlayerCoolUi; //쿨타임표시 유무
 	public static int PlayerGold; // 플레이어 골드
-	//public static int PlayerPoint; // 플레이어 보석
+	public int PlayerKill; // 플레이어 킬수
+
+	public int PlayerCardPickCnt; // 플레이어 뽑기 획수
+	public int PlayerCardMixCnt; // 플레이어 합성 횟수
 
 	public  int PlayerLevel; // 플레이어 레벨
 	public  int PlayerXp; // 플레이어 경험치
@@ -105,12 +110,54 @@ public class GameInfo : MonoBehaviour
 	public List<int> Card_Lv5;
 
 	//상점
-	public int AdGoldFreeMax; // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
-	public int AdCardFreeMax; // 하루 광고보면 카드 최대횟수 현재 서버로 저장해야함
+	 // 하루 광고보면 돈주는거 최대횟수 현재 서버로 저장해야함
+	 // 하루 광고보면 카드 최대횟수 현재 서버로 저장해야함
 							  //파워업
 	public List<int> Player_PowerUp;
 	public int Roulette = 0;
 
+	//
+	public List<int> Player_Mission;
+
+	//====== 시간관리
+	public DateTime Daycom1; // 일일보상
+	public DateTime Daycom2; // 연속보상
+	public DateTime Daycom3; // 월보상
+	
+	public int DayCom2Int;
+	public int DayCom3Int;
+
+	//===
+	//== 광고 3회
+	public bool[] IsAdGold;
+	public DateTime[] AdGoldTime=new DateTime[3];
+	public bool[] IsAdCard;
+	public DateTime[] AdCardTime=new DateTime[3];
+	public int AdGoldFreeMax()
+    {
+		int cnt = 0;
+        for (int i = 0; i < IsAdGold.Length; i++)
+        {
+            if (!IsAdGold[i])
+            {
+				cnt++;
+            }
+        }
+		return cnt;
+    }
+
+	public int AdCardFreeMax()
+    {
+		int cnt = 0;
+		for (int i = 0; i < IsAdCard.Length; i++)
+		{
+			if (!IsAdCard[i])
+			{
+				cnt++;
+			}
+		}
+		return cnt;
+	}
 
 	void Awake()
 	{
@@ -144,11 +191,7 @@ public class GameInfo : MonoBehaviour
 		PlayerXpMax = csvData.PlayerExpMax[PlayerLevel];
 		PlayerXpPlus(0);
 	}
-    public void TestFunc() //처음 할때 주는거 테스트중
-    {
-		AdGoldFreeMax = 3;
 
-	}
 
     public void CardCheck()
     {
@@ -243,5 +286,177 @@ public class GameInfo : MonoBehaviour
 
 	}
 
+	public int RandomCard(int Lv)
+    {
+		int random = UnityEngine.Random.Range(0, Cards_Lv(Lv).Count);
+		return random;
+	}
+
+	public void MissionGo(int idx)
+    {
+        if (Player_Mission[idx] ==1)
+        {
+			return;
+        }
+		Player_Mission[idx] = 1;
+		string s = "";
+		int check = csvData.MissionOrder[idx];
+		if (PcTestMode)
+        {
+			return;
+        }
+        switch (check)
+        {
+			case 0:
+				s = GPGSIds.achievement_first_play;
+				break;
+			case 1:
+				s = GPGSIds.achievement_blue_meadow_clear;
+				break;
+			case 2:
+				s = GPGSIds.achievement_desert_clear;
+				break;
+			case 3:
+				s = GPGSIds.achievement_desert_and_city_clear;
+				break;
+			case 4:
+				s = GPGSIds.achievement_ice_meadow_clear;
+				break;
+			case 5:
+				s = GPGSIds.achievement_open_card_number_1;
+				break;
+			case 6:
+				s = GPGSIds.achievement_open_only_4_cards;
+				break;
+			case 7:
+				s = GPGSIds.achievement_open_only_8_cards;
+				break;
+			case 8:
+				s = GPGSIds.achievement_level_10_achievement;
+				break;
+			case 9:
+				s = GPGSIds.achievement_level_50_achieved;
+				break;
+			case 10:
+				s = GPGSIds.achievement_level_100_achievement;
+				break;
+			case 11:
+				s = GPGSIds.achievement_achieve_the_first_100_kills;
+				break;
+			case 12:
+				s = GPGSIds.achievement_achieving_the_first_1000_kills;
+				break;
+			case 13:
+				s = GPGSIds.achievement_achieved_the_first_10000_kills;
+				break;
+			case 14:
+				s = GPGSIds.achievement_achieved_the_first_100000_kills;
+				break;
+			case 15:
+				s = GPGSIds.achievement_acquired_card_1;
+				break;
+			case 16:
+				s = GPGSIds.achievement_acquired_card_2;
+				break;
+			case 17:
+				s = GPGSIds.achievement_acquired_card_3;
+				break;
+			case 18:
+				s = GPGSIds.achievement_acquired_card_4;
+				break;
+			case 19:
+				s = GPGSIds.achievement_acquired_card_5;
+				break;
+			case 20:
+				s = GPGSIds.achievement_5_card_draws;
+				break;
+			case 21:
+				s = GPGSIds.achievement_100_card_draws;
+				break;
+			case 22:
+				s = GPGSIds.achievement_5_card_mix;
+				break;
+			case 23:
+				s = GPGSIds.achievement_100_card_mix;
+				break;
+			case 24:
+				s = GPGSIds.achievement_nuff_gun_levle_8;
+				break;
+			case 25:
+				s = GPGSIds.achievement_death_gun_levle_8;
+				break;
+			case 26:
+				s = GPGSIds.achievement_rail_gun_levle_8;
+				break;
+			case 27:
+				s = GPGSIds.achievement_magnetic_field_levle_8;
+				break;
+			case 28:
+				s = GPGSIds.achievement_flame_radiation_levle_8;
+				break;
+			case 29:
+				s = GPGSIds.achievement_bully_gun_levle_8;
+				break;
+			case 30:
+				s = GPGSIds.achievement_bumping_bombing_levle_8;
+				break;
+			case 31:
+				s = GPGSIds.achievement_duck_levle_8;
+				break;
+			case 32:
+				s = GPGSIds.achievement_brainberry_levle_8;
+				break;
+			case 33:
+				s = GPGSIds.achievement_repair_levle_8;
+				break;
+			case 34:
+				s = GPGSIds.achievement_circular_dora_levle_8;
+				break;
+			case 35:
+				s = GPGSIds.achievement_blocking_pillow_hall_levle_8;
+				break;
+			case 36:
+				s = GPGSIds.achievement_flame_ball_levle_8;
+				break;
+			case 37:
+				s = GPGSIds.achievement_reflecting_beet_levle_8;
+				break;
+			case 38:
+				s = GPGSIds.achievement_ice_bath_levle_8;
+				break;
+			case 39:
+				s = GPGSIds.achievement_blaze_staff_levle_8;
+				break;
+			case 40:
+				s = GPGSIds.achievement_dark_boom_levle_8;
+				break;
+			case 41:
+				s = GPGSIds.achievement_shooting_star_levle_8;
+				break;
+			case 42:
+				s = GPGSIds.achievement_tornado_levle_8;
+				break;
+			case 43:
+				s = GPGSIds.achievement_equalizer_levle_8;
+				break;
+
+
+
+
+			default:
+				break;
+        }
+        GPGSBinder.Inst.UnlockAchievement(s, success => {
+			if (success)
+            {
+
+			
+            }
+            else
+            {
+				Player_Mission[idx] = 0;
+			}
+		});
+	}
 
 }

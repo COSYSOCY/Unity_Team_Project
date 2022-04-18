@@ -20,7 +20,7 @@ public class NewSkill_0 : Skill_Ori
     public override void CreateFunc()
     {
         CreateUp = true;
-        //bulletname = "Bullet_0_1";
+        bulletname = "Bullet_0_1";
         //upScale = 0.5f;
         upDa = 1.5f;
         manager.FoucsOb[info.ActiveIdx].SetActive(true);
@@ -33,7 +33,14 @@ public class NewSkill_0 : Skill_Ori
         {
 
         }
-        
+        if (info.Lv == 8) // 8레벨이 될경우 실행
+        {
+            //8 레벨 획득
+            if (GameInfo.inst.Player_Mission[6] == 0 )
+            {
+                GameInfo.inst.MissionGo(6);
+            }
+        }
     }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트

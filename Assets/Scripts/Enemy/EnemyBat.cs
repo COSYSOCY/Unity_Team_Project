@@ -32,11 +32,21 @@ public class EnemyBat : MonoBehaviour
         // transform.parent = transform.parent.parent;
         //
     }
-    public void CreateStart()
+    public void CreateStart(float Hpc = 0f, float HpP = 0f)
     {
+        float hp = info.Hp_Max + Hpc;
+        hp = hp + (hp * HpP * 0.01f);
         StartCoroutine(UpdateEnemy());
         nav.speed = info.Speed*0.1f;
+        info.Hp = hp;
+        info.moveCheck = true;
+        info.nav.speed = info.Speed * 0.1f;
+        info.IsKn = false;
+        info.IsStun = false;
+        info.onhit = false;
     }
+
+
     void OnDisable()
     {
         nav.enabled = false;

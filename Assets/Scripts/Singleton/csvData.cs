@@ -39,6 +39,7 @@ public class csvData : MonoBehaviour
     public string dataPath_Card;
     public string dataPath_Map;
     public string dataPath_PowerUp;
+    public string dataPath_Mission;
 
     [SerializeField]
     public static List<Dictionary<string, object>> data;
@@ -204,11 +205,18 @@ public class csvData : MonoBehaviour
     public static List<float> MixPer = new List<float>();
 
 
+    public static List<int> MissionIconNum = new List<int>();
+    public static List<int> MissionInfoNum = new List<int>();
+    public static List<int> MissionGold = new List<int>();
+    public static List<int> MissionOrder= new List<int>();
+
+
 
     void Awake()
     {
         inst = this;
         Mix_Read();
+        Mission_Read();
         PowerUp_Read();
         Player_EXP_Read();
         Characters_Read();
@@ -220,6 +228,20 @@ public class csvData : MonoBehaviour
        Card_Read();
        Map_Read();
         GameInfo.inst.GameStart = true;
+    }
+    public void Mission_Read()
+    {
+        data = CSVReader.Read(dataPath_Mission);
+        for (int i = 0; i < data.Count; i++)
+        {
+            MissionIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
+            MissionInfoNum.Add(int.Parse(data[i]["텍스트번호"].ToString()));
+            MissionGold.Add(int.Parse(data[i]["골드"].ToString()));
+            MissionOrder.Add(int.Parse(data[i]["순서"].ToString()));
+
+
+            GameInfo.inst.Player_Mission.Add(0);
+        }
     }
     public void Mix_Read()
     {

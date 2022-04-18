@@ -43,7 +43,8 @@ public class PlayerStatus : MonoBehaviour
     public int shield = 0;
     public GameObject shiledOb;
     public GameObject shiledOb2;
-
+    public GameObject ComOb;
+    public GameObject BossOb;
 
 
 
@@ -300,6 +301,27 @@ public class PlayerStatus : MonoBehaviour
         XpSet();
         level.LevelFunc();
         charFunc();
+
+
+
+        if (GameInfo.inst.Player_Mission[4] == 0 && playerInfo.Lv >= 100)
+        {
+
+            GameInfo.inst.MissionGo(4);
+
+        }
+        else if (GameInfo.inst.Player_Mission[38] == 0 && playerInfo.Lv >= 10)
+        {
+
+            GameInfo.inst.MissionGo(38);
+
+        }
+        else if (GameInfo.inst.Player_Mission[39] == 0 && playerInfo.Lv >= 50)
+        {
+
+            GameInfo.inst.MissionGo(39);
+
+        }
     }
     public void XpSet()
     {
@@ -643,5 +665,38 @@ public class PlayerStatus : MonoBehaviour
         In++;
         yield return new WaitForSeconds(1);
         In--;
+    }
+    void ClearFunc()
+    {
+        GameObject[] Enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < Enemys.Length; i++)
+        {
+            Enemys[i].SetActive(false);
+        }
+    }
+
+    public void BossCreate()
+    {
+        StartCoroutine(IBossCreate());
+    }
+    IEnumerator IBossCreate()
+    {
+        BossOb.SetActive(true);
+        SoundManager.inst.SoundPlay(31);
+        yield return new WaitForSeconds(5);
+        BossOb.SetActive(false);
+    }
+
+    public void GameClearFunc()
+    {
+        playerInfo.Clear = true;
+        StartCoroutine(IGameClearFunc());
+    }
+    IEnumerator IGameClearFunc()
+    {
+        ClearFunc();
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 0f;
+        ComOb.SetActive(true);
     }
 }

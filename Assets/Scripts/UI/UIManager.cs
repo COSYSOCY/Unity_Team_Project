@@ -53,6 +53,33 @@ public class UIManager : MonoBehaviour
         {
             Kill200Func();
         }
+
+        // 100ų 2
+        if (GameInfo.inst.Player_Mission[2] == 0 && GameInfo.inst.PlayerKill >= 100)
+        {
+
+            GameInfo.inst.MissionGo(2);
+        }
+        //1000ų 3
+        if (GameInfo.inst.Player_Mission[3] == 0 && GameInfo.inst.PlayerKill >= 1000)
+        {
+
+            GameInfo.inst.MissionGo(3);
+        }
+
+
+        //10000ų 5
+        if (GameInfo.inst.Player_Mission[5] == 0 && GameInfo.inst.PlayerKill >= 10000)
+        {
+
+            GameInfo.inst.MissionGo(5);
+        }
+        //100000ų 32
+        if (GameInfo.inst.Player_Mission[32] == 0 && GameInfo.inst.PlayerKill >= 100000)
+        {
+
+            GameInfo.inst.MissionGo(32);
+        }
         //KillText.text =""+playerinfo.Kill;
     }
     void Kill200Func()

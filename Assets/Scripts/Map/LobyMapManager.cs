@@ -36,6 +36,23 @@ public class LobyMapManager : MonoBehaviour
         startmapsetting();
         MapSetting(MapIdx);
     }
+
+    IEnumerator Save30()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10);
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
+        }
+    }
     public void MapStart()
     {
         SelectNum = GameInfo.inst.MapIdx;
@@ -88,6 +105,15 @@ public class LobyMapManager : MonoBehaviour
     public void PlayBtn()
     {
         //SceneManager.LoadScene("Main");
+        if (GameInfo.inst.PcTestMode)
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+        }
+        else
+        {
+            ServerDataSystem.inst.SaveData2asdasdasd();
+            //ServerDataSystem.inst.ServerSave();
+        }
         Loading.LoadScene("Main");
     }
     public void moveButton(int i)
