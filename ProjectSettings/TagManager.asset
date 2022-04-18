@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - Enemy
+  - Item
+  - Pull
+  - Check
+  - MapRanObj
+  - Bullet
+  - ParentScrollManager
+  - NestedScrollManager
+  - CardManager
+  - CharManager
+  - Check2
+  - FxTemporaire
+  - Object
+  - DeOb
+  - Missile
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - Boss
+  - Object
+  - Post
+  - CharaPanel1
+  - CharaPanel2
+  - CharaPanel3
+  - CharaPanel4
+  - CharaPanel5
+  - CharaPanel6
+  - CharaPanel7
+  - CharaPanel8
+  - CharaPanel9
+  - CharaPanel10
+  - Player
+  - Map
+  - DeOb
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
