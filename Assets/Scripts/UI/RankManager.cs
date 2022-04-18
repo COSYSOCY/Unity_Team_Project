@@ -1,4 +1,3 @@
-using DocumentFormat.OpenXml.Spreadsheet;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using System.Collections;
@@ -41,24 +40,25 @@ public class RankManager : MonoBehaviour
         if (!GameInfo.inst.PcTestMode)
         {
             GPGSBinder.Inst.ReportLeaderboard(GPGSIds.leaderboard_killcnt, GameInfo.inst.PlayerKill, success => log = $"{success}");
-            Debug.Log(log);
+ 
             UserName.text = GameInfo.inst.UserName;
             killtext.text = GameInfo.inst.PlayerKill.ToString();
             //string g= PlayGamesPlatform.Instance.localUser.
             
             //UserRank.text = Social.LoadScores(GPGSIds.leaderboard_killcnt,success=> { };
         }
-        Debug.Log(PlayGamesPlatform.Instance.localUser.id);
-        Debug.Log(GameInfo.inst.Id);
+
         GPGSBinder.Inst.LoadAllLeaderboardArray(GPGSIds.leaderboard_killcnt, Score =>
         {
             MykillScore = Score;
             for (int i = 0; i < Score.Length; i++)
             {
+        Debug.Log(Score[i].userID);
+        Debug.Log(GameInfo.inst.Id);
                 //if (Score[i].userID== PlayGamesPlatform.Instance.localUser.id)
-                if (Score[i].userID == GameInfo.inst.Id)
+                if (Score[i].userID.ToString() == GameInfo.inst.Id)
                 {
-                    UserRank.text = i.ToString();
+                    UserRank.text = (i+1).ToString();
                 }
             }
            // log = "";
@@ -91,12 +91,13 @@ public class RankManager : MonoBehaviour
                                 username.Add(profile[i].userName);
                             }
                         });
-                        IUserProfile aaa = Social.localUser;
+                        
 
                         for (int i = 0; i < scores.Length; i++)
                     {
 
                             GameObject rank = Instantiate(RankPrefab, parent);
+                            rank.SetActive(true);
                             if (i == 0)
                             {
                                 rank.transform.GetChild(0).GetComponent<Image>().sprite = icons[0];
@@ -114,7 +115,8 @@ public class RankManager : MonoBehaviour
                             }
                             else
                             {
-                                rank.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = scores[i].rank.ToString();
+                                //rank.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = scores[i].rank.ToString();
+                                rank.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = (i+1).ToString();
                                 rank.transform.GetChild(1).gameObject.SetActive(true);
                             }
 
