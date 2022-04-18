@@ -38,7 +38,7 @@ public class NewSkill_0 : Skill_Ori
             //8 ·¹º§ È¹µæ
             if (GameInfo.inst.Player_Mission[6] == 0 )
             {
-                GameInfo.inst.Player_Mission[6] = 1;
+                GameInfo.inst.MissionGo(6);
             }
         }
     }

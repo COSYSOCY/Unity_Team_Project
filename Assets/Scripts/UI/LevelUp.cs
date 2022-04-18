@@ -35,7 +35,7 @@ public class LevelUp : MonoBehaviour
            .Builder()
            .SetTestDeviceIds(new List<string>() 
            {
-               "44990154B448482F" 
+               "44990154B448482F"
            }) // test Device ID
            .build();
 

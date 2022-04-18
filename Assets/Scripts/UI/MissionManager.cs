@@ -30,7 +30,15 @@ public class MissionManager : MonoBehaviour
             missionOb.Add(mission);
             loby.TestList.Add(mission.transform.GetChild(3).transform.GetComponent<Text>());
         }
+        Order();
         Check();
+    }
+    public void Order()
+    {
+        for (int i = 0; i < missionOb.Count; i++)
+        {
+            missionOb[i].transform.SetSiblingIndex(csvData.MissionOrder[i]+1);
+        }
     }
     public void show()
     {

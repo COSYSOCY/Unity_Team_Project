@@ -832,12 +832,25 @@ public class CardManager : MonoBehaviour
         //4¼º È¹µæ 11
         if (GameInfo.inst.Player_Mission[11] == 0 && CardLv == 4)
         {
-            GameInfo.inst.Player_Mission[11] = 1;
+            GameInfo.inst.MissionGo(11);
+
         }
         //5¼º È¹µæ 8
-        if (GameInfo.inst.Player_Mission[8] == 0 && CardLv == 5)
+        else if (GameInfo.inst.Player_Mission[8] == 0 && CardLv == 5)
         {
-            GameInfo.inst.Player_Mission[8] = 1;
+            GameInfo.inst.MissionGo(8);
+        }
+        else if (GameInfo.inst.Player_Mission[33] == 0 && CardLv == 1)
+        {
+            GameInfo.inst.MissionGo(33);
+        }
+        else if (GameInfo.inst.Player_Mission[34] == 0 && CardLv == 2)
+        {
+            GameInfo.inst.MissionGo(34);
+        }
+        else if (GameInfo.inst.Player_Mission[35] == 0 && CardLv == 3)
+        {
+            GameInfo.inst.MissionGo(35);
         }
     }
 
@@ -1099,6 +1112,15 @@ public class CardManager : MonoBehaviour
         //SizeSet();
         //CardNumReset();
         //CardCheck();
+        GameInfo.inst.PlayerCardMixCnt++;
+        if (GameInfo.inst.Player_Mission[42] == 0&& GameInfo.inst.PlayerCardMixCnt>=5)
+        {
+            GameInfo.inst.MissionGo(42);
+        }
+        else if (GameInfo.inst.Player_Mission[43] == 0 && GameInfo.inst.PlayerCardMixCnt >= 100)
+        {
+            GameInfo.inst.MissionGo(43);
+        }
     }
 
     IEnumerator Effect()
@@ -1142,7 +1164,15 @@ public class CardManager : MonoBehaviour
             //¹Ì¼Ç Ä«µåÄ­ ¿­±â 1
             if (GameInfo.inst.Player_Mission[1] == 0 && GameInfo.inst.PlayerCardMax >= 1)
             {
-                GameInfo.inst.Player_Mission[1] = 1;
+                GameInfo.inst.MissionGo(1);
+            }
+            else if (GameInfo.inst.Player_Mission[36] == 0 && GameInfo.inst.PlayerCardMax >= 4)
+            {
+                GameInfo.inst.MissionGo(36);
+            }
+            else if (GameInfo.inst.Player_Mission[37] == 0 && GameInfo.inst.PlayerCardMax >= 8)
+            {
+                GameInfo.inst.MissionGo(37);
             }
         }
     }

@@ -89,6 +89,8 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.DayCom2Int = GameInfo.inst.DayCom2Int;
         serverdata.DayCom3Int = GameInfo.inst.DayCom3Int;
         serverdata.Player_Mission = GameInfo.inst.Player_Mission;
+        serverdata.PlayerCardPickCnt = GameInfo.inst.PlayerCardPickCnt;
+        serverdata.PlayerCardMixCnt = GameInfo.inst.PlayerCardMixCnt;
 
 
 
@@ -127,7 +129,8 @@ public class ServerDataSystem : MonoBehaviour
         serverdata.DayCom2Int = GameInfo.inst.DayCom2Int;
         serverdata.DayCom3Int = GameInfo.inst.DayCom3Int;
         serverdata.Player_Mission = GameInfo.inst.Player_Mission;
-
+        serverdata.PlayerCardPickCnt = GameInfo.inst.PlayerCardPickCnt;
+        serverdata.PlayerCardMixCnt = GameInfo.inst.PlayerCardMixCnt;
 
 
 
@@ -273,7 +276,8 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.Daycom3 = serverdata.Daycom3;
             GameInfo.inst.DayCom2Int = serverdata.DayCom2Int;
             GameInfo.inst.DayCom3Int = serverdata.DayCom3Int;
-
+            GameInfo.inst.PlayerCardPickCnt = serverdata.PlayerCardPickCnt;
+            GameInfo.inst.PlayerCardMixCnt = serverdata.PlayerCardMixCnt;
 
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
             {
@@ -395,6 +399,8 @@ public class ServerDataSystem : MonoBehaviour
             GameInfo.inst.Daycom3 = serverdata.Daycom3;
             GameInfo.inst.DayCom2Int = serverdata.DayCom2Int;
             GameInfo.inst.DayCom3Int = serverdata.DayCom3Int;
+            GameInfo.inst.PlayerCardPickCnt = serverdata.PlayerCardPickCnt;
+            GameInfo.inst.PlayerCardMixCnt = serverdata.PlayerCardMixCnt;
 
             for (int i = 0; i < serverdata.CharacterActive.Count; i++)
             {
@@ -646,6 +652,7 @@ public class ServerData
     public int DayCom2Int;
     public int DayCom3Int;
     public List<int> Player_Mission;
-
+    public int PlayerCardPickCnt; // 플레이어 뽑기 획수
+    public int PlayerCardMixCnt; // 플레이어 합성 횟수
 }
 

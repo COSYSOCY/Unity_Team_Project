@@ -22,7 +22,16 @@ public class Start_00 : MonoBehaviour
         }
         else
         {
-            GPGSBinder.Inst.Login((success, localUser) => Check(success));
+            GPGSBinder.Inst.Login((success, localUser) => {
+                Check(success);
+                if (success)
+                {
+                    GameInfo.inst.UserName = localUser.userName;
+                    GameInfo.inst.Id = localUser.id;
+                }
+                });
+
+
         }
     }
     public void Logic()
