@@ -456,6 +456,16 @@ public class GameInfo : MonoBehaviour
             {
 				Player_Mission[idx] = 0;
 			}
+
+			if (GameInfo.inst.PcTestMode)
+			{
+				ServerDataSystem.inst.SaveData2asdasdasd();
+			}
+			else
+			{
+				ServerDataSystem.inst.SaveData2asdasdasd();
+				//ServerDataSystem.inst.ServerSave();
+			}
 		});
 	}
 

@@ -1174,6 +1174,15 @@ public class CardManager : MonoBehaviour
             {
                 GameInfo.inst.MissionGo(37);
             }
+            if (GameInfo.inst.PcTestMode)
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+            }
+            else
+            {
+                ServerDataSystem.inst.SaveData2asdasdasd();
+                //ServerDataSystem.inst.ServerSave();
+            }
         }
     }
 }

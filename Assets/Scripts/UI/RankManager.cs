@@ -38,31 +38,28 @@ public class RankManager : MonoBehaviour
 
     IEnumerator startFunc()
     {
+        int Ch = 0;
+        yield return new WaitForSeconds(1);
         if (GameInfo.inst.PcTestMode)
         {
             yield break;
         }
 
-            GPGSBinder.Inst.ReportLeaderboard(GPGSIds.leaderboard_killcnt, GameInfo.inst.PlayerKill, success => log = $"{success}");
+            GPGSBinder.Inst.ReportLeaderboard(GPGSIds.leaderboard_killcnt, GameInfo.inst.PlayerKill, success => Ch=1);
         UserName.text = GameInfo.inst.UserName;
         killtext.text = GameInfo.inst.PlayerKill.ToString();
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => Ch == 1);
+        
         GPGSBinder.Inst.LoadAllLeaderboardArray(GPGSIds.leaderboard_killcnt, Score =>
         {
             MykillScore = Score;
             for (int i = 0; i < Score.Length; i++)
             {
-                //Debug.Log(Score[i].userID);
-                //Debug.Log(GameInfo.inst.Id);
-                //if (Score[i].userID== PlayGamesPlatform.Instance.localUser.id)
                 if (Score[i].userID.ToString() == GameInfo.inst.Id)
                 {
                     UserRank.text = (i + 1).ToString();
                 }
             }
-            // log = "";
-            // for (int i = 0; i < scores.Length; i++)
-            //  log += $"{i}, {scores[i].rank}, {scores[i].value}, {scores[i].userID}, {scores[i].date}\n";
         });
 
 
@@ -120,7 +117,7 @@ public class RankManager : MonoBehaviour
 
 
                             // string name = "";
-                            rank.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = scores[i].userID.ToString();
+                            //rank.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Test";
                             //rank.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = username[i];
 
                             rank.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = scores[i].value.ToString();
