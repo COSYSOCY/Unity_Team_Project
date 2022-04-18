@@ -208,6 +208,7 @@ public class csvData : MonoBehaviour
     public static List<int> MissionIconNum = new List<int>();
     public static List<int> MissionInfoNum = new List<int>();
     public static List<int> MissionGold = new List<int>();
+    public static List<int> MissionOrder= new List<int>();
 
 
 
@@ -236,6 +237,7 @@ public class csvData : MonoBehaviour
             MissionIconNum.Add(int.Parse(data[i]["아이콘번호"].ToString()));
             MissionInfoNum.Add(int.Parse(data[i]["텍스트번호"].ToString()));
             MissionGold.Add(int.Parse(data[i]["골드"].ToString()));
+            MissionOrder.Add(int.Parse(data[i]["순서"].ToString()));
 
 
             GameInfo.inst.Player_Mission.Add(0);

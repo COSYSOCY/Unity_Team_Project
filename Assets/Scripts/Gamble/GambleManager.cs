@@ -149,6 +149,16 @@ public class GambleManager : MonoBehaviour
         //{
         //    gambleob.SetActive(false);
         //}
+
+        GameInfo.inst.PlayerCardPickCnt++;
+        if (GameInfo.inst.Player_Mission[40] == 0 && GameInfo.inst.PlayerCardPickCnt >= 5)
+        {
+            GameInfo.inst.MissionGo(40);
+        }
+        else if (GameInfo.inst.Player_Mission[41] == 0 && GameInfo.inst.PlayerCardPickCnt >= 100)
+        {
+            GameInfo.inst.MissionGo(41);
+        }
     }
 
     IEnumerator Effect()

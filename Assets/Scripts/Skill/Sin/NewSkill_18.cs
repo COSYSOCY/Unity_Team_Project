@@ -32,7 +32,14 @@ public class NewSkill_18 : Skill_Ori
         {
 
         }
-
+        if (info.Lv == 8) // 8레벨이 될경우 실행
+        {
+            //8 레벨 획득
+            if (GameInfo.inst.Player_Mission[26] == 0)
+            {
+                GameInfo.inst.MissionGo(26);
+            }
+        }
     }
 
     IEnumerator Skill_Update() // 실질적으로 실행되는 스크립트

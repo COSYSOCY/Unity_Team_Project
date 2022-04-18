@@ -34,9 +34,9 @@ public class NewSkill_5 : Skill_Ori
         if (info.Lv == 8) // 8레벨이 될경우 실행
         {
             //8 레벨 획득
-            if (GameInfo.inst.Player_Mission[10] == 0)
+            if (GameInfo.inst.Player_Mission[13] == 0)
             {
-                GameInfo.inst.Player_Mission[10] = 1;
+                GameInfo.inst.MissionGo(13);
             }
         }
     }

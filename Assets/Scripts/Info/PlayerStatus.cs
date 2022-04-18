@@ -301,6 +301,27 @@ public class PlayerStatus : MonoBehaviour
         XpSet();
         level.LevelFunc();
         charFunc();
+
+
+
+        if (GameInfo.inst.Player_Mission[4] == 0 && playerInfo.Lv >= 100)
+        {
+
+            GameInfo.inst.MissionGo(4);
+
+        }
+        else if (GameInfo.inst.Player_Mission[38] == 0 && playerInfo.Lv >= 10)
+        {
+
+            GameInfo.inst.MissionGo(38);
+
+        }
+        else if (GameInfo.inst.Player_Mission[39] == 0 && playerInfo.Lv >= 50)
+        {
+
+            GameInfo.inst.MissionGo(39);
+
+        }
     }
     public void XpSet()
     {

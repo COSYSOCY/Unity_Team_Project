@@ -31,7 +31,14 @@ public class NewSkill_16 : Skill_Ori
         {
 
         }
-        
+        if (info.Lv == 8) // 8레벨이 될경우 실행
+        {
+            //8 레벨 획득
+            if (GameInfo.inst.Player_Mission[24] == 0)
+            {
+                GameInfo.inst.MissionGo(24);
+            }
+        }
     }
     float damage()
     {

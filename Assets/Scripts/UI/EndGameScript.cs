@@ -47,6 +47,24 @@ public class EndGameScript : MonoBehaviour
             cardidx = GameInfo.inst.RandomCard(CardLv);
             MainSingleton.instance.playerstat.playingCard.Add(cardidx);
             gold += Random.Range(100, 300);
+
+
+            if (GameInfo.inst.Player_Mission[28] == 0&&GameInfo.inst.MapIdx==0)
+            {
+                GameInfo.inst.MissionGo(28);
+            }
+            else if (GameInfo.inst.Player_Mission[29] == 0 && GameInfo.inst.MapIdx == 1)
+            {
+                GameInfo.inst.MissionGo(29);
+            }
+            else if (GameInfo.inst.Player_Mission[30] == 0 && GameInfo.inst.MapIdx == 2)
+            {
+                GameInfo.inst.MissionGo(30);
+            }
+            else if (GameInfo.inst.Player_Mission[31] == 0 && GameInfo.inst.MapIdx ==3)
+            {
+                GameInfo.inst.MissionGo(31);
+            }
         }
         AddGold = gold;
         AddGold = AddGold * (f * 0.01f);
@@ -122,33 +140,9 @@ public class EndGameScript : MonoBehaviour
         // 첫 플레이 0
         if (GameInfo.inst.Player_Mission[0] == 0)
         {
-            GameInfo.inst.Player_Mission[0] = 1;
+            GameInfo.inst.MissionGo(0);
         }
-        // 100킬 2
-        if (GameInfo.inst.Player_Mission[2]==0 && GameInfo.inst.PlayerKill >=100)
-        {
-            GameInfo.inst.Player_Mission[2] = 1;
-        }
-        //1000킬 3
-        if (GameInfo.inst.Player_Mission[3] == 0 && GameInfo.inst.PlayerKill >= 1000)
-        {
-            GameInfo.inst.Player_Mission[3] = 1;
-        }
-        //1000킬 3
-        if (GameInfo.inst.Player_Mission[3] == 0 && GameInfo.inst.PlayerKill >= 1000)
-        {
-            GameInfo.inst.Player_Mission[3] = 1;
-        }
-        //100레벨 달성 4
-        if (GameInfo.inst.Player_Mission[4] == 0 && MainSingleton.instance.playerinfo.Lv>=100)
-        {
-            GameInfo.inst.Player_Mission[4] = 1;
-        }
-        //10000킬 5
-        if (GameInfo.inst.Player_Mission[5] == 0 && GameInfo.inst.PlayerKill >= 10000)
-        {
-            GameInfo.inst.Player_Mission[5] = 1;
-        }
+
 
     }
 
