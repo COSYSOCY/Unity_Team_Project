@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb17df47dd3e906438cef2c4dd35205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PcTestMode: 1
+  PcTestMode: 0
   isTestMode: 1
   UserName: 
   Id: 

@@ -6,6 +6,7 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.BasicApi.Events;
+using UnityEngine.SocialPlatforms;
 
 public class GPGSBinder
 {
@@ -23,7 +24,10 @@ public class GPGSBinder
         PlayGamesPlatform.Instance.Events;
 
 
+    void test1()
+    {
 
+    }
     void Init()
     {
         var config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
