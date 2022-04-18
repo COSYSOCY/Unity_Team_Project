@@ -301,6 +301,10 @@ public class GameInfo : MonoBehaviour
 		Player_Mission[idx] = 1;
 		string s = "";
 		int check = csvData.MissionOrder[idx];
+		if (PcTestMode)
+        {
+			return;
+        }
         switch (check)
         {
 			case 0:
