@@ -58,6 +58,12 @@ public class RankManager : MonoBehaviour
                 if (Score[i].userID.ToString() == GameInfo.inst.Id)
                 {
                     UserRank.text = (i + 1).ToString();
+                    long kill = Score[i].value;
+                    if (GameInfo.inst.PlayerKill < kill)
+                    {
+                        GameInfo.inst.PlayerKill = (int)kill;
+                        killtext.text = GameInfo.inst.PlayerKill.ToString();
+                    }
                 }
             }
         });
