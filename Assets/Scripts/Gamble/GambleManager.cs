@@ -49,8 +49,8 @@ public class GambleManager : MonoBehaviour
             else
             {
 
+            ShopManager.rewardAd2.Show();
             ShopManager.LoadRewardAd2();
-            ShopManager.rewardAd.Show();
             }
         }
         

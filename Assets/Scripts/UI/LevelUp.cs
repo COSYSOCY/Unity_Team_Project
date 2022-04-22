@@ -31,17 +31,15 @@ public class LevelUp : MonoBehaviour
     
     private void Start()
     {
-        var requestConfiguration = new RequestConfiguration
-           .Builder()
-           .SetTestDeviceIds(new List<string>() 
-           {
-               "44990154B448482F"
-           }) // test Device ID
-           .build();
+        //        var requestConfiguration = new RequestConfiguration
+        //.Builder()
+        //.SetTestDeviceIds(new List<string>() { "1DF7B7CC05014E8" }) // test Device ID
+        //.build();
 
-        MobileAds.SetRequestConfiguration(requestConfiguration);
-
+        //        MobileAds.SetRequestConfiguration(requestConfiguration);
         LoadFrontAd();
+       // LoadRewardAd();
+        LoadRewardAd2();
         //LoadRewardAd();
     }
     //private void Update()
@@ -488,8 +486,10 @@ public class LevelUp : MonoBehaviour
         }
         else
         {
-            LoadRewardAd(0);
-            rewardAd.Show();
+             frontAd.Show();
+            //rewardAd1.Show();
+           // LoadRewardAd();
+            LoadFrontAd();
         }
         
         //ShowRewardAd();
@@ -507,7 +507,13 @@ public class LevelUp : MonoBehaviour
         frontAd.LoadAd(GetAdRequest());
         frontAd.OnAdClosed += (sender, e) =>
         {
-            //Debug.Log("전면광고 성공");
+            //Debug.Log("전면 성공");
+            IsShow = true;
+            ShowImage.SetActive(false);
+            ShowText.SetActive(false);
+            Adicon.SetActive(false);
+
+            Time.timeScale = 0f;
         };
     }
 
@@ -523,16 +529,15 @@ public class LevelUp : MonoBehaviour
     #region 리워드 광고
     const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
     const string rewardID = "ca-app-pub-9521969151385232/8252088014";
-    RewardedAd rewardAd;
+    RewardedAd rewardAd1;
+    RewardedAd rewardAd2;
 
 
-    void LoadRewardAd(int i)
+    void LoadRewardAd()
     {
-        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
-        rewardAd.LoadAd(GetAdRequest());
-        if (i == 0)
-        {
-                rewardAd.OnUserEarnedReward += (sender, e) =>
+        rewardAd1 = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd1.LoadAd(GetAdRequest());
+        rewardAd1.OnUserEarnedReward += (sender, e) =>
                 {
                     //Debug.Log("리워드 성공");
                     IsShow = true;
@@ -542,15 +547,20 @@ public class LevelUp : MonoBehaviour
 
                     Time.timeScale = 0f;
                 };
-        }
-        else if (i==1)
-        {
-            rewardAd.OnUserEarnedReward += (sender, e) =>
+
+
+
+    }
+    void LoadRewardAd2()
+    {
+        rewardAd2 = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd2.LoadAd(GetAdRequest());
+            rewardAd2.OnUserEarnedReward += (sender, e) =>
             {
                 Time.timeScale = 1f;
                 StartCoroutine(MainSingleton.instance.playerstat.AdIn());
             };
-        }
+        
 
     }
     public void ADRFunc()
@@ -563,8 +573,8 @@ public class LevelUp : MonoBehaviour
         else
         {
 
-            LoadRewardAd(1);
-        rewardAd.Show();
+        rewardAd2.Show();
+            LoadRewardAd2();
         }
     }
     //public void ShowRewardAd(int i)

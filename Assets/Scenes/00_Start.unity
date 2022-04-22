@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PcTestMode: 0
-  isTestMode: 0
+  isTestMode: 1
   UserName: 
   Id: 
   GameStart: 0
