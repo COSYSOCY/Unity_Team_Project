@@ -9788,6 +9788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Warrior-Black
       objectReference: {fileID: 0}
+    - target: {fileID: 120804, guid: 90e560a18c257c04cb2560767e8e843f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 460164, guid: 90e560a18c257c04cb2560767e8e843f, type: 3}
       propertyPath: m_RootOrder
       value: 0

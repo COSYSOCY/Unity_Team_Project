@@ -9592,7 +9592,7 @@ GameObject:
   - component: {fileID: 4658789597888100910}
   - component: {fileID: 5008390881065307629}
   m_Layer: 6
-  m_Name: Enemy_Bin 19
+  m_Name: Enemy_Bin 20
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
