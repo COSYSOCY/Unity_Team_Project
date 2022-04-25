@@ -37,8 +37,8 @@ public class LevelUp : MonoBehaviour
         //.build();
 
         //        MobileAds.SetRequestConfiguration(requestConfiguration);
-        LoadFrontAd();
-       // LoadRewardAd();
+        //LoadFrontAd();
+       LoadRewardAd();
         LoadRewardAd2();
         //LoadRewardAd();
     }
@@ -486,10 +486,10 @@ public class LevelUp : MonoBehaviour
         }
         else
         {
-             frontAd.Show();
-            //rewardAd1.Show();
-           // LoadRewardAd();
-            LoadFrontAd();
+             //frontAd.Show();
+            rewardAd1.Show();
+            LoadRewardAd();
+           // LoadFrontAd();
         }
         
         //ShowRewardAd();

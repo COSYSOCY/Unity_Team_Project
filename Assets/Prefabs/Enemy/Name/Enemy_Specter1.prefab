@@ -9784,6 +9784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9210920498078887656}
     m_Modifications:
+    - target: {fileID: 8548725443824041179, guid: 03c813d020433f849b063c06e022ff45, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8548725443831320241, guid: 03c813d020433f849b063c06e022ff45, type: 3}
       propertyPath: m_Name
       value: SpecterPBRDefault

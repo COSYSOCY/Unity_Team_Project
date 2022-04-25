@@ -9784,6 +9784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9210920498078887656}
     m_Modifications:
+    - target: {fileID: 8672787908851178254, guid: d7aa467cc2d06614c81778313afa4825, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8672787908860700878, guid: d7aa467cc2d06614c81778313afa4825, type: 3}
       propertyPath: m_Name
       value: Spider

@@ -111,6 +111,8 @@ public class NewSkill_8 : Skill_Ori
         pos.y = 1;
         float local = _AtRange();
         List<Collider> Enemys = Physics.OverlapSphere(Player.transform.position, 20f, layermask).ToList();
+        if (Enemys.Count>0)
+        {
 
             for (int i = 0; i < _BulletCnt(); i++)
             {
@@ -120,16 +122,16 @@ public class NewSkill_8 : Skill_Ori
             target.GetComponent<Enemy_Info>().Damaged(_Damage());
                     bullet.transform.localScale = new Vector3(local, local, local);
 
-            if (Enemys.Count ==1)
+            if (Enemys.Count >1)
             {
-                yield break;
-            }
                 Enemys.RemoveAt(ran);
+            }
 
 
             }
 
         yield return null;
+        }
         
     }
 

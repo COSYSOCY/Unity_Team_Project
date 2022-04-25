@@ -10212,6 +10212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumble
       objectReference: {fileID: 0}
+    - target: {fileID: 3925056490120305758, guid: eb44c0459dbc5ac4a8df592ecacbead3, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb44c0459dbc5ac4a8df592ecacbead3, type: 3}
 --- !u!4 &8744891557746153217 stripped
