@@ -59,21 +59,11 @@ public class PlayerMoving : MonoBehaviour, IPointerDownHandler,
             while (true)
             {
                 player.Translate(move * playerinfo._Speed()*0.1f * Time.deltaTime, Space.World);
-                //Vector3 pos=player.position;
-                //pos.y = 0;
-                //player.position = pos;
-                //player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(move), 20 * Time.deltaTime);
                 if (move != Vector3.zero)
                     player.rotation = Quaternion.LookRotation(move);
 
-
-
                 yield return null;
             }
-        }
-        else
-        {
-            
         }
     }
 
