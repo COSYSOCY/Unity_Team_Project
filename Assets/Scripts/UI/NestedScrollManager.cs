@@ -8,11 +8,8 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 {
     public Scrollbar scrollbar;
     public Transform contentTr;
-
     public Slider tabSlider;
-
     public RectTransform[] BtnRect, BtnImageRect;
-
     const int SIZE = 5;
     float[] pos = new float[SIZE];
     float distance, targetPos, curPos;
@@ -23,21 +20,12 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     private void Start()
     {
-
-        //�Ÿ��� ���� 0~1�� pos����
-
-        //거리에 따라 0~1인 pos대입
-
         distance = 1f / (SIZE - 1f);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
     }
 
     float SetPos()
     {
-
-        //���� �Ÿ��� �������� ����� ��ġ�� ��ȯ
-
-        //절반 거리를 기준으로 가까운 위치를 반환
 
         for (int i = 0; i < SIZE; i++)
             if(scrollbar.value <pos[i] + distance * 0.5f && scrollbar.value > pos[i] - distance *0.5f)
@@ -59,26 +47,20 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
         targetPos = SetPos();
 
 
-        //���ݰŸ��� �����ʾƵ� ���콺�� ������ �̵��ϸ�
         if(curPos == targetPos)
         {            
-            //  <<<��ũ���� �������� ������ �̵��� ��ǥ�� �ϳ� ����
             if(eventData.delta.x > 18 && curPos - distance >= 0)
             {
                 --targetIndex;
                 targetPos = curPos - distance;
             }
 
-            // >>>��ũ���� ���������� ������ �̵��� ��ǥ
             else if (eventData.delta.x < -18 && curPos + distance <= 1.01f)
             {
                 ++targetIndex;
                 targetPos = curPos + distance;
             }
         }
-
-        //��ǥ�� ������ũ���̰�, ������ �ŰܿԴٸ� ������ũ���� ������ �ø�
-        VerticalScrollUp();
 
         
     }

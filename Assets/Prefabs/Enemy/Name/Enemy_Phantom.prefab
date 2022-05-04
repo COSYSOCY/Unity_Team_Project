@@ -9784,6 +9784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9210920498078887656}
     m_Modifications:
+    - target: {fileID: 2611149553086614375, guid: add7e67fb68b0d54a9d9893bd0356223, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2611149553090704807, guid: add7e67fb68b0d54a9d9893bd0356223, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

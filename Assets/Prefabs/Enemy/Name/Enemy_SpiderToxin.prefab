@@ -10480,6 +10480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider Toxin
       objectReference: {fileID: 0}
+    - target: {fileID: 8754938060839623804, guid: 79f78ce4b8eba2a4c91a83e3d0133dbf, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f78ce4b8eba2a4c91a83e3d0133dbf, type: 3}
 --- !u!4 &8631837246912787504 stripped

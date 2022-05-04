@@ -25,6 +25,13 @@ public class ShopManager : MonoBehaviour
     }
     void Start()
     {
+
+        var requestConfiguration = new RequestConfiguration
+   .Builder()
+   .SetTestDeviceIds(new List<string>() { "1DF7B7CC05014E8" }) // test Device ID
+   .build();
+
+        MobileAds.SetRequestConfiguration(requestConfiguration);
         AdFreeSet();
         adstart();
         dayfunc();
@@ -93,7 +100,7 @@ public class ShopManager : MonoBehaviour
             if (GameInfo.inst.IsAdGold[i])
             {
                 TimeSpan timeDif = dateTime - GameInfo.inst.AdGoldTime[i];
-                if (timeDif.Days >0)
+                if (timeDif.TotalSeconds > 0)
                 {
                     GameInfo.inst.IsAdGold[i] = false;
                 }
@@ -104,7 +111,7 @@ public class ShopManager : MonoBehaviour
             if (GameInfo.inst.IsAdCard[i])
             {
                 TimeSpan timeDif = dateTime - GameInfo.inst.AdCardTime[i];
-                if (timeDif.Days > 0)
+                if (timeDif.TotalSeconds > 0)
                 {
                     GameInfo.inst.IsAdCard[i] = false;
                 }
@@ -125,8 +132,8 @@ public class ShopManager : MonoBehaviour
         }
         else if (!Roulette.IsGo)
         {
+            rewardAd3.Show();
             LoadRewardAd3();
-            rewardAd.Show();
         }
     }
     public void AdGoldFunc()
@@ -176,8 +183,8 @@ public class ShopManager : MonoBehaviour
             else
             {
 
-            LoadRewardAd();
             rewardAd.Show();
+            LoadRewardAd();
             }
         }
     }
@@ -241,18 +248,12 @@ public class ShopManager : MonoBehaviour
 
     void adstart()
     {
-        var requestConfiguration = new RequestConfiguration
-   .Builder()
-   .SetTestDeviceIds(new List<string>()
-   {
-               "44990154B448482F"
-   }) // test Device ID
-   .build();
 
-        MobileAds.SetRequestConfiguration(requestConfiguration);
 
-        //LoadFrontAd();
-        //
+
+        LoadRewardAd();
+        LoadRewardAd2();
+        LoadRewardAd3();
     }
     AdRequest GetAdRequest()
     {
@@ -289,6 +290,8 @@ public class ShopManager : MonoBehaviour
     const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
     const string rewardID = "ca-app-pub-9521969151385232/8252088014";
     public RewardedAd rewardAd;
+    public RewardedAd rewardAd2;
+    public RewardedAd rewardAd3;
 
 
     void LoadRewardAd()
@@ -299,7 +302,7 @@ public class ShopManager : MonoBehaviour
         {
             // GameInfo.inst.AdGoldFreeMax--;
             AdGoldFunc();
-            GameInfo.PlayerGold += 240;
+            GameInfo.PlayerGold += 250;
             AdFreeSet();
             Loby.LobyGoldAc();
             if (GameInfo.inst.PcTestMode)
@@ -315,9 +318,9 @@ public class ShopManager : MonoBehaviour
     }
     public void LoadRewardAd2()
     {
-        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
-        rewardAd.LoadAd(GetAdRequest());
-        rewardAd.OnUserEarnedReward += (sender, e) =>
+        rewardAd2 = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd2.LoadAd(GetAdRequest());
+        rewardAd2.OnUserEarnedReward += (sender, e) =>
         {
             // GameInfo.inst.AdCardFreeMax--;
             AdCardFunc();
@@ -329,9 +332,9 @@ public class ShopManager : MonoBehaviour
     }
     public void LoadRewardAd3()
     {
-        rewardAd = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
-        rewardAd.LoadAd(GetAdRequest());
-        rewardAd.OnUserEarnedReward += (sender, e) =>
+        rewardAd3 = new RewardedAd(GameInfo.inst.isTestMode ? rewardTestID : rewardID);
+        rewardAd3.LoadAd(GetAdRequest());
+        rewardAd3.OnUserEarnedReward += (sender, e) =>
         {
             Roulette.SpinFreeBtn();
         };

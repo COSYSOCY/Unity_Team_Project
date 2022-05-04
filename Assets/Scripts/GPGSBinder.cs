@@ -40,7 +40,7 @@ public class GPGSBinder
     public void Login(Action<bool, UnityEngine.SocialPlatforms.ILocalUser> onLoginSuccess = null)
     {
         Init();
-        PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptAlways, (success) =>
+        PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (success) =>
         {
             onLoginSuccess?.Invoke(success == SignInStatus.Success, Social.localUser);
 

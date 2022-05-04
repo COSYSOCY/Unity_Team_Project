@@ -34,7 +34,7 @@ public class CharacterManager : MonoBehaviour
     public Text InfoCharInfo;
     public Text InfoName;
     public Text BuyText;
-
+    public GameObject[] charob;
     private void Start()
     {
         
@@ -88,7 +88,7 @@ public class CharacterManager : MonoBehaviour
         RawCharaImage.texture = IconManager.inst.CharaIcons[cnt]; //로우이미지
         SkillImage.sprite = IconManager.inst.Icons[csvData.CharactersSkillIconNum[cnt]];
         Skill2Image.sprite = IconManager.inst.Icons[csvData.CharactersSkill_ItemIconNum[cnt]];
-
+        charob[cnt].SetActive(true);
 
         GameInfo.HpPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpMax;
         GameInfo.HpRegenPlus = GameInfo.inst.CharsInfo[cnt].CharactersHpRegen;
@@ -125,9 +125,12 @@ public class CharacterManager : MonoBehaviour
     public void EquipBtnClick()
     {
         InfoOb.SetActive(false);
+        charob[GameInfo.inst.CharacterIdx].SetActive(false);
         GameObject g = ClickOb;
         int cnt= g.GetComponent<CharacterBtn>().CharacterIdx;
         GameInfo.inst.CharacterIdx = cnt;
+        charob[cnt].SetActive(true);
+
         GameInfo.inst.SkillIdx = csvData.CharactersBSNum[cnt];
         //Debug.Log(cnt);
         CharImage.sprite = IconManager.inst.Icons[csvData.CharactersIconNum[cnt]];
