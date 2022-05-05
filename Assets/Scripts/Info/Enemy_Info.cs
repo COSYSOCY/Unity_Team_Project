@@ -134,15 +134,17 @@ public class Enemy_Info : MonoBehaviour
     }
     IEnumerator EnemyHit()
     {
+        
         if (!onhit)
         {
+            var s = new WaitForSeconds(0.15f);
             onhit = true;
             for (int i = 0; i < enemyMat.Length; i++)
             {
             enemyMat[i].material.SetColor("_EmissionColor", Color.white);
 
             }
-            yield return new WaitForSeconds(0.15f); // 반짝이는 시간 
+            yield return s; // 반짝이는 시간 
             for (int i = 0; i < enemyMat.Length; i++)
             {
             enemyMat[i].material.SetColor("_EmissionColor", Color.black);

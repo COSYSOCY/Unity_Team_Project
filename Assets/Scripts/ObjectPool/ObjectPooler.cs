@@ -86,15 +86,7 @@ public class ObjectPooler : MonoBehaviour
 		inst.poolDictionary[obj.name].Enqueue(obj);
 	}
 
-	[ContextMenu("GetSpawnObjectsInfo")]
-	void GetSpawnObjectsInfo()
-	{
-		foreach (var pool in pools)
-		{
-			int count = spawnObjects.FindAll(x => x.name == pool.tag).Count;
-			Debug.Log($"{pool.tag} count : {count}");
-		}
-	}
+
 
 	GameObject _SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
 	{
